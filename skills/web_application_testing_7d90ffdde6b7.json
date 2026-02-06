@@ -1,0 +1,27 @@
+{
+  "id": "web_application_testing_7d90ffdde6b7",
+  "category": "web-application-testing",
+  "title": "Attacking Application Logic Flaws and Shared Environments",
+  "description": "# Attacking Application Logic Flaws and Shared Environments\n\nLet\u2019s break down the key concepts and techniques involved.\n\n**1. Understanding Application Logic Flaws**\n\n1. **What Are Application Logic Flaws?**\n   - **Description**: Application logic flaws occur when the logic of an application doesn\u2019t function as intended, leading to security vulnerabilities or unintended behavior. These flaws are often related to the business logic of the application.\n   - **Examples**: Inadequate validation of u",
+  "payloads": [
+    "# Attacking Application Logic Flaws and Shared Environments",
+    "Let\u2019s break down the key concepts and techniques involved.",
+    "**1. Understanding Application Logic Flaws**",
+    "1. **What Are Application Logic Flaws?**",
+    "- **Description**: Application logic flaws occur when the logic of an application doesn\u2019t function as intended, leading to security vulnerabilities or unintended behavior. These flaws are often related to the business logic of the application.",
+    "- **Examples**: Inadequate validation of user inputs, improper handling of application states, or flawed workflows.",
+    "2. **Identifying Logic Flaws**:",
+    "- **Techniques**:",
+    "- **Analyze Business Logic**: Review how the application\u2019s logic is supposed to work and identify areas where it might be exploited.",
+    "- **Test Edge Cases**: Test how the application handles unexpected or extreme inputs and conditions.",
+    "- **Explore Workflows**: Evaluate the sequences of actions or processes to find potential flaws or bypasses.",
+    "**2. Techniques for Exploiting Application Logic Flaws**",
+    "1. **Manipulating Business Rules**:",
+    "- **Description**: Exploiting flaws in business rules to gain unauthorized access or perform unintended actions.",
+    "- **Techniques**:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/web-application-testing/Attacking_Application_Logic_Flaws_and_Shared_Environments.md"
+  ]
+}

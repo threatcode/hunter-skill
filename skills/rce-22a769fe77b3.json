@@ -1,0 +1,27 @@
+{
+  "id": "rce-22a769fe77b3",
+  "category": "RCE",
+  "title": "README",
+  "description": "# Directory Traversal\n\n> Path Traversal, also known as Directory Traversal, is a type of security vulnerability that occurs when an attacker manipulates variables that reference files with \u201cdot-dot-slash (../)\u201d sequences or similar constructs. This can allow the attacker to access arbitrary files and directories stored on the file system.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [URL Encoding](#url-encoding)\n    * [Double URL Encoding](#double-url-encoding)\n    * [Unico",
+  "payloads": [
+    "* [wireghoul/dotdotpwn](https://github.com/wireghoul/dotdotpwn) - The Directory Traversal Fuzzer",
+    "**Example:**: Mirasys DVMS Workstation <=5.12.6",
+    "For example, a typical URL might be transformed from: `http://example.com/page.aspx` to something like: `http://example.com/(S(lit3py55t21z5v55vlm25s55))/page.aspx`. The value within `(S(...))` is the Session ID.",
+    "* [irsdl/IIS-ShortName-Scanner](https://github.com/irsdl/IIS-ShortName-Scanner)",
+    "java -jar ./iis_shortname_scanner.jar 20 8 'https://X.X.X.X/bin::$INDEX_ALLOCATION/'",
+    "java -jar ./iis_shortname_scanner.jar 20 8 'https://X.X.X.X/MyApp/bin::$INDEX_ALLOCATION/'",
+    "* [bitquark/shortscan](https://github.com/bitquark/shortscan)",
+    "shortscan http://example.org/",
+    "url:http://127.0.0.1:8080",
+    "A list of files / paths to probe when arbitrary files can be read on a Microsoft Windows operating system: [soffensive/windowsblindread](https://github.com/soffensive/windowsblindread)",
+    "* [PortSwigger - File path traversal, simple case](https://portswigger.net/web-security/file-path-traversal/lab-simple)",
+    "* [PortSwigger - File path traversal, traversal sequences blocked with absolute path bypass](https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass)",
+    "* [PortSwigger - File path traversal, traversal sequences stripped non-recursively](https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively)",
+    "* [PortSwigger - File path traversal, traversal sequences stripped with superfluous URL-decode](https://portswigger.net/web-security/file-path-traversal/lab-superfluous-url-decode)",
+    "* [PortSwigger - File path traversal, validation of start of path](https://portswigger.net/web-security/file-path-traversal/lab-validate-start-of-path)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Directory Traversal/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

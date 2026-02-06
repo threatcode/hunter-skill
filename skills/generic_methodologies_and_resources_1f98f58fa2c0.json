@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_1f98f58fa2c0",
+  "category": "generic-methodologies-and-resources",
+  "title": "interesting windows registry keys",
+  "description": "# Interesting Windows Registry Keys\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n### **Windows Version and Owner Info**\n\n- Located at **`Software\\Microsoft\\Windows NT\\CurrentVersion`**, you'll find the Windows version, Service Pack, installation time, and the registered owner's name in a straightforward manner.\n\n### **Computer Name**\n\n- The hostname is found under **`System\\ControlSet001\\Control\\ComputerName\\ComputerName`**.\n\n### **Time Zone Setting**\n\n- The system's time zone is store",
+  "payloads": [
+    "# Interesting Windows Registry Keys",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "### **Windows Version and Owner Info**",
+    "- Located at **`Software\\Microsoft\\Windows NT\\CurrentVersion`**, you'll find the Windows version, Service Pack, installation time, and the registered owner's name in a straightforward manner.",
+    "### **Computer Name**",
+    "- The hostname is found under **`System\\ControlSet001\\Control\\ComputerName\\ComputerName`**.",
+    "### **Time Zone Setting**",
+    "- The system's time zone is stored in **`System\\ControlSet001\\Control\\TimeZoneInformation`**.",
+    "### **Access Time Tracking**",
+    "- By default, the last access time tracking is turned off (**`NtfsDisableLastAccessUpdate=1`**). To enable it, use:",
+    "`fsutil behavior set disablelastaccess 0`",
+    "### Windows Versions and Service Packs",
+    "- The **Windows version** indicates the edition (e.g., Home, Pro) and its release (e.g., Windows 10, Windows 11), while **Service Packs** are updates that include fixes and, sometimes, new features.",
+    "### Enabling Last Access Time",
+    "- Enabling last access time tracking allows you to see when files were last opened, which can be critical for forensic analysis or system monitoring."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/windows-forensics/interesting-windows-registry-keys.md"
+  ]
+}

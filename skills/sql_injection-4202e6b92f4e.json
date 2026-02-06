@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-4202e6b92f4e",
+  "category": "SQL Injection",
+  "title": "MSSQL Injection",
+  "description": "# MSSQL Injection\n\n> MSSQL Injection  is a type of security vulnerability that can occur when an attacker can insert or \"inject\" malicious SQL code into a query executed by a Microsoft SQL Server (MSSQL) database. This typically happens when user inputs are directly included in SQL queries without proper sanitization or parameterization. SQL Injection can lead to serious consequences such as unauthorized data access, data manipulation, and even gaining control over the database server.\n\n## Summa",
+  "payloads": [
+    "# MSSQL Injection",
+    "> MSSQL Injection  is a type of security vulnerability that can occur when an attacker can insert or \"inject\" malicious SQL code into a query executed by a Microsoft SQL Server (MSSQL) database. This typically happens when user inputs are directly included in SQL queries without proper sanitization or parameterization. SQL Injection can lead to serious consequences such as unauthorized data access, data manipulation, and even gaining control over the database server.",
+    "## Summary",
+    "* [MSSQL Default Databases](#mssql-default-databases)",
+    "* [MSSQL Comments](#mssql-comments)",
+    "* [MSSQL Enumeration](#mssql-enumeration)",
+    "* [MSSQL List Databases](#mssql-list-databases)",
+    "* [MSSQL List Tables](#mssql-list-tables)",
+    "* [MSSQL List Columns](#mssql-list-columns)",
+    "* [MSSQL Union Based](#mssql-union-based)",
+    "* [MSSQL Error Based](#mssql-error-based)",
+    "* [MSSQL Blind Based](#mssql-blind-based)",
+    "* [MSSQL Blind With Substring Equivalent](#mssql-blind-with-substring-equivalent)",
+    "* [MSSQL Time Based](#mssql-time-based)",
+    "* [MSSQL Stacked Query](#mssql-stacked-query)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/MSSQL Injection.md"
+  ]
+}

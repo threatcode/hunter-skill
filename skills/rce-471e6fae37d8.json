@@ -1,0 +1,22 @@
+{
+  "id": "rce-471e6fae37d8",
+  "category": "RCE",
+  "title": "Source Code Management",
+  "description": "# Source Code Management & CI/CD Compromise\n\n:warning: Content of this page has been moved to [InternalAllTheThings/cheatsheets/source-code-management-ci](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/source-code-management-ci/)\n\n- [CI/CD Attacks](https://swisskyrepo.github.io/InternalAllTheThings/devops/)\n    - [Azure DevOps](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-azure-devops/)\n    - [BuildKite](https://swisskyrepo.github.io/InternalAllTheThings/devops/",
+  "payloads": [
+    ":warning: Content of this page has been moved to [InternalAllTheThings/cheatsheets/source-code-management-ci](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/source-code-management-ci/)",
+    "- [CI/CD Attacks](https://swisskyrepo.github.io/InternalAllTheThings/devops/)",
+    "- [Azure DevOps](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-azure-devops/)",
+    "- [BuildKite](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-buildkite/)",
+    "- [CircleCI](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-circle-ci/)",
+    "- [Drone CI](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-drone-ci/)",
+    "- [GitHub Actions](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-github-actions/)",
+    "- [Gitlab CI](https://swisskyrepo.github.io/InternalAllTheThings/devops/cicd-gitlab-ci/)",
+    "- [Package Managers and Build Files](https://swisskyrepo.github.io/InternalAllTheThings/devops/package-managers/)",
+    "- [Hardcoded Secrets Enumeration](https://swisskyrepo.github.io/InternalAllTheThings/devops/secrets-enumeration/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Source Code Management.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

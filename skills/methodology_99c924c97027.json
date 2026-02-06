@@ -1,0 +1,27 @@
+{
+  "id": "methodology_99c924c97027",
+  "category": "methodology",
+  "title": "scoping",
+  "description": "# Planning and Scoping a Penetration Testing Assessment\n\n### Planning Phase\n\n#### Initial Client Meeting\n- **Objective**: Understand what the client aims to achieve with the penetration test.\n- **Key Questions**:\n  - What are the key assets you're concerned about?\n  - What types of attacks or threats are you most concerned with?\n  - Do you have any compliance requirements (e.g., PCI-DSS, HIPAA)?\n\n#### Documentation Review\n- **Objective**: Review existing documentation to understand the network t",
+  "payloads": [
+    "# Planning and Scoping a Penetration Testing Assessment",
+    "### Planning Phase",
+    "#### Initial Client Meeting",
+    "- **Objective**: Understand what the client aims to achieve with the penetration test.",
+    "- **Key Questions**:",
+    "- What are the key assets you're concerned about?",
+    "- What types of attacks or threats are you most concerned with?",
+    "- Do you have any compliance requirements (e.g., PCI-DSS, HIPAA)?",
+    "#### Documentation Review",
+    "- **Objective**: Review existing documentation to understand the network topology, application architecture, and other relevant details.",
+    "- **Key Deliverables**:",
+    "- Network diagrams",
+    "- Application architecture diagrams",
+    "- Previous vulnerability assessments or pen test reports",
+    "#### Legal and Compliance Checks"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/methodology/scoping.md"
+  ]
+}

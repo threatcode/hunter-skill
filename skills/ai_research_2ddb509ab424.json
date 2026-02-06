@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_2ddb509ab424",
+  "category": "ai-research",
+  "title": "tf keras",
+  "description": "# Lab Guide: Image Recognition with TensorFlow and Keras\n\n## **Objective**\n\nTo provide students with hands-on experience in developing, training, and evaluating image recognition models using TensorFlow and Keras.\n\n## **Prerequisites**\n\n1. Basic understanding of Python programming.\n2. Familiarity with machine learning concepts.\n3. Python and necessary libraries installed: TensorFlow and Keras.\n\n## **Lab Outline**\n\n**Introduction to Image Recognition**:\n    - Discussing the basics of image recogn",
+  "payloads": [
+    "# Lab Guide: Image Recognition with TensorFlow and Keras",
+    "## **Objective**",
+    "To provide students with hands-on experience in developing, training, and evaluating image recognition models using TensorFlow and Keras.",
+    "## **Prerequisites**",
+    "1. Basic understanding of Python programming.",
+    "2. Familiarity with machine learning concepts.",
+    "3. Python and necessary libraries installed: TensorFlow and Keras.",
+    "## **Lab Outline**",
+    "**Introduction to Image Recognition**:",
+    "- Discussing the basics of image recognition and convolutional neural networks (CNN).",
+    "**Setting Up the Environment**:",
+    "- Installing TensorFlow and Keras:",
+    "```bash",
+    "pip install tensorflow keras",
+    "**Image Data Preprocessing**:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/labs/tf_keras.md"
+  ]
+}

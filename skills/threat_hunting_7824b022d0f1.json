@@ -1,0 +1,27 @@
+{
+  "id": "threat_hunting_7824b022d0f1",
+  "category": "threat-hunting",
+  "title": "zeek tips",
+  "description": "\n## Zeek\n\n### Process a Pcap\n\nThe following command will output Zeek logs in the current directory. Because of this we recommend creating a new directory first, in this case the `logs` directory.\n\n```bash\nmkdir logs\ncd logs\n```\n\nNext, modify the following command to give the correct path to your pcap file. You only need to change the pcap path. Do not change the word `local`.\n\n```bash\nzeek -r /path/to/sample.pcap local\n```\n\nThe Zeek arguments are:\n\n* `-r /path/to/sample.pcap` is the path to the ",
+  "payloads": [
+    "## Zeek",
+    "### Process a Pcap",
+    "The following command will output Zeek logs in the current directory. Because of this we recommend creating a new directory first, in this case the `logs` directory.",
+    "```bash",
+    "mkdir logs",
+    "cd logs",
+    "Next, modify the following command to give the correct path to your pcap file. You only need to change the pcap path. Do not change the word `local`.",
+    "```bash",
+    "zeek -r /path/to/sample.pcap local",
+    "The Zeek arguments are:",
+    "* `-r /path/to/sample.pcap` is the path to the pcap you want to process.",
+    "* `local` is the name of the Zeek script to use to process the pcap.",
+    "Depending on what you are doing next you may want to either stay in the current directory to work directly with the newly generated Zeek logs, or you may want change back to your original directory.",
+    "```bash",
+    "Here is a sample of the logs generated that you can find in your `logs` directory:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/threat-hunting/zeek-tips.md"
+  ]
+}

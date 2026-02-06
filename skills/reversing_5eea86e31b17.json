@@ -1,0 +1,27 @@
+{
+  "id": "reversing_5eea86e31b17",
+  "category": "reversing",
+  "title": "blobrunner",
+  "description": "# Blobrunner\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThe only modified line from the [original code](https://github.com/OALabs/BlobRunner) is the line 10.  \nIn order to compile it just **create a C/C++ project in Visual Studio Code, copy and paste the code and build it**.\n\n```c\n#include <stdio.h>\n#include <windows.h>\n#include <stdlib.h>\n\n#ifdef _WIN64\n#include <WinBase.h>\n#endif\n\n// Define bool\n#pragma warning(disable:4996)\n#define true 1\n#define false 0\n\nconst char* _version = \"0.0.",
+  "payloads": [
+    "# Blobrunner",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "The only modified line from the [original code](https://github.com/OALabs/BlobRunner) is the line 10.",
+    "In order to compile it just **create a C/C++ project in Visual Studio Code, copy and paste the code and build it**.",
+    "#include <stdio.h>",
+    "#include <windows.h>",
+    "#include <stdlib.h>",
+    "#ifdef _WIN64",
+    "#include <WinBase.h>",
+    "#endif",
+    "// Define bool",
+    "#pragma warning(disable:4996)",
+    "#define true 1",
+    "#define false 0",
+    "const char* _version = \"0.0.5\";"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/reversing/reversing-tools-basic-methods/blobrunner.md"
+  ]
+}

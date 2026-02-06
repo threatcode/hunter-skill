@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_088a0f64ea9f",
+  "category": "windows-hardening",
+  "title": "checklist windows privilege escalation",
+  "description": "# Checklist - Local Windows Privilege Escalation\n\n{{#include ../banners/hacktricks-training.md}}\n\n### **Best tool to look for Windows local privilege escalation vectors:** [**WinPEAS**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)\n\n### [System Info](windows-local-privilege-escalation/index.html#system-info)\n\n- [ ] Obtain [**System information**](windows-local-privilege-escalation/index.html#system-info)\n- [ ] Search for **kernel** [**exploits usi",
+  "payloads": [
+    "# Checklist - Local Windows Privilege Escalation",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "### **Best tool to look for Windows local privilege escalation vectors:** [**WinPEAS**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)",
+    "### [System Info](windows-local-privilege-escalation/index.html#system-info)",
+    "- [ ] Obtain [**System information**](windows-local-privilege-escalation/index.html#system-info)",
+    "- [ ] Search for **kernel** [**exploits using scripts**](windows-local-privilege-escalation/index.html#version-exploits)",
+    "- [ ] Use **Google to search** for kernel **exploits**",
+    "- [ ] Use **searchsploit to search** for kernel **exploits**",
+    "- [ ] Interesting info in [**env vars**](windows-local-privilege-escalation/index.html#environment)?",
+    "- [ ] Passwords in [**PowerShell history**](windows-local-privilege-escalation/index.html#powershell-history)?",
+    "- [ ] Interesting info in [**Internet settings**](windows-local-privilege-escalation/index.html#internet-settings)?",
+    "- [ ] [**Drives**](windows-local-privilege-escalation/index.html#drives)?",
+    "- [ ] [**WSUS exploit**](windows-local-privilege-escalation/index.html#wsus)?",
+    "- [ ] [**Third-party agent auto-updaters / IPC abuse**](windows-local-privilege-escalation/abusing-auto-updaters-and-ipc.md)",
+    "- [ ] [**AlwaysInstallElevated**](windows-local-privilege-escalation/index.html#alwaysinstallelevated)?"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/checklist-windows-privilege-escalation.md"
+  ]
+}

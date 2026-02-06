@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_9c4dfec9a190",
+  "category": "cheat-sheets",
+  "title": "nikto",
+  "description": "# Nikto Cheat Sheet\n\nNikto is an open-source web server vulnerability scanner used to identify potential security issues in web applications and servers. Below is a cheat sheet highlighting its key features and commands.\n\n**NOTE**: Check out the [Nikto lab](https://learning.oreilly.com/scenarios/ethical-hacking-scenarios/9780137673469X003) in O'Reilly. It is listed at: https://hackingscenarios.com\n\n### 1. **Basic Nikto Commands**\n\n- **Scan a Host**: `nikto -h `  \n  Initiates a basic scan against",
+  "payloads": [
+    "# Nikto Cheat Sheet",
+    "Nikto is an open-source web server vulnerability scanner used to identify potential security issues in web applications and servers. Below is a cheat sheet highlighting its key features and commands.",
+    "**NOTE**: Check out the [Nikto lab](https://learning.oreilly.com/scenarios/ethical-hacking-scenarios/9780137673469X003) in O'Reilly. It is listed at: https://hackingscenarios.com",
+    "### 1. **Basic Nikto Commands**",
+    "- **Scan a Host**: `nikto -h `",
+    "Initiates a basic scan against a specified target URL.",
+    "- **Scan Specific Ports**: `nikto -h  -p ,`",
+    "Scans the target on specified ports.",
+    "- **Use SSL**: `nikto -h  -ssl`",
+    "Enables SSL scanning for HTTPS services.",
+    "- **Save Output**: `nikto -h  -o `",
+    "Saves scan results to a specified file.",
+    "### 2. **Advanced Options**",
+    "- **Specify Host Header**: `nikto -h  -host `",
+    "Sets the Host header for the request."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/web-testing/nikto.md"
+  ]
+}

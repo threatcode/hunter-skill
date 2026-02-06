@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_2e5ee094ca38",
+  "category": "windows-hardening",
+  "title": "from high integrity to system with name pipes",
+  "description": "# From High Integrity to SYSTEM with Name Pipes\n\n{{#include ../../banners/hacktricks-training.md}}\n\n**Code flow:**\n\n1. Create a new Pipe\n2. Create and start a service that will connect to the created pipe and write something. The service code will execute this encoded PS code: `$pipe = new-object System.IO.Pipes.NamedPipeClientStream(\"piper\"); $pipe.Connect(); $sw = new-object System.IO.StreamWriter($pipe); $sw.WriteLine(\"Go\"); $sw.Dispose();`\n3. The service receive the data from the client in t",
+  "payloads": [
+    "# From High Integrity to SYSTEM with Name Pipes",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "**Code flow:**",
+    "1. Create a new Pipe",
+    "2. Create and start a service that will connect to the created pipe and write something. The service code will execute this encoded PS code: `$pipe = new-object System.IO.Pipes.NamedPipeClientStream(\"piper\"); $pipe.Connect(); $sw = new-object System.IO.StreamWriter($pipe); $sw.WriteLine(\"Go\"); $sw.Dispose();`",
+    "3. The service receive the data from the client in the pipe, call ImpersonateNamedPipeClient and waits for the service to finish",
+    "4. Finally, uses the token obtained from the service to spawn a new _cmd.exe_",
+    "> [!WARNING]",
+    "> If you don't have enough privileges the exploit may get stucked and never return.",
+    "#include <windows.h>",
+    "#include <time.h>",
+    "#pragma comment (lib, \"advapi32\")",
+    "#pragma comment (lib, \"kernel32\")",
+    "#define PIPESRV \"PiperSrv\"",
+    "#define MESSAGE_SIZE 512"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/from-high-integrity-to-system-with-name-pipes.md"
+  ]
+}

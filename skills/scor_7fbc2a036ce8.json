@@ -1,0 +1,27 @@
+{
+  "id": "scor_7fbc2a036ce8",
+  "category": "SCOR",
+  "title": "wccp and pbr to wsa",
+  "description": "# Configuring WCCP or Policy-Based Routing to Send Traffic to WSA\n\n## Configuring WCCP on a Cisco Switch\nLet\u2019s take a look on how to configure WCCP on a Cisco switch to redirect traffic to the Cisco Secure Web Appliance. \n\n1. Configure an access control list (ACL) to match the web traffic.\n\n```\nip access-list extended WEB-TRAFFIC\n permit tcp 10.1.1.0 0.0.0.255 any eq www\n permit tcp 10.1.2.0 0.0.0.255 any eq www\n permit tcp 10.1.1.0 0.0.0.255 any eq 443\n permit tcp 10.1.2.0 0.0.0.255 any eq 443\n",
+  "payloads": [
+    "# Configuring WCCP or Policy-Based Routing to Send Traffic to WSA",
+    "## Configuring WCCP on a Cisco Switch",
+    "Let\u2019s take a look on how to configure WCCP on a Cisco switch to redirect traffic to the Cisco Secure Web Appliance.",
+    "1. Configure an access control list (ACL) to match the web traffic.",
+    "ip access-list extended WEB-TRAFFIC",
+    "permit tcp 10.1.1.0 0.0.0.255 any eq www",
+    "permit tcp 10.1.2.0 0.0.0.255 any eq www",
+    "permit tcp 10.1.1.0 0.0.0.255 any eq 443",
+    "permit tcp 10.1.2.0 0.0.0.255 any eq 443",
+    "2. Configure another ACL to define where to send the traffic (that is, the Cisco Secure Web Appliance\u2019s IP address).",
+    "ip access-list standard WSA",
+    "permit 10.1.3.3",
+    "3. Create the WCCP lists.",
+    "ip wccp web-cache redirect-list HTTP-TRAFFIC group-list WSA",
+    "ip wccp 10 redirect-list FTP-TRAFFIC group-list WSA"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/wccp_and_pbr_to_wsa.md"
+  ]
+}

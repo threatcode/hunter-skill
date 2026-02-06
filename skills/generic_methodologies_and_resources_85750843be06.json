@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_85750843be06",
+  "category": "generic-methodologies-and-resources",
+  "title": "linux forensics",
+  "description": "# Linux Forensics\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Initial Information Gathering\n\n### Basic Information\n\nFirst of all, it's recommended to have some **USB** with **good known binaries and libraries on it** (you can just get ubuntu and copy the folders _/bin_, _/sbin_, _/lib,_ and _/lib64_), then mount the USB, and modify the env variables to use those binaries:\n\n```bash\nexport PATH=/mnt/usb/bin:/mnt/usb/sbin\nexport LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64\n```\n\nOnce you h",
+  "payloads": [
+    "# Linux Forensics",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Initial Information Gathering",
+    "### Basic Information",
+    "First of all, it's recommended to have some **USB** with **good known binaries and libraries on it** (you can just get ubuntu and copy the folders _/bin_, _/sbin_, _/lib,_ and _/lib64_), then mount the USB, and modify the env variables to use those binaries:",
+    "```bash",
+    "export PATH=/mnt/usb/bin:/mnt/usb/sbin",
+    "export LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64",
+    "Once you have configured the system to use good and known binaries you can start **extracting some basic information**:",
+    "```bash",
+    "date #Date and time (Clock may be skewed, Might be at a different timezone)",
+    "uname -a #OS info",
+    "ifconfig -a || ip a #Network interfaces (promiscuous mode?)",
+    "ps -ef #Running processes",
+    "netstat -anp #Proccess and ports"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/linux-forensics.md"
+  ]
+}

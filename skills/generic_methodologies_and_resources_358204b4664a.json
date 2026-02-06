@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_358204b4664a",
+  "category": "generic-methodologies-and-resources",
+  "title": "side channel attacks on messaging protocols",
+  "description": "# Delivery Receipt Side-Channel Attacks in E2EE Messengers\n\n{{#include ../banners/hacktricks-training.md}}\n\nDelivery receipts are mandatory in modern end-to-end encrypted (E2EE) messengers because clients need to know when a ciphertext was decrypted so they can discard ratcheting state and ephemeral keys. The server forwards opaque blobs, so device acknowledgements (double checkmarks) are emitted by the recipient after successful decryption. Measuring the round-trip time (RTT) between an attacke",
+  "payloads": [
+    "# Delivery Receipt Side-Channel Attacks in E2EE Messengers",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "Delivery receipts are mandatory in modern end-to-end encrypted (E2EE) messengers because clients need to know when a ciphertext was decrypted so they can discard ratcheting state and ephemeral keys. The server forwards opaque blobs, so device acknowledgements (double checkmarks) are emitted by the recipient after successful decryption. Measuring the round-trip time (RTT) between an attacker-triggered action and the corresponding delivery receipt exposes a high-resolution timing channel that leaks device state, online presence, and can be abused for covert DoS. Multi-device \"client-fanout\" deployments amplify the leakage because every registered device decrypts the probe and returns its own receipt.",
+    "## Delivery receipt sources vs. user-visible signals",
+    "Choose message types that always emit a delivery receipt but do not surface UI artifacts on the victim. The table below summarises the empirically confirmed behaviour:",
+    "| Messenger | Action | Delivery receipt | Victim notification | Notes |",
+    "|-----------|--------|------------------|---------------------|-------|",
+    "| **WhatsApp** | Text message | \u25cf | \u25cf | Always noisy \u2192 only useful to bootstrap state. |",
+    "| | Reaction | \u25cf | \u25d0 (only if reacting to victim message) | Self-reactions and removals stay silent. |",
+    "| | Edit | \u25cf | Platform-dependent silent push | Edit window \u224820 min; still ack\u2019d after expiry. |",
+    "| | Delete for everyone | \u25cf | \u25cb | UI allows ~60 h, but later packets still ack\u2019d. |",
+    "| **Signal** | Text message | \u25cf | \u25cf | Same limitations as WhatsApp. |",
+    "| | Reaction | \u25cf | \u25d0 | Self-reactions invisible to victim. |",
+    "| | Edit/Delete | \u25cf | \u25cb | Server enforces ~48 h window, allows up to 10 edits, but late packets still ack\u2019d. |",
+    "| **Threema** | Text message | \u25cf | \u25cf | Multi-device receipts are aggregated, so only one RTT per probe becomes visible. |"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/side-channel-attacks-on-messaging-protocols.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "xss_injection-9929c1577021",
+  "category": "XSS Injection",
+  "title": "4   CSP Bypass",
+  "description": "# CSP Bypass\n\n> A Content Security Policy (CSP) is a security feature that helps prevent cross-site scripting (XSS), data injection attacks, and other code-injection vulnerabilities in web applications. It works by specifying which sources of content (like scripts, styles, images, etc.) are allowed to load and execute on a webpage.\n\n## Summary\n\n- [Tools](#tools)\n- [Bypass CSP using JSONP](#bypass-csp-using-jsonp)\n- [Bypass CSP default-src](#bypass-csp-default-src)\n- [Bypass CSP inline eval](#byp",
+  "payloads": [
+    "# CSP Bypass",
+    "> A Content Security Policy (CSP) is a security feature that helps prevent cross-site scripting (XSS), data injection attacks, and other code-injection vulnerabilities in web applications. It works by specifying which sources of content (like scripts, styles, images, etc.) are allowed to load and execute on a webpage.",
+    "## Summary",
+    "- [Tools](#tools)",
+    "- [Bypass CSP using JSONP](#bypass-csp-using-jsonp)",
+    "- [Bypass CSP default-src](#bypass-csp-default-src)",
+    "- [Bypass CSP inline eval](#bypass-csp-inline-eval)",
+    "- [Bypass CSP unsafe-inline](#bypass-csp-unsafe-inline)",
+    "- [Bypass CSP script-src self](#bypass-csp-script-src-self)",
+    "- [Bypass CSP script-src data](#bypass-csp-script-src-data)",
+    "- [Bypass CSP nonce](#bypass-csp-nonce)",
+    "- [Bypass CSP header sent by PHP](#bypass-csp-header-sent-by-php)",
+    "- [Labs](#labs)",
+    "- [References](#references)",
+    "## Tools"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/XSS Injection/4 - CSP Bypass.md"
+  ]
+}

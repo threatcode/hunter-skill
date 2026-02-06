@@ -1,0 +1,27 @@
+{
+  "id": "todo_e02753d1ba16",
+  "category": "todo",
+  "title": "jtag",
+  "description": "# JTAG\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n{{#ref}}\nREADME.md\n{{#endref}}\n\n## JTAGenum\n\n[**JTAGenum**](https://github.com/cyphunk/JTAGenum) is a tool you can load on an Arduino-compatible MCU or (experimentally) a Raspberry Pi to brute\u2011force unknown JTAG pinouts and even enumerate instruction registers.\n\n- Arduino: connect digital pins D2\u2013D11 to up to 10 suspected JTAG pads/testpoints, and Arduino GND to target GND. Power the target separately unless you know the rail is safe. P",
+  "payloads": [
+    "# JTAG",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "{{#ref}}",
+    "README.md",
+    "{{#endref}}",
+    "## JTAGenum",
+    "[**JTAGenum**](https://github.com/cyphunk/JTAGenum) is a tool you can load on an Arduino-compatible MCU or (experimentally) a Raspberry Pi to brute\u2011force unknown JTAG pinouts and even enumerate instruction registers.",
+    "- Arduino: connect digital pins D2\u2013D11 to up to 10 suspected JTAG pads/testpoints, and Arduino GND to target GND. Power the target separately unless you know the rail is safe. Prefer 3.3 V logic (e.g., Arduino Due) or use a level shifter/series resistors when probing 1.8\u20133.3 V targets.",
+    "- Raspberry Pi: the Pi build exposes fewer usable GPIOs (so scans are slower); check the repo for the current pin map and constraints.",
+    "Once flashed, open the serial monitor at 115200 baud and send `h` for help. Typical flow:",
+    "- `l` find loopbacks to avoid false positives",
+    "- `r` toggle internal pull\u2011ups if needed",
+    "- `s` scan for TCK/TMS/TDI/TDO (and sometimes TRST/SRST)",
+    "- `y` brute\u2011force IR to discover undocumented opcodes",
+    "- `x` boundary\u2011scan snapshot of pin states"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/hardware-hacking/jtag.md"
+  ]
+}

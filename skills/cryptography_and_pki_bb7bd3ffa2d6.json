@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_bb7bd3ffa2d6",
+  "category": "cryptography-and-pki",
+  "title": "pki fundamentals",
+  "description": "# PKI Fundamentals: Complete Guide to Public Key Infrastructure\n\n## Table of Contents\n- [Introduction to PKI](#introduction-to-pki)\n- [Core Components](#core-components)\n- [Certificate Chains and Trust Models](#certificate-chains-and-trust-models)\n- [Certificate Authority Operations](#certificate-authority-operations)\n- [Certificate Lifecycle Management](#certificate-lifecycle-management)\n- [PKI Deployment Models](#pki-deployment-models)\n- [Security Best Practices](#security-best-practices)\n- [T",
+  "payloads": [
+    "# PKI Fundamentals: Complete Guide to Public Key Infrastructure",
+    "## Table of Contents",
+    "- [Introduction to PKI](#introduction-to-pki)",
+    "- [Core Components](#core-components)",
+    "- [Certificate Chains and Trust Models](#certificate-chains-and-trust-models)",
+    "- [Certificate Authority Operations](#certificate-authority-operations)",
+    "- [Certificate Lifecycle Management](#certificate-lifecycle-management)",
+    "- [PKI Deployment Models](#pki-deployment-models)",
+    "- [Security Best Practices](#security-best-practices)",
+    "- [Troubleshooting Common Issues](#troubleshooting-common-issues)",
+    "## Introduction to PKI",
+    "Public Key Infrastructure (PKI) is a framework of policies, procedures, hardware, software, and people used to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption.",
+    "### Why PKI Matters",
+    "- **Authentication**: Verify the identity of communicating parties",
+    "- **Confidentiality**: Ensure data is encrypted and protected"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/tutorials/pki-fundamentals.md"
+  ]
+}

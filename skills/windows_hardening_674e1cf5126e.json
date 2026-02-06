@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_674e1cf5126e",
+  "category": "windows-hardening",
+  "title": "mythic",
+  "description": "# Mythic\n\n{{#include ../banners/hacktricks-training.md}}\n\n## What is Mythic?\n\nMythic is an open-source, modular command and control (C2) framework designed for red teaming . It allows security professionals to manage and deploy various agents (payloads) across different operating systems, including Windows, Linux, and macOS. Mythic provides a user-friendly web interface for managing agents, executing commands, and collecting results, making it a powerful tool for simulating real-world attacks in",
+  "payloads": [
+    "# Mythic",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## What is Mythic?",
+    "Mythic is an open-source, modular command and control (C2) framework designed for red teaming . It allows security professionals to manage and deploy various agents (payloads) across different operating systems, including Windows, Linux, and macOS. Mythic provides a user-friendly web interface for managing agents, executing commands, and collecting results, making it a powerful tool for simulating real-world attacks in a controlled environment.",
+    "### Installation",
+    "To install Mythic, follow the instructions on the official **[Mythic repo](https://github.com/its-a-feature/Mythic)**.",
+    "### Agents",
+    "Mythic supports multiple agents, which are the **payloads that perform tasks on the compromised systems**. Each agent can be tailored to specific needs and can run on different operating systems.",
+    "By default Mythic doesn't have any agents installed. However, it offers some open source agent in [**https://github.com/MythicAgents**](https://github.com/MythicAgents).",
+    "To install an agent from that repo you just need to run:",
+    "```bash",
+    "sudo ./mythic-cli install github https://github.com/MythicAgents/<agent-name>",
+    "sudo ./mythic-cli install github https://github.com/MythicAgents/apfell",
+    "You can add new agents with the previous command even if Mythic is already running.",
+    "### C2 Profiles"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/mythic.md"
+  ]
+}

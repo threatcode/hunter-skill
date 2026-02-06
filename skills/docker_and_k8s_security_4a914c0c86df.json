@@ -1,0 +1,27 @@
+{
+  "id": "docker_and_k8s_security_4a914c0c86df",
+  "category": "docker-and-k8s-security",
+  "title": "GKE",
+  "description": "# Google Kubernetes Engine (GKE)\nThe following are security best practices for Google Kubernetes Engine (GKE) along with reference links for further information:\n\n| Best Practice                                       | Reference Links                                                                                                                                                                                                                                                              |\n|---------",
+  "payloads": [
+    "# Google Kubernetes Engine (GKE)",
+    "The following are security best practices for Google Kubernetes Engine (GKE) along with reference links for further information:",
+    "| Best Practice                                       | Reference Links                                                                                                                                                                                                                                                              |",
+    "|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|",
+    "| Implement cluster isolation                         | [GKE Documentation - Isolating Clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-organization)                                                                                                                                                        |",
+    "| Use IAM for authentication and authorization        | [GKE Documentation - Identity and Access Management](https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration)                                                                                                                                                   |",
+    "| Secure the GKE API server                           | [GKE Documentation - Securing the Kubernetes API Server](https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-security)                                                                                                                                          |",
+    "| Apply security best practices to worker nodes       | [GKE Documentation - Hardening Your Cluster's Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster-nodes)                                                                                                                                      |",
+    "| Implement network security                          | [GKE Documentation - Network Security](https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy)                                                                                                                                                                 |",
+    "| Enable logging and monitoring                       | [GKE Documentation - Logging and Monitoring](https://cloud.google.com/kubernetes-engine/docs/how-to/logging)                                                                                                                                                                  |",
+    "| Implement encryption at rest and in transit         | [GKE Documentation - Encryption at Rest](https://cloud.google.com/kubernetes-engine/docs/how-to/encrypting-secrets)                                                                                                                                                            |",
+    "| Implement vulnerability management                  | [GKE Documentation - Security Best Practices](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-security)                                                                                                                                                         |",
+    "| Establish disaster recovery and backup strategies   | [GKE Documentation - Backup and Restore](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-backup)                                                                                                                                                                |",
+    "| Perform security auditing and compliance assessments | [GKE Documentation - Security Overview](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview)                                                                                                                                                             |",
+    "These reference links will provide you with detailed information and guidelines for implementing each best practice in securing your GKE cluster."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/docker-and-k8s-security/GKE.md"
+  ]
+}

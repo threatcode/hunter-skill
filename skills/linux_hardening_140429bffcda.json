@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_140429bffcda",
+  "category": "linux-hardening",
+  "title": "wildcards spare tricks",
+  "description": "# Wildcards Spare Tricks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> Wildcard (aka *glob*) **argument injection** happens when a privileged script runs a Unix binary such as `tar`, `chown`, `rsync`, `zip`, `7z`, \u2026 with an unquoted wildcard like `*`.  \n> Since the shell expands the wildcard **before** executing the binary, an attacker who can create files in the working directory can craft filenames that begin with `-` so they are interpreted as **options instead of data**, effectively ",
+  "payloads": [
+    "# Wildcards Spare Tricks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> Wildcard (aka *glob*) **argument injection** happens when a privileged script runs a Unix binary such as `tar`, `chown`, `rsync`, `zip`, `7z`, \u2026 with an unquoted wildcard like `*`.",
+    "> Since the shell expands the wildcard **before** executing the binary, an attacker who can create files in the working directory can craft filenames that begin with `-` so they are interpreted as **options instead of data**, effectively smuggling arbitrary flags or even commands.",
+    "> This page collects the most useful primitives, recent research and modern detections for 2023-2025.",
+    "## chown / chmod",
+    "You can **copy the owner/group or the permission bits of an arbitrary file** by abusing the `--reference` flag:",
+    "```bash",
+    "# attacker-controlled directory",
+    "touch \"--reference=/root/secret``file\"   # \u2190 filename becomes an argument",
+    "When root later executes something like:",
+    "```bash",
+    "chown -R alice:alice *.php",
+    "chmod -R 644 *.php",
+    "`--reference=/root/secret``file` is injected, causing *all* matching files to inherit the ownership/permissions of `/root/secret``file`."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/wildcards-spare-tricks.md"
+  ]
+}

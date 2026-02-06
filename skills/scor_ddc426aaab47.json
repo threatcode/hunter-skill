@@ -1,0 +1,27 @@
+{
+  "id": "scor_ddc426aaab47",
+  "category": "SCOR",
+  "title": "devops devsecops",
+  "description": "# Integrating Development, Operations, and Security: A Guide to DevOps, CI/CD, and DevSecOps\n\n## DevOps: Bridging Development and Operations\n\nDevOps is a set of practices that automates and integrates the processes between software development and IT operations teams. The goal is to shorten the system development lifecycle while delivering features, fixes, and updates frequently in close alignment with business objectives. DevOps encourages a culture of collaboration, where developers and operat",
+  "payloads": [
+    "# Integrating Development, Operations, and Security: A Guide to DevOps, CI/CD, and DevSecOps",
+    "## DevOps: Bridging Development and Operations",
+    "DevOps is a set of practices that automates and integrates the processes between software development and IT operations teams. The goal is to shorten the system development lifecycle while delivering features, fixes, and updates frequently in close alignment with business objectives. DevOps encourages a culture of collaboration, where developers and operations teams work closely across the entire software application life cycle, from development and test through deployment to operations.",
+    "### Key Principles of DevOps:",
+    "- **Continuous Integration and Continuous Deployment (CI/CD)**: Automating the integration of code changes from multiple contributors and ensuring the software can be reliably released at any time.",
+    "- **Automation**: Automating repetitive tasks to increase efficiency, reduce errors, and allow team members to focus on more strategic work.",
+    "- **Monitoring and Feedback**: Implementing robust monitoring of applications and infrastructure to quickly identify and address issues.",
+    "## CI/CD: The Backbone of Modern Software Deployment",
+    "CI/CD stands for Continuous Integration and Continuous Deployment, a cornerstone practice within DevOps that enables software development teams to focus on meeting business requirements, code quality, and security because deployments are automated.",
+    "### Continuous Integration (CI):",
+    "CI involves automatically integrating code changes from multiple contributors into a main repository multiple times a day. This is followed by automated builds and tests, which ensures that the codebase is always in a deployable state, helping to detect and fix integration errors quickly.",
+    "### Continuous Deployment (CD):",
+    "CD extends CI by automatically deploying all code changes to a testing or production environment after the build stage. This allows for faster feedback and more rapid release cycles, with the goal of providing a seamless, automated path to bring new features, configurations, and bug fixes to customers.",
+    "## DevSecOps: Incorporating Security into the Mix",
+    "DevSecOps integrates security practices within the DevOps process. The aim is to bake security into the early stages of the software development lifecycle, making it a shared responsibility among developers, operations, and security teams. This approach is designed to eliminate silos between teams, encourage proactive security measures, and embed security controls and testing deeply into the CI/CD pipeline."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/devops_devsecops.md"
+  ]
+}

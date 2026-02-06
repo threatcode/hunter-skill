@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_328247bb55d2",
+  "category": "windows-hardening",
+  "title": "silver ticket",
+  "description": "# Silver Ticket\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n\n## Silver ticket\n\nThe **Silver Ticket** attack involves the exploitation of service tickets in Active Directory (AD) environments. This method relies on **acquiring the NTLM hash of a service account**, such as a computer account, to forge a Ticket Granting Service (TGS) ticket. With this forged ticket, an attacker can access specific services on the network, **impersonating any user**, typically aiming for administrative priv",
+  "payloads": [
+    "# Silver Ticket",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Silver ticket",
+    "The **Silver Ticket** attack involves the exploitation of service tickets in Active Directory (AD) environments. This method relies on **acquiring the NTLM hash of a service account**, such as a computer account, to forge a Ticket Granting Service (TGS) ticket. With this forged ticket, an attacker can access specific services on the network, **impersonating any user**, typically aiming for administrative privileges. It's emphasized that using AES keys for forging tickets is more secure and less detectable.",
+    "> [!WARNING]",
+    "> Silver Tickets are less detectable than Golden Tickets because they only require the **hash of the service account**, not the krbtgt account. However, they are limited to the specific service they target. Moreover, just stealing the password of a user.",
+    "Moreover, if you compromise an **account's password with a SPN** you can use that password to create a Silver Ticket impersonating any user to that service.",
+    "For ticket crafting, different tools are employed based on the operating system:",
+    "### On Linux",
+    "```bash",
+    "python ticketer.py -nthash <HASH> -domain-sid <DOMAIN_SID> -domain <DOMAIN> -spn <SERVICE_PRINCIPAL_NAME> <USER>",
+    "export KRB5CCNAME=/root/impacket-examples/<TICKET_NAME>.ccache",
+    "python psexec.py <DOMAIN>/<USER>@<TARGET> -k -no-pass",
+    "### On Windows",
+    "```bash"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/silver-ticket.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_1867421ece74",
+  "category": "windows-hardening",
+  "title": "kernel race condition object manager slowdown",
+  "description": "# Kernel Race Condition Exploitation via Object Manager Slow Paths\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Why stretching the race window matters\n\nMany Windows kernel LPEs follow the classic pattern `check_state(); NtOpenX(\"name\"); privileged_action();`. On modern hardware a cold `NtOpenEvent`/`NtOpenSection` resolves a short name in ~2\u202f\u00b5s, leaving almost no time to flip the checked state before the secure action happens. By deliberately forcing the Object Manager Namespace (OMNS)",
+  "payloads": [
+    "# Kernel Race Condition Exploitation via Object Manager Slow Paths",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Why stretching the race window matters",
+    "Many Windows kernel LPEs follow the classic pattern `check_state(); NtOpenX(\"name\"); privileged_action();`. On modern hardware a cold `NtOpenEvent`/`NtOpenSection` resolves a short name in ~2\u202f\u00b5s, leaving almost no time to flip the checked state before the secure action happens. By deliberately forcing the Object Manager Namespace (OMNS) lookup in step 2 to take tens of microseconds, the attacker gains enough time to consistently win otherwise flaky races without needing thousands of attempts.",
+    "## Object Manager lookup internals in a nutshell",
+    "* **OMNS structure** \u2013 Names such as `\\BaseNamedObjects\\Foo` are resolved directory-by-directory. Each component causes the kernel to find/open an *Object Directory* and compare Unicode strings. Symbolic links (e.g., drive letters) may be traversed en route.",
+    "* **UNICODE_STRING limit** \u2013 OM paths are carried inside a `UNICODE_STRING` whose `Length` is a 16-bit value. The absolute limit is 65\u202f535 bytes (32\u202f767 UTF-16 codepoints). With prefixes like `\\BaseNamedObjects\\`, an attacker still controls \u224832\u202f000 characters.",
+    "* **Attacker prerequisites** \u2013 Any user can create objects underneath writable directories such as `\\BaseNamedObjects`. When the vulnerable code uses a name inside, or follows a symbolic link that lands there, the attacker controls the lookup performance with no special privileges.",
+    "## Slowdown primitive #1 \u2013 Single maximal component",
+    "The cost of resolving a component is roughly linear with its length because the kernel must perform a Unicode comparison against every entry in the parent directory. Creating an event with a 32\u202fkB-long name immediately increases the `NtOpenEvent` latency from ~2\u202f\u00b5s to ~35\u202f\u00b5s on Windows 11 24H2 (Snapdragon X Elite testbed).",
+    "```cpp",
+    "std::wstring path;",
+    "while (path.size() <= 32000) {",
+    "auto result = RunTest(L\"\\\\BaseNamedObjects\\\\A\" + path, 1000);",
+    "printf(\"%zu,%f\\n\", path.size(), result);"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/kernel-race-condition-object-manager-slowdown.md"
+  ]
+}

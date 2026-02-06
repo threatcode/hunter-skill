@@ -1,0 +1,24 @@
+{
+  "id": "dns_rebinding-9b9689410228",
+  "category": "DNS_REBINDING",
+  "title": "README",
+  "description": "# DNS Rebinding\n\n> DNS rebinding changes the IP address of an attacker controlled machine name to the IP address of a target application, bypassing the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) and thus allowing the browser to make arbitrary requests to the target application and read their responses.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n* [Protection Bypasses](#protection-bypasses)\n    * [0.0.0.0](#0000)\n    * [CNAME](",
+  "payloads": [
+    "> DNS rebinding changes the IP address of an attacker controlled machine name to the IP address of a target application, bypassing the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) and thus allowing the browser to make arbitrary requests to the target application and read their responses.",
+    "* [nccgroup/singularity](https://github.com/nccgroup/singularity) - A DNS rebinding attack framework.",
+    "* [rebind.it](http://rebind.it/) - Singularity of Origin Web Client.",
+    "* [taviso/rbndr](https://github.com/taviso/rbndr) - Simple DNS Rebinding Service",
+    "* [taviso/rebinder](https://lock.cmpxchg8b.com/rebinder.html) - rbndr Tool Helper",
+    "2. [Setup Singularity of Origin](https://github.com/nccgroup/singularity/wiki/Setup-and-Installation).",
+    "3. Edit the [autoattack HTML page](https://github.com/nccgroup/singularity/blob/master/html/autoattack.html) for your needs.",
+    "4. Browse to `http://rebinder.your.domain:8080/autoattack.html`.",
+    "In the case where DNS protection are enabled (generally disabled by default), NCC Group has documented multiple [DNS protection bypasses](https://github.com/nccgroup/singularity/wiki/Protection-Bypasses) that can be used.",
+    "; <<>> DiG 9.11.3-1ubuntu1.15-Ubuntu <<>> example.com +noall +answer",
+    "; <<>> DiG 9.11.3-1ubuntu1.15-Ubuntu <<>> example.com +noall +answer",
+    "* [How Do DNS Rebinding Attacks Work? - nccgroup - Apr 9, 2019](https://github.com/nccgroup/singularity/wiki/How-Do-DNS-Rebinding-Attacks-Work%3F)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/DNS Rebinding/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

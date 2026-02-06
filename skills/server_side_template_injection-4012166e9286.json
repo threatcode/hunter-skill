@@ -1,0 +1,27 @@
+{
+  "id": "server_side_template_injection-4012166e9286",
+  "category": "Server Side Template Injection",
+  "title": "Python",
+  "description": "# Server Side Template Injection - Python\n\n> Server-Side Template Injection (SSTI)  is a vulnerability that arises when an attacker can inject malicious input into a server-side template, causing arbitrary code execution on the server. In Python, SSTI can occur when using templating engines such as Jinja2, Mako, or Django templates, where user input is included in templates without proper sanitization.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Universal Payloads](#universal",
+  "payloads": [
+    "# Server Side Template Injection - Python",
+    "> Server-Side Template Injection (SSTI)  is a vulnerability that arises when an attacker can inject malicious input into a server-side template, causing arbitrary code execution on the server. In Python, SSTI can occur when using templating engines such as Jinja2, Mako, or Django templates, where user input is included in templates without proper sanitization.",
+    "## Summary",
+    "- [Templating Libraries](#templating-libraries)",
+    "- [Universal Payloads](#universal-payloads)",
+    "- [Django](#django)",
+    "- [Django - Basic Injection](#django---basic-injection)",
+    "- [Django - Cross-Site Scripting](#django---cross-site-scripting)",
+    "- [Django - Debug Information Leak](#django---debug-information-leak)",
+    "- [Django - Leaking App's Secret Key](#django---leaking-apps-secret-key)",
+    "- [Django - Admin Site URL leak](#django---admin-site-url-leak)",
+    "- [Django - Admin Username and Password Hash Leak](#django---admin-username-and-password-hash-leak)",
+    "- [Jinja2](#jinja2)",
+    "- [Jinja2 - Basic Injection](#jinja2---basic-injection)",
+    "- [Jinja2 - Template Format](#jinja2---template-format)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/Python.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ai_7b658a04f963",
+  "category": "AI",
+  "title": "AI Burp MCP",
+  "description": "# Burp MCP: LLM-assisted traffic review\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Overview\n\nBurp's **MCP Server** extension can expose intercepted HTTP(S) traffic to MCP-capable LLM clients so they can **reason over real requests/responses** for passive vulnerability discovery and report drafting. The intent is evidence-driven review (no fuzzing or blind scanning), keeping Burp as the source of truth.\n\n## Architecture\n\n- **Burp MCP Server (BApp)** listens on `127.0.0.1:9876` and expose",
+  "payloads": [
+    "# Burp MCP: LLM-assisted traffic review",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Burp's **MCP Server** extension can expose intercepted HTTP(S) traffic to MCP-capable LLM clients so they can **reason over real requests/responses** for passive vulnerability discovery and report drafting. The intent is evidence-driven review (no fuzzing or blind scanning), keeping Burp as the source of truth.",
+    "## Architecture",
+    "- **Burp MCP Server (BApp)** listens on `127.0.0.1:9876` and exposes intercepted traffic via MCP.",
+    "- **MCP proxy JAR** bridges stdio (client side) to Burp's MCP SSE endpoint.",
+    "- **Optional local reverse proxy** (Caddy) normalizes headers for strict MCP handshake checks.",
+    "- **Clients/backends**: Codex CLI (cloud), Gemini CLI (cloud), or Ollama (local).",
+    "## Setup",
+    "### 1) Install Burp MCP Server",
+    "Install **MCP Server** from the Burp BApp Store and verify it is listening on `127.0.0.1:9876`.",
+    "### 2) Extract the proxy JAR",
+    "In the MCP Server tab, click **Extract server proxy jar** and save `mcp-proxy.jar`.",
+    "### 3) Configure an MCP client (Codex example)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Burp-MCP.md"
+  ]
+}

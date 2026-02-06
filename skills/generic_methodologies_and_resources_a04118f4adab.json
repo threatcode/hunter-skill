@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a04118f4adab",
+  "category": "generic-methodologies-and-resources",
+  "title": "enable nexmon monitor and injection on android",
+  "description": "# Enable NexMon Monitor Mode & Packet Injection on Android (Broadcom chips)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\nMost modern Android phones embed a Broadcom/Cypress Wi-Fi chipset that ships without 802.11 monitor mode or frame-injection capabilities.  The open-source NexMon framework patches the proprietary firmware to add those features and exposes them through a shared library (`libnexmon.so`) and a CLI helper (`nexutil`).  By pre-loading that library into the stock ",
+  "payloads": [
+    "# Enable NexMon Monitor Mode & Packet Injection on Android (Broadcom chips)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Most modern Android phones embed a Broadcom/Cypress Wi-Fi chipset that ships without 802.11 monitor mode or frame-injection capabilities.  The open-source NexMon framework patches the proprietary firmware to add those features and exposes them through a shared library (`libnexmon.so`) and a CLI helper (`nexutil`).  By pre-loading that library into the stock Wi-Fi driver, a rooted device can capture raw 802.11 traffic and inject arbitrary frames \u2013 eliminating the need for an external USB adapter.",
+    "This page documents a fast workflow that takes a fully-patched Samsung Galaxy S10 (BCM4375B1) as an example, using:",
+    "* NexMon Magisk module containing the patched firmware + `libnexmon.so`",
+    "* Hijacker Android application to automate monitor-mode toggling",
+    "* Optional Kali NetHunter chroot to run classic wireless tools (aircrack-ng, wifite, mdk4 \u2026) directly against the internal interface",
+    "The same technique applies to any handset that has a publicly available NexMon patch (Pixel 1, Nexus 6P, Galaxy S7/S8, etc.).",
+    "## Prerequisites",
+    "* Android handset with a supported Broadcom/Cypress chipset (e.g. BCM4358/59/43596/4375B1)",
+    "* Root with Magisk \u2265 24",
+    "* BusyBox (most ROMs/NetHunter already include it)",
+    "* NexMon Magisk ZIP or self-compiled patch providing:",
+    "* `/system/lib*/libnexmon.so`"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-wifi/enable-nexmon-monitor-and-injection-on-android.md"
+  ]
+}

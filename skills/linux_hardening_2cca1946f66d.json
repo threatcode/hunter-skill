@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_2cca1946f66d",
+  "category": "linux-hardening",
+  "title": "freeipa pentesting",
+  "description": "# FreeIPA Pentesting\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Basic Information\n\nFreeIPA is an open-source **alternative** to Microsoft Windows **Active Directory**, mainly for **Unix** environments. It combines a complete **LDAP directory** with an MIT **Kerberos** Key Distribution Center for management akin to Active Directory. Utilizing the Dogtag **Certificate System** for CA & RA certificate management, it supports **multi-factor** authentication, including smartcards. SSSD is in",
+  "payloads": [
+    "# FreeIPA Pentesting",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "FreeIPA is an open-source **alternative** to Microsoft Windows **Active Directory**, mainly for **Unix** environments. It combines a complete **LDAP directory** with an MIT **Kerberos** Key Distribution Center for management akin to Active Directory. Utilizing the Dogtag **Certificate System** for CA & RA certificate management, it supports **multi-factor** authentication, including smartcards. SSSD is integrated for Unix authentication processes.",
+    "## Fingerprints",
+    "### Files & Environment Variables",
+    "- The file at `/etc/krb5.conf` is where Kerberos client information, necessary for enrollment in the domain, is stored. This includes KDCs and admin servers' locations, default settings, and mappings.",
+    "- System-wide defaults for IPA clients and servers are set in the file located at `/etc/ipa/default.conf`.",
+    "- Hosts within the domain must have a `krb5.keytab` file at `/etc/krb5.keytab` for authentication processes.",
+    "- Various environment variables (`KRB5CCNAME`, `KRB5_KTNAME`, `KRB5_CONFIG`, `KRB5_KDC_PROFILE`, `KRB5RCACHETYPE`, `KRB5RCACHEDIR`, `KRB5_TRACE`, `KRB5_CLIENT_KTNAME`, `KPROP_PORT`) are used to point to specific files and settings relevant to Kerberos authentication.",
+    "### Binaries",
+    "Tools such as `ipa`, `kdestroy`, `kinit`, `klist`, `kpasswd`, `ksu`, `kswitch`, and `kvno` are key to managing FreeIPA domains, handling Kerberos tickets, changing passwords, and acquiring service tickets, among other functionalities.",
+    "### Network",
+    "An illustration is provided to depict a typical FreeIPA server setup.",
+    "## Authentication"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/freeipa-pentesting.md"
+  ]
+}

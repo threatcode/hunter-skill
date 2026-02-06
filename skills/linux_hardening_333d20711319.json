@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_333d20711319",
+  "category": "linux-hardening",
+  "title": "selinux CENTOS lab",
+  "description": "# SELinux Lab Notes\n\nThe following is based on contributions from the Linode Linux community. SELinux is a Mandatory Access Control (MAC) system, developed by the NSA. SELinux was developed as a replacement for Discretionary Access Control (DAC) that ships with most Linux distributions.\n\nThe difference between DAC and MAC is *how* users and applications gain access to machines. Traditionally, the command `sudo` gives a user the ability to heighten permissions to root-level. Root access on a DAC ",
+  "payloads": [
+    "# SELinux Lab Notes",
+    "The following is based on contributions from the Linode Linux community. SELinux is a Mandatory Access Control (MAC) system, developed by the NSA. SELinux was developed as a replacement for Discretionary Access Control (DAC) that ships with most Linux distributions.",
+    "The difference between DAC and MAC is *how* users and applications gain access to machines. Traditionally, the command `sudo` gives a user the ability to heighten permissions to root-level. Root access on a DAC system gives the person or program access to all programs and files on a system.",
+    "A person with root access should be a trusted party. But if security has been compromised, so too has the system. SELinux and MACs resolve this issue by both confining privileged processes and automating security policy creation.",
+    "SELinux defaults to denying anything that is not explicitly allowed. SELinux has two global modes, *permissive* and *enforcing*. Permissive mode allows the system to function like a DAC system, while logging every violation to SELinux. The enforcing mode applies a strict denial of access to anything that isn't explicitly allowed. To explicitly allow certain behavior on a machine, you, as the system administrator, have to write policies that allow it. This guide provides a brief and basic introduction to commonly used commands and practices for SELinux system administration.",
+    "## Before You Begin",
+    "1.  This guide is written for a non-root user. Commands that require elevated privileges are prefixed with `sudo`. If you're not familiar with the `sudo` command, you can check our [Users and Groups](/docs/guides/linux-users-and-groups/) guide.",
+    "2.  Update your system:",
+    "sudo yum update",
+    "## Install Supporting SELinux Packages",
+    "In this section, you will install various SELinux packages that will help you when creating, managing, and analyzing SELinux policies.",
+    "1. Verify which SELinux packages are installed on your system:",
+    "sudo rpm -aq | grep selinux",
+    "A newly deployed CentOS system should have the following packages installed:",
+    "libselinux-2.5-14.1.el7.x86_64"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/linux-hardening/selinux_CENTOS_lab.md"
+  ]
+}

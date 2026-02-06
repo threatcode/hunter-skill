@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_5706ca40aa33",
+  "category": "linux-hardening",
+  "title": "android rooting frameworks manager auth bypass syscall hook",
+  "description": "# Android Rooting Frameworks (KernelSU/Magisk) Manager Auth Bypass & Syscall Hook Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\nRooting frameworks like KernelSU, APatch, SKRoot and Magisk frequently patch the Linux/Android kernel and expose privileged functionality to an unprivileged userspace \"manager\" app via a hooked syscall. If the manager-authentication step is flawed, any local app can reach this channel and escalate privileges on already-rooted devices.\n\nThis page abstracts th",
+  "payloads": [
+    "# Android Rooting Frameworks (KernelSU/Magisk) Manager Auth Bypass & Syscall Hook Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Rooting frameworks like KernelSU, APatch, SKRoot and Magisk frequently patch the Linux/Android kernel and expose privileged functionality to an unprivileged userspace \"manager\" app via a hooked syscall. If the manager-authentication step is flawed, any local app can reach this channel and escalate privileges on already-rooted devices.",
+    "This page abstracts the techniques and pitfalls uncovered in public research (notably Zimperium\u2019s analysis of KernelSU v0.5.7) to help both red and blue teams understand attack surfaces, exploitation primitives, and robust mitigations.",
+    "## Architecture pattern: syscall-hooked manager channel",
+    "- Kernel module/patch hooks a syscall (commonly prctl) to receive \"commands\" from userspace.",
+    "- Protocol typically is: magic_value, command_id, arg_ptr/len ...",
+    "- A userspace manager app authenticates first (e.g., CMD_BECOME_MANAGER). Once the kernel marks the caller as a trusted manager, privileged commands are accepted:",
+    "- Grant root to caller (e.g., CMD_GRANT_ROOT)",
+    "- Manage allowlists/deny-lists for su",
+    "- Adjust SELinux policy (e.g., CMD_SET_SEPOLICY)",
+    "- Query version/configuration",
+    "- Because any app can invoke syscalls, the correctness of the manager authentication is critical.",
+    "Example (KernelSU design):",
+    "- Hooked syscall: prctl"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/android-rooting-frameworks-manager-auth-bypass-syscall-hook.md"
+  ]
+}

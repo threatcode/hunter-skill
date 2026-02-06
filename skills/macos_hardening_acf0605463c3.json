@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_acf0605463c3",
+  "category": "macos-hardening",
+  "title": "macos basic objective c",
+  "description": "# macOS Objective-C\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Objective-C\n\n> [!CAUTION]\n> Note that programs written in Objective-C **retain** their class declarations **when** **compiled** into [Mach-O binaries](macos-files-folders-and-binaries/universal-binaries-and-mach-o-format.md). Such class declarations **include** the name and type of:\n\n- The class\n- The class methods\n- The class instance variables\n\nYou can get this information using [**class-dump**](https://github.com/nygar",
+  "payloads": [
+    "# macOS Objective-C",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Objective-C",
+    "> [!CAUTION]",
+    "> Note that programs written in Objective-C **retain** their class declarations **when** **compiled** into [Mach-O binaries](macos-files-folders-and-binaries/universal-binaries-and-mach-o-format.md). Such class declarations **include** the name and type of:",
+    "- The class",
+    "- The class methods",
+    "- The class instance variables",
+    "You can get this information using [**class-dump**](https://github.com/nygard/class-dump):",
+    "```bash",
+    "class-dump Kindle.app",
+    "Note that this names could be obfuscated to make the reversing of the binary more difficult.",
+    "## Classes, Methods & Objects",
+    "### Interface, Properties & Methods",
+    "```objectivec"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-basic-objective-c.md"
+  ]
+}

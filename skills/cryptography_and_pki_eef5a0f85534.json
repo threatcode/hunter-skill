@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_eef5a0f85534",
+  "category": "cryptography-and-pki",
+  "title": "crypto tools",
+  "description": "# Cryptography Ethical Hacking Tools\nThe following list includes some of the most popular tools to test crypto implementations.\n\n\n<table class=\"table\">\n<thead>\n<tr>\n<th>Name</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=15\">aespipe</a></th>\n<td>Reads data from stdin and outputs encrypted or decrypted results to stdout.</td>\n</tr>\n<tr>\n<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=60\">argon2</a></th>\n<td>The password hash",
+  "payloads": [
+    "# Cryptography Ethical Hacking Tools",
+    "The following list includes some of the most popular tools to test crypto implementations.",
+    "<table class=\"table\">",
+    "<thead>",
+    "<th>Name</th>",
+    "<th>Description</th>",
+    "</thead>",
+    "<tbody>",
+    "<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=15\">aespipe</a></th>",
+    "<td>Reads data from stdin and outputs encrypted or decrypted results to stdout.</td>",
+    "<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=60\">argon2</a></th>",
+    "<td>The password hash Argon2, winner of PHC.</td>",
+    "<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=2114\">armor</a></th>",
+    "<td>A simple Bash script designed to create encrypted macOS payloads capable of evading antivirus scanners.</td>",
+    "<th scope=\"row\"><a href=\"https://en.kali.tools/all/?tool=75\">athena-ssl-scanner</a></th>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/crypto_tools.md"
+  ]
+}

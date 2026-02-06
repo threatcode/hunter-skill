@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_2ca8f51e32eb",
+  "category": "generic-methodologies-and-resources",
+  "title": "dnscat exfiltration",
+  "description": "# DNSCat pcap analysis\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nIf you have pcap with data being **exfiltrated by DNSCat** (without using encryption), you can find the exfiltrated content.\n\nYou only need to know that the **first 9 bytes** are not real data but are related to the **C\\&C communication**:\n\n```python\nfrom scapy.all import rdpcap, DNSQR, DNSRR\nimport struct\n\nf = \"\"\nlast = \"\"\nfor p in rdpcap('ch21.pcap'):\n\tif p.haslayer(DNSQR) and not p.haslayer(DNSRR):\n\n\t\tqry = p[DNSQR]",
+  "payloads": [
+    "# DNSCat pcap analysis",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "If you have pcap with data being **exfiltrated by DNSCat** (without using encryption), you can find the exfiltrated content.",
+    "You only need to know that the **first 9 bytes** are not real data but are related to the **C\\&C communication**:",
+    "```python",
+    "from scapy.all import rdpcap, DNSQR, DNSRR",
+    "import struct",
+    "f = \"\"",
+    "last = \"\"",
+    "for p in rdpcap('ch21.pcap'):",
+    "if p.haslayer(DNSQR) and not p.haslayer(DNSRR):",
+    "qry = p[DNSQR].qname.replace(\".jz-n-bs.local.\",\"\").strip().split(\".\")",
+    "qry = ''.join(_.decode('hex') for _ in qry)[9:]",
+    "if last != qry:",
+    "print(qry)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/dnscat-exfiltration.md"
+  ]
+}

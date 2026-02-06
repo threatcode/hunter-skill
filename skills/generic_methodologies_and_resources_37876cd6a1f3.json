@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_37876cd6a1f3",
+  "category": "generic-methodologies-and-resources",
+  "title": "homograph attacks",
+  "description": "# Homograph / Homoglyph Attacks in Phishing\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nA homograph (aka homoglyph) attack abuses the fact that many **Unicode code points from non-Latin scripts are visually identical or extremely similar to ASCII characters**. By replacing one or more Latin characters with their look-alike counterparts, an attacker can craft:\n\n* Display names, subjects or message bodies that look legitimate to the human eye but bypass keyword-based detection",
+  "payloads": [
+    "# Homograph / Homoglyph Attacks in Phishing",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "A homograph (aka homoglyph) attack abuses the fact that many **Unicode code points from non-Latin scripts are visually identical or extremely similar to ASCII characters**. By replacing one or more Latin characters with their look-alike counterparts, an attacker can craft:",
+    "* Display names, subjects or message bodies that look legitimate to the human eye but bypass keyword-based detections.",
+    "* Domains, sub-domains or URL paths that fool victims into believing they are visiting a trusted site.",
+    "Because every glyph is identified internally by its **Unicode code point**, a single substituted character is enough to defeat na\u00efve string comparisons (e.g., `\"\u03a0\u03b1ypal.com\"` vs. `\"Paypal.com\"`).",
+    "## Typical Phishing Workflow",
+    "1. **Craft message content** \u2013 Replace specific Latin letters in the impersonated brand / keyword with visually indistinguishable characters from another script (Greek, Cyrillic, Armenian, Cherokee, etc.).",
+    "2. **Register supporting infrastructure** \u2013 Optionally register a homoglyph domain and obtain a TLS certificate (most CAs do no visual similarity checks).",
+    "3. **Send email / SMS** \u2013 The message contains homoglyphs in one or more of the following locations:",
+    "* Sender display name (e.g., `\u0397\u0435l\u0440d\u0435\u0455k`)",
+    "* Subject line (`Urg\u0435nt \u0410ct\u0456on R\u0435qu\u0456r\u0435d`)",
+    "* Hyperlink text or fully qualified domain name",
+    "4. **Redirect chain** \u2013 Victim is bounced through seemingly benign websites or URL shorteners before landing on the malicious host that harvests credentials / delivers malware."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/homograph-attacks.md"
+  ]
+}

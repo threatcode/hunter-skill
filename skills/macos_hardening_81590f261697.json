@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_81590f261697",
+  "category": "macos-hardening",
+  "title": "macos chromium injection",
+  "description": "# macOS Chromium Injection\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nChromium-based browsers like Google Chrome, Microsoft Edge, Brave, Arc, Vivaldi, and Opera all consume the same command-line switches, preference files, and DevTools automation interfaces. On macOS, any user with GUI access can terminate an existing browser session and re-open it with arbitrary flags, extensions, or DevTools endpoints that run with the target's entitlements.\n\n#### Launching Ch",
+  "payloads": [
+    "# macOS Chromium Injection",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Chromium-based browsers like Google Chrome, Microsoft Edge, Brave, Arc, Vivaldi, and Opera all consume the same command-line switches, preference files, and DevTools automation interfaces. On macOS, any user with GUI access can terminate an existing browser session and re-open it with arbitrary flags, extensions, or DevTools endpoints that run with the target's entitlements.",
+    "#### Launching Chromium with custom flags on macOS",
+    "macOS keeps a single UI instance per Chromium profile, so instrumentation normally requires force-closing the browser (for example with `osascript -e 'tell application \"Google Chrome\" to quit'`). Attackers typically relaunch via `open -na \"Google Chrome\" --args <flags>` so they can inject arguments without modifying the app bundle. Wrapping that command inside a user LaunchAgent (`~/Library/LaunchAgents/*.plist`) or login hook guarantees the tampered browser is respawned after reboot/logoff.",
+    "#### `--load-extension` Flag",
+    "The `--load-extension` flag auto-loads unpacked extensions (comma-separated paths). Pair it with `--disable-extensions-except` to block legitimate extensions while forcing only your payload to run. Malicious extensions can request high-impact permissions such as `debugger`, `webRequest`, and `cookies` to pivot into DevTools protocols, patch CSP headers, downgrade HTTPS, or exfiltrate session material as soon as the browser starts.",
+    "#### `--remote-debugging-port` / `--remote-debugging-pipe` Flags",
+    "These switches expose the Chrome DevTools Protocol (CDP) over TCP or a pipe so external tooling can drive the browser. Google observed widespread infostealer abuse of this interface and, beginning with Chrome 136 (March 2025), the switches are ignored for the default profile unless the browser is launched with a non-standard `--user-data-dir`. This enforces App-Bound Encryption on real profiles, but attackers can still spawn a fresh profile, coerce the victim to authenticate inside it (phishing/triage assistance), and harvest cookies, tokens, device trust states, or WebAuthn registrations via CDP.",
+    "#### `--user-data-dir` Flag",
+    "This flag redirects the entire browser profile (History, Cookies, Login Data, Preference files, etc.) to an attacker-controlled path. It is mandatory when combining modern Chrome builds with `--remote-debugging-port`, and it also keeps the tampered profile isolated so you can drop pre-populated `Preferences` or `Secure Preferences` files that disable security prompts, auto-install extensions, and change default schemes.",
+    "#### `--use-fake-ui-for-media-stream` Flag",
+    "This switch bypasses the camera/mic permission prompt so any page that calls `getUserMedia` receives access immediately. Combine it with flags such as `--auto-select-desktop-capture-source=\"Entire Screen\"`, `--kiosk`, or CDP `Browser.grantPermissions` commands to silently capture audio/video, desk-share, or satisfy WebRTC permission checks without user interaction.",
+    "## Remote Debugging & DevTools Protocol Abuse"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-chromium-injection.md"
+  ]
+}

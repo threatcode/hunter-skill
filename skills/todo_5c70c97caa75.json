@@ -1,0 +1,27 @@
+{
+  "id": "todo_5c70c97caa75",
+  "category": "todo",
+  "title": "fz sub ghz",
+  "description": "# FZ - Sub-GHz\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Intro <a href=\"#kfpn7\" id=\"kfpn7\"></a>\n\nFlipper Zero can **receive and transmit radio frequencies in the range of 300-928 MHz** with its built-in module, which can read, save, and emulate remote controls. These controls are used for interaction with gates, barriers, radio locks, remote control switches, wireless doorbells, smart lights, and more. Flipper Zero can help you to learn if your security is compromised.\n\n<figure><",
+  "payloads": [
+    "# FZ - Sub-GHz",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Intro <a href=\"#kfpn7\" id=\"kfpn7\"></a>",
+    "Flipper Zero can **receive and transmit radio frequencies in the range of 300-928 MHz** with its built-in module, which can read, save, and emulate remote controls. These controls are used for interaction with gates, barriers, radio locks, remote control switches, wireless doorbells, smart lights, and more. Flipper Zero can help you to learn if your security is compromised.",
+    "<figure><img src=\"../../../images/image (714).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "## Sub-GHz hardware <a href=\"#kfpn7\" id=\"kfpn7\"></a>",
+    "Flipper Zero has a built-in sub-1 GHz module based on a [\ufeff](https://www.st.com/en/nfc/st25r3916.html#overview)\ufeff[CC1101 chip](https://www.ti.com/lit/ds/symlink/cc1101.pdf) and a radio antenna (the maximum range is 50 meters). Both the CC1101 chip and the antenna are designed to operate at frequencies in the 300-348 MHz, 387-464 MHz, and 779-928 MHz bands.",
+    "<figure><img src=\"../../../images/image (923).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "## Actions",
+    "### Frequency Analyser",
+    "> [!TIP]",
+    "> How to find which frequency is the remote using",
+    "When analysing, Flipper Zero is scanning signals strength (RSSI) at all the frequencies available in frequency configuration. Flipper Zero displays the frequency with the highest RSSI value, with signal strength higher than -90 [dBm](https://en.wikipedia.org/wiki/DBm).",
+    "To determine the remote's frequency, do the following:",
+    "1. Place the remote control very close to the left of Flipper Zero."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/flipper-zero/fz-sub-ghz.md"
+  ]
+}

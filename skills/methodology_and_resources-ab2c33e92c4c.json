@@ -1,0 +1,16 @@
+{
+  "id": "methodology_and_resources-ab2c33e92c4c",
+  "category": "Methodology and Resources",
+  "title": "HTML Smuggling",
+  "description": "# HTML Smuggling\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/html-smuggling](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/)\n\n- [Description](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/#description)\n- [Executable Storage](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/#executable-storage)\n",
+  "payloads": [
+    "# HTML Smuggling",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/html-smuggling](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/)",
+    "- [Description](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/#description)",
+    "- [Executable Storage](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/html-smuggling/#executable-storage)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/HTML Smuggling.md"
+  ]
+}

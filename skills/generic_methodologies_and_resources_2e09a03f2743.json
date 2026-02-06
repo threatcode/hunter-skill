@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_2e09a03f2743",
+  "category": "generic-methodologies-and-resources",
+  "title": "reportlab xhtml2pdf triple brackets expression evaluation rce cve 2023 33733",
+  "description": "# ReportLab/xhtml2pdf [[[...]]] expression-evaluation RCE (CVE-2023-33733)\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nThis page documents a practical sandbox escape and RCE primitive in ReportLab\u2019s rl_safe_eval used by xhtml2pdf and other PDF-generation pipelines when rendering user-controlled HTML into PDFs.\n\nCVE-2023-33733 affects ReportLab versions up to and including 3.6.12. In certain attribute contexts (for example color), values wrapped in triple brackets [[[ ... ]]] are evalu",
+  "payloads": [
+    "# ReportLab/xhtml2pdf [[[...]]] expression-evaluation RCE (CVE-2023-33733)",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "This page documents a practical sandbox escape and RCE primitive in ReportLab\u2019s rl_safe_eval used by xhtml2pdf and other PDF-generation pipelines when rendering user-controlled HTML into PDFs.",
+    "CVE-2023-33733 affects ReportLab versions up to and including 3.6.12. In certain attribute contexts (for example color), values wrapped in triple brackets [[[ ... ]]] are evaluated server-side by rl_safe_eval. By crafting a payload that pivots from a whitelisted builtin (pow) to its Python function globals, an attacker can reach the os module and execute commands.",
+    "Key points",
+    "- Trigger: inject [[[ ... ]]] into evaluated attributes such as <font color=\"...\"> within markup parsed by ReportLab/xhtml2pdf.",
+    "- Sandbox: rl_safe_eval replaces dangerous builtins but evaluated functions still expose __globals__.",
+    "- Bypass: craft a transient class Word to bypass rl_safe_eval name checks and access the string \"__globals__\" while avoiding blocked dunder filtering.",
+    "- RCE: `getattr(pow, Word('__globals__'))['os'].system('<cmd>')`",
+    "- Stability: Return a valid value for the attribute after execution (for color, use and 'red').",
+    "When to test",
+    "- Applications that expose HTML-to-PDF export (profiles, invoices, reports) and show xhtml2pdf/ReportLab in PDF metadata or HTTP response comments.",
+    "- exiftool profile.pdf | egrep 'Producer|Title|Creator' \u2192 \"xhtml2pdf\" producer",
+    "- HTTP response for PDF often starts with a ReportLab generator comment",
+    "How the sandbox bypass works"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/bypass-python-sandboxes/reportlab-xhtml2pdf-triple-brackets-expression-evaluation-rce-cve-2023-33733.md"
+  ]
+}

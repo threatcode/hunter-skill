@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_8839159c2203",
+  "category": "macos-hardening",
+  "title": "macos xattr acls extra stuff",
+  "description": "# macOS xattr-acls extra stuff\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n```bash\nrm -rf /tmp/test*\necho test >/tmp/test\nchmod +a \"everyone deny write,writeattr,writeextattr,writesecurity,chown\" /tmp/test\n./get_acls test\nACL for test:\n!#acl 1\ngroup:ABCDEFAB-CDEF-ABCD-EFAB-CDEF0000000C:everyone:12:deny:write,writeattr,writeextattr,writesecurity,chown\n\nACL in hex: \\x21\\x23\\x61\\x63\\x6c\\x20\\x31\\x0a\\x67\\x72\\x6f\\x75\\x70\\x3a\\x41\\x42\\x43\\x44\\x45\\x46\\x41\\x42\\x2d\\x43\\x44\\x45\\x46\\x2d\\x41\\x42",
+  "payloads": [
+    "# macOS xattr-acls extra stuff",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "```bash",
+    "rm -rf /tmp/test*",
+    "echo test >/tmp/test",
+    "chmod +a \"everyone deny write,writeattr,writeextattr,writesecurity,chown\" /tmp/test",
+    "./get_acls test",
+    "ACL for test:",
+    "!#acl 1",
+    "group:ABCDEFAB-CDEF-ABCD-EFAB-CDEF0000000C:everyone:12:deny:write,writeattr,writeextattr,writesecurity,chown",
+    "ACL in hex: \\x21\\x23\\x61\\x63\\x6c\\x20\\x31\\x0a\\x67\\x72\\x6f\\x75\\x70\\x3a\\x41\\x42\\x43\\x44\\x45\\x46\\x41\\x42\\x2d\\x43\\x44\\x45\\x46\\x2d\\x41\\x42\\x43\\x44\\x2d\\x45\\x46\\x41\\x42\\x2d\\x43\\x44\\x45\\x46\\x30\\x30\\x30\\x30\\x30\\x30\\x30\\x43\\x3a\\x65\\x76\\x65\\x72\\x79\\x6f\\x6e\\x65\\x3a\\x31\\x32\\x3a\\x64\\x65\\x6e\\x79\\x3a\\x77\\x72\\x69\\x74\\x65\\x2c\\x77\\x72\\x69\\x74\\x65\\x61\\x74\\x74\\x72\\x2c\\x77\\x72\\x69\\x74\\x65\\x65\\x78\\x74\\x61\\x74\\x74\\x72\\x2c\\x77\\x72\\x69\\x74\\x65\\x73\\x65\\x63\\x75\\x72\\x69\\x74\\x79\\x2c\\x63\\x68\\x6f\\x77\\x6e\\x0a",
+    "<details>",
+    "<summary>Code of get_acls</summary>",
+    "// gcc -o get_acls get_acls",
+    "#include <stdio.h>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-fs-tricks/macos-xattr-acls-extra-stuff.md"
+  ]
+}

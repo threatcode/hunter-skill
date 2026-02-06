@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a40de54d9d86",
+  "category": "generic-methodologies-and-resources",
+  "title": "suricata and iptables cheatsheet",
+  "description": "# Suricata & Iptables cheatsheet\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Iptables\n\n### Chains\n\nIn iptables, lists of rules known as chains are processed sequentially. Among these, three primary chains are universally present, with additional ones like NAT being potentially supported depending on the system's capabilities.\n\n- **Input Chain**: Utilized for managing the behavior of incoming connections.\n- **Forward Chain**: Employed for handling incoming connections that are not d",
+  "payloads": [
+    "# Suricata & Iptables cheatsheet",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Iptables",
+    "### Chains",
+    "In iptables, lists of rules known as chains are processed sequentially. Among these, three primary chains are universally present, with additional ones like NAT being potentially supported depending on the system's capabilities.",
+    "- **Input Chain**: Utilized for managing the behavior of incoming connections.",
+    "- **Forward Chain**: Employed for handling incoming connections that are not destined for the local system. This is typical for devices acting as routers, where the data received is meant to be forwarded to another destination. This chain is relevant primarily when the system is involved in routing, NATing, or similar activities.",
+    "- **Output Chain**: Dedicated to the regulation of outgoing connections.",
+    "These chains ensure the orderly processing of network traffic, allowing for the specification of detailed rules governing the flow of data into, through, and out of a system.",
+    "```bash",
+    "# Delete all rules",
+    "iptables -F",
+    "# List all rules",
+    "iptables -L",
+    "iptables -S"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/suricata-and-iptables-cheatsheet.md"
+  ]
+}

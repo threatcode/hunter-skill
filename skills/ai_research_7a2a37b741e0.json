@@ -1,0 +1,15 @@
+{
+  "id": "ai_research_7a2a37b741e0",
+  "category": "ai-research",
+  "title": "cheat sheets",
+  "description": "# Several Resources and \"Cheat Sheets\"\n\n- [Choosing the right estimator](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)\n- [Top Traditional Machine Learning Algorithms](https://s3.amazonaws.com/assets.datacamp.com/email/other/ML+Cheat+Sheet_2.pdf)\n",
+  "payloads": [
+    "# Several Resources and \"Cheat Sheets\"",
+    "- [Choosing the right estimator](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)",
+    "- [Top Traditional Machine Learning Algorithms](https://s3.amazonaws.com/assets.datacamp.com/email/other/ML+Cheat+Sheet_2.pdf)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ML-Fundamentals/cheat_sheets.md"
+  ]
+}

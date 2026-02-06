@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a8e25aed739e",
+  "category": "generic-methodologies-and-resources",
+  "title": "mach o entitlements and ipsw indexing",
+  "description": "# Mach-O Entitlements Extraction & IPSW Indexing\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Overview\n\nThis page covers how to extract entitlements from Mach-O binaries programmatically by walking LC_CODE_SIGNATURE and parsing the code signing SuperBlob, and how to scale this across Apple IPSW firmwares by mounting and indexing their contents for forensic search/diff.\n\nIf you need a refresher on Mach-O format and code signing, see also: macOS code signing and SuperBlob internals.\n-",
+  "payloads": [
+    "# Mach-O Entitlements Extraction & IPSW Indexing",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "This page covers how to extract entitlements from Mach-O binaries programmatically by walking LC_CODE_SIGNATURE and parsing the code signing SuperBlob, and how to scale this across Apple IPSW firmwares by mounting and indexing their contents for forensic search/diff.",
+    "If you need a refresher on Mach-O format and code signing, see also: macOS code signing and SuperBlob internals.",
+    "- Check macOS code signing details (SuperBlob, Code Directory, special slots): [macOS Code Signing](../../../macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-code-signing.md)",
+    "- Check general Mach-O structures/load commands: [Universal binaries & Mach-O Format](../../../macos-hardening/macos-security-and-privilege-escalation/macos-files-folders-and-binaries/universal-binaries-and-mach-o-format.md)",
+    "## Entitlements in Mach-O: where they live",
+    "Entitlements are stored inside the code signature data referenced by the LC_CODE_SIGNATURE load command and placed in the __LINKEDIT segment. The signature is a CS_SuperBlob containing multiple blobs (code directory, requirements, entitlements, CMS, etc.). The entitlements blob is a CS_GenericBlob whose data is an Apple Binary Property List (bplist00) mapping entitlement keys to values.",
+    "Key structures (from xnu):",
+    "/* mach-o/loader.h */",
+    "struct mach_header_64 {",
+    "uint32_t magic;",
+    "cpu_type_t cputype;",
+    "cpu_subtype_t cpusubtype;"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/mach-o-entitlements-and-ipsw-indexing.md"
+  ]
+}

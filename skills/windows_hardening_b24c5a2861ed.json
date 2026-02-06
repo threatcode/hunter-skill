@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_b24c5a2861ed",
+  "category": "windows-hardening",
+  "title": "privilege escalation with autorun binaries",
+  "description": "# Privilege Escalation with Autoruns\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n\n## WMIC\n\n**Wmic** can be used to run programs on **startup**. See which binaries are programmed to run is startup with:\n\n```bash\nwmic startup get caption,command 2>nul & ^\nGet-CimInstance Win32_StartupCommand | select Name, command, Location, User | fl\n```\n\n## Scheduled Tasks\n\n**Tasks** can be schedules to run with **certain frequency**. See which binaries are scheduled to run with:\n\n```bash\nschtasks /quer",
+  "payloads": [
+    "# Privilege Escalation with Autoruns",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## WMIC",
+    "**Wmic** can be used to run programs on **startup**. See which binaries are programmed to run is startup with:",
+    "```bash",
+    "wmic startup get caption,command 2>nul & ^",
+    "Get-CimInstance Win32_StartupCommand | select Name, command, Location, User | fl",
+    "## Scheduled Tasks",
+    "**Tasks** can be schedules to run with **certain frequency**. See which binaries are scheduled to run with:",
+    "```bash",
+    "schtasks /query /fo TABLE /nh | findstr /v /i \"disable deshab\"",
+    "schtasks /query /fo LIST 2>nul | findstr TaskName",
+    "schtasks /query /fo LIST /v > schtasks.txt; cat schtask.txt | grep \"SYSTEM\\|Task To Run\" | grep -B 1 SYSTEM",
+    "Get-ScheduledTask | where {$_.TaskPath -notlike \"\\Microsoft*\"} | ft TaskName,TaskPath,State",
+    "#Schtask to give admin access"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries.md"
+  ]
+}

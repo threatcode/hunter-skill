@@ -1,0 +1,27 @@
+{
+  "id": "devsecops_afe51e1336f0",
+  "category": "devsecops",
+  "title": "securing code and applications",
+  "description": "# Securing Code and Applications\n\n## 1. Secure Coding Practices\n\n- **Code Review**: Regular and systematic examination of the source code to identify and fix vulnerabilities.\n  - Manual Reviews: Involves human experts analyzing the code.\n  - Automated Scanning: Utilizes tools to detect common security issues.\n\n- **Static and Dynamic Analysis**:\n  - Static Application Security Testing (SAST): Analyzes source code, bytecode, or application binaries to find vulnerabilities without executing the cod",
+  "payloads": [
+    "# Securing Code and Applications",
+    "## 1. Secure Coding Practices",
+    "- **Code Review**: Regular and systematic examination of the source code to identify and fix vulnerabilities.",
+    "- Manual Reviews: Involves human experts analyzing the code.",
+    "- Automated Scanning: Utilizes tools to detect common security issues.",
+    "- **Static and Dynamic Analysis**:",
+    "- Static Application Security Testing (SAST): Analyzes source code, bytecode, or application binaries to find vulnerabilities without executing the code.",
+    "- Dynamic Application Security Testing (DAST): Tests the running application to find vulnerabilities that may not be visible in the code but can be exploited.",
+    "- **Threat Modeling**: Identifying potential threats and designing countermeasures. It includes:",
+    "- Identifying assets and their value.",
+    "- Determining potential threats and vulnerabilities.",
+    "- Defining countermeasures to mitigate risks.",
+    "## 2. Application Security",
+    "- **Authentication and Authorization**:",
+    "- Authentication: Verifying the identity of users, systems, or services."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/devsecops/securing_code_and_applications.md"
+  ]
+}

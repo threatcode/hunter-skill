@@ -1,0 +1,27 @@
+{
+  "id": "hardware_physical_access_5bf9ac319c08",
+  "category": "hardware-physical-access",
+  "title": "synology encrypted archive decryption",
+  "description": "# Synology PAT/SPK Encrypted Archive Decryption\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nSeveral Synology devices (DSM/BSM NAS, BeeStation, \u2026) distribute their firmware and application packages in **encrypted PAT / SPK archives**.  Those archives can be decrypted *offline* with nothing but the public download files thanks to hard-coded keys embedded inside the official extraction libraries.\n\nThis page documents, step-by-step, how the encrypted format works and how to full",
+  "payloads": [
+    "# Synology PAT/SPK Encrypted Archive Decryption",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Several Synology devices (DSM/BSM NAS, BeeStation, \u2026) distribute their firmware and application packages in **encrypted PAT / SPK archives**.  Those archives can be decrypted *offline* with nothing but the public download files thanks to hard-coded keys embedded inside the official extraction libraries.",
+    "This page documents, step-by-step, how the encrypted format works and how to fully recover the clear-text **TAR** that sits inside each package.  The procedure is based on Synacktiv research performed during Pwn2Own Ireland 2024 and implemented in the open-source tool [`synodecrypt`](https://github.com/synacktiv/synodecrypt).",
+    "> \u26a0\ufe0f  The format is exactly the same for both `*.pat` (system update) and `*.spk` (application) archives \u2013 they only differ in the pair of hard-coded keys that are selected.",
+    "## 1. Grab the archive",
+    "The firmware/application update can normally be downloaded from Synology\u2019s public portal:",
+    "```bash",
+    "$ wget https://archive.synology.com/download/Os/BSM/BSM_BST150-4T_65374.pat",
+    "## 2. Dump the PAT structure (optional)",
+    "`*.pat` images are themselves a **cpio bundle** that embeds several files (boot loader, kernel, rootfs, packages\u2026).  The free utility [`patology`](https://github.com/sud0woodo/patology) is convenient to inspect that wrapper:",
+    "```bash",
+    "$ python3 patology.py --dump -i BSM_BST150-4T_65374.pat",
+    "DiskCompatibilityDB.tar  hda1.tgz  rd.bin  packages/  \u2026"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/hardware-physical-access/firmware-analysis/synology-encrypted-archive-decryption.md"
+  ]
+}

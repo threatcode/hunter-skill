@@ -1,0 +1,18 @@
+{
+  "id": "insecure_management_interface-06d82ea94a5b",
+  "category": "INSECURE_MANAGEMENT_INTERFACE",
+  "title": "README",
+  "description": "# Insecure Management Interface\n\n> Insecure Management Interface refers to vulnerabilities in administrative interfaces used for managing servers, applications, databases, or network devices. These interfaces often control sensitive settings and can have powerful access to system configurations, making them prime targets for attackers.\n> Insecure Management Interfaces may lack proper security measures, such as strong authentication, encryption, or IP restrictions, allowing unauthorized users to ",
+  "payloads": [
+    "nuclei -t http/default-logins -u https://example.com",
+    "nuclei -t http/exposed-panels -u https://example.com",
+    "nuclei -t http/exposures -u https://example.com",
+    "* [CAPEC-121: Exploit Non-Production Interfaces - CAPEC - July 30, 2020](https://capec.mitre.org/data/definitions/121.html)",
+    "* [Exploiting Spring Boot Actuators - Michael Stepankin - Feb 25, 2019](https://www.veracode.com/blog/research/exploiting-spring-boot-actuators)",
+    "* [Springboot - Official Documentation - May 9, 2024](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Insecure Management Interface/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

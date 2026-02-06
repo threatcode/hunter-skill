@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_e5aeb8476372",
+  "category": "cryptography-and-pki",
+  "title": "02 Diffie Hellman Key Exchange",
+  "description": "# Challenge 2: Simple RSA Encryption\n\n**Challenge Text:**\n```\nn = 3233, e = 17, Encrypted message: [2201, 2332, 1452]\n```\n\n**Instructions:**\n1. Factorize the value of \\( n \\) into two prime numbers, \\( p \\) and \\( q \\).\n2. Compute the private key \\( d \\) using the Extended Euclidean Algorithm.\n3. Decrypt the message using the computed private key.\n\n### Answer:\n\n\n<img width=\"1230\" alt=\"image\" src=\"https://github.com/The-Art-of-Hacking/h4cker/assets/1690898/b4919061-0736-4884-9f44-51f0a53fdcc6\">\n\n",
+  "payloads": [
+    "# Challenge 2: Simple RSA Encryption",
+    "**Challenge Text:**",
+    "n = 3233, e = 17, Encrypted message: [2201, 2332, 1452]",
+    "**Instructions:**",
+    "1. Factorize the value of \\( n \\) into two prime numbers, \\( p \\) and \\( q \\).",
+    "2. Compute the private key \\( d \\) using the Extended Euclidean Algorithm.",
+    "3. Decrypt the message using the computed private key.",
+    "### Answer:",
+    "<img width=\"1230\" alt=\"image\" src=\"https://github.com/The-Art-of-Hacking/h4cker/assets/1690898/b4919061-0736-4884-9f44-51f0a53fdcc6\">",
+    "Code snippet in Python to perform the entire decryption:",
+    "```python",
+    "def egcd(a, b):",
+    "if a == 0:",
+    "return (b, 0, 1)",
+    "g, x, y = egcd(b % a, a)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/02_Diffie_Hellman_Key_Exchange.md"
+  ]
+}

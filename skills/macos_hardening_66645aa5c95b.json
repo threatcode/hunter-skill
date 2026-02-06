@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_66645aa5c95b",
+  "category": "macos-hardening",
+  "title": "macos privilege escalation",
+  "description": "# macOS Privilege Escalation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## TCC Privilege Escalation\n\nIf you came here looking for TCC privilege escalation go to:\n\n\n{{#ref}}\nmacos-security-protections/macos-tcc/\n{{#endref}}\n\n## Linux Privesc\n\nPlease note that **most of the tricks about privilege escalation affecting Linux/Unix will affect also MacOS** machines. So see:\n\n\n{{#ref}}\n../../linux-hardening/privilege-escalation/\n{{#endref}}\n\n## User Interaction\n\n### Sudo Hijacking\n\nYou can fin",
+  "payloads": [
+    "# macOS Privilege Escalation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## TCC Privilege Escalation",
+    "If you came here looking for TCC privilege escalation go to:",
+    "{{#ref}}",
+    "macos-security-protections/macos-tcc/",
+    "{{#endref}}",
+    "## Linux Privesc",
+    "Please note that **most of the tricks about privilege escalation affecting Linux/Unix will affect also MacOS** machines. So see:",
+    "{{#ref}}",
+    "../../linux-hardening/privilege-escalation/",
+    "{{#endref}}",
+    "## User Interaction",
+    "### Sudo Hijacking",
+    "You can find the original [Sudo Hijacking technique inside the Linux Privilege Escalation post](../../linux-hardening/privilege-escalation/index.html#sudo-hijacking)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-privilege-escalation.md"
+  ]
+}

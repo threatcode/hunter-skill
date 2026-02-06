@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_01e1e6118878",
+  "category": "linux-hardening",
+  "title": "cgroups",
+  "description": "# CGroups\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\n**Linux Control Groups**, or **cgroups**, are a feature of the Linux kernel that allows the allocation, limitation, and prioritization of system resources like CPU, memory, and disk I/O among process groups. They offer a mechanism for **managing and isolating the resource usage** of process collections, beneficial for purposes such as resource limitation, workload isolation, and resource prioritization among d",
+  "payloads": [
+    "# CGroups",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "**Linux Control Groups**, or **cgroups**, are a feature of the Linux kernel that allows the allocation, limitation, and prioritization of system resources like CPU, memory, and disk I/O among process groups. They offer a mechanism for **managing and isolating the resource usage** of process collections, beneficial for purposes such as resource limitation, workload isolation, and resource prioritization among different process groups.",
+    "There are **two versions of cgroups**: version 1 and version 2. Both can be used concurrently on a system. The primary distinction is that **cgroups version 2** introduces a **hierarchical, tree-like structure**, enabling more nuanced and detailed resource distribution among process groups. Additionally, version 2 brings various enhancements, including:",
+    "In addition to the new hierarchical organization, cgroups version 2 also introduced **several other changes and improvements**, such as support for **new resource controllers**, better support for legacy applications, and improved performance.",
+    "Overall, cgroups **version 2 offers more features and better performance** than version 1, but the latter may still be used in certain scenarios where compatibility with older systems is a concern.",
+    "You can list the v1 and v2 cgroups for any process by looking at its cgroup file in /proc/\\<pid>. You can start by looking at your shell\u2019s cgroups with this command:",
+    "```shell-session",
+    "$ cat /proc/self/cgroup",
+    "12:rdma:/",
+    "11:net_cls,net_prio:/",
+    "10:perf_event:/",
+    "9:cpuset:/",
+    "8:cpu,cpuacct:/user.slice"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/cgroups.md"
+  ]
+}

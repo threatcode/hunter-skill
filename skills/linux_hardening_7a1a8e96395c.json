@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_7a1a8e96395c",
+  "category": "linux-hardening",
+  "title": "electron cef chromium debugger abuse",
+  "description": "# Node inspector/CEF debug abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Basic Information\n\n[From the docs](https://origin.nodejs.org/ru/docs/guides/debugging-getting-started): When started with the `--inspect` switch, a Node.js process listens for a debugging client. By **default**, it will listen at host and port **`127.0.0.1:9229`**. Each process is also assigned a **unique** **UUID**.\n\nInspector clients must know and specify host address, port, and UUID to connect. A full URL ",
+  "payloads": [
+    "# Node inspector/CEF debug abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "[From the docs](https://origin.nodejs.org/ru/docs/guides/debugging-getting-started): When started with the `--inspect` switch, a Node.js process listens for a debugging client. By **default**, it will listen at host and port **`127.0.0.1:9229`**. Each process is also assigned a **unique** **UUID**.",
+    "Inspector clients must know and specify host address, port, and UUID to connect. A full URL will look something like `ws://127.0.0.1:9229/0f2c936f-b1cd-4ac9-aab3-f63b0f33d55e`.",
+    "> [!WARNING]",
+    "> Since the **debugger has full access to the Node.js execution environment**, a malicious actor able to connect to this port may be able to execute arbitrary code on behalf of the Node.js process (**potential privilege escalation**).",
+    "There are several ways to start an inspector:",
+    "```bash",
+    "node --inspect app.js #Will run the inspector in port 9229",
+    "node --inspect=4444 app.js #Will run the inspector in port 4444",
+    "node --inspect=0.0.0.0:4444 app.js #Will run the inspector all ifaces and port 4444",
+    "node --inspect-brk=0.0.0.0:4444 app.js #Will run the inspector all ifaces and port 4444",
+    "# --inspect-brk is equivalent to --inspect",
+    "node --inspect --inspect-port=0 app.js #Will run the inspector in a random port"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/electron-cef-chromium-debugger-abuse.md"
+  ]
+}

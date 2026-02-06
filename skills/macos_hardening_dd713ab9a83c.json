@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_dd713ab9a83c",
+  "category": "macos-hardening",
+  "title": "macos sip",
+  "description": "# macOS SIP\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## **Basic Information**\n\n**System Integrity Protection (SIP)** in macOS is a mechanism designed to prevent even the most privileged users from making unauthorized changes to key system folders. This feature plays a crucial role in maintaining the integrity of the system by restricting actions like adding, modifying, or deleting files in protected areas. The primary folders shielded by SIP include:\n\n- **/System**\n- **/bin**\n- **/",
+  "payloads": [
+    "# macOS SIP",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## **Basic Information**",
+    "**System Integrity Protection (SIP)** in macOS is a mechanism designed to prevent even the most privileged users from making unauthorized changes to key system folders. This feature plays a crucial role in maintaining the integrity of the system by restricting actions like adding, modifying, or deleting files in protected areas. The primary folders shielded by SIP include:",
+    "- **/System**",
+    "- **/bin**",
+    "- **/sbin**",
+    "- **/usr**",
+    "The rules that govern SIP's behavior are defined in the configuration file located at **`/System/Library/Sandbox/rootless.conf`**. Within this file, paths that are prefixed with an asterisk (\\*) are denoted as exceptions to the otherwise stringent SIP restrictions.",
+    "Consider the example below:",
+    "```javascript",
+    "* /usr/libexec/cups",
+    "* /usr/local",
+    "* /usr/share/man",
+    "This snippet implies that while SIP generally secures the **`/usr`** directory, there are specific subdirectories (`/usr/libexec/cups`, `/usr/local`, and `/usr/share/man`) where modifications are permissible, as indicated by the asterisk (\\*) preceding their paths."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-sip.md"
+  ]
+}

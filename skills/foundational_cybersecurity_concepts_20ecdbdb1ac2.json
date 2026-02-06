@@ -1,0 +1,27 @@
+{
+  "id": "foundational_cybersecurity_concepts_20ecdbdb1ac2",
+  "category": "foundational-cybersecurity-concepts",
+  "title": "social eng countermeasures",
+  "description": "# Social Engineering Countermeasures\n\nSocial engineering countermeasures are strategies and practices designed to protect against manipulation and deception techniques used by attackers to exploit human behavior and gain unauthorized access to information or systems. \n\n### 1. **Education and Training**\n\n#### **1.1 Regular Security Awareness Training**\n\n- **Objective:** Educate employees and individuals about social engineering tactics and how to recognize them.\n- **Components:**\n  - **Phishing A",
+  "payloads": [
+    "# Social Engineering Countermeasures",
+    "Social engineering countermeasures are strategies and practices designed to protect against manipulation and deception techniques used by attackers to exploit human behavior and gain unauthorized access to information or systems.",
+    "### 1. **Education and Training**",
+    "#### **1.1 Regular Security Awareness Training**",
+    "- **Objective:** Educate employees and individuals about social engineering tactics and how to recognize them.",
+    "- **Components:**",
+    "- **Phishing Awareness:** Train users to identify phishing emails and suspicious links.",
+    "- **Pretexting and Baiting:** Teach how to handle unsolicited requests for sensitive information.",
+    "- **Social Media Safety:** Educate on the risks of oversharing personal information online.",
+    "- **Methods:** Workshops, online courses, and interactive simulations.",
+    "#### **1.2 Simulated Attacks**",
+    "- **Objective:** Test and improve the ability of employees to recognize and respond to social engineering attempts.",
+    "- **Components:**",
+    "- **Phishing Simulations:** Conduct fake phishing campaigns to evaluate and enhance response.",
+    "- **Pretexting Exercises:** Simulate social engineering scenarios to train employees on appropriate responses."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/foundational-cybersecurity-concepts/social_eng_countermeasures.md"
+  ]
+}

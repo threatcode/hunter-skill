@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_8b0c9da69bb2",
+  "category": "windows-hardening",
+  "title": "unconstrained delegation",
+  "description": "# Unconstrained Delegation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Unconstrained delegation\n\nThis a feature that a Domain Administrator can set to any **Computer** inside the domain. Then, anytime a **user logins** onto the Computer, a **copy of the TGT** of that user is going to be **sent inside the TGS** provided by the DC **and saved in memory in LSASS**. So, if you have Administrator privileges on the machine, you will be able to **dump the tickets and impersonate the users** ",
+  "payloads": [
+    "# Unconstrained Delegation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Unconstrained delegation",
+    "This a feature that a Domain Administrator can set to any **Computer** inside the domain. Then, anytime a **user logins** onto the Computer, a **copy of the TGT** of that user is going to be **sent inside the TGS** provided by the DC **and saved in memory in LSASS**. So, if you have Administrator privileges on the machine, you will be able to **dump the tickets and impersonate the users** on any machine.",
+    "So if a domain admin logins inside a Computer with \"Unconstrained Delegation\" feature activated, and you have local admin privileges inside that machine, you will be able to dump the ticket and impersonate the Domain Admin anywhere (domain privesc).",
+    "You can **find Computer objects with this attribute** checking if the [userAccountControl](<https://msdn.microsoft.com/en-us/library/ms680832(v=vs.85).aspx>) attribute contains [ADS_UF_TRUSTED_FOR_DELEGATION](<https://msdn.microsoft.com/en-us/library/aa772300(v=vs.85).aspx>). You can do this with an LDAP filter of \u2018(userAccountControl:1.2.840.113556.1.4.803:=524288)\u2019, which is what powerview does:",
+    "```bash",
+    "# List unconstrained computers",
+    "## Powerview",
+    "## A DCs always appear and might be useful to attack a DC from another compromised DC from a different domain (coercing the other DC to authenticate to it)",
+    "Get-DomainComputer \u2013Unconstrained \u2013Properties name",
+    "Get-DomainUser -LdapFilter '(userAccountControl:1.2.840.113556.1.4.803:=524288)'",
+    "## ADSearch",
+    "ADSearch.exe --search \"(&(objectCategory=computer)(userAccountControl:1.2.840.113556.1.4.803:=524288))\" --attributes samaccountname,dnshostname,operatingsystem",
+    "# Export tickets with Mimikatz"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/unconstrained-delegation.md"
+  ]
+}

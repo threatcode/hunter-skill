@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_3f3d6189d65b",
+  "category": "macos-hardening",
+  "title": "macos kernel extensions",
+  "description": "# macOS Kernel Extensions & Kernelcaches\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nKernel extensions (Kexts) are **packages** with a **`.kext`** extension that are **loaded directly into the macOS kernel space**, providing additional functionality to the main operating system.\n\n### Deprecation status & DriverKit / System Extensions  \nStarting with **macOS Catalina (10.15)** Apple marked most legacy KPIs as *deprecated* and introduced the **System Extensions & D",
+  "payloads": [
+    "# macOS Kernel Extensions & Kernelcaches",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Kernel extensions (Kexts) are **packages** with a **`.kext`** extension that are **loaded directly into the macOS kernel space**, providing additional functionality to the main operating system.",
+    "### Deprecation status & DriverKit / System Extensions",
+    "Starting with **macOS Catalina (10.15)** Apple marked most legacy KPIs as *deprecated* and introduced the **System Extensions & DriverKit** frameworks that run in **user-space**. From **macOS Big Sur (11)** the operating system will *refuse to load* third-party kexts that rely on deprecated KPIs unless the machine is booted in **Reduced Security** mode. On Apple Silicon, enabling kexts additionally requires the user to:",
+    "1. Reboot into **Recovery** \u2192 *Startup Security Utility*.",
+    "2. Select **Reduced Security** and tick **\u201cAllow user management of kernel extensions from identified developers\u201d**.",
+    "3. Reboot and approve the kext from **System Settings \u2192 Privacy & Security**.",
+    "User-land drivers written with DriverKit/System Extensions dramatically **reduce attack surface** because crashes or memory corruption are confined to a sandboxed process rather than kernel space.",
+    "> \ud83d\udcdd From macOS Sequoia (15) Apple has removed several legacy networking and USB KPIs entirely \u2013 the only forward-compatible solution for vendors is to migrate to System Extensions.",
+    "### Requirements",
+    "Obviously, this is so powerful that it is **complicated to load a kernel extension**. These are the **requirements** that a kernel extension must meet to be loaded:",
+    "- When **entering recovery mode**, kernel **extensions must be allowed** to be loaded:",
+    "<figure><img src=\"../../../images/image (327).png\" alt=\"\"><figcaption></figcaption></figure>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/mac-os-architecture/macos-kernel-extensions.md"
+  ]
+}

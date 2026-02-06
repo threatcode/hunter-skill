@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_02fe21835c28",
+  "category": "linux-hardening",
+  "title": "logstash",
+  "description": "# Logstash Privilege Escalation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Logstash\n\nLogstash is used to **gather, transform, and dispatch logs** through a system known as **pipelines**. These pipelines are made up of **input**, **filter**, and **output** stages. An interesting aspect arises when Logstash operates on a compromised machine.\n\n### Pipeline Configuration\n\nPipelines are configured in the file **/etc/logstash/pipelines.yml**, which lists the locations of the pipeline confi",
+  "payloads": [
+    "# Logstash Privilege Escalation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Logstash",
+    "Logstash is used to **gather, transform, and dispatch logs** through a system known as **pipelines**. These pipelines are made up of **input**, **filter**, and **output** stages. An interesting aspect arises when Logstash operates on a compromised machine.",
+    "### Pipeline Configuration",
+    "Pipelines are configured in the file **/etc/logstash/pipelines.yml**, which lists the locations of the pipeline configurations:",
+    "```yaml",
+    "# Define your pipelines here. Multiple pipelines can be defined.",
+    "# For details on multiple pipelines, refer to the documentation:",
+    "# https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html",
+    "- pipeline.id: main",
+    "path.config: \"/etc/logstash/conf.d/*.conf\"",
+    "- pipeline.id: example",
+    "path.config: \"/usr/share/logstash/pipeline/1*.conf\"",
+    "pipeline.workers: 6"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/logstash.md"
+  ]
+}

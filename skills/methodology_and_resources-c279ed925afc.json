@@ -1,0 +1,22 @@
+{
+  "id": "methodology_and_resources-c279ed925afc",
+  "category": "Methodology and Resources",
+  "title": "Web Attack Surface",
+  "description": "# Subdomains Enumeration\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/web-attack-surface](https://github.com/swisskyrepo/InternalAllTheThings/blob/main/docs/redteam/access/web-attack-surface.md)\n\n- [Enumerate Subdomains](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#enumerate-subdomains)\n    - [Subdomains Databases](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#subdomains-dat",
+  "payloads": [
+    "# Subdomains Enumeration",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/web-attack-surface](https://github.com/swisskyrepo/InternalAllTheThings/blob/main/docs/redteam/access/web-attack-surface.md)",
+    "- [Enumerate Subdomains](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#enumerate-subdomains)",
+    "- [Subdomains Databases](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#subdomains-databases)",
+    "- [Bruteforce Subdomains](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#bruteforce-subdomains)",
+    "- [Certificate Transparency Logs](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#certificate-transparency-logs)",
+    "- [DNS Resolution](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#dns-resolution)",
+    "- [Technology Discovery](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#technology-discovery)",
+    "- [Subdomain Takeover](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#subdomain-takovers)",
+    "- [References](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/web-attack-surface/#references)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Web Attack Surface.md"
+  ]
+}

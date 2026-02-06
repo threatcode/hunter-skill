@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d22b49d99cd6",
+  "category": "windows-hardening",
+  "title": "powerview",
+  "description": "# PowerView/SharpView\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\nThe most up-to-date version of PowerView will always be in the dev branch of PowerSploit: [https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)\n\n[**SharpView**](https://github.com/tevora-threat/SharpView) is a .NET port of [**PowerView**](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)\n\n### Qui",
+  "payloads": [
+    "# PowerView/SharpView",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "The most up-to-date version of PowerView will always be in the dev branch of PowerSploit: [https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)",
+    "[**SharpView**](https://github.com/tevora-threat/SharpView) is a .NET port of [**PowerView**](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)",
+    "### Quick enumeration",
+    "```bash",
+    "Get-NetDomain #Basic domain info",
+    "#User info",
+    "Get-NetUser -UACFilter NOT_ACCOUNTDISABLE | select samaccountname, description, pwdlastset, logoncount, badpwdcount #Basic user enabled info",
+    "Get-NetUser -LDAPFilter '(sidHistory=*)' #Find users with sidHistory set",
+    "Get-NetUser -PreauthNotRequired #ASREPRoastable users",
+    "Get-NetUser -SPN #Kerberoastable users",
+    "#Groups info",
+    "Get-NetGroup | select samaccountname, admincount, description",
+    "Get-DomainObjectAcl -SearchBase 'CN=AdminSDHolder,CN=System,DC=EGOTISTICAL-BANK,DC=local' | %{ $_.SecurityIdentifier } | Convert-SidToName #Get AdminSDHolders"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/basic-powershell-for-pentesters/powerview.md"
+  ]
+}

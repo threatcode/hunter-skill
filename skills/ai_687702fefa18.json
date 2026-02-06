@@ -1,0 +1,27 @@
+{
+  "id": "ai_687702fefa18",
+  "category": "AI",
+  "title": "7.1. fine tuning for classification",
+  "description": "# 7.1. Fine-Tuning for Classification\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## What is\n\nFine-tuning is the process of taking a **pre-trained model** that has learned **general language patterns** from vast amounts of data and **adapting** it to perform a **specific task** or to understand domain-specific language. This is achieved by continuing the training of the model on a smaller, task-specific dataset, allowing it to adjust its parameters to better suit the nuances of the new d",
+  "payloads": [
+    "# 7.1. Fine-Tuning for Classification",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## What is",
+    "Fine-tuning is the process of taking a **pre-trained model** that has learned **general language patterns** from vast amounts of data and **adapting** it to perform a **specific task** or to understand domain-specific language. This is achieved by continuing the training of the model on a smaller, task-specific dataset, allowing it to adjust its parameters to better suit the nuances of the new data while leveraging the broad knowledge it has already acquired. Fine-tuning enables the model to deliver more accurate and relevant results in specialized applications without the need to train a new model from scratch.",
+    "> [!TIP]",
+    "> As pre-training a LLM that \"understands\" the text is pretty expensive it's usually easier and cheaper to to fine-tune open source pre-trained models to perform a specific task we want it to perform.",
+    "> [!TIP]",
+    "> The goal of this section is to show how to fine-tune an already pre-trained model so instead of generating new text the LLM will select give the **probabilities of the given text being categorized in each of the given categories** (like if a text is spam or not).",
+    "## Preparing the data set",
+    "### Data set size",
+    "Of course, in order to fine-tune a model you need some structured data to use to specialise your LLM. In the example proposed in [https://github.com/rasbt/LLMs-from-scratch/blob/main/ch06/01_main-chapter-code/ch06.ipynb](https://github.com/rasbt/LLMs-from-scratch/blob/main/ch06/01_main-chapter-code/ch06.ipynb), GPT2 is fine tuned to detect if an email is spam or not using the data from [https://archive.ics.uci.edu/static/public/228/sms+spam+collection.zip](https://archive.ics.uci.edu/static/public/228/sms+spam+collection.zip)_._",
+    "This data set contains much more examples of \"not spam\" that of \"spam\", therefore the book suggest to **only use as many examples of \"not spam\" as of \"spam\"** (therefore, removing from the training data all the extra examples). In this case, this was 747 examples of each.",
+    "Then, **70%** of the data set is used for **training**, **10%** for **validation** and **20%** for **testing**.",
+    "- The **validation set** is used during the training phase to fine-tune the model's **hyperparameters** and make decisions about model architecture, effectively helping to prevent overfitting by providing feedback on how the model performs on unseen data. It allows for iterative improvements without biasing the final evaluation.",
+    "- This means that although the data included in this data set is not used for the training directly, it's used to tune the best **hyperparameters**, so this set cannot be used to evaluate the performance of the model like the testing one."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/7.1.-fine-tuning-for-classification.md"
+  ]
+}

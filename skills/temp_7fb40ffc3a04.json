@@ -1,0 +1,14 @@
+{
+  "id": "temp_7fb40ffc3a04",
+  "category": "temp",
+  "title": "additional examples",
+  "description": "# Additional Buffer Overflow Examples\n\nThe website https://exploit.education has great examples of different types of buffer overflows, format strings and heap exploitation. It includes different VMs that allow you to complete several beginner, intermediate, and advanced challenges.\n\n\n\n",
+  "payloads": [
+    "# Additional Buffer Overflow Examples",
+    "The website https://exploit.education has great examples of different types of buffer overflows, format strings and heap exploitation. It includes different VMs that allow you to complete several beginner, intermediate, and advanced challenges."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Vulnerability_Discovery_and_Analysis/Analyzing_Results/buffer_overflow_example/additional_examples.md"
+  ]
+}

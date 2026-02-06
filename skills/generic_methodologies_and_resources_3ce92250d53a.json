@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_3ce92250d53a",
+  "category": "generic-methodologies-and-resources",
+  "title": "wireshark tricks",
+  "description": "# Wireshark tricks\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Improve your Wireshark skills\n\n### Tutorials\n\nThe following tutorials are amazing to learn some cool basic tricks:\n\n- [https://unit42.paloaltonetworks.com/unit42-customizing-wireshark-changing-column-display/](https://unit42.paloaltonetworks.com/unit42-customizing-wireshark-changing-column-display/)\n- [https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/](https://unit42.paloaltonetworks.com/us",
+  "payloads": [
+    "# Wireshark tricks",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Improve your Wireshark skills",
+    "### Tutorials",
+    "The following tutorials are amazing to learn some cool basic tricks:",
+    "- [https://unit42.paloaltonetworks.com/unit42-customizing-wireshark-changing-column-display/](https://unit42.paloaltonetworks.com/unit42-customizing-wireshark-changing-column-display/)",
+    "- [https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/](https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/)",
+    "- [https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/)",
+    "- [https://unit42.paloaltonetworks.com/using-wireshark-exporting-objects-from-a-pcap/](https://unit42.paloaltonetworks.com/using-wireshark-exporting-objects-from-a-pcap/)",
+    "### Analysed Information",
+    "**Expert Information**",
+    "Clicking on _**Analyze** --> **Expert Information**_ you will have an **overview** of what is happening in the packets **analyzed**:",
+    "![](<../../../images/image (256).png>)",
+    "**Resolved Addresses**",
+    "Under _**Statistics --> Resolved Addresses**_ you can find several **information** that was \"**resolved**\" by wireshark like port/transport to protocol, MAC to the manufacturer, etc. It is interesting to know what is implicated in the communication."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks.md"
+  ]
+}

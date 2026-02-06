@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_e84f5b192d85",
+  "category": "cheat-sheets",
+  "title": "survival guide",
+  "description": "# Linux Survival Guide for Cybersecurity\n\nA comprehensive guide to essential Linux commands and techniques for cybersecurity professionals.\n\n## \ud83d\udccb Table of Contents\n- [Linux Survival Guide for Cybersecurity](#linux-survival-guide-for-cybersecurity)\n  - [\ud83d\udccb Table of Contents](#-table-of-contents)\n  - [File System Navigation](#file-system-navigation)\n  - [File Operations](#file-operations)\n  - [Text Processing](#text-processing)\n  - [Process Management](#process-management)\n  - [User Management](#us",
+  "payloads": [
+    "# Linux Survival Guide for Cybersecurity",
+    "A comprehensive guide to essential Linux commands and techniques for cybersecurity professionals.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Linux Survival Guide for Cybersecurity](#linux-survival-guide-for-cybersecurity)",
+    "- [\ud83d\udccb Table of Contents](#-table-of-contents)",
+    "- [File System Navigation](#file-system-navigation)",
+    "- [File Operations](#file-operations)",
+    "- [Text Processing](#text-processing)",
+    "- [Process Management](#process-management)",
+    "- [User Management](#user-management)",
+    "- [Permissions](#permissions)",
+    "- [Networking](#networking)",
+    "- [System Information](#system-information)",
+    "- [Package Management](#package-management)",
+    "- [Debian/Ubuntu (APT)](#debianubuntu-apt)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/linux/survival-guide.md"
+  ]
+}

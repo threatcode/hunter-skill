@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e08691335ccf",
+  "category": "windows-hardening",
+  "title": "external forest domain oneway inbound",
+  "description": "# External Forest Domain - OneWay (Inbound) or bidirectional\n\n{{#include ../../banners/hacktricks-training.md}}\n\nIn this scenario an external domain is trusting you (or both are trusting each other), so you can get some kind of access over it.\n\n## Enumeration\n\nFirst of all, you need to **enumerate** the **trust**:\n\n```bash\nGet-DomainTrust\nSourceName      : a.domain.local   --> Current domain\nTargetName      : domain.external  --> Destination domain\nTrustType       : WINDOWS-ACTIVE_DIRECTORY\nTrus",
+  "payloads": [
+    "# External Forest Domain - OneWay (Inbound) or bidirectional",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "In this scenario an external domain is trusting you (or both are trusting each other), so you can get some kind of access over it.",
+    "## Enumeration",
+    "First of all, you need to **enumerate** the **trust**:",
+    "```bash",
+    "Get-DomainTrust",
+    "SourceName      : a.domain.local   --> Current domain",
+    "TargetName      : domain.external  --> Destination domain",
+    "TrustType       : WINDOWS-ACTIVE_DIRECTORY",
+    "TrustAttributes :",
+    "TrustDirection  : Inbound          --> Inboud trust",
+    "WhenCreated     : 2/19/2021 10:50:56 PM",
+    "WhenChanged     : 2/19/2021 10:50:56 PM",
+    "# Get name of DC of the other domain"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/external-forest-domain-oneway-inbound.md"
+  ]
+}

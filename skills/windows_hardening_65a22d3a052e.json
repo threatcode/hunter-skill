@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_65a22d3a052e",
+  "category": "windows-hardening",
+  "title": "ad certificates",
+  "description": "# AD Certificates\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Introduction\n\n### Components of a Certificate\n\n- The **Subject** of the certificate denotes its owner.\n- A **Public Key** is paired with a privately held key to link the certificate to its rightful owner.\n- The **Validity Period**, defined by **NotBefore** and **NotAfter** dates, marks the certificate's effective duration.\n- A unique **Serial Number**, provided by the Certificate Authority (CA), identifies each certificate.",
+  "payloads": [
+    "# AD Certificates",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "### Components of a Certificate",
+    "- The **Subject** of the certificate denotes its owner.",
+    "- A **Public Key** is paired with a privately held key to link the certificate to its rightful owner.",
+    "- The **Validity Period**, defined by **NotBefore** and **NotAfter** dates, marks the certificate's effective duration.",
+    "- A unique **Serial Number**, provided by the Certificate Authority (CA), identifies each certificate.",
+    "- The **Issuer** refers to the CA that has issued the certificate.",
+    "- **SubjectAlternativeName** allows for additional names for the subject, enhancing identification flexibility.",
+    "- **Basic Constraints** identify if the certificate is for a CA or an end entity and define usage restrictions.",
+    "- **Extended Key Usages (EKUs)** delineate the certificate's specific purposes, like code signing or email encryption, through Object Identifiers (OIDs).",
+    "- The **Signature Algorithm** specifies the method for signing the certificate.",
+    "- The **Signature**, created with the issuer's private key, guarantees the certificate's authenticity.",
+    "### Special Considerations"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates.md"
+  ]
+}

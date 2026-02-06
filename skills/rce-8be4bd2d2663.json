@@ -1,0 +1,11 @@
+{
+  "id": "rce-8be4bd2d2663",
+  "category": "RCE",
+  "title": "mfa bypass",
+  "description": "# MFA Bypasses\n\n> Multi-Factor Authentication (MFA) is a security measure that requires users to provide two or more verification factors to gain access to a system, application, or network. It combines something the user knows (like a password), something they have (like a phone or security token), and/or something they are (biometric verification). This layered approach enhances security by making unauthorized access more difficult, even if a password is compromised.\n> MFA Bypasses are techniq",
+  "payloads": [],
+  "references": [
+    "PayloadsAllTheThings/Account Takeover/mfa-bypass.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

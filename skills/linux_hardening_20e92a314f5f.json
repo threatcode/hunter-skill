@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_20e92a314f5f",
+  "category": "linux-hardening",
+  "title": "nfs no root squash misconfiguration pe",
+  "description": "# NFS No Root Squash Misconfiguration Privilege Escalation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Squashing Basic Info\n\nNFS will usually (specially in linux) trust the indicated `uid` and `gid` by the client conencting to access the files (if kerberos is not used). However, there are some configurations that can be set in the server to **change this behavior**:\n\n- **`all_squash`**: It squashes all accesses mapping every user and group to\u00a0**`nobody`**\u00a0(65534 unsigned / -2 signed)",
+  "payloads": [
+    "# NFS No Root Squash Misconfiguration Privilege Escalation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Squashing Basic Info",
+    "NFS will usually (specially in linux) trust the indicated `uid` and `gid` by the client conencting to access the files (if kerberos is not used). However, there are some configurations that can be set in the server to **change this behavior**:",
+    "- **`all_squash`**: It squashes all accesses mapping every user and group to\u00a0**`nobody`**\u00a0(65534 unsigned / -2 signed). Therefore, everyone is `nobody` and no users are used.",
+    "- **`root_squash`/`no_all_squash`**: This is default on Linux and **only squashes access with uid 0 (root)**. Therefore, any `UID` and `GID` are trusted but `0` is squashed to `nobody` (so no root imperonation is possible).",
+    "- **``no_root_squash`**: This configuration if enabled doesn't even squash the root user. This means that if you mount a directory with this configuration you can access it as root.",
+    "In the **/etc/exports** file, if you find some directory that is configured as **no_root_squash**, then you can **access** it from **as a client** and **write inside** that directory **as** if you were the local **root** of the machine.",
+    "For more information about **NFS** check:",
+    "{{#ref}}",
+    "../../network-services-pentesting/nfs-service-pentesting.md",
+    "{{#endref}}",
+    "## Privilege Escalation",
+    "### Remote Exploit",
+    "Option 1 using bash:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/nfs-no_root_squash-misconfiguration-pe.md"
+  ]
+}

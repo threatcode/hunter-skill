@@ -1,0 +1,27 @@
+{
+  "id": "osint_f174065a718e",
+  "category": "osint",
+  "title": "dns zone transfer",
+  "description": "# DNS Zone Transfer\n\n[Digi.ninja](https://digi.ninja/projects/zonetransferme.php) has an amazing explanation of DNS zone transfer attacks and resource for you to practice this in a safe environment. The domain available to practice is `zonetransfer.me` and the two name servers are `nsztm1.digi.ninja` and `nsztm2.digi.ninja`. \n\n```\n# dig axfr @nsztm1.digi.ninja zonetransfer.me\n\n; <<>> DiG 9.9.5-3ubuntu0.6-Ubuntu <<>> axfr @nsztm1.digi.ninja zonetransfer.me\n; (1 server found)\n;; global options: +c",
+  "payloads": [
+    "# DNS Zone Transfer",
+    "[Digi.ninja](https://digi.ninja/projects/zonetransferme.php) has an amazing explanation of DNS zone transfer attacks and resource for you to practice this in a safe environment. The domain available to practice is `zonetransfer.me` and the two name servers are `nsztm1.digi.ninja` and `nsztm2.digi.ninja`.",
+    "# dig axfr @nsztm1.digi.ninja zonetransfer.me",
+    "; <<>> DiG 9.9.5-3ubuntu0.6-Ubuntu <<>> axfr @nsztm1.digi.ninja zonetransfer.me",
+    "; (1 server found)",
+    ";; global options: +cmd",
+    "zonetransfer.me.        7200    IN      SOA     nsztm1.digi.ninja. robin.digi.ninja. 2014101601 172800 900 1209600 3600",
+    "zonetransfer.me.        300     IN      HINFO   \"Casio fx-700G\" \"Windows XP\"",
+    "zonetransfer.me.        301     IN      TXT     \"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA\"",
+    "zonetransfer.me.        7200    IN      MX      0 ASPMX.L.GOOGLE.COM.",
+    "zonetransfer.me.        7200    IN      MX      10 ALT1.ASPMX.L.GOOGLE.COM.",
+    "zonetransfer.me.        7200    IN      MX      10 ALT2.ASPMX.L.GOOGLE.COM.",
+    "zonetransfer.me.        7200    IN      MX      20 ASPMX2.GOOGLEMAIL.COM.",
+    "zonetransfer.me.        7200    IN      MX      20 ASPMX3.GOOGLEMAIL.COM.",
+    "zonetransfer.me.        7200    IN      MX      20 ASPMX4.GOOGLEMAIL.COM."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Information_Gathering/osint/dns-zone-transfer.md"
+  ]
+}

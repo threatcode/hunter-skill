@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_8acaceafa999",
+  "category": "windows-hardening",
+  "title": "domain persistence",
+  "description": "# AD CS Domain Persistence\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n**This is a summary of the domain persistence techniques shared in [https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf)**. Check it for further details.\n\n## Forging Certificates with Stolen CA Certificates (Golden Certificate) - DPERSIST1\n\nHow can you tell that a certificate is a CA certificate?\n\nIt can be determined that a certific",
+  "payloads": [
+    "# AD CS Domain Persistence",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "**This is a summary of the domain persistence techniques shared in [https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf)**. Check it for further details.",
+    "## Forging Certificates with Stolen CA Certificates (Golden Certificate) - DPERSIST1",
+    "How can you tell that a certificate is a CA certificate?",
+    "It can be determined that a certificate is a CA certificate if several conditions are met:",
+    "- The certificate is stored on the CA server, with its private key secured by the machine's DPAPI, or by hardware such as a TPM/HSM if the operating system supports it.",
+    "- Both the Issuer and Subject fields of the certificate match the distinguished name of the CA.",
+    "- A \"CA Version\" extension is present in the CA certificates exclusively.",
+    "- The certificate lacks Extended Key Usage (EKU) fields.",
+    "To extract the private key of this certificate, the `certsrv.msc` tool on the CA server is the supported method via the built-in GUI. Nonetheless, this certificate does not differ from others stored within the system; thus, methods such as the [THEFT2 technique](certificate-theft.md#user-certificate-theft-via-dpapi-theft2) can be applied for extraction.",
+    "The certificate and private key can also be obtained using Certipy with the following command:",
+    "```bash",
+    "certipy ca 'corp.local/administrator@ca.corp.local' -hashes :123123.. -backup",
+    "Upon acquiring the CA certificate and its private key in `.pfx` format, tools like [ForgeCert](https://github.com/GhostPack/ForgeCert) can be utilized to generate valid certificates:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/domain-persistence.md"
+  ]
+}

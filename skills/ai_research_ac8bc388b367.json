@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_ac8bc388b367",
+  "category": "ai-research",
+  "title": "lab 05 modelfiles",
+  "description": "# Lab 5: Creating Custom Models with Modelfiles\n\n## Objective\nIn this lab, you will learn how to create custom models using Modelfiles. You'll customize system prompts, adjust parameters, set templates, and create specialized models for specific tasks. This allows you to tailor models to your exact needs.\n\n## Prerequisites\n- Completed Labs 1-4\n- Ollama installed and running\n- At least one base model downloaded (e.g., `gemma3`, `llama3.2`)\n- Text editor for creating Modelfiles\n- Basic understandi",
+  "payloads": [
+    "# Lab 5: Creating Custom Models with Modelfiles",
+    "## Objective",
+    "In this lab, you will learn how to create custom models using Modelfiles. You'll customize system prompts, adjust parameters, set templates, and create specialized models for specific tasks. This allows you to tailor models to your exact needs.",
+    "## Prerequisites",
+    "- Completed Labs 1-4",
+    "- Ollama installed and running",
+    "- At least one base model downloaded (e.g., `gemma3`, `llama3.2`)",
+    "- Text editor for creating Modelfiles",
+    "- Basic understanding of model parameters",
+    "## Estimated Time",
+    "60-75 minutes",
+    "## Part 1: Understanding Modelfiles",
+    "### What is a Modelfile?",
+    "A Modelfile is a blueprint for creating and customizing models in Ollama. It's similar to a Dockerfile for containers.",
+    "### Modelfile Structure"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ollama-labs/lab-05-modelfiles.md"
+  ]
+}

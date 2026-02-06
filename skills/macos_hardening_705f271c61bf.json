@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_705f271c61bf",
+  "category": "macos-hardening",
+  "title": "macos xpc authorization",
+  "description": "# macOS XPC Authorization\n\n{{#include ../../../../../banners/hacktricks-training.md}}\n\n## XPC Authorization\n\nApple also proposes another way to authenticate if the connecting process has **permissions to call the an exposed XPC method**.\n\nWhen an application needs to **execute actions as a privileged user**, instead of running the app as a privileged user it usually installs as root a HelperTool as an XPC service that could be called from the app to perform those actions. However, the app callin",
+  "payloads": [
+    "# macOS XPC Authorization",
+    "{{#include ../../../../../banners/hacktricks-training.md}}",
+    "## XPC Authorization",
+    "Apple also proposes another way to authenticate if the connecting process has **permissions to call the an exposed XPC method**.",
+    "When an application needs to **execute actions as a privileged user**, instead of running the app as a privileged user it usually installs as root a HelperTool as an XPC service that could be called from the app to perform those actions. However, the app calling the service should have enough authorization.",
+    "### ShouldAcceptNewConnection always YES",
+    "An example could be found in [EvenBetterAuthorizationSample](https://github.com/brenwell/EvenBetterAuthorizationSample). In `App/AppDelegate.m` it tries to **connect** to the **HelperTool**. And in `HelperTool/HelperTool.m` the function **`shouldAcceptNewConnection`** **won't check** any of the requirements indicated previously. It'll always return YES:",
+    "```objectivec",
+    "- (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection",
+    "// Called by our XPC listener when a new connection comes in.  We configure the connection",
+    "// with our protocol and ourselves as the main object.",
+    "assert(listener == self.listener);",
+    "#pragma unused(listener)",
+    "assert(newConnection != nil);",
+    "newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(HelperToolProtocol)];"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-ipc-inter-process-communication/macos-xpc/macos-xpc-authorization.md"
+  ]
+}

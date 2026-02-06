@@ -1,0 +1,27 @@
+{
+  "id": "sqli-81ce2181048d",
+  "category": "SQLI",
+  "title": "README",
+  "description": "# SQL Injection\n\n> SQL Injection (SQLi)  is a type of security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. SQL Injection is one of the most common and severe types of web application vulnerabilities, enabling attackers to execute arbitrary SQL code on the database. This can lead to unauthorized data access, data manipulation, and, in some cases, full compromise of the database server.\n\n## Summary\n\n* [CheatSheets](https://github.c",
+  "payloads": [
+    "* [CheatSheets](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/)",
+    "* [MSSQL Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MSSQL%20Injection.md)",
+    "* [MySQL Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md)",
+    "* [OracleSQL Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/OracleSQL%20Injection.md)",
+    "* [PostgreSQL Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/PostgreSQL%20Injection.md)",
+    "* [SQLite Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md)",
+    "* [Cassandra Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/Cassandra%20Injection.md)",
+    "* [DB2 Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/DB2%20Injection.md)",
+    "* [SQLmap](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLmap.md)",
+    "* [sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool",
+    "* [r0oth3x49/ghauri](https://github.com/r0oth3x49/ghauri) - An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws",
+    "page.asp?id=1' or 1=1 -- true",
+    "page.asp?id=1\" or 1=1 -- true",
+    "| MSSQL               | `@@CONNECTIONS>0` |",
+    "| MSSQL               | `@@CONNECTIONS=@@CONNECTIONS` |"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

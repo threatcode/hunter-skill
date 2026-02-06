@@ -1,0 +1,27 @@
+{
+  "id": "osint_a2dfa15e3b86",
+  "category": "osint",
+  "title": "tools",
+  "description": "# Osint Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [10Minutemail - Python Temporary Email](http://feedproxy.google.com/~r/PentestTools/~3/6P5wkV_3yTU/10minutemail-python-temporary-email.html)\n- [AIL Framework - Framework for Analysis of Information Leaks](http://feedproxy.google.com/~r/PentestTools/~3/91FEC7M0yz8/ail-framework-framework-for-analysis-of.html)\n- [AdvPhishing - This Is Advance Phishing Tool! OTP PHISHING](http://feedproxy.google.com/~r/PentestTools/~3/9rL0P-w",
+  "payloads": [
+    "# Osint Tools",
+    "This is a curated list of tools for this category.",
+    "- [10Minutemail - Python Temporary Email](http://feedproxy.google.com/~r/PentestTools/~3/6P5wkV_3yTU/10minutemail-python-temporary-email.html)",
+    "- [AIL Framework - Framework for Analysis of Information Leaks](http://feedproxy.google.com/~r/PentestTools/~3/91FEC7M0yz8/ail-framework-framework-for-analysis-of.html)",
+    "- [AdvPhishing - This Is Advance Phishing Tool! OTP PHISHING](http://feedproxy.google.com/~r/PentestTools/~3/9rL0P-wabG0/advphishing-this-is-advance-phishing.html)",
+    "- [BaseQuery - A Way To Organize Public Combo-Lists And Leaks In A Way That You Can Easily Search Through Everything](http://feedproxy.google.com/~r/PentestTools/~3/xagTe4W9uT4/basequery-way-to-organize-public-combo.html)",
+    "- [Brute_Force - BruteForce Gmail, Hotmail, Twitter, Facebook & Netflix](http://feedproxy.google.com/~r/PentestTools/~3/Bovu29IujOM/bruteforce-bruteforce-gmail-hotmail.html)",
+    "- [Buster - Find Emails Of A Person And Return Info Associated With Them](http://feedproxy.google.com/~r/PentestTools/~3/y2mAo4j8218/buster-find-emails-of-person-and-return.html)",
+    "- [Combobulator - Framework To Detect And Prevent Dependency Confusion Leakage And Potential Attacks](http://www.kitploit.com/2022/01/combobulator-framework-to-detect-and.html)",
+    "- [CredsLeaker v3 - Tool to Display A Powershell Credentials Box](http://feedproxy.google.com/~r/PentestTools/~3/9y08bFtnHNg/credsleaker-v3-tool-to-display.html)",
+    "- [DataSurgeon - Quickly Extracts IP's, Email Addresses, Hashes, Files, Credit Cards, Social Secuirty Numbers And More From Text](http://www.kitploit.com/2023/03/datasurgeon-quickly-extracts-ips-email.html)",
+    "- [EMAGNET - Tool For Find Leaked Databases With 97.1% Accurate To Grab Mail + Password Together From Pastebin Leaks](http://feedproxy.google.com/~r/PentestTools/~3/YIAfk2yhMRY/emagnet-tool-for-find-leaked-databases.html)",
+    "- [Email-Prediction-Asterisks - Script That Allows You To Identify The Emails Hidden Behind Asterisks](http://www.kitploit.com/2022/05/email-prediction-asterisks-script-that.html)",
+    "- [Email-Vulnerablity-Checker - Find Email Spoofing Vulnerablity Of Domains](http://www.kitploit.com/2023/02/email-vulnerablity-checker-find-email.html)",
+    "- [Espoofer - An Email Spoofing Testing Tool That Aims To Bypass SPF/DKIM/DMARC And Forge DKIM Signatures](http://www.kitploit.com/2022/01/espoofer-email-spoofing-testing-tool.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/osint/tools.md"
+  ]
+}

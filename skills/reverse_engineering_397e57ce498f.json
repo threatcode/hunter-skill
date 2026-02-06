@@ -1,0 +1,27 @@
+{
+  "id": "reverse_engineering_397e57ce498f",
+  "category": "reverse-engineering",
+  "title": "tools",
+  "description": "# Reverse Engineering Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [A2P2V - Automated Attack Path Planning and Validation](http://feedproxy.google.com/~r/PentestTools/~3/YSVE2q5BJHQ/a2p2v-automated-attack-path-planning.html)\n- [ABD - Course Materials For Advanced Binary Deobfuscation](http://feedproxy.google.com/~r/PentestTools/~3/20oxrKN1-QM/abd-course-materials-for-advanced.html)\n- [AlphaGolang - IDApython Scripts For Analyzing Golang Binaries](http://www.kitploit.com/2022",
+  "payloads": [
+    "# Reverse Engineering Tools",
+    "This is a curated list of tools for this category.",
+    "- [A2P2V - Automated Attack Path Planning and Validation](http://feedproxy.google.com/~r/PentestTools/~3/YSVE2q5BJHQ/a2p2v-automated-attack-path-planning.html)",
+    "- [ABD - Course Materials For Advanced Binary Deobfuscation](http://feedproxy.google.com/~r/PentestTools/~3/20oxrKN1-QM/abd-course-materials-for-advanced.html)",
+    "- [AlphaGolang - IDApython Scripts For Analyzing Golang Binaries](http://www.kitploit.com/2022/01/alphagolang-idapython-scripts-for.html)",
+    "- [Angr - A Powerful And User-Friendly Binary Analysis Platform](http://feedproxy.google.com/~r/PentestTools/~3/d91K9L2OVN8/angr-powerful-and-user-friendly-binary.html)",
+    "- [Angrgdb - Use Angr Inside GDB - Create An Angr State From The Current Debugger State](http://feedproxy.google.com/~r/PentestTools/~3/LZoLEhOI0SI/angrgdb-use-angr-inside-gdb-create-angr.html)",
+    "- [Auto Re - IDA PRO Auto-Renaming Plugin With Tagging Support](http://feedproxy.google.com/~r/PentestTools/~3/qTj73V0ew0g/auto-re-ida-pro-auto-renaming-plugin.html)",
+    "- [B2R2 - Collection Of Useful Algorithms, Functions, And Tools For Binary Analysis](http://feedproxy.google.com/~r/PentestTools/~3/Q15IlaLOCx4/b2r2-collection-of-useful-algorithms.html)",
+    "- [Bincat - Binary Code Static Analyser, With IDA Integration](http://feedproxy.google.com/~r/PentestTools/~3/M4xJHHI1nlw/bincat-binary-code-static-analyser-with.html)",
+    "- [COM-Code-Helper - Two IDAPython Scripts Help You To Reconstruct Microsoft COM (Component Object Model) Code](http://feedproxy.google.com/~r/PentestTools/~3/4cujJxQYFDM/com-code-helper-two-idapython-scripts.html)",
+    "- [Chimera - A (Shiny And Very Hack-Ish) PowerShell Obfuscation Script Designed To Bypass AMSI And Commercial Antivirus Solutions](http://feedproxy.google.com/~r/PentestTools/~3/N5Xg5VuGg1k/chimera-shiny-and-very-hack-ish.html)",
+    "- [Chimera - PowerShell Obfuscation Script Designed To Bypass AMSI And Commercial Antivirus Solutions](http://feedproxy.google.com/~r/PentestTools/~3/fXwvO9lv8QE/chimera-powershell-obfuscation-script.html)",
+    "- [FindFunc - Advanced Filtering/Finding of Functions in IDA Pro](http://www.kitploit.com/2022/05/findfunc-advanced-filteringfinding-of.html)",
+    "- [Flare-Qdb - Command-line And Python Debugger For Instrumenting And Modifying Native Software Behavior On Windows And Linux](http://www.kitploit.com/2022/02/flare-qdb-command-line-and-python.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/reverse-engineering/tools.md"
+  ]
+}

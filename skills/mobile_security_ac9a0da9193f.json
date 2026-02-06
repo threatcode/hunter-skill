@@ -1,0 +1,27 @@
+{
+  "id": "mobile_security_ac9a0da9193f",
+  "category": "mobile-security",
+  "title": "tools",
+  "description": "# Mobile Security Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [ADB-Toolkit - Tool for testing your Android device](http://feedproxy.google.com/~r/PentestTools/~3/9UFrHzThs_s/adb-toolkit-tool-for-testing-your.html)\n- [ANDRAX v3 - The First And Unique Penetration Testing Platform For Android Smartphones](http://feedproxy.google.com/~r/PentestTools/~3/3jIpU7zeiJg/andrax-v3-first-and-unique-penetration.html)\n- [ANDRAX v5R NH-Killer - Penetration Testing on Android](http://feedp",
+  "payloads": [
+    "# Mobile Security Tools",
+    "This is a curated list of tools for this category.",
+    "- [ADB-Toolkit - Tool for testing your Android device](http://feedproxy.google.com/~r/PentestTools/~3/9UFrHzThs_s/adb-toolkit-tool-for-testing-your.html)",
+    "- [ANDRAX v3 - The First And Unique Penetration Testing Platform For Android Smartphones](http://feedproxy.google.com/~r/PentestTools/~3/3jIpU7zeiJg/andrax-v3-first-and-unique-penetration.html)",
+    "- [ANDRAX v5R NH-Killer - Penetration Testing on Android](http://feedproxy.google.com/~r/PentestTools/~3/hIKv1ToZEMQ/andrax-v5r-nh-killer-penetration.html)",
+    "- [APKHunt - Comprehensive Static Code Analysis Tool For Android Apps That Is Based On The OWASP MASVS Framework](http://www.kitploit.com/2023/02/apkhunt-comprehensive-static-code.html)",
+    "- [APKLab - Android Reverse Engineering WorkBench For VS Code](http://feedproxy.google.com/~r/PentestTools/~3/xTftfJ4sHT0/apklab-android-reverse-engineering.html)",
+    "- [Allsafe - Intentionally Vulnerable Android Application](http://feedproxy.google.com/~r/PentestTools/~3/v6pzEapdvOk/allsafe-intentionally-vulnerable.html)",
+    "- [Android-PIN-Bruteforce - Unlock An Android Phone (Or Device) By Bruteforcing The Lockscreen PIN](http://feedproxy.google.com/~r/PentestTools/~3/s51KORysdVA/android-pin-bruteforce-unlock-android.html)",
+    "- [Android_Hid - Use Android As Rubber Ducky Against Another Android Device](http://feedproxy.google.com/~r/PentestTools/~3/ATCWoFITtd8/androidhid-use-android-as-rubber-ducky.html)",
+    "- [Androidqf - (Android Quick Forensics) Helps Quickly Gathering Forensic Evidence From Android Devices, In Order To Identify Potential Traces Of Compromise](http://feedproxy.google.com/~r/PentestTools/~3/OH942WoxeqE/androidqf-android-quick-forensics-helps.html)",
+    "- [Androwarn - Yet Another Static Code Analyzer For Malicious Android Applications](http://feedproxy.google.com/~r/PentestTools/~3/CXJc4Zacvso/androwarn-yet-another-static-code.html)",
+    "- [Apk-Medit - Memory Search And Patch Tool On Debuggable Apk Without Root & Ndk](http://feedproxy.google.com/~r/PentestTools/~3/fpYnRfgN1ng/apk-medit-memory-search-and-patch-tool.html)",
+    "- [Apk.Sh - Makes Reverse Engineering Android Apps Easier, Automating Some Repetitive Tasks Like Pulling, Decoding, Rebuilding And Patching An APK](http://www.kitploit.com/2023/03/apksh-makes-reverse-engineering-android.html)",
+    "- [ApkLeaks - Scanning APK File For URIs, Endpoints And Secrets](http://feedproxy.google.com/~r/PentestTools/~3/cjv6czeOzl4/apkleaks-scanning-apk-file-for-uris.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/mobile-security/tools.md"
+  ]
+}

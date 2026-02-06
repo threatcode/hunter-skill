@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_a50414c258d8",
+  "category": "ai-research",
+  "title": "chunking",
+  "description": "# What is Chunking?\n\n**Chunking is the process of breaking down large documents or long pieces of text into smaller, more manageable segments, or \"chunks.\"** This is a fundamental step in preparing your knowledge base for a RAG system.\n\nWhy do we do this? Imagine trying to find a specific sentence in an entire book without an index. Now imagine finding it if the book was already broken down into chapters, then sections, and then paragraphs. Chunking does precisely that for your RAG system.\n\n---\n",
+  "payloads": [
+    "# What is Chunking?",
+    "**Chunking is the process of breaking down large documents or long pieces of text into smaller, more manageable segments, or \"chunks.\"** This is a fundamental step in preparing your knowledge base for a RAG system.",
+    "Why do we do this? Imagine trying to find a specific sentence in an entire book without an index. Now imagine finding it if the book was already broken down into chapters, then sections, and then paragraphs. Chunking does precisely that for your RAG system.",
+    "## Why is Chunking Essential for RAG?",
+    "Chunking isn't just a best practice; it's a necessity for several key reasons:",
+    "* **LLM Context Window Limitations**: Large Language Models have a finite **context window**, which is the maximum amount of text they can process at one time. If you try to feed an entire long document into an LLM, it will quickly exceed this limit, leading to truncated input and potentially missed information. Chunking ensures that the retrieved information fits within the LLM's capacity.",
+    "* **Improved Relevance of Embeddings**: When you generate an embedding for a very long document, the embedding can become \"diluted.\" It tries to capture the meaning of *everything* in the document, making it less specific to any single point. Smaller, more focused chunks lead to **more precise and relevant embeddings**. This means that when a user asks a specific question, the similarity search is more likely to retrieve highly relevant chunks rather than broad, less useful documents.",
+    "* **Reduced Noise**: If an LLM receives an entire long document, it has to sift through a lot of irrelevant information to find the answer. Smaller chunks reduce this \"noise,\" allowing the LLM to focus on the truly pertinent details from the retrieved context. This can lead to more accurate and concise answers.",
+    "* **Cost-Effectiveness**: Processing fewer tokens (from smaller chunks) generally translates to lower computational costs when interacting with LLMs, especially with API-based models.",
+    "## Key Considerations for Chunking",
+    "When designing your chunking strategy, there are several factors to consider:",
+    "* **Chunk Size**: This is arguably the most critical parameter.",
+    "* **Too small**: Chunks might lack sufficient context to answer a question. For example, a single sentence might not make sense without its preceding or following sentences.",
+    "* **Too large**: Chunks might exceed the LLM's context window, or contain too much irrelevant information, diluting the embedding.",
+    "* **Optimal size**: Often depends on the domain and the nature of your documents. A common starting point is between **200 to 500 tokens** (or characters), often with some overlap."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/RAG/chunking.md"
+  ]
+}

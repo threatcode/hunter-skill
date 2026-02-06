@@ -1,0 +1,27 @@
+{
+  "id": "todo_0d2d2f551694",
+  "category": "todo",
+  "title": "proxmark 3",
+  "description": "# Proxmark 3\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Attacking RFID Systems with Proxmark3\n\nThe first thing you need to do is to have a [**Proxmark3**](https://proxmark.com) and [**install the software and it's dependencie**](https://github.com/Proxmark/proxmark3/wiki/Kali-Linux)[**s**](https://github.com/Proxmark/proxmark3/wiki/Kali-Linux).\n\n### Attacking MIFARE Classic 1KB\n\nIt has **16 sectors**, each of them has **4 blocks** and each block contains **16B**. The UID is in sector",
+  "payloads": [
+    "# Proxmark 3",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Attacking RFID Systems with Proxmark3",
+    "The first thing you need to do is to have a [**Proxmark3**](https://proxmark.com) and [**install the software and it's dependencie**](https://github.com/Proxmark/proxmark3/wiki/Kali-Linux)[**s**](https://github.com/Proxmark/proxmark3/wiki/Kali-Linux).",
+    "### Attacking MIFARE Classic 1KB",
+    "It has **16 sectors**, each of them has **4 blocks** and each block contains **16B**. The UID is in sector 0 block 0 (and can't be altered).\\",
+    "To access each sector you need **2 keys** (**A** and **B**) which are stored in **block 3 of each sector** (sector trailer). The sector trailer also stores the **access bits** that give the **read and write** permissions on **each block** using the 2 keys.\\",
+    "2 keys are useful to give permissions to read if you know the first one and write if you know the second one (for example).",
+    "Several attacks can be performed",
+    "```bash",
+    "proxmark3> hf mf #List attacks",
+    "proxmark3> hf mf chk *1 ? t ./client/default_keys.dic #Keys bruteforce",
+    "proxmark3> hf mf fchk 1 t # Improved keys BF",
+    "proxmark3> hf mf rdbl 0 A FFFFFFFFFFFF # Read block 0 with the key",
+    "proxmark3> hf mf rdsc 0 A FFFFFFFFFFFF # Read sector 0 with the key"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/proxmark-3.md"
+  ]
+}

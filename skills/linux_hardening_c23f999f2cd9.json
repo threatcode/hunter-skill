@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_c23f999f2cd9",
+  "category": "linux-hardening",
+  "title": "ddexec",
+  "description": "# DDexec / EverythingExec\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Context\n\nIn Linux in order to run a program it must exist as a file, it must be accessible in some way through the file system hierarchy (this is just how `execve()` works). This file may reside on disk or in ram (tmpfs, memfd) but you need a filepath. This has made very easy to control what is run on a Linux system, it makes easy to detect threats and attacker's tools or to prevent them from trying to execute an",
+  "payloads": [
+    "# DDexec / EverythingExec",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Context",
+    "In Linux in order to run a program it must exist as a file, it must be accessible in some way through the file system hierarchy (this is just how `execve()` works). This file may reside on disk or in ram (tmpfs, memfd) but you need a filepath. This has made very easy to control what is run on a Linux system, it makes easy to detect threats and attacker's tools or to prevent them from trying to execute anything of theirs at all (_e. g._ not allowing unprivileged users to place executable files anywhere).",
+    "But this technique is here to change all of this. If you can not start the process you want... **then you hijack one already existing**.",
+    "This technique allows you to **bypass common protection techniques such as read-only, noexec, file-name whitelisting, hash whitelisting...**",
+    "## Dependencies",
+    "The final script depends on the following tools to work, they need to be accessible in the system you are attacking (by default you will find all of them everywhere):",
+    "bash | zsh | ash (busybox)",
+    "readlink",
+    "base64",
+    "## The technique",
+    "If you are able to modify arbitrarily the memory of a process then you can take over it. This can be used to hijack an already existing process and replace it with another program. We can achieve this either by using the `ptrace()` syscall (which requires you to have the ability to execute syscalls or to have gdb available on the system) or, more interestingly, writing to `/proc/$pid/mem`.",
+    "The file `/proc/$pid/mem` is a one-to-one mapping of the entire address space of a process (_e. g._ from `0x0000000000000000` to `0x7ffffffffffff000` in x86-64). This means that reading from or writing to this file at an offset `x` is the same as reading from or modifying the contents at the virtual address `x`.",
+    "Now, we have four basic problems to face:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/bypass-bash-restrictions/bypass-fs-protections-read-only-no-exec-distroless/ddexec.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_198e24af3844",
+  "category": "linux-hardening",
+  "title": "linux capabilities",
+  "description": "# Linux Capabilities\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Linux Capabilities\n\nLinux capabilities divide **root privileges into smaller, distinct units**, allowing processes to have a subset of privileges. This minimizes the risks by not granting full root privileges unnecessarily.\n\n### The Problem:\n\n- Normal users have limited permissions, affecting tasks like opening a network socket which requires root access.\n\n### Capability Sets:\n\n1. **Inherited (CapInh)**:\n\n   - **Purpose",
+  "payloads": [
+    "# Linux Capabilities",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Linux Capabilities",
+    "Linux capabilities divide **root privileges into smaller, distinct units**, allowing processes to have a subset of privileges. This minimizes the risks by not granting full root privileges unnecessarily.",
+    "### The Problem:",
+    "- Normal users have limited permissions, affecting tasks like opening a network socket which requires root access.",
+    "### Capability Sets:",
+    "1. **Inherited (CapInh)**:",
+    "- **Purpose**: Determines the capabilities passed down from the parent process.",
+    "- **Functionality**: When a new process is created, it inherits the capabilities from its parent in this set. Useful for maintaining certain privileges across process spawns.",
+    "- **Restrictions**: A process cannot gain capabilities that its parent did not possess.",
+    "2. **Effective (CapEff)**:",
+    "- **Purpose**: Represents the actual capabilities a process is utilizing at any moment.",
+    "- **Functionality**: It's the set of capabilities checked by the kernel to grant permission for various operations. For files, this set can be a flag indicating if the file's permitted capabilities are to be considered effective.",
+    "- **Significance**: The effective set is crucial for immediate privilege checks, acting as the active set of capabilities a process can use."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/linux-capabilities.md"
+  ]
+}

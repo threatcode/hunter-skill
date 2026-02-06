@@ -1,0 +1,27 @@
+{
+  "id": "ai_5cdde99da5a1",
+  "category": "AI",
+  "title": "AI Assisted Fuzzing and Vulnerability Discovery",
+  "description": "# AI-Assisted Fuzzing & Automated Vulnerability Discovery\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Overview\nLarge-language models (LLMs) can super-charge traditional vulnerability-research pipelines by generating semantically rich inputs, evolving grammars, reasoning over crash data, and even proposing multi-bug patches.  This page collects the most effective patterns observed during DARPA\u2019s AI Cyber Challenge (AIxCC) finals and other public research.\n\nWhat follows is not a descriptio",
+  "payloads": [
+    "# AI-Assisted Fuzzing & Automated Vulnerability Discovery",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Large-language models (LLMs) can super-charge traditional vulnerability-research pipelines by generating semantically rich inputs, evolving grammars, reasoning over crash data, and even proposing multi-bug patches.  This page collects the most effective patterns observed during DARPA\u2019s AI Cyber Challenge (AIxCC) finals and other public research.",
+    "What follows is not a description of one specific competition system, but an abstraction of the techniques so you can reproduce them in your own workflows.",
+    "## 1. LLM-Generated Seed Inputs",
+    "Traditional coverage\u2013guided fuzzers (AFL++, libFuzzer, Honggfuzz\u2026) start with a small corpus of seeds and mutate bytes blindly.  When the target input format is complex (SQL, URLs, custom binary protocols) random mutations usually break the syntax before interesting branches are reached.",
+    "LLMs can solve this bootstrap problem by emitting *seed generators* \u2013 short scripts that output **syntax-correct but security-relevant inputs**.  For example:",
+    "```prompt",
+    "SYSTEM: You are a helpful security engineer.",
+    "Write a Python3 program that prints 200 unique SQL injection strings targeting common anti-pattern mistakes (missing quotes, numeric context, stacked queries).  Ensure length \u2264 256 bytes / string so they survive common length limits.",
+    "```python",
+    "# gen_sqli_seeds.py (truncated)",
+    "PAYLOADS = [",
+    "\"1 OR 1=1 -- \","
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Assisted-Fuzzing-and-Vulnerability-Discovery.md"
+  ]
+}

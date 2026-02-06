@@ -1,0 +1,27 @@
+{
+  "id": "ai_f00f4118235d",
+  "category": "AI",
+  "title": "AI Deep Learning",
+  "description": "# Deep Learning\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Deep Learning\n\nDeep learning is a subset of machine learning that uses neural networks with multiple layers (deep neural networks) to model complex patterns in data. It has achieved remarkable success in various domains, including computer vision, natural language processing, and speech recognition.\n\n### Neural Networks\n\nNeural networks are the building blocks of deep learning. They consist of interconnected nodes (neurons) orga",
+  "payloads": [
+    "# Deep Learning",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Deep Learning",
+    "Deep learning is a subset of machine learning that uses neural networks with multiple layers (deep neural networks) to model complex patterns in data. It has achieved remarkable success in various domains, including computer vision, natural language processing, and speech recognition.",
+    "### Neural Networks",
+    "Neural networks are the building blocks of deep learning. They consist of interconnected nodes (neurons) organized in layers. Each neuron receives inputs, applies a weighted sum, and passes the result through an activation function to produce an output. The layers can be categorized as follows:",
+    "- **Input Layer**: The first layer that receives the input data.",
+    "- **Hidden Layers**: Intermediate layers that perform transformations on the input data. The number of hidden layers and neurons in each layer can vary, leading to different architectures.",
+    "- **Output Layer**: The final layer that produces the output of the network, such as class probabilities in classification tasks.",
+    "### Activation Functions",
+    "When a layer of neurons processes input data, each neuron applies a weight and a bias to the input (`z = w * x + b`), where `w` is the weight, `x` is the input, and `b` is the bias. The output of the neuron is then passed through an **activation function to introduce non-linearity** into the model. This activation function basically indicates if the next neuron \"should be activated and how much\". This allows the network to learn complex patterns and relationships in the data, enabling it to approximate any continuous function.",
+    "Therefore, activation functions introduce non-linearity into the neural network, allowing it to learn complex relationships in the data. Common activation functions include:",
+    "- **Sigmoid**: Maps input values to a range between 0 and 1, often used in binary classification.",
+    "- **ReLU (Rectified Linear Unit)**: Outputs the input directly if it is positive; otherwise, it outputs zero. It is widely used due to its simplicity and effectiveness in training deep networks.",
+    "- **Tanh**: Maps input values to a range between -1 and 1, often used in hidden layers."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Deep-Learning.md"
+  ]
+}

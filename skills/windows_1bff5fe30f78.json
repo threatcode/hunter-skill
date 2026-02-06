@@ -1,0 +1,27 @@
+{
+  "id": "windows_1bff5fe30f78",
+  "category": "windows",
+  "title": "tools",
+  "description": "# Windows Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [365Inspect - A PowerShell Script That Automates The Security Assessment Of Microsoft Office 365 Environments](http://www.kitploit.com/2022/04/365inspect-powershell-script-that.html)\n- [APSoft-Web-Scanner-v2 - Powerful Dork Searcher And Vulnerability Scanner For Windows Platform](http://feedproxy.google.com/~r/PentestTools/~3/cfBeM1Puyf0/apsoft-web-scanner-v2-powerful-dork.html)\n- [ATMMalScan -  Tool for Windows which he",
+  "payloads": [
+    "# Windows Tools",
+    "This is a curated list of tools for this category.",
+    "- [365Inspect - A PowerShell Script That Automates The Security Assessment Of Microsoft Office 365 Environments](http://www.kitploit.com/2022/04/365inspect-powershell-script-that.html)",
+    "- [APSoft-Web-Scanner-v2 - Powerful Dork Searcher And Vulnerability Scanner For Windows Platform](http://feedproxy.google.com/~r/PentestTools/~3/cfBeM1Puyf0/apsoft-web-scanner-v2-powerful-dork.html)",
+    "- [ATMMalScan -  Tool for Windows which helps to search for malware traces on an ATM during the DFIR process](http://feedproxy.google.com/~r/PentestTools/~3/g2iis8mwiH4/atmmalscan-tool-for-windows-which-helps.html)",
+    "- [AoratosWin - A Tool That Removes Traces Of Executed Applications On Windows OS](http://www.kitploit.com/2022/10/aoratoswin-tool-that-removes-traces-of.html)",
+    "- [Audix - A PowerShell Tool To Quickly Configure The Windows Event Audit Policies For Security Monitoring](http://feedproxy.google.com/~r/PentestTools/~3/BSvJN-c69AY/audix-powershell-tool-to-quickly.html)",
+    "- [AuraBorealisApp - Do You Know What's In Your Python Packages? A Tool For Visualizing Python Package Registry Security Audit Data](http://feedproxy.google.com/~r/PentestTools/~3/ZiyR-QHv6AI/auraborealisapp-do-you-know-whats-in.html)",
+    "- [Azur3Alph4 - A PowerShell Module That Automates Red-Team Tasks For Ops On Objective](http://feedproxy.google.com/~r/PentestTools/~3/YwVyBC5FquY/azur3alph4-powershell-module-that.html)",
+    "- [BLUESPAWN - Windows Based Active Defense Tool To Empower Blue Teams](http://feedproxy.google.com/~r/PentestTools/~3/RmNxNQGa_EU/bluespawn-windows-based-active-defense.html)",
+    "- [BetterXencrypt - A Better Version Of Xencrypt - Xencrypt It Self Is A Powershell Runtime Crypter Designed To Evade AVs](http://feedproxy.google.com/~r/PentestTools/~3/1zVtWlyQaeg/betterxencrypt-better-version-of.html)",
+    "- [CHAPS - Configuration Hardening Assessment PowerShell Script](http://feedproxy.google.com/~r/PentestTools/~3/5KGQldrk1HE/chaps-configuration-hardening.html)",
+    "- [CQTools - The New Ultimate Windows Hacking Toolkit](http://feedproxy.google.com/~r/PentestTools/~3/jwnMIPJ7f80/cqtools-new-ultimate-windows-hacking.html)",
+    "- [CallObfuscator - Obfuscate Specific Windows Apis With Different APIs](http://feedproxy.google.com/~r/PentestTools/~3/JFhU0WlYOFA/callobfuscator-obfuscate-specific.html)",
+    "- [Codecepticon - .NET Application That Allows You To Obfuscate C#, VBA/VB6 (Macros), And PowerShell Source Code](http://www.kitploit.com/2022/12/codecepticon-net-application-that.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/windows/tools.md"
+  ]
+}

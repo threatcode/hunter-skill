@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_b609c27bf6aa",
+  "category": "linux-hardening",
+  "title": "apparmor",
+  "description": "# AppArmor\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nAppArmor is a **kernel enhancement designed to restrict the resources available to programs through per-program profiles**, effectively implementing Mandatory Access Control (MAC) by tying access control attributes directly to programs instead of users. This system operates by **loading profiles into the kernel**, usually during boot, and these profiles dictate what resources a program can access, such as net",
+  "payloads": [
+    "# AppArmor",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "AppArmor is a **kernel enhancement designed to restrict the resources available to programs through per-program profiles**, effectively implementing Mandatory Access Control (MAC) by tying access control attributes directly to programs instead of users. This system operates by **loading profiles into the kernel**, usually during boot, and these profiles dictate what resources a program can access, such as network connections, raw socket access, and file permissions.",
+    "There are two operational modes for AppArmor profiles:",
+    "- **Enforcement Mode**: This mode actively enforces the policies defined within the profile, blocking actions that violate these policies and logging any attempts to breach them through systems like syslog or auditd.",
+    "- **Complain Mode**: Unlike enforcement mode, complain mode does not block actions that go against the profile's policies. Instead, it logs these attempts as policy violations without enforcing restrictions.",
+    "### Components of AppArmor",
+    "- **Kernel Module**: Responsible for the enforcement of policies.",
+    "- **Policies**: Specify the rules and restrictions for program behavior and resource access.",
+    "- **Parser**: Loads policies into the kernel for enforcement or reporting.",
+    "- **Utilities**: These are user-mode programs that provide an interface for interacting with and managing AppArmor.",
+    "### Profiles path",
+    "Apparmor profiles are usually saved in _**/etc/apparmor.d/**_\\",
+    "With `sudo aa-status` you will be able to list the binaries that are restricted by some profile. If you can change the char \"/\" for a dot of the path of each listed binary and you will obtain the name of the apparmor profile inside the mentioned folder."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/apparmor.md"
+  ]
+}

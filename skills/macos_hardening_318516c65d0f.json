@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_318516c65d0f",
+  "category": "macos-hardening",
+  "title": "macos serial number",
+  "description": "# macOS Serial Number\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nApple devices post-2010 have serial numbers consisting of **12 alphanumeric characters**, each segment conveying specific information:\n\n- **First 3 Characters**: Indicate the **manufacturing location**.\n- **Characters 4 & 5**: Denote the **year and week of manufacture**.\n- **Characters 6 to 8**: Serve as a **unique identifier** for each device.\n- **Last 4 Characters**: Specify the **model number**.",
+  "payloads": [
+    "# macOS Serial Number",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Apple devices post-2010 have serial numbers consisting of **12 alphanumeric characters**, each segment conveying specific information:",
+    "- **First 3 Characters**: Indicate the **manufacturing location**.",
+    "- **Characters 4 & 5**: Denote the **year and week of manufacture**.",
+    "- **Characters 6 to 8**: Serve as a **unique identifier** for each device.",
+    "- **Last 4 Characters**: Specify the **model number**.",
+    "For instance, the serial number **C02L13ECF8J2** follows this structure.",
+    "### **Manufacturing Locations (First 3 Characters)**",
+    "Certain codes represent specific factories:",
+    "- **FC, F, XA/XB/QP/G8**: Various locations in the USA.",
+    "- **RN**: Mexico.",
+    "- **CK**: Cork, Ireland.",
+    "- **VM**: Foxconn, Czech Republic."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-red-teaming/macos-mdm/macos-serial-number.md"
+  ]
+}

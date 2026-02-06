@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_2e00d1d4cad5",
+  "category": "macos-hardening",
+  "title": "macos dirty nib",
+  "description": "# macOS Dirty NIB\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nDirty NIB refers to abusing Interface Builder files (.xib/.nib) inside a signed macOS app bundle to execute attacker-controlled logic inside the target process, thereby inheriting its entitlements and TCC permissions. This technique was originally documented by xpn (MDSec) and later generalized and significantly expanded by Sector7, who also covered Apple\u2019s mitigations in macOS 13 Ventura and macOS 14 Sonoma. For background",
+  "payloads": [
+    "# macOS Dirty NIB",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "Dirty NIB refers to abusing Interface Builder files (.xib/.nib) inside a signed macOS app bundle to execute attacker-controlled logic inside the target process, thereby inheriting its entitlements and TCC permissions. This technique was originally documented by xpn (MDSec) and later generalized and significantly expanded by Sector7, who also covered Apple\u2019s mitigations in macOS 13 Ventura and macOS 14 Sonoma. For background and deep dives, see the references at the end.",
+    "> TL;DR",
+    "> \u2022 Before macOS 13 Ventura: replacing a bundle\u2019s MainMenu.nib (or another nib loaded at startup) could reliably achieve process injection and often privilege escalation.",
+    "> \u2022 Since macOS 13 (Ventura) and improved in macOS 14 (Sonoma): first\u2011launch deep verification, bundle protection, Launch Constraints, and the new TCC \u201cApp Management\u201d permission largely prevent post\u2011launch nib tampering by unrelated apps. Attacks may still be feasible in niche cases (e.g., same\u2011developer tooling modifying own apps, or terminals granted App Management/Full Disk Access by the user).",
+    "## What are NIB/XIB files",
+    "Nib (short for NeXT Interface Builder) files are serialized UI object graphs used by AppKit apps. Modern Xcode stores editable XML .xib files which are compiled into .nib at build time. A typical app loads its main UI via `NSApplicationMain()` which reads the `NSMainNibFile` key from the app\u2019s Info.plist and instantiates the object graph at runtime.",
+    "Key points that enable the attack:",
+    "- NIB loading instantiates arbitrary Objective\u2011C classes without requiring them to conform to NSSecureCoding (Apple\u2019s nib loader falls back to `init`/`initWithFrame:` when `initWithCoder:` is not available).",
+    "- Cocoa Bindings can be abused to call methods as nibs are instantiated, including chained calls that require no user interaction.",
+    "## Dirty NIB injection process (attacker view)",
+    "The classic pre\u2011Ventura flow:",
+    "1) Create a malicious .xib",
+    "- Add an `NSAppleScript` object (or other \u201cgadget\u201d classes such as `NSTask`)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-dirty-nib.md"
+  ]
+}

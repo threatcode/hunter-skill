@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_fd290e37e142",
+  "category": "buffer-overflow-examples",
+  "title": "writing exploits",
+  "description": "# Writing Exploits for Buffer Overflows\n\n## Introduction\n\nWriting exploits is both an art and a science. It requires understanding of:\n- Assembly language and CPU architecture\n- Memory layout and stack operations\n- Operating system internals\n- Debugging and reverse engineering\n- Creative problem-solving\n\nThis guide walks through the complete process of developing buffer overflow exploits from initial analysis to working payloads.\n\n## The Exploit Development Process\n\n### Phase 1: Reconnaissance a",
+  "payloads": [
+    "# Writing Exploits for Buffer Overflows",
+    "## Introduction",
+    "Writing exploits is both an art and a science. It requires understanding of:",
+    "- Assembly language and CPU architecture",
+    "- Memory layout and stack operations",
+    "- Operating system internals",
+    "- Debugging and reverse engineering",
+    "- Creative problem-solving",
+    "This guide walks through the complete process of developing buffer overflow exploits from initial analysis to working payloads.",
+    "## The Exploit Development Process",
+    "### Phase 1: Reconnaissance and Analysis",
+    "1. Identify vulnerability",
+    "2. Understand the target",
+    "3. Analyze protection mechanisms",
+    "4. Gather information"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/exploitation/writing-exploits.md"
+  ]
+}

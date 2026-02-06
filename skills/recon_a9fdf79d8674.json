@@ -1,0 +1,27 @@
+{
+  "id": "recon_a9fdf79d8674",
+  "category": "recon",
+  "title": "nikto",
+  "description": "# What is Nikto?\n\nNikto is an open-source, command-line vulnerability scanner that focuses on web servers and web applications. It identifies potentially dangerous files, outdated server components, and other security issues. While Nikto is not an exploit tool, it flags issues that may be leveraged by attackers if left unchecked. It\u2019s often used by penetration testers, security researchers, and system administrators to quickly assess the security posture of web servers.\n\n\ud83d\udd25 You can complete sever",
+  "payloads": [
+    "# What is Nikto?",
+    "Nikto is an open-source, command-line vulnerability scanner that focuses on web servers and web applications. It identifies potentially dangerous files, outdated server components, and other security issues. While Nikto is not an exploit tool, it flags issues that may be leveraged by attackers if left unchecked. It\u2019s often used by penetration testers, security researchers, and system administrators to quickly assess the security posture of web servers.",
+    "\ud83d\udd25 You can complete several labs (including one about Nikto) in O'Reilly. They are listed at: https://hackingscenarios.com",
+    "## Basic Usage",
+    "The simplest way to run Nikto:",
+    "```bash",
+    "nikto -h http://example.com",
+    "Here, `-h` specifies the target host. Nikto will enumerate known checks against `http://example.com`.",
+    "### Targeting HTTPS",
+    "To scan an HTTPS site:",
+    "```bash",
+    "nikto -h https://example.com",
+    "Nikto will automatically handle SSL/TLS.",
+    "### Specifying Ports and IPs",
+    "If your web server runs on a non-standard port:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/recon/nikto.md"
+  ]
+}

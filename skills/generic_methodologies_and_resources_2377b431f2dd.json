@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_2377b431f2dd",
+  "category": "generic-methodologies-and-resources",
+  "title": "telecom network exploitation",
+  "description": "# Telecom Network Exploitation (GTP / Roaming Environments)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> [!NOTE]\n> Mobile-core protocols (GPRS Tunnelling Protocol \u2013 GTP) often traverse semi-trusted GRX/IPX roaming backbones.  Because they ride on plain UDP with almost no authentication, **any foothold inside a telecom perimeter can usually reach core signalling planes directly**.  The following notes collect offensive tricks observed in the wild against SGSN/GGSN, PGW/SGW and other EPC ",
+  "payloads": [
+    "# Telecom Network Exploitation (GTP / Roaming Environments)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> [!NOTE]",
+    "> Mobile-core protocols (GPRS Tunnelling Protocol \u2013 GTP) often traverse semi-trusted GRX/IPX roaming backbones.  Because they ride on plain UDP with almost no authentication, **any foothold inside a telecom perimeter can usually reach core signalling planes directly**.  The following notes collect offensive tricks observed in the wild against SGSN/GGSN, PGW/SGW and other EPC nodes.",
+    "## 1. Recon & Initial Access",
+    "### 1.1  Default OSS / NE Accounts",
+    "A surprisingly large set of vendor network elements ship with hard-coded SSH/Telnet users such as `root:admin`, `dbadmin:dbadmin`, `cacti:cacti`, `ftpuser:ftpuser`, \u2026  A dedicated wordlist dramatically increases brute-force success:",
+    "```bash",
+    "hydra -L usernames.txt -P vendor_telecom_defaults.txt ssh://10.10.10.10 -t 8 -o found.txt",
+    "If the device exposes only a management VRF, pivot through a jump host first (see section \u00abSGSN Emu Tunnel\u00bb below).",
+    "### 1.2  Host Discovery inside GRX/IPX",
+    "Most GRX operators still allow **ICMP echo** across the backbone.  Combine `masscan` with the built-in `gtpv1` UDP probes to quickly map GTP-C listeners:",
+    "```bash",
+    "masscan 10.0.0.0/8 -pU:2123 --rate 50000 --router-ip 10.0.0.254 --router-mac 00:11:22:33:44:55",
+    "## 2. Enumerating Subscribers \u2013 `cordscan`"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/telecom-network-exploitation.md"
+  ]
+}

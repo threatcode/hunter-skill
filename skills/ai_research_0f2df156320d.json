@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_0f2df156320d",
+  "category": "ai-research",
+  "title": "lab 07 vision models",
+  "description": "# Lab 7: Vision Models - Working with Images\n\n## Objective\nIn this lab, you will learn how to work with vision-capable models in Ollama. You'll process images, ask questions about visual content, build multimodal applications, and understand the capabilities and limitations of vision models.\n\n## Prerequisites\n- Completed Labs 1-6\n- Ollama installed and running\n- Python 3.8+ with Ollama library\n- Sample images to work with\n- Understanding of multimodal AI concepts\n\n## Estimated Time\n60-75 minutes",
+  "payloads": [
+    "# Lab 7: Vision Models - Working with Images",
+    "## Objective",
+    "In this lab, you will learn how to work with vision-capable models in Ollama. You'll process images, ask questions about visual content, build multimodal applications, and understand the capabilities and limitations of vision models.",
+    "## Prerequisites",
+    "- Completed Labs 1-6",
+    "- Ollama installed and running",
+    "- Python 3.8+ with Ollama library",
+    "- Sample images to work with",
+    "- Understanding of multimodal AI concepts",
+    "## Estimated Time",
+    "60-75 minutes",
+    "## Part 1: Setting Up Vision Models",
+    "### Step 1: Pull a Vision-Capable Model",
+    "```bash",
+    "ollama pull llava"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ollama-labs/lab-07-vision-models.md"
+  ]
+}

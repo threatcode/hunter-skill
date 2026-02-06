@@ -1,0 +1,27 @@
+{
+  "id": "ai_dc8abcb1bc23",
+  "category": "AI",
+  "title": "AI Supervised Learning Algorithms",
+  "description": "# Supervised Learning Algorithms\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Basic Information\n\nSupervised learning uses labeled data to train models that can make predictions on new, unseen inputs. In cybersecurity, supervised machine learning is widely applied to tasks such as intrusion detection (classifying network traffic as *normal* or *attack*), malware detection (distinguishing malicious software from benign), phishing detection (identifying fraudulent websites or emails), and sp",
+  "payloads": [
+    "# Supervised Learning Algorithms",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Supervised learning uses labeled data to train models that can make predictions on new, unseen inputs. In cybersecurity, supervised machine learning is widely applied to tasks such as intrusion detection (classifying network traffic as *normal* or *attack*), malware detection (distinguishing malicious software from benign), phishing detection (identifying fraudulent websites or emails), and spam filtering, among others. Each algorithm has its strengths and is suited to different types of problems (classification or regression). Below we review key supervised learning algorithms, explain how they work, and demonstrate their use on real cybersecurity datasets. We also discuss how combining models (ensemble learning) can often improve predictive performance.",
+    "## Algorithms",
+    "-   **Linear Regression:** A fundamental regression algorithm for predicting numeric outcomes by fitting a linear equation to data.",
+    "-   **Logistic Regression:** A classification algorithm (despite its name) that uses a logistic function to model the probability of a binary outcome.",
+    "-   **Decision Trees:** Tree-structured models that split data by features to make predictions; often used for their interpretability.",
+    "-   **Random Forests:** An ensemble of decision trees (via bagging) that improves accuracy and reduces overfitting.",
+    "-   **Support Vector Machines (SVM):** Max-margin classifiers that find the optimal separating hyperplane; can use kernels for non-linear data.",
+    "-   **Naive Bayes:** A probabilistic classifier based on Bayes' theorem with an assumption of feature independence, famously used in spam filtering.",
+    "-   **k-Nearest Neighbors (k-NN):** A simple \"instance-based\" classifier that labels a sample based on the majority class of its nearest neighbors.",
+    "-   **Gradient Boosting Machines:** Ensemble models (e.g., XGBoost, LightGBM) that build a strong predictor by sequentially adding weaker learners (typically decision trees).",
+    "Each section below provides an improved description of the algorithm and a **Python code example** using libraries like `pandas` and `scikit-learn` (and `PyTorch` for the neural network example). The examples use publicly available cybersecurity datasets (such as NSL-KDD for intrusion detection and a Phishing Websites dataset) and follow a consistent structure:",
+    "1.  **Load the dataset** (download via URL if available)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Supervised-Learning-Algorithms.md"
+  ]
+}

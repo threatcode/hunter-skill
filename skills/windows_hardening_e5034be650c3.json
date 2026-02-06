@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e5034be650c3",
+  "category": "windows-hardening",
+  "title": "adws enumeration",
+  "description": "# Active Directory Web Services (ADWS) Enumeration & Stealth Collection\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## What is ADWS?\n\nActive Directory Web Services (ADWS) is **enabled by default on every Domain Controller since Windows Server 2008 R2** and listens on TCP **9389**.  Despite the name, **no HTTP is involved**.  Instead, the service exposes LDAP-style data through a stack of proprietary .NET framing protocols:\n\n* MC-NBFX \u2192 MC-NBFSE \u2192 MS-NNS \u2192 MC-NMF\n\nBecause the traffic is e",
+  "payloads": [
+    "# Active Directory Web Services (ADWS) Enumeration & Stealth Collection",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## What is ADWS?",
+    "Active Directory Web Services (ADWS) is **enabled by default on every Domain Controller since Windows Server 2008 R2** and listens on TCP **9389**.  Despite the name, **no HTTP is involved**.  Instead, the service exposes LDAP-style data through a stack of proprietary .NET framing protocols:",
+    "* MC-NBFX \u2192 MC-NBFSE \u2192 MS-NNS \u2192 MC-NMF",
+    "Because the traffic is encapsulated inside these binary SOAP frames and travels over an uncommon port, **enumeration through ADWS is far less likely to be inspected, filtered or signatured than classic LDAP/389 & 636 traffic**.  For operators this means:",
+    "* Stealthier recon \u2013 Blue teams often concentrate on LDAP queries.",
+    "* Freedom to collect from **non-Windows hosts (Linux, macOS)** by tunnelling 9389/TCP through a SOCKS proxy.",
+    "* The same data you would obtain via LDAP (users, groups, ACLs, schema, etc.) and the ability to perform **writes** (e.g. `msDs-AllowedToActOnBehalfOfOtherIdentity` for **RBCD**).",
+    "ADWS interactions are implemented over WS-Enumeration: every query starts with an `Enumerate` message that defines the LDAP filter/attributes and returns an `EnumerationContext` GUID, followed by one or more `Pull` messages that stream up to the server-defined result window. Contexts age out after ~30 minutes, so tooling either needs to page results or split filters (prefix queries per CN) to avoid losing state. When asking for security descriptors, specify the `LDAP_SERVER_SD_FLAGS_OID` control to omit SACLs, otherwise ADWS simply drops the `nTSecurityDescriptor` attribute from its SOAP response.",
+    "> NOTE: ADWS is also used by many RSAT GUI/PowerShell tools, so traffic may blend with legitimate admin activity.",
+    "## SoaPy \u2013 Native Python Client",
+    "[SoaPy](https://github.com/logangoins/soapy) is a **full re-implementation of the ADWS protocol stack in pure Python**.  It crafts the NBFX/NBFSE/NNS/NMF frames byte-for-byte, allowing collection from Unix-like systems without touching the .NET runtime.",
+    "### Key Features",
+    "* Supports **proxying through SOCKS** (useful from C2 implants)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/adws-enumeration.md"
+  ]
+}

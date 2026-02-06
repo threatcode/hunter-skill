@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_988cfb89e7c8",
+  "category": "macos-hardening",
+  "title": "macos protocols",
+  "description": "# macOS Network Services & Protocols\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Remote Access Services\n\nThese are the common macOS services to access them remotely.\\\nYou can enable/disable these services in `System Settings` --> `Sharing`\n\n- **VNC**, known as \u201cScreen Sharing\u201d (tcp:5900)\n- **SSH**, called \u201cRemote Login\u201d (tcp:22)\n- **Apple Remote Desktop** (ARD), or \u201cRemote Management\u201d (tcp:3283, tcp:5900)\n- **AppleEvent**, known as \u201cRemote Apple Event\u201d (tcp:3031)\n\nCheck if any is enab",
+  "payloads": [
+    "# macOS Network Services & Protocols",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Remote Access Services",
+    "These are the common macOS services to access them remotely.\\",
+    "You can enable/disable these services in `System Settings` --> `Sharing`",
+    "- **VNC**, known as \u201cScreen Sharing\u201d (tcp:5900)",
+    "- **SSH**, called \u201cRemote Login\u201d (tcp:22)",
+    "- **Apple Remote Desktop** (ARD), or \u201cRemote Management\u201d (tcp:3283, tcp:5900)",
+    "- **AppleEvent**, known as \u201cRemote Apple Event\u201d (tcp:3031)",
+    "Check if any is enabled running:",
+    "```bash",
+    "rmMgmt=$(netstat -na | grep LISTEN | grep tcp46 | grep \"*.3283\" | wc -l);",
+    "scrShrng=$(netstat -na | grep LISTEN | egrep 'tcp4|tcp6' | grep \"*.5900\" | wc -l);",
+    "flShrng=$(netstat -na | grep LISTEN | egrep 'tcp4|tcp6' | egrep \"\\\\*.88|\\\\*.445|\\\\*.548\" | wc -l);",
+    "rLgn=$(netstat -na | grep LISTEN | egrep 'tcp4|tcp6' | grep \"*.22\" | wc -l);"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-protocols.md"
+  ]
+}

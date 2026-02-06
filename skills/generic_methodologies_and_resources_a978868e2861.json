@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a978868e2861",
+  "category": "generic-methodologies-and-resources",
+  "title": "venv",
+  "description": "# venv\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n```bash\nsudo apt-get install python3-venv\n#Now, go to the folder you want to create the virtual environment\npython3 -m venv <Dirname>\npython3 -m venv pvenv #In this case the folder \"pvenv\" is going to be created\nsource <Dirname>/bin/activate\nsource pvenv/bin/activate #Activate the environment\n#You can now install whatever python library you need\ndeactivate #To deactivate the virtual environment\n```\n\n```bash\nThe error\nerror: invalid comm",
+  "payloads": [
+    "# venv",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "```bash",
+    "sudo apt-get install python3-venv",
+    "#Now, go to the folder you want to create the virtual environment",
+    "python3 -m venv <Dirname>",
+    "python3 -m venv pvenv #In this case the folder \"pvenv\" is going to be created",
+    "source <Dirname>/bin/activate",
+    "source pvenv/bin/activate #Activate the environment",
+    "#You can now install whatever python library you need",
+    "deactivate #To deactivate the virtual environment",
+    "```bash",
+    "The error",
+    "error: invalid command 'bdist_wheel'",
+    "is fixed running"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/venv.md"
+  ]
+}

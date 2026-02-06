@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_04920fe9bfb8",
+  "category": "ai-research",
+  "title": "lab 02 cli advanced",
+  "description": "# Lab 2: Working with the CLI - Advanced Command-Line Operations\n\n## Objective\nIn this lab, you will explore advanced CLI features of Ollama, including model management, configuration, embeddings generation, and working with different model variants. You'll gain proficiency in using Ollama from the command line for various tasks.\n\n## Prerequisites\n- Completed Lab 1 (Ollama installed and working)\n- Basic understanding of command-line operations\n- At least one model already downloaded (e.g., `gemm",
+  "payloads": [
+    "# Lab 2: Working with the CLI - Advanced Command-Line Operations",
+    "## Objective",
+    "In this lab, you will explore advanced CLI features of Ollama, including model management, configuration, embeddings generation, and working with different model variants. You'll gain proficiency in using Ollama from the command line for various tasks.",
+    "## Prerequisites",
+    "- Completed Lab 1 (Ollama installed and working)",
+    "- Basic understanding of command-line operations",
+    "- At least one model already downloaded (e.g., `gemma3`)",
+    "## Estimated Time",
+    "45-60 minutes",
+    "## Part 1: Model Discovery and Information",
+    "### Step 1: Explore Available Models",
+    "1. Visit the Ollama library in your browser: [https://ollama.com/library](https://ollama.com/library)",
+    "2. Browse different model families (Llama, Mistral, Gemma, etc.)",
+    "3. Note the different size variants (3B, 7B, 13B, etc.)",
+    "### Step 2: Understanding Model Tags"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ollama-labs/lab-02-cli-advanced.md"
+  ]
+}

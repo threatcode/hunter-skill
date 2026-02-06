@@ -1,0 +1,16 @@
+{
+  "id": "ssrf-f1de4a9d44",
+  "category": "SSRF",
+  "level": "intermediate",
+  "cwe": "CWE-918",
+  "title": "SSRF Exploitation Technique",
+  "description": "SSRF attacks target internal resources like 169.254.169.254 metadata.",
+  "payloads": [
+    "SSRF attacks target internal resources like 169.254.169.254 metadata."
+  ],
+  "mitigations": [],
+  "references": [
+    "HackTricks"
+  ],
+  "source": "HackTricks"
+}

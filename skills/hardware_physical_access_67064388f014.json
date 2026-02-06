@@ -1,0 +1,27 @@
+{
+  "id": "hardware_physical_access_67064388f014",
+  "category": "hardware-physical-access",
+  "title": "android mediatek secure boot bl2 ext bypass el3",
+  "description": "# MediaTek bl2_ext Secure-Boot Bypass (EL3 Code Execution)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis page documents a practical secure-boot break on multiple MediaTek platforms by abusing a verification gap when the device bootloader configuration (seccfg) is \"unlocked\". The flaw allows running a patched bl2_ext at ARM EL3 to disable downstream signature verification, collapsing the chain of trust and enabling arbitrary unsigned TEE/GZ/LK/Kernel loading.\n\n> Caution: Early-boot pat",
+  "payloads": [
+    "# MediaTek bl2_ext Secure-Boot Bypass (EL3 Code Execution)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This page documents a practical secure-boot break on multiple MediaTek platforms by abusing a verification gap when the device bootloader configuration (seccfg) is \"unlocked\". The flaw allows running a patched bl2_ext at ARM EL3 to disable downstream signature verification, collapsing the chain of trust and enabling arbitrary unsigned TEE/GZ/LK/Kernel loading.",
+    "> Caution: Early-boot patching can permanently brick devices if offsets are wrong. Always keep full dumps and a reliable recovery path.",
+    "## Affected boot flow (MediaTek)",
+    "- Normal path: BootROM \u2192 Preloader \u2192 bl2_ext (EL3, verified) \u2192 TEE \u2192 GenieZone (GZ) \u2192 LK/AEE \u2192 Linux kernel (EL1)",
+    "- Vulnerable path: When seccfg is set to unlocked, Preloader may skip verifying bl2_ext. Preloader still jumps into bl2_ext at EL3, so a crafted bl2_ext can load unverified components thereafter.",
+    "Key trust boundary:",
+    "- bl2_ext executes at EL3 and is responsible for verifying TEE, GenieZone, LK/AEE and the kernel. If bl2_ext itself is not authenticated, the rest of the chain is trivially bypassed.",
+    "## Root cause",
+    "On affected devices, the Preloader does not enforce authentication of the bl2_ext partition when seccfg indicates an \"unlocked\" state. This allows flashing an attacker-controlled bl2_ext that runs at EL3.",
+    "Inside bl2_ext, the verification policy function can be patched to unconditionally report that verification is not required. A minimal conceptual patch is:",
+    "// inside bl2_ext",
+    "int sec_get_vfy_policy(...) {",
+    "return 0; // always: \"no verification required\""
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/hardware-physical-access/firmware-analysis/android-mediatek-secure-boot-bl2_ext-bypass-el3.md"
+  ]
+}

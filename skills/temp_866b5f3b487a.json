@@ -1,0 +1,21 @@
+{
+  "id": "temp_866b5f3b487a",
+  "category": "temp",
+  "title": "amazing python references",
+  "description": "# Python-related References\n\nOne of the most comprehensive lists of Python-related resources is:\nhttps://github.com/vinta/awesome-python\n\n## PySec\n* https://github.com/ebranca/owasp-pysec\nA hardened version of python created by the folks from OWASP. It makes it easier for security professionals and developers to write applications more resilient to attacks and manipulations.\n\n## Anaconda\n* https://www.anaconda.com/download/\nAnaconda is a free and open source distribution of the Python and R prog",
+  "payloads": [
+    "# Python-related References",
+    "One of the most comprehensive lists of Python-related resources is:",
+    "https://github.com/vinta/awesome-python",
+    "## PySec",
+    "* https://github.com/ebranca/owasp-pysec",
+    "A hardened version of python created by the folks from OWASP. It makes it easier for security professionals and developers to write applications more resilient to attacks and manipulations.",
+    "## Anaconda",
+    "* https://www.anaconda.com/download/",
+    "Anaconda is a free and open source distribution of the Python and R programming languages for data science and machine learning related applications."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/amazing_python_references.md"
+  ]
+}

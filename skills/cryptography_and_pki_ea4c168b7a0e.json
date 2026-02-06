@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_ea4c168b7a0e",
+  "category": "cryptography-and-pki",
+  "title": "post quantum migration",
+  "description": "# Post-Quantum Cryptography Migration Guide\n\n## Table of Contents\n- [Introduction](#introduction)\n- [Understanding the Quantum Threat](#understanding-the-quantum-threat)\n- [NIST Post-Quantum Standards](#nist-post-quantum-standards)\n- [Migration Strategy](#migration-strategy)\n- [Hybrid Approaches](#hybrid-approaches)\n- [Implementation Examples](#implementation-examples)\n- [Testing and Validation](#testing-and-validation)\n- [Timeline and Roadmap](#timeline-and-roadmap)\n\n## Introduction\n\n### The Qu",
+  "payloads": [
+    "# Post-Quantum Cryptography Migration Guide",
+    "## Table of Contents",
+    "- [Introduction](#introduction)",
+    "- [Understanding the Quantum Threat](#understanding-the-quantum-threat)",
+    "- [NIST Post-Quantum Standards](#nist-post-quantum-standards)",
+    "- [Migration Strategy](#migration-strategy)",
+    "- [Hybrid Approaches](#hybrid-approaches)",
+    "- [Implementation Examples](#implementation-examples)",
+    "- [Testing and Validation](#testing-and-validation)",
+    "- [Timeline and Roadmap](#timeline-and-roadmap)",
+    "## Introduction",
+    "### The Quantum Computing Threat",
+    "Quantum computers, when sufficiently powerful, will break current public-key cryptography systems:",
+    "**Vulnerable Algorithms:**",
+    "- \u274c RSA (all key sizes)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/tutorials/post-quantum-migration.md"
+  ]
+}

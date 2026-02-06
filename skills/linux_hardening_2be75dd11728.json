@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_2be75dd11728",
+  "category": "linux-hardening",
+  "title": "abusing docker socket for privilege escalation",
+  "description": "# Abusing Docker Socket for Privilege Escalation\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nThere are some occasions were you just have **access to the docker socket** and you want to use it to **escalate privileges**. Some actions might be very suspicious and you may want to avoid them, so here you can find different flags that can be useful to escalate privileges:\n\n### Via mount\n\nYou can **mount** different parts of the **filesystem** in a container running as root and **access** t",
+  "payloads": [
+    "# Abusing Docker Socket for Privilege Escalation",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "There are some occasions were you just have **access to the docker socket** and you want to use it to **escalate privileges**. Some actions might be very suspicious and you may want to avoid them, so here you can find different flags that can be useful to escalate privileges:",
+    "### Via mount",
+    "You can **mount** different parts of the **filesystem** in a container running as root and **access** them.\\",
+    "You could also **abuse a mount to escalate privileges** inside the container.",
+    "- **`-v /:/host`** -> Mount the host filesystem in the container so you can **read the host filesystem.**",
+    "- If you want to **feel like you are in the host** but being on the container you could disable other defense mechanisms using flags like:",
+    "- `--privileged`",
+    "- `--cap-add=ALL`",
+    "- `--security-opt apparmor=unconfined`",
+    "- `--security-opt seccomp=unconfined`",
+    "- `-security-opt label:disable`",
+    "- `--pid=host`",
+    "- `--userns=host`"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/abusing-docker-socket-for-privilege-escalation.md"
+  ]
+}

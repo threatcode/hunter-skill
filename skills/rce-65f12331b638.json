@@ -1,0 +1,27 @@
+{
+  "id": "rce-65f12331b638",
+  "category": "RCE",
+  "title": "MSSQL Server   Cheatsheet",
+  "description": "# MSSQL Server\n\n:warning: Content of this page has been moved to [InternalAllTheThings/cheatsheets/mssql-server-cheatsheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#tools)\n- [Identify Instances and Databases](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#identifiy-instaces-and-databases)\n    - [Discover Local ",
+  "payloads": [
+    ":warning: Content of this page has been moved to [InternalAllTheThings/cheatsheets/mssql-server-cheatsheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#tools)",
+    "- [Identify Instances and Databases](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#identifiy-instaces-and-databases)",
+    "- [Discover Local SQL Server Instances](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#discover-local-sql-server-instances)",
+    "- [Discover Domain SQL Server Instances](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#discover-domain-sql-server-instances)",
+    "- [Discover Remote SQL Server Instances](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#discover-remote-sql-instances)",
+    "- [Identify Encrypted databases](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#identifiy-encrypted-databases)",
+    "- [Version Query](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#version-query)",
+    "- [Identify Sensitive Information](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#identify-sensitive-information)",
+    "- [Get Tables from a Specific Database](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#get-tables-from-specific-databases)",
+    "- [Gather 5 Entries from Each Column](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#gather-5-entries-from-each-column)",
+    "- [Gather 5 Entries from a Specific Table](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#gather-5-entries-from-a-specific-table)",
+    "- [Dump common information from server to files](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#dump-common-information-from-server-to-files)",
+    "- [Linked Database](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#linked-database)",
+    "- [Find Trusted Link](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mssql-server-cheatsheet/#find-trusted-link)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/MSSQL Server - Cheatsheet.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

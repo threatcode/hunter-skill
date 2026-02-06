@@ -1,0 +1,14 @@
+{
+  "id": "linux_hardening_951dbde67741",
+  "category": "linux-hardening",
+  "title": "linux basics",
+  "description": "# Linux Basics\n\n{{#include ../banners/hacktricks-training.md}}\n\n",
+  "payloads": [
+    "# Linux Basics",
+    "{{#include ../banners/hacktricks-training.md}}"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/linux-basics.md"
+  ]
+}

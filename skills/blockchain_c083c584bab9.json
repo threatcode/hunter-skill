@@ -1,0 +1,27 @@
+{
+  "id": "blockchain_c083c584bab9",
+  "category": "blockchain",
+  "title": "value centric web3 red teaming",
+  "description": "# Value-Centric Web3 Red Teaming (MITRE AADAPT)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThe MITRE Adversarial Actions in Digital Asset Payment Techniques (AADAPT) matrix captures attacker behaviors that manipulate digital value rather than just infrastructure. Treat it as a **threat-modeling backbone**: enumerate every component that can mint, price, authorize, or route assets, map those touchpoints to AADAPT techniques, and then drive red-team scenarios that measure whether the envi",
+  "payloads": [
+    "# Value-Centric Web3 Red Teaming (MITRE AADAPT)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "The MITRE Adversarial Actions in Digital Asset Payment Techniques (AADAPT) matrix captures attacker behaviors that manipulate digital value rather than just infrastructure. Treat it as a **threat-modeling backbone**: enumerate every component that can mint, price, authorize, or route assets, map those touchpoints to AADAPT techniques, and then drive red-team scenarios that measure whether the environment can resist irreversible economic loss.",
+    "## 1. Inventory value-bearing components",
+    "Build a map of everything that can influence value state, even if it is off-chain.",
+    "- **Custodial signing services** (HSM/KMS clusters, Vault/KMaaS, signing APIs used by bots or back-office jobs). Capture key IDs, policies, automation identities, and approval workflows.",
+    "- **Admin & upgrade paths** for contracts (proxy admins, governance timelocks, emergency pause keys, parameter registries). Include who/what can call them, and under which quorum or delay.",
+    "- **On-chain protocol logic** handling lending, AMMs, vaults, staking, bridges, or settlement rails. Document the invariants they assume (oracle prices, collateral ratios, rebalance cadence\u2026).",
+    "- **Off-chain automation** that builds transactions (market-making bots, CI/CD pipelines, cron jobs, serverless functions). These often hold API keys or service principals that can request signatures.",
+    "- **Oracles & data feeds** (aggregator composition, quorum, deviation thresholds, update cadence). Note every upstream relied on by automated risk logic.",
+    "- **Bridges and cross-chain routers** (lock/mint contracts, relayers, settlement jobs) tying chains or custodial stacks together.",
+    "Deliverable: a value-flow diagram showing how assets move, who authorizes movement, and which external signals influence business logic.",
+    "## 2. Map components to AADAPT behaviors",
+    "Translate the AADAPT taxonomy into concrete attack candidates per component.",
+    "| Component | Primary AADAPT focus |"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/blockchain/blockchain-and-crypto-currencies/value-centric-web3-red-teaming.md"
+  ]
+}

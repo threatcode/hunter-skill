@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-7dfec2485abc",
+  "category": "Methodology and Resources",
+  "title": "Reverse Shell Cheatsheet",
+  "description": "# Reverse Shell Cheat Sheet\n\n:warning: Content of this page has been moved to [InternalAllTheThings/cheatsheet/shell-reverse](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#tools)\n- [Reverse Shell](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#reverse-shell)\n    - [Awk](https://swisskyrepo.github.io/InternalAllTh",
+  "payloads": [
+    "# Reverse Shell Cheat Sheet",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/cheatsheet/shell-reverse](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#tools)",
+    "- [Reverse Shell](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#reverse-shell)",
+    "- [Awk](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#awk)",
+    "- [Automatic Reverse Shell Generator](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#revshells)",
+    "- [Bash TCP](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#bash-tcp)",
+    "- [Bash UDP](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#bash-udp)",
+    "- [C](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#c)",
+    "- [Dart](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#dart)",
+    "- [Golang](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#golang)",
+    "- [Groovy Alternative 1](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#groovy-alternative-1)",
+    "- [Groovy](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#groovy)",
+    "- [Java Alternative 1](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#java-alternative-1)",
+    "- [Java Alternative 2](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#java-alternative-2)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Reverse Shell Cheatsheet.md"
+  ]
+}

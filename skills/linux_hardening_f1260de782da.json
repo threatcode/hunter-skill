@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_f1260de782da",
+  "category": "linux-hardening",
+  "title": "containerd ctr privilege escalation",
+  "description": "# Containerd (ctr) Privilege Escalation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Basic information\n\nGo to the following link to learn **what is containerd** and `ctr`:\n\n\n{{#ref}}\n../../network-services-pentesting/2375-pentesting-docker.md\n{{#endref}}\n\n## PE 1\n\nif you find that a host contains the `ctr` command:\n\n```bash\nwhich ctr\n/usr/bin/ctr\n```\n\nYou can list the images:\n\n```bash\nctr image list\nREF                                  TYPE                                              ",
+  "payloads": [
+    "# Containerd (ctr) Privilege Escalation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic information",
+    "Go to the following link to learn **what is containerd** and `ctr`:",
+    "{{#ref}}",
+    "../../network-services-pentesting/2375-pentesting-docker.md",
+    "{{#endref}}",
+    "## PE 1",
+    "if you find that a host contains the `ctr` command:",
+    "```bash",
+    "which ctr",
+    "/usr/bin/ctr",
+    "You can list the images:",
+    "```bash",
+    "ctr image list"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/containerd-ctr-privilege-escalation.md"
+  ]
+}

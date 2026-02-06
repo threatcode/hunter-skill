@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_ea2354ed0e74",
+  "category": "generic-hacking",
+  "title": "exfiltration",
+  "description": "# Exfiltration\n\n{{#include ../banners/hacktricks-training.md}}\n\n> [!TIP]\n> For an end-to-end example of staging loot in `C:\\Users\\Public` and exfiltrating it with Rclone to mimic legitimate backups, review the workflow below.\n\n{{#ref}}\n../windows-hardening/windows-local-privilege-escalation/dll-hijacking/advanced-html-staged-dll-sideloading.md\n{{#endref}}\n\n## Commonly whitelisted domains to exfiltrate information\n\nCheck [https://lots-project.com/](https://lots-project.com/) to find commonly whit",
+  "payloads": [
+    "# Exfiltration",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "> [!TIP]",
+    "> For an end-to-end example of staging loot in `C:\\Users\\Public` and exfiltrating it with Rclone to mimic legitimate backups, review the workflow below.",
+    "{{#ref}}",
+    "../windows-hardening/windows-local-privilege-escalation/dll-hijacking/advanced-html-staged-dll-sideloading.md",
+    "{{#endref}}",
+    "## Commonly whitelisted domains to exfiltrate information",
+    "Check [https://lots-project.com/](https://lots-project.com/) to find commonly whitelisted domains that can be abused",
+    "## Copy\\&Paste Base64",
+    "**Linux**",
+    "```bash",
+    "base64 -w0 <file> #Encode file",
+    "base64 -d file #Decode file",
+    "**Windows**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/exfiltration.md"
+  ]
+}

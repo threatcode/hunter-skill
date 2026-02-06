@@ -1,0 +1,27 @@
+{
+  "id": "recon_e74b4179127d",
+  "category": "recon",
+  "title": "nmap ad example",
+  "description": "# NMAP and AD Example\nThe following is an example of scanning an AD infrastructure using the [GOAD](https://github.com/Orange-Cyberdefense/GOAD/) intentionally vulnerable AD environment:\n\n```\nwebsploit# nmap -Pn -p- -sC -sV -oA full_scan_goad 192.168.56.10-12,22-23\nNmap scan report for sevenkingdoms.local (192.168.56.10)\nHost is up (0.00066s latency).\nNot shown: 65511 filtered tcp ports (no-response)\nPORT      STATE SERVICE       VERSION\n53/tcp    open  domain        Simple DNS Plus\n80/tcp    op",
+  "payloads": [
+    "# NMAP and AD Example",
+    "The following is an example of scanning an AD infrastructure using the [GOAD](https://github.com/Orange-Cyberdefense/GOAD/) intentionally vulnerable AD environment:",
+    "websploit# nmap -Pn -p- -sC -sV -oA full_scan_goad 192.168.56.10-12,22-23",
+    "Nmap scan report for sevenkingdoms.local (192.168.56.10)",
+    "Host is up (0.00066s latency).",
+    "Not shown: 65511 filtered tcp ports (no-response)",
+    "PORT      STATE SERVICE       VERSION",
+    "53/tcp    open  domain        Simple DNS Plus",
+    "80/tcp    open  http          Microsoft IIS httpd 10.0",
+    "|_http-server-header: Microsoft-IIS/10.0",
+    "| http-methods:",
+    "|_  Potentially risky methods: TRACE",
+    "|_http-title: IIS Windows Server",
+    "88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2025-07-03 15:14:43Z)",
+    "135/tcp   open  msrpc         Microsoft Windows RPC"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/recon/nmap_ad_example.md"
+  ]
+}

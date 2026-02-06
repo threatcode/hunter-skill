@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e84004493a99",
+  "category": "windows-hardening",
+  "title": "credentials mimikatz",
+  "description": "# Mimikatz\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n**This page is based on one from [adsecurity.org](https://adsecurity.org/?page_id=1821)**. Check the original for further info!\n\n## LM and Clear-Text in memory\n\nFrom Windows 8.1 and Windows Server 2012 R2 onwards, significant measures have been implemented to safeguard against credential theft:\n\n- **LM hashes and plain-text passwords** are no longer stored in memory to enhance security. A specific registry setting, _HKEY_LOCAL_MACHI",
+  "payloads": [
+    "# Mimikatz",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "**This page is based on one from [adsecurity.org](https://adsecurity.org/?page_id=1821)**. Check the original for further info!",
+    "## LM and Clear-Text in memory",
+    "From Windows 8.1 and Windows Server 2012 R2 onwards, significant measures have been implemented to safeguard against credential theft:",
+    "- **LM hashes and plain-text passwords** are no longer stored in memory to enhance security. A specific registry setting, _HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest \"UseLogonCredential\"_ must be configured with a DWORD value of `0` to disable Digest Authentication, ensuring \"clear-text\" passwords are not cached in LSASS.",
+    "- **LSA Protection** is introduced to shield the Local Security Authority (LSA) process from unauthorized memory reading and code injection. This is achieved by marking the LSASS as a protected process. Activation of LSA Protection involves:",
+    "1. Modifying the registry at _HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa_ by setting `RunAsPPL` to `dword:00000001`.",
+    "2. Implementing a Group Policy Object (GPO) that enforces this registry change across managed devices.",
+    "Despite these protections, tools like Mimikatz can circumvent LSA Protection using specific drivers, although such actions are likely to be recorded in event logs.",
+    "### Counteracting SeDebugPrivilege Removal",
+    "Administrators typically have SeDebugPrivilege, enabling them to debug programs. This privilege can be restricted to prevent unauthorized memory dumps, a common technique used by attackers to extract credentials from memory. However, even with this privilege removed, the TrustedInstaller account can still perform memory dumps using a customized service configuration:",
+    "```bash",
+    "sc config TrustedInstaller binPath= \"C:\\\\Users\\\\Public\\\\procdump64.exe -accepteula -ma lsass.exe C:\\\\Users\\\\Public\\\\lsass.dmp\"",
+    "sc start TrustedInstaller"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/stealing-credentials/credentials-mimikatz.md"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "_template_vuln-d83547cbff6a",
+  "category": "_TEMPLATE_VULN",
+  "title": "README",
+  "description": "# Vulnerability Title\n\n> Vulnerability description - reference\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Subentry 1](#subentry-1)\n    * [Subentry 2](#subentry-2)\n* [Labs](#labs)\n* [References](#references)\n\n## Tools\n\n* [username/tool1](https://github.com/username/tool1) - Description of the tool\n* [username/tool2](https://github.com/username/tool2) - Description of the tool\n\n## Methodology\n\nQuick explanation\n\n```powershell\nExploit\n```\n\n### Subentry 1\n\n### Subentry 2\n\n##",
+  "payloads": [
+    "* [username/tool1](https://github.com/username/tool1) - Description of the tool",
+    "* [username/tool2](https://github.com/username/tool2) - Description of the tool",
+    "* [Root Me - Lab 1](https://root-me.org)",
+    "* [PortSwigger - Lab 2](https://portswigger.net)",
+    "* [HackTheBox - Lab 3](https://www.hackthebox.com)",
+    "* [Blog title - Author (@handle) - Month XX, 202X](https://example.com)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/_template_vuln/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

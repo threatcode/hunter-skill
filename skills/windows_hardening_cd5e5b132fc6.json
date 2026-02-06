@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_cd5e5b132fc6",
+  "category": "windows-hardening",
+  "title": "ad information in printers",
+  "description": "# Information in Printers\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThere are several blogs in the Internet which **highlight the dangers of leaving printers configured with LDAP with default/weak** logon credentials.  \\\nThis is because an attacker could **trick the printer to authenticate against a rogue LDAP server** (typically a `nc -vv -l -p 389` or `slapd -d 2` is enough) and capture the printer **credentials in clear-text**.\n\nAlso, several printers will contain **logs with userna",
+  "payloads": [
+    "# Information in Printers",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "There are several blogs in the Internet which **highlight the dangers of leaving printers configured with LDAP with default/weak** logon credentials.  \\",
+    "This is because an attacker could **trick the printer to authenticate against a rogue LDAP server** (typically a `nc -vv -l -p 389` or `slapd -d 2` is enough) and capture the printer **credentials in clear-text**.",
+    "Also, several printers will contain **logs with usernames** or could even be able to **download all usernames** from the Domain Controller.",
+    "All this **sensitive information** and the common **lack of security** makes printers very interesting for attackers.",
+    "Some introductory blogs about the topic:",
+    "- [https://www.ceos3c.com/hacking/obtaining-domain-credentials-printer-netcat/](https://www.ceos3c.com/hacking/obtaining-domain-credentials-printer-netcat/)",
+    "- [https://medium.com/@nickvangilder/exploiting-multifunction-printers-during-a-penetration-test-engagement-28d3840d8856](https://medium.com/@nickvangilder/exploiting-multifunction-printers-during-a-penetration-test-engagement-28d3840d8856)",
+    "## Printer Configuration",
+    "- **Location**: The LDAP server list is usually found in the web interface (e.g. *Network \u279c LDAP Setting \u279c Setting Up LDAP*).",
+    "- **Behavior**: Many embedded web servers allow LDAP server modifications **without re-entering credentials** (usability feature \u2192 security risk).",
+    "- **Exploit**: Redirect the LDAP server address to an attacker-controlled host and use the *Test Connection* / *Address Book Sync* button to force the printer to bind to you.",
+    "## Capturing Credentials",
+    "### Method 1 \u2013 Netcat Listener"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-information-in-printers.md"
+  ]
+}

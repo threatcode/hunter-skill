@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_b737040edcb1",
+  "category": "linux-hardening",
+  "title": "linux active directory",
+  "description": "# Linux Active Directory\n\n{{#include ../../banners/hacktricks-training.md}}\n\nA linux machine can also be present inside an Active Directory environment.\n\nA linux machine in an AD might be **storing different CCACHE tickets inside files. This tickets can be used and abused as any other kerberos ticket**. In order to read this tickets you will need to be the user owner of the ticket or **root** inside the machine.\n\n## Enumeration\n\n### AD enumeration from linux\n\nIf you have access over an AD in lin",
+  "payloads": [
+    "# Linux Active Directory",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "A linux machine can also be present inside an Active Directory environment.",
+    "A linux machine in an AD might be **storing different CCACHE tickets inside files. This tickets can be used and abused as any other kerberos ticket**. In order to read this tickets you will need to be the user owner of the ticket or **root** inside the machine.",
+    "## Enumeration",
+    "### AD enumeration from linux",
+    "If you have access over an AD in linux (or bash in Windows) you can try [https://github.com/lefayjey/linWinPwn](https://github.com/lefayjey/linWinPwn) to enumerate the AD.",
+    "You can also check the following page to learn **other ways to enumerate AD from linux**:",
+    "{{#ref}}",
+    "../../network-services-pentesting/pentesting-ldap.md",
+    "{{#endref}}",
+    "### FreeIPA",
+    "FreeIPA is an open-source **alternative** to Microsoft Windows **Active Directory**, mainly for **Unix** environments. It combines a complete **LDAP directory** with an MIT **Kerberos** Key Distribution Center for management akin to Active Directory. Utilizing the Dogtag **Certificate System** for CA & RA certificate management, it supports **multi-factor** authentication, including smartcards. SSSD is integrated for Unix authentication processes. Learn more about it in:",
+    "{{#ref}}",
+    "../freeipa-pentesting.md"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/linux-active-directory.md"
+  ]
+}

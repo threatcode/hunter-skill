@@ -1,0 +1,27 @@
+{
+  "id": "server_side_template_injection-be3f03007b2c",
+  "category": "Server Side Template Injection",
+  "title": "Java",
+  "description": "# Server Side Template Injection - Java\n\n> Server-Side Template Injection (SSTI)  is a security vulnerability that occurs when user input is embedded into server-side templates in an unsafe manner, allowing attackers to inject and execute arbitrary code. In Java, SSTI can be particularly dangerous due to the power and flexibility of Java-based templating engines such as JSP (JavaServer Pages), Thymeleaf, and FreeMarker.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Java EL](#ja",
+  "payloads": [
+    "# Server Side Template Injection - Java",
+    "> Server-Side Template Injection (SSTI)  is a security vulnerability that occurs when user input is embedded into server-side templates in an unsafe manner, allowing attackers to inject and execute arbitrary code. In Java, SSTI can be particularly dangerous due to the power and flexibility of Java-based templating engines such as JSP (JavaServer Pages), Thymeleaf, and FreeMarker.",
+    "## Summary",
+    "- [Templating Libraries](#templating-libraries)",
+    "- [Java EL](#java-el)",
+    "- [Java EL - Basic Injection](#java-el---basic-injection)",
+    "- [Java EL - Code Execution](#java-el---code-execution)",
+    "- [Freemarker](#freemarker)",
+    "- [Freemarker - Basic Injection](#freemarker---basic-injection)",
+    "- [Freemarker - Read File](#freemarker---read-file)",
+    "- [Freemarker - Code Execution](#freemarker---code-execution)",
+    "- [Freemarker - Code Execution with Obfuscation](#freemarker---code-execution-with-obfuscation)",
+    "- [Freemarker - Sandbox Bypass](#freemarker---sandbox-bypass)",
+    "- [Jinjava](#jinjava)",
+    "- [Jinjava - Basic Injection](#jinjava---basic-injection)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/Java.md"
+  ]
+}

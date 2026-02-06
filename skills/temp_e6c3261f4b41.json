@@ -1,0 +1,21 @@
+{
+  "id": "temp_e6c3261f4b41",
+  "category": "temp",
+  "title": "snmp",
+  "description": "# Useful SNMP Commands\n\n# Search for Windows installed software\n`smpwalk !grep hrSWinstalledName`\n\n## Search for Windows users\n`snmpwalk ip 1.3 lgrep --.1.2.25 -f4`\n\n## Search for Windows running services\n`snrnpwalk -c public -v1 ip 1 lgrep hrSWRJnName !cut -d\" \" -f4`\n\n## Search for Windows open TCP ports\n`smpwalk lgrep tcpConnState !cut -d\" \" -f6 !sort -u`\n",
+  "payloads": [
+    "# Useful SNMP Commands",
+    "# Search for Windows installed software",
+    "`smpwalk !grep hrSWinstalledName`",
+    "## Search for Windows users",
+    "`snmpwalk ip 1.3 lgrep --.1.2.25 -f4`",
+    "## Search for Windows running services",
+    "`snrnpwalk -c public -v1 ip 1 lgrep hrSWRJnName !cut -d\" \" -f4`",
+    "## Search for Windows open TCP ports",
+    "`smpwalk lgrep tcpConnState !cut -d\" \" -f6 !sort -u`"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/recon_scripts/snmp.md"
+  ]
+}

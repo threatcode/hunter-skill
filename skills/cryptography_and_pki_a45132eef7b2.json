@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_a45132eef7b2",
+  "category": "cryptography-and-pki",
+  "title": "gpg cheatsheet",
+  "description": "# GPG Quick Reference Cheat Sheet\n\n## Key Management\n\n### Generate Keys\n```bash\n# Interactive full key generation\ngpg --full-generate-key\n\n# Quick generation with defaults\ngpg --quick-generate-key \"Name <email>\" rsa4096 encrypt,sign 2y\n\n# Generate ECC key\ngpg --quick-generate-key \"Name <email>\" ed25519 sign 2y\n```\n\n### List Keys\n```bash\n# List public keys\ngpg --list-keys\ngpg -k\n\n# List secret keys\ngpg --list-secret-keys\ngpg -K\n\n# Show fingerprints\ngpg --fingerprint\ngpg --fingerprint KEY_ID\n```\n\n",
+  "payloads": [
+    "# GPG Quick Reference Cheat Sheet",
+    "## Key Management",
+    "### Generate Keys",
+    "```bash",
+    "# Interactive full key generation",
+    "gpg --full-generate-key",
+    "# Quick generation with defaults",
+    "gpg --quick-generate-key \"Name <email>\" rsa4096 encrypt,sign 2y",
+    "# Generate ECC key",
+    "gpg --quick-generate-key \"Name <email>\" ed25519 sign 2y",
+    "### List Keys",
+    "```bash",
+    "# List public keys",
+    "gpg --list-keys",
+    "gpg -k"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/quick-reference/gpg-cheatsheet.md"
+  ]
+}

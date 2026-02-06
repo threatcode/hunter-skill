@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_8143d6dd8df4",
+  "category": "cryptography-and-pki",
+  "title": "03 Digital Signature Forgery",
+  "description": "# Challenge 3: Hash Collision Challenge\n\n**Challenge Text:**\n```\nFind two different inputs that produce the first 24 bits of SHA-256 hash collision.\n```\n\n**Instructions:**\n1. Understand the properties of the SHA-256 hash function.\n2. Implement a chosen collision-finding algorithm, such as the birthday attack.\n3. Provide two different inputs that create the same truncated hash value.\n\n### Answer:\n\nGiven the complexity of SHA-256, finding collisions is non-trivial. However, we can simplify the tas",
+  "payloads": [
+    "# Challenge 3: Hash Collision Challenge",
+    "**Challenge Text:**",
+    "Find two different inputs that produce the first 24 bits of SHA-256 hash collision.",
+    "**Instructions:**",
+    "1. Understand the properties of the SHA-256 hash function.",
+    "2. Implement a chosen collision-finding algorithm, such as the birthday attack.",
+    "3. Provide two different inputs that create the same truncated hash value.",
+    "### Answer:",
+    "Given the complexity of SHA-256, finding collisions is non-trivial. However, we can simplify the task by only considering the first 24 bits of the hash. This reduces the search space, making the task more manageable for a classroom exercise.",
+    "The following is a code example to find two different inputs that produce the same first 24 bits of a SHA-256 hash:",
+    "```python",
+    "import hashlib",
+    "from random import randint",
+    "def hash_collision(bits=24):",
+    "hash_dict = {}"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/03_Digital_Signature_Forgery.md"
+  ]
+}

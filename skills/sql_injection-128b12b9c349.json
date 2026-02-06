@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-128b12b9c349",
+  "category": "SQL Injection",
+  "title": "MySQL Injection",
+  "description": "# MySQL Injection\n\n> MySQL Injection  is a type of security vulnerability that occurs when an attacker is able to manipulate the SQL queries made to a MySQL database by injecting malicious input. This vulnerability is often the result of improperly handling user input, allowing attackers to execute arbitrary SQL code that can compromise the database's integrity and security.\n\n## Summary\n\n* [MYSQL Default Databases](#mysql-default-databases)\n* [MYSQL Comments](#mysql-comments)\n* [MYSQL Testing In",
+  "payloads": [
+    "# MySQL Injection",
+    "> MySQL Injection  is a type of security vulnerability that occurs when an attacker is able to manipulate the SQL queries made to a MySQL database by injecting malicious input. This vulnerability is often the result of improperly handling user input, allowing attackers to execute arbitrary SQL code that can compromise the database's integrity and security.",
+    "## Summary",
+    "* [MYSQL Default Databases](#mysql-default-databases)",
+    "* [MYSQL Comments](#mysql-comments)",
+    "* [MYSQL Testing Injection](#mysql-testing-injection)",
+    "* [MYSQL Union Based](#mysql-union-based)",
+    "* [Detect Columns Number](#detect-columns-number)",
+    "* [Iterative NULL Method](#iterative-null-method)",
+    "* [ORDER BY Method](#order-by-method)",
+    "* [LIMIT INTO Method](#limit-into-method)",
+    "* [Extract Database With Information_schema](#extract-database-with-information_schema)",
+    "* [Extract Columns Name Without Information_Schema](#extract-columns-name-without-information_schema)",
+    "* [Extract Data Without Columns Name](#extract-data-without-columns-name)",
+    "* [MYSQL Error Based](#mysql-error-based)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/MySQL Injection.md"
+  ]
+}

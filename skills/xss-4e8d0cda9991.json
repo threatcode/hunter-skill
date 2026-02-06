@@ -1,0 +1,20 @@
+{
+  "id": "xss-4e8d0cda9991",
+  "category": "XSS",
+  "title": "README",
+  "description": "# LaTeX Injection\n\n> LaTeX Injection is a type of injection attack where malicious content is injected into LaTeX documents. LaTeX is widely used for document preparation and typesetting, particularly in academia, for producing high-quality scientific and mathematical documents. Due to its powerful scripting capabilities, LaTeX can be exploited by attackers to execute arbitrary commands if proper safeguards are not in place.\n\n## Summary\n\n* [File Manipulation](#file-manipulation)\n    * [Read File",
+  "payloads": [
+    "From [@EdOverflow](https://twitter.com/intigriti/status/1101509684614320130)",
+    "In [mathjax](https://docs.mathjax.org/en/latest/input/tex/extensions/unicode.html)",
+    "\\unicode{<img src=1 onerror=\"<ARBITRARY_JS_CODE>\">}",
+    "* [Root Me - LaTeX - Input](https://www.root-me.org/en/Challenges/App-Script/LaTeX-Input)",
+    "* [Root Me - LaTeX - Command Execution](https://www.root-me.org/en/Challenges/App-Script/LaTeX-Command-execution)",
+    "* [Hacking with LaTeX - Sebastian Neef - March 10, 2016](https://0day.work/hacking-with-latex/)",
+    "* [Latex to RCE, Private Bug Bounty Program - Yasho - July 6, 2018](https://medium.com/bugbountywriteup/latex-to-rce-private-bug-bounty-program-6a0b5b33d26a)",
+    "* [Pwning coworkers thanks to LaTeX - scumjr - November 28, 2016](http://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/LaTeX Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

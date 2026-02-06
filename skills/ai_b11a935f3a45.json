@@ -1,0 +1,27 @@
+{
+  "id": "ai_b11a935f3a45",
+  "category": "AI",
+  "title": "1. tokenizing",
+  "description": "# 1. Tokenizing\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Tokenizing\n\n**Tokenizing** is the process of breaking down data, such as text, into smaller, manageable pieces called _tokens_. Each token is then assigned a unique numerical identifier (ID). This is a fundamental step in preparing text for processing by machine learning models, especially in natural language processing (NLP).\n\n> [!TIP]\n> The goal of this initial phase is very simple: **Divide the input in tokens (ids) in som",
+  "payloads": [
+    "# 1. Tokenizing",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Tokenizing",
+    "**Tokenizing** is the process of breaking down data, such as text, into smaller, manageable pieces called _tokens_. Each token is then assigned a unique numerical identifier (ID). This is a fundamental step in preparing text for processing by machine learning models, especially in natural language processing (NLP).",
+    "> [!TIP]",
+    "> The goal of this initial phase is very simple: **Divide the input in tokens (ids) in some way that makes sense**.",
+    "### **How Tokenizing Works**",
+    "1. **Splitting the Text:**",
+    "- **Basic Tokenizer:** A simple tokenizer might split text into individual words and punctuation marks, removing spaces.",
+    "- _Example:_\\",
+    "Text: `\"Hello, world!\"`\\",
+    "Tokens: `[\"Hello\", \",\", \"world\", \"!\"]`",
+    "2. **Creating a Vocabulary:**",
+    "- To convert tokens into numerical IDs, a **vocabulary** is created. This vocabulary lists all unique tokens (words and symbols) and assigns each a specific ID.",
+    "- **Special Tokens:** These are special symbols added to the vocabulary to handle various scenarios:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/1.-tokenizing.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "recon_81e7dec8af35",
+  "category": "recon",
+  "title": "tools",
+  "description": "# Recon Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [0xsp Mongoose v1.7 - Linux/Windows Privilege Escalation intelligent Enumeration Toolkit](http://feedproxy.google.com/~r/PentestTools/~3/hf85UAI5b8Q/0xsp-mongoose-v17-linuxwindows.html)\n- [0xsp-Mongoose - Privilege Escalation Enumeration Toolkit (ELF 64/32), Fast, Intelligent Enumeration With Web API Integration](http://feedproxy.google.com/~r/PentestTools/~3/I5pWurWr6Zw/0xsp-mongoose-privilege-escalation.html)\n- [ADReaper",
+  "payloads": [
+    "# Recon Tools",
+    "This is a curated list of tools for this category.",
+    "- [0xsp Mongoose v1.7 - Linux/Windows Privilege Escalation intelligent Enumeration Toolkit](http://feedproxy.google.com/~r/PentestTools/~3/hf85UAI5b8Q/0xsp-mongoose-v17-linuxwindows.html)",
+    "- [0xsp-Mongoose - Privilege Escalation Enumeration Toolkit (ELF 64/32), Fast, Intelligent Enumeration With Web API Integration](http://feedproxy.google.com/~r/PentestTools/~3/I5pWurWr6Zw/0xsp-mongoose-privilege-escalation.html)",
+    "- [ADReaper - A Fast Enumeration Tool For Windows Active Directory Pentesting Written In Go](http://www.kitploit.com/2022/04/adreaper-fast-enumeration-tool-for.html)",
+    "- [ActiveDirectoryEnumeration - Enumerate AD Through LDAP With A Collection Of Helpfull Scripts Being Bundled](http://feedproxy.google.com/~r/PentestTools/~3/qGafaDMGWj4/activedirectoryenumeration-enumerate-ad.html)",
+    "- [ActiveReign - A Network Enumeration And Attack Toolset](http://feedproxy.google.com/~r/PentestTools/~3/hFVVCal6VKM/activereign-network-enumeration-and.html)",
+    "- [Amass - In-depth DNS Enumeration And Network Mapping](http://feedproxy.google.com/~r/PentestTools/~3/CU7t9RWRUVE/amass-in-depth-dns-enumeration-and.html)",
+    "- [AnalyticsRelationships - Get Related Domains / Subdomains By Looking At Google Analytics IDs](http://feedproxy.google.com/~r/PentestTools/~3/LKp4V7BQC4I/analyticsrelationships-get-related.html)",
+    "- [Armory - A Tool Meant To Take In A Lot Of External And Discovery Data From A Lot Of Tools, Add It To A Database And Correlate All Of Related Information](http://feedproxy.google.com/~r/PentestTools/~3/Dxhfc9Rx4sk/armory-tool-meant-to-take-in-lot-of.html)",
+    "- [AttackSurfaceMapper - A Tool That Aims To Automate The Reconnaissance Process](http://feedproxy.google.com/~r/PentestTools/~3/BaoKl5m0_Zg/attacksurfacemapper-tool-that-aims-to.html)",
+    "- [AutoRecon - Multi-Threaded Network Reconnaissance Tool Which Performs Automated Enumeration Of Services](http://feedproxy.google.com/~r/PentestTools/~3/OqnXDaJLqUc/autorecon-multi-threaded-network.html)",
+    "- [Autoenum - Automatic Service Enumeration Script](http://feedproxy.google.com/~r/PentestTools/~3/ouPKC-dV2rk/autoenum-automatic-service-enumeration.html)",
+    "- [Aztarna - A Footprinting Tool For Robots](http://feedproxy.google.com/~r/PentestTools/~3/Q9CYfShlqRA/aztarna-footprinting-tool-for-robots.html)",
+    "- [AzureGraph - Azure AD Enumeration Over MS Graph](http://www.kitploit.com/2022/12/azuregraph-azure-ad-enumeration-over-ms.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/recon/tools.md"
+  ]
+}

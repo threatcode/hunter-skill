@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_c2bdea6c667f",
+  "category": "windows-hardening",
+  "title": "authentication credentials uac and efs",
+  "description": "# Windows Security Controls\n\n{{#include ../banners/hacktricks-training.md}}\n\n## AppLocker Policy\n\nAn application whitelist is a list of approved software applications or executables that are allowed to be present and run on a system. The goal is to protect the environment from harmful malware and unapproved software that does not align with the specific business needs of an organization.\n\n[AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application",
+  "payloads": [
+    "# Windows Security Controls",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## AppLocker Policy",
+    "An application whitelist is a list of approved software applications or executables that are allowed to be present and run on a system. The goal is to protect the environment from harmful malware and unapproved software that does not align with the specific business needs of an organization.",
+    "[AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/what-is-applocker) is Microsoft's **application whitelisting solution** and gives system administrators control over **which applications and files users can run**. It provides **granular control** over executables, scripts, Windows installer files, DLLs, packaged apps, and packed app installers.\\",
+    "It is common for organizations to **block cmd.exe and PowerShell.exe** and write access to certain directories, **but this can all be bypassed**.",
+    "### Check",
+    "Check which files/extensions are blacklisted/whitelisted:",
+    "```bash",
+    "Get-ApplockerPolicy -Effective -xml",
+    "Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections",
+    "$a = Get-ApplockerPolicy -effective",
+    "$a.rulecollections",
+    "This registry path contains the configurations and policies applied by AppLocker, providing a way to review the current set of rules enforced on the system:",
+    "- `HKLM\\Software\\Policies\\Microsoft\\Windows\\SrpV2`"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/authentication-credentials-uac-and-efs.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_6e2d15519da1",
+  "category": "windows-hardening",
+  "title": "resource based constrained delegation",
+  "description": "# Resource-based Constrained Delegation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Basics of Resource-based Constrained Delegation\n\nThis is similar to the basic [Constrained Delegation](constrained-delegation.md) but **instead** of giving permissions to an **object** to **impersonate any user against a machine**. Resource-based Constrain Delegation **sets** in **the object who is able to impersonate any user against it**.\n\nIn this case, the constrained object will have an attribute ",
+  "payloads": [
+    "# Resource-based Constrained Delegation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basics of Resource-based Constrained Delegation",
+    "This is similar to the basic [Constrained Delegation](constrained-delegation.md) but **instead** of giving permissions to an **object** to **impersonate any user against a machine**. Resource-based Constrain Delegation **sets** in **the object who is able to impersonate any user against it**.",
+    "In this case, the constrained object will have an attribute called _**msDS-AllowedToActOnBehalfOfOtherIdentity**_ with the name of the user that can impersonate any other user against it.",
+    "Another important difference from this Constrained Delegation to the other delegations is that any user with **write permissions over a machine account** (_GenericAll/GenericWrite/WriteDacl/WriteProperty/etc_) can set the **_msDS-AllowedToActOnBehalfOfOtherIdentity_** (In the other forms of Delegation you needed domain admin privs).",
+    "### New Concepts",
+    "Back in Constrained Delegation it was told that the **`TrustedToAuthForDelegation`** flag inside the _userAccountControl_ value of the user is needed to perform a **S4U2Self.** But that's not completely truth.\\",
+    "The reality is that even without that value, you can perform a **S4U2Self** against any user if you are a **service** (have a SPN) but, if you **have `TrustedToAuthForDelegation`** the returned TGS will be **Forwardable** and if you **don't have** that flag the returned TGS **won't** be **Forwardable**.",
+    "However, if the **TGS** used in **S4U2Proxy** is **NOT Forwardable** trying to abuse a **basic Constrain Delegation** it **won't work**. But if you are trying to exploit a **Resource-Based constrain delegation, it will work**.",
+    "### Attack structure",
+    "> If you have **write equivalent privileges** over a **Computer** account you can obtain **privileged access** in that machine.",
+    "Suppose that the attacker has already **write equivalent privileges over the victim computer**.",
+    "1. The attacker **compromises** an account that has a **SPN** or **creates one** (\u201cService A\u201d). Note that **any** _Admin User_ without any other special privilege can **create** up until 10 Computer objects (**_MachineAccountQuota_**) and set them a **SPN**. So the attacker can just create a Computer object and set a SPN.",
+    "2. The attacker **abuses its WRITE privilege** over the victim computer (ServiceB) to configure **resource-based constrained delegation to allow ServiceA to impersonate any user** against that victim computer (ServiceB)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/resource-based-constrained-delegation.md"
+  ]
+}

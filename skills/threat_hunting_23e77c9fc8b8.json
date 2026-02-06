@@ -1,0 +1,27 @@
+{
+  "id": "threat_hunting_23e77c9fc8b8",
+  "category": "threat-hunting",
+  "title": "intro to threat hunting",
+  "description": "Threat hunting is a proactive cybersecurity practice where security professionals actively search for signs of malicious activities or potential threats within a network that traditional security tools like firewalls, intrusion detection systems (IDS), or antivirus software may not detect. It goes beyond the automated alerts and relies on human intuition, intelligence, and expertise to uncover hidden threats.\n\nAs an experienced cybersecurity expert, you likely recognize the value of threat hunti",
+  "payloads": [
+    "Threat hunting is a proactive cybersecurity practice where security professionals actively search for signs of malicious activities or potential threats within a network that traditional security tools like firewalls, intrusion detection systems (IDS), or antivirus software may not detect. It goes beyond the automated alerts and relies on human intuition, intelligence, and expertise to uncover hidden threats.",
+    "As an experienced cybersecurity expert, you likely recognize the value of threat hunting in detecting advanced and persistent threats (APTs). Here's an overview of threat hunting and the typical process involved:",
+    "### Threat Hunting Introduction:",
+    "- **Proactive Approach**: Unlike reactive measures that wait for alerts, threat hunting actively looks for anomalies or indicators of compromise.",
+    "- **Human-Led Analysis**: It requires skilled cybersecurity professionals who utilize their understanding of the threat landscape, tactics, techniques, and procedures (TTPs) of attackers.",
+    "- **Utilization of Intelligence**: Threat hunting often involves the use of threat intelligence to understand the current threat environment and identify relevant signs of compromise.",
+    "- **Holistic Understanding**: It includes a deep understanding of normal network behavior, so anomalies can be detected and analyzed.",
+    "### Threat Hunting Process:",
+    "1. **Define Objectives and Scope**:",
+    "- Identify what you are looking for, such as specific threat indicators, patterns, or behaviors.",
+    "- Define the scope, including systems, networks, and time frames.",
+    "2. **Gather Intelligence**:",
+    "- Utilize external threat intelligence sources and internal data.",
+    "- Understand known TTPs and emerging threats that are relevant to the organization.",
+    "3. **Create Hypotheses**:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/threat-hunting/intro-to-threat-hunting.md"
+  ]
+}

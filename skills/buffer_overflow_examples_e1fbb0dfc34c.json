@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_e1fbb0dfc34c",
+  "category": "buffer-overflow-examples",
+  "title": "what is buffer overflow",
+  "description": "# What is a Buffer Overflow?\n\n## Introduction\n\nA **buffer overflow** is a software vulnerability that occurs when a program writes more data to a buffer (a temporary storage area in memory) than it can hold. When this happens, the excess data \"overflows\" into adjacent memory locations, potentially overwriting important data structures, function return addresses, or even executable code.\n\nBuffer overflows are among the most dangerous and historically significant security vulnerabilities, forming ",
+  "payloads": [
+    "# What is a Buffer Overflow?",
+    "## Introduction",
+    "A **buffer overflow** is a software vulnerability that occurs when a program writes more data to a buffer (a temporary storage area in memory) than it can hold. When this happens, the excess data \"overflows\" into adjacent memory locations, potentially overwriting important data structures, function return addresses, or even executable code.",
+    "Buffer overflows are among the most dangerous and historically significant security vulnerabilities, forming the basis for many famous exploits including the Morris Worm (1988) and countless modern attacks.",
+    "## The Basic Concept",
+    "Think of a buffer like a cup:",
+    "- The cup has a fixed capacity (e.g., 8 ounces)",
+    "- If you pour more liquid than the cup can hold, it overflows",
+    "- The overflow liquid spills onto the surrounding surface",
+    "In computing:",
+    "- A buffer has a fixed size (e.g., 20 bytes)",
+    "- If you write more data than the buffer can hold, it overflows",
+    "- The overflow data spills into adjacent memory locations",
+    "## A Simple Example",
+    "#include <stdio.h>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/basics/what-is-buffer-overflow.md"
+  ]
+}

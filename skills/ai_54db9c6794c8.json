@@ -1,0 +1,27 @@
+{
+  "id": "ai_54db9c6794c8",
+  "category": "AI",
+  "title": "AI Model Data Preparation and Evaluation",
+  "description": "# Model Data Preparation & Evaluation\n\n{{#include ../banners/hacktricks-training.md}}\n\nModel data preparation is a crucial step in the machine learning pipeline, as it involves transforming raw data into a format suitable for training machine learning models. This process includes several key steps:\n\n1. **Data Collection**: Gathering data from various sources, such as databases, APIs, or files. The data can be structured (e.g., tables) or unstructured (e.g., text, images).\n2. **Data Cleaning**: ",
+  "payloads": [
+    "# Model Data Preparation & Evaluation",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "Model data preparation is a crucial step in the machine learning pipeline, as it involves transforming raw data into a format suitable for training machine learning models. This process includes several key steps:",
+    "1. **Data Collection**: Gathering data from various sources, such as databases, APIs, or files. The data can be structured (e.g., tables) or unstructured (e.g., text, images).",
+    "2. **Data Cleaning**: Removing or correcting erroneous, incomplete, or irrelevant data points. This step may involve handling missing values, removing duplicates, and filtering outliers.",
+    "3. **Data Transformation**: Converting the data into a suitable format for modeling. This may include normalization, scaling, encoding categorical variables, and creating new features through techniques like feature engineering.",
+    "4. **Data Splitting**: Dividing the dataset into training, validation, and test sets to ensure the model can generalize well to unseen data.",
+    "## Data Collection",
+    "Data collection involves gathering data from various sources, which can include:",
+    "- **Databases**: Extracting data from relational databases (e.g., SQL databases) or NoSQL databases (e.g., MongoDB).",
+    "- **APIs**: Fetching data from web APIs, which can provide real-time or historical data.",
+    "- **Files**: Reading data from files in formats like CSV, JSON, or XML.",
+    "- **Web Scraping**: Collecting data from websites using web scraping techniques.",
+    "Depending on the goal of the machine learning project, the data will be extracted and collected from relevant sources to ensure it is representative of the problem domain.",
+    "## Data Cleaning"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Model-Data-Preparation-and-Evaluation.md"
+  ]
+}

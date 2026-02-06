@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_268aa68ea5f3",
+  "category": "buffer-overflow-examples",
+  "title": "memory and stack",
+  "description": "# Memory and the Stack\n\n## Understanding Computer Memory\n\nTo understand buffer overflows, you need to understand how programs use memory. When a program runs, the operating system allocates memory to it, which is divided into several regions.\n\n## Memory Layout of a Process\n\nA typical process memory layout (from low to high addresses):\n\n```\nHigh Memory Address\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  Kernel Space   \u2502 \u2190 Operating system memory (off-limits)\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502  Stack          \u2502 \u2190 Local variables, ",
+  "payloads": [
+    "# Memory and the Stack",
+    "## Understanding Computer Memory",
+    "To understand buffer overflows, you need to understand how programs use memory. When a program runs, the operating system allocates memory to it, which is divided into several regions.",
+    "## Memory Layout of a Process",
+    "A typical process memory layout (from low to high addresses):",
+    "High Memory Address",
+    "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510",
+    "\u2502  Kernel Space   \u2502 \u2190 Operating system memory (off-limits)",
+    "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524",
+    "\u2502  Stack          \u2502 \u2190 Local variables, function calls (grows downward \u2b07)",
+    "\u2502       \u2b07         \u2502",
+    "\u2502                 \u2502",
+    "\u2502   [free space]  \u2502",
+    "\u2502                 \u2502",
+    "\u2502       \u2b06         \u2502"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/basics/memory-and-stack.md"
+  ]
+}

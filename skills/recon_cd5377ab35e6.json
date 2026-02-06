@@ -1,0 +1,27 @@
+{
+  "id": "recon_cd5377ab35e6",
+  "category": "recon",
+  "title": "intro to nuclei",
+  "description": "# Introducing Nuclei: A Fast and Customizable Vulnerability Scanner\n\n## Introduction\n\n[Nuclei](https://github.com/projectdiscovery/nuclei) is an open-source, fast, and customizable vulnerability scanner developed by [ProjectDiscovery](https://github.com/projectdiscovery/). It is designed to send requests across targets based on predefined templates, enabling efficient and accurate vulnerability detection with minimal false positives. [Nuclei](https://github.com/projectdiscovery/nuclei) supports ",
+  "payloads": [
+    "# Introducing Nuclei: A Fast and Customizable Vulnerability Scanner",
+    "## Introduction",
+    "[Nuclei](https://github.com/projectdiscovery/nuclei) is an open-source, fast, and customizable vulnerability scanner developed by [ProjectDiscovery](https://github.com/projectdiscovery/). It is designed to send requests across targets based on predefined templates, enabling efficient and accurate vulnerability detection with minimal false positives. [Nuclei](https://github.com/projectdiscovery/nuclei) supports scanning for various protocols, including TCP, DNS, HTTP, SSL, File, Whois, and Websocket.",
+    "## Some of the Key Features",
+    "1. Template-based scanning: Nuclei uses YAML-based templates to define scanning logic, making it highly extensible and customizable.",
+    "2. Multi-protocol support: Enables scanning across various network protocols and services.",
+    "3. Fast and efficient: Optimized for speed, allowing rapid scanning of large numbers of hosts.",
+    "4. Low false positives: Template-based approach helps minimize false positive results.",
+    "5. Community-driven: Large repository of community-contributed templates for detecting various vulnerabilities.",
+    "6. Easy integration: Can be easily integrated into CI/CD pipelines and other automated security workflows.",
+    "## Usage Examples",
+    "### Basic Scanning",
+    "To scan a single target using Nuclei:",
+    "```bash",
+    "nuclei -u http://10.6.6.23"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/recon/intro_to_nuclei.md"
+  ]
+}

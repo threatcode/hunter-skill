@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_0c9cb3984df5",
+  "category": "linux-hardening",
+  "title": "time namespace",
+  "description": "# Time Namespace\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nThe time namespace in Linux allows for per-namespace offsets to the system monotonic and boot-time clocks. It is commonly used in Linux containers to change the date/time within a container and adjust clocks after restoring from a checkpoint or snapshot.\n\n## Lab:\n\n### Create different Namespaces\n\n#### CLI\n\n```bash\nsudo unshare -T [--mount-proc] /bin/bash\n```\n\nBy mounting a new instance of the `/proc`",
+  "payloads": [
+    "# Time Namespace",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "The time namespace in Linux allows for per-namespace offsets to the system monotonic and boot-time clocks. It is commonly used in Linux containers to change the date/time within a container and adjust clocks after restoring from a checkpoint or snapshot.",
+    "## Lab:",
+    "### Create different Namespaces",
+    "#### CLI",
+    "```bash",
+    "sudo unshare -T [--mount-proc] /bin/bash",
+    "By mounting a new instance of the `/proc` filesystem if you use the param `--mount-proc`, you ensure that the new mount namespace has an **accurate and isolated view of the process information specific to that namespace**.",
+    "<details>",
+    "<summary>Error: bash: fork: Cannot allocate memory</summary>",
+    "When `unshare` is executed without the `-f` option, an error is encountered due to the way Linux handles new PID (Process ID) namespaces. The key details and the solution are outlined below:",
+    "1. **Problem Explanation**:",
+    "- The Linux kernel allows a process to create new namespaces using the `unshare` system call. However, the process that initiates the creation of a new PID namespace (referred to as the \"unshare\" process) does not enter the new namespace; only its child processes do."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/namespaces/time-namespace.md"
+  ]
+}

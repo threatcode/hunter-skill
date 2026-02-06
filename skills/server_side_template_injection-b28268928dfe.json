@@ -1,0 +1,27 @@
+{
+  "id": "server_side_template_injection-b28268928dfe",
+  "category": "Server Side Template Injection",
+  "title": "JavaScript",
+  "description": "# Server Side Template Injection - JavaScript\n\n> Server-Side Template Injection (SSTI)  occurs when an attacker can inject malicious code into a server-side template, causing the server to execute arbitrary commands. In the context of JavaScript, SSTI vulnerabilities can arise when using server-side templating engines like Handlebars, EJS, or Pug, where user input is integrated into templates without adequate sanitization.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Universal",
+  "payloads": [
+    "# Server Side Template Injection - JavaScript",
+    "> Server-Side Template Injection (SSTI)  occurs when an attacker can inject malicious code into a server-side template, causing the server to execute arbitrary commands. In the context of JavaScript, SSTI vulnerabilities can arise when using server-side templating engines like Handlebars, EJS, or Pug, where user input is integrated into templates without adequate sanitization.",
+    "## Summary",
+    "- [Templating Libraries](#templating-libraries)",
+    "- [Universal Payloads](#universal-payloads)",
+    "- [Handlebars](#handlebars)",
+    "- [Handlebars - Basic Injection](#handlebars---basic-injection)",
+    "- [Handlebars - Command Execution](#handlebars---command-execution)",
+    "- [Lodash](#lodash)",
+    "- [Lodash - Basic Injection](#lodash---basic-injection)",
+    "- [Lodash - Command Execution](#lodash---command-execution)",
+    "- [Pug](#pug)",
+    "- [References](#references)",
+    "## Templating Libraries",
+    "| Template Name | Payload Format   |"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/JavaScript.md"
+  ]
+}

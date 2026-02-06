@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_6b348262c78f",
+  "category": "generic-methodologies-and-resources",
+  "title": "glbp and hsrp attacks",
+  "description": "# GLBP & HSRP Attacks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## FHRP Hijacking Overview\n\n### Insights into FHRP\n\nFHRP is designed to provide network robustness by merging multiple routers into a single virtual unit, thereby enhancing load distribution and fault tolerance. Cisco Systems introduced prominent protocols in this suite, such as GLBP and HSRP.\n\n### GLBP Protocol Insights\n\nCisco's creation, GLBP, functions on the TCP/IP stack, utilizing UDP on port 3222 for communication. ",
+  "payloads": [
+    "# GLBP & HSRP Attacks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## FHRP Hijacking Overview",
+    "### Insights into FHRP",
+    "FHRP is designed to provide network robustness by merging multiple routers into a single virtual unit, thereby enhancing load distribution and fault tolerance. Cisco Systems introduced prominent protocols in this suite, such as GLBP and HSRP.",
+    "### GLBP Protocol Insights",
+    "Cisco's creation, GLBP, functions on the TCP/IP stack, utilizing UDP on port 3222 for communication. Routers in a GLBP group exchange \"hello\" packets at 3-second intervals. If a router fails to send these packets for 10 seconds, it is presumed to be offline. However, these timers are not fixed and can be modified.",
+    "GLBP for IPv6 uses multicast **FF02::66** over UDP/3222, and the virtual MAC format becomes `0007.b4xx.xxyy` (AVF ID is in the last byte). Timing and attack surface remain the same as in IPv4, so hijack techniques still work in dual\u2011stack networks.",
+    "### GLBP Operations and Load Distribution",
+    "GLBP stands out by enabling load distribution across routers using a single virtual IP coupled with multiple virtual MAC addresses. In a GLBP group, every router is involved in packet forwarding. Unlike HSRP/VRRP, GLBP offers genuine load balancing through several mechanisms:",
+    "- **Host-Dependent Load Balancing:** Maintains consistent AVF MAC address assignment to a host, essential for stable NAT configurations.",
+    "- **Round-Robin Load Balancing:** The default approach, alternating AVF MAC address assignment among requesting hosts.",
+    "- **Weighted Round-Robin Load Balancing:** Distributes load based on predefined \"Weight\" metrics.",
+    "### Key Components and Terminologies in GLBP",
+    "- **AVG (Active Virtual Gateway):** The main router, responsible for allocating MAC addresses to peer routers."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/glbp-and-hsrp-attacks.md"
+  ]
+}

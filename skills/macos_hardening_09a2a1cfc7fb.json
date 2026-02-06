@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_09a2a1cfc7fb",
+  "category": "macos-hardening",
+  "title": "macos dyld process",
+  "description": "# macOS Dyld Process\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nThe real **entrypoint** of a Mach-o binary is the dynamic linked, defined in `LC_LOAD_DYLINKER` usually is `/usr/lib/dyld`.\n\nThis linker will need to locate all the executables libraries, map them in memory and link all the non-lazy libraries. Only after this process, the entry-point of the binary will be executed.\n\nOf course, **`dyld`** doesn't have any dependencies (it uses syscalls and libSyst",
+  "payloads": [
+    "# macOS Dyld Process",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "The real **entrypoint** of a Mach-o binary is the dynamic linked, defined in `LC_LOAD_DYLINKER` usually is `/usr/lib/dyld`.",
+    "This linker will need to locate all the executables libraries, map them in memory and link all the non-lazy libraries. Only after this process, the entry-point of the binary will be executed.",
+    "Of course, **`dyld`** doesn't have any dependencies (it uses syscalls and libSystem excerpts).",
+    "> [!CAUTION]",
+    "> If this linker contains any vulnerability, as it's being executed before executing any binary (even highly privileged ones), it would be possible to **escalate privileges**.",
+    "### Flow",
+    "Dyld will be loaded by **`dyldboostrap::start`**, which will also load things such as the **stack canary**. This is because this function will receive in its **`apple`** argument vector this and other **sensitive** **values**.",
+    "**`dyls::_main()`** is the entry point of dyld and it's first task is to run `configureProcessRestrictions()`, which usually restricts **`DYLD_*`** environment variables explained in:",
+    "{{#ref}}",
+    "{{#endref}}",
+    "Then, it maps the dyld shared cache which prelinks all the important system libraries and then it maps the libraries the binary depends on and continues recursively until all the needed libraries are loaded. Therefore:",
+    "1. it start loading inserted libraries with `DYLD_INSERT_LIBRARIES` (if allowed)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-library-injection/macos-dyld-process.md"
+  ]
+}

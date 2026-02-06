@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_fbdb43b4058e",
+  "category": "macos-hardening",
+  "title": "macos pid reuse",
+  "description": "# macOS PID Reuse\n\n{{#include ../../../../../../banners/hacktricks-training.md}}\n\n## PID Reuse\n\nWhen a macOS **XPC service** is checking the called process based on the **PID** and not on the **audit token**, it's vulnerable to PID reuse attack. This attack is based on a **race condition** where an **exploit** is going to **send messages to the XPC** service **abusing** the functionality and just **after** that, executing **`posix_spawn(NULL, target_binary, NULL, &attr, target_argv, environ)`** ",
+  "payloads": [
+    "# macOS PID Reuse",
+    "{{#include ../../../../../../banners/hacktricks-training.md}}",
+    "## PID Reuse",
+    "When a macOS **XPC service** is checking the called process based on the **PID** and not on the **audit token**, it's vulnerable to PID reuse attack. This attack is based on a **race condition** where an **exploit** is going to **send messages to the XPC** service **abusing** the functionality and just **after** that, executing **`posix_spawn(NULL, target_binary, NULL, &attr, target_argv, environ)`** with the **allowed** binary.",
+    "This function will make the **allowed binary own the PID** but the **malicious XPC message would have been sent** just before. So, if the **XPC** service **use** the **PID** to **authenticate** the sender and checks it **AFTER** the execution of **`posix_spawn`**, it will think it comes from an **authorized** process.",
+    "### Exploit example",
+    "If you find the function **`shouldAcceptNewConnection`** or a function called by it **calling** **`processIdentifier`** and not calling **`auditToken`**. It highly probable means that it's **verifying the process PID** and not the audit token.\\",
+    "Like for example in this image (taken from the reference):",
+    "<figure><img src=\"../../../../../../images/image (306).png\" alt=\"https://wojciechregula.blog/images/2020/04/pid.png\"><figcaption></figcaption></figure>",
+    "Check this example exploit (again, taken from the reference) to see the 2 parts of the exploit:",
+    "- One that **generates several forks**",
+    "- **Each fork** will **send** the **payload** to the XPC service while executing **`posix_spawn`** just after sending the message.",
+    "> [!CAUTION]",
+    "> For the exploit to work it's important to ` export`` `` `**`OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES`** or to put inside the exploit:",
+    "> ```objectivec"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-ipc-inter-process-communication/macos-xpc/macos-xpc-connecting-process-check/macos-pid-reuse.md"
+  ]
+}

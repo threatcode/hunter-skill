@@ -1,0 +1,27 @@
+{
+  "id": "rce-654273e6b3d8",
+  "category": "RCE",
+  "title": "IIS Machine Keys",
+  "description": "# IIS Machine Keys\n\n> That machine key is used for encryption and decryption of forms authentication cookie data and view-state data, and for verification of out-of-process session state identification.\n\n## Summary\n\n* [Viewstate Format](#viewstate-format)\n* [Machine Key Format And Locations](#machine-key-format-and-locations)\n* [Identify Known Machine Key](#identify-known-machine-key)\n* [Decode ViewState](#decode-viewstate)\n* [Generate ViewState For RCE](#generate-viewstate-for-rce)\n    * [MAC I",
+  "payloads": [
+    "<machineKey validationKey=\"[String]\"  decryptionKey=\"[String]\" validation=\"[SHA1 (default) | MD5 | 3DES | AES | HMACSHA256 | HMACSHA384 | HMACSHA512 | alg:algorithm_name]\"  decryption=\"[Auto (default) | DES | 3DES | AES | alg:algorithm_name]\" />",
+    "The following example of a machineKey is from [Microsoft documentation](https://docs.microsoft.com/en-us/iis/troubleshoot/security-issues/troubleshooting-forms-authentication).",
+    "<machineKey validationKey=\"87AC8F432C8DB844A4EFD024301AC1AB5808BEE9D1870689B63794D33EE3B55CDB315BB480721A107187561F388C6BEF5B623BF31E2E725FC3F3F71A32BA5DFC\" decryptionKey=\"E001A307CCC8B1ADEA2C55B1246CDCFE8579576997FF92E7\" validation=\"SHA1\" />",
+    "* in the registry when **AutoGenerate** is enabled (extract with [irsdl/machineKeyFinder.aspx](https://gist.github.com/irsdl/36e78f62b98f879ba36f72ce4fda73ab))",
+    "* [isclayton/viewstalker](https://github.com/isclayton/viewstalker)",
+    "\\     /  |  \\  ___/\\     /\\___ \\  |  |  / __ \\|  |_|    <\\  ___/|  | \\/",
+    "* [blacklanternsecurity/badsecrets](https://github.com/blacklanternsecurity/badsecrets)",
+    "* [irsdl/crapsecrets](https://github.com/irsdl/crapsecrets)",
+    "python3 ./crapsecrets/examples/cli.py -u http://update.microsoft.com/ -r",
+    "python3 ./crapsecrets/examples/cli.py -u http://update.microsoft.com/ -mrd 5",
+    "python3 ./crapsecrets/examples/cli.py -mrd 5 -avsk -fvsp -u http://update.microsoft.com/",
+    "python3 ./crapsecrets/examples/cli.py -mrd 5 -avsk -fvsp -mkf ./local/aspnet_machinekeys_local.txt -u http://192.168.6.22:8080/",
+    "python3 ./crapsecrets/examples/cli.py -mrd 5 -avsk -fvsp -mkf ./local/aspnet_machinekeys_local.txt -mkf ./crapsecrets/resources/aspnet_machinekeys.txt -u http://192.168.6.22:8080/a1/b/c1/",
+    "* [NotSoSecure/Blacklist3r](https://github.com/NotSoSecure/Blacklist3r)",
+    "* [0xacb/viewgen](https://github.com/0xacb/viewgen)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/API Key Leaks/IIS-Machine-Keys.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

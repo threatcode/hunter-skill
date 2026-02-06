@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_e5536854a8f9",
+  "category": "linux-hardening",
+  "title": "uts namespace",
+  "description": "# UTS Namespace\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nA UTS (UNIX Time-Sharing System) namespace is a Linux kernel feature that provides i**solation of two system identifiers**: the **hostname** and the **NIS** (Network Information Service) domain name. This isolation allows each UTS namespace to have its **own independent hostname and NIS domain name**, which is particularly useful in containerization scenarios where each container should appear as a se",
+  "payloads": [
+    "# UTS Namespace",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "A UTS (UNIX Time-Sharing System) namespace is a Linux kernel feature that provides i**solation of two system identifiers**: the **hostname** and the **NIS** (Network Information Service) domain name. This isolation allows each UTS namespace to have its **own independent hostname and NIS domain name**, which is particularly useful in containerization scenarios where each container should appear as a separate system with its own hostname.",
+    "### How it works:",
+    "1. When a new UTS namespace is created, it starts with a **copy of the hostname and NIS domain name from its parent namespace**. This means that, at creation, the new namespace s**hares the same identifiers as its parent**. However, any subsequent changes to the hostname or NIS domain name within the namespace will not affect other namespaces.",
+    "2. Processes within a UTS namespace **can change the hostname and NIS domain name** using the `sethostname()` and `setdomainname()` system calls, respectively. These changes are local to the namespace and do not affect other namespaces or the host system.",
+    "3. Processes can move between namespaces using the `setns()` system call or create new namespaces using the `unshare()` or `clone()` system calls with the `CLONE_NEWUTS` flag. When a process moves to a new namespace or creates one, it will start using the hostname and NIS domain name associated with that namespace.",
+    "## Lab:",
+    "### Create different Namespaces",
+    "#### CLI",
+    "```bash",
+    "sudo unshare -u [--mount-proc] /bin/bash",
+    "By mounting a new instance of the `/proc` filesystem if you use the param `--mount-proc`, you ensure that the new mount namespace has an **accurate and isolated view of the process information specific to that namespace**.",
+    "<details>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/namespaces/uts-namespace.md"
+  ]
+}

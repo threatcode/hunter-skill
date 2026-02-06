@@ -1,0 +1,27 @@
+{
+  "id": "build_your_own_lab_aff4a2b21ae6",
+  "category": "build-your-own-lab",
+  "title": "ansible terraform vagrant",
+  "description": "# Lab Automation - Ansible, Vagrant, and Terraform\n\n| **Attribute**            | **Ansible**                                       | **Vagrant**                                      | **Terraform**                                   |\n|--------------------------|---------------------------------------------------|--------------------------------------------------|-------------------------------------------------|\n| **Type**                  | Configuration Management Tool                    | Vir",
+  "payloads": [
+    "# Lab Automation - Ansible, Vagrant, and Terraform",
+    "| **Attribute**            | **Ansible**                                       | **Vagrant**                                      | **Terraform**                                   |",
+    "|--------------------------|---------------------------------------------------|--------------------------------------------------|-------------------------------------------------|",
+    "| **Type**                  | Configuration Management Tool                    | Virtualization/Provisioning Tool                | Infrastructure as Code (IaC) Tool               |",
+    "| **Primary Use Case**      | Application deployment, system configuration     | Environment virtualization and provisioning     | Provisioning and managing infrastructure        |",
+    "| **Declarative vs Procedural** | Declarative                                    | Declarative with some procedural elements       | Declarative                                     |",
+    "| **State Management**      | Stateless (doesn't track state by default)       | Stateless (doesn't track state)                 | Stateful (tracks infrastructure state)          |",
+    "| **Infrastructure Abstraction** | Limited, primarily focuses on server configuration | Local VM/Container-based environments           | Full cloud infrastructure abstraction           |",
+    "| **Supported Environments** | Linux, Windows, Cloud Providers (AWS, GCP, Azure), Containers | Local environments (VirtualBox, VMware, Docker) | Cloud Providers (AWS, GCP, Azure), On-Premises, Containers |",
+    "| **Provisioning Approach** | Agentless, using SSH or WinRM to execute playbooks on nodes | Requires a local hypervisor or container engine | Agentless, communicates directly with cloud providers\u2019 APIs |",
+    "| **Idempotency**           | Yes (ensures same task doesn\u2019t run again if no change is required) | No (relies on external tools for idempotency)   | Yes (recreates infrastructure if there is drift) |",
+    "| **Learning Curve**        | Moderate (YAML syntax, playbook concepts)        | Easy (focuses on developer environments)        | Moderate (HCL syntax, more complex logic)       |",
+    "| **Extensibility**         | Highly extensible via modules, roles, and plugins | Limited to providers and provisioners supported by Vagrant | Extensible with plugins and providers for different platforms |",
+    "| **Language**              | YAML (Playbooks)                                 | Ruby (Vagrantfiles)                             | HCL (HashiCorp Configuration Language)          |",
+    "| **Orchestration Support** | Yes (can orchestrate multiple systems and services) | No (focuses on single-machine provisioning)     | No (mainly focused on declarative infrastructure definition) |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/build-your-own-lab/ansible_terraform_vagrant.md"
+  ]
+}

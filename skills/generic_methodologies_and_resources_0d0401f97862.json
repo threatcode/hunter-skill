@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_0d0401f97862",
+  "category": "generic-methodologies-and-resources",
+  "title": "bruteforce hash few chars",
+  "description": "# Bruteforce Hash Few Chars\n\n{{#include ../../banners/hacktricks-training.md}}\n\n```python\nimport hashlib\n\ntarget = '2f2e2e' #/..\ncandidate = 0\nwhile True:\n    plaintext = str(candidate)\n    hash = hashlib.md5(plaintext.encode('ascii')).hexdigest()\n    if hash[-1*(len(target)):] == target: #End in target\n        print('plaintext:\"' + plaintext + '\", md5:' + hash)\n        break\n    candidate = candidate + 1\n```\n\n```python\n#From isHaacK\nimport hashlib\nfrom multiprocessing import Process, Queue, cpu",
+  "payloads": [
+    "# Bruteforce Hash Few Chars",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "```python",
+    "import hashlib",
+    "target = '2f2e2e' #/..",
+    "candidate = 0",
+    "while True:",
+    "plaintext = str(candidate)",
+    "hash = hashlib.md5(plaintext.encode('ascii')).hexdigest()",
+    "if hash[-1*(len(target)):] == target: #End in target",
+    "print('plaintext:\"' + plaintext + '\", md5:' + hash)",
+    "candidate = candidate + 1",
+    "```python",
+    "#From isHaacK",
+    "import hashlib"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/bruteforce-hash-few-chars.md"
+  ]
+}

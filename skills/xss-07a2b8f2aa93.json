@@ -1,0 +1,27 @@
+{
+  "id": "xss-07a2b8f2aa93",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Type Juggling\n\n> PHP is a loosely typed language, which means it tries to predict the programmer's intent and automatically converts variables to different types whenever it seems necessary. For example, a string containing only numbers can be treated as an integer or a float. However, this automatic conversion (or type juggling) can lead to unexpected results, especially when comparing variables using the '==' operator, which only checks for value equality (loose comparison), not type and val",
+  "payloads": [
+    "![LooseTypeComparison](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Type%20Juggling/Images/table_representing_behavior_of_PHP_with_loose_type_comparisons.png?raw=true)",
+    "* [MariaDB](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/Mariadb)",
+    "* [MySQL](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/Mysql)",
+    "* [NodeJS](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/NodeJS)",
+    "* [PHP](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/PHP)",
+    "* [Perl](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/Perl)",
+    "* [Postgres](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/Postgres)",
+    "* [Python](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/Python)",
+    "* [SQLite](https://github.com/Hakumarachi/Loose-Compare-Tables/tree/master/results/SQLite/2.6.0)",
+    "| MD4  | gH0nAdHk                   | 0e096229559581069251163783434175              | [@spaze](https://github.com/spaze/hashes/blob/master/md4.md) |",
+    "| MD4  | IiF+hTai                   | 00e90130237707355082822449868597              | [@spaze](https://github.com/spaze/hashes/blob/master/md4.md) |",
+    "| MD5  | 240610708                  | 0e462097431906509019562988736854              | [@spazef0rze](https://twitter.com/spazef0rze/status/439352552443084800) |",
+    "| MD5  | QNKCDZO                    | 0e830400451993494058024219903391              | [@spazef0rze](https://twitter.com/spazef0rze/status/439352552443084800) |",
+    "| MD5  | 0e1137126905               | 0e291659922323405260514745084877              | [@spazef0rze](https://twitter.com/spazef0rze/status/439352552443084800) |",
+    "| MD5  | 0e215962017                | 0e291242476940776845150308577824              | [@spazef0rze](https://twitter.com/spazef0rze/status/439352552443084800) |"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Type Juggling/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

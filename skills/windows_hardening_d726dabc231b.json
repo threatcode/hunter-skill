@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d726dabc231b",
+  "category": "windows-hardening",
+  "title": "golden dmsa gmsa",
+  "description": "# Golden gMSA/dMSA Attack (Offline Derivation of Managed Service Account Passwords)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nWindows Managed Service Accounts (MSA) are special principals designed to run services without the need to manually manage their passwords.\nThere are two major flavours:\n\n1. **gMSA** \u2013 group Managed Service Account \u2013 can be used on multiple hosts that are authorised in its `msDS-GroupMSAMembership` attribute.\n2. **dMSA** \u2013 delegated Managed Service ",
+  "payloads": [
+    "# Golden gMSA/dMSA Attack (Offline Derivation of Managed Service Account Passwords)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Windows Managed Service Accounts (MSA) are special principals designed to run services without the need to manually manage their passwords.",
+    "There are two major flavours:",
+    "1. **gMSA** \u2013 group Managed Service Account \u2013 can be used on multiple hosts that are authorised in its `msDS-GroupMSAMembership` attribute.",
+    "2. **dMSA** \u2013 delegated Managed Service Account \u2013 the (preview) successor to gMSA, relying on the same cryptography but allowing more granular delegation scenarios.",
+    "For both variants the **password is not stored** on each Domain Controller (DC) like a regular NT-hash. Instead every DC can **derive** the current password on-the-fly from:",
+    "* The forest-wide **KDS Root Key** (`KRBTGT\\KDS`)  \u2013 randomly generated GUID-named secret, replicated to every DC under the `CN=Master Root Keys,CN=Group Key Distribution Service, CN=Services, CN=Configuration, \u2026` container.",
+    "* The target account **SID**.",
+    "* A per-account **ManagedPasswordID** (GUID) found in the `msDS-ManagedPasswordId` attribute.",
+    "The derivation is: `AES256_HMAC( KDSRootKey , SID || ManagedPasswordID )` \u2192 240 byte blob finally **base64-encoded** and stored in the `msDS-ManagedPassword` attribute.",
+    "No Kerberos traffic or domain interaction is required during normal password usage \u2013 a member host derives the password locally as long as it knows the three inputs.",
+    "## Golden gMSA / Golden dMSA Attack",
+    "If an attacker can obtain all three inputs **offline** they can compute **valid current and future passwords** for **any gMSA/dMSA in the forest** without touching the DC again, bypassing:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/golden-dmsa-gmsa.md"
+  ]
+}

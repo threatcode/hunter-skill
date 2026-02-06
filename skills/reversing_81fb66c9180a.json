@@ -1,0 +1,27 @@
+{
+  "id": "reversing_81fb66c9180a",
+  "category": "reversing",
+  "title": "angr examples",
+  "description": "# Angr - Examples\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n> [!TIP]\n> If the program is using `scanf` to get **several values at once from stdin** you need to generate a state that starts after the **`scanf`**.\n\nCodes taken from [https://github.com/jakespringer/angr_ctf](https://github.com/jakespringer/angr_ctf)\n\n### Input to reach address (indicating the address)\n\n```python\nimport angr\nimport sys\n\ndef main(argv):\n  path_to_binary = argv[1]  # :string\n  project = angr.Project(path_",
+  "payloads": [
+    "# Angr - Examples",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "> [!TIP]",
+    "> If the program is using `scanf` to get **several values at once from stdin** you need to generate a state that starts after the **`scanf`**.",
+    "Codes taken from [https://github.com/jakespringer/angr_ctf](https://github.com/jakespringer/angr_ctf)",
+    "### Input to reach address (indicating the address)",
+    "```python",
+    "import angr",
+    "import sys",
+    "def main(argv):",
+    "path_to_binary = argv[1]  # :string",
+    "project = angr.Project(path_to_binary)",
+    "# Start in main()",
+    "initial_state = project.factory.entry_state()",
+    "# Start simulation"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/reversing/reversing-tools-basic-methods/angr/angr-examples.md"
+  ]
+}

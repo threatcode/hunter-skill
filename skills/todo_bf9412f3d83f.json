@@ -1,0 +1,27 @@
+{
+  "id": "todo_bf9412f3d83f",
+  "category": "todo",
+  "title": "maxiprox mobile cloner",
+  "description": "# Building a Portable HID MaxiProx 125 kHz Mobile Cloner\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Goal\nTurn a mains-powered HID MaxiProx 5375 long-range 125 kHz reader into a field-deployable, battery-powered badge cloner that silently harvests proximity cards during physical-security assessments.\n\nThe conversion covered here is based on TrustedSec\u2019s \u201cLet\u2019s Clone a Cloner \u2013 Part 3: Putting It All Together\u201d research series and combines mechanical, electrical and RF considerations so",
+  "payloads": [
+    "# Building a Portable HID MaxiProx 125 kHz Mobile Cloner",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Goal",
+    "Turn a mains-powered HID MaxiProx 5375 long-range 125 kHz reader into a field-deployable, battery-powered badge cloner that silently harvests proximity cards during physical-security assessments.",
+    "The conversion covered here is based on TrustedSec\u2019s \u201cLet\u2019s Clone a Cloner \u2013 Part 3: Putting It All Together\u201d research series and combines mechanical, electrical and RF considerations so the final device can be thrown in a backpack and immediately used on site.",
+    "> [!warning]",
+    "> Manipulating mains-powered equipment and Lithium-ion power-banks can be dangerous.  Verify every connection **before** energising the circuit and keep the antennas, coax and ground planes exactly as they were in the factory design to avoid detuning the reader.",
+    "## Bill of Materials (BOM)",
+    "* HID MaxiProx 5375 reader (or any 12 V HID Prox\u00ae long-range reader)",
+    "* ESP RFID Tool v2.2 (ESP32-based Wiegand sniffer/logger)",
+    "* USB-PD (Power-Delivery) trigger module able to negotiate 12 V @ \u22653 A",
+    "* 100 W USB-C power-bank (outputs 12 V PD profile)",
+    "* 26 AWG silicone-insulated hook-up wire \u2013 red/white",
+    "* Panel-mount SPST toggle switch (for beeper kill-switch)",
+    "* NKK AT4072 switch-guard / accident-proof cap"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/maxiprox-mobile-cloner.md"
+  ]
+}

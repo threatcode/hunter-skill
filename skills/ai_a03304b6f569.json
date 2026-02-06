@@ -1,0 +1,27 @@
+{
+  "id": "ai_a03304b6f569",
+  "category": "AI",
+  "title": "4. attention mechanisms",
+  "description": "# 4. Attention Mechanisms\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Attention Mechanisms and Self-Attention in Neural Networks\n\nAttention mechanisms allow neural networks to f**ocus on specific parts of the input when generating each part of the output**. They assign different weights to different inputs, helping the model decide which inputs are most relevant to the task at hand. This is crucial in tasks like machine translation, where understanding the context of the entire senten",
+  "payloads": [
+    "# 4. Attention Mechanisms",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Attention Mechanisms and Self-Attention in Neural Networks",
+    "Attention mechanisms allow neural networks to f**ocus on specific parts of the input when generating each part of the output**. They assign different weights to different inputs, helping the model decide which inputs are most relevant to the task at hand. This is crucial in tasks like machine translation, where understanding the context of the entire sentence is necessary for accurate translation.",
+    "> [!TIP]",
+    "> The goal of this fourth phase is very simple: **Apply some attetion mechanisms**. These are going to be a lot of **repeated layers** that are going to **capture the relation of a word in the vocabulary with its neighbours in the current sentence being used to train the LLM**.\\",
+    "> A lot of layers are used for this, so a lot of trainable parameters are going to be capturing this information.",
+    "### Understanding Attention Mechanisms",
+    "In traditional sequence-to-sequence models used for language translation, the model encodes an input sequence into a fixed-size context vector. However, this approach struggles with long sentences because the fixed-size context vector may not capture all necessary information. Attention mechanisms address this limitation by allowing the model to consider all input tokens when generating each output token.",
+    "#### Example: Machine Translation",
+    "Consider translating the German sentence \"Kannst du mir helfen diesen Satz zu \u00fcbersetzen\" into English. A word-by-word translation would not produce a grammatically correct English sentence due to differences in grammatical structures between languages. An attention mechanism enables the model to focus on relevant parts of the input sentence when generating each word of the output sentence, leading to a more accurate and coherent translation.",
+    "### Introduction to Self-Attention",
+    "Self-attention, or intra-attention, is a mechanism where attention is applied within a single sequence to compute a representation of that sequence. It allows each token in the sequence to attend to all other tokens, helping the model capture dependencies between tokens regardless of their distance in the sequence.",
+    "#### Key Concepts",
+    "- **Tokens**: Individual elements of the input sequence (e.g., words in a sentence)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/4.-attention-mechanisms.md"
+  ]
+}

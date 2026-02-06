@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_9d8065a722f8",
+  "category": "windows-hardening",
+  "title": "pass the ticket",
+  "description": "# Pass the Ticket\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Pass The Ticket (PTT)\n\nIn the **Pass The Ticket (PTT)** attack method, attackers **steal a user's authentication ticket** instead of their password or hash values. This stolen ticket is then used to **impersonate the user**, gaining unauthorized access to resources and services within a network.\n\n**Read**:\n\n- [Harvesting tickets from Windows](../../network-services-pentesting/pentesting-kerberos-88/harvesting-tickets-from-w",
+  "payloads": [
+    "# Pass the Ticket",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Pass The Ticket (PTT)",
+    "In the **Pass The Ticket (PTT)** attack method, attackers **steal a user's authentication ticket** instead of their password or hash values. This stolen ticket is then used to **impersonate the user**, gaining unauthorized access to resources and services within a network.",
+    "**Read**:",
+    "- [Harvesting tickets from Windows](../../network-services-pentesting/pentesting-kerberos-88/harvesting-tickets-from-windows.md)",
+    "- [Harvesting tickets from Linux](../../network-services-pentesting/pentesting-kerberos-88/harvesting-tickets-from-linux.md)",
+    "### **Swaping Linux and Windows tickets between platforms**",
+    "The [**ticket_converter**](https://github.com/Zer1t0/ticket_converter) tool converts ticket formats using just the ticket itself and an output file.",
+    "```bash",
+    "python ticket_converter.py velociraptor.ccache velociraptor.kirbi",
+    "Converting ccache => kirbi",
+    "python ticket_converter.py velociraptor.kirbi velociraptor.ccache",
+    "Converting kirbi => ccache",
+    "In Windows [Kekeo](https://github.com/gentilkiwi/kekeo) can be used."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/pass-the-ticket.md"
+  ]
+}

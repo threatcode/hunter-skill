@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_e9aa25da055c",
+  "category": "generic-hacking",
+  "title": "tunneling and port forwarding",
+  "description": "# Tunneling and Port Forwarding\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Nmap tip\n\n> [!WARNING]\n> **ICMP** and **SYN** scans cannot be tunnelled through socks proxies, so we must **disable ping discovery** (`-Pn`) and specify **TCP scans** (`-sT`) for this to work.\n\n## **Bash**\n\n**Host -> Jump -> InternalA -> InternalB**\n\n```bash\n# On the jump server connect the port 3333 to the 5985\nmknod backpipe p;\nnc -lvnp 5985 0<backpipe | nc -lvnp 3333 1>backpipe\n\n# On InternalA accessible from ",
+  "payloads": [
+    "# Tunneling and Port Forwarding",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Nmap tip",
+    "> [!WARNING]",
+    "> **ICMP** and **SYN** scans cannot be tunnelled through socks proxies, so we must **disable ping discovery** (`-Pn`) and specify **TCP scans** (`-sT`) for this to work.",
+    "## **Bash**",
+    "**Host -> Jump -> InternalA -> InternalB**",
+    "```bash",
+    "# On the jump server connect the port 3333 to the 5985",
+    "mknod backpipe p;",
+    "nc -lvnp 5985 0<backpipe | nc -lvnp 3333 1>backpipe",
+    "# On InternalA accessible from Jump and can access InternalB",
+    "## Expose port 3333 and connect it to the winrm port of InternalB",
+    "exec 3<>/dev/tcp/internalB/5985",
+    "exec 4<>/dev/tcp/Jump/3333"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/tunneling-and-port-forwarding.md"
+  ]
+}

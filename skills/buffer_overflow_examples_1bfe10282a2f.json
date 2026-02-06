@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_1bfe10282a2f",
+  "category": "buffer-overflow-examples",
+  "title": "secure coding",
+  "description": "# Secure Coding Practices to Prevent Buffer Overflows\n\n## Introduction\n\nBuffer overflows are preventable! While modern systems have multiple layers of defense, the most effective protection is writing secure code from the start. This guide provides practical, actionable techniques for preventing buffer overflows in C and C++ programs.\n\n## The Security-First Mindset\n\n### Core Principles\n\n1. **Never trust input** - All input is potentially malicious\n2. **Validate everything** - Check sizes, ranges",
+  "payloads": [
+    "# Secure Coding Practices to Prevent Buffer Overflows",
+    "## Introduction",
+    "Buffer overflows are preventable! While modern systems have multiple layers of defense, the most effective protection is writing secure code from the start. This guide provides practical, actionable techniques for preventing buffer overflows in C and C++ programs.",
+    "## The Security-First Mindset",
+    "### Core Principles",
+    "1. **Never trust input** - All input is potentially malicious",
+    "2. **Validate everything** - Check sizes, ranges, and formats",
+    "3. **Fail safely** - Handle errors explicitly",
+    "4. **Defense in depth** - Use multiple layers of protection",
+    "5. **Least privilege** - Run with minimum necessary permissions",
+    "### The Security Triangle",
+    "Security",
+    "/     \\",
+    "/       \\",
+    "Usability - Performance"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/defenses/secure-coding.md"
+  ]
+}

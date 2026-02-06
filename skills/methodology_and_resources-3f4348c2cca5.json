@@ -1,0 +1,19 @@
+{
+  "id": "methodology_and_resources-3f4348c2cca5",
+  "category": "Methodology and Resources",
+  "title": "Container   Kubernetes Pentest",
+  "description": "# Container - Kubernetes\n\n:warning: Content of this page has been moved to [InternalAllTheThings/containers/kubernetes/](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#tools)\n- [Exploits](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#exploits)\n    - [Accessible kubelet on 10250/TCP](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#a",
+  "payloads": [
+    "# Container - Kubernetes",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/containers/kubernetes/](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#tools)",
+    "- [Exploits](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#exploits)",
+    "- [Accessible kubelet on 10250/TCP](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#accessible-kubelet-on-10250tcp)",
+    "- [Obtaining Service Account Token](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#obtaining-service-account-token)",
+    "- [References](https://swisskyrepo.github.io/InternalAllTheThings/containers/kubernetes/#references)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Container - Kubernetes Pentest.md"
+  ]
+}

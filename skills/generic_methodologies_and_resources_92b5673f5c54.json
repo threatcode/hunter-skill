@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_92b5673f5c54",
+  "category": "generic-methodologies-and-resources",
+  "title": "ai agent abuse local ai cli tools and mcp",
+  "description": "# AI Agent Abuse: Local AI CLI Tools & MCP (Claude/Gemini/Warp)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nLocal AI command-line interfaces (AI CLIs) such as Claude Code, Gemini CLI, Warp and similar tools often ship with powerful built\u2011ins: filesystem read/write, shell execution and outbound network access. Many act as MCP clients (Model Context Protocol), letting the model call external tools over STDIO or HTTP. Because the LLM plans tool-chains non\u2011deterministically, ide",
+  "payloads": [
+    "# AI Agent Abuse: Local AI CLI Tools & MCP (Claude/Gemini/Warp)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Local AI command-line interfaces (AI CLIs) such as Claude Code, Gemini CLI, Warp and similar tools often ship with powerful built\u2011ins: filesystem read/write, shell execution and outbound network access. Many act as MCP clients (Model Context Protocol), letting the model call external tools over STDIO or HTTP. Because the LLM plans tool-chains non\u2011deterministically, identical prompts can lead to different process, file and network behaviours across runs and hosts.",
+    "Key mechanics seen in common AI CLIs:",
+    "- Typically implemented in Node/TypeScript with a thin wrapper launching the model and exposing tools.",
+    "- Multiple modes: interactive chat, plan/execute, and single\u2011prompt run.",
+    "- MCP client support with STDIO and HTTP transports, enabling both local and remote capability extension.",
+    "Abuse impact: A single prompt can inventory and exfiltrate credentials, modify local files, and silently extend capability by connecting to remote MCP servers (visibility gap if those servers are third\u2011party).",
+    "## Adversary Playbook \u2013 Prompt\u2011Driven Secrets Inventory",
+    "Task the agent to quickly triage and stage credentials/secrets for exfiltration while staying quiet:",
+    "- Scope: recursively enumerate under $HOME and application/wallet dirs; avoid noisy/pseudo paths (`/proc`, `/sys`, `/dev`).",
+    "- Performance/stealth: cap recursion depth; avoid `sudo`/priv\u2011escalation; summarise results.",
+    "- Targets: `~/.ssh`, `~/.aws`, cloud CLI creds, `.env`, `*.key`, `id_rsa`, `keystore.json`, browser storage (LocalStorage/IndexedDB profiles), crypto\u2011wallet data.",
+    "- Output: write a concise list to `/tmp/inventory.txt`; if the file exists, create a timestamped backup before overwrite."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/ai-agent-abuse-local-ai-cli-tools-and-mcp.md"
+  ]
+}

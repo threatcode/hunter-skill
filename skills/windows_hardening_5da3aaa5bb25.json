@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_5da3aaa5bb25",
+  "category": "windows-hardening",
+  "title": "kerberos double hop problem",
+  "description": "# Kerberos Double Hop Problem\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Introduction\n\nThe Kerberos \"Double Hop\" problem appears when an attacker attempts to use **Kerberos authentication across two** **hops**, for example using **PowerShell**/**WinRM**.\n\nWhen an **authentication** occurs through **Kerberos**, **credentials** **aren't** cached in **memory.** Therefore, if you run mimikatz you **won't find credentials** of the user in the machine even if he is running processes.\n\nThi",
+  "payloads": [
+    "# Kerberos Double Hop Problem",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "The Kerberos \"Double Hop\" problem appears when an attacker attempts to use **Kerberos authentication across two** **hops**, for example using **PowerShell**/**WinRM**.",
+    "When an **authentication** occurs through **Kerberos**, **credentials** **aren't** cached in **memory.** Therefore, if you run mimikatz you **won't find credentials** of the user in the machine even if he is running processes.",
+    "This is because when connecting with Kerberos these are the steps:",
+    "1. User1 provides credentials and **domain controller** returns a Kerberos **TGT** to the User1.",
+    "2. User1 uses **TGT** to request a **service ticket** to **connect** to Server1.",
+    "3. User1 **connects** to **Server1** and provides **service ticket**.",
+    "4. **Server1** **doesn't** have **credentials** of User1 cached or the **TGT** of User1. Therefore, when User1 from Server1 tries to login to a second server, he is **not able to authenticate**.",
+    "### Unconstrained Delegation",
+    "If **unconstrained delegation** is enabled in the PC, this won't happen as the **Server** will **get** a **TGT** of each user accessing it. Moreover, if unconstrained delegation is used you probably can **compromise the Domain Controller** from it.\\",
+    "[**More info in the unconstrained delegation page**](unconstrained-delegation.md).",
+    "### CredSSP",
+    "Another way to avoid this problem which is [**notably insecure**](https://docs.microsoft.com/en-us/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) is **Credential Security Support Provider**. From Microsoft:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/kerberos-double-hop-problem.md"
+  ]
+}

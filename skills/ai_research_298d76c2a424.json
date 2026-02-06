@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_298d76c2a424",
+  "category": "ai-research",
+  "title": "ai security tools",
+  "description": "# AI Security Tools\n\nThis is a work in progress, curated list of AI Security tools:\n\n## Open Source Tools for AI Red Teaming\n\n### Predictive AI\n- [The Adversarial Robustness Toolbox (ART)](https://github.com/Trusted-AI/adversarial-robustness-toolbox)\n- [Armory](https://github.com/twosixlabs/armory)\n- [Foolbox](https://github.com/bethgelab/foolbox)\n- [DeepSec](https://github.com/ryderling/DEEPSEC)\n- [TextAttack](https://github.com/QData/TextAttack)\n\n### Generative AI\n- [PyRIT](https://github.com/",
+  "payloads": [
+    "# AI Security Tools",
+    "This is a work in progress, curated list of AI Security tools:",
+    "## Open Source Tools for AI Red Teaming",
+    "### Predictive AI",
+    "- [The Adversarial Robustness Toolbox (ART)](https://github.com/Trusted-AI/adversarial-robustness-toolbox)",
+    "- [Armory](https://github.com/twosixlabs/armory)",
+    "- [Foolbox](https://github.com/bethgelab/foolbox)",
+    "- [DeepSec](https://github.com/ryderling/DEEPSEC)",
+    "- [TextAttack](https://github.com/QData/TextAttack)",
+    "### Generative AI",
+    "- [PyRIT](https://github.com/Azure/PyRIT)",
+    "- [Garak](https://github.com/NVIDIA/garak)",
+    "- [Prompt Fuzzer](https://github.com/prompt-security/ps-fuzz)",
+    "- [Guardrail](https://github.com/guardrails-ai/guardrails)",
+    "- [Promptfoo](https://github.com/promptfoo/promptfoo)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ai-research/ai_security_tools.md"
+  ]
+}

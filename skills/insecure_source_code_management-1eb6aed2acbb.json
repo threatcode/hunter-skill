@@ -1,0 +1,27 @@
+{
+  "id": "insecure_source_code_management-1eb6aed2acbb",
+  "category": "Insecure Source Code Management",
+  "title": "Git",
+  "description": "# Git\n\n## Summary\n\n* [Methodology](#methodology)\n    * [Recovering file contents from .git/logs/HEAD](#recovering-file-contents-from-gitlogshead)\n    * [Recovering file contents from .git/index](#recovering-file-contents-from-gitindex)\n* [Tools](#tools)\n    * [Automatic recovery](#automatic-recovery)\n        * [git-dumper.py](#git-dumperpy)\n        * [diggit.py](#diggitpy)\n        * [GoGitDumper](#gogitdumper)\n        * [rip-git](#rip-git)\n        * [GitHack](#githack)\n        * [GitTools](#gitt",
+  "payloads": [
+    "## Summary",
+    "* [Methodology](#methodology)",
+    "* [Recovering file contents from .git/logs/HEAD](#recovering-file-contents-from-gitlogshead)",
+    "* [Recovering file contents from .git/index](#recovering-file-contents-from-gitindex)",
+    "* [Tools](#tools)",
+    "* [Automatic recovery](#automatic-recovery)",
+    "* [git-dumper.py](#git-dumperpy)",
+    "* [diggit.py](#diggitpy)",
+    "* [GoGitDumper](#gogitdumper)",
+    "* [rip-git](#rip-git)",
+    "* [GitHack](#githack)",
+    "* [GitTools](#gittools)",
+    "* [Harvesting secrets](#harvesting-secrets)",
+    "* [noseyparker](#noseyparker)",
+    "* [trufflehog](#trufflehog)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Insecure Source Code Management/Git.md"
+  ]
+}

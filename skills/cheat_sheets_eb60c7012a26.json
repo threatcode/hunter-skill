@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_eb60c7012a26",
+  "category": "cheat-sheets",
+  "title": "regex",
+  "description": "# Regular Expression Cheat Sheets and Resources\n- [ Regular Expression Cheat Sheet](https://web.mit.edu/hackl/www/lab/turkshop/slides/regex-cheatsheet.pdf)\n- [Quick-Start: Regex Cheat Sheet](https://www.rexegg.com/regex-quickstart.html)\n- [RegexR - Generate Regular Expressions](https://regexr.com)\n- [RegexOne Exercises](https://regexone.com)\n- [Regex Crossword](https://regexcrossword.com)\n- [Regex101](https://regex101.com/)\n\n## Quick Regex Reference\n\n<table border=\"1\" cellspacing=\"0\" cellpadding",
+  "payloads": [
+    "# Regular Expression Cheat Sheets and Resources",
+    "- [ Regular Expression Cheat Sheet](https://web.mit.edu/hackl/www/lab/turkshop/slides/regex-cheatsheet.pdf)",
+    "- [Quick-Start: Regex Cheat Sheet](https://www.rexegg.com/regex-quickstart.html)",
+    "- [RegexR - Generate Regular Expressions](https://regexr.com)",
+    "- [RegexOne Exercises](https://regexone.com)",
+    "- [Regex Crossword](https://regexcrossword.com)",
+    "- [Regex101](https://regex101.com/)",
+    "## Quick Regex Reference",
+    "<table border=\"1\" cellspacing=\"0\" cellpadding=\"8\">",
+    "<tbody>",
+    "<th>Character</th>",
+    "<th>Meaning</th>",
+    "<th>Example</th>",
+    "<td class=\"sc\">*</td>",
+    "<td>Match&nbsp;<strong>zero, one or more</strong>&nbsp;of the previous</td>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/scripting/regex.md"
+  ]
+}

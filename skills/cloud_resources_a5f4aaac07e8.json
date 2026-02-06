@@ -1,0 +1,27 @@
+{
+  "id": "cloud_resources_a5f4aaac07e8",
+  "category": "cloud-resources",
+  "title": "cloud logging",
+  "description": "# Cloud Logging Security Guide\n\nCloud logging is a critical component of cloud security architecture, involving the systematic collection, analysis, and secure storage of logs from cloud resources and services. Effective cloud logging enables real-time monitoring, incident response, compliance adherence, and threat detection in cloud environments.\n\n## Table of Contents\n- [Cloud Platform Logging Capabilities](#cloud-platform-logging-capabilities)\n- [Cloud Logging Security Threats](#cloud-logging-",
+  "payloads": [
+    "# Cloud Logging Security Guide",
+    "Cloud logging is a critical component of cloud security architecture, involving the systematic collection, analysis, and secure storage of logs from cloud resources and services. Effective cloud logging enables real-time monitoring, incident response, compliance adherence, and threat detection in cloud environments.",
+    "## Table of Contents",
+    "- [Cloud Platform Logging Capabilities](#cloud-platform-logging-capabilities)",
+    "- [Cloud Logging Security Threats](#cloud-logging-security-threats)",
+    "- [Best Practices](#cloud-logging-best-practices)",
+    "- [Compliance Requirements](#compliance-requirements)",
+    "- [Modern Logging Practices](#modern-logging-practices)",
+    "- [Cost Optimization](#cost-optimization)",
+    "## Cloud Platform Logging Capabilities",
+    "The following table provides a comprehensive comparison of logging capabilities across major cloud platforms:",
+    "| Feature                          | AWS                                                                 | Azure                                                                                      | GCP                                                                                     |",
+    "|----------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|",
+    "| **Activity Logging**             | [CloudTrail](https://aws.amazon.com/cloudtrail/)                     | [Azure Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log) | [Cloud Logging](https://cloud.google.com/logging)                                  |",
+    "| **Resource Access Logging**      | [S3 Access Logs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html) | [Storage Analytics Logging](https://learn.microsoft.com/en-us/azure/storage/common/storage-analytics-logging) | [Cloud Audit Logs](https://cloud.google.com/logging/docs/audit)                          |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cloud-resources/cloud_logging.md"
+  ]
+}

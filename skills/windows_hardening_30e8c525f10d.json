@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_30e8c525f10d",
+  "category": "windows-hardening",
+  "title": "certificate theft",
+  "description": "# AD CS Certificate Theft\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n**This is a small summary of the Theft chapters of the awesome research from [https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf)**\n\n## What can I do with a certificate\n\nBefore checking how to steal the certificates here you have some info about how to find what the certificate is useful for:\n\n```bash\n# Powershell\n$CertPath = \"C:\\pat",
+  "payloads": [
+    "# AD CS Certificate Theft",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "**This is a small summary of the Theft chapters of the awesome research from [https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf)**",
+    "## What can I do with a certificate",
+    "Before checking how to steal the certificates here you have some info about how to find what the certificate is useful for:",
+    "```bash",
+    "# Powershell",
+    "$CertPath = \"C:\\path\\to\\cert.pfx\"",
+    "$CertPass = \"P@ssw0rd\"",
+    "$Cert = New-Object",
+    "System.Security.Cryptography.X509Certificates.X509Certificate2 @($CertPath, $CertPass)",
+    "$Cert.EnhancedKeyUsageList",
+    "certutil.exe -dump -v cert.pfx",
+    "## Exporting Certificates Using the Crypto APIs \u2013 THEFT1",
+    "In an **interactive desktop session**, extracting a user or machine certificate, along with the private key, can be easily done, particularly if the **private key is exportable**. This can be achieved by navigating to the certificate in `certmgr.msc`, right-clicking on it, and selecting `All Tasks \u2192 Export` to generate a password-protected .pfx file."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/certificate-theft.md"
+  ]
+}

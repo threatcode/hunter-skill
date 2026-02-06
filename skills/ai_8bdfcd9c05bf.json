@@ -1,0 +1,27 @@
+{
+  "id": "ai_8bdfcd9c05bf",
+  "category": "AI",
+  "title": "2. data sampling",
+  "description": "# 2. Data Sampling\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## **Data Sampling**\n\n**Data Sampling** is a crucial process in preparing data for training large language models (LLMs) like GPT. It involves organizing text data into input and target sequences that the model uses to learn how to predict the next word (or token) based on the preceding words. Proper data sampling ensures that the model effectively captures language patterns and dependencies.\n\n> [!TIP]\n> The goal of this seco",
+  "payloads": [
+    "# 2. Data Sampling",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## **Data Sampling**",
+    "**Data Sampling** is a crucial process in preparing data for training large language models (LLMs) like GPT. It involves organizing text data into input and target sequences that the model uses to learn how to predict the next word (or token) based on the preceding words. Proper data sampling ensures that the model effectively captures language patterns and dependencies.",
+    "> [!TIP]",
+    "> The goal of this second phase is very simple: **Sample the input data and prepare it for the training phase usually by separating the dataset into sentences of a specific length and generating also the expected response.**",
+    "### **Why Data Sampling Matters**",
+    "LLMs such as GPT are trained to generate or predict text by understanding the context provided by previous words. To achieve this, the training data must be structured in a way that the model can learn the relationship between sequences of words and their subsequent words. This structured approach allows the model to generalize and generate coherent and contextually relevant text.",
+    "### **Key Concepts in Data Sampling**",
+    "1. **Tokenization:** Breaking down text into smaller units called tokens (e.g., words, subwords, or characters).",
+    "2. **Sequence Length (max_length):** The number of tokens in each input sequence.",
+    "3. **Sliding Window:** A method to create overlapping input sequences by moving a window over the tokenized text.",
+    "4. **Stride:** The number of tokens the sliding window moves forward to create the next sequence.",
+    "### **Step-by-Step Example**",
+    "Let's walk through an example to illustrate data sampling."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/2.-data-sampling.md"
+  ]
+}

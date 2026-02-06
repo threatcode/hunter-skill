@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_4adf50d41867",
+  "category": "cryptography-and-pki",
+  "title": "08 Elliptic Curve Key Pair Generation",
+  "description": "# Elliptic Curve Key Pair Generation\n\n**Level:** Intermediate\n\n**Description:**\nIn this challenge, you'll work with elliptic curves over a finite field to generate and validate an elliptic curve key pair. Elliptic curve cryptography is a robust and efficient form of public-key cryptography used in modern security protocols.\n\n**Challenge Text:**\n```\nGiven Elliptic Curve y^2 = x^3 + 2x + 3 over F_17, base point G = (6, 3), private key d = 10\n```\n\n**Instructions:**\n1. Compute the public key corresp",
+  "payloads": [
+    "# Elliptic Curve Key Pair Generation",
+    "**Level:** Intermediate",
+    "**Description:**",
+    "In this challenge, you'll work with elliptic curves over a finite field to generate and validate an elliptic curve key pair. Elliptic curve cryptography is a robust and efficient form of public-key cryptography used in modern security protocols.",
+    "**Challenge Text:**",
+    "Given Elliptic Curve y^2 = x^3 + 2x + 3 over F_17, base point G = (6, 3), private key d = 10",
+    "**Instructions:**",
+    "1. Compute the public key corresponding to the given private key.",
+    "2. Validate that the public key lies on the given elliptic curve.",
+    "**Answer:**",
+    "The public key can be computed by multiplying the base point \\( G \\) with the private key \\( d \\):",
+    "Q = d \\cdot G = 10 \\cdot (6, 3) = (15, 13)",
+    "Verify that the point lies on the curve by substituting into the equation:",
+    "y^2 \\equiv x^3 + 2x + 3 \\mod 17",
+    "Substituting \\( x = 15 \\) and \\( y = 13 \\):"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/08_Elliptic_Curve_Key_Pair_Generation.md"
+  ]
+}

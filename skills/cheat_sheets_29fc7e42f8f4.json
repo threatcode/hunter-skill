@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_29fc7e42f8f4",
+  "category": "cheat-sheets",
+  "title": "NMAP cheat sheet",
+  "description": "# NMAP Cheat Sheet\n\nNmap (Network Mapper) is a powerful open-source tool for network discovery and security auditing. It's essential for penetration testing, network inventory, and security assessments.\n\n## \ud83d\udccb Table of Contents\n- [Basic Syntax](#basic-syntax)\n- [Target Specification](#target-specification)\n- [Port Specification](#port-specification)\n- [Port Status](#port-status)\n- [Scan Types](#scan-types)\n- [Host Discovery](#host-discovery)\n- [Timing Options](#timing-options)\n- [Evasion Techniqu",
+  "payloads": [
+    "# NMAP Cheat Sheet",
+    "Nmap (Network Mapper) is a powerful open-source tool for network discovery and security auditing. It's essential for penetration testing, network inventory, and security assessments.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Syntax](#basic-syntax)",
+    "- [Target Specification](#target-specification)",
+    "- [Port Specification](#port-specification)",
+    "- [Port Status](#port-status)",
+    "- [Scan Types](#scan-types)",
+    "- [Host Discovery](#host-discovery)",
+    "- [Timing Options](#timing-options)",
+    "- [Evasion Techniques](#evasion-techniques)",
+    "- [Nmap Scripting Engine (NSE)](#nmap-scripting-engine-nse)",
+    "- [Output Options](#output-options)",
+    "- [Practical Examples](#practical-examples)",
+    "## Basic Syntax"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/NMAP_cheat_sheet.md"
+  ]
+}

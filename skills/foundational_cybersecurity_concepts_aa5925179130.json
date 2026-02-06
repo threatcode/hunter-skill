@@ -1,0 +1,13 @@
+{
+  "id": "foundational_cybersecurity_concepts_aa5925179130",
+  "category": "foundational-cybersecurity-concepts",
+  "title": "cyber laws",
+  "description": "See https://github.com/The-Art-of-Hacking/h4cker/tree/master/regulations\n",
+  "payloads": [
+    "See https://github.com/The-Art-of-Hacking/h4cker/tree/master/regulations"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/foundational-cybersecurity-concepts/cyber_laws.md"
+  ]
+}

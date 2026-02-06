@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_4f9c837f86a0",
+  "category": "linux-hardening",
+  "title": "euid ruid suid",
+  "description": "# euid, ruid, suid\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n### User Identification Variables\n\n- **`ruid`**: The **real user ID** denotes the user who initiated the process.\n- **`euid`**: Known as the **effective user ID**, it represents the user identity utilized by the system to ascertain process privileges. Generally, `euid` mirrors `ruid`, barring instances like a SetUID binary execution, where `euid` assumes the file owner's identity, thus granting specific operational permissio",
+  "payloads": [
+    "# euid, ruid, suid",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "### User Identification Variables",
+    "- **`ruid`**: The **real user ID** denotes the user who initiated the process.",
+    "- **`euid`**: Known as the **effective user ID**, it represents the user identity utilized by the system to ascertain process privileges. Generally, `euid` mirrors `ruid`, barring instances like a SetUID binary execution, where `euid` assumes the file owner's identity, thus granting specific operational permissions.",
+    "- **`suid`**: This **saved user ID** is pivotal when a high-privilege process (typically running as root) needs to temporarily relinquish its privileges to perform certain tasks, only to later reclaim its initial elevated status.",
+    "#### Important Note",
+    "A process not operating under root can only modify its `euid` to match the current `ruid`, `euid`, or `suid`.",
+    "### Understanding set\\*uid Functions",
+    "- **`setuid`**: Contrary to initial assumptions, `setuid` primarily modifies `euid` rather than `ruid`. Specifically, for privileged processes, it aligns `ruid`, `euid`, and `suid` with the specified user, often root, effectively solidifying these IDs due to the overriding `suid`. Detailed insights can be found in the [setuid man page](https://man7.org/linux/man-pages/man2/setuid.2.html).",
+    "- **`setreuid`** and **`setresuid`**: These functions allow for the nuanced adjustment of `ruid`, `euid`, and `suid`. However, their capabilities are contingent on the process's privilege level. For non-root processes, modifications are restricted to the current values of `ruid`, `euid`, and `suid`. In contrast, root processes or those with `CAP_SETUID` capability can assign arbitrary values to these IDs. More information can be gleaned from the [setresuid man page](https://man7.org/linux/man-pages/man2/setresuid.2.html) and the [setreuid man page](https://man7.org/linux/man-pages/man2/setreuid.2.html).",
+    "These functionalities are designed not as a security mechanism but to facilitate the intended operational flow, such as when a program adopts another user's identity by altering its effective user ID.",
+    "Notably, while `setuid` might be a common go-to for privilege elevation to root (since it aligns all IDs to root), differentiating between these functions is crucial for understanding and manipulating user ID behaviors in varying scenarios.",
+    "### Program Execution Mechanisms in Linux",
+    "#### **`execve` System Call**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/euid-ruid-suid.md"
+  ]
+}

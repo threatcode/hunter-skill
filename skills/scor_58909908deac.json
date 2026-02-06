@@ -1,0 +1,21 @@
+{
+  "id": "scor_58909908deac",
+  "category": "SCOR",
+  "title": "RADIUS TACACS DIAMETER",
+  "description": "# RADIUS, TACACS+, and Diameter\n\nThe following is a comparison table for the RADIUS, TACACS+, and Diameter protocols.\n\n| Feature             | RADIUS                             | TACACS+                            | Diameter                          |\n|---------------------|------------------------------------|------------------------------------|-----------------------------------|\n| Transport Protocol  | UDP                                | TCP                                | TCP or SCTP    ",
+  "payloads": [
+    "# RADIUS, TACACS+, and Diameter",
+    "The following is a comparison table for the RADIUS, TACACS+, and Diameter protocols.",
+    "| Feature             | RADIUS                             | TACACS+                            | Diameter                          |",
+    "|---------------------|------------------------------------|------------------------------------|-----------------------------------|",
+    "| Transport Protocol  | UDP                                | TCP                                | TCP or SCTP                        |",
+    "| Encryption          | Only password encryption           | Full packet encryption             | Full packet encryption            |",
+    "| AAA Support         | Combined AAA (Authentication, Authorization, Accounting) | Separate AAA (Authentication, Authorization, and Accounting are distinct) | Combined AAA                      |",
+    "| Usage               | Network access, VPN authentication, etc.     | Device administration              | Mobile IP, SIP, NASREQ            |",
+    "| Standardization     | RFC 2865 & RFC 2866                | Cisco proprietary                  | RFC 6733                           |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/RADIUS_TACACS_DIAMETER.md"
+  ]
+}

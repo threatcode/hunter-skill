@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_69b445e769b9",
+  "category": "generic-hacking",
+  "title": "full ttys",
+  "description": "# Full TTYs\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Full TTY\n\nNote that the shell you set in the `SHELL` variable **must** be **listed inside** _**/etc/shells**_ or `The value for the SHELL variable was not found in the /etc/shells file This incident has been reported`. Also, note that the next snippets only work in bash. If you're in a zsh, change to a bash before obtaining the shell by running `bash`.\n\n#### Python\n\n```bash\npython3 -c 'import pty; pty.spawn(\"/bin/bash\")'\n\n(inside",
+  "payloads": [
+    "# Full TTYs",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Full TTY",
+    "Note that the shell you set in the `SHELL` variable **must** be **listed inside** _**/etc/shells**_ or `The value for the SHELL variable was not found in the /etc/shells file This incident has been reported`. Also, note that the next snippets only work in bash. If you're in a zsh, change to a bash before obtaining the shell by running `bash`.",
+    "#### Python",
+    "```bash",
+    "python3 -c 'import pty; pty.spawn(\"/bin/bash\")'",
+    "(inside the nc session) CTRL+Z;stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;",
+    "> [!TIP]",
+    "> You can get the **number** of **rows** and **columns** executing **`stty -a`**",
+    "#### script",
+    "```bash",
+    "script /dev/null -qc /bin/bash #/dev/null is to not store anything",
+    "(inside the nc session) CTRL+Z;stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;",
+    "#### socat"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/reverse-shells/full-ttys.md"
+  ]
+}

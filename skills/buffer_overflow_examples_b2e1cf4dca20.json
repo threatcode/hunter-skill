@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_b2e1cf4dca20",
+  "category": "buffer-overflow-examples",
+  "title": "shellcode basics",
+  "description": "# Shellcode Basics\n\n## What is Shellcode?\n\n**Shellcode** is a small piece of machine code that is injected into a vulnerable program to execute arbitrary commands. The name comes from its original purpose: spawning a command shell. Today, shellcode can perform any action: download files, create backdoors, escalate privileges, or execute any code.\n\n### Key Characteristics\n\n1. **Position-Independent** - Runs regardless of memory location\n2. **Self-Contained** - No external dependencies\n3. **Compac",
+  "payloads": [
+    "# Shellcode Basics",
+    "## What is Shellcode?",
+    "**Shellcode** is a small piece of machine code that is injected into a vulnerable program to execute arbitrary commands. The name comes from its original purpose: spawning a command shell. Today, shellcode can perform any action: download files, create backdoors, escalate privileges, or execute any code.",
+    "### Key Characteristics",
+    "1. **Position-Independent** - Runs regardless of memory location",
+    "2. **Self-Contained** - No external dependencies",
+    "3. **Compact** - Small size to fit in limited buffers",
+    "4. **Avoids Bad Characters** - Works around input restrictions (null bytes, etc.)",
+    "## How Shellcode Works",
+    "### The Execution Flow",
+    "1. Vulnerability triggered (buffer overflow)",
+    "2. Shellcode injected into memory",
+    "3. Return address overwritten to point to shellcode",
+    "4. Program returns/jumps to shellcode location",
+    "5. Shellcode executes with program's privileges"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/exploitation/shellcode-basics.md"
+  ]
+}

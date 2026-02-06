@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a8fc60dfc6ee",
+  "category": "generic-methodologies-and-resources",
+  "title": "ai agent mode phishing abusing hosted agent browsers",
+  "description": "# AI Agent Mode Phishing: Abusing Hosted Agent Browsers (AI\u2011in\u2011the\u2011Middle)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nMany commercial AI assistants now offer an \"agent mode\" that can autonomously browse the web in a cloud-hosted, isolated browser. When a login is required, built-in guardrails typically prevent the agent from entering credentials and instead prompt the human to Take over Browser and authenticate inside the agent\u2019s hosted session.\n\nAdversaries can abuse this ",
+  "payloads": [
+    "# AI Agent Mode Phishing: Abusing Hosted Agent Browsers (AI\u2011in\u2011the\u2011Middle)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Many commercial AI assistants now offer an \"agent mode\" that can autonomously browse the web in a cloud-hosted, isolated browser. When a login is required, built-in guardrails typically prevent the agent from entering credentials and instead prompt the human to Take over Browser and authenticate inside the agent\u2019s hosted session.",
+    "Adversaries can abuse this human handoff to phish credentials inside the trusted AI workflow. By seeding a shared prompt that rebrands an attacker-controlled site as the organisation\u2019s portal, the agent opens the page in its hosted browser, then asks the user to take over and sign in \u2014 resulting in credential capture on the adversary site, with traffic originating from the agent vendor\u2019s infrastructure (off-endpoint, off-network).",
+    "Key properties exploited:",
+    "- Trust transference from the assistant UI to the in-agent browser.",
+    "- Policy-compliant phish: the agent never types the password, but still ushers the user to do it.",
+    "- Hosted egress and a stable browser fingerprint (often Cloudflare or vendor ASN; example UA observed: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36).",
+    "## Attack Flow (AI\u2011in\u2011the\u2011Middle via Shared Prompt)",
+    "1) Delivery: Victim opens a shared prompt in agent mode (e.g., ChatGPT/other agentic assistant).",
+    "2) Navigation: The agent browses to an attacker domain with valid TLS that is framed as the \u201cofficial IT portal.\u201d",
+    "3) Handoff: Guardrails trigger a Take over Browser control; the agent instructs the user to authenticate.",
+    "4) Capture: The victim enters credentials into the phishing page inside the hosted browser; credentials are exfiltrated to attacker infra.",
+    "5) Identity telemetry: From the IDP/app perspective, the sign-in originates from the agent\u2019s hosted environment (cloud egress IP and a stable UA/device fingerprint), not the victim\u2019s usual device/network."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/ai-agent-mode-phishing-abusing-hosted-agent-browsers.md"
+  ]
+}

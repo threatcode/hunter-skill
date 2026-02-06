@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_26e1b3368ca3",
+  "category": "generic-methodologies-and-resources",
+  "title": "usb keystrokes",
+  "description": "# USB Keystrokes\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nIf you have a pcap containing the communication via USB of a keyboard like the following one:\n\n![](<../../../images/image (962).png>)\n\nUSB keyboards usually speak the HID **boot protocol**, so every interrupt transfer towards the host is only 8 bytes long: one byte of modifier bits (Ctrl/Shift/Alt/Super), one reserved byte, and up to six keycodes per report. Decoding those bytes is enough to rebuild everything that was typed",
+  "payloads": [
+    "# USB Keystrokes",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "If you have a pcap containing the communication via USB of a keyboard like the following one:",
+    "![](<../../../images/image (962).png>)",
+    "USB keyboards usually speak the HID **boot protocol**, so every interrupt transfer towards the host is only 8 bytes long: one byte of modifier bits (Ctrl/Shift/Alt/Super), one reserved byte, and up to six keycodes per report. Decoding those bytes is enough to rebuild everything that was typed.",
+    "## USB HID report basics",
+    "The typical IN report looks like:",
+    "| Byte | Meaning |",
+    "| --- | --- |",
+    "| 0 | Modifier bitmap (`0x02` = Left Shift, `0x20` = Right Alt, etc.). Multiple bits can be set simultaneously. |",
+    "| 1 | Reserved/padding but often reused by gaming keyboards for vendor data. |",
+    "| 2-7 | Up to six concurrent keycodes in USB usage ID format (`0x04 = a`, `0x1E = 1`). `0x00` means \"no key\". |",
+    "Keyboards without NKRO usually send `0x01` in byte 2 when more than six keys are pressed to signal \"rollover\". Understanding this layout helps when you only have the raw `usb.capdata` bytes.",
+    "## Extracting HID data from a PCAP",
+    "### Wireshark workflow"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/usb-keystrokes.md"
+  ]
+}

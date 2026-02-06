@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-18b26b4b046a",
+  "category": "Methodology and Resources",
+  "title": "Windows   Privilege Escalation",
+  "description": "# Windows - Privilege Escalation\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/escalation/windows-privilege-escalation](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#tools)\n- [Windows Version and Configuration](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-e",
+  "payloads": [
+    "# Windows - Privilege Escalation",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/escalation/windows-privilege-escalation](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#tools)",
+    "- [Windows Version and Configuration](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#windows-version-and-configuration)",
+    "- [User Enumeration](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#user-enumeration)",
+    "- [Network Enumeration](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#network-enumeration)",
+    "- [Antivirus Enumeration](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#antivirus-enumeration)",
+    "- [Default Writeable Folders](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#default-writeable-folders)",
+    "- [EoP - Looting for passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#eop---looting-for-passwords)",
+    "- [SAM and SYSTEM files](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#sam-and-system-files)",
+    "- [HiveNightmare](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#hivenightmare)",
+    "- [LAPS Settings](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#laps-settings)",
+    "- [Search for file contents](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#search-for-file-contents)",
+    "- [Search for a file with a certain filename](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#search-for-a-file-with-a-certain-filename)",
+    "- [Search the registry for key names and passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#search-the-registry-for-key-names-and-passwords)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Windows - Privilege Escalation.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_b12fdbd02362",
+  "category": "generic-methodologies-and-resources",
+  "title": "volatility cheatsheet",
+  "description": "# Volatility - CheatSheet\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\u200b\n\n\nIf you need a tool that automates memory analysis with different scan levels and runs multiple Volatility3 plugins in parallel, you can use autoVolatility3:: [https://github.com/H3xKatana/autoVolatility3/](https://github.com/H3xKatana/autoVolatility3/)\n\n```bash\n# Full scan (runs all plugins)\npython3 autovol3.py -f MEMFILE -o OUT_DIR -s full\n\n# Minimal scan (runs a limited set of plugins)\npython3 autovol3.py -f M",
+  "payloads": [
+    "# Volatility - CheatSheet",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "If you need a tool that automates memory analysis with different scan levels and runs multiple Volatility3 plugins in parallel, you can use autoVolatility3:: [https://github.com/H3xKatana/autoVolatility3/](https://github.com/H3xKatana/autoVolatility3/)",
+    "```bash",
+    "# Full scan (runs all plugins)",
+    "python3 autovol3.py -f MEMFILE -o OUT_DIR -s full",
+    "# Minimal scan (runs a limited set of plugins)",
+    "python3 autovol3.py -f MEMFILE -o OUT_DIR -s minimal",
+    "# Normal scan (runs a balanced set of plugins)",
+    "python3 autovol3.py -f MEMFILE -o OUT_DIR -s normal",
+    "If you want something **fast and crazy** that will launch several Volatility plugins on parallel you can use: [https://github.com/carlospolop/autoVolatility](https://github.com/carlospolop/autoVolatility)",
+    "```bash",
+    "python autoVolatility.py -f MEMFILE -d OUT_DIRECTORY -e /home/user/tools/volatility/vol.py # It will use the most important plugins (could use a lot of space depending on the size of the memory)",
+    "## Installation",
+    "### volatility3"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet.md"
+  ]
+}

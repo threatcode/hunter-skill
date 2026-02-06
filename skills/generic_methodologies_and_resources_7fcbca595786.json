@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_7fcbca595786",
+  "category": "generic-methodologies-and-resources",
+  "title": "structural file format exploit detection",
+  "description": "# Structural File\u2011Format Exploit Detection (0\u2011Click Chains)\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nThis page summarizes practical techniques to detect 0\u2011click mobile exploit files by validating structural invariants of their formats instead of relying on byte signatures. The approach generalizes across samples, polymorphic variants, and future exploits that abuse the same parser logic.\n\nKey idea: encode structural impossibilities and cross\u2011field inconsistencies that only appear w",
+  "payloads": [
+    "# Structural File\u2011Format Exploit Detection (0\u2011Click Chains)",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "This page summarizes practical techniques to detect 0\u2011click mobile exploit files by validating structural invariants of their formats instead of relying on byte signatures. The approach generalizes across samples, polymorphic variants, and future exploits that abuse the same parser logic.",
+    "Key idea: encode structural impossibilities and cross\u2011field inconsistencies that only appear when a vulnerable decoder/parser state is reached.",
+    "See also:",
+    "{{#ref}}",
+    "pdf-file-analysis.md",
+    "{{#endref}}",
+    "## Why structure, not signatures",
+    "When weaponized samples are unavailable and payload bytes mutate, traditional IOC/YARA patterns fail. Structural detection inspects the container\u2019s declared layout versus what is mathematically or semantically possible for the format implementation.",
+    "Typical checks:",
+    "- Validate table sizes and bounds derived from the spec and safe implementations",
+    "- Flag illegal/undocumented opcodes or state transitions in embedded bytecode",
+    "- Cross\u2011check metadata VS actual encoded stream components",
+    "- Detect contradictory fields that indicate parser confusion or integer overflow set\u2011ups"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/structural-file-format-exploit-detection.md"
+  ]
+}

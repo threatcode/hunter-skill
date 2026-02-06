@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_ea63433f8f77",
+  "category": "windows-hardening",
+  "title": "acls dacls sacls aces",
+  "description": "# ACLs - DACLs/SACLs/ACEs\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## **Access Control List (ACL)**\n\nAn Access Control List (ACL) consists of an ordered set of Access Control Entries (ACEs) that dictate the protections for an object and its properties. In essence, an ACL defines which actions by which security principals (users or groups) are permitted or denied on a given object.\n\nThere are two types of ACLs:\n\n- **Discretionary Access Control List (DACL):** Specifies which users and ",
+  "payloads": [
+    "# ACLs - DACLs/SACLs/ACEs",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## **Access Control List (ACL)**",
+    "An Access Control List (ACL) consists of an ordered set of Access Control Entries (ACEs) that dictate the protections for an object and its properties. In essence, an ACL defines which actions by which security principals (users or groups) are permitted or denied on a given object.",
+    "There are two types of ACLs:",
+    "- **Discretionary Access Control List (DACL):** Specifies which users and groups have or do not have access to an object.",
+    "- **System Access Control List (SACL):** Governs the auditing of access attempts to an object.",
+    "The process of accessing a file involves the system checking the object's security descriptor against the user's access token to determine if access should be granted and the extent of that access, based on the ACEs.",
+    "### **Key Components**",
+    "- **DACL:** Contains ACEs that grant or deny access permissions to users and groups for an object. It's essentially the main ACL that dictates access rights.",
+    "- **SACL:** Used for auditing access to objects, where ACEs define the types of access to be logged in the Security Event Log. This can be invaluable for detecting unauthorized access attempts or troubleshooting access issues.",
+    "### **System Interaction with ACLs**",
+    "Each user session is associated with an access token that contains security information relevant to that session, including user, group identities, and privileges. This token also includes a logon SID that uniquely identifies the session.",
+    "The Local Security Authority (LSASS) processes access requests to objects by examining the DACL for ACEs that match the security principal attempting access. Access is immediately granted if no relevant ACEs are found. Otherwise, LSASS compares the ACEs against the security principal's SID in the access token to determine access eligibility.",
+    "### **Summarized Process**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/acls-dacls-sacls-aces.md"
+  ]
+}

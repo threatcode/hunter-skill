@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_7688c0ad19e9",
+  "category": "linux-hardening",
+  "title": "escaping from limited bash",
+  "description": "# Escaping from Jails\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## **GTFOBins**\n\n**Search in** [**https://gtfobins.github.io/**](https://gtfobins.github.io) **if you can execute any binary with \"Shell\" property**\n\n## Chroot Escapes\n\nFrom [wikipedia](https://en.wikipedia.org/wiki/Chroot#Limitations): The chroot mechanism is **not intended to defend** against intentional tampering by **privileged** (**root**) **users**. On most systems, chroot contexts do not stack properly and chrooted ",
+  "payloads": [
+    "# Escaping from Jails",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## **GTFOBins**",
+    "**Search in** [**https://gtfobins.github.io/**](https://gtfobins.github.io) **if you can execute any binary with \"Shell\" property**",
+    "## Chroot Escapes",
+    "From [wikipedia](https://en.wikipedia.org/wiki/Chroot#Limitations): The chroot mechanism is **not intended to defend** against intentional tampering by **privileged** (**root**) **users**. On most systems, chroot contexts do not stack properly and chrooted programs **with sufficient privileges may perform a second chroot to break out**.\\",
+    "Usually this means that to escape you need to be root inside the chroot.",
+    "> [!TIP]",
+    "> The **tool** [**chw00t**](https://github.com/earthquake/chw00t) was created to abuse the following escenarios and scape from `chroot`.",
+    "### Root + CWD",
+    "> [!WARNING]",
+    "> If you are **root** inside a chroot you **can escape** creating **another chroot**. This because 2 chroots cannot coexists (in Linux), so if you create a folder and then **create a new chroot** on that new folder being **you outside of it**, you will now be **outside of the new chroot** and therefore you will be in the FS.",
+    "> This occurs because usually chroot DOESN'T move your working directory to the indicated one, so you can create a chroot but e outside of it.",
+    "Usually you won't find the `chroot` binary inside a chroot jail, but you **could compile, upload and execute** a binary:",
+    "<details>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/escaping-from-limited-bash.md"
+  ]
+}

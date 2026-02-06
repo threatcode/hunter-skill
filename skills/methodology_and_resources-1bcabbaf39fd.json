@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-1bcabbaf39fd",
+  "category": "Methodology and Resources",
+  "title": "Active Directory Attack",
+  "description": "# Active Directory Attacks\n\n:warning: Content of this page has been moved to [InternalAllTheThings/active-directory](https://github.com/swisskyrepo/InternalAllTheThings/)\n\n- [Active Directory - Certificate Services](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adcs-certificate-services/)\n- [Active Directory - Access Controls ACL/ACE](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-acl-ace/)\n- [Active Directory - Enumeration](https://swisskyre",
+  "payloads": [
+    "# Active Directory Attacks",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/active-directory](https://github.com/swisskyrepo/InternalAllTheThings/)",
+    "- [Active Directory - Certificate Services](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adcs-certificate-services/)",
+    "- [Active Directory - Access Controls ACL/ACE](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-acl-ace/)",
+    "- [Active Directory - Enumeration](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-enumerate/)",
+    "- [Active Directory - Group Policy Objects](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-group-policy-objects/)",
+    "- [Active Directory - Groups](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-groups/)",
+    "- [Active Directory - Linux](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-linux/)",
+    "- [Active Directory - NTDS Dumping](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-ntds-dumping/)",
+    "- [Active Directory - Read Only Domain Controller](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-rodc/)",
+    "- [Active Directory - Federation Services](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adfs-federation-services/)",
+    "- [Active Directory - Integrated DNS - ADIDNS](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-integrated-dns/)",
+    "- [Roasting - ASREP Roasting](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-roasting-asrep/)",
+    "- [Roasting - Kerberoasting](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-roasting-kerberoasting/)",
+    "- [Roasting - Timeroasting](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-roasting-timeroasting/)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Active Directory Attack.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_c5518f7bceb5",
+  "category": "temp",
+  "title": "virtual adapters",
+  "description": "# Using Kernel Modules to Simulate Wireless Adapters to Practice Pen Testing\n\nYou can use mac80211_hwsim is a software simulator of 802.11 radio(s) for mac80211 in Kali Linux and other penetration testing distributions like Parrot.\n\n[mac80211_hwsim](https://wireless.wiki.kernel.org/en/users/drivers/mac80211_hwsim) kernel module has a parameter 'radios' that can be used to select how many radios are simulated (default 2). This allows configuration of both very simply setups (e.g., just a single a",
+  "payloads": [
+    "# Using Kernel Modules to Simulate Wireless Adapters to Practice Pen Testing",
+    "You can use mac80211_hwsim is a software simulator of 802.11 radio(s) for mac80211 in Kali Linux and other penetration testing distributions like Parrot.",
+    "[mac80211_hwsim](https://wireless.wiki.kernel.org/en/users/drivers/mac80211_hwsim) kernel module has a parameter 'radios' that can be used to select how many radios are simulated (default 2). This allows configuration of both very simply setups (e.g., just a single access point and a station) or large scale tests (multiple access points with hundreds of stations).",
+    "The following site provides a description:",
+    "- https://wireless.wiki.kernel.org/en/users/drivers/mac80211_hwsim",
+    "## Starting the Kernel Module in Kali",
+    "In my Kali Linux box, I have only one active interface (eth0).",
+    "root@kali:~# ip -brie a",
+    "lo               UNKNOWN        127.0.0.1/8 ::1/128",
+    "eth0             UP             172.16.217.170/24 fe80::20c:29ff:fe3c:82b0/64",
+    "I am starting the simulator kernel module with the `modprobe mac80211_hwsim` command:",
+    "root@kali:~# modprobe mac80211_hwsim radios 8",
+    "After starting the module, the wireless interfaces are shown:",
+    "root@kali:~# ip -brie a",
+    "lo               UNKNOWN        127.0.0.1/8 ::1/128"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Wireless_Attacks/wireless_resources/virtual_adapters.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "insecure_deserialization-5dbf3059922b",
+  "category": "Insecure Deserialization",
+  "title": "Node",
+  "description": "# Node Deserialization\n\n> Node.js deserialization refers to the process of reconstructing JavaScript objects from a serialized format, such as JSON, BSON, or other formats that represent structured data. In Node.js applications, serialization and deserialization are commonly used for data storage, caching, and inter-process communication.\n\n## Summary\n\n* [Methodology](#methodology)\n    * [node-serialize](#node-serialize)\n    * [funcster](#funcster)\n* [References](#references)\n\n## Methodology\n\n* I",
+  "payloads": [
+    "# Node Deserialization",
+    "> Node.js deserialization refers to the process of reconstructing JavaScript objects from a serialized format, such as JSON, BSON, or other formats that represent structured data. In Node.js applications, serialization and deserialization are commonly used for data storage, caching, and inter-process communication.",
+    "## Summary",
+    "* [Methodology](#methodology)",
+    "* [node-serialize](#node-serialize)",
+    "* [funcster](#funcster)",
+    "* [References](#references)",
+    "## Methodology",
+    "* In Node source code, look for:",
+    "* `node-serialize`",
+    "* `serialize-to-js`",
+    "* `funcster`",
+    "### node-serialize",
+    "> An issue was discovered in the node-serialize package 0.0.4 for Node.js. Untrusted data passed into the `unserialize()` function can be exploited to achieve arbitrary code execution by passing a JavaScript Object with an Immediately Invoked Function Expression (IIFE).",
+    "1. Generate a serialized payload"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/Node.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_a485e5cf4e0e",
+  "category": "temp",
+  "title": "arm",
+  "description": "# ARM Architecture Resources\nThe following are a few good resources that can help you become familiar with the ARM architecure and exploitation of ARM-based vulnerabilities. \n\n\n## Tutorials and Articles\n* [ARM Assembly Basics Series](https://azeria-labs.com/writing-arm-assembly-part-1/) - Azeria\n* [ARM Binary Exploitation Series](https://azeria-labs.com/writing-arm-shellcode/) - Azeria\n* [Smashing the ARM Stack](https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1) - Mercked Securi",
+  "payloads": [
+    "# ARM Architecture Resources",
+    "The following are a few good resources that can help you become familiar with the ARM architecure and exploitation of ARM-based vulnerabilities.",
+    "## Tutorials and Articles",
+    "* [ARM Assembly Basics Series](https://azeria-labs.com/writing-arm-assembly-part-1/) - Azeria",
+    "* [ARM Binary Exploitation Series](https://azeria-labs.com/writing-arm-shellcode/) - Azeria",
+    "* [Smashing the ARM Stack](https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1) - Mercked Security",
+    "* [Introduction to ARMv8 64-bit Architecture](https://quequero.org/2014/04/introduction-to-arm-architecture/) - pnuic",
+    "* [Alphanumeric RISC ARM Shellcode](http://phrack.org/issues/66/12.html) - (Phrack) - Yves Younan, Pieter Philippaerts",
+    "* [Return-Oriented Programming on a Cortex-M Processor](https://ieeexplore.ieee.org/document/8029521)",
+    "* [3or ARM Exploitation Series](https://blog.3or.de/arm-exploitation-return-oriented-programming.html) - Dimitrios Slamaris",
+    "* [Developing StrongARM/Linux Shellcode](http://www.phrack.com/issues/58/10.html) - (Phrack) - funkysh",
+    "* [Reversing and Exploiting ARM Binaries](http://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html) - Mathy Vanhoef",
+    "* [ARM Exploitation for IoT Series](https://quequero.org/2017/07/arm-exploitation-iot-episode-1/) - Andrea Sindoni",
+    "* [Reverse Engineering of ARM Microcontrollers](https://rdomanski.github.io/Reverse-engineering-of-ARM-Microcontrollers/) - Rdomanski",
+    "* [ARM64 Reversing and Exploitation Part 1 - ARM Instruction Set + Simple Heap Overflow"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Vulnerability_Discovery_and_Analysis/Analyzing_Results/buffer_overflow_example/arm.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "todo_3764ec72216b",
+  "category": "todo",
+  "title": "i2c",
+  "description": "# I2C\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Bus Pirate\n\nTo test a Bus Pirate is working, connect +5V with VPU and 3.3V with ADC and access the bus pirate (Using Tera Term for example) and use the command `~`:\n\n```bash\n# Use command\nHiZ>~\nDisconnect any devices\nConnect (Vpu to +5V) and (ADC to +3.3V)\nSpace to continue\n# Press space\nCtrl\nAUX OK\nMODE LED OK\nPULLUP H OK\nPULLUP L OK\nVREG OK\nADC and supply\n5V(4.96) OK\nVPU(4.96) OK\n3.3V(3.26) OK\nADC(3.27) OK\nBus high\nMOSI OK\nCLK OK\nMIS",
+  "payloads": [
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Bus Pirate",
+    "To test a Bus Pirate is working, connect +5V with VPU and 3.3V with ADC and access the bus pirate (Using Tera Term for example) and use the command `~`:",
+    "```bash",
+    "# Use command",
+    "Disconnect any devices",
+    "Connect (Vpu to +5V) and (ADC to +3.3V)",
+    "Space to continue",
+    "# Press space",
+    "AUX OK",
+    "MODE LED OK",
+    "PULLUP H OK",
+    "PULLUP L OK",
+    "VREG OK",
+    "ADC and supply"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/hardware-hacking/i2c.md"
+  ]
+}

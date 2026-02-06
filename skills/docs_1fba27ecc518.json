@@ -1,0 +1,27 @@
+{
+  "id": "docs_1fba27ecc518",
+  "category": "docs",
+  "title": "TROUBLESHOOTING",
+  "description": "# Troubleshooting Guide\n\nThis document describes common edge-cases and workarounds for checking links to various sites. \\\nPlease add your own findings and send us a pull request if you can.\n\n## GitHub Rate Limiting\n\nGitHub has a quite aggressive rate limiter. \\\nIf you're seeing errors like:\n\n```\nGitHub token not specified. To check GitHub links reliably, use `--github-token` flag / `GITHUB_TOKEN` env var.\n```\n\nThat means you're getting rate-limited. As per the message, you can make lychee \\\nuse ",
+  "payloads": [
+    "# Troubleshooting Guide",
+    "This document describes common edge-cases and workarounds for checking links to various sites. \\",
+    "Please add your own findings and send us a pull request if you can.",
+    "## GitHub Rate Limiting",
+    "GitHub has a quite aggressive rate limiter. \\",
+    "If you're seeing errors like:",
+    "GitHub token not specified. To check GitHub links reliably, use `--github-token` flag / `GITHUB_TOKEN` env var.",
+    "That means you're getting rate-limited. As per the message, you can make lychee \\",
+    "use a GitHub personal access token to circumvent this.",
+    "For more details, see [\"GitHub token\" section in README.md](https://github.com/lycheeverse/lychee#github-token).",
+    "## Too Many Open Files",
+    "The number of concurrent network requests (`MAX_CONCURRENCY`) is set to 128 by default.",
+    "Every network request maps to an open socket, which is represented as a file on UNIX systems.",
+    "If you see error messages like \"error trying to connect: tcp open error: Too",
+    "many open files (os error 24)\" then you ran out of file handles."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/docs/TROUBLESHOOTING.md"
+  ]
+}

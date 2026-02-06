@@ -1,0 +1,27 @@
+{
+  "id": "web_application_testing_323cbaeb9161",
+  "category": "web-application-testing",
+  "title": "docker references",
+  "description": "# Docker References\n\n## The most amazing (#awesome) list of Docker-related resources!!\n\n* https://awesome-docker.netlify.com/\n\n## Container Networking\n\n- [Calico-Docker](https://www.projectcalico.org/getting-started/docker/) - Calico is a pure layer 3 virtual network that allows containers over multiple docker-hosts to talk to each other.\n- [Flannel](https://github.com/coreos/flannel/) - Flannel is a virtual network that gives a subnet to each host for use with container runtimes. By [@coreos][c",
+  "payloads": [
+    "# Docker References",
+    "## The most amazing (#awesome) list of Docker-related resources!!",
+    "* https://awesome-docker.netlify.com/",
+    "## Container Networking",
+    "- [Calico-Docker](https://www.projectcalico.org/getting-started/docker/) - Calico is a pure layer 3 virtual network that allows containers over multiple docker-hosts to talk to each other.",
+    "- [Flannel](https://github.com/coreos/flannel/) - Flannel is a virtual network that gives a subnet to each host for use with container runtimes. By [@coreos][coreos]",
+    "- [netshoot](https://github.com/nicolaka/netshoot) - The netshoot container has a powerful set of networking tools to help troubleshoot Docker networking issues by [@nicolaka](https://github.com/nicolaka)",
+    "- [Weave][weave] (The Docker network) - Weave creates a virtual network that connects Docker containers deployed across multiple hosts.",
+    "## Container Orchestration",
+    "- [athena](https://github.com/athena-oss/athena) - An automation platform with a plugin architecture that allows you to easily create and share services.",
+    "- [CloudSlang](https://github.com/CloudSlang/cloud-slang) - CloudSlang is a workflow engine to create Docker process automation",
+    "- [clusterdock](https://github.com/clusterdock/clusterdock) - Docker container orchestration to enable the testing of long-running cluster deployments",
+    "- [ContainerShip](https://github.com/containership/containership) A simple container management platform",
+    "- [Crane](https://github.com/Dataman-Cloud/crane) - Control plane based on docker built-in swarm [@Dataman-Cloud](https://github.com/Dataman-Cloud)",
+    "- [Docker Flow Swarm Listener](https://github.com/vfarcic/docker-flow-swarm-listener) - Docker Flow Swarm Listener project is to listen to Docker Swarm events and send requests when a change occurs. By [@vfarcic][vfarcic]"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/web-application-testing/docker_references.md"
+  ]
+}

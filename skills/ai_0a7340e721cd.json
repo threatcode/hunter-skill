@@ -1,0 +1,27 @@
+{
+  "id": "ai_0a7340e721cd",
+  "category": "AI",
+  "title": "AI Reinforcement Learning Algorithms",
+  "description": "# Reinforcement Learning Algorithms\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Reinforcement Learning\n\nReinforcement learning (RL) is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives feedback in the form of rewards or penalties based on its actions, allowing it to learn optimal behaviors over time. RL is particularly useful for problems where the solution involves sequential decision-making, such as robotics, game ",
+  "payloads": [
+    "# Reinforcement Learning Algorithms",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Reinforcement Learning",
+    "Reinforcement learning (RL) is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives feedback in the form of rewards or penalties based on its actions, allowing it to learn optimal behaviors over time. RL is particularly useful for problems where the solution involves sequential decision-making, such as robotics, game playing, and autonomous systems.",
+    "### Q-Learning",
+    "Q-Learning is a model-free reinforcement learning algorithm that learns the value of actions in a given state. It uses a Q-table to store the expected utility of taking a specific action in a specific state. The algorithm updates the Q-values based on the rewards received and the maximum expected future rewards.",
+    "1. **Initialization**: Initialize the Q-table with arbitrary values (often zeros).",
+    "2. **Action Selection**: Choose an action using an exploration strategy (e.g., \u03b5-greedy, where with probability \u03b5 a random action is chosen, and with probability 1-\u03b5 the action with the highest Q-value is selected).",
+    "- Note that the algorithm could always chose the known best action given a state, but this would not allow the agent to explore new actions that might yield better rewards. That's why the \u03b5-greedy variable is used to balance exploration and exploitation.",
+    "3. **Environment Interaction**: Execute the chosen action in the environment, observe the next state and reward.",
+    "- Note that depending in this case on the \u03b5-greedy probability, the next step might be a random action (for exploration) or the best known action (for exploitation).",
+    "4. **Q-Value Update**: Update the Q-value for the state-action pair using the Bellman equation:",
+    "```plaintext",
+    "Q(s, a) = Q(s, a) + \u03b1 * (r + \u03b3 * max(Q(s', a')) - Q(s, a))",
+    "where:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Reinforcement-Learning-Algorithms.md"
+  ]
+}

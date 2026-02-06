@@ -1,0 +1,27 @@
+{
+  "id": "hardware_physical_access_1658fe922866",
+  "category": "hardware-physical-access",
+  "title": "bootloader testing",
+  "description": "# Bootloader Testing\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThe following steps are recommended for modifying device startup configurations and testing bootloaders such as U-Boot and UEFI-class loaders. Focus on getting early code execution, assessing signature/rollback protections, and abusing recovery or network-boot paths.\n\nRelated: MediaTek secure-boot bypass via bl2_ext patching:\n\n{{#ref}}\nandroid-mediatek-secure-boot-bl2_ext-bypass-el3.md\n{{#endref}}\n\n## U-Boot quick wins and ",
+  "payloads": [
+    "# Bootloader Testing",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "The following steps are recommended for modifying device startup configurations and testing bootloaders such as U-Boot and UEFI-class loaders. Focus on getting early code execution, assessing signature/rollback protections, and abusing recovery or network-boot paths.",
+    "Related: MediaTek secure-boot bypass via bl2_ext patching:",
+    "{{#ref}}",
+    "android-mediatek-secure-boot-bl2_ext-bypass-el3.md",
+    "{{#endref}}",
+    "## U-Boot quick wins and environment abuse",
+    "1. Access the interpreter shell",
+    "- During boot, hit a known break key (often any key, 0, space, or a board-specific \"magic\" sequence) before `bootcmd` executes to drop to the U-Boot prompt.",
+    "2. Inspect boot state and variables",
+    "- Useful commands:",
+    "- `printenv` (dump environment)",
+    "- `bdinfo` (board info, memory addresses)",
+    "- `help bootm; help booti; help bootz` (supported kernel boot methods)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/hardware-physical-access/firmware-analysis/bootloader-testing.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "docker_and_k8s_security_c9e28803a452",
+  "category": "docker-and-k8s-security",
+  "title": "seccomp",
+  "description": "# SECCOMP\nTo use seccomp (Secure Computing Mode) with Docker, you can follow these steps:\n\n1. Enable seccomp in the Docker daemon:\n   - Open the Docker daemon configuration file, typically located at `/etc/docker/daemon.json`.\n   - Add the following configuration to enable seccomp:\n     ```json\n     {\n       \"seccomp-profiles\": [\n         {\n           \"name\": \"default\",\n           \"path\": \"/path/to/seccomp/profile.json\"\n         }\n       ]\n     }\n     ```\n     Replace `/path/to/seccomp/profile.j",
+  "payloads": [
+    "# SECCOMP",
+    "To use seccomp (Secure Computing Mode) with Docker, you can follow these steps:",
+    "1. Enable seccomp in the Docker daemon:",
+    "- Open the Docker daemon configuration file, typically located at `/etc/docker/daemon.json`.",
+    "- Add the following configuration to enable seccomp:",
+    "```json",
+    "\"seccomp-profiles\": [",
+    "\"name\": \"default\",",
+    "\"path\": \"/path/to/seccomp/profile.json\"",
+    "Replace `/path/to/seccomp/profile.json` with the actual path to your seccomp profile JSON file.",
+    "- Save the configuration file and restart the Docker daemon to apply the changes.",
+    "2. Create a seccomp profile JSON file:",
+    "- Create a JSON file that defines the seccomp profile for your Docker containers. This file specifies the system calls that are allowed or denied within the container.",
+    "- You can create your own custom seccomp profile or use an existing profile as a starting point. There are various sources available for seccomp profiles, such as the Docker seccomp repository on GitHub, which provides pre-defined profiles for common use cases.",
+    "- Define the desired system calls and their corresponding actions (allow or deny) in the JSON file."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/docker-and-k8s-security/docker/seccomp.md"
+  ]
+}

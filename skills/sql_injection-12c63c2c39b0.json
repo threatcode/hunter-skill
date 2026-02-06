@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-12c63c2c39b0",
+  "category": "SQL Injection",
+  "title": "OracleSQL Injection",
+  "description": "# Oracle SQL Injection\n\n> Oracle SQL Injection  is a type of security vulnerability that arises when attackers can insert or \"inject\" malicious SQL code into SQL queries executed by Oracle Database. This can occur when user inputs are not properly sanitized or parameterized, allowing attackers to manipulate the query logic. This can lead to unauthorized access, data manipulation, and other severe security implications.\n\n## Summary\n\n* [Oracle SQL Default Databases](#oracle-sql-default-databases)\n",
+  "payloads": [
+    "# Oracle SQL Injection",
+    "> Oracle SQL Injection  is a type of security vulnerability that arises when attackers can insert or \"inject\" malicious SQL code into SQL queries executed by Oracle Database. This can occur when user inputs are not properly sanitized or parameterized, allowing attackers to manipulate the query logic. This can lead to unauthorized access, data manipulation, and other severe security implications.",
+    "## Summary",
+    "* [Oracle SQL Default Databases](#oracle-sql-default-databases)",
+    "* [Oracle SQL Comments](#oracle-sql-comments)",
+    "* [Oracle SQL Enumeration](#oracle-sql-enumeration)",
+    "* [Oracle SQL Database Credentials](#oracle-sql-database-credentials)",
+    "* [Oracle SQL Methodology](#oracle-sql-methodology)",
+    "* [Oracle SQL List Databases](#oracle-sql-list-databases)",
+    "* [Oracle SQL List Tables](#oracle-sql-list-tables)",
+    "* [Oracle SQL List Columns](#oracle-sql-list-columns)",
+    "* [Oracle SQL Error Based](#oracle-sql-error-based)",
+    "* [Oracle SQL Blind](#oracle-sql-blind)",
+    "* [Oracle Blind With Substring Equivalent](#oracle-blind-with-substring-equivalent)",
+    "* [Oracle SQL Time Based](#oracle-sql-time-based)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/OracleSQL Injection.md"
+  ]
+}

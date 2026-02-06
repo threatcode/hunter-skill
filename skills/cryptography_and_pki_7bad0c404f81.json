@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_7bad0c404f81",
+  "category": "cryptography-and-pki",
+  "title": "crypto algorithms",
+  "description": "# Cryptographic Algorithms (2025 Edition)\n\nThis section summarizes current and emerging cryptographic standards, their quantum resistance, and migration guidance for modern security.\n\n## Current Standards\n\n### Public Key Encryption & Key Exchange\n\n| Algorithm           | Status                    | Post-Quantum Ready |\n|---------------------|---------------------------|--------------------|\n| RSA                 | Deprecated: quantum-vulnerable | No                |\n| ECC/ECDSA           | Depre",
+  "payloads": [
+    "# Cryptographic Algorithms (2025 Edition)",
+    "This section summarizes current and emerging cryptographic standards, their quantum resistance, and migration guidance for modern security.",
+    "## Current Standards",
+    "### Public Key Encryption & Key Exchange",
+    "| Algorithm           | Status                    | Post-Quantum Ready |",
+    "|---------------------|---------------------------|--------------------|",
+    "| RSA                 | Deprecated: quantum-vulnerable | No                |",
+    "| ECC/ECDSA           | Deprecated: quantum-vulnerable | No                |",
+    "| Diffie-Hellman      | Deprecated: quantum-vulnerable | No                |",
+    "| ML-KEM (CRYSTALS-Kyber) | Approved (FIPS 203)    | Yes               |",
+    "| HQC (Hamming Quasi-Cyclic) | Selected (2025)      | Yes               |",
+    "### Digital Signatures",
+    "| Algorithm           | Status                    | Post-Quantum Ready |",
+    "|---------------------|--------------------------|--------------------|",
+    "| RSA Signatures      | Deprecated: quantum-vulnerable | No            |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/crypto_algorithms.md"
+  ]
+}

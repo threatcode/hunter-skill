@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_74636a72aa04",
+  "category": "macos-hardening",
+  "title": "macos useful commands",
+  "description": "# macOS Useful Commands\n\n{{#include ../banners/hacktricks-training.md}}\n\n### MacOS Automatic Enumeration Tools\n\n- **MacPEAS**: [https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)\n- **Metasploit**: [https://github.com/rapid7/metasploit-framework/blob/master/modules/post/osx/gather/enum_osx.rb](https://github.com/rapid7/metasploit-framework/blob/master/modules/post/osx/gather/enum_osx.rb)\n- **SwiftBelt**: [https://github.com/ce",
+  "payloads": [
+    "# macOS Useful Commands",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "### MacOS Automatic Enumeration Tools",
+    "- **MacPEAS**: [https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)",
+    "- **Metasploit**: [https://github.com/rapid7/metasploit-framework/blob/master/modules/post/osx/gather/enum_osx.rb](https://github.com/rapid7/metasploit-framework/blob/master/modules/post/osx/gather/enum_osx.rb)",
+    "- **SwiftBelt**: [https://github.com/cedowens/SwiftBelt](https://github.com/cedowens/SwiftBelt)",
+    "### Specific MacOS Commands",
+    "```bash",
+    "#System info",
+    "uptime #show time from starting",
+    "w #list users",
+    "whoami #this user",
+    "finger username #info about user",
+    "uname -a #sysinfo",
+    "cat /proc/cpuinfo #processor"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-useful-commands.md"
+  ]
+}

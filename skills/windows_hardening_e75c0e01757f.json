@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e75c0e01757f",
+  "category": "windows-hardening",
+  "title": "basic cmd for pentesters",
+  "description": "# Basic Win CMD for Pentesters\n\n{{#include ../banners/hacktricks-training.md}}\n\n\n## System info\n\n### Version and Patches info\n\n```bash\nwmic os get osarchitecture || echo %PROCESSOR_ARCHITECTURE% #Get architecture\nsysteminfo\nsysteminfo | findstr /B /C:\"OS Name\" /C:\"OS Version\" #Get only that information\nwmic computersystem LIST full #Get PC info\n\nwmic qfe get Caption,Description,HotFixID,InstalledOn #Patches\nwmic qfe list brief #Updates\n\nhostname\n\nDRIVERQUERY #3rd party driver vulnerable?\n```\n\n##",
+  "payloads": [
+    "# Basic Win CMD for Pentesters",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## System info",
+    "### Version and Patches info",
+    "```bash",
+    "wmic os get osarchitecture || echo %PROCESSOR_ARCHITECTURE% #Get architecture",
+    "systeminfo",
+    "systeminfo | findstr /B /C:\"OS Name\" /C:\"OS Version\" #Get only that information",
+    "wmic computersystem LIST full #Get PC info",
+    "wmic qfe get Caption,Description,HotFixID,InstalledOn #Patches",
+    "wmic qfe list brief #Updates",
+    "hostname",
+    "DRIVERQUERY #3rd party driver vulnerable?",
+    "### Environment",
+    "```bash"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/basic-cmd-for-pentesters.md"
+  ]
+}

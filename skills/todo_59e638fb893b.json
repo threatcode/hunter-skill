@@ -1,0 +1,27 @@
+{
+  "id": "todo_59e638fb893b",
+  "category": "todo",
+  "title": "more tools",
+  "description": "# More tools\n\n{{#include ../banners/hacktricks-training.md}}\n\n\n## BlueTeam\n\n- [https://github.com/yarox24/attack_monitor](https://github.com/yarox24/attack_monitor)\n- [https://capsule8.com/blog/dont-get-kicked-out-a-tale-of-rootkits-and-other-backdoors/](https://capsule8.com/blog/dont-get-kicked-out-a-tale-of-rootkits-and-other-backdoors/)\n- [https://github.com/ION28/BLUESPAWN](https://github.com/ION28/BLUESPAWN)\n- [https://github.com/PaperMtn/lil-pwny](https://github.com/PaperMtn/lil-pwny) : Ch",
+  "payloads": [
+    "# More tools",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## BlueTeam",
+    "- [https://github.com/yarox24/attack_monitor](https://github.com/yarox24/attack_monitor)",
+    "- [https://capsule8.com/blog/dont-get-kicked-out-a-tale-of-rootkits-and-other-backdoors/](https://capsule8.com/blog/dont-get-kicked-out-a-tale-of-rootkits-and-other-backdoors/)",
+    "- [https://github.com/ION28/BLUESPAWN](https://github.com/ION28/BLUESPAWN)",
+    "- [https://github.com/PaperMtn/lil-pwny](https://github.com/PaperMtn/lil-pwny) : Check disclosed accounts",
+    "- [https://github.com/rabobank-cdc/DeTTECT](https://github.com/rabobank-cdc/DeTTECT)",
+    "## OSINT",
+    "- [https://github.com/3vangel1st/kamerka](https://github.com/3vangel1st/kamerka)",
+    "- [https://github.com/BullsEye0/google_dork_list](https://github.com/BullsEye0/google_dork_list)",
+    "- [https://github.com/highmeh/lure](https://github.com/highmeh/lure)",
+    "- [https://www.shodan.io/](https://www.shodan.io)",
+    "- [https://censys.io/](https://censys.io)",
+    "- [https://viz.greynoise.io/table](https://viz.greynoise.io/table)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/more-tools.md"
+  ]
+}

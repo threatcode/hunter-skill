@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_c95751e2c3b7",
+  "category": "cheat-sheets",
+  "title": "python security",
+  "description": "# Python for Cybersecurity Cheat Sheet\n\nPython is one of the most popular programming languages for cybersecurity automation, scripting, and tool development.\n\n## \ud83d\udccb Table of Contents\n- [Basic Python](#basic-python)\n- [Networking](#networking)\n- [Web Scraping](#web-scraping)\n- [File Operations](#file-operations)\n- [Cryptography](#cryptography)\n- [System Operations](#system-operations)\n- [Security Libraries](#security-libraries)\n- [Exploit Development](#exploit-development)\n- [Automation Scripts](",
+  "payloads": [
+    "# Python for Cybersecurity Cheat Sheet",
+    "Python is one of the most popular programming languages for cybersecurity automation, scripting, and tool development.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Python](#basic-python)",
+    "- [Networking](#networking)",
+    "- [Web Scraping](#web-scraping)",
+    "- [File Operations](#file-operations)",
+    "- [Cryptography](#cryptography)",
+    "- [System Operations](#system-operations)",
+    "- [Security Libraries](#security-libraries)",
+    "- [Exploit Development](#exploit-development)",
+    "- [Automation Scripts](#automation-scripts)",
+    "## Basic Python",
+    "### Data Types and Variables",
+    "```python"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/scripting/python-security.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "server_side_template_injection-1da725071ca7",
+  "category": "Server Side Template Injection",
+  "title": "PHP",
+  "description": "# Server Side Template Injection - PHP\n\n> Server-Side Template Injection (SSTI)  is a vulnerability that occurs when an attacker can inject malicious input into a server-side template, causing the template engine to execute arbitrary commands on the server. In PHP, SSTI can arise when user input is embedded within templates rendered by templating engines like Smarty, Twig, or even within plain PHP templates, without proper sanitization or validation.\n\n## Summary\n\n- [Templating Libraries](#templa",
+  "payloads": [
+    "# Server Side Template Injection - PHP",
+    "> Server-Side Template Injection (SSTI)  is a vulnerability that occurs when an attacker can inject malicious input into a server-side template, causing the template engine to execute arbitrary commands on the server. In PHP, SSTI can arise when user input is embedded within templates rendered by templating engines like Smarty, Twig, or even within plain PHP templates, without proper sanitization or validation.",
+    "## Summary",
+    "- [Templating Libraries](#templating-libraries)",
+    "- [Universal Payloads](#universal-payloads)",
+    "- [Blade](#blade)",
+    "- [Smarty](#smarty)",
+    "- [Smarty - Code Execution with Obfuscation](#smarty---code-execution-with-obfuscation)",
+    "- [Twig](#twig)",
+    "- [Twig - Basic Injection](#twig---basic-injection)",
+    "- [Twig - Template Format](#twig---template-format)",
+    "- [Twig - Arbitrary File Reading](#twig---arbitrary-file-reading)",
+    "- [Twig - Code Execution](#twig---code-execution)",
+    "- [Twig - Code Execution with Obfuscation](#twig---code-execution-with-obfuscation)",
+    "- [Latte](#latte)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/PHP.md"
+  ]
+}

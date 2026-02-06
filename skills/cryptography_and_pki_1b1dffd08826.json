@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_1b1dffd08826",
+  "category": "cryptography-and-pki",
+  "title": "tls ssl guide",
+  "description": "# TLS/SSL Complete Practical Guide\n\n## Table of Contents\n- [Introduction to TLS/SSL](#introduction-to-tlsssl)\n- [TLS Protocol Overview](#tls-protocol-overview)\n- [Certificate Configuration](#certificate-configuration)\n- [Cipher Suite Selection](#cipher-suite-selection)\n- [Modern TLS Configuration](#modern-tls-configuration)\n- [Testing and Validation](#testing-and-validation)\n- [Performance Optimization](#performance-optimization)\n- [Security Best Practices](#security-best-practices)\n- [Troublesh",
+  "payloads": [
+    "# TLS/SSL Complete Practical Guide",
+    "## Table of Contents",
+    "- [Introduction to TLS/SSL](#introduction-to-tlsssl)",
+    "- [TLS Protocol Overview](#tls-protocol-overview)",
+    "- [Certificate Configuration](#certificate-configuration)",
+    "- [Cipher Suite Selection](#cipher-suite-selection)",
+    "- [Modern TLS Configuration](#modern-tls-configuration)",
+    "- [Testing and Validation](#testing-and-validation)",
+    "- [Performance Optimization](#performance-optimization)",
+    "- [Security Best Practices](#security-best-practices)",
+    "- [Troubleshooting](#troubleshooting)",
+    "## Introduction to TLS/SSL",
+    "Transport Layer Security (TLS) and its predecessor Secure Sockets Layer (SSL) are cryptographic protocols designed to provide secure communications over a computer network.",
+    "### Protocol Evolution",
+    "| Protocol | Year | Status | Notes |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/tutorials/tls-ssl-guide.md"
+  ]
+}

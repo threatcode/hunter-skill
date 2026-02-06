@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_84387587e0c7",
+  "category": "ai-research",
+  "title": "lab 03 rest api",
+  "description": "# Lab 3: Using the Ollama REST API\n\n## Objective\nIn this lab, you will learn how to interact with Ollama using its REST API. You'll make HTTP requests using curl and learn how to integrate Ollama into applications through API calls. This is essential for building applications that use local LLMs.\n\n## Prerequisites\n- Completed Lab 1 and Lab 2\n- Ollama installed and running\n- At least one model downloaded (e.g., `gemma3`)\n- Basic understanding of HTTP and REST APIs\n- `curl` installed (usually pre-",
+  "payloads": [
+    "# Lab 3: Using the Ollama REST API",
+    "## Objective",
+    "In this lab, you will learn how to interact with Ollama using its REST API. You'll make HTTP requests using curl and learn how to integrate Ollama into applications through API calls. This is essential for building applications that use local LLMs.",
+    "## Prerequisites",
+    "- Completed Lab 1 and Lab 2",
+    "- Ollama installed and running",
+    "- At least one model downloaded (e.g., `gemma3`)",
+    "- Basic understanding of HTTP and REST APIs",
+    "- `curl` installed (usually pre-installed on macOS/Linux)",
+    "- Basic understanding of JSON",
+    "## Estimated Time",
+    "60-75 minutes",
+    "## Part 1: Understanding the API",
+    "### Step 1: Verify Ollama Service is Running",
+    "Ollama runs a local API server on port 11434 by default. Verify it's running:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ollama-labs/lab-03-rest-api.md"
+  ]
+}

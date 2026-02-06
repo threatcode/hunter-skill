@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_3692f485ac78",
+  "category": "linux-hardening",
+  "title": "container optimized linux images",
+  "description": "# Container-optimized Linux distributions\n\nContainer-optimized Linux distributions are designed specifically for deploying, running, and managing containers. Some of the popular distributions include:\n\n\n| Linux Distribution | Official Link |\n|-------------------|---------------|\n| Alpine Linux | [https://www.alpinelinux.org](https://www.alpinelinux.org) |\n| CoreOS (Container Linux) | the distribution is discontinued |\n| Fedora CoreOS | [https://getfedora.org/en/coreos](https://getfedora.org/en/c",
+  "payloads": [
+    "# Container-optimized Linux distributions",
+    "Container-optimized Linux distributions are designed specifically for deploying, running, and managing containers. Some of the popular distributions include:",
+    "| Linux Distribution | Official Link |",
+    "|-------------------|---------------|",
+    "| Alpine Linux | [https://www.alpinelinux.org](https://www.alpinelinux.org) |",
+    "| CoreOS (Container Linux) | the distribution is discontinued |",
+    "| Fedora CoreOS | [https://getfedora.org/en/coreos](https://getfedora.org/en/coreos) |",
+    "| RancherOS | [https://rancher.com/products/rancher/rancheros](https://rancher.com/products/rancher/rancheros) |",
+    "| Google's Container-Optimized OS (COS) | [https://cloud.google.com/container-optimized-os](https://cloud.google.com/container-optimized-os) |",
+    "| Amazon Linux 2 (with ECS-Optimized AMI) | [https://aws.amazon.com/amazon-linux-2](https://aws.amazon.com/amazon-linux-2) |",
+    "| Ubuntu Core | [https://ubuntu.com/core](https://ubuntu.com/core) |",
+    "| Photon OS | [https://vmware.github.io/photon](https://vmware.github.io/photon) |",
+    "1. **Alpine Linux**: Known for its small footprint, security features, and simplicity, Alpine Linux is a common choice for containerized applications. It's often used for Docker containers due to its size (typically around 5MB) and efficiency.",
+    "2. **CoreOS (Container Linux)**: CoreOS is a popular container-optimized OS with built-in support for Docker and Kubernetes. It features automatic updates and scalability features. However, as of May 2020, CoreOS has been discontinued and its functionalities have been integrated into Fedora CoreOS and Red Hat OpenShift.",
+    "3. **Fedora CoreOS**: Following the acquisition of CoreOS by Red Hat, Fedora CoreOS is its spiritual successor. It is designed for scalability and security, with automatic updates and rollbacks, as well as integration with Kubernetes."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/linux-hardening/container_optimized_linux_images.md"
+  ]
+}

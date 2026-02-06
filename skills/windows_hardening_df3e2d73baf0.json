@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_df3e2d73baf0",
+  "category": "windows-hardening",
+  "title": "external forest domain one way outbound",
+  "description": "# External Forest Domain - One-Way (Outbound)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nIn this scenario **your domain** is **trusting** some **privileges** to principal from a **different domains**.\n\n## Enumeration\n\n### Outbound Trust\n\n```bash\n# Notice Outbound trust\nGet-DomainTrust\nSourceName      : root.local\nTargetName      : ext.local\nTrustType       : WINDOWS_ACTIVE_DIRECTORY\nTrustAttributes : FOREST_TRANSITIVE\nTrustDirection  : Outbound\nWhenCreated     : 2/19/2021 10:15:24 PM\nWh",
+  "payloads": [
+    "# External Forest Domain - One-Way (Outbound)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "In this scenario **your domain** is **trusting** some **privileges** to principal from a **different domains**.",
+    "## Enumeration",
+    "### Outbound Trust",
+    "```bash",
+    "# Notice Outbound trust",
+    "Get-DomainTrust",
+    "SourceName      : root.local",
+    "TargetName      : ext.local",
+    "TrustType       : WINDOWS_ACTIVE_DIRECTORY",
+    "TrustAttributes : FOREST_TRANSITIVE",
+    "TrustDirection  : Outbound",
+    "WhenCreated     : 2/19/2021 10:15:24 PM",
+    "WhenChanged     : 2/19/2021 10:15:24 PM"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/external-forest-domain-one-way-outbound.md"
+  ]
+}

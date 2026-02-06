@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d32ae4cc8c63",
+  "category": "windows-hardening",
+  "title": "bloodhound",
+  "description": "# BloodHound & Other Active Directory Enumeration Tools\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n{{#ref}}\nadws-enumeration.md\n{{#endref}}\n\n> NOTE: This page groups some of the most useful utilities to **enumerate** and **visualise** Active Directory relationships.  For collection over the stealthy **Active Directory Web Services (ADWS)** channel check the reference above.\n\n---\n\n## AD Explorer\n\n[AD Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer) (Sysinter",
+  "payloads": [
+    "# BloodHound & Other Active Directory Enumeration Tools",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "{{#ref}}",
+    "adws-enumeration.md",
+    "{{#endref}}",
+    "> NOTE: This page groups some of the most useful utilities to **enumerate** and **visualise** Active Directory relationships.  For collection over the stealthy **Active Directory Web Services (ADWS)** channel check the reference above.",
+    "## AD Explorer",
+    "[AD Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer) (Sysinternals) is an advanced **AD viewer & editor** which allows:",
+    "* GUI browsing of the directory tree",
+    "* Editing of object attributes & security descriptors",
+    "* Snapshot creation / comparison for offline analysis",
+    "### Quick usage",
+    "1. Start the tool and connect to `dc01.corp.local` with any domain credentials.",
+    "2. Create an offline snapshot via `File \u279c Create Snapshot`.",
+    "3. Compare two snapshots with `File \u279c Compare` to spot permission drifts."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/bloodhound.md"
+  ]
+}

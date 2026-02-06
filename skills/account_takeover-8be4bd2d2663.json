@@ -1,0 +1,27 @@
+{
+  "id": "account_takeover-8be4bd2d2663",
+  "category": "Account Takeover",
+  "title": "mfa bypass",
+  "description": "# MFA Bypasses\n\n> Multi-Factor Authentication (MFA) is a security measure that requires users to provide two or more verification factors to gain access to a system, application, or network. It combines something the user knows (like a password), something they have (like a phone or security token), and/or something they are (biometric verification). This layered approach enhances security by making unauthorized access more difficult, even if a password is compromised.\n> MFA Bypasses are techniq",
+  "payloads": [
+    "# MFA Bypasses",
+    "> Multi-Factor Authentication (MFA) is a security measure that requires users to provide two or more verification factors to gain access to a system, application, or network. It combines something the user knows (like a password), something they have (like a phone or security token), and/or something they are (biometric verification). This layered approach enhances security by making unauthorized access more difficult, even if a password is compromised.",
+    "> MFA Bypasses are techniques attackers use to circumvent MFA protections. These methods can include exploiting weaknesses in MFA implementations, intercepting authentication tokens, leveraging social engineering to manipulate users or support staff, or exploiting session-based vulnerabilities.",
+    "## Summary",
+    "* [Response Manipulation](#response-manipulation)",
+    "* [Status Code Manipulation](#status-code-manipulation)",
+    "* [2FA Code Leakage in Response](#2fa-code-leakage-in-response)",
+    "* [JS File Analysis](#js-file-analysis)",
+    "* [2FA Code Reusability](#2fa-code-reusability)",
+    "* [Lack of Brute-Force Protection](#lack-of-brute-force-protection)",
+    "* [Missing 2FA Code Integrity Validation](#missing-2fa-code-integrity-validation)",
+    "* [CSRF on 2FA Disabling](#csrf-on-2fa-disabling)",
+    "* [Password Reset Disable 2FA](#password-reset-disable-2fa)",
+    "* [Backup Code Abuse](#backup-code-abuse)",
+    "* [Clickjacking on 2FA Disabling Page](#clickjacking-on-2fa-disabling-page)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Account Takeover/mfa-bypass.md"
+  ]
+}

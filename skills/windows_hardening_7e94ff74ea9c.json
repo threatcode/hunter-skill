@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_7e94ff74ea9c",
+  "category": "windows-hardening",
+  "title": "dpapi extracting passwords",
+  "description": "# DPAPI - Extracting Passwords\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n\n## What is DPAPI\n\nThe Data Protection API (DPAPI) is primarily utilized within the Windows operating system for the **symmetric encryption of asymmetric private keys**, leveraging either user or system secrets as a significant source of entropy. This approach simplifies encryption for developers by enabling them to encrypt data using a key derived from the user's logon secrets or, for system encryption, the syst",
+  "payloads": [
+    "# DPAPI - Extracting Passwords",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## What is DPAPI",
+    "The Data Protection API (DPAPI) is primarily utilized within the Windows operating system for the **symmetric encryption of asymmetric private keys**, leveraging either user or system secrets as a significant source of entropy. This approach simplifies encryption for developers by enabling them to encrypt data using a key derived from the user's logon secrets or, for system encryption, the system's domain authentication secrets, thus obviating the need for developers to manage the protection of the encryption key themselves.",
+    "The most common way to use DPAPI is through the **`CryptProtectData` and `CryptUnprotectData`** functions, which allow applications to encrypt and decrypt data securely with the session of the process that is currently logged on. This means that the encrypted data can only be decrypted by the same user or system that encrypted it.",
+    "Moreover, these functions accepts also an **`entropy` parameter** which will also be used during encryption and decryption, therefore, in order to decrypt something encrypted using this parameter, you must provide the same entropy value that was used during encryption.",
+    "### Users key generation",
+    "The DPAPI generates a unique key (called **`pre-key`**) for each user based on their credentials. This key is derived from the user's password and other factors and the algorithm depends on the type of user but ends being a SHA1. For example, for domain users, **it depends on the NTLM hash of the user**.",
+    "This is specially interesting because if an attacker can obtain the user's password hash, they can:",
+    "- **Decrypt any data that was encrypted using DPAPI** with that user's key without needing to contact any API",
+    "- Try to **crack the password** offline trying to generate the valid DPAPI key",
+    "Moreover, every time some data is encrypted by a user using DPAPI, a new **master key** is generated. This master key is the one actually used to encrypt data. Each master key is given with a **GUID** (Globally Unique Identifier) that identifies it.",
+    "The master keys are stored in the **`%APPDATA%\\Microsoft\\Protect\\<sid>\\<guid>`** directory, where `{SID}` is the Security Identifier of that user. The master key is stored encrypted by the user's **`pre-key`** and also by a **domain backup key** for recovery (so the same key is stored encrypted 2 times by 2 different pass).",
+    "Note that the **domain key used to encrypt the master key is in the domain controllers and never changes**, so if an attacker has access to the domain controller, they can retrieve the domain backup key and decrypt the master keys of all users in the domain.",
+    "The encrypted blobs contain the **GUID of the master key** that was used to encrypt the data inside its headers."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/dpapi-extracting-passwords.md"
+  ]
+}

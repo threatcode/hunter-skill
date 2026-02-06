@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_ad2a91f6673f",
+  "category": "cryptography-and-pki",
+  "title": "05 Implement Diffie Hellman Key Exchange",
+  "description": "# Challenge 5: Implement Diffie-Hellman Key Exchange\n\n**Level:** Intermediate\n\n**Description:**\nSimulate the Diffie-Hellman key exchange algorithm to securely share a symmetric key between two parties.\n\n**Challenge Text:**\n```\nGiven prime p = 23, base g = 5\nParty A's private key: 6\nParty B's private key: 15\n```\n\n**Instructions:**\n1. Compute Party A's and Party B's public keys.\n2. Compute the shared secret key for both parties.\n3. Validate that both parties have the same shared secret key.\n\n\n**An",
+  "payloads": [
+    "# Challenge 5: Implement Diffie-Hellman Key Exchange",
+    "**Level:** Intermediate",
+    "**Description:**",
+    "Simulate the Diffie-Hellman key exchange algorithm to securely share a symmetric key between two parties.",
+    "**Challenge Text:**",
+    "Given prime p = 23, base g = 5",
+    "Party A's private key: 6",
+    "Party B's private key: 15",
+    "**Instructions:**",
+    "1. Compute Party A's and Party B's public keys.",
+    "2. Compute the shared secret key for both parties.",
+    "3. Validate that both parties have the same shared secret key.",
+    "**Answer:**",
+    "Shared secret key: 2",
+    "**Code:**"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/05_Implement_Diffie_Hellman_Key_Exchange.md"
+  ]
+}

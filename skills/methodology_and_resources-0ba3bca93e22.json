@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-0ba3bca93e22",
+  "category": "Methodology and Resources",
+  "title": "Windows   Persistence",
+  "description": "# Windows - Persistence\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/persistence/windows](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#tools)\n- [Hide Your Binary](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#hide-your-binary)\n- [Disable Antivirus and Security](https:",
+  "payloads": [
+    "# Windows - Persistence",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/persistence/windows](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#tools)",
+    "- [Hide Your Binary](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#hide-your-binary)",
+    "- [Disable Antivirus and Security](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#disable-antivirus-and-security)",
+    "- [Antivirus Removal](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#antivirus-removal)",
+    "- [Disable Windows Defender](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#disable-windows-defender)",
+    "- [Disable Windows Firewall](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#disable-windows-firewall)",
+    "- [Clear System and Security Logs](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#clear-system-and-security-logs)",
+    "- [Simple User](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#simple-user)",
+    "- [Registry HKCU](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#registry-hkcu)",
+    "- [Startup](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#startup)",
+    "- [Scheduled Tasks User](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#scheduled-tasks-user)",
+    "- [BITS Jobs](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#bits-jobs)",
+    "- [Serviceland](https://swisskyrepo.github.io/InternalAllTheThings/redteam/persistence/windows-persistence/#serviceland)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Windows - Persistence.md"
+  ]
+}

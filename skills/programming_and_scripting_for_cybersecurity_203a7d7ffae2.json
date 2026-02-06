@@ -1,0 +1,27 @@
+{
+  "id": "programming_and_scripting_for_cybersecurity_203a7d7ffae2",
+  "category": "programming-and-scripting-for-cybersecurity",
+  "title": "c2 example1",
+  "description": "# Example of Creating a C2 Using Python\nLet's create a Python script that sets up a listener to communicate with a remote device. The listener waits for a connection, then allows the user to send commands to the remote device. \n\ud83e\udd16 Checkout [this prompt in ChatGPT](https://chat.openai.com/share/a8399b03-9d33-444a-bce3-e7995d351316)\n\nHere's a breakdown of the code:\n\n1. **Importing Required Module**:\n   ```python\n   import socket\n   ```\n   The script imports the `socket` module, which provides a way",
+  "payloads": [
+    "# Example of Creating a C2 Using Python",
+    "Let's create a Python script that sets up a listener to communicate with a remote device. The listener waits for a connection, then allows the user to send commands to the remote device.",
+    "\ud83e\udd16 Checkout [this prompt in ChatGPT](https://chat.openai.com/share/a8399b03-9d33-444a-bce3-e7995d351316)",
+    "Here's a breakdown of the code:",
+    "1. **Importing Required Module**:",
+    "```python",
+    "import socket",
+    "The script imports the `socket` module, which provides a way for Python to interact with network sockets.",
+    "2. **Identifier Constant**:",
+    "```python",
+    "IDENTIFIER = \"<END_OF_COMMAND_RESULT>\"",
+    "This string serves as an identifier to determine the end of a command result.",
+    "3. **Main Script Execution**:",
+    "The script uses an `if __name__ == \"__main__\":` block to ensure that the code inside it only runs if the script is executed directly (and not imported as a module).",
+    "4. **Setting Up the Socket**:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/programming-and-scripting-for-cybersecurity/post_exploitation/c2_example1.md"
+  ]
+}

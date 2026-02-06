@@ -1,0 +1,27 @@
+{
+  "id": "todo_d54fac373ced",
+  "category": "todo",
+  "title": "low power wide area network",
+  "description": "# Low-Power Wide Area Network\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Introduction\n\n**Low-Power Wide Area Network** (LPWAN) is a group of wireless, low-power, wide-area network technologies designed for **long-range communications** at a low bit rate.\nThey can reach more than **six miles** and their **batteries** can last up to **20 years**.\n\nLong Range (**LoRa**) is currently the most deployed LPWAN physical layer and its open MAC-layer specification is **LoRaWAN**.\n\n---\n\n## LPWA",
+  "payloads": [
+    "# Low-Power Wide Area Network",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "**Low-Power Wide Area Network** (LPWAN) is a group of wireless, low-power, wide-area network technologies designed for **long-range communications** at a low bit rate.",
+    "They can reach more than **six miles** and their **batteries** can last up to **20 years**.",
+    "Long Range (**LoRa**) is currently the most deployed LPWAN physical layer and its open MAC-layer specification is **LoRaWAN**.",
+    "## LPWAN, LoRa, and LoRaWAN",
+    "* LoRa \u2013 Chirp Spread Spectrum (CSS) physical layer developed by Semtech (proprietary but documented).",
+    "* LoRaWAN \u2013 Open MAC/Network layer maintained by the LoRa-Alliance. Versions 1.0.x and 1.1 are common in the field.",
+    "* Typical architecture: *end-device \u2192 gateway (packet-forwarder) \u2192 network-server \u2192 application-server*.",
+    "> The **security model** relies on two AES-128 root keys (AppKey/NwkKey) that derive session keys during the *join* procedure (OTAA) or are hard-coded (ABP). If any key leaks the attacker gains full read/write capability over the corresponding traffic.",
+    "## Attack surface summary",
+    "| Layer | Weakness | Practical impact |",
+    "|-------|----------|------------------|",
+    "| PHY | Reactive / selective jamming | 100 % packet loss demonstrated with single SDR and <1 W output |"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/low-power-wide-area-network.md"
+  ]
+}

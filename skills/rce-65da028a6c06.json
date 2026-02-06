@@ -1,0 +1,17 @@
+{
+  "id": "rce-65da028a6c06",
+  "category": "RCE",
+  "title": "README",
+  "description": "# HTTP Parameter Pollution\n\n> HTTP Parameter Pollution (HPP) is a Web attack evasion technique that allows an attacker to craft a HTTP request in order to manipulate web logics or retrieve hidden information. This evasion technique is based on splitting an attack vector between multiple instances of a parameter with the same name (?param1=value&param1=value). As there is no formal way of parsing HTTP parameters, individual web technologies have their own unique way of parsing and reading URL par",
+  "payloads": [
+    "| Golang net/http - `r.URL.Query().Get(\"param\")`  | First occurrence         | a               |",
+    "| Golang net/http - `r.URL.Query()[\"param\"]`      | All occurrences in array | ['a','b']       |",
+    "* [How to Detect HTTP Parameter Pollution Attacks - Acunetix - January 9, 2024](https://www.acunetix.com/blog/whitepaper-http-parameter-pollution/)",
+    "* [HTTP Parameter Pollution - Itamar Verta - December 20, 2023](https://www.imperva.com/learn/application-security/http-parameter-pollution/)",
+    "* [HTTP Parameter Pollution in 11 minutes - PwnFunction - January 28, 2019](https://www.youtube.com/watch?v=QVZBl8yxVX0&ab_channel=PwnFunction)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/HTTP Parameter Pollution/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

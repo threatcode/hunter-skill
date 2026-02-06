@@ -1,0 +1,27 @@
+{
+  "id": "ai_58f29dfe5bed",
+  "category": "AI",
+  "title": "7.2. fine tuning to follow instructions",
+  "description": "# 7.2. Fine-Tuning to follow instructions\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> [!TIP]\n> The goal of this section is to show how to **fine-tune an already pre-trained model to follow instructions** rather than just generating text, for example, responding to tasks as a chat bot.\n\n## Dataset\n\nI order to fine tune a LLM to follow instructions it's needed to have a dataset with instructions and responses to fine tune the LLM. There are different formats to train a LLM into follow in",
+  "payloads": [
+    "# 7.2. Fine-Tuning to follow instructions",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> [!TIP]",
+    "> The goal of this section is to show how to **fine-tune an already pre-trained model to follow instructions** rather than just generating text, for example, responding to tasks as a chat bot.",
+    "## Dataset",
+    "I order to fine tune a LLM to follow instructions it's needed to have a dataset with instructions and responses to fine tune the LLM. There are different formats to train a LLM into follow instructions, for example:",
+    "- The Apply Alpaca prompt style example:",
+    "```csharp",
+    "Below is an instruction that describes a task. Write a response that appropriately completes the request.",
+    "### Instruction:",
+    "Calculate the area of a circle with a radius of 5 units.",
+    "### Response:",
+    "The area of a circle is calculated using the formula \\( A = \\pi r^2 \\). Plugging in the radius of 5 units:",
+    "\\( A = \\pi (5)^2 = \\pi \\times 25 = 25\\pi \\) square units.",
+    "- Phi-3 Prompt Style Example:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/7.2.-fine-tuning-to-follow-instructions.md"
+  ]
+}

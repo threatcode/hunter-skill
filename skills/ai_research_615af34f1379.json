@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_615af34f1379",
+  "category": "ai-research",
+  "title": "model security testing",
+  "description": "## Model and GenAI Application Security Testing\n\nThis file is an entry point for **testing the security of AI/ML models and GenAI applications**. Use it together with:\n\n- `ai_security_tools.md` \u2013 curated list of offensive and defensive AI security tools.\n- `ai_risk_management/README.md` \u2013 governance, regulatory, and risk management frameworks.\n- `prompt_injection/README.md` \u2013 prompt injection, jailbreak techniques, and defenses.\n- `training_environment_security/README.md` \u2013 securing training and",
+  "payloads": [
+    "## Model and GenAI Application Security Testing",
+    "This file is an entry point for **testing the security of AI/ML models and GenAI applications**. Use it together with:",
+    "- `ai_security_tools.md` \u2013 curated list of offensive and defensive AI security tools.",
+    "- `ai_risk_management/README.md` \u2013 governance, regulatory, and risk management frameworks.",
+    "- `prompt_injection/README.md` \u2013 prompt injection, jailbreak techniques, and defenses.",
+    "- `training_environment_security/README.md` \u2013 securing training and fine\u2011tuning environments.",
+    "### 1. Core Guidance and Taxonomies",
+    "- [OWASP GenAI Security Project](https://genai.owasp.org/)",
+    "- **LLM Top 10 (2025)** \u2013 primary risk taxonomy for LLM and GenAI applications.",
+    "- **AI Security Landscape** and **Solutions Reference Guide (Q2\u2013Q3 2025)** \u2013 map risks to available controls.",
+    "- **Threat Defense COMPASS 1.0** \u2013 consolidated view of threats, vulnerabilities, defenses, and mitigations that can be used as a checklist for model/application testing.",
+    "- [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/)",
+    "- [OWASP Machine Learning Security Top 10](https://mltop10.info/)",
+    "### 2. Risk Maps and Secure Design Patterns",
+    "- [Coalition for Secure AI (CoSAI)](https://github.com/cosai-oasis)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ai-research/model_security_testing.md"
+  ]
+}

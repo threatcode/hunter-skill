@@ -1,0 +1,27 @@
+{
+  "id": "build_your_own_lab_de73f28e7ed7",
+  "category": "build-your-own-lab",
+  "title": "security onion proxmox",
+  "description": "# Security Onion, RedHunt OS, Proxmox, and Open\u00a0vSwitch\nIf you have attended some of my classes and read some of my books, you know that I really like [Proxmox](https://www.proxmox.com/en/). I have several Proxmox clusters that I use for my training courses and to develop labs to learn new cybersecurity skills (offensive and defensive techniques). \n\nYou can instantiate Linux systems such as [Kali Linux](https://www.kali.org/), [WebSploit](https://websploit.org), [Parrot](https://parrotlinux.org/",
+  "payloads": [
+    "# Security Onion, RedHunt OS, Proxmox, and Open\u00a0vSwitch",
+    "If you have attended some of my classes and read some of my books, you know that I really like [Proxmox](https://www.proxmox.com/en/). I have several Proxmox clusters that I use for my training courses and to develop labs to learn new cybersecurity skills (offensive and defensive techniques).",
+    "You can instantiate Linux systems such as [Kali Linux](https://www.kali.org/), [WebSploit](https://websploit.org), [Parrot](https://parrotlinux.org/), [BlackArch](https://blackarch.org/), [Security Onion](https://securityonion.net), [RedHuntOS](https://github.com/redhuntlabs/RedHunt-OS), and others in different VMs to practice and learn new skills in a safe environment.",
+    "Systems like [Security Onion](https://securityonion.net) and [RedHuntOS](https://github.com/redhuntlabs/RedHunt-OS) come with with [Snort](https://www.snort.org/), [Suricata](https://suricata-ids.org/), [ELK](https://www.elastic.co/what-is/elk-stack), and many other security tools that allow you to monitor your network.",
+    "You have to setup [port mirroring](https://en.wikipedia.org/wiki/Port_mirroring) for IDS/IPS systems like Snort to be able to monitor traffic. In Proxmox, you can setup [Linux bridges](https://pve.proxmox.com/wiki/Network_Configuration) and [Open vSwitch (OVS) bridges](https://pve.proxmox.com/wiki/Open_vSwitch).",
+    "## OVS Setup",
+    "I strongly recommend to use OVS bridges to send traffic to your Security Onion VM (or whatever other VM you would like to capture packets or monitor for IDS/IPS functions.",
+    "- **Note:** A bridge is another term for a Switch. It directs traffic to the appropriate interface based on mac address. Open vSwitch bridges should contain raw ethernet devices, along with virtual interfaces such as OVSBonds or OVSIntPorts. These bridges can carry multiple vlans, and be broken out into 'internal ports' to be used as vlan interfaces on the host.",
+    "1. First, you need to update the package index and then install the Open vSwitch packages by executing:",
+    "apt update",
+    "apt install openvswitch-switch",
+    "2. Then you can create an OVS bridge and assign the interfaces of each VM that you want to capture packets to that OVS bridge.",
+    "3. You then configure the `tap` interfaces. These are only visible in the system shell (not in the Proxmox GUI) and are added automatically for VMs attached to an OVS-bridge interface. The naming convention of the tap interfaces is based on the ID of the VM they are assigned to, with the name `tap[VM-ID]i[interface#]`.",
+    "For example, these are some of the interfaces in one of the Proxmox nodes/servers in one of my clusters:",
+    "\u250c\u2500[root@hermes]\u2500[~]"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/build-your-own-lab/security-onion-proxmox.md"
+  ]
+}

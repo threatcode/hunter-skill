@@ -1,0 +1,27 @@
+{
+  "id": "blockchain_7c202020cc70",
+  "category": "blockchain",
+  "title": "web3 signing workflow compromise safe delegatecall proxy takeover",
+  "description": "# Web3 Signing Workflow Compromise & Safe Delegatecall Proxy Takeover\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nA cold-wallet theft chain combined a **supply-chain compromise of the Safe{Wallet} web UI** with an **on-chain delegatecall primitive that overwrote a proxy\u2019s implementation pointer (slot 0)**. The key takeaways are:\n\n- If a dApp can inject code into the signing path, it can make a signer produce a valid **EIP-712 signature over attacker-chosen fields** while res",
+  "payloads": [
+    "# Web3 Signing Workflow Compromise & Safe Delegatecall Proxy Takeover",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "A cold-wallet theft chain combined a **supply-chain compromise of the Safe{Wallet} web UI** with an **on-chain delegatecall primitive that overwrote a proxy\u2019s implementation pointer (slot 0)**. The key takeaways are:",
+    "- If a dApp can inject code into the signing path, it can make a signer produce a valid **EIP-712 signature over attacker-chosen fields** while restoring the original UI data so other signers remain unaware.",
+    "- Safe proxies store `masterCopy` (implementation) at **storage slot 0**. A delegatecall to a contract that writes to slot 0 effectively \u201cupgrades\u201d the Safe to attacker logic, yielding full control of the wallet.",
+    "## Off-chain: Targeted signing mutation in Safe{Wallet}",
+    "A tampered Safe bundle (`_app-*.js`) selectively attacked specific Safe + signer addresses. The injected logic executed right before the signing call:",
+    "```javascript",
+    "// Pseudocode of the malicious flow",
+    "orig = structuredClone(tx.data);",
+    "if (isVictimSafe && isVictimSigner && tx.data.operation === 0) {",
+    "tx.data.to = attackerContract;",
+    "tx.data.data = \"0xa9059cbb...\";      // ERC-20 transfer selector",
+    "tx.data.operation = 1;                 // delegatecall"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/blockchain/blockchain-and-crypto-currencies/web3-signing-workflow-compromise-safe-delegatecall-proxy-takeover.md"
+  ]
+}

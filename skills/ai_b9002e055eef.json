@@ -1,0 +1,27 @@
+{
+  "id": "ai_b9002e055eef",
+  "category": "AI",
+  "title": "AI Prompts",
+  "description": "# AI Prompts\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Basic Information\n\nAI prompts are essential for guiding AI models to generate desired outputs. They can be simple or complex, depending on the task at hand. Here are some examples of basic AI prompts:\n- **Text Generation**: \"Write a short story about a robot learning to love.\"\n- **Question Answering**: \"What is the capital of France?\"\n- **Image Captioning**: \"Describe the scene in this image.\"\n- **Sentiment Analysis**: \"Analyze the",
+  "payloads": [
+    "# AI Prompts",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "AI prompts are essential for guiding AI models to generate desired outputs. They can be simple or complex, depending on the task at hand. Here are some examples of basic AI prompts:",
+    "- **Text Generation**: \"Write a short story about a robot learning to love.\"",
+    "- **Question Answering**: \"What is the capital of France?\"",
+    "- **Image Captioning**: \"Describe the scene in this image.\"",
+    "- **Sentiment Analysis**: \"Analyze the sentiment of this tweet: 'I love the new features in this app!'\"",
+    "- **Translation**: \"Translate the following sentence into Spanish: 'Hello, how are you?'\"",
+    "- **Summarization**: \"Summarize the main points of this article in one paragraph.\"",
+    "### Prompt Engineering",
+    "Prompt engineering is the process of designing and refining prompts to improve the performance of AI models. It involves understanding the model's capabilities, experimenting with different prompt structures, and iterating based on the model's responses. Here are some tips for effective prompt engineering:",
+    "- **Be Specific**: Clearly define the task and provide context to help the model understand what is expected. Moreover, use speicfic structures to indicate different parts of the prompt, such as:",
+    "- **`## Instructions`**: \"Write a short story about a robot learning to love.\"",
+    "- **`## Context`**: \"In a future where robots coexist with humans...\""
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Prompts.md"
+  ]
+}

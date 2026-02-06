@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-7a1853af315d",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# Upload Insecure Files\n\n> Uploaded files may pose a significant risk if not handled correctly. A remote attacker could send a multipart/form-data POST request with a specially-crafted filename or mime type and execute arbitrary code.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Defaults Extensions](#defaults-extensions)\n    * [Upload Tricks](#upload-tricks)\n    * [Filename Vulnerabilities](#filename-vulnerabilities)\n    * [Picture Compression](#picture-compression)\n    * ",
+  "payloads": [
+    "* [almandin/fuxploiderFuxploider](https://github.com/almandin/fuxploider) - File upload vulnerability scanner and exploitation tool.",
+    "* [Burp/Upload Scanner](https://portswigger.net/bappstore/b2244cbb6953442cb3c82fa0a0d908fa) -  HTTP file upload scanner for Burp Proxy.",
+    "* [ZAP/FileUpload](https://www.zaproxy.org/blog/2021-08-20-zap-fileupload-addon/) -  OWASP ZAP add-on for finding vulnerabilities in File Upload functionality.",
+    "![file-upload-mindmap.png](https://github.com/swisskyrepo/PayloadsAllTheThings/raw/master/Upload%20Insecure%20Files/Images/file-upload-mindmap.png?raw=true)",
+    ".cer # (IIS <= 7.5)",
+    ".asa # (IIS <= 7.5)",
+    "shell.aspx;1.jpg # (IIS < 7.0)",
+    "* On Windows OS, `include`, `require` and `require_once` functions will convert \"foo.php\" followed by one or more of the chars `\\x20` ( ), `\\x22` (\"), `\\x2E` (.), `\\x3C` (<), `\\x3E` (>) back to \"foo.php\".",
+    "* On Windows OS, when running PHP on IIS some characters are automatically converted to other characters when it is going to save a file (e.g. `web<<` becomes `web**` and can replace `web.config`).",
+    "* `\\x3C` (<) is converted to `\\x2A` (*)",
+    "* Content-Type wordlist: [SecLists/web-all-content-types.txt](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-all-content-types.txt)",
+    "application/x-httpd-php",
+    "application/x-httpd-php-source",
+    "[Magic Bytes](https://en.wikipedia.org/wiki/List_of_file_signatures) - Sometimes applications identify file types based on their first signature bytes. Adding/replacing them in a file might trick the application.",
+    "PHP web shells don't always have the `<?php` tag, here are some alternatives:"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Upload Insecure Files/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

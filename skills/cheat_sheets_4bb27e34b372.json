@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_4bb27e34b372",
+  "category": "cheat-sheets",
+  "title": "tcpdump",
+  "description": "# Tcpdump Cheat Sheet\n\nTcpdump is a powerful command-line packet analyzer tool used for network troubleshooting and security analysis. It captures and displays packets being transmitted or received over a network.\n\n## \ud83d\udccb Table of Contents\n- [Basic Syntax](#basic-syntax)\n- [Interface Selection](#interface-selection)\n- [Basic Captures](#basic-captures)\n- [Filtering Traffic](#filtering-traffic)\n- [Protocol Filters](#protocol-filters)\n- [Port Filters](#port-filters)\n- [Host Filters](#host-filters)\n- ",
+  "payloads": [
+    "# Tcpdump Cheat Sheet",
+    "Tcpdump is a powerful command-line packet analyzer tool used for network troubleshooting and security analysis. It captures and displays packets being transmitted or received over a network.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Syntax](#basic-syntax)",
+    "- [Interface Selection](#interface-selection)",
+    "- [Basic Captures](#basic-captures)",
+    "- [Filtering Traffic](#filtering-traffic)",
+    "- [Protocol Filters](#protocol-filters)",
+    "- [Port Filters](#port-filters)",
+    "- [Host Filters](#host-filters)",
+    "- [Advanced Filters](#advanced-filters)",
+    "- [Output Options](#output-options)",
+    "- [Reading Captures](#reading-captures)",
+    "- [Practical Examples](#practical-examples)",
+    "## Basic Syntax"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/networking/tcpdump.md"
+  ]
+}

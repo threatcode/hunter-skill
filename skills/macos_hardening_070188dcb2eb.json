@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_070188dcb2eb",
+  "category": "macos-hardening",
+  "title": "macos auto start locations",
+  "description": "# macOS Auto Start\n\n{{#include ../banners/hacktricks-training.md}}\n\nThis section is heavily based on the blog series [**Beyond the good ol' LaunchAgents**](https://theevilbit.github.io/beyond/), the goal is to add **more Autostart Locations** (if possible), indicate **which techniques are still working** nowadays with latest version of macOS (13.4) and to specify the **permissions** needed.\n\n## Sandbox Bypass\n\n> [!TIP]\n> Here you can find start locations useful for **sandbox bypass** that allows",
+  "payloads": [
+    "# macOS Auto Start",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "This section is heavily based on the blog series [**Beyond the good ol' LaunchAgents**](https://theevilbit.github.io/beyond/), the goal is to add **more Autostart Locations** (if possible), indicate **which techniques are still working** nowadays with latest version of macOS (13.4) and to specify the **permissions** needed.",
+    "## Sandbox Bypass",
+    "> [!TIP]",
+    "> Here you can find start locations useful for **sandbox bypass** that allows you to simply execute something by **writing it into a file** and **waiting** for a very **common** **action**, a determined **amount of time** or an **action you can usually perform** from inside a sandbox without needing root permissions.",
+    "### Launchd",
+    "- Useful to bypass sandbox: [\u2705](https://emojipedia.org/check-mark-button)",
+    "- TCC Bypass: [\ud83d\udd34](https://emojipedia.org/large-red-circle)",
+    "#### Locations",
+    "- **`/Library/LaunchAgents`**",
+    "- **Trigger**: Reboot",
+    "- Root required",
+    "- **`/Library/LaunchDaemons`**",
+    "- **Trigger**: Reboot"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-auto-start-locations.md"
+  ]
+}

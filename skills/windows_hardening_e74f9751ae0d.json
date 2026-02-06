@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e74f9751ae0d",
+  "category": "windows-hardening",
+  "title": "sid history injection",
+  "description": "# SID-History Injection\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## SID History Injection Attack\n\nThe focus of the **SID History Injection Attack** is aiding **user migration between domains** while ensuring continued access to resources from the former domain. This is accomplished by **incorporating the user's previous Security Identifier (SID) into the SID History** of their new account. Notably, this process can be manipulated to grant unauthorized access by adding the SID of a hig",
+  "payloads": [
+    "# SID-History Injection",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## SID History Injection Attack",
+    "The focus of the **SID History Injection Attack** is aiding **user migration between domains** while ensuring continued access to resources from the former domain. This is accomplished by **incorporating the user's previous Security Identifier (SID) into the SID History** of their new account. Notably, this process can be manipulated to grant unauthorized access by adding the SID of a high-privilege group (such as Enterprise Admins or Domain Admins) from the parent domain to the SID History. This exploitation confers access to all resources within the parent domain.",
+    "Two methods exist for executing this attack: through the creation of either a **Golden Ticket** or a **Diamond Ticket**.",
+    "To pinpoint the SID for the **\"Enterprise Admins\"** group, one must first locate the SID of the root domain. Following the identification, the Enterprise Admins group SID can be constructed by appending `-519` to the root domain's SID. For instance, if the root domain SID is `S-1-5-21-280534878-1496970234-700767426`, the resulting SID for the \"Enterprise Admins\" group would be `S-1-5-21-280534878-1496970234-700767426-519`.",
+    "You could also use the **Domain Admins** groups, which ends in **512**.",
+    "Another way yo find the SID of a group of the other domain (for example \"Domain Admins\") is with:",
+    "```bash",
+    "Get-DomainGroup -Identity \"Domain Admins\" -Domain parent.io -Properties ObjectSid",
+    "> [!WARNING]",
+    "> Note that it's possible to disable SID history in a trust relationship which will make this attack fail.",
+    "According to the [**docs**](https://technet.microsoft.com/library/cc835085.aspx):",
+    "- **Disabling SIDHistory on forest trusts** using the netdom tool (`netdom trust /domain: /EnableSIDHistory:no on the domain controller`)",
+    "- **Applying SID Filter Quarantining to external trusts** using the netdom tool (`netdom trust /domain: /quarantine:yes on the domain controller`)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/sid-history-injection.md"
+  ]
+}

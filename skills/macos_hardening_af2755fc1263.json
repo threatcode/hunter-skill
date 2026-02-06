@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_af2755fc1263",
+  "category": "macos-hardening",
+  "title": "objects in memory",
+  "description": "# Objects in memory\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## CFRuntimeClass\n\nCF* objects come from CoreFoundation, which provides more than 50 classes of objects like `CFString`, `CFNumber` or `CFAllocator`.\n\nAll these classes are instances of the class `CFRuntimeClass`, which when called it returns an index to the `__CFRuntimeClassTable`. The CFRuntimeClass is defined in [**CFRuntime.h**](https://opensource.apple.com/source/CF/CF-1153.18/CFRuntime.h.auto.html):\n\n```objectivec\n/",
+  "payloads": [
+    "# Objects in memory",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## CFRuntimeClass",
+    "CF* objects come from CoreFoundation, which provides more than 50 classes of objects like `CFString`, `CFNumber` or `CFAllocator`.",
+    "All these classes are instances of the class `CFRuntimeClass`, which when called it returns an index to the `__CFRuntimeClassTable`. The CFRuntimeClass is defined in [**CFRuntime.h**](https://opensource.apple.com/source/CF/CF-1153.18/CFRuntime.h.auto.html):",
+    "```objectivec",
+    "// Some comments were added to the original code",
+    "enum { // Version field constants",
+    "_kCFRuntimeScannedObject =     (1UL << 0),",
+    "_kCFRuntimeResourcefulObject = (1UL << 2),  // tells CFRuntime to make use of the reclaim field",
+    "_kCFRuntimeCustomRefCount =    (1UL << 3),  // tells CFRuntime to make use of the refcount field",
+    "_kCFRuntimeRequiresAlignment = (1UL << 4),  // tells CFRuntime to make use of the requiredAlignment field",
+    "typedef struct __CFRuntimeClass {",
+    "CFIndex version;  // This is made a bitwise OR with the relevant previous flags",
+    "const char *className; // must be a pure ASCII string, nul-terminated"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-apps-inspecting-debugging-and-fuzzing/objects-in-memory.md"
+  ]
+}

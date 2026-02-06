@@ -1,0 +1,27 @@
+{
+  "id": "certifications_1bef8a696409",
+  "category": "certifications",
+  "title": "evading ids firewalls",
+  "description": "# Techniques for Evading IDS\n\n1. **Traffic Obfuscation**:\n   - **Encryption**: Encrypting traffic can prevent IDS from inspecting the payload. For example, using tools like **Stunnel** or **OpenVPN** to encrypt data streams.\n   - **Encoding**: Encoding payloads in formats like Base64 or using URL encoding can obscure the content. For example, encoding an SQL injection payload to bypass detection filters.\n\n2. **Fragmentation**:\n   - **Packet Fragmentation**: Breaking malicious payloads into small",
+  "payloads": [
+    "# Techniques for Evading IDS",
+    "1. **Traffic Obfuscation**:",
+    "- **Encryption**: Encrypting traffic can prevent IDS from inspecting the payload. For example, using tools like **Stunnel** or **OpenVPN** to encrypt data streams.",
+    "- **Encoding**: Encoding payloads in formats like Base64 or using URL encoding can obscure the content. For example, encoding an SQL injection payload to bypass detection filters.",
+    "2. **Fragmentation**:",
+    "- **Packet Fragmentation**: Breaking malicious payloads into smaller packets can evade detection by causing IDS to miss reassembled payloads. Techniques like IP fragmentation or TCP segmentation can be used.",
+    "3. **Polymorphism and Metamorphism**:",
+    "- **Polymorphic Code**: Altering the code structure without changing its functionality to evade signature-based detection. For example, changing variable names or code layout.",
+    "- **Metamorphic Code**: Completely rewriting the code to avoid signature detection. This involves transforming the code into a different form while maintaining the same behavior.",
+    "4. **Protocol Manipulation**:",
+    "- **Protocol Tunneling**: Encapsulating malicious traffic within legitimate protocols. For instance, using HTTP or DNS tunneling to bypass IDS inspection.",
+    "- **Protocol Abuses**: Exploiting protocol features to hide malicious payloads. For example, using malformed packets or unusual protocol behaviors.",
+    "# Techniques for Evading Firewalls",
+    "1. **Port Knocking**:",
+    "- **Description**: A technique where an attacker sends a sequence of connection attempts to closed ports. If the correct sequence is detected, the firewall temporarily opens a port for the attacker."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/certifications/additional_materials_for_certs/evading_ids_firewalls.md"
+  ]
+}

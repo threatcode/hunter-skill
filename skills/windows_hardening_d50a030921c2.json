@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d50a030921c2",
+  "category": "windows-hardening",
+  "title": "BadSuccessor",
+  "description": "# Abusing Active Directory ACLs/ACEs\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Overview\n\nDelegated\u00a0Managed\u00a0Service\u00a0Accounts\u202f(**dMSAs**) are a brand\u2011new AD principal type introduced with **Windows\u00a0Server\u202f2025**. They are designed to replace legacy service accounts by allowing a one\u2011click \u201cmigration\u201d that automatically copies the old account\u2019s Service\u202fPrincipal\u202fNames (SPNs), group memberships, delegation settings, and even cryptographic keys into the new dMSA, giving applications a",
+  "payloads": [
+    "# Abusing Active Directory ACLs/ACEs",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Delegated\u00a0Managed\u00a0Service\u00a0Accounts\u202f(**dMSAs**) are a brand\u2011new AD principal type introduced with **Windows\u00a0Server\u202f2025**. They are designed to replace legacy service accounts by allowing a one\u2011click \u201cmigration\u201d that automatically copies the old account\u2019s Service\u202fPrincipal\u202fNames (SPNs), group memberships, delegation settings, and even cryptographic keys into the new dMSA, giving applications a seamless cut\u2011over and eliminating Kerberoasting risk.",
+    "Akamai researchers found that a single attribute \u2014 **`msDS\u2011ManagedAccountPrecededByLink`** \u2014 tells the KDC which legacy account a dMSA \u201csucceeds\u201d. If an attacker can write that attribute (and toggle **`msDS\u2011DelegatedMSAState`\u00a0\u2192\u202f2**), the KDC will happily build a PAC that **inherits every SID of the chosen victim**, effectively allowing the dMSA to impersonate any user, including Domain\u00a0Admins.",
+    "## What exactly is a\u00a0dMSA?",
+    "* Built on top of **gMSA** technology but stored as the new AD class **`msDS\u2011DelegatedManagedServiceAccount`**.",
+    "* Supports an **opt\u2011in migration**: calling `Start\u2011ADServiceAccountMigration` links the dMSA to the legacy account, grants the legacy account write access to `msDS\u2011GroupMSAMembership`, and flips `msDS\u2011DelegatedMSAState`\u202f=\u202f1.",
+    "* After `Complete\u2011ADServiceAccountMigration`, the superseded account is disabled and the dMSA becomes fully functional; any host that previously used the legacy account is automatically authorised to pull the dMSA\u2019s password.",
+    "* During authentication, the KDC embeds a **KERB\u2011SUPERSEDED\u2011BY\u2011USER** hint so Windows\u00a011/24H2 clients transparently retry with the dMSA.",
+    "##\u00a0Requirements to attack",
+    "1. **At least one Windows\u202fServer\u202f2025 DC** so that the dMSA LDAP class and KDC logic exist.",
+    "2. **Any object\u2011creation or attribute\u2011write rights on an OU** (any OU) \u2013 e.g.\u00a0`Create\u00a0msDS\u2011DelegatedManagedServiceAccount` or simply **Create\u00a0All\u00a0Child\u00a0Objects**. Akamai found 91\u202f% of real\u2011world tenants grant such \u201cbenign\u201d OU permissions to non\u2011admins.",
+    "3. Ability to run tooling (PowerShell/Rubeus) from any domain\u2011joined host to request Kerberos tickets.",
+    "*No control over the victim user is required; the attack never touches the target account directly.*"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/acl-persistence-abuse/BadSuccessor.md"
+  ]
+}

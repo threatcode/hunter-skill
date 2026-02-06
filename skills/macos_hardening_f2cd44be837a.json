@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_f2cd44be837a",
+  "category": "macos-hardening",
+  "title": "macos launch environment constraints",
+  "description": "# macOS Launch/Environment Constraints & Trust Cache\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nLaunch constraints in macOS were introduced to enhance security by **regulating how, who, and from where a process can be initiated**. Initiated in macOS Ventura, they provide a framework that categorizes **each system binary into distinct constraint categories**, which are defined within the **trust cache**, a list containing system binaries and their respective hash",
+  "payloads": [
+    "# macOS Launch/Environment Constraints & Trust Cache",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Launch constraints in macOS were introduced to enhance security by **regulating how, who, and from where a process can be initiated**. Initiated in macOS Ventura, they provide a framework that categorizes **each system binary into distinct constraint categories**, which are defined within the **trust cache**, a list containing system binaries and their respective hashes\u200b. These constraints extend to every executable binary within the system, entailing a set of **rules** delineating the requirements for **launching a particular binary**. The rules encompass self constraints that a binary must satisfy, parent constraints required to be met by its parent process, and responsible constraints to be adhered to by other relevant entities\u200b.",
+    "The mechanism extends to third-party apps through **Environment Constraints**, beginning from macOS Sonoma, allowing developers to protect their apps by specifying a **set of keys and values for environment constraints.**",
+    "You define **launch environment and library constraints** in constraint dictionaries that you either save in **`launchd` property list files**, or in **separate property list** files that you use in code signing.",
+    "There are 4 types of constraints:",
+    "- **Self Constraints**: Constrains applied to the **running** binary.",
+    "- **Parent Process**: Constraints applied to the **parent of the process** (for example **`launchd`** running a XP service)",
+    "- **Responsible Constraints**: Constraints applied to the **process calling the service** in a XPC communication",
+    "- **Library load constraints**: Use library load constraints to selectively describe code that can be loaded",
+    "So when a process tries to launch another process \u2014 by calling `execve(_:_:_:)` or `posix_spawn(_:_:_:_:_:_:)` \u2014 the operating system checks that the **executable** file **satisfies** its **own self constraint**. It also checks that the **parent** **process\u2019s** executable **satisfies** the executable\u2019s **parent constraint**, and that the **responsible** **process\u2019s** executable **satisfies the executable\u2019s responsible process constrain**t. If any of these launch constraints aren\u2019t satisfied, the operating system doesn\u2019t run the program.",
+    "If when loading a library any part of the **library constraint isn\u2019t true**, your process **doesn\u2019t load** the library.",
+    "## LC Categories",
+    "A LC as composed by **facts** and **logical operations** (and, or..) that combines facts."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-launch-environment-constraints.md"
+  ]
+}

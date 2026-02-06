@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_543f0388a772",
+  "category": "linux-hardening",
+  "title": "linux privilege escalation checklist",
+  "description": "# Checklist - Linux Privilege Escalation\n\n{{#include ../banners/hacktricks-training.md}}\n\n### **Best tool to look for Linux local privilege escalation vectors:** [**LinPEAS**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)\n\n### [System Information](privilege-escalation/index.html#system-information)\n\n- [ ] Get **OS information**\n- [ ] Check the [**PATH**](privilege-escalation/index.html#path), any **writable folder**?\n- [ ] Check [**env variables**",
+  "payloads": [
+    "# Checklist - Linux Privilege Escalation",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "### **Best tool to look for Linux local privilege escalation vectors:** [**LinPEAS**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)",
+    "### [System Information](privilege-escalation/index.html#system-information)",
+    "- [ ] Get **OS information**",
+    "- [ ] Check the [**PATH**](privilege-escalation/index.html#path), any **writable folder**?",
+    "- [ ] Check [**env variables**](privilege-escalation/index.html#env-info), any sensitive detail?",
+    "- [ ] Search for [**kernel exploits**](privilege-escalation/index.html#kernel-exploits) **using scripts** (DirtyCow?)",
+    "- [ ] **Check** if the [**sudo version** is vulnerable](privilege-escalation/index.html#sudo-version)",
+    "- [ ] [**Dmesg** signature verification failed](privilege-escalation/index.html#dmesg-signature-verification-failed)",
+    "- [ ] More system enum ([date, system stats, cpu info, printers](privilege-escalation/index.html#more-system-enumeration))",
+    "- [ ] [Enumerate more defenses](privilege-escalation/index.html#enumerate-possible-defenses)",
+    "### [Drives](privilege-escalation/index.html#drives)",
+    "- [ ] **List mounted** drives",
+    "- [ ] **Any unmounted drive?**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/linux-privilege-escalation-checklist.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_07bd04c3fd2c",
+  "category": "temp",
+  "title": "scapy basic scanner",
+  "description": "# Using Scapy to Scan a System\n\nThe following is an example of a Python script that uses Scapy to perform a basic TCP port scan:\n\n```python\nfrom scapy.all import *\nimport sys\n\ndef tcp_port_scan(target, ports):\n    for port in ports:\n        tcp_packet = IP(dst=target) / TCP(dport=port, flags=\"S\")\n        response = sr1(tcp_packet, timeout=2, verbose=0)\n\n        if response is not None and response[TCP].flags == 18:\n            print(f\"Port {port} is open on {target}\")\n        else:\n            p",
+  "payloads": [
+    "# Using Scapy to Scan a System",
+    "The following is an example of a Python script that uses Scapy to perform a basic TCP port scan:",
+    "```python",
+    "from scapy.all import *",
+    "import sys",
+    "def tcp_port_scan(target, ports):",
+    "for port in ports:",
+    "tcp_packet = IP(dst=target) / TCP(dport=port, flags=\"S\")",
+    "response = sr1(tcp_packet, timeout=2, verbose=0)",
+    "if response is not None and response[TCP].flags == 18:",
+    "print(f\"Port {port} is open on {target}\")",
+    "print(f\"Port {port} is closed on {target}\")",
+    "if __name__ == \"__main__\":",
+    "target = sys.argv[1]",
+    "ports = range(1, 1024)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/recon_scripts/scanning/scapy_basic_scanner.md"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rce-7628c1af7d81",
+  "category": "RCE",
+  "title": "Bazaar",
+  "description": "# Bazaar\n\n> Bazaar  (also known as bzr ) is a free, distributed version control system (DVCS) that helps you track project history over time and collaborate seamlessly with others. Developed by Canonical, Bazaar emphasizes ease of use, a flexible workflow, and rich features to cater to both individual developers and large teams.\n\n## Summary\n\n* [Tools](#tools)\n    * [rip-bzr.pl](#rip-bzrpl)\n    * [bzr_dumper](#bzr_dumper)\n* [References](#references)\n\n## Tools\n\n### rip-bzr.pl\n\n* [kost/dvcs-ripper/",
+  "payloads": [
+    "* [kost/dvcs-ripper/rip-bzr.pl](https://raw.githubusercontent.com/kost/dvcs-ripper/master/rip-bzr.pl)",
+    "* [SeahunOh/bzr_dumper](https://github.com/SeahunOh/bzr_dumper)",
+    "python3 dumper.py -u \"http://127.0.0.1:5000/\" -o source",
+    "[!] Target : http://127.0.0.1:5000/",
+    "* [STEM CTF Cyber Challenge 2019 \u2013 My First Blog - m3ssap0 / zuzzur3ll0n1 - March 2, 2019](https://ctftime.org/writeup/13380)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Insecure Source Code Management/Bazaar.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}
