@@ -86,9 +86,7 @@ Root Directory
 │  └─ migrate_skills.py           🔄 Migration tool
 │
 └─ Data Directories
-   ├─ skills/                     (~100+ files)
-   ├─ skills/              (~50+ files)
-   └─ skills/          (~100+ files)
+   ├─ skills/                     (~250+ files)
 ```
 
 ---

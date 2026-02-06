@@ -206,8 +206,6 @@ EXPECTED RESULTS:  100% compliance, 0 downtime
 │
 └─ Data directories
    ├─ skills/
-   ├─ skills/
-   └─ skills/
 
 
 ⚡ QUICK START (2 minutes)
