@@ -1,0 +1,27 @@
+{
+  "id": "web_application_testing_f15d8611260b",
+  "category": "web-application-testing",
+  "title": "api security assessment README",
+  "description": "# API Security Assessment Tool\n\nA comprehensive automated security testing tool for REST APIs, covering 9 critical security domains.\n\n## Features\n\n\u2705 **Transport & TLS Security** - HTTPS enforcement, certificate validation, HSTS headers  \n\u2705 **Authentication Testing** - JWT validation, token lifetime, algorithm security  \n\u2705 **Authorization Testing** - IDOR prevention, privilege escalation, mass assignment  \n\u2705 **Input Validation** - SQL injection, NoSQL injection, command injection  \n\u2705 **SSRF Prote",
+  "payloads": [
+    "# API Security Assessment Tool",
+    "A comprehensive automated security testing tool for REST APIs, covering 9 critical security domains.",
+    "## Features",
+    "\u2705 **Transport & TLS Security** - HTTPS enforcement, certificate validation, HSTS headers",
+    "\u2705 **Authentication Testing** - JWT validation, token lifetime, algorithm security",
+    "\u2705 **Authorization Testing** - IDOR prevention, privilege escalation, mass assignment",
+    "\u2705 **Input Validation** - SQL injection, NoSQL injection, command injection",
+    "\u2705 **SSRF Protection** - URL validation, private IP blocking, cloud metadata protection",
+    "\u2705 **Rate Limiting** - DoS protection, request throttling",
+    "\u2705 **Information Disclosure** - Error handling, header exposure, verbose messages",
+    "\u2705 **Management Endpoints** - Admin interface exposure, debug endpoints",
+    "\u2705 **CORS Configuration** - Cross-Origin Resource Sharing security",
+    "\u2705 **Automated Reporting** - JSON export, severity classification, remediation guidance",
+    "## Installation",
+    "```bash"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/web-application-testing/api_security_assessment_README.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_ef61415e7eda",
+  "category": "generic-methodologies-and-resources",
+  "title": "mobile phishing malicious apps",
+  "description": "# Mobile Phishing & Malicious App Distribution (Android & iOS)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> [!INFO]\n> This page covers techniques used by threat actors to distribute **malicious Android APKs** and **iOS mobile-configuration profiles** through phishing (SEO, social engineering, fake stores, dating apps, etc.).\n> The material is adapted from the SarangTrap campaign exposed by Zimperium zLabs (2025) and other public research.\n\n## Attack Flow\n\n1. **SEO/Phishing Infrastructur",
+  "payloads": [
+    "# Mobile Phishing & Malicious App Distribution (Android & iOS)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> [!INFO]",
+    "> This page covers techniques used by threat actors to distribute **malicious Android APKs** and **iOS mobile-configuration profiles** through phishing (SEO, social engineering, fake stores, dating apps, etc.).",
+    "> The material is adapted from the SarangTrap campaign exposed by Zimperium zLabs (2025) and other public research.",
+    "## Attack Flow",
+    "1. **SEO/Phishing Infrastructure**",
+    "* Register dozens of look-alike domains (dating, cloud share, car service\u2026).",
+    "\u2013 Use local language keywords and emojis in the `<title>` element to rank in Google.",
+    "\u2013 Host *both* Android (`.apk`) and iOS install instructions on the same landing page.",
+    "2. **First Stage Download**",
+    "* Android: direct link to an *unsigned* or \u201cthird-party store\u201d APK.",
+    "* iOS: `itms-services://` or plain HTTPS link to a malicious **mobileconfig** profile (see below).",
+    "3. **Post-install Social Engineering**",
+    "* On first run the app asks for an **invitation / verification code** (exclusive access illusion)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/mobile-phishing-malicious-apps.md"
+  ]
+}

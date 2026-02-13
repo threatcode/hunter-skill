@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_527807e448ed",
+  "category": "macos-hardening",
+  "title": "macos default sandbox debug",
+  "description": "# macOS Default Sandbox Debug\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\nIn this page you can find how to create an app to launch arbitrary commands from inside the default macOS sandbox:\n\n1. Compile the application:\n\n```objectivec:main.m\n#include <Foundation/Foundation.h>\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        while (true) {\n            char input[512];\n\n            printf(\"Enter command to run (or 'exit' to quit): \");\n            if (fgets(inpu",
+  "payloads": [
+    "# macOS Default Sandbox Debug",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "In this page you can find how to create an app to launch arbitrary commands from inside the default macOS sandbox:",
+    "1. Compile the application:",
+    "```objectivec:main.m",
+    "#include <Foundation/Foundation.h>",
+    "int main(int argc, const char * argv[]) {",
+    "@autoreleasepool {",
+    "while (true) {",
+    "char input[512];",
+    "printf(\"Enter command to run (or 'exit' to quit): \");",
+    "if (fgets(input, sizeof(input), stdin) == NULL) {",
+    "break;",
+    "// Remove newline character",
+    "size_t len = strlen(input);"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-sandbox/macos-default-sandbox-debug.md"
+  ]
+}

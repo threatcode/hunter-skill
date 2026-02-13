@@ -1,0 +1,27 @@
+{
+  "id": "misc_9ba1ab0d6d8f",
+  "category": "Misc",
+  "title": "more tools tools",
+  "description": "# More_Tools Tools\n\nThe following tools are organized for this category:\n\n---\n\n- [3klCon - Automation Recon Tool Which Works With Large And Medium Scope](http://feedproxy.google.com/~r/PentestTools/~3/oiaISqnR2nk/3klcon-automation-recon-tool-which.html)\n- [4-ZERO-3 - 403/401 Bypass Methods + Bash Automation](http://www.kitploit.com/2021/11/4-zero-3-403401-bypass-methods-bash.html)\n- [ADSearch - A Tool To Help Query AD Via The LDAP Protocol](http://feedproxy.google.com/~r/PentestTools/~3/UPDX62Eq",
+  "payloads": [
+    "# More_Tools Tools",
+    "The following tools are organized for this category:",
+    "- [3klCon - Automation Recon Tool Which Works With Large And Medium Scope](http://feedproxy.google.com/~r/PentestTools/~3/oiaISqnR2nk/3klcon-automation-recon-tool-which.html)",
+    "- [4-ZERO-3 - 403/401 Bypass Methods + Bash Automation](http://www.kitploit.com/2021/11/4-zero-3-403401-bypass-methods-bash.html)",
+    "- [ADSearch - A Tool To Help Query AD Via The LDAP Protocol](http://feedproxy.google.com/~r/PentestTools/~3/UPDX62Eqt9A/adsearch-tool-to-help-query-ad-via-ldap.html)",
+    "- [AF-ShellHunter - Auto Shell Lookup](http://feedproxy.google.com/~r/PentestTools/~3/subWGZyFiO8/af-shellhunter-auto-shell-lookup.html)",
+    "- [AMSITrigger - The Hunt For Malicious Strings](http://feedproxy.google.com/~r/PentestTools/~3/c-giQMjqfRI/amsitrigger-hunt-for-malicious-strings.html)",
+    "- [AVCLASS++ - Yet Another Massive Malware Labeling Tool](http://feedproxy.google.com/~r/PentestTools/~3/grHx9mKrtYw/avclass-yet-another-massive-malware.html)",
+    "- [AVIator - Antivirus Evasion Project](http://www.kitploit.com/2023/01/aviator-antivirus-evasion-project.html)",
+    "- [AceLdr - Cobalt Strike UDRL For Memory Scanner Evasion](http://www.kitploit.com/2023/01/aceldr-cobalt-strike-udrl-for-memory.html)",
+    "- [Aftermath - A Free macOS IR Framework](http://www.kitploit.com/2022/12/aftermath-free-macos-ir-framework.html)",
+    "- [Agente - Distributed Simple And Robust Release Management And Monitoring System](http://feedproxy.google.com/~r/PentestTools/~3/MMfIyPc4oQY/agente-distributed-simple-and-robust.html)",
+    "- [Anevicon - A High-Performant UDP-based Load Generator](http://feedproxy.google.com/~r/PentestTools/~3/5XmXet0TlPs/anevicon-high-performant-udp-based-load.html)",
+    "- [Anteater - CI/CD Gate Check Framework](http://feedproxy.google.com/~r/PentestTools/~3/CmExmYQNlOA/anteater-cicd-gate-check-framework.html)",
+    "- [Antispy - A Free But Powerful Anti Virus And Rootkits Toolkit](http://feedproxy.google.com/~r/PentestTools/~3/XkcKtXVulps/antispy-free-but-powerful-anti-virus.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/organized_tools/more_tools_tools.md"
+  ]
+}

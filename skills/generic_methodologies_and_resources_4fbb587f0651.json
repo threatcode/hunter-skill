@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_4fbb587f0651",
+  "category": "generic-methodologies-and-resources",
+  "title": "nmap summary esp",
+  "description": "# Nmap Summary (ESP)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n```\nnmap -sV -sC -O -n -oA nmapscan 192.168.0.1/24\n```\n\n## Parameters\n\n### IPs to scan\n\n- **`<ip>,<net/mask>`:** Indicate the ips directly\n- **`-iL <ips_file>`:** list_IPs\n- **`-iR <number>`**: Number of random Ips, you can exclude possible Ips with `--exclude <Ips>` or `--excludefile <file>`.\n\n### Equipment discovery\n\nBy default Nmap launches a discovery phase consisting of: `-PA80 -PS443 -PE -PP`\n\n- **`-sL`**: It is not ",
+  "payloads": [
+    "# Nmap Summary (ESP)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "nmap -sV -sC -O -n -oA nmapscan 192.168.0.1/24",
+    "## Parameters",
+    "### IPs to scan",
+    "- **`<ip>,<net/mask>`:** Indicate the ips directly",
+    "- **`-iL <ips_file>`:** list_IPs",
+    "- **`-iR <number>`**: Number of random Ips, you can exclude possible Ips with `--exclude <Ips>` or `--excludefile <file>`.",
+    "### Equipment discovery",
+    "By default Nmap launches a discovery phase consisting of: `-PA80 -PS443 -PE -PP`",
+    "- **`-sL`**: It is not invasive, it lists the targets making **DNS** requests to resolve names. It is useful to know if for example www.prueba.es/24 all Ips are our targets.",
+    "- **`-Pn`**: **No ping**. This is useful if you know that all of them are active (if not, you could lose a lot of time, but this option also produces false negatives saying that they are not active), it prevents the discovery phase.",
+    "- **`-sn`** : **No port scan**. After completing the reconnaissance phase, it does not scan ports. It is relatively stealthy, and allows a small network scan. With privileges it sends an ACK (-PA) to 80, a SYN(-PS) to 443 and an echo request and a Timestamp request, without privileges it always completes connections. If the target is the network, it only uses ARP(-PR). If used with another option, only the packets of the other option are dropped.",
+    "- **`-PR`**: **Ping ARP**. It is used by default when analyzing computers in our network, it is faster than using pings. If you do not want to use ARP packets use `--send-ip`.",
+    "- **`-PS <ports>`**: It sends SYN packets to which if it answers SYN/ACK it is open (to which it answers with RST so as not to end the connection), if it answers RST it is closed and if it does not answer it is unreachable. In case of not having privileges, a total connection is automatically used. If no ports are given, it throws it to 80."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/nmap-summary-esp.md"
+  ]
+}

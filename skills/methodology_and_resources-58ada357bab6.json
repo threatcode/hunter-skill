@@ -1,0 +1,22 @@
+{
+  "id": "methodology_and_resources-58ada357bab6",
+  "category": "Methodology and Resources",
+  "title": "Cloud   Azure Pentest",
+  "description": "# Cloud - Azure\n\n:warning: Content of this page has been moved to [InternalAllTheThings/cloud/azure](https://github.com/swisskyrepo/InternalAllTheThings/)\n\n- [Azure AD Connect](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-ad-connect/)\n- [Azure AD Enumerate](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-enumeration/)\n- [Azure AD IAM](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-devices-users-sp/)\n- [Azure AD Phishing](https://",
+  "payloads": [
+    "# Cloud - Azure",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/cloud/azure](https://github.com/swisskyrepo/InternalAllTheThings/)",
+    "- [Azure AD Connect](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-ad-connect/)",
+    "- [Azure AD Enumerate](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-enumeration/)",
+    "- [Azure AD IAM](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-devices-users-sp/)",
+    "- [Azure AD Phishing](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-phishing/)",
+    "- [Azure AD Tokens](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-access-and-token/)",
+    "- [Azure Persistence](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-persistence/)",
+    "- [Azure Requirements](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-requirements/)",
+    "- [Azure Services](https://swisskyrepo.github.io/InternalAllTheThings/cloud/azure/azure-services/)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Cloud - Azure Pentest.md"
+  ]
+}

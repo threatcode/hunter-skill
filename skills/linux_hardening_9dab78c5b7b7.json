@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_9dab78c5b7b7",
+  "category": "linux-hardening",
+  "title": "vmware tools service discovery untrusted search path cve 2025 41244",
+  "description": "# VMware Tools service discovery LPE (CWE-426) via regex-based binary discovery (CVE-2025-41244)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis technique abuses regex-driven service discovery pipelines that parse running process command lines to infer service versions and then execute a candidate binary with a \"version\" flag. When permissive patterns accept untrusted, attacker-controlled paths (e.g., /tmp/httpd), the privileged collector executes an arbitrary binary from an untrusted l",
+  "payloads": [
+    "# VMware Tools service discovery LPE (CWE-426) via regex-based binary discovery (CVE-2025-41244)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This technique abuses regex-driven service discovery pipelines that parse running process command lines to infer service versions and then execute a candidate binary with a \"version\" flag. When permissive patterns accept untrusted, attacker-controlled paths (e.g., /tmp/httpd), the privileged collector executes an arbitrary binary from an untrusted location, yielding local privilege escalation. NVISO documented this in VMware Tools/Aria Operations Service Discovery as CVE-2025-41244.",
+    "- Impact: Local privilege escalation to root (or to the privileged discovery account)",
+    "- Root cause: Untrusted Search Path (CWE-426) + permissive regex matching of process command lines",
+    "- Affected: open-vm-tools/VMware Tools on Linux (credential-less discovery), VMware Aria Operations SDMP (credential-based discovery via Tools/proxy)",
+    "## How VMware service discovery works (high level)",
+    "- Credential-based (legacy): Aria executes discovery scripts inside the guest via VMware Tools using configured privileged credentials.",
+    "- Credential-less (modern): Discovery logic runs within VMware Tools, already privileged in the guest.",
+    "Both modes ultimately run shell logic that scans processes with listening sockets, extracts a matching command path via a regex, and executes the first argv token with a version flag.",
+    "## Root cause and vulnerable pattern (open-vm-tools)",
+    "In open-vm-tools, the serviceDiscovery plugin script get-versions.sh matches candidate binaries using broad regular expressions and executes the first token without any trusted-path validation:",
+    "```bash",
+    "get_version() {",
+    "PATTERN=$1"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/vmware-tools-service-discovery-untrusted-search-path-cve-2025-41244.md"
+  ]
+}

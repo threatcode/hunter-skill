@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-ac7b77888b3c",
+  "category": "SQL Injection",
+  "title": "DB2 Injection",
+  "description": "# DB2 Injection\n\n> IBM DB2 is a family of relational database management systems (RDBMS) developed by IBM. Originally created in the 1980s for mainframes, DB2 has evolved to support various platforms and workloads, including distributed systems, cloud environments, and hybrid deployments.\n\n## Summary\n\n* [DB2 Comments](#db2-comments)\n* [DB2 Default Databases](#db2-default-databases)\n* [DB2 Enumeration](#db2-enumeration)\n* [DB2 Methodology](#db2-methodology)\n* [DB2 Error Based](#db2-error-based)\n*",
+  "payloads": [
+    "# DB2 Injection",
+    "> IBM DB2 is a family of relational database management systems (RDBMS) developed by IBM. Originally created in the 1980s for mainframes, DB2 has evolved to support various platforms and workloads, including distributed systems, cloud environments, and hybrid deployments.",
+    "## Summary",
+    "* [DB2 Comments](#db2-comments)",
+    "* [DB2 Default Databases](#db2-default-databases)",
+    "* [DB2 Enumeration](#db2-enumeration)",
+    "* [DB2 Methodology](#db2-methodology)",
+    "* [DB2 Error Based](#db2-error-based)",
+    "* [DB2 Blind Based](#db2-blind-based)",
+    "* [DB2 Time Based](#db2-time-based)",
+    "* [DB2 Command Execution](#db2-command-execution)",
+    "* [DB2 WAF Bypass](#db2-waf-bypass)",
+    "* [DB2 Accounts and Privileges](#db2-accounts-and-privileges)",
+    "* [References](#references)",
+    "## DB2 Comments"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/DB2 Injection.md"
+  ]
+}

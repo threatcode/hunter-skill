@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_79424bbb2475",
+  "category": "macos-hardening",
+  "title": "macos iokit",
+  "description": "# macOS IOKit\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nThe I/O Kit is an open-source, object-oriented **device-driver framework** in the XNU kernel, handles **dynamically loaded device drivers**. It allows modular code to be added to the kernel on-the-fly, supporting diverse hardware.\n\nIOKit drivers will basically **export functions from the kernel**. These function parameter **types** are **predefined** and are verified. Moreover, similar to XPC, IOKit is jus",
+  "payloads": [
+    "# macOS IOKit",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "The I/O Kit is an open-source, object-oriented **device-driver framework** in the XNU kernel, handles **dynamically loaded device drivers**. It allows modular code to be added to the kernel on-the-fly, supporting diverse hardware.",
+    "IOKit drivers will basically **export functions from the kernel**. These function parameter **types** are **predefined** and are verified. Moreover, similar to XPC, IOKit is just another layer on **top of Mach messages**.",
+    "**IOKit XNU kernel code** is opensourced by Apple in [https://github.com/apple-oss-distributions/xnu/tree/main/iokit](https://github.com/apple-oss-distributions/xnu/tree/main/iokit). Moreover, the user space IOKit components are also opensource [https://github.com/opensource-apple/IOKitUser](https://github.com/opensource-apple/IOKitUser).",
+    "However, **no IOKit drivers** are opensource. Anyway, from time to time a release of a driver might come with symbols that makes it easier to debug it. Check how to [**get the driver extensions from the firmware here**](#ipsw)**.**",
+    "It's written in **C++**. You can get demangled C++ symbols with:",
+    "```bash",
+    "# Get demangled symbols",
+    "nm -C com.apple.driver.AppleJPEGDriver",
+    "# Demangled symbols from stdin",
+    "c++filt",
+    "__ZN16IOUserClient202222dispatchExternalMethodEjP31IOExternalMethodArgumentsOpaquePK28IOExternalMethodDispatch2022mP8OSObjectPv",
+    "IOUserClient2022::dispatchExternalMethod(unsigned int, IOExternalMethodArgumentsOpaque*, IOExternalMethodDispatch2022 const*, unsigned long, OSObject*, void*)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/mac-os-architecture/macos-iokit.md"
+  ]
+}

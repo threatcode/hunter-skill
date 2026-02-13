@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_30a59e44badc",
+  "category": "macos-hardening",
+  "title": "macos gatekeeper",
+  "description": "# macOS Gatekeeper / Quarantine / XProtect\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\n## Gatekeeper\n\n**Gatekeeper** is a security feature developed for Mac operating systems, designed to ensure that users **run only trusted software** on their systems. It functions by **validating software** that a user downloads and attempts to open from **sources outside the App Store**, such as an app, a plug-in, or an installer package.\n\nThe key mechanism of Gatekeeper lies in its **verification",
+  "payloads": [
+    "# macOS Gatekeeper / Quarantine / XProtect",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Gatekeeper",
+    "**Gatekeeper** is a security feature developed for Mac operating systems, designed to ensure that users **run only trusted software** on their systems. It functions by **validating software** that a user downloads and attempts to open from **sources outside the App Store**, such as an app, a plug-in, or an installer package.",
+    "The key mechanism of Gatekeeper lies in its **verification** process. It checks if the downloaded software is **signed by a recognized developer**, ensuring the software's authenticity. Further, it ascertains whether the software is **notarised by Apple**, confirming that it is devoid of known malicious content and has not been tampered with after notarisation.",
+    "Additionally, Gatekeeper reinforces user control and security by **prompting users to approve the opening** of downloaded software for the first time. This safeguard helps prevent users from inadvertently running potentially harmful executable code that they may have mistaken for a harmless data file.",
+    "### Application Signatures",
+    "Application signatures, also known as code signatures, are a critical component of Apple's security infrastructure. They're used to **verify the identity of the software author** (the developer) and to ensure that the code hasn't been tampered with since it was last signed.",
+    "Here's how it works:",
+    "1. **Signing the Application:** When a developer is ready to distribute their application, they **sign the application using a private key**. This private key is associated with a **certificate that Apple issues to the developer** when they enrol in the Apple Developer Program. The signing process involves creating a cryptographic hash of all parts of the app and encrypting this hash with the developer's private key.",
+    "2. **Distributing the Application:** The signed application is then distributed to users along with the developer's certificate, which contains the corresponding public key.",
+    "3. **Verifying the Application:** When a user downloads and attempts to run the application, their Mac operating system uses the public key from the developer's certificate to decrypt the hash. It then recalculates the hash based on the current state of the application and compares this with the decrypted hash. If they match, it means **the application hasn't been modified** since the developer signed it, and the system permits the application to run.",
+    "Application signatures are an essential part of Apple's Gatekeeper technology. When a user attempts to **open an application downloaded from the internet**, Gatekeeper verifies the application signature. If it's signed with a certificate issued by Apple to a known developer and the code hasn't been tampered with, Gatekeeper permits the application to run. Otherwise, it blocks the application and alerts the user.",
+    "Starting from macOS Catalina, **Gatekeeper also checks whether the application has been notarized** by Apple, adding an extra layer of security. The notarization process checks the application for known security issues and malicious code, and if these checks pass, Apple adds a ticket to the application that Gatekeeper can verify.",
+    "#### Check Signatures"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-gatekeeper.md"
+  ]
+}

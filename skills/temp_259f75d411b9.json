@@ -1,0 +1,27 @@
+{
+  "id": "temp_259f75d411b9",
+  "category": "temp",
+  "title": "python cool tricks",
+  "description": "# Cool Python Tricks\n\nPlease do not use Python 2 and work using Python 3. However, I have added a few examples of the old ways of doing these operations in Python 2 for your reference only.\n\n## Starting a quick web server to serve some files (useful for post exploitation)\n\n### In Python 2.x\n```\npython -m SimpleHTTPServer 1337\n```\n\n### In Python 3.x\n```\npython3 -m http.server 1337\n```\n\n----\n## Pythonic Web Client\n\n### In Python 2.x\n```\npython -c 'import urllib2; print urllib2.urlopen(\"http://h4ck",
+  "payloads": [
+    "# Cool Python Tricks",
+    "Please do not use Python 2 and work using Python 3. However, I have added a few examples of the old ways of doing these operations in Python 2 for your reference only.",
+    "## Starting a quick web server to serve some files (useful for post exploitation)",
+    "### In Python 2.x",
+    "python -m SimpleHTTPServer 1337",
+    "### In Python 3.x",
+    "python3 -m http.server 1337",
+    "## Pythonic Web Client",
+    "### In Python 2.x",
+    "python -c 'import urllib2; print urllib2.urlopen(\"http://h4cker.org/web\").read()' | tee /tmp/file.html",
+    "### In Python 3.x",
+    "python3 -c 'import urllib.request; urllib.request.urlretrieve (\"http://h4cker.org/web\",\"/tmp/h4cker.html\")'",
+    "## Python Debugger",
+    "This imports a Python file and runs the debugger automatically. This is useful for debugging Python-based malware and for post-exploitation.",
+    "python -m pdb <some_python_file>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/exploitation/python_cool_tricks.md"
+  ]
+}

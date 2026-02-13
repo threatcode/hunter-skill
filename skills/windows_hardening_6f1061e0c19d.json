@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_6f1061e0c19d",
+  "category": "windows-hardening",
+  "title": "advanced html staged dll sideloading",
+  "description": "# Advanced DLL Side-Loading With HTML-Embedded Payload Staging\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Tradecraft Overview\n\nAshen Lepus (aka WIRTE) weaponized a repeatable pattern that chains DLL sideloading, staged HTML payloads, and modular .NET backdoors to persist inside Middle Eastern diplomatic networks. The technique is reusable by any operator because it relies on:\n\n- **Archive-based social engineering**: benign PDFs instruct targets to pull a RAR archive from a file-sh",
+  "payloads": [
+    "# Advanced DLL Side-Loading With HTML-Embedded Payload Staging",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Tradecraft Overview",
+    "Ashen Lepus (aka WIRTE) weaponized a repeatable pattern that chains DLL sideloading, staged HTML payloads, and modular .NET backdoors to persist inside Middle Eastern diplomatic networks. The technique is reusable by any operator because it relies on:",
+    "- **Archive-based social engineering**: benign PDFs instruct targets to pull a RAR archive from a file-sharing site. The archive bundles a real-looking document viewer EXE, a malicious DLL named after a trusted library (e.g., `netutils.dll`, `srvcli.dll`, `dwampi.dll`, `wtsapi32.dll`), and a decoy `Document.pdf`.",
+    "- **DLL search order abuse**: the victim double-clicks the EXE, Windows resolves the DLL import from the current directory, and the malicious loader (AshenLoader) executes inside the trusted process while the decoy PDF opens to avoid suspicion.",
+    "- **Living-off-the-land staging**: every later stage (AshenStager \u2192 AshenOrchestrator \u2192 modules) is kept off disk until needed, delivered as encrypted blobs hidden inside otherwise harmless HTML responses.",
+    "## Multi-Stage Side-Loading Chain",
+    "1. **Decoy EXE \u2192 AshenLoader**: the EXE side-loads AshenLoader, which performs host recon, AES-CTR encrypts it, and POSTs it inside rotating parameters such as `token=`, `id=`, `q=`, or `auth=` to API-looking paths (e.g., `/api/v2/account`).",
+    "2. **HTML extraction**: the C2 only betrays the next stage when the client IP geolocates to the target region and the `User-Agent` matches the implant, frustrating sandboxes. When the checks pass the HTTP body contains a `<headerp>...</headerp>` blob with the Base64/AES-CTR encrypted AshenStager payload.",
+    "3. **Second sideload**: AshenStager is deployed with another legitimate binary that imports `wtsapi32.dll`. The malicious copy injected into the binary fetches more HTML, this time carving `<article>...</article>` to recover AshenOrchestrator.",
+    "4. **AshenOrchestrator**: a modular .NET controller that decodes a Base64 JSON config. The config\u2019s `tg` and `au` fields are concatenated/hashed into the AES key, which decrypts `xrk`. The resulting bytes act as an XOR key for every module blob fetched afterwards.",
+    "5. **Module delivery**: each module is described through HTML comments that redirect the parser to an arbitrary tag, breaking static rules that look only for `<headerp>` or `<article>`. Modules include persistence (`PR*`), uninstallers (`UN*`), reconnaissance (`SN`), screen capture (`SCT`), and file exploration (`FE`).",
+    "### HTML Container Parsing Pattern",
+    "```csharp"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/advanced-html-staged-dll-sideloading.md"
+  ]
+}

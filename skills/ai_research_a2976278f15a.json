@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_a2976278f15a",
+  "category": "ai-research",
+  "title": "detecting ai",
+  "description": "# Detecting AI Usage Within a Company: Strategies and Best Practices\n\n## Overview\nAs AI adoption accelerates across enterprises, organizations need comprehensive strategies to detect, monitor, and govern AI usage. This includes both sanctioned AI tools and \"shadow AI\" - unauthorized AI applications that employees may be using without IT oversight.\n\n## Comprehensive AI Inventory and Discovery\n\n### Initial Assessment\nYou should always perform a comprehensive inventory of existing AI tools and appl",
+  "payloads": [
+    "# Detecting AI Usage Within a Company: Strategies and Best Practices",
+    "## Overview",
+    "As AI adoption accelerates across enterprises, organizations need comprehensive strategies to detect, monitor, and govern AI usage. This includes both sanctioned AI tools and \"shadow AI\" - unauthorized AI applications that employees may be using without IT oversight.",
+    "## Comprehensive AI Inventory and Discovery",
+    "### Initial Assessment",
+    "You should always perform a comprehensive inventory of existing AI tools and applications within the company. This involves:",
+    "- **Departmental Engagement**: Identify AI tools across all departments:",
+    "- Customer service (chatbots, sentiment analysis)",
+    "- Marketing (predictive analytics, content generation)",
+    "- HR (resume screening, candidate matching)",
+    "- Finance (fraud detection, automated accounting)",
+    "- Sales (lead scoring, CRM automation)",
+    "- IT/Security (threat detection, log analysis)",
+    "- Legal (contract analysis, compliance monitoring)",
+    "- **License and Subscription Audit**: Review software licenses and subscriptions for AI-related tools"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ai-risk-management/detecting_ai.md"
+  ]
+}

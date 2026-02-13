@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_61fb36e24dd8",
+  "category": "windows-hardening",
+  "title": "leaked handle exploitation",
+  "description": "# Leaked Handle Exploitation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Introduction\n\nHandles in a process allow to **access** different **Windows resources**:\n\n![RootedCON2022 - Exploiting Leaked Handles for LPE](<../../images/image (246).png>)\n\nThere have been already several **privilege escalation** cases where a **privileged process** with **open and inheritable handles** have **run** an **unprivileged process** giving it **access to all those handles**.\n\nFor example, imagine tha",
+  "payloads": [
+    "# Leaked Handle Exploitation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "Handles in a process allow to **access** different **Windows resources**:",
+    "![RootedCON2022 - Exploiting Leaked Handles for LPE](<../../images/image (246).png>)",
+    "There have been already several **privilege escalation** cases where a **privileged process** with **open and inheritable handles** have **run** an **unprivileged process** giving it **access to all those handles**.",
+    "For example, imagine that **a process running as SYSTEM open a new process** (`OpenProcess()`) with **full access**. The same process **also creates a new process** (`CreateProcess()`) **with low privileges but inheriting all the open handles of the main process**.\\",
+    "Then, if you have **full access to the low privileged process**, you can grab the **open handle to the privileged process created** with `OpenProcess()` and **inject a shellcode**.",
+    "## **Interesting Handles**",
+    "### **Process**",
+    "As you read on the initial example if an **unprivileged process inherits a process handle** of a **privileged process** with enough permissions it will be able to execute **arbitrary code on it**.",
+    "In [**this excellent article**](http://dronesec.pw/blog/2019/08/22/exploiting-leaked-process-and-thread-handles/) you can see how to exploit any process handle that has any of the following permissions:",
+    "- PROCESS_ALL_ACCESS",
+    "- PROCESS_CREATE_PROCESS",
+    "- PROCESS_CREATE_THREAD"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation.md"
+  ]
+}

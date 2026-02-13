@@ -1,0 +1,27 @@
+{
+  "id": "todo_383fafbb15e5",
+  "category": "todo",
+  "title": "infrared",
+  "description": "# Infrared\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## How the Infrared Works <a href=\"#how-the-infrared-port-works\" id=\"how-the-infrared-port-works\"></a>\n\n**Infrared light is invisible to humans**. IR wavelength is from **0.7 to 1000 microns**. Household remotes use an IR signal for data transmission and operate in the wavelength range of 0.75..1.4 microns. A microcontroller in the remote makes an infrared LED blink with a specific frequency, turning the digital signal into an IR sig",
+  "payloads": [
+    "# Infrared",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## How the Infrared Works <a href=\"#how-the-infrared-port-works\" id=\"how-the-infrared-port-works\"></a>",
+    "**Infrared light is invisible to humans**. IR wavelength is from **0.7 to 1000 microns**. Household remotes use an IR signal for data transmission and operate in the wavelength range of 0.75..1.4 microns. A microcontroller in the remote makes an infrared LED blink with a specific frequency, turning the digital signal into an IR signal.",
+    "To receive IR signals a **photoreceiver** is used. It **converts IR light into voltage pulses**, which are already **digital signals**. Usually, there is a **dark light filter inside the receiver**, which lets **only the desired wavelength through** and cuts out noise.",
+    "### Variety of IR Protocols <a href=\"#variety-of-ir-protocols\" id=\"variety-of-ir-protocols\"></a>",
+    "IR protocols differ in 3 factors:",
+    "- bit encoding",
+    "- data structure",
+    "- carrier frequency \u2014 often in range 36..38 kHz",
+    "#### Bit encoding ways <a href=\"#bit-encoding-ways\" id=\"bit-encoding-ways\"></a>",
+    "**1. Pulse Distance Encoding**",
+    "Bits are encoded by modulating the duration of the space between pulses. The width of the pulse itself is constant.",
+    "<figure><img src=\"../../images/image (295).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "**2. Pulse Width Encoding**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/infrared.md"
+  ]
+}

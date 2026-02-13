@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_98fa13ab9a0a",
+  "category": "windows-hardening",
+  "title": "badsuccessor dmsa migration abuse",
+  "description": "# BadSuccessor: Privilege Escalation via Delegated MSA Migration Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nDelegated Managed Service Accounts (**dMSA**) are the next-generation successor of **gMSA** that ship in Windows Server 2025.  A legitimate migration workflow allows administrators to replace an *old* account (user, computer or service account) with a dMSA while transparently preserving permissions.  The workflow is exposed through PowerShell cmdlets such as `St",
+  "payloads": [
+    "# BadSuccessor: Privilege Escalation via Delegated MSA Migration Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Delegated Managed Service Accounts (**dMSA**) are the next-generation successor of **gMSA** that ship in Windows Server 2025.  A legitimate migration workflow allows administrators to replace an *old* account (user, computer or service account) with a dMSA while transparently preserving permissions.  The workflow is exposed through PowerShell cmdlets such as `Start-ADServiceAccountMigration` and `Complete-ADServiceAccountMigration` and relies on two LDAP attributes of the **dMSA object**:",
+    "* **`msDS-ManagedAccountPrecededByLink`** \u2013 *DN link* to the superseded (old) account.",
+    "* **`msDS-DelegatedMSAState`**       \u2013 migration state (`0` = none, `1` = in-progress, `2` = *completed*).",
+    "If an attacker can create **any** dMSA inside an OU and directly manipulate those 2 attributes, LSASS & the KDC will treat the dMSA as a *successor* of the linked account.  When the attacker subsequently authenticates as the dMSA **they inherit all the privileges of the linked account** \u2013 up to **Domain Admin** if the Administrator account is linked.",
+    "This technique was coined **BadSuccessor** by Unit 42 in 2025.  At the time of writing **no security patch** is available; only hardening of OU permissions mitigates the issue.",
+    "### Attack prerequisites",
+    "1. An account that is *allowed* to create objects inside **an Organizational Unit (OU)** *and* has at least one of:",
+    "* `Create Child` \u2192 **`msDS-DelegatedManagedServiceAccount`** object class",
+    "* `Create Child` \u2192 **`All Objects`** (generic create)",
+    "2. Network connectivity to LDAP & Kerberos (standard domain joined scenario / remote attack).",
+    "## Enumerating Vulnerable OUs",
+    "Unit 42 released a PowerShell helper script that parses security descriptors of each OU and highlights the required ACEs:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/badsuccessor-dmsa-migration-abuse.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_7f65a98492b9",
+  "category": "cryptography-and-pki",
+  "title": "code signing guide",
+  "description": "# Code Signing Complete Guide\n\n## Table of Contents\n- [Introduction to Code Signing](#introduction-to-code-signing)\n- [Code Signing Certificates](#code-signing-certificates)\n- [Platform-Specific Signing](#platform-specific-signing)\n- [Timestamping](#timestamping)\n- [Security Best Practices](#security-best-practices)\n- [Verification and Validation](#verification-and-validation)\n- [Troubleshooting](#troubleshooting)\n\n## Introduction to Code Signing\n\nCode signing is the process of digitally signing",
+  "payloads": [
+    "# Code Signing Complete Guide",
+    "## Table of Contents",
+    "- [Introduction to Code Signing](#introduction-to-code-signing)",
+    "- [Code Signing Certificates](#code-signing-certificates)",
+    "- [Platform-Specific Signing](#platform-specific-signing)",
+    "- [Timestamping](#timestamping)",
+    "- [Security Best Practices](#security-best-practices)",
+    "- [Verification and Validation](#verification-and-validation)",
+    "- [Troubleshooting](#troubleshooting)",
+    "## Introduction to Code Signing",
+    "Code signing is the process of digitally signing executables and scripts to confirm the software author and guarantee that the code has not been altered or corrupted since it was signed.",
+    "### Why Code Sign?",
+    "**Benefits:**",
+    "- **Authentication**: Verify the publisher's identity",
+    "- **Integrity**: Ensure code hasn't been tampered with"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/tutorials/code-signing-guide.md"
+  ]
+}

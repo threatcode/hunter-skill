@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_7d92b2e83517",
+  "category": "macos-hardening",
+  "title": "universal binaries and mach o format",
+  "description": "# macOS Universal binaries & Mach-O Format\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nMac OS binaries usually are compiled as **universal binaries**. A **universal binary** can **support multiple architectures in the same file**.\n\nThese binaries follows the **Mach-O structure** which is basically compased of:\n\n- Header\n- Load Commands\n- Data\n\n![https://alexdremov.me/content/images/2022/10/6XLCD.gif](<../../../images/image (470).png>)\n\n## Fat Header\n\nSearch for t",
+  "payloads": [
+    "# macOS Universal binaries & Mach-O Format",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "Mac OS binaries usually are compiled as **universal binaries**. A **universal binary** can **support multiple architectures in the same file**.",
+    "These binaries follows the **Mach-O structure** which is basically compased of:",
+    "- Header",
+    "- Load Commands",
+    "- Data",
+    "![https://alexdremov.me/content/images/2022/10/6XLCD.gif](<../../../images/image (470).png>)",
+    "## Fat Header",
+    "Search for the file with: `mdfind fat.h | grep -i mach-o | grep -E \"fat.h$\"`",
+    "<pre class=\"language-c\"><code class=\"lang-c\"><strong>#define FAT_MAGIC\t0xcafebabe",
+    "</strong><strong>#define FAT_CIGAM\t0xbebafeca\t/* NXSwapLong(FAT_MAGIC) */",
+    "</strong>",
+    "struct fat_header {"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-files-folders-and-binaries/universal-binaries-and-mach-o-format.md"
+  ]
+}

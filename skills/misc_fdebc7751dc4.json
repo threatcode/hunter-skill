@@ -1,0 +1,27 @@
+{
+  "id": "misc_fdebc7751dc4",
+  "category": "Misc",
+  "title": "post exploitation tools",
+  "description": "# Post Exploitation Tools\n\nThe following tools are organized for this category:\n\n---\n\n- [ADCSPwn - A Tool To Escalate Privileges In An Active Directory Network By Coercing Authenticate From Machine Accounts And Relaying To The Certificate Service](http://feedproxy.google.com/~r/PentestTools/~3/CYU2JFoH43Q/adcspwn-tool-to-escalate-privileges-in.html)\n- [ADCollector - A Lightweight Tool To Quickly Extract Valuable Information From The Active Directory Environment For Both Attacking And Defending](",
+  "payloads": [
+    "# Post Exploitation Tools",
+    "The following tools are organized for this category:",
+    "- [ADCSPwn - A Tool To Escalate Privileges In An Active Directory Network By Coercing Authenticate From Machine Accounts And Relaying To The Certificate Service](http://feedproxy.google.com/~r/PentestTools/~3/CYU2JFoH43Q/adcspwn-tool-to-escalate-privileges-in.html)",
+    "- [ADCollector - A Lightweight Tool To Quickly Extract Valuable Information From The Active Directory Environment For Both Attacking And Defending](http://feedproxy.google.com/~r/PentestTools/~3/9SedNJtUU74/adcollector-lightweight-tool-to-quickly.html)",
+    "- [ADExplorerSnapshot.py - An AD Explorer Snapshot Parser. It Is Made As An Ingestor For BloodHound, And Also Supports Full-Object Dumping To NDJSON](http://www.kitploit.com/2022/03/adexplorersnapshotpy-ad-explorer.html)",
+    "- [ADLab - Custom PowerShell Module To Setup An Active Directory Lab Environment To Practice Penetration Testing](http://feedproxy.google.com/~r/PentestTools/~3/ODPn-u28lGI/adlab-custom-powershell-module-to-setup.html)",
+    "- [Aced - Tool to parse and resolve a single targeted Active Directory principal's DACL](http://www.kitploit.com/2022/09/aced-tool-to-parse-and-resolve-single.html)",
+    "- [Adfsbrute - A Script To Test Credentials Against Active Directory Federation Services (ADFS), Allowing Password Spraying Or Bruteforce Attacks](http://feedproxy.google.com/~r/PentestTools/~3/bZ9Q-5__tZ4/adfsbrute-script-to-test-credentials.html)",
+    "- [Adidnsdump - Active Directory Integrated DNS Dumping By Any Authenticated User](http://feedproxy.google.com/~r/PentestTools/~3/8FXqJbJc7lY/adidnsdump-active-directory-integrated.html)",
+    "- [Azure-AccessPermissions - Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment](http://www.kitploit.com/2023/06/azure-accesspermissions-easy-to-use.html)",
+    "- [AzureHound - Azure Data Exporter For BloodHound](http://www.kitploit.com/2022/12/azurehound-azure-data-exporter-for.html)",
+    "- [BackupOperatorToDA - From An Account Member Of The Group Backup Operators To Domain Admin Without RDP Or WinRM On The Domain Controller](http://www.kitploit.com/2022/05/backupoperatortoda-from-account-member.html)",
+    "- [BackupOperatorToolkit - The BackupOperatorToolkit Contains Different Techniques Allowing You To Escalate From Backup Operator To Domain Admin](http://www.kitploit.com/2023/06/backupoperatortoolkit.html)",
+    "- [BadBlood - Fills A Microsoft Active Directory Domain With A Structure And Thousands Of Objects](http://feedproxy.google.com/~r/PentestTools/~3/0RIQKSdcD7g/badblood-fills-microsoft-active.html)",
+    "- [BloodyAD - An Active Directory Privilege Escalation Framework](http://www.kitploit.com/2022/01/bloodyad-active-directory-privilege.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/organized_tools/post-exploitation_tools.md"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "temp_d1accb46e90d",
+  "category": "temp",
+  "title": "SecLists",
+  "description": "# Daniel Miessler's SecLists is the Bomb!\n\n[SecLists](https://github.com/danielmiessler/SecLists) include numerous wordlists that can be used for web application discovery, fuzzing, password cracking with millions of passwords from breaches, default passwords, pattern-matching, payloads, usernames, web-shells, and more.\n\nYou can install it using the following methods:\n\n**Zip**\n```\nwget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \\\n  && unzip SecList.zip \\\n  &&",
+  "payloads": [
+    "# Daniel Miessler's SecLists is the Bomb!",
+    "[SecLists](https://github.com/danielmiessler/SecLists) include numerous wordlists that can be used for web application discovery, fuzzing, password cracking with millions of passwords from breaches, default passwords, pattern-matching, payloads, usernames, web-shells, and more.",
+    "You can install it using the following methods:",
+    "**Zip**",
+    "wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \\",
+    "&& unzip SecList.zip \\",
+    "&& rm -f SecList.zip",
+    "**Git (Small)**",
+    "git clone --depth 1 https://github.com/danielmiessler/SecLists.git",
+    "**Git (Complete)**",
+    "git clone https://github.com/danielmiessler/SecLists.git",
+    "**Kali Linux** ([Tool Page](https://tools.kali.org/password-attacks/seclists))",
+    "apt -y install seclists"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Authentication_Attacks/cracking_passwords/SecLists.md"
+  ]
+}

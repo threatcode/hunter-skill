@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_a7c86455254e",
+  "category": "generic-methodologies-and-resources",
+  "title": ".pyc",
+  "description": "# Decompile compiled python binaries (exe, elf) - Retreive from .pyc\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\n## From Compiled Binary to .pyc\n\nFrom an **ELF** compiled binary you can **get the .pyc** with:\n\n```bash\npyi-archive_viewer <binary>\n# The list of python modules will be given here:\n[(0, 230, 311, 1, 'm', 'struct'),\n (230, 1061, 1792, 1, 'm', 'pyimod01_os_path'),\n (1291, 4071, 8907, 1, 'm', 'pyimod02_archive'),\n (5362, 5609, 13152, 1, 'm', 'pyimod03_importers'),\n (10971, 1",
+  "payloads": [
+    "# Decompile compiled python binaries (exe, elf) - Retreive from .pyc",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## From Compiled Binary to .pyc",
+    "From an **ELF** compiled binary you can **get the .pyc** with:",
+    "```bash",
+    "pyi-archive_viewer <binary>",
+    "# The list of python modules will be given here:",
+    "[(0, 230, 311, 1, 'm', 'struct'),",
+    "(230, 1061, 1792, 1, 'm', 'pyimod01_os_path'),",
+    "(1291, 4071, 8907, 1, 'm', 'pyimod02_archive'),",
+    "(5362, 5609, 13152, 1, 'm', 'pyimod03_importers'),",
+    "(10971, 1473, 3468, 1, 'm', 'pyimod04_ctypes'),",
+    "(12444, 816, 1372, 1, 's', 'pyiboot01_bootstrap'),",
+    "(13260, 696, 1053, 1, 's', 'pyi_rth_pkgutil'),",
+    "(13956, 1134, 2075, 1, 's', 'pyi_rth_multiprocessing'),"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/.pyc.md"
+  ]
+}

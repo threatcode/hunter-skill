@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-78965ed7eb9e",
+  "category": "SQL Injection",
+  "title": "Cassandra Injection",
+  "description": "# Cassandra Injection\n\n> Apache Cassandra is a free and open-source distributed wide column store NoSQL database management system.\n\n## Summary\n\n* [CQL Injection Limitations](#cql-injection-limitations)\n* [Cassandra Comment](#cassandra-comment)\n* [Cassandra Login Bypass](#cassandra-login-bypass)\n    * [Example #1](#example-1)\n    * [Example #2](#example-2)\n* [References](#references)\n\n## CQL Injection Limitations\n\n* Cassandra is a non-relational database, so CQL doesn't support `JOIN` or `UNION`",
+  "payloads": [
+    "# Cassandra Injection",
+    "> Apache Cassandra is a free and open-source distributed wide column store NoSQL database management system.",
+    "## Summary",
+    "* [CQL Injection Limitations](#cql-injection-limitations)",
+    "* [Cassandra Comment](#cassandra-comment)",
+    "* [Cassandra Login Bypass](#cassandra-login-bypass)",
+    "* [Example #1](#example-1)",
+    "* [Example #2](#example-2)",
+    "* [References](#references)",
+    "## CQL Injection Limitations",
+    "* Cassandra is a non-relational database, so CQL doesn't support `JOIN` or `UNION` statements, which makes cross-table queries more challenging.",
+    "* Additionally, Cassandra lacks convenient built-in functions like `DATABASE()` or `USER()` for retrieving database metadata.",
+    "* Another limitation is the absence of the `OR` operator in CQL, which prevents creating always-true conditions; for instance, a query like `SELECT * FROM table WHERE col1='a' OR col2='b';` will be rejected.",
+    "* Time-based SQL injections, which typically rely on functions like `SLEEP()` to introduce a delay, are also difficult to execute in CQL since it doesn\u2019t include a `SLEEP()` function.",
+    "* CQL does not allow subqueries or other nested statements, so a query like `SELECT * FROM table WHERE column=(SELECT column FROM table LIMIT 1);` would be rejected."
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/Cassandra Injection.md"
+  ]
+}

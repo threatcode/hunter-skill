@@ -1,0 +1,21 @@
+{
+  "id": "web_application_testing_986b76251aca",
+  "category": "web-application-testing",
+  "title": "sql injection tools",
+  "description": "# Popular SQL Injection Tools\n- [SQLmap](https://github.com/sqlmapproject/sqlmap)\n- [jSQL Injection](https://github.com/ron190/jsql-injection)\n- [BBQSQL](https://github.com/CiscoCXSecurity/bbqsql)\n- [NoSQLMap](https://github.com/codingo/NoSQLMap)\n- [DSSS](https://github.com/stamparm/DSSS)\n- [explo](https://github.com/telekom-security/explo)\n- [Blind SQL Injection via Bitshifting](https://github.com/awnumar/blind-sql-bitshifting)\n- [Blisqy](https://github.com/JohnTroony/Blisqy)",
+  "payloads": [
+    "# Popular SQL Injection Tools",
+    "- [SQLmap](https://github.com/sqlmapproject/sqlmap)",
+    "- [jSQL Injection](https://github.com/ron190/jsql-injection)",
+    "- [BBQSQL](https://github.com/CiscoCXSecurity/bbqsql)",
+    "- [NoSQLMap](https://github.com/codingo/NoSQLMap)",
+    "- [DSSS](https://github.com/stamparm/DSSS)",
+    "- [explo](https://github.com/telekom-security/explo)",
+    "- [Blind SQL Injection via Bitshifting](https://github.com/awnumar/blind-sql-bitshifting)",
+    "- [Blisqy](https://github.com/JohnTroony/Blisqy)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/web-application-testing/sql-injection-tools.md"
+  ]
+}

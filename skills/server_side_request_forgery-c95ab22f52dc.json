@@ -1,0 +1,27 @@
+{
+  "id": "server_side_request_forgery-c95ab22f52dc",
+  "category": "Server Side Request Forgery",
+  "title": "SSRF Cloud Instances",
+  "description": "\n# SSRF URL for Cloud Instances\n\n> When exploiting Server-Side Request Forgery (SSRF) in cloud environments, attackers often target metadata endpoints to retrieve sensitive instance information (e.g., credentials, configurations). Below is a categorized list of common URLs for various cloud and infrastructure providers\n\n## Summary\n\n* [SSRF URL for AWS Bucket](#ssrf-url-for-aws)\n* [SSRF URL for AWS ECS](#ssrf-url-for-aws-ecs)\n* [SSRF URL for AWS Elastic Beanstalk](#ssrf-url-for-aws-elastic-beanst",
+  "payloads": [
+    "# SSRF URL for Cloud Instances",
+    "> When exploiting Server-Side Request Forgery (SSRF) in cloud environments, attackers often target metadata endpoints to retrieve sensitive instance information (e.g., credentials, configurations). Below is a categorized list of common URLs for various cloud and infrastructure providers",
+    "## Summary",
+    "* [SSRF URL for AWS Bucket](#ssrf-url-for-aws)",
+    "* [SSRF URL for AWS ECS](#ssrf-url-for-aws-ecs)",
+    "* [SSRF URL for AWS Elastic Beanstalk](#ssrf-url-for-aws-elastic-beanstalk)",
+    "* [SSRF URL for AWS Lambda](#ssrf-url-for-aws-lambda)",
+    "* [SSRF URL for Google Cloud](#ssrf-url-for-google-cloud)",
+    "* [SSRF URL for Digital Ocean](#ssrf-url-for-digital-ocean)",
+    "* [SSRF URL for Packetcloud](#ssrf-url-for-packetcloud)",
+    "* [SSRF URL for Azure](#ssrf-url-for-azure)",
+    "* [SSRF URL for OpenStack/RackSpace](#ssrf-url-for-openstackrackspace)",
+    "* [SSRF URL for HP Helion](#ssrf-url-for-hp-helion)",
+    "* [SSRF URL for Oracle Cloud](#ssrf-url-for-oracle-cloud)",
+    "* [SSRF URL for Kubernetes ETCD](#ssrf-url-for-kubernetes-etcd)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Request Forgery/SSRF-Cloud-Instances.md"
+  ]
+}

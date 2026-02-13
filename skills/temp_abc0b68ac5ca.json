@@ -1,0 +1,27 @@
+{
+  "id": "temp_abc0b68ac5ca",
+  "category": "temp",
+  "title": "high level best practices pen testing",
+  "description": "# Cloud Penetration Testing Best Practices Guide\n\n## Table of Contents\n- [Overview](#overview)\n- [Pre-Testing Requirements](#pre-testing-requirements)\n- [Cloud Provider Policies](#cloud-provider-policies)\n- [Testing Methodology](#testing-methodology)\n- [Cloud-Native Security Testing](#cloud-native-security-testing)\n- [Identity and Access Management Testing](#identity-and-access-management-testing)\n- [Data Protection and Compliance](#data-protection-and-compliance)\n- [Automated Testing Integratio",
+  "payloads": [
+    "# Cloud Penetration Testing Best Practices Guide",
+    "## Table of Contents",
+    "- [Overview](#overview)",
+    "- [Pre-Testing Requirements](#pre-testing-requirements)",
+    "- [Cloud Provider Policies](#cloud-provider-policies)",
+    "- [Testing Methodology](#testing-methodology)",
+    "- [Cloud-Native Security Testing](#cloud-native-security-testing)",
+    "- [Identity and Access Management Testing](#identity-and-access-management-testing)",
+    "- [Data Protection and Compliance](#data-protection-and-compliance)",
+    "- [Automated Testing Integration](#automated-testing-integration)",
+    "- [Reporting and Remediation](#reporting-and-remediation)",
+    "- [Post-Testing Activities](#post-testing-activities)",
+    "## Overview",
+    "Penetration testing in cloud environments requires specialized knowledge of cloud architectures, shared responsibility models, and modern cloud-native technologies. This guide provides comprehensive best practices for conducting effective and responsible cloud security assessments in 2024 and beyond.",
+    "## Pre-Testing Requirements"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Cloud_Attacks/cloud_resources/high_level_best_practices_pen_testing.md"
+  ]
+}

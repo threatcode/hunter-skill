@@ -1,0 +1,19 @@
+{
+  "id": "mass_assignment-6dc628cf18df",
+  "category": "MASS_ASSIGNMENT",
+  "title": "README",
+  "description": "# Mass Assignment\n\n> A mass assignment attack is a security vulnerability that occurs when a web application automatically assigns user-supplied input values to properties or variables of a program object. This can become an issue if a user is able to modify attributes they should not have access to, like a user's permissions or an admin flag.\n\n## Summary\n\n* [Methodology](#methodology)\n* [Labs](#labs)\n* [References](#references)\n\n## Methodology\n\nMass assignment vulnerabilities are most common in",
+  "payloads": [
+    "\"email\": \"attacker@email.com\",",
+    "* [PentesterAcademy - Mass Assignment I](https://attackdefense.pentesteracademy.com/challengedetailsnoauth?cid=1964)",
+    "* [PentesterAcademy - Mass Assignment II](https://attackdefense.pentesteracademy.com/challengedetailsnoauth?cid=1922)",
+    "* [Root Me - API - Mass Assignment](https://www.root-me.org/en/Challenges/Web-Server/API-Mass-Assignment)",
+    "* [Hunting for Mass Assignment - Shivam Bathla - August 12, 2021](https://blog.pentesteracademy.com/hunting-for-mass-assignment-56ed73095eda)",
+    "* [Mass Assignment Cheat Sheet - OWASP - March 15, 2021](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html)",
+    "* [What is Mass Assignment? Attacks and Security Tips - Yoan MONTOYA - June 15, 2023](https://www.vaadata.com/blog/what-is-mass-assignment-attacks-and-security-tips/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Mass Assignment/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

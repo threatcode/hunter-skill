@@ -1,0 +1,27 @@
+{
+  "id": "blockchain_019ec0a305b6",
+  "category": "blockchain",
+  "title": "defi amm hook precision",
+  "description": "# DeFi/AMM Exploitation: Uniswap v4 Hook Precision/Rounding Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis page documents a class of DeFi/AMM exploitation techniques against Uniswap v4\u2013style DEXes that extend core math with custom hooks. A recent incident in Bunni V2 leveraged a rounding/precision flaw in a Liquidity Distribution Function (LDF) executed on each swap, enabling the attacker to accrue positive credits and drain liquidity.\n\nKey idea: if a hook implements additional a",
+  "payloads": [
+    "# DeFi/AMM Exploitation: Uniswap v4 Hook Precision/Rounding Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This page documents a class of DeFi/AMM exploitation techniques against Uniswap v4\u2013style DEXes that extend core math with custom hooks. A recent incident in Bunni V2 leveraged a rounding/precision flaw in a Liquidity Distribution Function (LDF) executed on each swap, enabling the attacker to accrue positive credits and drain liquidity.",
+    "Key idea: if a hook implements additional accounting that depends on fixed\u2011point math, tick rounding, and threshold logic, an attacker can craft exact\u2011input swaps that cross specific thresholds so that rounding discrepancies accumulate in their favor. Repeating the pattern and then withdrawing the inflated balance realizes profit, often financed with a flash loan.",
+    "## Background: Uniswap v4 hooks and swap flow",
+    "- Hooks are contracts that the PoolManager calls at specific lifecycle points (e.g., beforeSwap/afterSwap, beforeAddLiquidity/afterAddLiquidity, beforeRemoveLiquidity/afterRemoveLiquidity).",
+    "- Pools are initialized with a PoolKey including hooks address. If non\u2011zero, PoolManager performs callbacks on every relevant operation.",
+    "- Core math uses fixed\u2011point formats such as Q64.96 for sqrtPriceX96 and tick arithmetic with 1.0001^tick. Any custom math layered on top must carefully match rounding semantics to avoid invariant drift.",
+    "- Swaps can be exactInput or exactOutput. In v3/v4, price moves along ticks; crossing a tick boundary may activate/deactivate range liquidity. Hooks may implement extra logic on threshold/tick crossings.",
+    "## Vulnerability archetype: threshold\u2011crossing precision/rounding drift",
+    "A typical vulnerable pattern in custom hooks:",
+    "1. The hook computes per\u2011swap liquidity or balance deltas using integer division, mulDiv, or fixed\u2011point conversions (e.g., token \u2194 liquidity using sqrtPrice and tick ranges).",
+    "2. Threshold logic (e.g., rebalancing, stepwise redistribution, or per\u2011range activation) is triggered when a swap size or price movement crosses an internal boundary.",
+    "3. Rounding is applied inconsistently (e.g., truncation toward zero, floor versus ceil) between the forward calculation and the settlement path. Small discrepancies don\u2019t cancel and instead credit the caller.",
+    "4. Exact\u2011input swaps, precisely sized to straddle those boundaries, repeatedly harvest the positive rounding remainder. The attacker later withdraws the accumulated credit."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/blockchain/blockchain-and-crypto-currencies/defi-amm-hook-precision.md"
+  ]
+}

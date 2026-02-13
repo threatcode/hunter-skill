@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_d73e00e395ab",
+  "category": "ai-research",
+  "title": "tools",
+  "description": "# Ai Research Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [\"Can I Take Over XYZ?\" - A List Of Services And How To Claim (Sub)Domains With Dangling DNS Records](http://feedproxy.google.com/~r/PentestTools/~3/lPLIPkoIJeg/can-i-take-over-xyz-list-of-services.html)\n- [Airflowscan - Checklist And Tools For Increasing Security Of Apache Airflow](http://feedproxy.google.com/~r/PentestTools/~3/9rsGerchFug/airflowscan-checklist-and-tools-for.html)\n- [Amlsec - Automated Security Risk",
+  "payloads": [
+    "# Ai Research Tools",
+    "This is a curated list of tools for this category.",
+    "- [\"Can I Take Over XYZ?\" - A List Of Services And How To Claim (Sub)Domains With Dangling DNS Records](http://feedproxy.google.com/~r/PentestTools/~3/lPLIPkoIJeg/can-i-take-over-xyz-list-of-services.html)",
+    "- [Airflowscan - Checklist And Tools For Increasing Security Of Apache Airflow](http://feedproxy.google.com/~r/PentestTools/~3/9rsGerchFug/airflowscan-checklist-and-tools-for.html)",
+    "- [Amlsec - Automated Security Risk Identification Using AutomationML-based Engineering Data](http://feedproxy.google.com/~r/PentestTools/~3/khxoO8-7vog/amlsec-automated-security-risk.html)",
+    "- [AtomLdr - A DLL Loader With Advanced Evasive Features](http://www.kitploit.com/2023/06/atomldr-dll-loader-with-advanced.html)",
+    "- [Ator - Authentication Token Obtain and Replace Extender](http://www.kitploit.com/2023/03/ator-authentication-token-obtain-and.html)",
+    "- [BoobSnail - Allows Generating Excel 4.0 XLM Macro](http://feedproxy.google.com/~r/PentestTools/~3/ZlJ0Sy3bKS8/boobsnail-allows-generating-excel-40.html)",
+    "- [Business Secure: How AI is Sneaking into our Restaurants](http://feedproxy.google.com/~r/PentestTools/~3/z5o9lKW7IPg/business-secure-how-ai-is-sneaking-into.html)",
+    "- [CMLoot - Find Interesting Files Stored On (System Center) Configuration Manager (SCCM/CM) SMB Shares](http://www.kitploit.com/2023/04/cmloot-find-interesting-files-stored-on.html)",
+    "- [Chkdfront - Check Domain Fronting](http://feedproxy.google.com/~r/PentestTools/~3/Ob0V8Rj5l6I/chkdfront-check-domain-fronting.html)",
+    "- [DC-Sonar - Analyzing AD Domains For Security Risks Related To User Accounts](http://www.kitploit.com/2023/01/dc-sonar-analyzing-ad-domains-for.html)",
+    "- [Darkdump - Search The Deep Web Straight From Your Terminal](http://feedproxy.google.com/~r/PentestTools/~3/M2SWIV-ruRg/darkdump-search-deep-web-straight-from.html)",
+    "- [Darkdump2 - Search The Deep Web Straight From Your Terminal](http://www.kitploit.com/2023/02/darkdump2-search-deep-web-straight-from.html)",
+    "- [Doctrack - Tool To Manipulate And Insert Tracking Pixels Into Office Open XML Documents (Word, Excel)](http://feedproxy.google.com/~r/PentestTools/~3/oiiyeU7MMjg/doctrack-tool-to-manipulate-and-insert.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/tools.md"
+  ]
+}

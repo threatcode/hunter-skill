@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_5b7a701e482d",
+  "category": "generic-methodologies-and-resources",
+  "title": "evil twin eap tls",
+  "description": "# Evil Twin EAP-TLS\n\n{{#include ../../banners/hacktricks-training.md}}\n\nEAP-TLS is the common \"secure\" choice for WPA2/3-Enterprise, but two practical weaknesses regularly show up during assessments:\n\n- **Unauthenticated identity leakage**: the outer EAP-Response/Identity is sent in cleartext before any TLS tunnel is built, so real domain usernames often leak over the air.\n- **Broken client server-validation**: if the supplicant doesn\u2019t strictly verify the RADIUS server certificate (or allows us",
+  "payloads": [
+    "# Evil Twin EAP-TLS",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "EAP-TLS is the common \"secure\" choice for WPA2/3-Enterprise, but two practical weaknesses regularly show up during assessments:",
+    "- **Unauthenticated identity leakage**: the outer EAP-Response/Identity is sent in cleartext before any TLS tunnel is built, so real domain usernames often leak over the air.",
+    "- **Broken client server-validation**: if the supplicant doesn\u2019t strictly verify the RADIUS server certificate (or allows users to click through warnings), a rogue AP with a self-signed cert can still onboard victims \u2013 turning mutual TLS into one-way TLS.",
+    "## Unauthenticated EAP identity leakage / username enumeration",
+    "EAP drives an identity exchange *before* TLS starts. If the client uses the real domain username as its outer identity, anyone in RF range can harvest it without authenticating.",
+    "**Passive harvest workflow**",
+    "```bash",
+    "# 1) Park on the right channel/BSSID",
+    "airodump-ng -i $IFACE -c $CHAN --bssid $BSSID",
+    "# 2) Decode EAP frames and extract identities",
+    "# Trigger a client connection (e.g., your phone) to see the leak",
+    "tshark -i \"$IFACE\" -Y eap -V | grep \"Identity: *[a-z]\\|*[A-Z]\\|*[0-9]\"",
+    "Impact: fast, no-auth username collection \u2192 fuels password spraying, phishing, account correlation. Worse when usernames match email addresses."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-wifi/evil-twin-eap-tls.md"
+  ]
+}

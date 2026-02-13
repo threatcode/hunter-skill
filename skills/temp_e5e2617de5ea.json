@@ -1,0 +1,22 @@
+{
+  "id": "temp_e5e2617de5ea",
+  "category": "temp",
+  "title": "z wave",
+  "description": "# Z-Wave Resources and Tools\n\n## Tools:\n* EZ-Wave - https://github.com/cureHsu/EZ-Wave\n* RFCrack - https://github.com/cclabsInc/RFCrack\n* RFCat - see [Yardstick One and RFCat Resources](https://github.com/The-Art-of-Hacking/art-of-hacking/blob/master/wireless-resources/yardstick_one_rfcat.md)\n* Yardstick One - see [Yardstick One and RFCat Resources](https://github.com/The-Art-of-Hacking/art-of-hacking/blob/master/wireless-resources/yardstick_one_rfcat.md)\n* HackRF One - https://greatscottgadgets",
+  "payloads": [
+    "# Z-Wave Resources and Tools",
+    "## Tools:",
+    "* EZ-Wave - https://github.com/cureHsu/EZ-Wave",
+    "* RFCrack - https://github.com/cclabsInc/RFCrack",
+    "* RFCat - see [Yardstick One and RFCat Resources](https://github.com/The-Art-of-Hacking/art-of-hacking/blob/master/wireless-resources/yardstick_one_rfcat.md)",
+    "* Yardstick One - see [Yardstick One and RFCat Resources](https://github.com/The-Art-of-Hacking/art-of-hacking/blob/master/wireless-resources/yardstick_one_rfcat.md)",
+    "* HackRF One - https://greatscottgadgets.com/hackrf",
+    "* Z-Attack - https://github.com/advens/Z-Attack",
+    "* rfpwnon - https://github.com/exploitagency/github-rfpwnon",
+    "* Z-Force - https://code.google.com/archive/p/z-force/"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Wireless_Attacks/wireless_resources/z-wave.md"
+  ]
+}

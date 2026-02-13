@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_3fda8439acb7",
+  "category": "cryptography-and-pki",
+  "title": "openssl cheatsheet",
+  "description": "# OpenSSL Quick Reference Cheat Sheet\n\n## Key Generation\n\n### RSA Keys\n```bash\n# Generate RSA private key (modern)\nopenssl genpkey -algorithm RSA -pkcs8 -out key.pem\n\n# Generate with specific key size\nopenssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:3072 -out key.pem\n\n# Generate encrypted private key\nopenssl genpkey -algorithm RSA -pkcs8 -aes256 -out key.pem\n\n# Legacy RSA generation\nopenssl genrsa -out key.pem 3072\nopenssl genrsa -aes256 -out key.pem 3072\n```\n\n### EC (Elliptic Curve) Keys",
+  "payloads": [
+    "# OpenSSL Quick Reference Cheat Sheet",
+    "## Key Generation",
+    "### RSA Keys",
+    "```bash",
+    "# Generate RSA private key (modern)",
+    "openssl genpkey -algorithm RSA -pkcs8 -out key.pem",
+    "# Generate with specific key size",
+    "openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:3072 -out key.pem",
+    "# Generate encrypted private key",
+    "openssl genpkey -algorithm RSA -pkcs8 -aes256 -out key.pem",
+    "# Legacy RSA generation",
+    "openssl genrsa -out key.pem 3072",
+    "openssl genrsa -aes256 -out key.pem 3072",
+    "### EC (Elliptic Curve) Keys",
+    "```bash"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/quick-reference/openssl-cheatsheet.md"
+  ]
+}

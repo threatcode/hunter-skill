@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-a39400330bc1",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# Server-Side Request Forgery\n\n> Server Side Request Forgery or SSRF is a vulnerability in which an attacker forces a server to perform requests on their behalf.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n* [Bypassing Filters](#bypassing-filters)\n    * [Default Targets](#default-targets)\n    * [Bypass Localhost with IPv6 Notation](#bypass-localhost-with-ipv6-notation)\n    * [Bypass Localhost with a Domain Redirect](#bypass-localhost-with-a-domain-redirect)\n    * [Bypass Localho",
+  "payloads": [
+    "* [http://](#http)",
+    "* [swisskyrepo/SSRFmap](https://github.com/swisskyrepo/SSRFmap) - Automatic SSRF fuzzer and exploitation tool",
+    "* [tarunkant/Gopherus](https://github.com/tarunkant/Gopherus) - Generates gopher link for exploiting SSRF and gaining RCE in various servers",
+    "* [In3tinct/See-SURF](https://github.com/In3tinct/See-SURF) - Python based scanner to find potential SSRF parameters",
+    "* [teknogeek/SSRF-Sheriff](https://github.com/teknogeek/ssrf-sheriff) - Simple SSRF-testing sheriff written in Go",
+    "* [assetnote/surf](https://github.com/assetnote/surf) - Returns a list of viable SSRF candidates",
+    "* [dwisiswant0/ipfuscator](https://github.com/dwisiswant0/ipfuscator) - A blazing-fast, thread-safe, straightforward and zero memory allocations tool to swiftly generate alternative IP(v4) address representations in Go.",
+    "* [Horlad/r3dir](https://github.com/Horlad/r3dir) - a redirection service designed to help bypass SSRF filters that do not validate the redirect location. Intergrated with Burp with help of Hackvertor tags",
+    "http://169.254.169.254/latest/meta-data/",
+    "http://localhost:80",
+    "http://localhost:22",
+    "https://localhost:443",
+    "http://127.0.0.1:80",
+    "http://127.0.0.1:22",
+    "https://127.0.0.1:443"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Request Forgery/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

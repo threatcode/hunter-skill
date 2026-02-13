@@ -1,0 +1,27 @@
+{
+  "id": "bug_bounties_d90b5b37b6e7",
+  "category": "bug-bounties",
+  "title": "scope example",
+  "description": "# Omar's Bug Bounty Program Scope Template\n\n## Introduction\n\nBriefly describe the objectives of your bug bounty program and what you hope to achieve through it.\n\n## Target Systems\n\n### In-Scope Targets\n\n- **Web Applications**\n  - app1.websploit.org\n  - app2.websploit.org\n- **Mobile Applications**\n  - Android App (version x.x and above)\n  - iOS App (version x.x and above)\n- **APIs**\n  - api.websploit.org/v1/\n  - api.websploit.org/v2/\n\n### Out-of-Scope Targets\n\n- app3.websploit.org\n\n## Vulnerabili",
+  "payloads": [
+    "# Omar's Bug Bounty Program Scope Template",
+    "## Introduction",
+    "Briefly describe the objectives of your bug bounty program and what you hope to achieve through it.",
+    "## Target Systems",
+    "### In-Scope Targets",
+    "- **Web Applications**",
+    "- app1.websploit.org",
+    "- app2.websploit.org",
+    "- **Mobile Applications**",
+    "- Android App (version x.x and above)",
+    "- iOS App (version x.x and above)",
+    "- **APIs**",
+    "- api.websploit.org/v1/",
+    "- api.websploit.org/v2/",
+    "### Out-of-Scope Targets"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Engagement_Management/Pre_Engagement_Activities/bug-bounties/scope_example.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "todo_44aaa25dc66b",
+  "category": "todo",
+  "title": "sub ghz rf",
+  "description": "# Sub-GHz RF\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Garage Doors\n\nGarage door openers typically operate at frequencies in the 300-190 MHz range, with the most common frequencies being 300 MHz, 310 MHz, 315 MHz, and 390 MHz. This frequency range is commonly used for garage door openers because it is less crowded than other frequency bands and is less likely to experience interference from other devices.\n\n## Car Doors\n\nMost car key fobs operate on either **315 MHz or 433 MHz**. The",
+  "payloads": [
+    "# Sub-GHz RF",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Garage Doors",
+    "Garage door openers typically operate at frequencies in the 300-190 MHz range, with the most common frequencies being 300 MHz, 310 MHz, 315 MHz, and 390 MHz. This frequency range is commonly used for garage door openers because it is less crowded than other frequency bands and is less likely to experience interference from other devices.",
+    "## Car Doors",
+    "Most car key fobs operate on either **315 MHz or 433 MHz**. These are both radio frequencies, and they are used in a variety of different applications. The main difference between the two frequencies is that 433 MHz has a longer range than 315 MHz. This means that 433 MHz is better for applications that require a longer range, such as remote keyless entry.\\",
+    "In Europe 433.92MHz is commonly used and in U.S. and Japan it's the 315MHz.",
+    "## **Brute-force Attack**",
+    "<figure><img src=\"../../images/image (1084).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "If instead of sending each code 5 times (sent like this to make sure the receiver gets it) so just send it once, the time is reduced to 6mins:",
+    "<figure><img src=\"../../images/image (622).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "and if you **remove the 2 ms waiting** period between signals you can **reduce the time to 3minutes.**",
+    "Moreover, by using the De Bruijn Sequence (a way to reduce the number of bits needed to send all the potential binary numbers to burteforce) this **time is reduced just to 8 seconds**:",
+    "<figure><img src=\"../../images/image (583).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "Example of this attack was implemented in [https://github.com/samyk/opensesame](https://github.com/samyk/opensesame)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/sub-ghz-rf.md"
+  ]
+}

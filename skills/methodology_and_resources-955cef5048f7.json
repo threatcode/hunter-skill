@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-955cef5048f7",
+  "category": "Methodology and Resources",
+  "title": "Metasploit   Cheatsheet",
+  "description": "# Metasploit\n\n:warning: Content of this page has been moved to [InternalAllTheThings/command-control/metasploit](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/)\n\n- [Installation](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#installation)\n- [Sessions](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#sessions)\n- [Background handler](https://swisskyrepo.github.io/InternalAllTheThings/command-control/meta",
+  "payloads": [
+    "# Metasploit",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/command-control/metasploit](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/)",
+    "- [Installation](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#installation)",
+    "- [Sessions](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#sessions)",
+    "- [Background handler](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#background-handler)",
+    "- [Meterpreter - Basic](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#meterpreter---basic)",
+    "- [Generate a meterpreter](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#generate-a-meterpreter)",
+    "- [Meterpreter Webdelivery](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#meterpreter-webdelivery)",
+    "- [Get System](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#get-system)",
+    "- [Persistence Startup](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#persistence-startup)",
+    "- [Network Monitoring](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#network-monitoring)",
+    "- [Portforward](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#portforward)",
+    "- [Upload / Download](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#upload---download)",
+    "- [Execute from Memory](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#execute-from-memory)",
+    "- [Mimikatz](https://swisskyrepo.github.io/InternalAllTheThings/command-control/metasploit/#mimikatz)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Metasploit - Cheatsheet.md"
+  ]
+}

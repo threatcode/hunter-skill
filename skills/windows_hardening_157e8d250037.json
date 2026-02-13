@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_157e8d250037",
+  "category": "windows-hardening",
+  "title": "psexec and winexec",
+  "description": "# PsExec/Winexec/ScExec/SMBExec\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## How do they work\n\nThese techniques abuse the Windows Service Control Manager (SCM) remotely over SMB/RPC to execute commands on a target host. The common flow is:\n\n1. Authenticate to the target and access the ADMIN$ share over SMB (TCP/445).\n2. Copy an executable or specify a LOLBAS command line that the service will run.\n3. Create a service remotely via SCM (MS-SCMR over \\PIPE\\svcctl) pointing to that command",
+  "payloads": [
+    "# PsExec/Winexec/ScExec/SMBExec",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## How do they work",
+    "These techniques abuse the Windows Service Control Manager (SCM) remotely over SMB/RPC to execute commands on a target host. The common flow is:",
+    "1. Authenticate to the target and access the ADMIN$ share over SMB (TCP/445).",
+    "2. Copy an executable or specify a LOLBAS command line that the service will run.",
+    "3. Create a service remotely via SCM (MS-SCMR over \\PIPE\\svcctl) pointing to that command or binary.",
+    "4. Start the service to execute the payload and optionally capture stdin/stdout via a named pipe.",
+    "5. Stop the service and clean up (delete the service and any dropped binaries).",
+    "Requirements/prereqs:",
+    "- Local Administrator on the target (SeCreateServicePrivilege) or explicit service creation rights on the target.",
+    "- SMB (445) reachable and ADMIN$ share available; Remote Service Management allowed through host firewall.",
+    "- UAC Remote Restrictions: with local accounts, token filtering may block admin over the network unless using the built-in Administrator or LocalAccountTokenFilterPolicy=1.",
+    "- Kerberos vs NTLM: using a hostname/FQDN enables Kerberos; connecting by IP often falls back to NTLM (and may be blocked in hardened environments).",
+    "### Manual ScExec/WinExec via sc.exe"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/psexec-and-winexec.md"
+  ]
+}

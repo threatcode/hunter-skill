@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_16d715549ded",
+  "category": "windows-hardening",
+  "title": "printers spooler service abuse",
+  "description": "# Force NTLM Privileged Authentication\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## SharpSystemTriggers\n\n[**SharpSystemTriggers**](https://github.com/cube0x0/SharpSystemTriggers) is a **collection** of **remote authentication triggers** coded in C# using MIDL compiler for avoiding 3rd party dependencies.\n\n## Spooler Service Abuse\n\nIf the _**Print Spooler**_ service is **enabled,** you can use some already known AD credentials to **request** to the Domain Controller\u2019s print server an **",
+  "payloads": [
+    "# Force NTLM Privileged Authentication",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## SharpSystemTriggers",
+    "[**SharpSystemTriggers**](https://github.com/cube0x0/SharpSystemTriggers) is a **collection** of **remote authentication triggers** coded in C# using MIDL compiler for avoiding 3rd party dependencies.",
+    "## Spooler Service Abuse",
+    "If the _**Print Spooler**_ service is **enabled,** you can use some already known AD credentials to **request** to the Domain Controller\u2019s print server an **update** on new print jobs and just tell it to **send the notification to some system**.\\",
+    "Note when printer send the notification to an arbitrary systems, it needs to **authenticate against** that **system**. Therefore, an attacker can make the _**Print Spooler**_ service authenticate against an arbitrary system, and the service will **use the computer account** in this authentication.",
+    "### Finding Windows Servers on the domain",
+    "Using PowerShell, get a list of Windows boxes. Servers are usually priority, so lets focus there:",
+    "```bash",
+    "Get-ADComputer -Filter {(OperatingSystem -like \"*windows*server*\") -and (OperatingSystem -notlike \"2016\") -and (Enabled -eq \"True\")} -Properties * | select Name | ft -HideTableHeaders > servers.txt",
+    "### Finding Spooler services listening",
+    "Using a slightly modified @mysmartlogin's (Vincent Le Toux's) [SpoolerScanner](https://github.com/NotMedic/NetNTLMtoSilverTicket), see if the Spooler Service is listening:",
+    "```bash",
+    ". .\\Get-SpoolStatus.ps1"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/printers-spooler-service-abuse.md"
+  ]
+}

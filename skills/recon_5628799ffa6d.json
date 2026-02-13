@@ -1,0 +1,27 @@
+{
+  "id": "recon_5628799ffa6d",
+  "category": "recon",
+  "title": "smb enumeration tips",
+  "description": "## SMB NETBIOS Enumeration Tips\n\n### Tool Tips\n\n#### Enum4Linux\n```\nenum4linux x.x.x.x\n```\n\n#### Nmap\n```\nnmap -v -p 139,445 -oG smb.txt 192.168.88.0-254\n```\n\n#### nbtscan\n```\nnbtscan -r 192.168.11.0/24\n```\n\n#### nmblookup\n```\nnmblookup -A target\n```\n#### smbclient\n```\nsmbclient //192.168.31.147/karen -I 192.168.88.251\n```\n#### rpcclient\n```\nrpcclient -U \"\" 192.168.88.251 // connect as blank user /nobody\n```\n#### smbmap\n```\nsmbmap -u \"\" -p \"\" -d MYGROUP -H 192.168.88.251\n```\n\n## Metasploit \n\n###",
+  "payloads": [
+    "## SMB NETBIOS Enumeration Tips",
+    "### Tool Tips",
+    "#### Enum4Linux",
+    "enum4linux x.x.x.x",
+    "#### Nmap",
+    "nmap -v -p 139,445 -oG smb.txt 192.168.88.0-254",
+    "#### nbtscan",
+    "nbtscan -r 192.168.11.0/24",
+    "#### nmblookup",
+    "nmblookup -A target",
+    "#### smbclient",
+    "smbclient //192.168.31.147/karen -I 192.168.88.251",
+    "#### rpcclient",
+    "rpcclient -U \"\" 192.168.88.251 // connect as blank user /nobody",
+    "#### smbmap"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Information_Gathering/recon/smb_enumeration_tips.md"
+  ]
+}

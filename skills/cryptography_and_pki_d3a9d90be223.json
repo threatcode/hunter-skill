@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_d3a9d90be223",
+  "category": "cryptography-and-pki",
+  "title": "crypto frameworks",
+  "description": "# Crypto Frameworks and Libraries\n\n### C Programming Language\n\n- [crypto-algorithms](https://github.com/B-Con/crypto-algorithms) - Basic implementations of standard cryptography algorithms, like AES and SHA-1.\n- [libgcrypt](http://directory.fsf.org/wiki/Libgcrypt) - Cryptographic library developed as a separated module of GnuPG.\n- [libsodium](https://github.com/jedisct1/libsodium) - Modern and easy-to-use crypto library.\n- [libtomcrypt](https://github.com/libtom/libtomcrypt) - Fairly comprehensi",
+  "payloads": [
+    "# Crypto Frameworks and Libraries",
+    "### C Programming Language",
+    "- [crypto-algorithms](https://github.com/B-Con/crypto-algorithms) - Basic implementations of standard cryptography algorithms, like AES and SHA-1.",
+    "- [libgcrypt](http://directory.fsf.org/wiki/Libgcrypt) - Cryptographic library developed as a separated module of GnuPG.",
+    "- [libsodium](https://github.com/jedisct1/libsodium) - Modern and easy-to-use crypto library.",
+    "- [libtomcrypt](https://github.com/libtom/libtomcrypt) - Fairly comprehensive, modular and portable cryptographic toolkit.",
+    "- [libVES.c](https://github.com/vesvault/libVES.c) - End-to-end encrypted sharing via cloud repository, secure recovery through a viral network of friends in case of key loss.",
+    "- [milagro-crypto-c](https://github.com/apache/incubator-milagro-crypto-c) - Small, self-contained and fast open source crypto library. It supports RSA, ECDH, ECIES, ECDSA, AES-GCM, SHA2, SHA3 and Pairing-Based Cryptography.",
+    "- [monocypher](https://monocypher.org) - small, portable, easy to use crypto library inspired by libsodium and TweetNaCl.",
+    "- [NaCl](https://nacl.cr.yp.to/) - High-speed library for network communication, encryption, decryption, signatures, etc.",
+    "- [OpenSSL](https://github.com/openssl/openssl) - TLS/SSL and crypto library.",
+    "- [PolarSSL](https://tls.mbed.org/) - PolarSSL makes it trivially easy for developers to include cryptographic and SSL/TLS capabilities in their (embedded) products, facilitating this functionality with a minimal coding footprint.",
+    "- [RHash](https://github.com/rhash/RHash) - Great utility for computing hash sums.",
+    "- [themis](https://github.com/cossacklabs/themis) - High level crypto library for storing data (AES), secure messaging (ECC + ECDSA / RSA + PSS + PKCS#7) and session-oriented, forward secrecy data exchange (ECDH key agreement, ECC & AES encryption). Ported on many languages and platforms, suitable for client-server infastructures.",
+    "- [tiny-AES128-C](https://github.com/kokke/tiny-AES128-C) - Small portable AES128 in C."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/crypto_frameworks.md"
+  ]
+}

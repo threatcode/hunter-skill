@@ -1,0 +1,27 @@
+{
+  "id": "iot_hacking_f976f91bd72b",
+  "category": "iot-hacking",
+  "title": "flags",
+  "description": "# IoT Hacking CLUS CTF Flags\n\nThe following are the CTF flags for the grafana vulnerability in the IoT device:\n\nThe vulnerability is caused by plugin module, which is able to serve the static file inside the plugin folder. But for lock of check, attacker can use ../ to step up from the plugin folder to parent foler and download arbitrary files.\n\nTo exploit the vulnerabilty, you should know a valid plugin id, such as alertlist, here are some of common plugin ids:\n```\nalertlist\ncloudwatch\ndashlist",
+  "payloads": [
+    "# IoT Hacking CLUS CTF Flags",
+    "The following are the CTF flags for the grafana vulnerability in the IoT device:",
+    "The vulnerability is caused by plugin module, which is able to serve the static file inside the plugin folder. But for lock of check, attacker can use ../ to step up from the plugin folder to parent foler and download arbitrary files.",
+    "To exploit the vulnerabilty, you should know a valid plugin id, such as alertlist, here are some of common plugin ids:",
+    "alertlist",
+    "cloudwatch",
+    "dashlist",
+    "elasticsearch",
+    "graphite",
+    "heatmap",
+    "influxdb",
+    "opentsdb",
+    "pluginlist",
+    "postgres",
+    "prometheus"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/iot-hacking/flags.md"
+  ]
+}

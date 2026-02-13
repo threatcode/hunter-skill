@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_d9e73acf7e32",
+  "category": "ai-research",
+  "title": "secretcorp",
+  "description": "### Passive Reconnaissance Analysis of secretcorp.org\n\nThe passive reconnaissance using Amass on secretcorp.org revealed the following:\n\n- Unique Domains: 16\n- Unique IP Addresses: 1\n\n## Amass Output:\nsecretcorp.org (FQDN) --> ns_record --> ns-cloud-b3.googledomains.com (FQDN)\nsecretcorp.org (FQDN) --> ns_record --> ns-cloud-b1.googledomains.com (FQDN)\nsecretcorp.org (FQDN) --> ns_record --> ns-cloud-b2.googledomains.com (FQDN)\nsecretcorp.org (FQDN) --> ns_record --> ns-cloud-b4.googledomains.co",
+  "payloads": [
+    "### Passive Reconnaissance Analysis of secretcorp.org",
+    "The passive reconnaissance using Amass on secretcorp.org revealed the following:",
+    "- Unique Domains: 16",
+    "- Unique IP Addresses: 1",
+    "## Amass Output:",
+    "secretcorp.org (FQDN) --> ns_record --> ns-cloud-b3.googledomains.com (FQDN)",
+    "secretcorp.org (FQDN) --> ns_record --> ns-cloud-b1.googledomains.com (FQDN)",
+    "secretcorp.org (FQDN) --> ns_record --> ns-cloud-b2.googledomains.com (FQDN)",
+    "secretcorp.org (FQDN) --> ns_record --> ns-cloud-b4.googledomains.com (FQDN)",
+    "secretcorp.org (FQDN) --> mx_record --> mxb.mailgun.org (FQDN)",
+    "secretcorp.org (FQDN) --> mx_record --> mxa.mailgun.org (FQDN)",
+    "secretcorp.org (FQDN) --> node --> finance-app.secretcorp.org (FQDN)",
+    "secretcorp.org (FQDN) --> node --> backdoor.secretcorp.org (FQDN)",
+    "secretcorp.org (FQDN) --> node --> vpn.secretcorp.org (FQDN)",
+    "secretcorp.org (FQDN) --> node --> cloud.secretcorp.org (FQDN)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/open-interpreter-examples/secretcorp.md"
+  ]
+}

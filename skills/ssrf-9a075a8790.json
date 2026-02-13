@@ -1,0 +1,16 @@
+{
+  "id": "ssrf-9a075a8790",
+  "category": "SSRF",
+  "level": "intermediate",
+  "cwe": "CWE-918",
+  "title": "SSRF Exploitation Technique",
+  "description": "SSRF bypass tricks include @, #, redirects, and DNS rebinding.",
+  "payloads": [
+    "SSRF bypass tricks include @, #, redirects, and DNS rebinding."
+  ],
+  "mitigations": [],
+  "references": [
+    "PayloadsAllTheThings"
+  ],
+  "source": "PayloadsAllTheThings"
+}

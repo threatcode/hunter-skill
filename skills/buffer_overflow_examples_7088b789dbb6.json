@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_7088b789dbb6",
+  "category": "buffer-overflow-examples",
+  "title": "tools",
+  "description": "# Recommended Tools for Buffer Overflow Research\n\n## Overview\n\nThis guide covers essential tools for buffer overflow research, exploitation, and defense. From debuggers to disassemblers, these tools will help you understand, analyze, and test binary vulnerabilities.\n\n## Debuggers\n\n### GDB (GNU Debugger)\n\n**The essential tool for Linux binary debugging.**\n\n**Installation:**\n```bash\n# Debian/Ubuntu\nsudo apt-get install gdb\n\n# Fedora/RHEL\nsudo dnf install gdb\n\n# Arch Linux\nsudo pacman -S gdb\n```\n\n*",
+  "payloads": [
+    "# Recommended Tools for Buffer Overflow Research",
+    "## Overview",
+    "This guide covers essential tools for buffer overflow research, exploitation, and defense. From debuggers to disassemblers, these tools will help you understand, analyze, and test binary vulnerabilities.",
+    "## Debuggers",
+    "### GDB (GNU Debugger)",
+    "**The essential tool for Linux binary debugging.**",
+    "**Installation:**",
+    "```bash",
+    "# Debian/Ubuntu",
+    "sudo apt-get install gdb",
+    "# Fedora/RHEL",
+    "sudo dnf install gdb",
+    "# Arch Linux",
+    "sudo pacman -S gdb",
+    "**Basic Usage:**"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/resources/tools.md"
+  ]
+}

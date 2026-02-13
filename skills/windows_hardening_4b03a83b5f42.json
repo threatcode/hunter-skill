@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_4b03a83b5f42",
+  "category": "windows-hardening",
+  "title": "dcomexec",
+  "description": "# DCOM Exec\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## MMC20.Application\n\n**For more info about this technique chech the original post from [https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/](https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/)**\n\nDistributed Component Object Model (DCOM) objects present an interesting capability for network-based interactions with objects. Microsoft provides comprehensive ",
+  "payloads": [
+    "# DCOM Exec",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## MMC20.Application",
+    "**For more info about this technique chech the original post from [https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/](https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/)**",
+    "Distributed Component Object Model (DCOM) objects present an interesting capability for network-based interactions with objects. Microsoft provides comprehensive documentation for both DCOM and Component Object Model (COM), accessible [here for DCOM](https://msdn.microsoft.com/en-us/library/cc226801.aspx) and [here for COM](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms694363(v=vs.85).aspx>). A list of DCOM applications can be retrieved using the PowerShell command:",
+    "```bash",
+    "Get-CimInstance Win32_DCOMApplication",
+    "The COM object, [MMC Application Class (MMC20.Application)](https://technet.microsoft.com/en-us/library/cc181199.aspx), enables scripting of MMC snap-in operations. Notably, this object contains a `ExecuteShellCommand` method under `Document.ActiveView`. More information about this method can be found [here](<https://msdn.microsoft.com/en-us/library/aa815396(v=vs.85).aspx>). Check it running:",
+    "This feature facilitates the execution of commands over a network through a DCOM application. To interact with DCOM remotely as an admin, PowerShell can be utilized as follows:",
+    "```bash",
+    "[activator]::CreateInstance([type]::GetTypeFromProgID(\"<DCOM_ProgID>\", \"<IP_Address>\"))",
+    "This command connects to the DCOM application and returns an instance of the COM object. The ExecuteShellCommand method can then be invoked to execute a process on the remote host. The process involves the following steps:",
+    "Check methods:",
+    "```bash",
+    "$com = [activator]::CreateInstance([type]::GetTypeFromProgID(\"MMC20.Application\", \"10.10.10.10\"))"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/dcomexec.md"
+  ]
+}

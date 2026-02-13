@@ -1,0 +1,27 @@
+{
+  "id": "todo_9d17b68f1643",
+  "category": "todo",
+  "title": "online platforms with api",
+  "description": "# Online Platforms with API\n\n{{#include ../banners/hacktricks-training.md}}\n\n## [ProjectHoneypot](https://www.projecthoneypot.org/)\n\nYou can ask if an IP is related to suspicious/malicious activities. Completely free.\n\n## [**BotScout**](http://botscout.com/api.htm)\n\nCheck if the IP address is related to a bot that register accounts. It can also check usernames and emails. Initially free.\n\n## [Hunter](https://hunter.io/)\n\nFind and verify emails.\\\nSome free API requests free, for more you need to ",
+  "payloads": [
+    "# Online Platforms with API",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## [ProjectHoneypot](https://www.projecthoneypot.org/)",
+    "You can ask if an IP is related to suspicious/malicious activities. Completely free.",
+    "## [**BotScout**](http://botscout.com/api.htm)",
+    "Check if the IP address is related to a bot that register accounts. It can also check usernames and emails. Initially free.",
+    "## [Hunter](https://hunter.io/)",
+    "Find and verify emails.\\",
+    "Some free API requests free, for more you need to pay.\\",
+    "Commercial?",
+    "## [AlientVault](https://otx.alienvault.com/api)",
+    "Find Malicious activities related to IPs and Domains. Free.",
+    "## [Clearbit](https://dashboard.clearbit.com/)",
+    "Find related personal data to a email (profiles on other platforms), domain (basic company info ,mails and people working) and companies (get company info from mail).\\",
+    "You need to pay to access all the possibilities.\\"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/online-platforms-with-api.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_30155bf5ea5d",
+  "category": "ai-research",
+  "title": "glossary of terms",
+  "description": "# A glossary for AI-related terms:\n\n- **Activation Function:** A function in a neural network that introduces non-linear properties to the network, enabling it to learn more complex functions.\n- **Adversarial Machine Learning:** A technique in machine learning where a model is trained to identify and counteract attempts to deceive it.\n- **Agent:** In AI, an entity that perceives its environment and takes actions to maximize its chance of achieving a goal.\n- **Algorithm:** A set of rules to be fo",
+  "payloads": [
+    "# A glossary for AI-related terms:",
+    "- **Activation Function:** A function in a neural network that introduces non-linear properties to the network, enabling it to learn more complex functions.",
+    "- **Adversarial Machine Learning:** A technique in machine learning where a model is trained to identify and counteract attempts to deceive it.",
+    "- **Agent:** In AI, an entity that perceives its environment and takes actions to maximize its chance of achieving a goal.",
+    "- **Algorithm:** A set of rules to be followed in calculations or other problem-solving operations, especially by a computer.",
+    "- **Anomaly Detection:** The identification of rare items, events, or observations which raise suspicions by differing significantly from the majority of the data.",
+    "- **Autoencoder:** A type of neural network used to learn efficient codings of unlabeled data, typically for the purposes of dimensionality reduction.",
+    "- **Backpropagation:** An algorithm for iteratively adjusting the weights used in a neural network system to minimize the difference between actual and predicted outputs.",
+    "- **Bagging (Bootstrap Aggregating):** An ensemble learning technique used to improve the stability and accuracy of machine learning algorithms.",
+    "- **Bayesian Network:** A probabilistic graphical model that represents a set of variables and their conditional dependencies via a directed acyclic graph.",
+    "- **Bias (in AI):** A systematic error in the data or the model that can lead to unfair or prejudiced outcomes.",
+    "- **Big Data:** Extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations, especially relating to human behavior and interactions.",
+    "- **Boosting:** A machine learning ensemble meta-algorithm for primarily reducing bias, and also variance in supervised learning.",
+    "- **Capsule Network:** A type of neural network that uses capsules to enhance the ability of the network to understand spatial relationships and hierarchies in data.",
+    "- **Chatbot:** A software application used to conduct an online chat conversation via text or text-to-speech, instead of providing direct contact with a live human agent."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ML-Fundamentals/glossary_of_terms.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-65a4039193d7",
+  "category": "SQL Injection",
+  "title": "PostgreSQL Injection",
+  "description": "# PostgreSQL Injection\n\n> PostgreSQL SQL injection refers to a type of security vulnerability where attackers exploit improperly sanitized user input to execute unauthorized SQL commands within a PostgreSQL database.\n\n## Summary\n\n* [PostgreSQL Comments](#postgresql-comments)\n* [PostgreSQL Enumeration](#postgresql-enumeration)\n* [PostgreSQL Methodology](#postgresql-methodology)\n* [PostgreSQL Error Based](#postgresql-error-based)\n    * [PostgreSQL XML Helpers](#postgresql-xml-helpers)\n* [PostgreSQ",
+  "payloads": [
+    "# PostgreSQL Injection",
+    "> PostgreSQL SQL injection refers to a type of security vulnerability where attackers exploit improperly sanitized user input to execute unauthorized SQL commands within a PostgreSQL database.",
+    "## Summary",
+    "* [PostgreSQL Comments](#postgresql-comments)",
+    "* [PostgreSQL Enumeration](#postgresql-enumeration)",
+    "* [PostgreSQL Methodology](#postgresql-methodology)",
+    "* [PostgreSQL Error Based](#postgresql-error-based)",
+    "* [PostgreSQL XML Helpers](#postgresql-xml-helpers)",
+    "* [PostgreSQL Blind](#postgresql-blind)",
+    "* [PostgreSQL Blind With Substring Equivalent](#postgresql-blind-with-substring-equivalent)",
+    "* [PostgreSQL Time Based](#postgresql-time-based)",
+    "* [PostgreSQL Out of Band](#postgresql-out-of-band)",
+    "* [PostgreSQL Stacked Query](#postgresql-stacked-query)",
+    "* [PostgreSQL File Manipulation](#postgresql-file-manipulation)",
+    "* [PostgreSQL File Read](#postgresql-file-read)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/PostgreSQL Injection.md"
+  ]
+}

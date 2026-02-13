@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_bd7c5dd683f6",
+  "category": "windows-hardening",
+  "title": "privileged groups and token privileges",
+  "description": "# Privileged Groups\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Well Known groups with administration privileges\n\n- **Administrators**\n- **Domain Admins**\n- **Enterprise Admins**\n\n## Account Operators\n\nThis group is empowered to create accounts and groups that are not administrators on the domain. Additionally, it enables local login to the Domain Controller (DC).\n\nTo identify the members of this group, the following command is executed:\n\n```bash\nGet-NetGroupMember -Identity \"Account ",
+  "payloads": [
+    "# Privileged Groups",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Well Known groups with administration privileges",
+    "- **Administrators**",
+    "- **Domain Admins**",
+    "- **Enterprise Admins**",
+    "## Account Operators",
+    "This group is empowered to create accounts and groups that are not administrators on the domain. Additionally, it enables local login to the Domain Controller (DC).",
+    "To identify the members of this group, the following command is executed:",
+    "```bash",
+    "Get-NetGroupMember -Identity \"Account Operators\" -Recurse",
+    "Adding new users is permitted, as well as local login to the DC.",
+    "## AdminSDHolder group",
+    "The **AdminSDHolder** group's Access Control List (ACL) is crucial as it sets permissions for all \"protected groups\" within Active Directory, including high-privilege groups. This mechanism ensures the security of these groups by preventing unauthorized modifications.",
+    "An attacker could exploit this by modifying the **AdminSDHolder** group's ACL, granting full permissions to a standard user. This would effectively give that user full control over all protected groups. If this user's permissions are altered or removed, they would be automatically reinstated within an hour due to the system's design."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/privileged-groups-and-token-privileges.md"
+  ]
+}

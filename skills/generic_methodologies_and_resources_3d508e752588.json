@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_3d508e752588",
+  "category": "generic-methodologies-and-resources",
+  "title": "anti forensic techniques",
+  "description": "# Anti-Forensic Techniques\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Timestamps\n\nAn attacker may be interested in **changing the timestamps of files** to avoid being detected.\\\nIt's possible to find the timestamps inside the MFT in attributes `$STANDARD_INFORMATION` \\_\\_ and \\_\\_ `$FILE_NAME`.\n\nBoth attributes have 4 timestamps: **Modification**, **access**, **creation**, and **MFT registry modification** (MACE or MACB).\n\n**Windows explorer** and other tools show the information fro",
+  "payloads": [
+    "# Anti-Forensic Techniques",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Timestamps",
+    "An attacker may be interested in **changing the timestamps of files** to avoid being detected.\\",
+    "It's possible to find the timestamps inside the MFT in attributes `$STANDARD_INFORMATION` \\_\\_ and \\_\\_ `$FILE_NAME`.",
+    "Both attributes have 4 timestamps: **Modification**, **access**, **creation**, and **MFT registry modification** (MACE or MACB).",
+    "**Windows explorer** and other tools show the information from **`$STANDARD_INFORMATION`**.",
+    "### TimeStomp - Anti-forensic Tool",
+    "This tool **modifies** the timestamp information inside **`$STANDARD_INFORMATION`** **but** **not** the information inside **`$FILE_NAME`**. Therefore, it's possible to **identify** **suspicious** **activity**.",
+    "### Usnjrnl",
+    "The **USN Journal** (Update Sequence Number Journal) is a feature of the NTFS (Windows NT file system) that keeps track of volume changes. The [**UsnJrnl2Csv**](https://github.com/jschicht/UsnJrnl2Csv) tool allows for the examination of these changes.",
+    "![](<../../images/image (801).png>)",
+    "The previous image is the **output** shown by the **tool** where it can be observed that some **changes were performed** to the file.",
+    "### $LogFile",
+    "**All metadata changes to a file system are logged** in a process known as [write-ahead logging](https://en.wikipedia.org/wiki/Write-ahead_logging). The logged metadata is kept in a file named `**$LogFile**`, located in the root directory of an NTFS file system. Tools such as [LogFileParser](https://github.com/jschicht/LogFileParser) can be used to parse this file and identify changes."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/anti-forensic-techniques.md"
+  ]
+}

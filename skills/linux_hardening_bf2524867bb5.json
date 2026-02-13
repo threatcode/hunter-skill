@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_bf2524867bb5",
+  "category": "linux-hardening",
+  "title": "LSM comparison",
+  "description": "# A Comparative Overview of SELinux, AppArmor, Yama, TOMOYO Linux, and Smack\n\nIntroduction:\nIn the realm of Linux security, various Linux Security Modules (LSMs) have been developed to enhance access control and provide mandatory access control (MAC) mechanisms. This article explores five popular LSMs: SELinux, AppArmor, Yama, TOMOYO Linux, and Smack. Each of these modules offers unique features and approaches to bolstering the security posture of Linux-based systems.\n\n1. SELinux:\n   - Developed",
+  "payloads": [
+    "# A Comparative Overview of SELinux, AppArmor, Yama, TOMOYO Linux, and Smack",
+    "Introduction:",
+    "In the realm of Linux security, various Linux Security Modules (LSMs) have been developed to enhance access control and provide mandatory access control (MAC) mechanisms. This article explores five popular LSMs: SELinux, AppArmor, Yama, TOMOYO Linux, and Smack. Each of these modules offers unique features and approaches to bolstering the security posture of Linux-based systems.",
+    "1. SELinux:",
+    "- Developed by the National Security Agency (NSA), SELinux is widely adopted in mainstream RHEL-based distributions.",
+    "- Implements MAC with fine-grained access controls, allowing administrators to define extensive security policies.",
+    "- Enforces access controls based on security labels, providing powerful isolation and protection against privilege escalation.",
+    "- Requires a specific kernel build with SELinux support, and policies can be complex to configure and manage.",
+    "- Documentation: [SELinux Project](https://github.com/SELinuxProject/selinux/wiki)",
+    "2. AppArmor:",
+    "- AppArmor is integrated into mainstream Ubuntu-based distributions and provides profile-based access control.",
+    "- Offers pre-configured profiles for commonly used applications, simplifying the setup and management of security policies.",
+    "- Uses path-based access control to restrict access to files and resources, enhancing application-level security.",
+    "- Provides a balance between security and usability, making it more approachable for many users.",
+    "- Documentation: [AppArmor Wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/linux-hardening/LSM-comparison.md"
+  ]
+}

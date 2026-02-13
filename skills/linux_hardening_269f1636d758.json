@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_269f1636d758",
+  "category": "linux-hardening",
+  "title": "docker privileged",
+  "description": "# Docker --privileged\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## What Affects\n\nWhen you run a container as privileged these are the protections you are disabling:\n\n### Mount /dev\n\nIn a privileged container, all the **devices can be accessed in `/dev/`**. Therefore you can **escape** by **mounting** the disk of the host.\n\n{{#tabs}}\n{{#tab name=\"Inside default container\"}}\n\n```bash\n# docker run --rm -it alpine sh\nls /dev\nconsole  fd       mqueue   ptmx     random   stderr   stdout  ",
+  "payloads": [
+    "# Docker --privileged",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## What Affects",
+    "When you run a container as privileged these are the protections you are disabling:",
+    "### Mount /dev",
+    "In a privileged container, all the **devices can be accessed in `/dev/`**. Therefore you can **escape** by **mounting** the disk of the host.",
+    "{{#tabs}}",
+    "{{#tab name=\"Inside default container\"}}",
+    "```bash",
+    "# docker run --rm -it alpine sh",
+    "ls /dev",
+    "console  fd       mqueue   ptmx     random   stderr   stdout   urandom",
+    "core     full     null     pts      shm      stdin    tty      zero",
+    "{{#endtab}}",
+    "{{#tab name=\"Inside Privileged Container\"}}"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/docker-privileged.md"
+  ]
+}

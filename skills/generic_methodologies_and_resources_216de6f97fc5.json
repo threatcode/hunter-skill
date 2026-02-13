@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_216de6f97fc5",
+  "category": "generic-methodologies-and-resources",
+  "title": "wifi pcap analysis",
+  "description": "# Wifi Pcap Analysis\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Check BSSIDs\n\nWhen you receive a capture whose principal traffic is Wifi using WireShark you can start investigating all the SSIDs of the capture with _Wireless --> WLAN Traffic_:\n\n![](<../../../images/image (106).png>)\n\n![](<../../../images/image (492).png>)\n\n### Brute Force\n\nOne of the columns of that screen indicates if **any authentication was found inside the pcap**. If that is the case you can try to Brute force",
+  "payloads": [
+    "# Wifi Pcap Analysis",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Check BSSIDs",
+    "When you receive a capture whose principal traffic is Wifi using WireShark you can start investigating all the SSIDs of the capture with _Wireless --> WLAN Traffic_:",
+    "![](<../../../images/image (106).png>)",
+    "![](<../../../images/image (492).png>)",
+    "### Brute Force",
+    "One of the columns of that screen indicates if **any authentication was found inside the pcap**. If that is the case you can try to Brute force it using `aircrack-ng`:",
+    "```bash",
+    "aircrack-ng -w pwds-file.txt -b <BSSID> file.pcap",
+    "For example it will retrieve the WPA passphrase protecting a PSK (pre shared-key), that will be required to decrypt the trafic later.",
+    "## Data in Beacons / Side Channel",
+    "If you suspect that **data is being leaked inside beacons of a Wifi network** you can check the beacons of the network using a filter like the following one: `wlan contains <NAMEofNETWORK>`, or `wlan.ssid == \"NAMEofNETWORK\"` search inside the filtered packets for suspicious strings.",
+    "## Find Unknown MAC Addresses in A Wifi Network",
+    "The following link will be useful to find the **machines sending data inside a Wifi Network**:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wifi-pcap-analysis.md"
+  ]
+}

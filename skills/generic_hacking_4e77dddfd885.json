@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_4e77dddfd885",
+  "category": "generic-hacking",
+  "title": "brute force",
+  "description": "# Brute Force - CheatSheet\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Default Credentials\n\n**Search in google** for default credentials of the technology that is being used, or **try these links**:\n\n- [**https://github.com/ihebski/DefaultCreds-cheat-sheet**](https://github.com/ihebski/DefaultCreds-cheat-sheet)\n- [**http://www.phenoelit.org/dpl/dpl.html**](http://www.phenoelit.org/dpl/dpl.html)\n- [**http://www.vulnerabilityassessment.co.uk/passwordsC.htm**](http://www.vulnerabilityassess",
+  "payloads": [
+    "# Brute Force - CheatSheet",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Default Credentials",
+    "**Search in google** for default credentials of the technology that is being used, or **try these links**:",
+    "- [**https://github.com/ihebski/DefaultCreds-cheat-sheet**](https://github.com/ihebski/DefaultCreds-cheat-sheet)",
+    "- [**http://www.phenoelit.org/dpl/dpl.html**](http://www.phenoelit.org/dpl/dpl.html)",
+    "- [**http://www.vulnerabilityassessment.co.uk/passwordsC.htm**](http://www.vulnerabilityassessment.co.uk/passwordsC.htm)",
+    "- [**https://192-168-1-1ip.mobi/default-router-passwords-list/**](https://192-168-1-1ip.mobi/default-router-passwords-list/)",
+    "- [**https://datarecovery.com/rd/default-passwords/**](https://datarecovery.com/rd/default-passwords/)",
+    "- [**https://bizuns.com/default-passwords-list**](https://bizuns.com/default-passwords-list)",
+    "- [**https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv**](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv)",
+    "- [**https://github.com/Dormidera/WordList-Compendium**](https://github.com/Dormidera/WordList-Compendium)",
+    "- [**https://www.cirt.net/passwords**](https://www.cirt.net/passwords)",
+    "- [**http://www.passwordsdatabase.com/**](http://www.passwordsdatabase.com)",
+    "- [**https://many-passwords.github.io/**](https://many-passwords.github.io)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/brute-force.md"
+  ]
+}

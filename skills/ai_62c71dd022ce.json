@@ -1,0 +1,27 @@
+{
+  "id": "ai_62c71dd022ce",
+  "category": "AI",
+  "title": "5. llm architecture",
+  "description": "# 5. LLM Architecture\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## LLM Architecture\n\n> [!TIP]\n> The goal of this fifth phase is very simple: **Develop the architecture of the full LLM**. Put everything together, apply all the layers and create all the functions to generate text or transform text to IDs and backwards.\n>\n> This architecture will be used for both, training and predicting text after it was trained.\n\nLLM architecture example from [https://github.com/rasbt/LLMs-from-scratch/",
+  "payloads": [
+    "# 5. LLM Architecture",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## LLM Architecture",
+    "> [!TIP]",
+    "> The goal of this fifth phase is very simple: **Develop the architecture of the full LLM**. Put everything together, apply all the layers and create all the functions to generate text or transform text to IDs and backwards.",
+    "> This architecture will be used for both, training and predicting text after it was trained.",
+    "LLM architecture example from [https://github.com/rasbt/LLMs-from-scratch/blob/main/ch04/01_main-chapter-code/ch04.ipynb](https://github.com/rasbt/LLMs-from-scratch/blob/main/ch04/01_main-chapter-code/ch04.ipynb):",
+    "A high level representation can be observed in:",
+    "<figure><img src=\"../../images/image (3) (1) (1) (1).png\" alt=\"\" width=\"563\"><figcaption><p><a href=\"https://camo.githubusercontent.com/6c8c392f72d5b9e86c94aeb9470beab435b888d24135926f1746eb88e0cc18fb/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f31332e776562703f31\">https://camo.githubusercontent.com/6c8c392f72d5b9e86c94aeb9470beab435b888d24135926f1746eb88e0cc18fb/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830345f636f6d707265737365642f31332e776562703f31</a></p></figcaption></figure>",
+    "1. **Input (Tokenized Text)**: The process begins with tokenized text, which is converted into numerical representations.",
+    "2. **Token Embedding and Positional Embedding Layer**: The tokenized text is passed through a **token embedding** layer and a **positional embedding layer**, which captures the position of tokens in a sequence, critical for understanding word order.",
+    "3. **Transformer Blocks**: The model contains **12 transformer blocks**, each with multiple layers. These blocks repeat the following sequence:",
+    "- **Masked Multi-Head Attention**: Allows the model to focus on different parts of the input text at once.",
+    "- **Layer Normalization**: A normalization step to stabilize and improve training.",
+    "- **Feed Forward Layer**: Responsible for processing the information from the attention layer and making predictions about the next token."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/5.-llm-architecture.md"
+  ]
+}

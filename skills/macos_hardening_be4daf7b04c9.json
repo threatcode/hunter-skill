@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_be4daf7b04c9",
+  "category": "macos-hardening",
+  "title": "macos gcd grand central dispatch",
+  "description": "# macOS GCD - Grand Central Dispatch\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Basic Information\n\n**Grand Central Dispatch (GCD),** also known as **libdispatch** (`libdispatch.dyld`), is available in both macOS and iOS. It's a technology developed by Apple to optimize application support for concurrent (multithreaded) execution on multicore hardware.\n\n**GCD** provides and manages **FIFO queues** to which your application can **submit tasks** in the form of **block objects**. Blocks ",
+  "payloads": [
+    "# macOS GCD - Grand Central Dispatch",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "**Grand Central Dispatch (GCD),** also known as **libdispatch** (`libdispatch.dyld`), is available in both macOS and iOS. It's a technology developed by Apple to optimize application support for concurrent (multithreaded) execution on multicore hardware.",
+    "**GCD** provides and manages **FIFO queues** to which your application can **submit tasks** in the form of **block objects**. Blocks submitted to dispatch queues are **executed on a pool of threads** fully managed by the system. GCD automatically creates threads for executing the tasks in the dispatch queues and schedules those tasks to run on the available cores.",
+    "> [!TIP]",
+    "> In summary, to execute code in **parallel**, processes can send **blocks of code to GCD**, which will take care of their execution. Therefore, processes don't create new threads; **GCD executes the given code with its own pool of threads** (which might increase or decrease as necessary).",
+    "This is very helpful to manage parallel execution successfully, greatly reducing the number of threads processes create and optimising the parallel execution. This is ideal for tasks that require **great parallelism** (brute-forcing?) or for tasks that shouldn't block the main thread: For example, the main thread on iOS handles UI interactions, so any other functionality that could make the app hang (searching, accessing a web, reading a file...) is managed this way.",
+    "### Blocks",
+    "A block is a **self contained section of code** (like a function with arguments returning a value) and can also specify bound variables.\\",
+    "However, at compiler level blocks doesn't exist, they are `os_object`s. Each of these objects is formed by two structures:",
+    "- **block literal**:",
+    "- It starts by the **`isa`** field, pointing to the block's class:",
+    "- `NSConcreteGlobalBlock` (blocks from `__DATA.__const`)",
+    "- `NSConcreteMallocBlock` (blocks in the heap)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-gcd-grand-central-dispatch.md"
+  ]
+}

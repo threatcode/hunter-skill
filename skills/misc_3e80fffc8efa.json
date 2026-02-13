@@ -1,0 +1,27 @@
+{
+  "id": "misc_3e80fffc8efa",
+  "category": "Misc",
+  "title": "iot hacking tools",
+  "description": "# Iot Hacking Tools\n\nThe following tools are organized for this category:\n\n---\n\n- [Bn-Uefi-Helper - Helper Plugin For Analyzing UEFI Firmware](http://feedproxy.google.com/~r/PentestTools/~3/H3dg10284_0/bn-uefi-helper-helper-plugin-for.html)\n- [Emba - An Analyzer For Linux-based Firmware Of Embedded Devices](http://feedproxy.google.com/~r/PentestTools/~3/jxh-VXIS_uY/emba-analyzer-for-linux-based-firmware.html)\n- [Firmware Analysis Toolkit - Toolkit To Emulate Firmware And Analyse It For Security ",
+  "payloads": [
+    "# Iot Hacking Tools",
+    "The following tools are organized for this category:",
+    "- [Bn-Uefi-Helper - Helper Plugin For Analyzing UEFI Firmware](http://feedproxy.google.com/~r/PentestTools/~3/H3dg10284_0/bn-uefi-helper-helper-plugin-for.html)",
+    "- [Emba - An Analyzer For Linux-based Firmware Of Embedded Devices](http://feedproxy.google.com/~r/PentestTools/~3/jxh-VXIS_uY/emba-analyzer-for-linux-based-firmware.html)",
+    "- [Firmware Analysis Toolkit - Toolkit To Emulate Firmware And Analyse It For Security Vulnerabilities](http://feedproxy.google.com/~r/PentestTools/~3/Xo17q88fwaU/firmware-analysis-toolkit-toolkit-to.html)",
+    "- [Firmware Slap - Discovering Vulnerabilities In Firmware Through Concolic Analysis And Function Clustering](http://feedproxy.google.com/~r/PentestTools/~3/ZlHsrIesqEo/firmware-slap-discovering.html)",
+    "- [Go-RouterSocks - Router Sock. One Port Socks For All The Others.](http://feedproxy.google.com/~r/PentestTools/~3/BzUdOcb_Mgw/go-routersocks-router-sock-one-port.html)",
+    "- [HomePwn - Swiss Army Knife for Pentesting of IoT Devices](http://feedproxy.google.com/~r/PentestTools/~3/nMwihlR0QFM/homepwn-swiss-army-knife-for-pentesting.html)",
+    "- [IoT-Home-Guard - A Tool For Malicious Behavior Detection In IoT Devices](http://feedproxy.google.com/~r/PentestTools/~3/00rK4kMhDhs/iot-home-guard-tool-for-malicious.html)",
+    "- [IoT-Implant-Toolkit - Toolkit For Implant Attack Of IoT Devices](http://feedproxy.google.com/~r/PentestTools/~3/3OB50NG0vmM/iot-implant-toolkit-toolkit-for-implant.html)",
+    "- [IoT-PT - A Virtual Environment For Pentesting IoT Devices](http://feedproxy.google.com/~r/PentestTools/~3/xI86e6AIgtE/iot-pt-virtual-environment-for.html)",
+    "- [IoTGoat - A Deliberately Insecure Firmware Based On OpenWrt](http://feedproxy.google.com/~r/PentestTools/~3/Na957g08Nao/iotgoat-deliberately-insecure-firmware.html)",
+    "- [IoTMap - Research Project On Heterogeneous IoT Protocols Modelling](http://feedproxy.google.com/~r/PentestTools/~3/yr7El3AtACY/iotmap-research-project-on.html)",
+    "- [IotShark - Monitoring And Analyzing IoT Traffic](http://feedproxy.google.com/~r/PentestTools/~3/PeNmS58306Q/iotshark-monitoring-and-analyzing-iot.html)",
+    "- [Karonte - A Static Analysis Tool To Detect Multi-Binary Vulnerabilities In Embedded Firmware](http://feedproxy.google.com/~r/PentestTools/~3/Id6YHzVv09A/karonte-static-analysis-tool-to-detect.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/organized_tools/iot-hacking_tools.md"
+  ]
+}

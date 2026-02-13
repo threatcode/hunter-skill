@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_37d1c8d761a1",
+  "category": "macos-hardening",
+  "title": "macos .net applications injection",
+  "description": "# macOS .Net Applications Injection\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n**This is a summary of the post [https://blog.xpnsec.com/macos-injection-via-third-party-frameworks/](https://blog.xpnsec.com/macos-injection-via-third-party-frameworks/). Check it for further details!**\n\n## .NET Core Debugging <a href=\"#net-core-debugging\" id=\"net-core-debugging\"></a>\n\n### **Establishing a Debugging Session** <a href=\"#net-core-debugging\" id=\"net-core-debugging\"></a>\n\nThe handling of comm",
+  "payloads": [
+    "# macOS .Net Applications Injection",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "**This is a summary of the post [https://blog.xpnsec.com/macos-injection-via-third-party-frameworks/](https://blog.xpnsec.com/macos-injection-via-third-party-frameworks/). Check it for further details!**",
+    "## .NET Core Debugging <a href=\"#net-core-debugging\" id=\"net-core-debugging\"></a>",
+    "### **Establishing a Debugging Session** <a href=\"#net-core-debugging\" id=\"net-core-debugging\"></a>",
+    "The handling of communication between debugger and debuggee in .NET is managed by [**dbgtransportsession.cpp**](https://github.com/dotnet/runtime/blob/0633ecfb79a3b2f1e4c098d1dd0166bc1ae41739/src/coreclr/debug/shared/dbgtransportsession.cpp). This component sets up two named pipes per .NET process as seen in [dbgtransportsession.cpp#L127](https://github.com/dotnet/runtime/blob/0633ecfb79a3b2f1e4c098d1dd0166bc1ae41739/src/coreclr/debug/shared/dbgtransportsession.cpp#L127), which are initiated via [twowaypipe.cpp#L27](https://github.com/dotnet/runtime/blob/0633ecfb79a3b2f1e4c098d1dd0166bc1ae41739/src/coreclr/debug/debug-pal/unix/twowaypipe.cpp#L27). These pipes are suffixed with **`-in`** and **`-out`**.",
+    "By visiting the user's **`$TMPDIR`**, one can find debugging FIFOs available for debugging .Net applications.",
+    "[**DbgTransportSession::TransportWorker**](https://github.com/dotnet/runtime/blob/0633ecfb79a3b2f1e4c098d1dd0166bc1ae41739/src/coreclr/debug/shared/dbgtransportsession.cpp#L1259) is responsible for managing communication from a debugger. To initiate a new debugging session, a debugger must send a message via the `out` pipe starting with a `MessageHeader` struct, detailed in the .NET source code:",
+    "struct MessageHeader {",
+    "MessageType   m_eType;        // Message type",
+    "DWORD         m_cbDataBlock;  // Size of following data block (can be zero)",
+    "DWORD         m_dwId;         // Message ID from sender",
+    "DWORD         m_dwReplyId;    // Reply-to Message ID",
+    "DWORD         m_dwLastSeenId; // Last seen Message ID by sender",
+    "DWORD         m_dwReserved;   // Reserved for future (initialize to zero)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-.net-applications-injection.md"
+  ]
+}

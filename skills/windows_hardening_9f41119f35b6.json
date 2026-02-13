@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_9f41119f35b6",
+  "category": "windows-hardening",
+  "title": "wmiexec",
+  "description": "# WmiExec\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## How It Works Explained\n\nProcesses can be opened on hosts where the username and either password or hash are known through the use of WMI. Commands are executed using WMI by Wmiexec, providing a semi-interactive shell experience.\n\n**dcomexec.py:** Utilizing different DCOM endpoints, this script offers a semi-interactive shell akin to wmiexec.py, specifically leveraging the ShellBrowserWindow DCOM object. It currently supports MMC20.",
+  "payloads": [
+    "# WmiExec",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## How It Works Explained",
+    "Processes can be opened on hosts where the username and either password or hash are known through the use of WMI. Commands are executed using WMI by Wmiexec, providing a semi-interactive shell experience.",
+    "**dcomexec.py:** Utilizing different DCOM endpoints, this script offers a semi-interactive shell akin to wmiexec.py, specifically leveraging the ShellBrowserWindow DCOM object. It currently supports MMC20. Application, Shell Windows, and Shell Browser Window objects. (source: [Hacking Articles](https://www.hackingarticles.in/beginners-guide-to-impacket-tool-kit-part-1/))",
+    "## WMI Fundamentals",
+    "### Namespace",
+    "Structured in a directory-style hierarchy, WMI's top-level container is \\root, under which additional directories, referred to as namespaces, are organized.",
+    "Commands to list namespaces:",
+    "```bash",
+    "# Retrieval of Root namespaces",
+    "gwmi -namespace \"root\" -Class \"__Namespace\" | Select Name",
+    "# Enumeration of all namespaces (administrator privileges may be required)",
+    "Get-WmiObject -Class \"__Namespace\" -Namespace \"Root\" -List -Recurse 2> $null | select __Namespace | sort __Namespace",
+    "# Listing of namespaces within \"root\\cimv2\""
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/wmiexec.md"
+  ]
+}

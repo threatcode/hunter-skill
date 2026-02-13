@@ -1,0 +1,27 @@
+{
+  "id": "reversing_e9d21098f74c",
+  "category": "reversing",
+  "title": "cheat engine",
+  "description": "# Cheat Engine\n\n{{#include ../../banners/hacktricks-training.md}}\n\n[**Cheat Engine**](https://www.cheatengine.org/downloads.php) is a useful program to find where important values are saved inside the memory of a running game and change them.\\\nWhen you download and run it, you are **presented** with a **tutorial** of how to use the tool. If you want to learn how to use the tool it's highly recommended to complete it.\n\n## What are you searching?\n\n![](<../../images/image (762).png>)\n\nThis tool is ",
+  "payloads": [
+    "# Cheat Engine",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "[**Cheat Engine**](https://www.cheatengine.org/downloads.php) is a useful program to find where important values are saved inside the memory of a running game and change them.\\",
+    "When you download and run it, you are **presented** with a **tutorial** of how to use the tool. If you want to learn how to use the tool it's highly recommended to complete it.",
+    "## What are you searching?",
+    "![](<../../images/image (762).png>)",
+    "This tool is very useful to find **where some value** (usually a number) **is stored in the memory** of a program.\\",
+    "**Usually numbers** are stored in **4bytes** form, but you could also find them in **double** or **float** formats, or you may want to look for something **different from a number**. For that reason you need to be sure you **select** what you want to **search for**:",
+    "![](<../../images/image (324).png>)",
+    "Also you can indicate **different** types of **searches**:",
+    "![](<../../images/image (311).png>)",
+    "You can also check the box to **stop the game while scanning the memory**:",
+    "![](<../../images/image (1052).png>)",
+    "### Hotkeys",
+    "In _**Edit --> Settings --> Hotkeys**_ you can set different **hotkeys** for different purposes like **stopping** the **game** (which is quiet useful if at some point you want to scan the memory). Other options are available:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/reversing/reversing-tools-basic-methods/cheat-engine.md"
+  ]
+}

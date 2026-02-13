@@ -1,0 +1,27 @@
+{
+  "id": "misc_86a097a6667f",
+  "category": "Misc",
+  "title": "web application testing tools",
+  "description": "# Web Application Testing Tools\n\nThe following tools are organized for this category:\n\n---\n\n- [0D1N v2.6 - Web Security Tool To Make Fuzzing At HTTP/S](http://feedproxy.google.com/~r/PentestTools/~3/ioYkysg8i6k/0d1n-v26-web-security-tool-to-make.html)\n- [0D1N v3.4 - Tool For Automating Customized Attacks Against Web Applications (Full Made In C Language With Pthreads, Have A Fast Performance)](http://feedproxy.google.com/~r/PentestTools/~3/FCcpoal9Cig/0d1n-v34-tool-for-automating-customized.html",
+  "payloads": [
+    "# Web Application Testing Tools",
+    "The following tools are organized for this category:",
+    "- [0D1N v2.6 - Web Security Tool To Make Fuzzing At HTTP/S](http://feedproxy.google.com/~r/PentestTools/~3/ioYkysg8i6k/0d1n-v26-web-security-tool-to-make.html)",
+    "- [0D1N v3.4 - Tool For Automating Customized Attacks Against Web Applications (Full Made In C Language With Pthreads, Have A Fast Performance)](http://feedproxy.google.com/~r/PentestTools/~3/FCcpoal9Cig/0d1n-v34-tool-for-automating-customized.html)",
+    "- [0L4Bs - Cross-site Scripting Labs For Web Application Security Enthusiasts](http://feedproxy.google.com/~r/PentestTools/~3/Y4d76WceP4E/0l4bs-cross-site-scripting-labs-for-web.html)",
+    "- [403Bypasser - Burpsuite Extension To Bypass 403 Restricted Directory](http://feedproxy.google.com/~r/PentestTools/~3/OAgXURp5RYE/403bypasser-burpsuite-extension-to.html)",
+    "- [ABPTTS - TCP Tunneling Over HTTP/HTTPS For Web Application Servers](http://feedproxy.google.com/~r/PentestTools/~3/g60ICJtKDtI/abptts-tcp-tunneling-over-httphttps-for.html)",
+    "- [Acunetix Web Application Vulnerability Report 2019](http://feedproxy.google.com/~r/PentestTools/~3/pkuHKauhESU/acunetix-web-application-vulnerability.html)",
+    "- [Acunetix v13 - Web Application Security Scanner](http://feedproxy.google.com/~r/PentestTools/~3/cILVQWYMmjE/acunetix-v13-web-application-security.html)",
+    "- [Admin-Panel_Finder - A Burp Suite Extension That Enumerates Infrastructure And Application Admin Interfaces (OTG-CONFIG-005)](http://www.kitploit.com/2022/06/admin-panelfinder-burp-suite-extension.html)",
+    "- [Aduket - Straight-forward HTTP Client Testing, Assertions Included](http://feedproxy.google.com/~r/PentestTools/~3/IoOp4Q2Bsdw/aduket-straight-forward-http-client.html)",
+    "- [Andor - Blind SQL Injection Tool With Golang](http://feedproxy.google.com/~r/PentestTools/~3/zATm4I4cspQ/andor-blind-sql-injection-tool-with.html)",
+    "- [Arjun v1.3 - HTTP Parameter Discovery Suite](http://feedproxy.google.com/~r/PentestTools/~3/zWZXsOUSOfk/arjun-v13-http-parameter-discovery-suite.html)",
+    "- [Arjun v1.6 - HTTP Parameter Discovery Suite](http://feedproxy.google.com/~r/PentestTools/~3/7DM5VIonrMM/arjun-v16-http-parameter-discovery-suite.html)",
+    "- [Artemis - A Modular Web Reconnaissance Tool And Vulnerability Scanner](http://www.kitploit.com/2023/06/artemis-modular-web-reconnaissance-tool.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/organized_tools/web-application-testing_tools.md"
+  ]
+}

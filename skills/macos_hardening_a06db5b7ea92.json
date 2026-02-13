@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_a06db5b7ea92",
+  "category": "macos-hardening",
+  "title": "macos bypassing firewalls",
+  "description": "# macOS Bypassing Firewalls\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Found techniques\n\nThe following techniques were found working in some macOS firewall apps.\n\n### Abusing whitelist names\n\n- For example calling the malware with names of well known macOS processes like **`launchd`**\n\n### Synthetic Click\n\n- If the firewall ask for permission to the user make the malware **click on allow**\n\n### **Use Apple signed binaries**\n\n- Like **`curl`**, but also others like **`whois`**\n\n### We",
+  "payloads": [
+    "# macOS Bypassing Firewalls",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Found techniques",
+    "The following techniques were found working in some macOS firewall apps.",
+    "### Abusing whitelist names",
+    "- For example calling the malware with names of well known macOS processes like **`launchd`**",
+    "### Synthetic Click",
+    "- If the firewall ask for permission to the user make the malware **click on allow**",
+    "### **Use Apple signed binaries**",
+    "- Like **`curl`**, but also others like **`whois`**",
+    "### Well known apple domains",
+    "The firewall could be allowing connections to well known apple domains such as **`apple.com`** or **`icloud.com`**. And iCloud could be used as a C2.",
+    "### Generic Bypass",
+    "Some ideas to try to bypass firewalls",
+    "### Check allowed traffic"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-bypassing-firewalls.md"
+  ]
+}

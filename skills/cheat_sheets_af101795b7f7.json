@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_af101795b7f7",
+  "category": "cheat-sheets",
+  "title": "ORGANIZATION",
+  "description": "# Cheat Sheets Organization Summary\n\nThis document provides an overview of how the cheat sheets directory has been organized and improved.\n\n## \ud83d\udcca Overview\n\nThe cheat sheets have been completely reorganized from a collection of PDFs and scattered markdown files into a well-structured, comprehensive knowledge base with all content in markdown format.\n\n## \ud83d\uddc2\ufe0f New Directory Structure\n\n```\ncheat-sheets/\n\u251c\u2500\u2500 README.md                  # Main navigation and overview\n\u251c\u2500\u2500 ORGANIZATION.md            # This ",
+  "payloads": [
+    "# Cheat Sheets Organization Summary",
+    "This document provides an overview of how the cheat sheets directory has been organized and improved.",
+    "## \ud83d\udcca Overview",
+    "The cheat sheets have been completely reorganized from a collection of PDFs and scattered markdown files into a well-structured, comprehensive knowledge base with all content in markdown format.",
+    "## \ud83d\uddc2\ufe0f New Directory Structure",
+    "cheat-sheets/",
+    "\u251c\u2500\u2500 README.md                  # Main navigation and overview",
+    "\u251c\u2500\u2500 ORGANIZATION.md            # This file",
+    "\u251c\u2500\u2500 networking/                # Network tools and protocols",
+    "\u2502   \u251c\u2500\u2500 nmap.md               # Comprehensive Nmap guide",
+    "\u2502   \u251c\u2500\u2500 netcat.md             # Netcat/Ncat usage",
+    "\u2502   \u251c\u2500\u2500 tcpdump.md            # Packet capture with tcpdump",
+    "\u2502   \u251c\u2500\u2500 tshark.md             # Terminal Wireshark",
+    "\u2502   \u251c\u2500\u2500 wireshark-filters.md  # Wireshark display filters",
+    "\u2502   \u251c\u2500\u2500 scapy.md              # Python packet manipulation"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/ORGANIZATION.md"
+  ]
+}

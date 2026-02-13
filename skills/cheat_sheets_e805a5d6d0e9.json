@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_e805a5d6d0e9",
+  "category": "cheat-sheets",
+  "title": "insecure protocols",
+  "description": "# Insecure Protocols and Services\n\n## Insecure Protocols\nThe following are also some of the protocols that are considered insecure:\n\n- Rlogin: https://linux.die.net/man/1/rlogin\n- Rsh: https://linux.die.net/man/1/rsh\n- Finger: https://linux.die.net/man/1/finger\n\n\n## Insecure Services\nThe following services should be carefully implemented and not exposed to untrusted networks:\n\n- Authd (or Identd): https://linux.die.net/man/3/ident\n- Netdump: https://linux.die.net/man/8/netdump\n- Netdump-server: ",
+  "payloads": [
+    "# Insecure Protocols and Services",
+    "## Insecure Protocols",
+    "The following are also some of the protocols that are considered insecure:",
+    "- Rlogin: https://linux.die.net/man/1/rlogin",
+    "- Rsh: https://linux.die.net/man/1/rsh",
+    "- Finger: https://linux.die.net/man/1/finger",
+    "## Insecure Services",
+    "The following services should be carefully implemented and not exposed to untrusted networks:",
+    "- Authd (or Identd): https://linux.die.net/man/3/ident",
+    "- Netdump: https://linux.die.net/man/8/netdump",
+    "- Netdump-server: https://linux.die.net/man/8/netdump-server",
+    "- Nfs: https://linux.die.net/man/5/nfs",
+    "- Rwhod: https://linux.die.net/man/8/rwhod",
+    "- Sendmail: https://linux.die.net/man/8/sendmail.sendmail",
+    "- Samba: https://linux.die.net/man/7/samba"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/networking/insecure-protocols.md"
+  ]
+}

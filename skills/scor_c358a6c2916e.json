@@ -1,0 +1,27 @@
+{
+  "id": "scor_c358a6c2916e",
+  "category": "SCOR",
+  "title": "smtp authentication  DKIM",
+  "description": "# SMTP Authentication, Encryption, and DKIM\n- SMTP (Simple Mail Transfer Protocol) is the standard protocol for sending emails across the Internet.\n- It has mechanisms for both authentication and encryption to enhance security, and DKIM (DomainKeys Identified Mail) is an additional layer of email security. \n\n### SMTP Authentication\n\nSMTP Authentication is a process that allows a client to log into an SMTP server to send email by providing a username and password. This process ensures that the em",
+  "payloads": [
+    "# SMTP Authentication, Encryption, and DKIM",
+    "- SMTP (Simple Mail Transfer Protocol) is the standard protocol for sending emails across the Internet.",
+    "- It has mechanisms for both authentication and encryption to enhance security, and DKIM (DomainKeys Identified Mail) is an additional layer of email security.",
+    "### SMTP Authentication",
+    "SMTP Authentication is a process that allows a client to log into an SMTP server to send email by providing a username and password. This process ensures that the email sender is authorized to use the server. There are several methods for SMTP authentication, such as:",
+    "1. **PLAIN**: Sends username and password in clear text (can be secure if used with SSL/TLS).",
+    "2. **LOGIN**: Similar to PLAIN but sends username and password as base64 encoded strings.",
+    "3. **CRAM-MD5**: A more secure method where the server sends a unique challenge string and the client responds with a hash of the username, password, and challenge.",
+    "### SMTP Encryption",
+    "SMTP servers use encryption to secure email contents during transmission. Two common methods are:",
+    "1. **STARTTLS**: This command upgrades a plain text connection to an encrypted connection using TLS (Transport Layer Security). It's not a separate protocol but a way to secure existing SMTP connections.",
+    "2. **SSL/TLS**: A direct method where the connection starts as encrypted using SSL/TLS. It's often used on different ports (like 465 for SMTPS).",
+    "### DKIM (DomainKeys Identified Mail)",
+    "DKIM is an email authentication method designed to detect email spoofing. It allows the sender to claim responsibility for a message in a way that can be validated by the recipient. Here's how it works:",
+    "1. **Digital Signature**: The sending mail server attaches a unique DKIM signature header to the email. This signature is created using a private key only known to the sender's domain."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/smtp_authentication_ DKIM.md"
+  ]
+}

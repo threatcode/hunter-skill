@@ -1,0 +1,27 @@
+{
+  "id": "sqli-2703e185d976",
+  "category": "SQLI",
+  "title": "README",
+  "description": "# NoSQL Injection\n\n> NoSQL databases provide looser consistency restrictions than traditional SQL databases. By requiring fewer relational constraints and consistency checks, NoSQL databases often offer performance and scaling benefits. Yet these databases are still potentially vulnerable to injection attacks, even if they aren't using the traditional SQL syntax.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Operator Injection](#operator-injection)\n    * [Authentication Byp",
+  "payloads": [
+    "* [codingo/NoSQLmap](https://github.com/codingo/NoSQLMap) - Automated NoSQL database enumeration and web application exploitation tool",
+    "* [digininja/nosqlilab](https://github.com/digininja/nosqlilab) - A lab for playing with NoSQL Injection",
+    "* [matrix/Burp-NoSQLiScanner](https://github.com/matrix/Burp-NoSQLiScanner) - This extension provides a way to discover NoSQL injection vulnerabilities.",
+    "u=\"http://example.org/login\"",
+    "u=\"http://example.org/login\"",
+    "u='http://example.org/login'",
+    "require 'httpx'",
+    "url = 'http://example.org/login'",
+    "* [Root Me - NoSQL injection - Authentication](https://www.root-me.org/en/Challenges/Web-Server/NoSQL-injection-Authentication)",
+    "* [Root Me - NoSQL injection - Blind](https://www.root-me.org/en/Challenges/Web-Server/NoSQL-injection-Blind)",
+    "* [Burp-NoSQLiScanner - matrix - January 30, 2021](https://github.com/matrix/Burp-NoSQLiScanner/blob/main/src/burp/BurpExtender.java)",
+    "* [Getting rid of pre- and post-conditions in NoSQL injections - Reino Mostert - March 11, 2025](https://sensepost.com/blog/2025/getting-rid-of-pre-and-post-conditions-in-nosql-injections/)",
+    "* [Les NOSQL injections Classique et Blind: Never trust user input - Geluchat - February 22, 2015](https://www.dailysecurity.fr/nosql-injections-classique-blind/)",
+    "* [MongoDB NoSQL Injection with Aggregation Pipelines - Soroush Dalili (@irsdl) - June 23, 2024](https://soroush.me/blog/2024/06/mongodb-nosql-injection-with-aggregation-pipelines/)",
+    "* [NoSQL error-based injection - Reino Mostert - March 15, 2025](https://sensepost.com/blog/2025/nosql-error-based-injection/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/NoSQL Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_97794ce5fd7b",
+  "category": "generic-methodologies-and-resources",
+  "title": "keras model deserialization rce and gadget hunting",
+  "description": "# Keras Model Deserialization RCE and Gadget Hunting\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis page summarizes practical exploitation techniques against the Keras model deserialization pipeline, explains the native .keras format internals and attack surface, and provides a researcher toolkit for finding Model File Vulnerabilities (MFVs) and post-fix gadgets.\n\n## .keras model format internals\n\nA .keras file is a ZIP archive containing at least:\n- metadata.json \u2013 generic info (e.g.,",
+  "payloads": [
+    "# Keras Model Deserialization RCE and Gadget Hunting",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This page summarizes practical exploitation techniques against the Keras model deserialization pipeline, explains the native .keras format internals and attack surface, and provides a researcher toolkit for finding Model File Vulnerabilities (MFVs) and post-fix gadgets.",
+    "## .keras model format internals",
+    "A .keras file is a ZIP archive containing at least:",
+    "- metadata.json \u2013 generic info (e.g., Keras version)",
+    "- config.json \u2013 model architecture (primary attack surface)",
+    "- model.weights.h5 \u2013 weights in HDF5",
+    "The config.json drives recursive deserialization: Keras imports modules, resolves classes/functions and reconstructs layers/objects from attacker-controlled dictionaries.",
+    "Example snippet for a Dense layer object:",
+    "```json",
+    "\"module\": \"keras.layers\",",
+    "\"class_name\": \"Dense\",",
+    "\"config\": {",
+    "\"units\": 64,"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/keras-model-deserialization-rce-and-gadget-hunting.md"
+  ]
+}

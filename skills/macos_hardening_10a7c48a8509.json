@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_10a7c48a8509",
+  "category": "macos-hardening",
+  "title": "macos installers abuse",
+  "description": "# macOS Installers Abuse\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Pkg Basic Information\n\nA macOS **installer package** (also known as a `.pkg` file) is a file format used by macOS to **distribute software**. These files are like a **box that contains everything a piece of software** needs to install and run correctly.\n\nThe package file itself is an archive that holds a **hierarchy of files and directories that will be installed on the target** computer. It can also include **scr",
+  "payloads": [
+    "# macOS Installers Abuse",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Pkg Basic Information",
+    "A macOS **installer package** (also known as a `.pkg` file) is a file format used by macOS to **distribute software**. These files are like a **box that contains everything a piece of software** needs to install and run correctly.",
+    "The package file itself is an archive that holds a **hierarchy of files and directories that will be installed on the target** computer. It can also include **scripts** to perform tasks before and after the installation, like setting up configuration files or cleaning up old versions of the software.",
+    "### Hierarchy",
+    "<figure><img src=\"../../../images/Pasted Graphic.png\" alt=\"https://www.youtube.com/watch?v=iASSG0_zobQ\"><figcaption></figcaption></figure>",
+    "- **Distribution (xml)**: Customizations (title, welcome text\u2026) and script/installation checks",
+    "- **PackageInfo (xml)**: Info, install requirements, install location, paths to scripts to run",
+    "- **Bill of materials (bom)**: List of files to install, update or remove with file permissions",
+    "- **Payload (CPIO archive gzip compresses)**: Files to install in the `install-location` from PackageInfo",
+    "- **Scripts (CPIO archive gzip compressed)**: Pre and post install scripts and more resources extracted to a temp directory for execution.",
+    "### Decompress",
+    "```bash",
+    "# Tool to directly get the files inside a package"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-files-folders-and-binaries/macos-installers-abuse.md"
+  ]
+}

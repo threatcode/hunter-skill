@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_7c746388ce28",
+  "category": "cryptography-and-pki",
+  "title": "lab 02 openssl certificates",
+  "description": "# Lab 2: OpenSSL Certificate Operations\n\n## Objectives\n- Generate private keys\n- Create Certificate Signing Requests (CSRs)\n- Generate self-signed certificates\n- Understand certificate structure\n- Verify certificate chains\n\n## Prerequisites\n- OpenSSL installed\n- Terminal/command line access\n- Basic understanding of PKI concepts\n\n## Estimated Time\n45-60 minutes\n\n## Lab Steps\n\n### Step 1: Verify OpenSSL Installation\n\n```bash\n# Check OpenSSL version\nopenssl version\n\n# Check available commands\nopens",
+  "payloads": [
+    "# Lab 2: OpenSSL Certificate Operations",
+    "## Objectives",
+    "- Generate private keys",
+    "- Create Certificate Signing Requests (CSRs)",
+    "- Generate self-signed certificates",
+    "- Understand certificate structure",
+    "- Verify certificate chains",
+    "## Prerequisites",
+    "- OpenSSL installed",
+    "- Terminal/command line access",
+    "- Basic understanding of PKI concepts",
+    "## Estimated Time",
+    "45-60 minutes",
+    "## Lab Steps",
+    "### Step 1: Verify OpenSSL Installation"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/labs/lab-02-openssl-certificates.md"
+  ]
+}

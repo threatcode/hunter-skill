@@ -1,0 +1,27 @@
+{
+  "id": "temp_8c5b5ae46a4b",
+  "category": "temp",
+  "title": "getting started code review",
+  "description": "# Getting Started to Perform Security Code Reviews\nThe following are several resources that will help you get started on how to perform code reviews to find security bugs/vulnerabilities.\n\n**TIP:** \n- Don't feel that you have to learn everything at once. Start by learning a framework, basics of a programming language, etc. \n- After you learn the first one, the others will be easier to learn. \n- For web security, gaining an understanding on how modern web frameworks work is one of the most import",
+  "payloads": [
+    "# Getting Started to Perform Security Code Reviews",
+    "The following are several resources that will help you get started on how to perform code reviews to find security bugs/vulnerabilities.",
+    "**TIP:**",
+    "- Don't feel that you have to learn everything at once. Start by learning a framework, basics of a programming language, etc.",
+    "- After you learn the first one, the others will be easier to learn.",
+    "- For web security, gaining an understanding on how modern web frameworks work is one of the most important things.",
+    "- Do it side-by-side. Learn how to code and doing code review. It might seem overwhelming at first but it becomes better after you start understanding the code.",
+    "## Resources for Learning Different Programming languages:",
+    "- Learn Javascript: https://youtube.com/watch?v=PkZNo7MFNFg",
+    "- Learn PHP: https://youtube.com/watch?v=OK_JCtrrv-c",
+    "- Learn NodeJS: https://youtube.com/watch?v=RLtyhwFtXQA",
+    "- Learn Django: https://youtube.com/watch?v=F5mRW0jo-U4",
+    "- Learn Ruby on Rails: https://youtube.com/watch?v=fmyvWz5TUWg",
+    "## Presentations and videos on code review:",
+    "- https://youtube.com/watch?v=kpf3UkMc5Y4"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/getting_started_code_review.md"
+  ]
+}

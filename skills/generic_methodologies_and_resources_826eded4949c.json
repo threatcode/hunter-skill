@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_826eded4949c",
+  "category": "generic-methodologies-and-resources",
+  "title": "load name load const opcode oob read",
+  "description": "# LOAD_NAME / LOAD_CONST opcode OOB Read\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n**This info was taken** [**from this writeup**](https://blog.splitline.tw/hitcon-ctf-2022/)**.**\n\n### TL;DR <a href=\"#tldr-2\" id=\"tldr-2\"></a>\n\nWe can use OOB read feature in LOAD_NAME / LOAD_CONST opcode to get some symbol in the memory. Which means using trick like `(a, b, c, ... hundreds of symbol ..., __getattribute__) if [] else [].__getattribute__(...)` to get a symbol (such as function name) yo",
+  "payloads": [
+    "# LOAD_NAME / LOAD_CONST opcode OOB Read",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "**This info was taken** [**from this writeup**](https://blog.splitline.tw/hitcon-ctf-2022/)**.**",
+    "### TL;DR <a href=\"#tldr-2\" id=\"tldr-2\"></a>",
+    "We can use OOB read feature in LOAD_NAME / LOAD_CONST opcode to get some symbol in the memory. Which means using trick like `(a, b, c, ... hundreds of symbol ..., __getattribute__) if [] else [].__getattribute__(...)` to get a symbol (such as function name) you want.",
+    "Then just craft your exploit.",
+    "### Overview <a href=\"#overview-1\" id=\"overview-1\"></a>",
+    "The source code is pretty short, only contains 4 lines!",
+    "```python",
+    "source = input('>>> ')",
+    "if len(source) > 13337: exit(print(f\"{'L':O<13337}NG\"))",
+    "code = compile(source, '\u2205', 'eval').replace(co_consts=(), co_names=())",
+    "print(eval(code, {'__builtins__': {}}))1234",
+    "You can input arbitrary Python code, and it'll be compiled to a [Python code object](https://docs.python.org/3/c-api/code.html). However `co_consts` and `co_names` of that code object will be replaced with an empty tuple before eval that code object.",
+    "So in this way, all the expression contains consts (e.g. numbers, strings etc.) or names (e.g. variables, functions) might cause segmentation fault in the end."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/bypass-python-sandboxes/load_name-load_const-opcode-oob-read.md"
+  ]
+}

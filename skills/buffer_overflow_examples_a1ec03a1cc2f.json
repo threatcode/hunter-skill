@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_a1ec03a1cc2f",
+  "category": "buffer-overflow-examples",
+  "title": "registers",
+  "description": "# CPU Registers Explained\n\n## Introduction\n\nRegisters are small, extremely fast storage locations built directly into the CPU. Understanding registers is essential for:\n- Reading and writing assembly code\n- Understanding buffer overflow exploitation\n- Debugging programs at the instruction level\n- Reverse engineering binaries\n\n## What are Registers?\n\n**Registers** are the CPU's working memory - tiny storage spaces that can hold data being actively processed. They are:\n- **Fastest memory** availab",
+  "payloads": [
+    "# CPU Registers Explained",
+    "## Introduction",
+    "Registers are small, extremely fast storage locations built directly into the CPU. Understanding registers is essential for:",
+    "- Reading and writing assembly code",
+    "- Understanding buffer overflow exploitation",
+    "- Debugging programs at the instruction level",
+    "- Reverse engineering binaries",
+    "## What are Registers?",
+    "**Registers** are the CPU's working memory - tiny storage spaces that can hold data being actively processed. They are:",
+    "- **Fastest memory** available (faster than cache, RAM, or disk)",
+    "- **Limited in number** (typically 8-16 general-purpose registers)",
+    "- **Architecture-specific** (different CPUs have different registers)",
+    "- **Directly accessible** by assembly instructions",
+    "### Why Registers Matter for Exploitation",
+    "In buffer overflow attacks:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/basics/registers.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_a78c039a5757",
+  "category": "temp",
+  "title": "enumerating aws boto3",
+  "description": "# AWS Security Assessment with Boto3\n\nA comprehensive guide for enumerating AWS resources using Boto3, the AWS SDK for Python, for security assessments and penetration testing.\n\n## Table of Contents\n- [Prerequisites](#prerequisites)\n- [Installation](#installation)\n- [Authentication Setup](#authentication-setup)\n- [Basic Enumeration Script](#basic-enumeration-script)\n- [Advanced Enumeration](#advanced-enumeration)\n- [Security Considerations](#security-considerations)\n- [Modern Security Tools](#mo",
+  "payloads": [
+    "# AWS Security Assessment with Boto3",
+    "A comprehensive guide for enumerating AWS resources using Boto3, the AWS SDK for Python, for security assessments and penetration testing.",
+    "## Table of Contents",
+    "- [Prerequisites](#prerequisites)",
+    "- [Installation](#installation)",
+    "- [Authentication Setup](#authentication-setup)",
+    "- [Basic Enumeration Script](#basic-enumeration-script)",
+    "- [Advanced Enumeration](#advanced-enumeration)",
+    "- [Security Considerations](#security-considerations)",
+    "- [Modern Security Tools](#modern-security-tools)",
+    "- [Best Practices](#best-practices)",
+    "- [Troubleshooting](#troubleshooting)",
+    "## Prerequisites",
+    "- Python 3.7 or higher",
+    "- Valid AWS credentials with appropriate permissions"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Cloud_Attacks/cloud_resources/enumerating_aws_boto3.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_c8b06ec3949f",
+  "category": "generic-methodologies-and-resources",
+  "title": "local cloud storage",
+  "description": "# Local Cloud Storage\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\n## OneDrive\n\nIn Windows, you can find the OneDrive folder in `\\Users\\<username>\\AppData\\Local\\Microsoft\\OneDrive`. And inside `logs\\Personal` it's possible to find the file `SyncDiagnostics.log` which contains some interesting data regarding the synchronized files:\n\n- Size in bytes\n- Creation date\n- Modification date\n- Number of files in the cloud\n- Number of files in the folder\n- **CID**: Unique ID of the OneDrive use",
+  "payloads": [
+    "# Local Cloud Storage",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## OneDrive",
+    "In Windows, you can find the OneDrive folder in `\\Users\\<username>\\AppData\\Local\\Microsoft\\OneDrive`. And inside `logs\\Personal` it's possible to find the file `SyncDiagnostics.log` which contains some interesting data regarding the synchronized files:",
+    "- Size in bytes",
+    "- Creation date",
+    "- Modification date",
+    "- Number of files in the cloud",
+    "- Number of files in the folder",
+    "- **CID**: Unique ID of the OneDrive user",
+    "- Report generation time",
+    "- Size of the HD of the OS",
+    "Once you have found the CID it's recommended to **search files containing this ID**. You may be able to find files with the name: _**\\<CID>.ini**_ and _**\\<CID>.dat**_ that may contain interesting information like the names of files synchronized with OneDrive.",
+    "## Google Drive",
+    "In Windows, you can find the main Google Drive folder in `\\Users\\<username>\\AppData\\Local\\Google\\Drive\\user_default`\\"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/local-cloud-storage.md"
+  ]
+}

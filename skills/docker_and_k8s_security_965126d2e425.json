@@ -1,0 +1,27 @@
+{
+  "id": "docker_and_k8s_security_965126d2e425",
+  "category": "docker-and-k8s-security",
+  "title": "container technology concepts",
+  "description": "# Container Technology Concepts\n\nContainer technologies have become an important part of modern software development, providing a lightweight and portable way to package and deploy applications. Here are some of the prominent container technologies:\n\n### Docker\nDocker is the most widely known and used container platform. It simplifies the creation, deployment, and running of applications by using containers. Docker packages software into standardized units for development, shipment, and deployme",
+  "payloads": [
+    "# Container Technology Concepts",
+    "Container technologies have become an important part of modern software development, providing a lightweight and portable way to package and deploy applications. Here are some of the prominent container technologies:",
+    "### Docker",
+    "Docker is the most widely known and used container platform. It simplifies the creation, deployment, and running of applications by using containers. Docker packages software into standardized units for development, shipment, and deployment, making it easier to manage and scale applications across different environments[2][3].",
+    "### LXC (Linux Containers)",
+    "LXC is an open-source project that provides isolated application environments similar to virtual machines but without the overhead of running their own kernel. LXC allows multiple processes to run within a container and is managed without a central daemon, differing from Docker's single-process-per-container approach[2][3].",
+    "### CRI-O",
+    "CRI-O is an implementation of the Kubernetes Container Runtime Interface (CRI) to enable using Open Container Initiative (OCI) compatible runtimes. It aims to replace Docker as the container engine for Kubernetes, allowing Kubernetes to use any OCI-compliant runtime for running pods[2][3].",
+    "### rkt (Rocket)",
+    "rkt is an application container engine designed for building modern cloud-native applications. It focuses on security improvements and is often used in conjunction with other technologies or as specific components of a Docker-based system[2][3].",
+    "### Podman",
+    "Podman is an open-source container engine that allows users to manage containers without requiring a daemon. It is compatible with Docker and can run containers as rootless, enhancing security by not requiring root privileges[1].",
+    "### containerd",
+    "containerd is an industry-standard core container runtime that manages the complete container lifecycle of its host system, from image transfer and storage to container execution and supervision. It is used by Docker and Kubernetes as their container runtime[2].",
+    "### Buildah"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Cloud_Attacks/docker-and-k8s-security/docker/container_technology_concepts.md"
+  ]
+}

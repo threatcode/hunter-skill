@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_ef27cfca6c97",
+  "category": "generic-methodologies-and-resources",
+  "title": "adaptixc2 config extraction and ttps",
+  "description": "# AdaptixC2 Configuration Extraction and TTPs\n\n{{#include ../../banners/hacktricks-training.md}}\n\nAdaptixC2 is a modular, open\u2011source post\u2011exploitation/C2 framework with Windows x86/x64 beacons (EXE/DLL/service EXE/raw shellcode) and BOF support. This page documents:\n- How its RC4\u2011packed configuration is embedded and how to extract it from beacons\n- Network/profile indicators for HTTP/SMB/TCP listeners\n- Common loader and persistence TTPs observed in the wild, with links to relevant Windows tech",
+  "payloads": [
+    "# AdaptixC2 Configuration Extraction and TTPs",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "AdaptixC2 is a modular, open\u2011source post\u2011exploitation/C2 framework with Windows x86/x64 beacons (EXE/DLL/service EXE/raw shellcode) and BOF support. This page documents:",
+    "- How its RC4\u2011packed configuration is embedded and how to extract it from beacons",
+    "- Network/profile indicators for HTTP/SMB/TCP listeners",
+    "- Common loader and persistence TTPs observed in the wild, with links to relevant Windows technique pages",
+    "## Beacon profiles and fields",
+    "AdaptixC2 supports three primary beacon types:",
+    "- BEACON_HTTP: web C2 with configurable servers/ports/SSL, method, URI, headers, user\u2011agent, and a custom parameter name",
+    "- BEACON_SMB: named\u2011pipe peer\u2011to\u2011peer C2 (intranet)",
+    "- BEACON_TCP: direct sockets, optionally with a prepended marker to obfuscate protocol start",
+    "Typical profile fields observed in HTTP beacon configs (after decryption):",
+    "- agent_type (u32)",
+    "- use_ssl (bool)",
+    "- servers_count (u32), servers (array of strings), ports (array of u32)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/adaptixc2-config-extraction-and-ttps.md"
+  ]
+}

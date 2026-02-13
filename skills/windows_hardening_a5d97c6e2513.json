@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_a5d97c6e2513",
+  "category": "windows-hardening",
+  "title": "av bypass",
+  "description": "# Antivirus (AV) Bypass\n\n{{#include ../banners/hacktricks-training.md}}\n\n**This page was written by** [**@m2rc_p**](https://twitter.com/m2rc_p)**!**\n\n## Stop Defender\n\n- [defendnot](https://github.com/es3n1n/defendnot): A tool to stop Windows Defender from working.\n- [no-defender](https://github.com/es3n1n/no-defender): A tool to stop Windows Defender from working faking another AV.\n- [Disable Defender if you are admin](basic-powershell-for-pentesters/README.md)\n\n### Installer-style UAC bait bef",
+  "payloads": [
+    "# Antivirus (AV) Bypass",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "**This page was written by** [**@m2rc_p**](https://twitter.com/m2rc_p)**!**",
+    "## Stop Defender",
+    "- [defendnot](https://github.com/es3n1n/defendnot): A tool to stop Windows Defender from working.",
+    "- [no-defender](https://github.com/es3n1n/no-defender): A tool to stop Windows Defender from working faking another AV.",
+    "- [Disable Defender if you are admin](basic-powershell-for-pentesters/README.md)",
+    "### Installer-style UAC bait before tampering with Defender",
+    "Public loaders masquerading as game cheats frequently ship as unsigned Node.js/Nexe installers that first **ask the user for elevation** and only then neuter Defender. The flow is simple:",
+    "1. Probe for administrative context with `net session`. The command only succeeds when the caller holds admin rights, so a failure indicates the loader is running as a standard user.",
+    "2. Immediately relaunch itself with the `RunAs` verb to trigger the expected UAC consent prompt while preserving the original command line.",
+    "```powershell",
+    "if (-not (net session 2>$null)) {",
+    "powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -Verb RunAs -WindowStyle Hidden -ArgumentList '/c \"\"`<path_to_loader`>\"\"'\"",
+    "Victims already believe they are installing \u201ccracked\u201d software, so the prompt is usually accepted, giving the malware the rights it needs to change Defender\u2019s policy."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/av-bypass.md"
+  ]
+}

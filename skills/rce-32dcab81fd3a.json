@@ -1,0 +1,27 @@
+{
+  "id": "rce-32dcab81fd3a",
+  "category": "RCE",
+  "title": "README",
+  "description": "# JWT - JSON Web Token\n\n> JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed.\n\n## Summary\n\n- [Tools](#tools)\n- [JWT Format](#jwt-format)\n    - [Header](#header)\n    - [Payload](#payload)\n- [JWT Signature](#jwt-signature)\n    - [JWT Signature - Null Signature Attack (CVE-2020-28042)](#jwt-signature---null",
+  "payloads": [
+    "- [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool) -  \ud83d\udc0d A toolkit for testing, tweaking and cracking JSON Web Tokens",
+    "- [brendan-rius/c-jwt-cracker](https://github.com/brendan-rius/c-jwt-cracker) - JWT brute force cracker written in C",
+    "- [PortSwigger/JOSEPH](https://portswigger.net/bappstore/82d6c60490b540369d6d5d01822bdf61) - JavaScript Object Signing and Encryption Pentesting Helper",
+    "- [jwt.io](https://jwt.io/) - Encoder/Decoder",
+    "Registered header parameter names defined in [JSON Web Signature (JWS) RFC](https://www.rfc-editor.org/rfc/rfc7515).",
+    "Inject headers with [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool): `python3 jwt_tool.py JWT_HERE -I -hc header1 -hv testval1 -hc header2 -hv testval2`",
+    "Inject payload claims with [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool): `python3 jwt_tool.py JWT_HERE -I -pc payload1 -pv testval3`",
+    "- [jwt-dotnet/jwt: Critical Security Fix Required: You disclose the correct signature with each SignatureVerificationException... #61](https://github.com/jwt-dotnet/jwt/issues/61)",
+    "- [CVE-2019-7644: Security Vulnerability in Auth0-WCF-Service-JWT](https://auth0.com/docs/secure/security-guidance/security-bulletins/cve-2019-7644)",
+    "- Using [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool)",
+    "- Using [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool)",
+    "- Using [portswigger/JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)",
+    "- Using [ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool)",
+    "- Using [portswigger/JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)",
+    "[SecuraBV/jws2pubkey](https://github.com/SecuraBV/jws2pubkey): compute an RSA public key from two signed JWTs"
+  ],
+  "references": [
+    "PayloadsAllTheThings/JSON Web Token/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

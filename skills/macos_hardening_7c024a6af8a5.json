@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_7c024a6af8a5",
+  "category": "macos-hardening",
+  "title": "detecting compromise",
+  "description": "# macOS commands and detection techniques for identifying rootkits and system compromise\n\nThe following is a comprehensive set of macOS commands and detection strategies for identifying rootkits and system compromise. This guide is organized from quick triage to deep forensic analysis.\n\n***\n\n## 1. Quick Triage Commands (Run First)\n\nStart with these to get immediate signals:\n\n```bash\n# Check system integrity protection (SIP) status\ncsrutil status\n# Expected: \"System Integrity Protection status: e",
+  "payloads": [
+    "# macOS commands and detection techniques for identifying rootkits and system compromise",
+    "The following is a comprehensive set of macOS commands and detection strategies for identifying rootkits and system compromise. This guide is organized from quick triage to deep forensic analysis.",
+    "## 1. Quick Triage Commands (Run First)",
+    "Start with these to get immediate signals:",
+    "```bash",
+    "# Check system integrity protection (SIP) status",
+    "csrutil status",
+    "# Expected: \"System Integrity Protection status: enabled\"",
+    "# If disabled, system may be compromised",
+    "# Check for unsigned kernel extensions",
+    "kextstat | grep -v com.apple",
+    "# Look for non-Apple KEXTs (kernel extensions)",
+    "# List all loaded kernel extensions with details",
+    "kextstat -l",
+    "# Check kernel extension signing status"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/macos-hardening/detecting-compromise.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_76ffdfff9621",
+  "category": "generic-hacking",
+  "title": "archive extraction path traversal",
+  "description": "# Archive Extraction Path Traversal (\"Zip-Slip\" / WinRAR CVE-2025-8088)\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Overview\n\nMany archive formats (ZIP, RAR, TAR, 7-ZIP, etc.) allow each entry to carry its own **internal path**. When an extraction utility blindly honours that path, a crafted filename containing `..` or an **absolute path** (e.g. `C:\\Windows\\System32\\`) will be written outside of the user-chosen directory.  \nThis class of vulnerability is widely known as *Zip-Slip* or **a",
+  "payloads": [
+    "# Archive Extraction Path Traversal (\"Zip-Slip\" / WinRAR CVE-2025-8088)",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Many archive formats (ZIP, RAR, TAR, 7-ZIP, etc.) allow each entry to carry its own **internal path**. When an extraction utility blindly honours that path, a crafted filename containing `..` or an **absolute path** (e.g. `C:\\Windows\\System32\\`) will be written outside of the user-chosen directory.",
+    "This class of vulnerability is widely known as *Zip-Slip* or **archive extraction path traversal**.",
+    "Consequences range from overwriting arbitrary files to directly achieving **remote code execution (RCE)** by dropping a payload in an **auto-run** location such as the Windows *Startup* folder.",
+    "## Root Cause",
+    "1. Attacker creates an archive where one or more file headers contain:",
+    "* Relative traversal sequences (`..\\..\\..\\Users\\\\victim\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\payload.exe`)",
+    "* Absolute paths (`C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\StartUp\\\\payload.exe`)",
+    "* Or crafted **symlinks** that resolve outside the target dir (common in ZIP/TAR on *nix*).",
+    "2. Victim extracts the archive with a vulnerable tool that trusts the embedded path (or follows symlinks) instead of sanitising it or forcing extraction beneath the chosen directory.",
+    "3. The file is written in the attacker-controlled location and executed/loaded next time the system or user triggers that path.",
+    "## Real-World Example \u2013 WinRAR \u2264 7.12 (CVE-2025-8088)",
+    "WinRAR for Windows (including the `rar` / `unrar` CLI, the DLL and the portable source) failed to validate filenames during extraction."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/archive-extraction-path-traversal.md"
+  ]
+}

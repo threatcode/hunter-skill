@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_3b181e77394e",
+  "category": "windows-hardening",
+  "title": "lansweeper security",
+  "description": "# Lansweeper Abuse: Credential Harvesting, Secrets Decryption, and Deployment RCE\n\n{{#include ../../banners/hacktricks-training.md}}\n\nLansweeper is an IT asset discovery and inventory platform commonly deployed on Windows and integrated with Active Directory. Credentials configured in Lansweeper are used by its scanning engines to authenticate to assets over protocols like SSH, SMB/WMI and WinRM. Misconfigurations frequently allow:\n\n- Credential interception by redirecting a scanning target to a",
+  "payloads": [
+    "# Lansweeper Abuse: Credential Harvesting, Secrets Decryption, and Deployment RCE",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Lansweeper is an IT asset discovery and inventory platform commonly deployed on Windows and integrated with Active Directory. Credentials configured in Lansweeper are used by its scanning engines to authenticate to assets over protocols like SSH, SMB/WMI and WinRM. Misconfigurations frequently allow:",
+    "- Credential interception by redirecting a scanning target to an attacker-controlled host (honeypot)",
+    "- Abuse of AD ACLs exposed by Lansweeper-related groups to gain remote access",
+    "- On-host decryption of Lansweeper-configured secrets (connection strings and stored scanning credentials)",
+    "- Code execution on managed endpoints via the Deployment feature (often running as SYSTEM)",
+    "This page summarizes practical attacker workflows and commands to abuse these behaviors during engagements.",
+    "## 1) Harvest scanning credentials via honeypot (SSH example)",
+    "Idea: create a Scanning Target that points to your host and map existing Scanning Credentials to it. When the scan runs, Lansweeper will attempt to authenticate with those credentials, and your honeypot will capture them.",
+    "Steps overview (web UI):",
+    "- Scanning \u2192 Scanning Targets \u2192 Add Scanning Target",
+    "- Type: IP Range (or Single IP) = your VPN IP",
+    "- Configure SSH port to something reachable (e.g., 2022 if 22 is blocked)",
+    "- Disable schedule and plan to trigger manually"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/lansweeper-security.md"
+  ]
+}

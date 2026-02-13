@@ -1,0 +1,27 @@
+{
+  "id": "ai_854d51e32c3f",
+  "category": "AI",
+  "title": "0. basic llm concepts",
+  "description": "# 0. Basic LLM Concepts\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Pretraining\n\nPretraining is the foundational phase in developing a large language model (LLM) where the model is exposed to vast and diverse amounts of text data. During this stage, **the LLM learns the fundamental structures, patterns, and nuances of language**, including grammar, vocabulary, syntax, and contextual relationships. By processing this extensive data, the model acquires a broad understanding of language ",
+  "payloads": [
+    "# 0. Basic LLM Concepts",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Pretraining",
+    "Pretraining is the foundational phase in developing a large language model (LLM) where the model is exposed to vast and diverse amounts of text data. During this stage, **the LLM learns the fundamental structures, patterns, and nuances of language**, including grammar, vocabulary, syntax, and contextual relationships. By processing this extensive data, the model acquires a broad understanding of language and general world knowledge. This comprehensive base enables the LLM to generate coherent and contextually relevant text. Subsequently, this pretrained model can undergo fine-tuning, where it is further trained on specialized datasets to adapt its capabilities for specific tasks or domains, enhancing its performance and relevance in targeted applications.",
+    "## Main LLM components",
+    "Usually a LLM is characterised for the configuration used to train it. This are the common components when training a LLM:",
+    "- **Parameters**: Parameters are the **learnable weights and biases** in the neural network. These are the numbers that the training process adjusts to minimize the loss function and improve the model's performance on the task. LLMs usually use millions of parameters.",
+    "- **Context Length**: This is the maximum length of each sentence used to pre-train the LLM.",
+    "- **Embedding Dimension**: The size of the vector used to represent each token or word. LLMs usually sue billions of dimensions.",
+    "- **Hidden Dimension**: The size of the hidden layers in the neural network.",
+    "- **Number of Layers (Depth)**: How many layers the model has. LLMs usually use tens of layers.",
+    "- **Number of Attention Heads**: In transformer models, this is how many separate attention mechanisms are used in each layer. LLMs usually use tens of heads.",
+    "- **Dropout**: Dropout is something like the percentage of data that is removed (probabilities turn to 0) during training used to **prevent overfitting.** LLMs usually use between 0-20%.",
+    "Configuration of the GPT-2 model:",
+    "```json"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/0.-basic-llm-concepts.md"
+  ]
+}

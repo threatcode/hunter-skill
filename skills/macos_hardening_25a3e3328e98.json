@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_25a3e3328e98",
+  "category": "macos-hardening",
+  "title": "macos thread injection via task port",
+  "description": "# macOS Thread Injection via Task port\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Code\n\n- [https://github.com/bazad/threadexec](https://github.com/bazad/threadexec)\n- [https://gist.github.com/knightsc/bd6dfeccb02b77eb6409db5601dcef36](https://gist.github.com/knightsc/bd6dfeccb02b77eb6409db5601dcef36)\n\n## 1. Thread Hijacking\n\nInitially, the `task_threads()` function is invoked on the task port to obtain a thread list from the remote task. A thread is selected for hijacking. This",
+  "payloads": [
+    "# macOS Thread Injection via Task port",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Code",
+    "- [https://github.com/bazad/threadexec](https://github.com/bazad/threadexec)",
+    "- [https://gist.github.com/knightsc/bd6dfeccb02b77eb6409db5601dcef36](https://gist.github.com/knightsc/bd6dfeccb02b77eb6409db5601dcef36)",
+    "## 1. Thread Hijacking",
+    "Initially, the `task_threads()` function is invoked on the task port to obtain a thread list from the remote task. A thread is selected for hijacking. This approach diverges from conventional code-injection methods as creating a new remote thread is prohibited due to the mitigation that blocks `thread_create_running()`.",
+    "To control the thread, `thread_suspend()` is called, halting its execution.",
+    "The only operations permitted on the remote thread involve **stopping** and **starting** it and **retrieving**/**modifying** its register values. Remote function calls are initiated by setting registers `x0` to `x7` to the **arguments**, configuring `pc` to target the desired function, and resuming the thread. Ensuring the thread does not crash after the return necessitates detection of the return.",
+    "One strategy involves registering an **exception handler** for the remote thread using `thread_set_exception_ports()`, setting the `lr` register to an invalid address before the function call. This triggers an exception post-function execution, sending a message to the exception port, enabling state inspection of the thread to recover the return value. Alternatively, as adopted from Ian Beer\u2019s *triple_fetch* exploit, `lr` is set to loop infinitely; the thread\u2019s registers are then continuously monitored until `pc` points to that instruction.",
+    "## 2. Mach ports for communication",
+    "The subsequent phase involves establishing Mach ports to facilitate communication with the remote thread. These ports are instrumental in transferring arbitrary send/receive rights between tasks.",
+    "For bidirectional communication, two Mach receive rights are created: one in the local and the other in the remote task. Subsequently, a send right for each port is transferred to the counterpart task, enabling message exchange.",
+    "Focusing on the local port, the receive right is held by the local task. The port is created with `mach_port_allocate()`. The challenge lies in transferring a send right to this port into the remote task.",
+    "A strategy involves leveraging `thread_set_special_port()` to place a send right to the local port in the remote thread\u2019s `THREAD_KERNEL_PORT`. Then, the remote thread is instructed to call `mach_thread_self()` to retrieve the send right."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-ipc-inter-process-communication/macos-thread-injection-via-task-port.md"
+  ]
+}

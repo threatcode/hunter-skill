@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_15ab0d9b2827",
+  "category": "cryptography-and-pki",
+  "title": "06 Digital Signature Forgery Advanced",
+  "description": "# Challenge 6: Digital Signature Forgery\n\n**Level:** Advanced\n\n**Description:**\nProvide a digital signature scheme with a weakness (e.g., using a small prime number). Forge a digital signature for a new message.\n\n**Challenge Text:**\n```\nSignature scheme: RSA with n = 391, e = 3, d = 107\nSigned message: (\"HELLO\", signature = 220)\nChallenge: Forge a signature for the message \"WORLD\"\n```\n\n**Instructions:**\n1. Understand the weakness in the provided RSA signature scheme.\n2. Forge a signature for the",
+  "payloads": [
+    "# Challenge 6: Digital Signature Forgery",
+    "**Level:** Advanced",
+    "**Description:**",
+    "Provide a digital signature scheme with a weakness (e.g., using a small prime number). Forge a digital signature for a new message.",
+    "**Challenge Text:**",
+    "Signature scheme: RSA with n = 391, e = 3, d = 107",
+    "Signed message: (\"HELLO\", signature = 220)",
+    "Challenge: Forge a signature for the message \"WORLD\"",
+    "**Instructions:**",
+    "1. Understand the weakness in the provided RSA signature scheme.",
+    "2. Forge a signature for the new message.",
+    "3. Validate the forged signature.",
+    "**Answer:**",
+    "For the message \"WORLD,\" a forged signature could be 115.",
+    "**Code:**"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/06_Digital_Signature_Forgery_Advanced.md"
+  ]
+}

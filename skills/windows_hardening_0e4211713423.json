@@ -1,0 +1,21 @@
+{
+  "id": "windows_hardening_0e4211713423",
+  "category": "windows-hardening",
+  "title": "rdpexec",
+  "description": "# RDPexec\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## How it Works\n\n**RDPexec** is basically to execute commands login into the system using RDP.\n\nFor more information check:\n\n\n{{#ref}}\n../../network-services-pentesting/pentesting-rdp.md\n{{#endref}}\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n",
+  "payloads": [
+    "# RDPexec",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## How it Works",
+    "**RDPexec** is basically to execute commands login into the system using RDP.",
+    "For more information check:",
+    "{{#ref}}",
+    "../../network-services-pentesting/pentesting-rdp.md",
+    "{{#endref}}",
+    "{{#include ../../banners/hacktricks-training.md}}"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/rdpexec.md"
+  ]
+}

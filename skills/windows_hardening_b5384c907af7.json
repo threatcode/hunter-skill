@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_b5384c907af7",
+  "category": "windows-hardening",
+  "title": "roguepotato and printspoofer",
+  "description": "# RoguePotato, PrintSpoofer, SharpEfsPotato, GodPotato\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> [!WARNING]\n> **JuicyPotato doesn't work** on Windows Server 2019 and Windows 10 build 1809 onwards. However, [**PrintSpoofer**](https://github.com/itm4n/PrintSpoofer)**,** [**RoguePotato**](https://github.com/antonioCoco/RoguePotato)**,** [**SharpEfsPotato**](https://github.com/bugch3ck/SharpEfsPotato)**,** [**GodPotato**](https://github.com/BeichenDream/GodPotato)**,** [**EfsPotato**](ht",
+  "payloads": [
+    "# RoguePotato, PrintSpoofer, SharpEfsPotato, GodPotato",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> [!WARNING]",
+    "> **JuicyPotato doesn't work** on Windows Server 2019 and Windows 10 build 1809 onwards. However, [**PrintSpoofer**](https://github.com/itm4n/PrintSpoofer)**,** [**RoguePotato**](https://github.com/antonioCoco/RoguePotato)**,** [**SharpEfsPotato**](https://github.com/bugch3ck/SharpEfsPotato)**,** [**GodPotato**](https://github.com/BeichenDream/GodPotato)**,** [**EfsPotato**](https://github.com/zcgonvh/EfsPotato)**,** [**DCOMPotato**](https://github.com/zcgonvh/DCOMPotato)** can be used to **leverage the same privileges and gain `NT AUTHORITY\\SYSTEM`** level access. This [blog post](https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/) goes in-depth on the `PrintSpoofer` tool, which can be used to abuse impersonation privileges on Windows 10 and Server 2019 hosts where JuicyPotato no longer works.",
+    "> [!TIP]",
+    "> A modern alternative frequently maintained in 2024\u20132025 is SigmaPotato (a fork of GodPotato) which adds in-memory/.NET reflection usage and extended OS support. See quick usage below and the repo in References.",
+    "Related pages for background and manual techniques:",
+    "{{#ref}}",
+    "seimpersonate-from-high-to-system.md",
+    "{{#endref}}",
+    "{{#ref}}",
+    "from-high-integrity-to-system-with-name-pipes.md",
+    "{{#endref}}",
+    "{{#ref}}",
+    "privilege-escalation-abusing-tokens.md"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/roguepotato-and-printspoofer.md"
+  ]
+}

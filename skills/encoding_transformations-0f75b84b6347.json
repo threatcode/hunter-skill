@@ -1,0 +1,23 @@
+{
+  "id": "encoding_transformations-0f75b84b6347",
+  "category": "ENCODING_TRANSFORMATIONS",
+  "title": "README",
+  "description": "# Encoding and Transformations\n\n> Encoding and Transformations are techniques that change how data is represented or transferred without altering its core meaning. Common examples include URL encoding, Base64, HTML entity encoding, and Unicode transformations. Attackers use these methods as gadgets to bypass input filters, evade web application firewalls, or break out of sanitization routines.\n\n## Summary\n\n* [Unicode](#unicode)\n    * [Unicode Normalization](#unicode-normalization)\n    * [Punycod",
+  "payloads": [
+    "[Unicode Normalization reference table](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html)",
+    "| `\uff07` (U+FF07) | `\uff07 or \uff071\uff07=\uff071` | `' or '1'='1` |",
+    "| `\uff02` (U+FF02) | `\uff02 or \uff021\uff02=\uff021` | `\" or \"1\"=\"1` |",
+    "| `\uff1c` (U+FF1C) | `\uff1cimg src=a\uff1e` | `<img src=a/>` |",
+    "* [NahamCon - Puny-Code: 0-Click Account Takeover](https://github.com/VoorivexTeam/white-box-challenges/tree/main/punycode)",
+    "* [PentesterLab - Unicode and NFKC](https://pentesterlab.com/exercises/unicode-transform)",
+    "* [Puny-Code, 0-Click Account Takeover - Voorivex - June 1, 2025](https://blog.voorivex.team/puny-code-0-click-account-takeover)",
+    "* [Unicode normalization vulnerabilities - Lazar - September 30, 2021](https://lazarv.com/posts/unicode-normalization-vulnerabilities/)",
+    "* [Unicode Normalization Vulnerabilities & the Special K Polyglot - AppCheck - September 2, 2019](https://appcheck-ng.com/unicode-normalization-vulnerabilities-the-special-k-polyglot/)",
+    "* [WAF Bypassing with Unicode Compatibility - Jorge Lajara - February 19, 2020](https://jlajara.gitlab.io/Bypass_WAF_Unicode)",
+    "* [When \"Zo\u00eb\" !== \"Zo\u00eb\". Or why you need to normalize Unicode strings - Alessandro Segala - March 11, 2019](https://withblue.ink/2019/03/11/why-you-need-to-normalize-unicode-strings.html)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Encoding Transformations/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

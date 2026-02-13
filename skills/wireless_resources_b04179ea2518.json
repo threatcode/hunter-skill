@@ -1,0 +1,27 @@
+{
+  "id": "wireless_resources_b04179ea2518",
+  "category": "wireless-resources",
+  "title": "tools and online resources",
+  "description": "# Tools\n\n## Hak5's Wi-Fi Pineapple\n\nFully-integrated Wi-Fi man-in-the-middle platform and rogue access point.\n\n* [Site](https://www.wifipineapple.com/)\n* [Store](https://hakshop.com/products/wifi-pineapple)\n* [Wiki](https://wiki.wifipineapple.com/)\n\n## Aircrack-ng\n\nComplete suite of tools to monitor, capture, export, attack and crack wireless\nnetworks.\n\n* [Site](https://www.aircrack-ng.org/)\n\n## Airsnort\n\n* [Site](https://sourceforge.net/projects/airsnort/)\n\n## Kismet\n\nUseful for troubleshooting",
+  "payloads": [
+    "# Tools",
+    "## Hak5's Wi-Fi Pineapple",
+    "Fully-integrated Wi-Fi man-in-the-middle platform and rogue access point.",
+    "* [Site](https://www.wifipineapple.com/)",
+    "* [Store](https://hakshop.com/products/wifi-pineapple)",
+    "* [Wiki](https://wiki.wifipineapple.com/)",
+    "## Aircrack-ng",
+    "Complete suite of tools to monitor, capture, export, attack and crack wireless",
+    "networks.",
+    "* [Site](https://www.aircrack-ng.org/)",
+    "## Airsnort",
+    "* [Site](https://sourceforge.net/projects/airsnort/)",
+    "## Kismet",
+    "Useful for troubleshooting Wi-Fi networks.  Detects hidden networks.",
+    "* [Site](https://www.kismetwireless.net/)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/wireless-resources/tools_and_online_resources.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_dc5d11841557",
+  "category": "macos-hardening",
+  "title": "introduction to x64",
+  "description": "# Introduction to x64\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## **Introduction to x64**\n\nx64, also known as x86-64, is a 64-bit processor architecture predominantly used in desktop and server computing. Originating from the x86 architecture produced by Intel and later adopted by AMD with the name AMD64, it's the prevalent architecture in personal computers and servers today.\n\n### **Registers**\n\nx64 expands upon the x86 architecture, featuring **16 general-purpose registers** labe",
+  "payloads": [
+    "# Introduction to x64",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## **Introduction to x64**",
+    "x64, also known as x86-64, is a 64-bit processor architecture predominantly used in desktop and server computing. Originating from the x86 architecture produced by Intel and later adopted by AMD with the name AMD64, it's the prevalent architecture in personal computers and servers today.",
+    "### **Registers**",
+    "x64 expands upon the x86 architecture, featuring **16 general-purpose registers** labeled `rax`, `rbx`, `rcx`, `rdx`, `rbp`, `rsp`, `rsi`, `rdi`, and `r8` through `r15`. Each of these can store a **64-bit** (8-byte) value. These registers also have 32-bit, 16-bit, and 8-bit sub-registers for compatibility and specific tasks.",
+    "1. **`rax`** - Traditionally used for **return values** from functions.",
+    "2. **`rbx`** - Often used as a **base register** for memory operations.",
+    "3. **`rcx`** - Commonly used for **loop counters**.",
+    "4. **`rdx`** - Used in various roles including extended arithmetic operations.",
+    "5. **`rbp`** - **Base pointer** for the stack frame.",
+    "6. **`rsp`** - **Stack pointer**, keeping track of the top of the stack.",
+    "7. **`rsi`** and **`rdi`** - Used for **source** and **destination** indexes in string/memory operations.",
+    "8. **`r8`** to **`r15`** - Additional general-purpose registers introduced in x64.",
+    "### **Calling Convention**"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-apps-inspecting-debugging-and-fuzzing/introduction-to-x64.md"
+  ]
+}

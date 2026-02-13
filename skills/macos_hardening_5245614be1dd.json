@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_5245614be1dd",
+  "category": "macos-hardening",
+  "title": "macos electron applications injection",
+  "description": "# macOS Electron Applications Injection\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nIf you don't know what Electron is you can find [**lots of information here**](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/electron-desktop-apps/index.html#rce-xss--contextisolation). But for now just know that Electron runs **node**.\\\nAnd node has some **parameters** and **env variables** that can be use to **make it execute other code** apart from ",
+  "payloads": [
+    "# macOS Electron Applications Injection",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "If you don't know what Electron is you can find [**lots of information here**](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/electron-desktop-apps/index.html#rce-xss--contextisolation). But for now just know that Electron runs **node**.\\",
+    "And node has some **parameters** and **env variables** that can be use to **make it execute other code** apart from the indicated file.",
+    "### Electron Fuses",
+    "These techniques will be discussed next, but in recent times Electron has added several **security flags to prevent them**. These are the [**Electron Fuses**](https://www.electronjs.org/docs/latest/tutorial/fuses) and these are the ones used to **prevent** Electron apps in macOS from **loading arbitrary code**:",
+    "- **`RunAsNode`**: If disabled, it prevents the use of the env var **`ELECTRON_RUN_AS_NODE`** to inject code.",
+    "- **`EnableNodeCliInspectArguments`**: If disabled, params like `--inspect`, `--inspect-brk` won't be respected. Avoiding his way to inject code.",
+    "- **`EnableEmbeddedAsarIntegrityValidation`**: If enabled, the loaded **`asar`** **file** will be **validated** by macOS. **Preventing** this way **code injection** by modifying the contents of this file.",
+    "- **`OnlyLoadAppFromAsar`**: If this is enabled, instead of searching to load in the following order: **`app.asar`**, **`app`** and finally **`default_app.asar`**. It will only check and use app.asar, thus ensuring that when **combined** with the **`embeddedAsarIntegrityValidation`** fuse it is **impossible** to **load non-validated code**.",
+    "- **`LoadBrowserProcessSpecificV8Snapshot`**: If enabled, the browser process uses the file called `browser_v8_context_snapshot.bin` for its V8 snapshot.",
+    "Another interesting fuse that won't be preventing code injection is:",
+    "- **EnableCookieEncryption**: If enabled, the cookie store on disk is encrypted using OS level cryptography keys.",
+    "### Checking Electron Fuses"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-electron-applications-injection.md"
+  ]
+}

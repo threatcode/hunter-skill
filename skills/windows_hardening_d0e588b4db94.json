@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_d0e588b4db94",
+  "category": "windows-hardening",
+  "title": "credentials protections",
+  "description": "# Windows Credentials Protections\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## WDigest\n\nThe [WDigest](<https://technet.microsoft.com/pt-pt/library/cc778868(v=ws.10).aspx?f=255&MSPPError=-2147217396>) protocol, introduced with Windows XP, is designed for authentication via the HTTP Protocol and is **enabled by default on Windows XP through Windows 8.0 and Windows Server 2003 to Windows Server 2012**. This default setting results in **plain-text password storage in LSASS** (Local Securit",
+  "payloads": [
+    "# Windows Credentials Protections",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## WDigest",
+    "The [WDigest](<https://technet.microsoft.com/pt-pt/library/cc778868(v=ws.10).aspx?f=255&MSPPError=-2147217396>) protocol, introduced with Windows XP, is designed for authentication via the HTTP Protocol and is **enabled by default on Windows XP through Windows 8.0 and Windows Server 2003 to Windows Server 2012**. This default setting results in **plain-text password storage in LSASS** (Local Security Authority Subsystem Service). An attacker can use Mimikatz to **extract these credentials** by executing:",
+    "```bash",
+    "sekurlsa::wdigest",
+    "To **toggle this feature off or on**, the _**UseLogonCredential**_ and _**Negotiate**_ registry keys within _**HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SecurityProviders\\WDigest**_ must be set to \"1\". If these keys are **absent or set to \"0\"**, WDigest is **disabled**:",
+    "```bash",
+    "reg query HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest /v UseLogonCredential",
+    "## LSA Protection (PP & PPL protected processes)",
+    "**Protected Process (PP)** and **Protected Process Light (PPL)** are **Windows kernel-level protections** designed to prevent unauthorized access to sensitive processes like **LSASS**. Introduced in **Windows Vista**, the **PP model** was originally created for **DRM** enforcement and only allowed binaries signed with a **special media certificate** to be protected. A process marked as **PP** can only be accessed by other processes that are **also PP** and have an **equal or higher protection level**, and even then, **only with limited access rights** unless specifically allowed.",
+    "**PPL**, introduced in **Windows 8.1**, is a more flexible version of PP. It allows **broader use cases** (e.g., LSASS, Defender) by introducing **\"protection levels\"** based on the **digital signature\u2019s EKU (Enhanced Key Usage)** field. The protection level is stored in the `EPROCESS.Protection` field, which is a `PS_PROTECTION` structure with:",
+    "- **Type** (`Protected` or `ProtectedLight`)",
+    "- **Signer** (e.g., `WinTcb`, `Lsa`, `Antimalware`, etc.)",
+    "This structure is packed into a single byte and determines **who can access whom**:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/stealing-credentials/credentials-protections.md"
+  ]
+}

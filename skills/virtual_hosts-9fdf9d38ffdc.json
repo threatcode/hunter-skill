@@ -1,0 +1,27 @@
+{
+  "id": "virtual_hosts-9fdf9d38ffdc",
+  "category": "VIRTUAL_HOSTS",
+  "title": "README",
+  "description": "# Virtual Host\n\n> A **Virtual Host** (VHOST) is a mechanism used by web servers (e.g., Apache, Nginx, IIS) to host multiple domains or subdomains on a single IP address. When enumerating a webserver, default requests often target the primary or default VHOST only. **Hidden hosts** may expose extra functionality or vulnerabilities.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n* [References](#references)\n\n## Tools\n\n* [wdahlenburg/VhostFinder](https://github.com/wdahlenburg/VhostFin",
+  "payloads": [
+    "* [wdahlenburg/VhostFinder](https://github.com/wdahlenburg/VhostFinder) - Identify virtual hosts by similarity comparison.",
+    "* [codingo/VHostScan](https://github.com/codingo/VHostScan) - A virtual host scanner that can be used with pivot tools, detect catch-all scenarios, aliases and dynamic default pages.",
+    "* [hakluke/hakoriginfinder](https://github.com/hakluke/hakoriginfinder) - Tool for discovering the origin host behind a reverse proxy. Useful for bypassing cloud WAFs.",
+    "prips 93.184.216.0/24 | hakoriginfinder -h https://example.com:443/foo",
+    "* [OJ/gobuster](https://github.com/OJ/gobuster) - Directory/File, DNS and VHost busting tool written in Go.",
+    "gobuster vhost -u https://example.com -w /path/to/wordlist.txt",
+    "```http",
+    "<VirtualHost *:80>",
+    "</VirtualHost>",
+    "<VirtualHost *:80>",
+    "</VirtualHost>",
+    "```http",
+    "```http",
+    "curl -H \"Host: admin.example.com\" http://10.10.10.10/",
+    "* [Gobuster for directory, DNS and virtual hosts bruteforcing - erev0s - March 17, 2020](https://erev0s.com/blog/gobuster-directory-dns-and-virtual-hosts-bruteforcing/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Virtual Hosts/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

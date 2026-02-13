@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_0eb0b004f839",
+  "category": "ai-research",
+  "title": "model evaluation and metrics",
+  "description": "# AI Model Evaluation and Metrics Tutorial\n\nEvaluating AI models is crucial to understand their performance and make informed improvements. Different tasks (classification, regression, ranking) require different evaluation metrics. This tutorial covers key metrics for each type, explains their significance and use-cases, and provides Python examples (using **scikit-learn** and **NumPy**, and SciPy for ranking) to compute them. We also discuss trade-offs between metrics and how to choose the righ",
+  "payloads": [
+    "# AI Model Evaluation and Metrics Tutorial",
+    "Evaluating AI models is crucial to understand their performance and make informed improvements. Different tasks (classification, regression, ranking) require different evaluation metrics. This tutorial covers key metrics for each type, explains their significance and use-cases, and provides Python examples (using **scikit-learn** and **NumPy**, and SciPy for ranking) to compute them. We also discuss trade-offs between metrics and how to choose the right ones for your problem.",
+    "## 1. Classification Metrics",
+    "Classification metrics assess how well a model predicts discrete class labels (e.g. spam vs not-spam). Many classification metrics are derived from the **confusion matrix** of true vs predicted labels. The confusion matrix is a table showing counts of **True Positives (TP)**, **True Negatives (TN)**, **False Positives (FP)**, and **False Negatives (FN)**. Each metric gives a different perspective on classifier performance.",
+    "### Confusion Matrix",
+    "A **confusion matrix** is a table that visualizes the performance of a classification model by comparing actual labels with predicted labels (see [Confusion matrix - Wikipedia](https://en.wikipedia.org/wiki/Confusion_matrix#:~:text=In%20the%20field%20of%20machine,usually%20called%20a%20matching%20matrix)). Each row represents the actual class and each column represents the predicted class. For a binary classification (with classes \u201cPositive\u201d and \u201cNegative\u201d), the confusion matrix might look like:",
+    "Predicted Negative    Predicted Positive",
+    "Actual Negative        TN                  FP",
+    "Actual Positive        FN                  TP",
+    "The diagonal elements (TN and TP) are correct predictions, and off-diagonals are errors (FP = type I error, FN = type II error). The confusion matrix helps derive metrics like accuracy, precision, recall, etc., and lets you see which classes are being confused by the model (hence the name).",
+    "### Accuracy",
+    "**Accuracy** is the simplest classification metric: it is the proportion of all predictions that the model got right. In terms of the confusion matrix, it\u2019s `(TP + TN) / (TP + TN + FP + FN)`. Accuracy gives an overall indication of correctness.",
+    "*Significance:* Accuracy can be useful as a quick check to see if a model is training correctly and for comparing models when the class distribution is roughly balanced. However, **accuracy can be misleading for imbalanced datasets**. For example, if 99% of instances are class A, a model that always predicts A will be 99% accurate but essentially useless for finding class B. In such cases, accuracy doesn\u2019t reflect the model\u2019s true effectiveness (you\u2019d be \u201caccurate\u201d 98\u201399% of the time by always predicting the majority class.",
+    "*When to use:* Use accuracy when classes are balanced and the cost of FP and FN errors is similar. Avoid using accuracy as the sole metric in class-imbalanced scenarios or when you care more about specific error types.",
+    "*Formula:* $Accuracy = \\frac{TP + TN}{TP + TN + FP + FN}$."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ML-Fundamentals/model_evaluation_and_metrics.md"
+  ]
+}

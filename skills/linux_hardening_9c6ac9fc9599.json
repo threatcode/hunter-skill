@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_9c6ac9fc9599",
+  "category": "linux-hardening",
+  "title": "selinux UBUNTU lab",
+  "description": "# SELinux in Ubuntu Lab\n\nThe following can be completed with Ubuntu 22.x or later.\n\n## Installing and Enabling SELinux\nThe first step is to install SELinux. Start by opening a command line terminal and installing the necessary packages with the apt commands below.\n```\n$sudo apt update\n$ sudo apt install policycoreutils selinux-utils selinux-basics\n```\n### Activate SELinux\nExecute the following command with root permissions to enable SELinux on the system.\n```\n$ sudo selinux-activate\n```\n\n## Enfo",
+  "payloads": [
+    "# SELinux in Ubuntu Lab",
+    "The following can be completed with Ubuntu 22.x or later.",
+    "## Installing and Enabling SELinux",
+    "The first step is to install SELinux. Start by opening a command line terminal and installing the necessary packages with the apt commands below.",
+    "$sudo apt update",
+    "$ sudo apt install policycoreutils selinux-utils selinux-basics",
+    "### Activate SELinux",
+    "Execute the following command with root permissions to enable SELinux on the system.",
+    "$ sudo selinux-activate",
+    "## Enforcing Mode",
+    "Set SELinux to enforcing mode:",
+    "$ sudo selinux-config-enforcing",
+    "Reboot your system. The relabelling will be triggered after you reboot your system. When finished the system will reboot one more time automatically.",
+    "$ reboot",
+    "Check SELinux status with the following command to ensure that it is in enforcing mode."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/linux-hardening/selinux_UBUNTU_lab.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_edf931997f9d",
+  "category": "cryptography-and-pki",
+  "title": "DIRECTORY STRUCTURE",
+  "description": "# Directory Structure\n\nThis document provides an overview of the cryptography-and-pki directory organization.\n\n## \ud83d\udcc1 Directory Tree\n\n```\ncryptography-and-pki/\n\u2502\n\u251c\u2500\u2500 README.md                          # Main entry point with navigation\n\u251c\u2500\u2500 DIRECTORY_STRUCTURE.md             # This file - directory overview\n\u2502\n\u251c\u2500\u2500 \ud83d\udcda Core Reference Files\n\u2502   \u251c\u2500\u2500 crypto_algorithms.md           # Algorithm reference (2025 edition)\n\u2502   \u251c\u2500\u2500 crypto_tools.md                # 100+ cryptography tools\n\u2502   \u251c\u2500\u2500 crypto_framework",
+  "payloads": [
+    "# Directory Structure",
+    "This document provides an overview of the cryptography-and-pki directory organization.",
+    "## \ud83d\udcc1 Directory Tree",
+    "cryptography-and-pki/",
+    "\u251c\u2500\u2500 README.md                          # Main entry point with navigation",
+    "\u251c\u2500\u2500 DIRECTORY_STRUCTURE.md             # This file - directory overview",
+    "\u251c\u2500\u2500 \ud83d\udcda Core Reference Files",
+    "\u2502   \u251c\u2500\u2500 crypto_algorithms.md           # Algorithm reference (2025 edition)",
+    "\u2502   \u251c\u2500\u2500 crypto_tools.md                # 100+ cryptography tools",
+    "\u2502   \u251c\u2500\u2500 crypto_frameworks.md           # Multi-language crypto libraries",
+    "\u2502   \u251c\u2500\u2500 cert_openssl.md                # OpenSSL certificate operations",
+    "\u2502   \u251c\u2500\u2500 gpg_how_to.md                  # Complete GPG guide",
+    "\u2502   \u2514\u2500\u2500 disk_encryption.md             # Disk and data encryption guide",
+    "\u251c\u2500\u2500 \ud83d\udcd6 tutorials/                      # In-depth guides",
+    "\u2502   \u251c\u2500\u2500 pki-fundamentals.md            # PKI complete guide"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/DIRECTORY_STRUCTURE.md"
+  ]
+}

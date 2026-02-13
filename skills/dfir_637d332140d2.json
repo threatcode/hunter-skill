@@ -1,0 +1,27 @@
+{
+  "id": "dfir_637d332140d2",
+  "category": "dfir",
+  "title": "tools",
+  "description": "# Dfir Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [AMIRA - Automated Malware Incident Response & Analysis](http://feedproxy.google.com/~r/PentestTools/~3/n9b89NWONDo/amira-automated-malware-incident.html)\n- [APT-Hunter - Threat Hunting Tool For Windows Event Logs Which Made By Purple Team Mindset To Provide Detect APT Movements Hidden In The Sea Of Windows Event Logs To Decrease The Time To    Uncover Suspicious Activity](http://feedproxy.google.com/~r/PentestTools/~3/I7LH",
+  "payloads": [
+    "# Dfir Tools",
+    "This is a curated list of tools for this category.",
+    "- [AMIRA - Automated Malware Incident Response & Analysis](http://feedproxy.google.com/~r/PentestTools/~3/n9b89NWONDo/amira-automated-malware-incident.html)",
+    "- [APT-Hunter - Threat Hunting Tool For Windows Event Logs Which Made By Purple Team Mindset To Provide Detect APT Movements Hidden In The Sea Of Windows Event Logs To Decrease The Time To    Uncover Suspicious Activity](http://feedproxy.google.com/~r/PentestTools/~3/I7LH1j1n2kY/apt-hunter-threat-hunting-tool-for.html)",
+    "- [Acheron - Indirect Syscalls For AV/EDR Evasion In Go Assembly](https://www.kitploit.com/2023/05/acheron-indirect-syscalls-for-avedr.html)",
+    "- [Adama - Searches For Threat Hunting And Security Analytics](http://feedproxy.google.com/~r/PentestTools/~3/Lw8c0rtzWHk/adama-searches-for-threat-hunting-and.html)",
+    "- [Andriller - Software Utility With A Collection Of Forensic Tools For Smartphones](http://feedproxy.google.com/~r/PentestTools/~3/CGAtcMHkN58/andriller-software-utility-with.html)",
+    "- [Attack Monitor - Endpoint Detection And Malware Analysis Software](http://feedproxy.google.com/~r/PentestTools/~3/_RxX4yOr-Ts/attack-monitor-endpoint-detection-and.html)",
+    "- [AutoMacTC - Automated Mac Forensic Triage Collector](http://feedproxy.google.com/~r/PentestTools/~3/todwtrFFW70/automactc-automated-mac-forensic-triage.html)",
+    "- [Autotimeliner - Automagically Extract Forensic Timeline From Volatile Memory Dump](http://www.kitploit.com/2022/02/autotimeliner-automagically-extract.html)",
+    "- [AzureHunter - A Cloud Forensics Powershell Module To Run Threat Hunting Playbooks On Data From Azure And O365](http://www.kitploit.com/2021/11/azurehunter-cloud-forensics-powershell.html)",
+    "- [Beagle - An Incident Response And Digital Forensics Tool Which Transforms Security Logs And Data Into Graphs](http://feedproxy.google.com/~r/PentestTools/~3/cEy42c_u1ck/beagle-incident-response-and-digital.html)",
+    "- [CIRTKit - Tools For The Computer Incident Response Team](http://feedproxy.google.com/~r/PentestTools/~3/w0zubUkg6ms/cirtkit-tools-for-computer-incident.html)",
+    "- [CSIRT-Collect - PowerShell Script To Collect Memory And (Triage) Disk Forensics](http://feedproxy.google.com/~r/PentestTools/~3/-tNVO3wk2pY/csirt-collect-powershell-script-to.html)",
+    "- [Columbo - A Computer Forensic Analysis Tool Used To Simplify And Identify Specific Patterns In Compromised Datasets](http://feedproxy.google.com/~r/PentestTools/~3/9cMEG4O3F8k/columbo-computer-forensic-analysis-tool.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/dfir/tools.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_211506406813",
+  "category": "cryptography-and-pki",
+  "title": "04 Classic Vigenere Cipher",
+  "description": "# Challenge 4: Classic Vigen\u00e8re Cipher\n\n**Level:** Beginner\n\n**Description:**\nCrack a message encrypted using the Vigen\u00e8re cipher with a known keyword.\n\n**Challenge Text:**\n```\nEncrypted Message: \"XBGXLTVJZTFKTRDCXWPNCRTGDHDDJQKFTZR\"\nKeyword: \"KEYWORD\"\n```\n\n**Instructions:**\n1. Utilize the given keyword to decrypt the Vigen\u00e8re cipher.\n2. Provide the original plaintext.\n\n\n**Answer:**\nThe decrypted message is \"WELCOMETOTHEWORLDOFCRYPTOGRAPHY\"\n\n**Code:**\n```python\ndef decrypt_vigenere(ciphertext, k",
+  "payloads": [
+    "# Challenge 4: Classic Vigen\u00e8re Cipher",
+    "**Level:** Beginner",
+    "**Description:**",
+    "Crack a message encrypted using the Vigen\u00e8re cipher with a known keyword.",
+    "**Challenge Text:**",
+    "Encrypted Message: \"XBGXLTVJZTFKTRDCXWPNCRTGDHDDJQKFTZR\"",
+    "Keyword: \"KEYWORD\"",
+    "**Instructions:**",
+    "1. Utilize the given keyword to decrypt the Vigen\u00e8re cipher.",
+    "2. Provide the original plaintext.",
+    "**Answer:**",
+    "The decrypted message is \"WELCOMETOTHEWORLDOFCRYPTOGRAPHY\"",
+    "**Code:**",
+    "```python",
+    "def decrypt_vigenere(ciphertext, keyword):"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/challenges/04_Classic_Vigenere_Cipher.md"
+  ]
+}

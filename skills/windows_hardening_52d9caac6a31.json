@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_52d9caac6a31",
+  "category": "windows-hardening",
+  "title": "writable sys path dll hijacking privesc",
+  "description": "# Writable Sys Path +Dll Hijacking Privesc\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Introduction\n\nIf you found that you can **write in a System Path folder** (note that this won't work if you can write in a User Path folder) it's possible that you could **escalate privileges** in the system.\n\nIn order to do that you can abuse a **Dll Hijacking** where you are going to **hijack a library being loaded** by a service or process with **more privileges** than yours, and because that ",
+  "payloads": [
+    "# Writable Sys Path +Dll Hijacking Privesc",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "If you found that you can **write in a System Path folder** (note that this won't work if you can write in a User Path folder) it's possible that you could **escalate privileges** in the system.",
+    "In order to do that you can abuse a **Dll Hijacking** where you are going to **hijack a library being loaded** by a service or process with **more privileges** than yours, and because that service is loading a Dll that probably doesn't even exist in the entire system, it's going to try to load it from the System Path where you can write.",
+    "For more info about **what is Dll Hijackig** check:",
+    "{{#ref}}",
+    "{{#endref}}",
+    "## Privesc with Dll Hijacking",
+    "### Finding a missing Dll",
+    "The first thing you need is to **identify a process** running with **more privileges** than you that is trying to **load a Dll from the System Path** you can write in.",
+    "The problem in this cases is that probably thoses processes are already running. To find which Dlls are lacking the services you need to launch procmon as soon as possible (before processes are loaded). So, to find lacking .dlls do:",
+    "- **Create** the folder `C:\\privesc_hijacking` and add the path `C:\\privesc_hijacking` to **System Path env variable**. You can do this **manually** or with **PS**:",
+    "```bash",
+    "# Set the folder path to create and check events for"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/dll-hijacking/writable-sys-path-dll-hijacking-privesc.md"
+  ]
+}

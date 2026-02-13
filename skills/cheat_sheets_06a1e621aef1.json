@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_06a1e621aef1",
+  "category": "cheat-sheets",
+  "title": "scapy",
+  "description": "# Scapy Cheat Sheet\n\nScapy is a powerful Python-based interactive packet manipulation program and library. It can forge or decode packets, send them on the wire, capture them, and match requests and replies.\n\n## \ud83d\udccb Table of Contents\n- [Installation](#installation)\n- [Basic Usage](#basic-usage)\n- [Packet Creation](#packet-creation)\n- [Sending Packets](#sending-packets)\n- [Sniffing Packets](#sniffing-packets)\n- [Packet Manipulation](#packet-manipulation)\n- [Layer Operations](#layer-operations)\n- [C",
+  "payloads": [
+    "# Scapy Cheat Sheet",
+    "Scapy is a powerful Python-based interactive packet manipulation program and library. It can forge or decode packets, send them on the wire, capture them, and match requests and replies.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Installation](#installation)",
+    "- [Basic Usage](#basic-usage)",
+    "- [Packet Creation](#packet-creation)",
+    "- [Sending Packets](#sending-packets)",
+    "- [Sniffing Packets](#sniffing-packets)",
+    "- [Packet Manipulation](#packet-manipulation)",
+    "- [Layer Operations](#layer-operations)",
+    "- [Common Protocols](#common-protocols)",
+    "- [Network Scanning](#network-scanning)",
+    "- [Attack Simulations](#attack-simulations)",
+    "- [Advanced Techniques](#advanced-techniques)",
+    "## Installation"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/networking/scapy.md"
+  ]
+}

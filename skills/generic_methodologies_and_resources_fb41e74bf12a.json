@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_fb41e74bf12a",
+  "category": "generic-methodologies-and-resources",
+  "title": "desofuscation vbs cscript.exe",
+  "description": "# Desobfuscation Techniques for VBS Files\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nSome things that could be useful to debug/deobfuscate a malicious VBS file:\n\n## echo\n\n```bash\nWscript.Echo \"Like this?\"\n```\n\n## Commnets\n\n```bash\n' this is a comment\n```\n\n## Test\n\n```bash\ncscript.exe file.vbs\n```\n\n## Write data to a file\n\n```js\nFunction writeBinary(strBinary, strPath)\n\n    Dim oFSO: Set oFSO = CreateObject(\"Scripting.FileSystemObject\")\n\n    ' below lines purpose: checks that write ac",
+  "payloads": [
+    "# Desobfuscation Techniques for VBS Files",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "Some things that could be useful to debug/deobfuscate a malicious VBS file:",
+    "## echo",
+    "```bash",
+    "Wscript.Echo \"Like this?\"",
+    "## Commnets",
+    "```bash",
+    "' this is a comment",
+    "## Test",
+    "```bash",
+    "cscript.exe file.vbs",
+    "## Write data to a file",
+    "Function writeBinary(strBinary, strPath)",
+    "Dim oFSO: Set oFSO = CreateObject(\"Scripting.FileSystemObject\")"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/desofuscation-vbs-cscript.exe.md"
+  ]
+}

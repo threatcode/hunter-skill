@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_09f36d74207f",
+  "category": "linux-hardening",
+  "title": "detecting compromise",
+  "description": "# Linux commands and detection techniques for identifying rootkits and system compromise\n\nThe following is a comprehensive set of Linux commands and detection strategies for identifying rootkits and system compromise. This guide is organized from quick triage to deep forensic analysis. [kali](https://www.kali.org/tools/chkrootkit/)\n\n***\n\n## 1. Quick Triage Commands (Run First)\n\nStart with these to get immediate signals:\n\n```bash\n# Check kernel taint status - indicates loaded kernel modules\ncat /",
+  "payloads": [
+    "# Linux commands and detection techniques for identifying rootkits and system compromise",
+    "The following is a comprehensive set of Linux commands and detection strategies for identifying rootkits and system compromise. This guide is organized from quick triage to deep forensic analysis. [kali](https://www.kali.org/tools/chkrootkit/)",
+    "## 1. Quick Triage Commands (Run First)",
+    "Start with these to get immediate signals:",
+    "```bash",
+    "# Check kernel taint status - indicates loaded kernel modules",
+    "cat /proc/sys/kernel/tainted",
+    "# 0 = clean; non-zero = kernel modules loaded (suspicious if you didn't load them)",
+    "# List loaded kernel modules",
+    "# Compare with /proc/modules",
+    "cat /proc/modules",
+    "# Check for common rootkit signatures",
+    "sudo rkhunter -c --skip-keypress --report-warnings-only",
+    "sudo chkrootkit",
+    "If `cat /proc/sys/kernel/tainted` returns non-zero, suspect kernel-level rootkit activity. [youtube](https://www.youtube.com/watch?v=pZbEUHdwio8)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/linux-hardening/detecting-compromise.md"
+  ]
+}

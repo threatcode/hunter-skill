@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_179fded72e42",
+  "category": "cheat-sheets",
+  "title": "metasploit",
+  "description": "# Metasploit Framework Cheat Sheet\n\nMetasploit is the world's most widely used penetration testing framework. It provides a comprehensive platform for developing, testing, and executing exploit code.\n\n## \ud83d\udccb Table of Contents\n- [Starting Metasploit](#starting-metasploit)\n- [Basic Commands](#basic-commands)\n- [Database Management](#database-management)\n- [Information Gathering](#information-gathering)\n- [Scanning and Enumeration](#scanning-and-enumeration)\n- [Exploitation](#exploitation)\n- [Post-Ex",
+  "payloads": [
+    "# Metasploit Framework Cheat Sheet",
+    "Metasploit is the world's most widely used penetration testing framework. It provides a comprehensive platform for developing, testing, and executing exploit code.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Starting Metasploit](#starting-metasploit)",
+    "- [Basic Commands](#basic-commands)",
+    "- [Database Management](#database-management)",
+    "- [Information Gathering](#information-gathering)",
+    "- [Scanning and Enumeration](#scanning-and-enumeration)",
+    "- [Exploitation](#exploitation)",
+    "- [Post-Exploitation](#post-exploitation)",
+    "- [Meterpreter](#meterpreter)",
+    "- [Payload Generation](#payload-generation)",
+    "- [Auxiliary Modules](#auxiliary-modules)",
+    "- [Evasion](#evasion)",
+    "## Starting Metasploit"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/exploitation/metasploit.md"
+  ]
+}

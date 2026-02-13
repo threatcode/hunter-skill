@@ -1,0 +1,27 @@
+{
+  "id": "hardware_physical_access_0d26fc86c201",
+  "category": "hardware-physical-access",
+  "title": "physical attacks",
+  "description": "# Physical Attacks\n\n{{#include ../banners/hacktricks-training.md}}\n\n## BIOS Password Recovery and System Security\n\n**Resetting the BIOS** can be achieved in several ways. Most motherboards include a **battery** that, when removed for around **30 minutes**, will reset the BIOS settings, including the password. Alternatively, a **jumper on the motherboard** can be adjusted to reset these settings by connecting specific pins.\n\nFor situations where hardware adjustments are not possible or practical,",
+  "payloads": [
+    "# Physical Attacks",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## BIOS Password Recovery and System Security",
+    "**Resetting the BIOS** can be achieved in several ways. Most motherboards include a **battery** that, when removed for around **30 minutes**, will reset the BIOS settings, including the password. Alternatively, a **jumper on the motherboard** can be adjusted to reset these settings by connecting specific pins.",
+    "For situations where hardware adjustments are not possible or practical, **software tools** offer a solution. Running a system from a **Live CD/USB** with distributions like **Kali Linux** provides access to tools like **_killCmos_** and **_CmosPWD_**, which can assist in BIOS password recovery.",
+    "In cases where the BIOS password is unknown, entering it incorrectly **three times** will typically result in an error code. This code can be used on websites like [https://bios-pw.org](https://bios-pw.org) to potentially retrieve a usable password.",
+    "### UEFI Security",
+    "For modern systems using **UEFI** instead of traditional BIOS, the tool **chipsec** can be utilized to analyze and modify UEFI settings, including the disabling of **Secure Boot**. This can be accomplished with the following command:",
+    "```bash",
+    "python chipsec_main.py -module exploits.secure.boot.pk",
+    "## RAM Analysis and Cold Boot Attacks",
+    "RAM retains data briefly after power is cut, usually for **1 to 2 minutes**. This persistence can be extended to **10 minutes** by applying cold substances, such as liquid nitrogen. During this extended period, a **memory dump** can be created using tools like **dd.exe** and **volatility** for analysis.",
+    "## Direct Memory Access (DMA) Attacks",
+    "**INCEPTION** is a tool designed for **physical memory manipulation** through DMA, compatible with interfaces like **FireWire** and **Thunderbolt**. It allows for bypassing login procedures by patching memory to accept any password. However, it's ineffective against **Windows 10** systems.",
+    "## Live CD/USB for System Access"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/hardware-physical-access/physical-attacks.md"
+  ]
+}

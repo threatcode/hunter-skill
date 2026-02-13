@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-7bf5f7a1c139",
+  "category": "Methodology and Resources",
+  "title": "Office   Attacks",
+  "description": "# Office - Attacks\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/office-attacks](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/)\n\n- [Office Products Features](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#office-products-features)\n- [Office Default Passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#office-default-passwords)\n- [Office Macro exec",
+  "payloads": [
+    "# Office - Attacks",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/access/office-attacks](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/)",
+    "- [Office Products Features](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#office-products-features)",
+    "- [Office Default Passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#office-default-passwords)",
+    "- [Office Macro execute WinAPI](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#office-macro-execute-winapi)",
+    "- [Excel](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#excel)",
+    "- [XLSM - Hot Manchego](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#xlsm---hot-manchego)",
+    "- [XLS - Macrome](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#xls---macrome)",
+    "- [XLM Excel 4.0 - SharpShooter](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#xlm-excel-40---sharpshooter)",
+    "- [XLM Excel 4.0 - EXCELntDonut](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#xlm-excel-40---excelntdonut)",
+    "- [XLM Excel 4.0 - EXEC](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#xlm-excel-40---exec)",
+    "- [SLK - EXEC](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#slk---exec)",
+    "- [Word](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#word)",
+    "- [DOCM - Metasploit](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#docm---metasploit)",
+    "- [DOCM - Download and Execute](https://swisskyrepo.github.io/InternalAllTheThings/redteam/access/office-attacks/#docm---download-and-execute)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Office - Attacks.md"
+  ]
+}

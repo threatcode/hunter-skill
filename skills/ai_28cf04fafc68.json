@@ -1,0 +1,27 @@
+{
+  "id": "ai_28cf04fafc68",
+  "category": "AI",
+  "title": "3. token embeddings",
+  "description": "# 3. Token Embeddings\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Token Embeddings\n\nAfter tokenizing text data, the next critical step in preparing data for training large language models (LLMs) like GPT is creating **token embeddings**. Token embeddings transform discrete tokens (such as words or subwords) into continuous numerical vectors that the model can process and learn from. This explanation breaks down token embeddings, their initialization, usage, and the role of positional ",
+  "payloads": [
+    "# 3. Token Embeddings",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Token Embeddings",
+    "After tokenizing text data, the next critical step in preparing data for training large language models (LLMs) like GPT is creating **token embeddings**. Token embeddings transform discrete tokens (such as words or subwords) into continuous numerical vectors that the model can process and learn from. This explanation breaks down token embeddings, their initialization, usage, and the role of positional embeddings in enhancing model understanding of token sequences.",
+    "> [!TIP]",
+    "> The goal of this third phase is very simple: **Assign each of the previous tokens in the vocabulary a vector of the desired dimensions to train the model.** Each word in the vocabulary will a point in a space of X dimensions.\\",
+    "> Note that initially the position of each word in the space is just initialised \"randomly\" and these positions are trainable parameters (will be improved during the training).",
+    "> Moreover, during the token embedding **another layer of embeddings is created** which represents (in this case) the **absolute possition of the word in the training sentence**. This way a word in different positions in the sentence will have a different representation (meaning).",
+    "### **What Are Token Embeddings?**",
+    "**Token Embeddings** are numerical representations of tokens in a continuous vector space. Each token in the vocabulary is associated with a unique vector of fixed dimensions. These vectors capture semantic and syntactic information about the tokens, enabling the model to understand relationships and patterns in the data.",
+    "- **Vocabulary Size:** The total number of unique tokens (e.g., words, subwords) in the model\u2019s vocabulary.",
+    "- **Embedding Dimensions:** The number of numerical values (dimensions) in each token\u2019s vector. Higher dimensions can capture more nuanced information but require more computational resources.",
+    "**Example:**",
+    "- **Vocabulary Size:** 6 tokens \\[1, 2, 3, 4, 5, 6]",
+    "- **Embedding Dimensions:** 3 (x, y, z)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/3.-token-embeddings.md"
+  ]
+}

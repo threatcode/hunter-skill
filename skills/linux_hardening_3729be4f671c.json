@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_3729be4f671c",
+  "category": "linux-hardening",
+  "title": "cgroup namespace",
+  "description": "# CGroup Namespace\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nA cgroup namespace is a Linux kernel feature that provides **isolation of cgroup hierarchies for processes running within a namespace**. Cgroups, short for **control groups**, are a kernel feature that allows organizing processes into hierarchical groups to manage and enforce **limits on system resources** like CPU, memory, and I/O.\n\nWhile cgroup namespaces are not a separate namespace type like th",
+  "payloads": [
+    "# CGroup Namespace",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "A cgroup namespace is a Linux kernel feature that provides **isolation of cgroup hierarchies for processes running within a namespace**. Cgroups, short for **control groups**, are a kernel feature that allows organizing processes into hierarchical groups to manage and enforce **limits on system resources** like CPU, memory, and I/O.",
+    "While cgroup namespaces are not a separate namespace type like the others we discussed earlier (PID, mount, network, etc.), they are related to the concept of namespace isolation. **Cgroup namespaces virtualize the view of the cgroup hierarchy**, so that processes running within a cgroup namespace have a different view of the hierarchy compared to processes running in the host or other namespaces.",
+    "### How it works:",
+    "1. When a new cgroup namespace is created, **it starts with a view of the cgroup hierarchy based on the cgroup of the creating process**. This means that processes running in the new cgroup namespace will only see a subset of the entire cgroup hierarchy, limited to the cgroup subtree rooted at the creating process's cgroup.",
+    "2. Processes within a cgroup namespace will **see their own cgroup as the root of the hierarchy**. This means that, from the perspective of processes inside the namespace, their own cgroup appears as the root, and they cannot see or access cgroups outside of their own subtree.",
+    "3. Cgroup namespaces do not directly provide isolation of resources; **they only provide isolation of the cgroup hierarchy view**. **Resource control and isolation are still enforced by the cgroup** subsystems (e.g., cpu, memory, etc.) themselves.",
+    "For more information about CGroups check:",
+    "{{#ref}}",
+    "../cgroups.md",
+    "{{#endref}}",
+    "## Lab:",
+    "### Create different Namespaces"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/namespaces/cgroup-namespace.md"
+  ]
+}

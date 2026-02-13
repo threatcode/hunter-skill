@@ -1,0 +1,27 @@
+{
+  "id": "scor_f086f860c97b",
+  "category": "SCOR",
+  "title": "YANG NETCONF RESTCONF",
+  "description": "\n### YANG (Yet Another Next Generation)\n\nYANG is a data modeling language used to model configuration and state data manipulated by the Network Configuration Protocol (NETCONF), the NETCONF Remote Procedure Call (RPC) protocols, and network management protocols such as RESTCONF. It provides a clear, hierarchical structure that can be easily understood both by humans and machines.\n\nKey Features of YANG:\n\n- **Hierarchical Data Models:** YANG models represent the structure of network configurations",
+  "payloads": [
+    "### YANG (Yet Another Next Generation)",
+    "YANG is a data modeling language used to model configuration and state data manipulated by the Network Configuration Protocol (NETCONF), the NETCONF Remote Procedure Call (RPC) protocols, and network management protocols such as RESTCONF. It provides a clear, hierarchical structure that can be easily understood both by humans and machines.",
+    "Key Features of YANG:",
+    "- **Hierarchical Data Models:** YANG models represent the structure of network configurations and state data in a tree-like hierarchy.",
+    "- **Modular:** YANG allows the creation of modular and reusable models.",
+    "- **Strong Typing:** YANG provides a rich set of built-in data types and supports the creation of new types.",
+    "- **Extensibility:** YANG models can be extended and augmented, allowing for customization and scalability.",
+    "- **Constraints and Validations:** YANG supports defining constraints and validations for data, ensuring consistency and correctness of configurations.",
+    "### NETCONF (Network Configuration Protocol)",
+    "NETCONF is a network management protocol developed and standardized by the IETF. It provides mechanisms to install, manipulate, and delete the configuration of network devices using a remote procedure call (RPC) approach.",
+    "Key Features of NETCONF:",
+    "- **Configuration Management:** NETCONF allows network administrators to query and modify the configuration of network devices.",
+    "- **Transactional Changes:** NETCONF supports making changes to the network configuration in a transactional manner, ensuring that a set of changes is applied atomically.",
+    "- **Error Handling:** NETCONF provides detailed error reporting, which is crucial for troubleshooting.",
+    "- **Extensible:** NETCONF can be extended to support additional capabilities."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/YANG_NETCONF_RESTCONF.md"
+  ]
+}

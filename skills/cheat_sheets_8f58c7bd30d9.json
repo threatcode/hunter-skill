@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_8f58c7bd30d9",
+  "category": "cheat-sheets",
+  "title": "ufw",
+  "description": "# UFW: Uncomplicated Firewall \u2014 Cheat Sheet\n\n## Installation\nIf you are using Ubuntu then UFW will be installed by default. If you are using Debian or a derivative, then you can install UFW by entering the following\n```\nroot@host:~# apt-get install ufw\n```\n\nUFW is not available in CentOS, and although you can install it from source, that is outside the scope of this tutorial.\n\n## Checking status\nWhen you check the status, UFW will either tell you that it is inactive,\n\n```\nroot@host:~# ufw status",
+  "payloads": [
+    "# UFW: Uncomplicated Firewall \u2014 Cheat Sheet",
+    "## Installation",
+    "If you are using Ubuntu then UFW will be installed by default. If you are using Debian or a derivative, then you can install UFW by entering the following",
+    "root@host:~# apt-get install ufw",
+    "UFW is not available in CentOS, and although you can install it from source, that is outside the scope of this tutorial.",
+    "## Checking status",
+    "When you check the status, UFW will either tell you that it is inactive,",
+    "root@host:~# ufw status",
+    "Status: inactive",
+    "or it will tell you it is active and list the firewall rules.",
+    "root@host:~# ufw status",
+    "Status: active",
+    "To                         Action      From",
+    "--                         ------      ----",
+    "22/tcp                     ALLOW       Anywhere"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/firewall/ufw.md"
+  ]
+}

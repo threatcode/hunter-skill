@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_61cd5d049867",
+  "category": "generic-methodologies-and-resources",
+  "title": "svg font glyph analysis and web drm deobfuscation",
+  "description": "# SVG/Font Glyph Analysis & Web DRM Deobfuscation (Raster Hashing + SSIM)\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nThis page documents practical techniques to recover text from web readers that ship positioned glyph runs plus per-request vector glyph definitions (SVG paths), and that randomize glyph IDs per request to prevent scraping. The core idea is to ignore request-scoped numeric glyph IDs and fingerprint the visual shapes via raster hashing, then map shapes to characters with",
+  "payloads": [
+    "# SVG/Font Glyph Analysis & Web DRM Deobfuscation (Raster Hashing + SSIM)",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "This page documents practical techniques to recover text from web readers that ship positioned glyph runs plus per-request vector glyph definitions (SVG paths), and that randomize glyph IDs per request to prevent scraping. The core idea is to ignore request-scoped numeric glyph IDs and fingerprint the visual shapes via raster hashing, then map shapes to characters with SSIM against a reference font atlas. The workflow generalizes beyond Kindle Cloud Reader to any viewer with similar protections.",
+    "Warning: Only use these techniques to back up content you legitimately own and in compliance with applicable laws and terms.",
+    "## Acquisition (example: Kindle Cloud Reader)",
+    "Endpoint observed:",
+    "- [https://read.amazon.com/renderer/render](https://read.amazon.com/renderer/render)",
+    "Required materials per session:",
+    "- Browser session cookies (normal Amazon login)",
+    "- Rendering token from a startReading API call",
+    "- Additional ADP session token used by the renderer",
+    "Behavior:",
+    "- Each request, when sent with browser-equivalent headers and cookies, returns a TAR archive limited to 5 pages.",
+    "- For a long book you will need many batches; each batch uses a different randomized mapping of glyph IDs.",
+    "Typical TAR contents:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/svg-font-glyph-analysis-and-web-drm-deobfuscation.md"
+  ]
+}

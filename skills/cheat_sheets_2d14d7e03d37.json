@@ -1,0 +1,17 @@
+{
+  "id": "cheat_sheets_2d14d7e03d37",
+  "category": "cheat-sheets",
+  "title": "awk",
+  "description": "# awk cheatsheets\nThe following are a collection of cheatsheets of the awk Linux Command:\n- https://www.shortcutfoo.com/app/dojos/awk/cheatsheet\n- https://catonmat.net/ftp/awk.cheat.sheet.pdf\n- https://shinnok.com/cheatsheets/programming-scripting/awk/awk_cheatsheet.pdf\n",
+  "payloads": [
+    "# awk cheatsheets",
+    "The following are a collection of cheatsheets of the awk Linux Command:",
+    "- https://www.shortcutfoo.com/app/dojos/awk/cheatsheet",
+    "- https://catonmat.net/ftp/awk.cheat.sheet.pdf",
+    "- https://shinnok.com/cheatsheets/programming-scripting/awk/awk_cheatsheet.pdf"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/scripting/awk.md"
+  ]
+}

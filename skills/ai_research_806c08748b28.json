@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_806c08748b28",
+  "category": "ai-research",
+  "title": "ml ai datasets",
+  "description": "# Datasets for AI / ML Research\n\n1. **UCI Machine Learning Repository**: A collection of databases, domain theories, and data generators widely used by the machine learning community.\n   Website: [UCI ML Repository](https://archive.ics.uci.edu/ml/index.php)\n   \n2. **Kaggle Datasets**: Offers a wide variety of datasets in different domains including economics, biology, computer vision, and natural language processing.\n   Website: [Kaggle](https://www.kaggle.com/datasets)\n   \n3. **AWS Public Datas",
+  "payloads": [
+    "# Datasets for AI / ML Research",
+    "1. **UCI Machine Learning Repository**: A collection of databases, domain theories, and data generators widely used by the machine learning community.",
+    "Website: [UCI ML Repository](https://archive.ics.uci.edu/ml/index.php)",
+    "2. **Kaggle Datasets**: Offers a wide variety of datasets in different domains including economics, biology, computer vision, and natural language processing.",
+    "Website: [Kaggle](https://www.kaggle.com/datasets)",
+    "3. **AWS Public Datasets**: Amazon Web Services offers a variety of public datasets that anyone can access.",
+    "Website: [AWS Public Datasets](https://registry.opendata.aws/)",
+    "4. **Google Dataset Search**: A tool that enables the discovery of datasets stored across the web.",
+    "Website: [Google Dataset Search](https://datasetsearch.research.google.com/)",
+    "5. **Microsoft Research Open Data**: A collection of free datasets from Microsoft Research to advance state-of-the-art research in areas such as natural language processing, computer vision, and domain-specific sciences.",
+    "Website: [Microsoft Research Open Data](https://msropendata.com/)",
+    "6. **OpenML**: An online platform for collaborative machine learning - easily share data, models, and experiments.",
+    "Website: [OpenML](https://www.openml.org/)",
+    "7. **Data.gov**: The home of the U.S. Government\u2019s open data, providing data, tools, and resources.",
+    "Website: [Data.gov](https://www.data.gov/)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ML-Fundamentals/ml_ai_datasets.md"
+  ]
+}

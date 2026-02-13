@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_51e50f0e29f7",
+  "category": "generic-methodologies-and-resources",
+  "title": "ios backup forensics",
+  "description": "# iOS Backup Forensics (Messaging\u2011centric triage)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nThis page describes practical steps to reconstruct and analyze iOS backups for signs of 0\u2011click exploit delivery via messaging app attachments. It focuses on turning Apple\u2019s hashed backup layout into human\u2011readable paths, then enumerating and scanning attachments across common apps.\n\nGoals:\n- Rebuild readable paths from Manifest.db\n- Enumerate messaging databases (iMessage, WhatsApp, Signal, Tel",
+  "payloads": [
+    "# iOS Backup Forensics (Messaging\u2011centric triage)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "This page describes practical steps to reconstruct and analyze iOS backups for signs of 0\u2011click exploit delivery via messaging app attachments. It focuses on turning Apple\u2019s hashed backup layout into human\u2011readable paths, then enumerating and scanning attachments across common apps.",
+    "Goals:",
+    "- Rebuild readable paths from Manifest.db",
+    "- Enumerate messaging databases (iMessage, WhatsApp, Signal, Telegram, Viber)",
+    "- Resolve attachment paths, extract embedded objects (PDF/Images/Fonts), and feed them to structural detectors",
+    "## Reconstructing an iOS backup",
+    "Backups stored under MobileSync use hashed filenames that are not human\u2011readable. The Manifest.db SQLite database maps each stored object to its logical path.",
+    "High\u2011level procedure:",
+    "1) Open Manifest.db and read the file records (domain, relativePath, flags, fileID/hash)",
+    "2) Recreate the original folder hierarchy based on domain + relativePath",
+    "3) Copy or hardlink each stored object to its reconstructed path",
+    "Example workflow with a tool that implements this end\u2011to\u2011end (ElegantBouncer):",
+    "```bash"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/ios-backup-forensics.md"
+  ]
+}

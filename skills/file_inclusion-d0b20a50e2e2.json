@@ -1,0 +1,27 @@
+{
+  "id": "file_inclusion-d0b20a50e2e2",
+  "category": "File Inclusion",
+  "title": "Wrappers",
+  "description": "# Inclusion Using Wrappers\n\nA wrapper in the context of file inclusion vulnerabilities refers to the protocol or method used to access or include a file. Wrappers are often used in PHP or other server-side languages to extend how file inclusion functions, enabling the use of protocols like HTTP, FTP, and others in addition to the local filesystem.\n\n## Summary\n\n- [Wrapper php://filter](#wrapper-phpfilter)\n- [Wrapper data://](#wrapper-data)\n- [Wrapper expect://](#wrapper-expect)\n- [Wrapper input:/",
+  "payloads": [
+    "# Inclusion Using Wrappers",
+    "A wrapper in the context of file inclusion vulnerabilities refers to the protocol or method used to access or include a file. Wrappers are often used in PHP or other server-side languages to extend how file inclusion functions, enabling the use of protocols like HTTP, FTP, and others in addition to the local filesystem.",
+    "## Summary",
+    "- [Wrapper php://filter](#wrapper-phpfilter)",
+    "- [Wrapper data://](#wrapper-data)",
+    "- [Wrapper expect://](#wrapper-expect)",
+    "- [Wrapper input://](#wrapper-input)",
+    "- [Wrapper zip://](#wrapper-zip)",
+    "- [Wrapper phar://](#wrapper-phar)",
+    "- [PHAR Archive Structure](#phar-archive-structure)",
+    "- [PHAR Deserialization](#phar-deserialization)",
+    "- [Wrapper convert.iconv:// and dechunk://](#wrapper-converticonv-and-dechunk)",
+    "- [Leak file content from error-based oracle](#leak-file-content-from-error-based-oracle)",
+    "- [Leak file content inside a custom format output](#leak-file-content-inside-a-custom-format-output)",
+    "- [References](#references)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/File Inclusion/Wrappers.md"
+  ]
+}

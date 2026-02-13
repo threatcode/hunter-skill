@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_1ca6a46775d6",
+  "category": "macos-hardening",
+  "title": "macos amfi applemobilefileintegrity",
+  "description": "# macOS - AMFI - AppleMobileFileIntegrity\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## AppleMobileFileIntegrity.kext and amfid\n\nIt focuses on enforcing the integrity of the code running on the system providing the logic behind XNU's code signature verification. It's also able to check entitlements and handle other sensitive tasks such as allowing debugging or obtaining task ports.\n\nMoreover, for some operations, the kext prefers to contact the user space running daemon `/usr/libexec",
+  "payloads": [
+    "# macOS - AMFI - AppleMobileFileIntegrity",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## AppleMobileFileIntegrity.kext and amfid",
+    "It focuses on enforcing the integrity of the code running on the system providing the logic behind XNU's code signature verification. It's also able to check entitlements and handle other sensitive tasks such as allowing debugging or obtaining task ports.",
+    "Moreover, for some operations, the kext prefers to contact the user space running daemon `/usr/libexec/amfid`. This trust relationship has been abused in several jailbreaks.",
+    "AMFI uses **MACF** policies and it registers its hooks the moment it's started. Also, preventing its loading or unloading it could trigger a kernel panic. However, there are some boot arguments that allow to debilitate AMFI:",
+    "- `amfi_unrestricted_task_for_pid`: Allow task_for_pid to be allowed without required entitlements",
+    "- `amfi_allow_any_signature`: Allow any code signature",
+    "- `cs_enforcement_disable`: System-wide argument used to disable code signing enforcement",
+    "- `amfi_prevent_old_entitled_platform_binaries`: Void platform binaries with entitlements",
+    "- `amfi_get_out_of_my_way`: Disables amfi completely",
+    "These are some of the MACF policies it registers:",
+    "- **`cred_check_label_update_execve:`** Label update will be performed and return 1",
+    "- **`cred_label_associate`**: Update AMFI's mac label slot with label",
+    "- **`cred_label_destroy`**: Remove AMFI\u2019s mac label slot"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-amfi-applemobilefileintegrity.md"
+  ]
+}

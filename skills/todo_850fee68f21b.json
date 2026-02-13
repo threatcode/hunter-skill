@@ -1,0 +1,27 @@
+{
+  "id": "todo_850fee68f21b",
+  "category": "todo",
+  "title": "rust basics",
+  "description": "# Rust Basics\n\n{{#include ../banners/hacktricks-training.md}}\n\n### Generic Types\n\nCreate a struct where 1 of their values could be any type\n\n```rust\nstruct Wrapper<T> {\n    value: T,\n}\n\nimpl<T> Wrapper<T> {\n    pub fn new(value: T) -> Self {\n        Wrapper { value }\n    }\n}\n\nWrapper::new(42).value\nWrapper::new(\"Foo\").value, \"Foo\"\n```\n\n### Option, Some & None\n\nThe Option type means that the value might by of type Some (there is something) or None:\n\n```rust\npub enum Option<T> {\n    None,\n    Some",
+  "payloads": [
+    "# Rust Basics",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "### Generic Types",
+    "Create a struct where 1 of their values could be any type",
+    "```rust",
+    "struct Wrapper<T> {",
+    "value: T,",
+    "impl<T> Wrapper<T> {",
+    "pub fn new(value: T) -> Self {",
+    "Wrapper { value }",
+    "Wrapper::new(42).value",
+    "Wrapper::new(\"Foo\").value, \"Foo\"",
+    "### Option, Some & None",
+    "The Option type means that the value might by of type Some (there is something) or None:",
+    "```rust"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/rust-basics.md"
+  ]
+}

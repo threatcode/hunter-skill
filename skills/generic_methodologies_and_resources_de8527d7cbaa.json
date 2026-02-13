@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_de8527d7cbaa",
+  "category": "generic-methodologies-and-resources",
+  "title": "file data carving recovery tools",
+  "description": "# File/Data Carving & Recovery Tools\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Carving & Recovery tools\n\nMore tools in [https://github.com/Claudio-C/awesome-datarecovery](https://github.com/Claudio-C/awesome-datarecovery)\n\n### Autopsy\n\nThe most common tool used in forensics to extract files from images is [**Autopsy**](https://www.autopsy.com/download/). Download it, install it and make it ingest the file to find \"hidden\" files. Note that Autopsy is built to support disk images a",
+  "payloads": [
+    "# File/Data Carving & Recovery Tools",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Carving & Recovery tools",
+    "More tools in [https://github.com/Claudio-C/awesome-datarecovery](https://github.com/Claudio-C/awesome-datarecovery)",
+    "### Autopsy",
+    "The most common tool used in forensics to extract files from images is [**Autopsy**](https://www.autopsy.com/download/). Download it, install it and make it ingest the file to find \"hidden\" files. Note that Autopsy is built to support disk images and other kinds of images, but not simple files.",
+    "> **2024-2025 update** \u2013 Version **4.21** (released February 2025) added a rebuilt **carving module based on SleuthKit v4.13** that is noticeably quicker when dealing with multi-terabyte images and supports parallel extraction on multi-core systems.\u00b9  A small CLI wrapper (`autopsycli ingest <case> <image>`) was also introduced, making it possible to script carving inside CI/CD or large-scale lab environments.",
+    "```bash",
+    "# Create a case and ingest an evidence image from the CLI (Autopsy \u22654.21)",
+    "autopsycli case --create MyCase --base /cases",
+    "# ingest with the default ingest profile (includes data-carve module)",
+    "autopsycli ingest MyCase /evidence/disk01.E01 --threads 8",
+    "### Binwalk <a href=\"#binwalk\" id=\"binwalk\"></a>",
+    "**Binwalk** is a tool for analyzing binary files to find embedded content. It's installable via `apt` and its source is on [GitHub](https://github.com/ReFirmLabs/binwalk).",
+    "**Useful commands**:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/partitions-file-systems-carving/file-data-carving-recovery-tools.md"
+  ]
+}

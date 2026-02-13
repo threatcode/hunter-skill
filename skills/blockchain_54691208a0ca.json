@@ -1,0 +1,27 @@
+{
+  "id": "blockchain_54691208a0ca",
+  "category": "blockchain",
+  "title": "mutation testing with slither",
+  "description": "# Mutation Testing for Solidity with Slither (slither-mutate)\n\n{{#include ../../banners/hacktricks-training.md}}\n\nMutation testing \"tests your tests\" by systematically introducing small changes (mutants) into your Solidity code and re-running your test suite. If a test fails, the mutant is killed. If the tests still pass, the mutant survives, revealing a blind spot in your test suite that line/branch coverage cannot detect.\n\nKey idea: Coverage shows code was executed; mutation testing shows whet",
+  "payloads": [
+    "# Mutation Testing for Solidity with Slither (slither-mutate)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Mutation testing \"tests your tests\" by systematically introducing small changes (mutants) into your Solidity code and re-running your test suite. If a test fails, the mutant is killed. If the tests still pass, the mutant survives, revealing a blind spot in your test suite that line/branch coverage cannot detect.",
+    "Key idea: Coverage shows code was executed; mutation testing shows whether behavior is actually asserted.",
+    "## Why coverage can deceive",
+    "Consider this simple threshold check:",
+    "```solidity",
+    "function verifyMinimumDeposit(uint256 deposit) public returns (bool) {",
+    "if (deposit >= 1 ether) {",
+    "return true;",
+    "} else {",
+    "return false;",
+    "Unit tests that only check a value below and a value above the threshold can reach 100% line/branch coverage while failing to assert the equality boundary (==). A refactor to `deposit >= 2 ether` would still pass such tests, silently breaking protocol logic.",
+    "Mutation testing exposes this gap by mutating the condition and verifying your tests fail.",
+    "## Common Solidity mutation operators"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/blockchain/smart-contract-security/mutation-testing-with-slither.md"
+  ]
+}

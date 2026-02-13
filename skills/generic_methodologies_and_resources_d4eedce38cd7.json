@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_d4eedce38cd7",
+  "category": "generic-methodologies-and-resources",
+  "title": "web requests",
+  "description": "# Web Requests\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Python Requests\n\n```python\nimport requests\n\nurl = \"http://example.com:80/some/path.php\"\nparams = {\"p1\":\"value1\", \"p2\":\"value2\"}\nheaders = {\"User-Agent\": \"fake User Agent\", \"Fake header\": \"True value\"}\ncookies = {\"PHPSESSID\": \"1234567890abcdef\", \"FakeCookie123\": \"456\"}\nproxies = {'http':'http://127.0.0.1:8080','https':'http://127.0.0.1:8080'}\n\n#Regular Get requests sending parameters (params)\ngr = requests.get(url, params=para",
+  "payloads": [
+    "# Web Requests",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Python Requests",
+    "```python",
+    "import requests",
+    "url = \"http://example.com:80/some/path.php\"",
+    "params = {\"p1\":\"value1\", \"p2\":\"value2\"}",
+    "headers = {\"User-Agent\": \"fake User Agent\", \"Fake header\": \"True value\"}",
+    "cookies = {\"PHPSESSID\": \"1234567890abcdef\", \"FakeCookie123\": \"456\"}",
+    "proxies = {'http':'http://127.0.0.1:8080','https':'http://127.0.0.1:8080'}",
+    "#Regular Get requests sending parameters (params)",
+    "gr = requests.get(url, params=params, headers=headers, cookies=cookies, verify=False, allow_redirects=True)",
+    "code = gr.status_code",
+    "ret_headers = gr.headers",
+    "body_byte = gr.content"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/web-requests.md"
+  ]
+}

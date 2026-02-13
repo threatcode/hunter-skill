@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_52eeb28d5d31",
+  "category": "linux-hardening",
+  "title": "ipc namespace",
+  "description": "# IPC Namespace\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nAn IPC (Inter-Process Communication) namespace is a Linux kernel feature that provides **isolation** of System V IPC objects, such as message queues, shared memory segments, and semaphores. This isolation ensures that processes in **different IPC namespaces cannot directly access or modify each other's IPC objects**, providing an additional layer of security and privacy between process groups.\n\n### Ho",
+  "payloads": [
+    "# IPC Namespace",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "An IPC (Inter-Process Communication) namespace is a Linux kernel feature that provides **isolation** of System V IPC objects, such as message queues, shared memory segments, and semaphores. This isolation ensures that processes in **different IPC namespaces cannot directly access or modify each other's IPC objects**, providing an additional layer of security and privacy between process groups.",
+    "### How it works:",
+    "1. When a new IPC namespace is created, it starts with a **completely isolated set of System V IPC objects**. This means that processes running in the new IPC namespace cannot access or interfere with the IPC objects in other namespaces or the host system by default.",
+    "2. IPC objects created within a namespace are visible and **accessible only to processes within that namespace**. Each IPC object is identified by a unique key within its namespace. Although the key may be identical in different namespaces, the objects themselves are isolated and cannot be accessed across namespaces.",
+    "3. Processes can move between namespaces using the `setns()` system call or create new namespaces using the `unshare()` or `clone()` system calls with the `CLONE_NEWIPC` flag. When a process moves to a new namespace or creates one, it will start using the IPC objects associated with that namespace.",
+    "## Lab:",
+    "### Create different Namespaces",
+    "#### CLI",
+    "```bash",
+    "sudo unshare -i [--mount-proc] /bin/bash",
+    "By mounting a new instance of the `/proc` filesystem if you use the param `--mount-proc`, you ensure that the new mount namespace has an **accurate and isolated view of the process information specific to that namespace**.",
+    "<details>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/namespaces/ipc-namespace.md"
+  ]
+}

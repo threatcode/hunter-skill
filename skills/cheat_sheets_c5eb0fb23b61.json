@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_c5eb0fb23b61",
+  "category": "cheat-sheets",
+  "title": "bash",
+  "description": "# Bash Scripting for Cybersecurity\n\nBash (Bourne Again Shell) is a powerful scripting language used extensively in Linux/Unix systems for automation and security tasks.\n\n## \ud83d\udccb Table of Contents\n- [Basic Syntax](#basic-syntax)\n- [Variables](#variables)\n- [Input/Output](#inputoutput)\n- [Conditionals](#conditionals)\n- [Loops](#loops)\n- [Functions](#functions)\n- [File Operations](#file-operations)\n- [String Manipulation](#string-manipulation)\n- [Arrays](#arrays)\n- [Security Scripts](#security-scripts",
+  "payloads": [
+    "# Bash Scripting for Cybersecurity",
+    "Bash (Bourne Again Shell) is a powerful scripting language used extensively in Linux/Unix systems for automation and security tasks.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Syntax](#basic-syntax)",
+    "- [Variables](#variables)",
+    "- [Input/Output](#inputoutput)",
+    "- [Conditionals](#conditionals)",
+    "- [Loops](#loops)",
+    "- [Functions](#functions)",
+    "- [File Operations](#file-operations)",
+    "- [String Manipulation](#string-manipulation)",
+    "- [Arrays](#arrays)",
+    "- [Security Scripts](#security-scripts)",
+    "## Basic Syntax",
+    "### Shebang and Execution"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/scripting/bash.md"
+  ]
+}

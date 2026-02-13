@@ -1,0 +1,27 @@
+{
+  "id": "networking_076973cf91ab",
+  "category": "networking",
+  "title": "tools",
+  "description": "# Networking Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [Acunetix Vulnerability Scanner Now With Network Security Scans](http://feedproxy.google.com/~r/PentestTools/~3/dHIr1QsVQYw/acunetix-vulnerability-scanner-now-with.html)\n- [Airshare - Cross-platform Content Sharing In A Local Network](http://feedproxy.google.com/~r/PentestTools/~3/rIOrri5vOIg/airshare-cross-platform-content-sharing.html)\n- [Astsu - A Network Scanner Tool](http://feedproxy.google.com/~r/PentestTools/~3",
+  "payloads": [
+    "# Networking Tools",
+    "This is a curated list of tools for this category.",
+    "- [Acunetix Vulnerability Scanner Now With Network Security Scans](http://feedproxy.google.com/~r/PentestTools/~3/dHIr1QsVQYw/acunetix-vulnerability-scanner-now-with.html)",
+    "- [Airshare - Cross-platform Content Sharing In A Local Network](http://feedproxy.google.com/~r/PentestTools/~3/rIOrri5vOIg/airshare-cross-platform-content-sharing.html)",
+    "- [Astsu - A Network Scanner Tool](http://feedproxy.google.com/~r/PentestTools/~3/UpyJkEUTzUA/astsu-network-scanner-tool.html)",
+    "- [Attack-Surface-Framework - Tool To Discover External And Internal Network Attack Surface](http://feedproxy.google.com/~r/PentestTools/~3/ItlxzRQG16Q/attack-surface-framework-tool-to.html)",
+    "- [Batea - AI-based, Context-Driven Network Device Ranking](http://feedproxy.google.com/~r/PentestTools/~3/OqJ3S2Je1T4/batea-ai-based-context-driven-network.html)",
+    "- [Betwixt - Web Debugging Proxy Based On Chrome DevTools Network Panel](http://feedproxy.google.com/~r/PentestTools/~3/l5D0QslTtdA/betwixt-web-debugging-proxy-based-on.html)",
+    "- [BlueGhost - A Network Tool Designed To Assist Blue Teams In Banning Attackers From Linux Servers](http://feedproxy.google.com/~r/PentestTools/~3/pFM6w1Spwtc/blueghost-network-tool-designed-to.html)",
+    "- [BruteShark - Network Analysis Tool](http://www.kitploit.com/2022/03/bruteshark-network-analysis-tool.html)",
+    "- [CANalyse - A Vehicle Network Analysis And Attack Tool](http://feedproxy.google.com/~r/PentestTools/~3/UCIX_QJVv2U/canalyse-vehicle-network-analysis-and.html)",
+    "- [Capsulecorp-Pentest - Vagrant VirtualBox Environment For Conducting An Internal Network Penetration Test](http://feedproxy.google.com/~r/PentestTools/~3/6FP53ToUZBI/capsulecorp-pentest-vagrant-virtualbox.html)",
+    "- [Caronte - A Tool To Analyze The Network Flow During Attack/Defence Capture The Flag Competitions](http://feedproxy.google.com/~r/PentestTools/~3/nglFKZy7Jk8/caronte-tool-to-analyze-network-flow.html)",
+    "- [Cerbrutus - Network Brute Force Tool, Written In Python](http://feedproxy.google.com/~r/PentestTools/~3/DNMByiC7CXE/cerbrutus-network-brute-force-tool.html)",
+    "- [Cilium - eBPF-based Networking, Security, And Observability](http://feedproxy.google.com/~r/PentestTools/~3/UY91VgCoe8Q/cilium-ebpf-based-networking-security.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/networking/tools.md"
+  ]
+}

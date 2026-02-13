@@ -1,0 +1,27 @@
+{
+  "id": "temp_7ca6b45289cd",
+  "category": "temp",
+  "title": "questions to ask your provider",
+  "description": "# Security Assessment in the Cloud: Key Considerations and Questions for Your Cloud Service Provider\n\n## Table of Contents\n1. [Key Considerations for Cloud Security Assessment](#key-considerations-for-cloud-security-assessment)\n2. [Questions to Ask Your Cloud Service Provider](#questions-to-ask-your-cloud-service-provider)\n   - [General Security Practices](#general-security-practices)\n   - [Data Security and Privacy](#data-security-and-privacy)\n   - [Identity and Access Management](#identity-and",
+  "payloads": [
+    "# Security Assessment in the Cloud: Key Considerations and Questions for Your Cloud Service Provider",
+    "## Table of Contents",
+    "1. [Key Considerations for Cloud Security Assessment](#key-considerations-for-cloud-security-assessment)",
+    "2. [Questions to Ask Your Cloud Service Provider](#questions-to-ask-your-cloud-service-provider)",
+    "- [General Security Practices](#general-security-practices)",
+    "- [Data Security and Privacy](#data-security-and-privacy)",
+    "- [Identity and Access Management](#identity-and-access-management)",
+    "- [Compliance and Regulatory Adherence](#compliance-and-regulatory-adherence)",
+    "- [Incident Response and Recovery](#incident-response-and-recovery)",
+    "- [Network and Application Security](#network-and-application-security)",
+    "- [Monitoring and Reporting](#monitoring-and-reporting)",
+    "- [Supply Chain Security](#supply-chain-security)",
+    "- [Zero Trust Architecture](#zero-trust-architecture)",
+    "- [Container and Kubernetes Security](#container-and-kubernetes-security)",
+    "- [Serverless Security](#serverless-security)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Cloud_Attacks/cloud_resources/questions_to_ask_your_provider.md"
+  ]
+}

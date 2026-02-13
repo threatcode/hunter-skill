@@ -1,0 +1,27 @@
+{
+  "id": "docs_b77ed881e5fa",
+  "category": "docs",
+  "title": "PRE COMMIT",
+  "description": "# Lychee Pre-commit Hooks\n\nThis repository provides three pre-commit hook options for lychee link checking:\n\n## Quick Start\n\nAdd this to your `.pre-commit-config.yaml`:\n\n```yaml\nrepos:\n  - repo: https://github.com/lycheeverse/lychee\n    rev: lychee-v0.20.1  # Use latest lychee-v* tag\n    hooks:\n      - id: lychee  # Auto-installs lychee\n```\n\n## Hook Options\n\n### 1. `lychee` (Recommended)\n\n- **Auto-installs** lychee using cargo-binstall (fast) or cargo install (fallback)\n- **Best user experience*",
+  "payloads": [
+    "# Lychee Pre-commit Hooks",
+    "This repository provides three pre-commit hook options for lychee link checking:",
+    "## Quick Start",
+    "Add this to your `.pre-commit-config.yaml`:",
+    "```yaml",
+    "repos:",
+    "- repo: https://github.com/lycheeverse/lychee",
+    "rev: lychee-v0.20.1  # Use latest lychee-v* tag",
+    "hooks:",
+    "- id: lychee  # Auto-installs lychee",
+    "## Hook Options",
+    "### 1. `lychee` (Recommended)",
+    "- **Auto-installs** lychee using cargo-binstall (fast) or cargo install (fallback)",
+    "- **Best user experience** - no manual setup required",
+    "- **Fast** - uses pre-built binaries when available"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/docs/PRE_COMMIT.md"
+  ]
+}

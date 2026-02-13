@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_af1c42934b82",
+  "category": "windows-hardening",
+  "title": "kerberoast",
+  "description": "# Kerberoast\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Kerberoast\n\nKerberoasting focuses on the acquisition of TGS tickets, specifically those related to services operating under user accounts in Active Directory (AD), excluding computer accounts. The encryption of these tickets utilizes keys that originate from user passwords, allowing for offline credential cracking. The use of a user account as a service is indicated by a non-empty ServicePrincipalName (SPN) property.\n\nAny authen",
+  "payloads": [
+    "# Kerberoast",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Kerberoast",
+    "Kerberoasting focuses on the acquisition of TGS tickets, specifically those related to services operating under user accounts in Active Directory (AD), excluding computer accounts. The encryption of these tickets utilizes keys that originate from user passwords, allowing for offline credential cracking. The use of a user account as a service is indicated by a non-empty ServicePrincipalName (SPN) property.",
+    "Any authenticated domain user can request TGS tickets, so no special privileges are needed.",
+    "### Key Points",
+    "- Targets TGS tickets for services that run under user accounts (i.e., accounts with SPN set; not computer accounts).",
+    "- Tickets are encrypted with a key derived from the service account\u2019s password and can be cracked offline.",
+    "- No elevated privileges required; any authenticated account can request TGS tickets.",
+    "> [!WARNING]",
+    "> Most public tools prefer requesting RC4-HMAC (etype 23) service tickets because they\u2019re faster to crack than AES. RC4 TGS hashes start with `$krb5tgs$23$*`, AES128 with `$krb5tgs$17$*`, and AES256 with `$krb5tgs$18$*`. However, many environments are moving to AES-only. Do not assume only RC4 is relevant.",
+    "> Also, avoid \u201cspray-and-pray\u201d roasting. Rubeus\u2019 default kerberoast can query and request tickets for all SPNs and is noisy. Enumerate and target interesting principals first.",
+    "### Service account secrets & Kerberos crypto cost",
+    "Many services still run under user accounts with hand-managed passwords. The KDC encrypts service tickets with keys derived from those passwords and hands the ciphertext to any authenticated principal, so kerberoasting gives unlimited offline guesses without lockouts or DC telemetry. The encryption mode determines the cracking budget:",
+    "| Mode | Key derivation | Encryption type | Approx. RTX 5090 throughput* | Notes |"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/kerberoast.md"
+  ]
+}

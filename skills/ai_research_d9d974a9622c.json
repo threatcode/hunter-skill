@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_d9d974a9622c",
+  "category": "ai-research",
+  "title": "nltk",
+  "description": "# Lab Guide: Natural Language Processing with NLTK/Spacy\n\n## Objective\nTo introduce students to the fundamental concepts of Natural Language Processing using NLTK and Spacy libraries.\n\n## Prerequisites\n- Basic understanding of Python programming.\n- Knowledge of natural language processing basics.\n- Python and necessary libraries installed: NLTK and Spacy.\n\n### Setting Up the Environment:\n\nInstalling NLTK and Spacy:\n```\npip install nltk spacy\n```\n\n\n## Steps\n\n**Step 1**: Importing Necessary Librar",
+  "payloads": [
+    "# Lab Guide: Natural Language Processing with NLTK/Spacy",
+    "## Objective",
+    "To introduce students to the fundamental concepts of Natural Language Processing using NLTK and Spacy libraries.",
+    "## Prerequisites",
+    "- Basic understanding of Python programming.",
+    "- Knowledge of natural language processing basics.",
+    "- Python and necessary libraries installed: NLTK and Spacy.",
+    "### Setting Up the Environment:",
+    "Installing NLTK and Spacy:",
+    "pip install nltk spacy",
+    "## Steps",
+    "**Step 1**: Importing Necessary Libraries:",
+    "```python",
+    "import nltk",
+    "import spacy"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/labs/nltk.md"
+  ]
+}

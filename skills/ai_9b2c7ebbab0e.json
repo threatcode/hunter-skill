@@ -1,0 +1,27 @@
+{
+  "id": "ai_9b2c7ebbab0e",
+  "category": "AI",
+  "title": "AI MCP Servers",
+  "description": "# MCP Servers\n\n{{#include ../banners/hacktricks-training.md}}\n\n\n## What is MPC - Model Context Protocol\n\nThe [**Model Context Protocol (MCP)**](https://modelcontextprotocol.io/introduction) is an open standard that allows AI models (LLMs) to connect with external tools and data sources in a plug-and-play fashion. This enables complex workflows: for example, an IDE or chatbot can *dynamically call functions* on MCP servers as if the model naturally \"knew\" how to use them. Under the hood, MCP uses",
+  "payloads": [
+    "# MCP Servers",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## What is MPC - Model Context Protocol",
+    "The [**Model Context Protocol (MCP)**](https://modelcontextprotocol.io/introduction) is an open standard that allows AI models (LLMs) to connect with external tools and data sources in a plug-and-play fashion. This enables complex workflows: for example, an IDE or chatbot can *dynamically call functions* on MCP servers as if the model naturally \"knew\" how to use them. Under the hood, MCP uses a client-server architecture with JSON-based requests over various transports (HTTP, WebSockets, stdio, etc.).",
+    "A **host application** (e.g. Claude Desktop, Cursor IDE) runs an MCP client that connects to one or more **MCP servers**. Each server exposes a set of *tools* (functions, resources, or actions) described in a standardized schema. When the host connects, it asks the server for its available tools via a `tools/list` request; the returned tool descriptions are then inserted into the model's context so the AI knows what functions exist and how to call them.",
+    "## Basic MCP Server",
+    "We'll use Python and the official `mcp` SDK for this example. First, install the SDK and CLI:",
+    "```bash",
+    "pip3 install mcp \"mcp[cli]\"",
+    "mcp version      # verify installation`",
+    "Now, create **`calculator.py`** with a basic addition tool:",
+    "```python",
+    "from mcp.server.fastmcp import FastMCP",
+    "mcp = FastMCP(\"Calculator Server\")  # Initialize MCP server with a name",
+    "@mcp.tool() # Expose this function as an MCP tool"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-MCP-Servers.md"
+  ]
+}

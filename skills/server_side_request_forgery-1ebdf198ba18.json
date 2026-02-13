@@ -1,0 +1,27 @@
+{
+  "id": "server_side_request_forgery-1ebdf198ba18",
+  "category": "Server Side Request Forgery",
+  "title": "SSRF Advanced Exploitation",
+  "description": "# SSRF Advanced Exploitation\n\n> Some services (e.g., Redis, Elasticsearch) allow unauthenticated data writes or command execution when accessed directly. An attacker could exploit SSRF to interact with these services, injecting malicious payloads like web shells or manipulating application state.\n\n## Summary\n\n* [DNS AXFR](#dns-axfr)\n* [FastCGI](#fastcgi)\n* [Memcached](#memcached)\n* [MySQL](#memcached)\n* [Redis](#redis)\n* [SMTP](#smtp)\n* [WSGI](#wsgi)\n* [Zabbix](#zabbix)\n* [References](#reference",
+  "payloads": [
+    "# SSRF Advanced Exploitation",
+    "> Some services (e.g., Redis, Elasticsearch) allow unauthenticated data writes or command execution when accessed directly. An attacker could exploit SSRF to interact with these services, injecting malicious payloads like web shells or manipulating application state.",
+    "## Summary",
+    "* [DNS AXFR](#dns-axfr)",
+    "* [FastCGI](#fastcgi)",
+    "* [Memcached](#memcached)",
+    "* [MySQL](#memcached)",
+    "* [Redis](#redis)",
+    "* [SMTP](#smtp)",
+    "* [WSGI](#wsgi)",
+    "* [Zabbix](#zabbix)",
+    "* [References](#references)",
+    "## DNS AXFR",
+    "Query an internal DNS resolver to trigger a full zone transfer (**AXFR**) and exfiltrate a list of subdomains.",
+    "from urllib.parse import quote"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Server Side Request Forgery/SSRF-Advanced-Exploitation.md"
+  ]
+}

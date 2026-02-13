@@ -1,0 +1,27 @@
+{
+  "id": "temp_99888df5cbbd",
+  "category": "temp",
+  "title": "sqli evasion",
+  "description": "# SQL Injection (SQLi) Evasion Techniques\n\n### 1. **Obfuscation Techniques**\n\n#### **1.1 Comment Insertion**\n\n- **Definition:** Use SQL comments to break up or hide parts of the SQL query.\n- **Example:** `1' OR 1=1--` can be obfuscated as `1' OR 1=1 /* comment */--`.\n- **Purpose:** Hide the true intent of the injected SQL code from detection mechanisms.\n\n#### **1.2 Encoding**\n\n- **Definition:** Encode the payload using various encoding schemes to evade detection.\n- **Types:**\n  - **URL Encoding:",
+  "payloads": [
+    "# SQL Injection (SQLi) Evasion Techniques",
+    "### 1. **Obfuscation Techniques**",
+    "#### **1.1 Comment Insertion**",
+    "- **Definition:** Use SQL comments to break up or hide parts of the SQL query.",
+    "- **Example:** `1' OR 1=1--` can be obfuscated as `1' OR 1=1 /* comment */--`.",
+    "- **Purpose:** Hide the true intent of the injected SQL code from detection mechanisms.",
+    "#### **1.2 Encoding**",
+    "- **Definition:** Encode the payload using various encoding schemes to evade detection.",
+    "- **Types:**",
+    "- **URL Encoding:** Convert characters to their URL-encoded equivalents (e.g., `%27` for `'`).",
+    "- **Hex Encoding:** Use hexadecimal values (e.g., `0x27` for `'`).",
+    "- **Base64 Encoding:** Encode payloads in Base64 (e.g., `JTIxPTElM0El` for `1=1`).",
+    "- **Example:** `1' OR 1=1--` can be encoded as `1%27%20OR%201%3D1--`.",
+    "#### **1.3 Case Manipulation**",
+    "- **Definition:** Alter the case of SQL keywords and operators."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Attacks_and_Exploits/Web_Application_Attacks/web_application_testing/sqli_evasion.md"
+  ]
+}

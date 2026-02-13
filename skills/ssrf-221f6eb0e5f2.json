@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-221f6eb0e5f2",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# Prompt Injection\n\n> A technique where specific prompts or cues are inserted into the input data to guide the output of a machine learning model, specifically in the field of natural language processing (NLP).\n\n## Summary\n\n* [Tools](#tools)\n* [Applications](#applications)\n    * [Story Generation](#story-generation)\n    * [Potential Misuse](#potential-misuse)\n* [System Prompt](#system-prompt)\n* [Direct Prompt Injection](#direct-prompt-injection)\n* [Indirect Prompt Injection](#indirect-prompt-inj",
+  "payloads": [
+    "* [ChatGPT - OpenAI](https://chat.openai.com)",
+    "* [BingChat - Microsoft](https://www.bing.com/)",
+    "* [Bard - Google](https://bard.google.com/)",
+    "* [Le Chat - Mistral AI](https://chat.mistral.ai/chat)",
+    "* [Claude - Anthropic](https://claude.ai/)",
+    "* [TakSec/Prompt-Injection-Everywhere](https://github.com/TakSec/Prompt-Injection-Everywhere) - Prompt Injections Everywhere",
+    "* [NVIDIA/garak](https://github.com/NVIDIA/garak) - LLM vulnerability scanner",
+    "* [Chat GPT \"DAN\" (and other \"Jailbreaks\")](https://gist.github.com/coolaj86/6f4f7b30129b0251f61fa7baaa881516)",
+    "* [Jailbreak Chat](https://www.jailbreakchat.com)",
+    "* [Inject My PDF](https://kai-greshake.de/posts/inject-my-pdf)",
+    "* [LLM Hacking Database](https://github.com/pdparchitect/llm-hacking-database)",
+    "* [LLM Fuzzer](https://github.com/mnns/LLMFuzzer)",
+    "* [Gandalf - Lakera](https://gandalf.lakera.ai/)",
+    "* [GPT Prompt Attack - h43z](https://gpa.43z.one/)",
+    "* [GPT Game - h43z](https://gpt.43z.one/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Prompt Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

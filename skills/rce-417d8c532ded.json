@@ -1,0 +1,27 @@
+{
+  "id": "rce-417d8c532ded",
+  "category": "RCE",
+  "title": "README",
+  "description": "# API Key and Token Leaks\n\n> API keys and tokens are forms of authentication commonly used to manage permissions and access to both public and private services. Leaking these sensitive pieces of data can lead to unauthorized access, compromised security, and potential data breaches.\n\n## Summary\n\n- [Tools](#tools)\n- [Methodology](#methodology)\n    - [Common Causes of Leaks](#common-causes-of-leaks)\n    - [Validate The API Key](#validate-the-api-key)\n- [Reducing The Attack Surface](#reducing-the-a",
+  "payloads": [
+    "- [aquasecurity/trivy](https://github.com/aquasecurity/trivy) - General purpose vulnerability and misconfiguration scanner which also searches for API keys/secrets.",
+    "- [blacklanternsecurity/badsecrets](https://github.com/blacklanternsecurity/badsecrets) - A library for detecting known or weak secrets on across many platforms.",
+    "- [irsdl/crapsecrets](https://github.com/irsdl/crapsecrets) - A library for detecting known secrets across many web frameworks.",
+    "- [d0ge/sign-saboteur](https://github.com/d0ge/sign-saboteur) - SignSaboteur is a Burp Suite extension for editing, signing, verifying various signed web tokens.",
+    "- [mazen160/secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db) - Secrets Patterns DB: The largest open-source Database for detecting secrets, API keys, passwords, tokens, and more.",
+    "- [momenbasel/KeyFinder](https://github.com/momenbasel/KeyFinder) - is a tool that let you find keys while surfing the web.",
+    "- [streaak/keyhacks](https://github.com/streaak/keyhacks) - is a repository which shows quick ways in which API keys leaked by a bug bounty program can be checked to see if they're valid.",
+    "- [trufflesecurity/truffleHog](https://github.com/trufflesecurity/truffleHog) - Find credentials all over the place.",
+    "- [projectdiscovery/nuclei-templates](https://github.com/projectdiscovery/nuclei-templates) - Use these templates to test an API token against many API service endpoints.",
+    "docker run --rm -it -v \"$PWD:/pwd\" trufflesecurity/trufflehog:latest github --repo https://github.com/trufflesecurity/test_keys --issue-comments --pr-comments",
+    "If assistance is needed in identifying the service that generated the token, [mazen160/secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db) can be consulted. It is the largest open-source database for detecting secrets, API keys, passwords, tokens, and more. This database contains regex patterns for various secrets.",
+    "Use [streaak/keyhacks](https://github.com/streaak/keyhacks) or read the documentation of the service to find a quick way to verify the validity of an API key.",
+    "curl https://api.telegram.org/bot<TOKEN>/getMe",
+    "-   repo: https://github.com/pre-commit/pre-commit-hooks",
+    "- [Finding Hidden API Keys & How to Use Them - Sumit Jain - August 24, 2019](https://web.archive.org/web/20191012175520/https://medium.com/@sumitcfe/finding-hidden-api-keys-how-to-use-them-11b1e5d0f01d)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/API Key Leaks/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

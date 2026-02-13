@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_9a75a7dd024d",
+  "category": "macos-hardening",
+  "title": "arm64 basic assembly",
+  "description": "# Introduction to ARM64v8\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\n## **Exception Levels - EL (ARM64v8)**\n\nIn ARMv8 architecture, execution levels, known as Exception Levels (ELs), define the privilege level and capabilities of the execution environment. There are four exception levels, ranging from EL0 to EL3, each serving a different purpose:\n\n1. **EL0 - User Mode**:\n   - This is the least-privileged level and is used for executing regular application code.\n   - Applications run",
+  "payloads": [
+    "# Introduction to ARM64v8",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## **Exception Levels - EL (ARM64v8)**",
+    "In ARMv8 architecture, execution levels, known as Exception Levels (ELs), define the privilege level and capabilities of the execution environment. There are four exception levels, ranging from EL0 to EL3, each serving a different purpose:",
+    "1. **EL0 - User Mode**:",
+    "- This is the least-privileged level and is used for executing regular application code.",
+    "- Applications running at EL0 are isolated from each other and from the system software, enhancing security and stability.",
+    "2. **EL1 - Operating System Kernel Mode**:",
+    "- Most operating system kernels run at this level.",
+    "- EL1 has more privileges than EL0 and can access system resources, but with some restrictions to ensure system integrity. You go from EL0 to EL1 with the SVC instruction.",
+    "3. **EL2 - Hypervisor Mode**:",
+    "- This level is used for virtualization. A hypervisor running at EL2 can manage multiple operating systems (each in its own EL1) running on the same physical hardware.",
+    "- EL2 provides features for isolation and control of the virtualized environments.",
+    "- So virtual machine applications like Parallels can use the `hypervisor.framework` to interact with EL2 and run virtual machines without needing kernel extensions.",
+    "- TO move from EL1 to EL2 the `HVC` instruction is used."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-apps-inspecting-debugging-and-fuzzing/arm64-basic-assembly.md"
+  ]
+}

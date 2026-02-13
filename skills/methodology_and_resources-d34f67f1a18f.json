@@ -1,0 +1,19 @@
+{
+  "id": "methodology_and_resources-d34f67f1a18f",
+  "category": "Methodology and Resources",
+  "title": "Vulnerability Reports",
+  "description": "# Vulnerability Reports\n\n:warning: Content of this page has been moved to [InternalAllTheThings/methodology/vulnerability-reports](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#tools)\n- [Vulnerability Report Structure](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#vulnerability-report-structure)\n- [Vulnerability Details ",
+  "payloads": [
+    "# Vulnerability Reports",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/methodology/vulnerability-reports](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#tools)",
+    "- [Vulnerability Report Structure](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#vulnerability-report-structure)",
+    "- [Vulnerability Details Structure](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#vulnerability-details-structure)",
+    "- [General Guidelines](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#general-guidelines)",
+    "- [References](https://swisskyrepo.github.io/InternalAllTheThings/methodology/vulnerability-reports/#references)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Vulnerability Reports.md"
+  ]
+}

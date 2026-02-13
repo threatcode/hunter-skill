@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_3e74e2be315e",
+  "category": "macos-hardening",
+  "title": "macos apple scripts",
+  "description": "# macOS Apple Scripts\n\n{{#include ../../../../../banners/hacktricks-training.md}}\n\n## Apple Scripts\n\nIt's a scripting language used for task automation **interacting with remote processes**. It makes pretty easy to **ask other processes to perform some actions**. **Malware** may abuse these features to abuse functions exported by other processes.\\\nFor example, a malware could **inject arbitrary JS code in browser opened pages**. Or **auto click** some allow permissions requested to the user;\n\n``",
+  "payloads": [
+    "# macOS Apple Scripts",
+    "{{#include ../../../../../banners/hacktricks-training.md}}",
+    "## Apple Scripts",
+    "It's a scripting language used for task automation **interacting with remote processes**. It makes pretty easy to **ask other processes to perform some actions**. **Malware** may abuse these features to abuse functions exported by other processes.\\",
+    "For example, a malware could **inject arbitrary JS code in browser opened pages**. Or **auto click** some allow permissions requested to the user;",
+    "```applescript",
+    "tell window 1 of process \"SecurityAgent\"",
+    "click button \"Always Allow\" of group 1",
+    "end tell",
+    "Here you have some examples: [https://github.com/abbeycode/AppleScripts](https://github.com/abbeycode/AppleScripts)\\",
+    "Find more info about malware using applescripts [**here**](https://www.sentinelone.com/blog/how-offensive-actors-use-applescript-for-attacking-macos/).",
+    "Apple scripts may be easily \"**compiled**\". These versions can be easily \"**decompiled**\" with `osadecompile`",
+    "However, this scripts can also be **exported as \"Read only\"** (via the \"Export...\" option):",
+    "<figure><img src=\"https://github.com/carlospolop/hacktricks/raw/master/images/image%20(556).png\" alt=\"\"><figcaption></figcaption></figure>",
+    "file mal.scpt"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-tcc/macos-tcc-bypasses/macos-apple-scripts.md"
+  ]
+}

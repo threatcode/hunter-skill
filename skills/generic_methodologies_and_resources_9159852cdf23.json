@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_9159852cdf23",
+  "category": "generic-methodologies-and-resources",
+  "title": "phishing documents",
+  "description": "# Phishing Files & Documents\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Office Documents\n\nMicrosoft Word performs file data validation before opening a file. Data validation is performed in the form of data structure identification, against the OfficeOpenXML standard. If any error occurs during the data structure identification, the file being analysed will not be opened.\n\nUsually, Word files containing macros use the `.docm` extension. However, it's possible to rename the file by ch",
+  "payloads": [
+    "# Phishing Files & Documents",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Office Documents",
+    "Microsoft Word performs file data validation before opening a file. Data validation is performed in the form of data structure identification, against the OfficeOpenXML standard. If any error occurs during the data structure identification, the file being analysed will not be opened.",
+    "Usually, Word files containing macros use the `.docm` extension. However, it's possible to rename the file by changing the file extension and still keep their macro executing capabilities.\\",
+    "For example, an RTF file does not support macros, by design, but a DOCM file renamed to RTF will be handled by Microsoft Word and will be capable of macro execution.\\",
+    "The same internals and mechanisms apply to all software of the Microsoft Office Suite (Excel, PowerPoint etc.).",
+    "You can use the following command to check which extensions are going to be executed by some Office programs:",
+    "```bash",
+    "assoc | findstr /i \"word excel powerp\"",
+    "DOCX files referencing a remote template (File \u2013Options \u2013Add-ins \u2013Manage: Templates \u2013Go) that includes macros can \u201cexecute\u201d macros as well.",
+    "### External Image Load",
+    "Go to: _Insert --> Quick Parts --> Field_\\",
+    "_**Categories**: Links and References, **Filed names**: includePicture, and **Filename or URL**:_ http://<ip>/whatever",
+    "![](<../../images/image (155).png>)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/phishing-documents.md"
+  ]
+}

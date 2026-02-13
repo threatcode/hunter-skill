@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_0c228278914f",
+  "category": "generic-methodologies-and-resources",
+  "title": "class pollution pythons prototype pollution",
+  "description": "# Class Pollution (Python's Prototype Pollution)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Basic Example\n\nCheck how is possible to pollute classes of objects with strings:\n\n```python\nclass Company: pass\nclass Developer(Company): pass\nclass Entity(Developer): pass\n\nc = Company()\nd = Developer()\ne = Entity()\n\nprint(c) #<__main__.Company object at 0x1043a72b0>\nprint(d) #<__main__.Developer object at 0x1041d2b80>\nprint(e) #<__main__.Entity object at 0x1041d2730>\n\ne.__class__.__qualname_",
+  "payloads": [
+    "# Class Pollution (Python's Prototype Pollution)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Basic Example",
+    "Check how is possible to pollute classes of objects with strings:",
+    "```python",
+    "class Company: pass",
+    "class Developer(Company): pass",
+    "class Entity(Developer): pass",
+    "c = Company()",
+    "d = Developer()",
+    "e = Entity()",
+    "print(c) #<__main__.Company object at 0x1043a72b0>",
+    "print(d) #<__main__.Developer object at 0x1041d2b80>",
+    "print(e) #<__main__.Entity object at 0x1041d2730>",
+    "e.__class__.__qualname__ = 'Polluted_Entity'"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/python/class-pollution-pythons-prototype-pollution.md"
+  ]
+}

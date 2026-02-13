@@ -1,0 +1,27 @@
+{
+  "id": "insecure_deserialization-86138f36aba2",
+  "category": "Insecure Deserialization",
+  "title": "PHP",
+  "description": "# PHP Deserialization\n\n> PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context. The vulnerability occurs when user-supplied input is not properly sanitized before being passed to the unserialize() PHP function. Since PHP allows object serialization, attackers could pass ad-hoc serialized strings to a v",
+  "payloads": [
+    "# PHP Deserialization",
+    "> PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context. The vulnerability occurs when user-supplied input is not properly sanitized before being passed to the unserialize() PHP function. Since PHP allows object serialization, attackers could pass ad-hoc serialized strings to a vulnerable unserialize() call, resulting in an arbitrary PHP object(s) injection into the application scope.",
+    "## Summary",
+    "* [General Concept](#general-concept)",
+    "* [Authentication Bypass](#authentication-bypass)",
+    "* [Object Injection](#object-injection)",
+    "* [Finding and Using Gadgets](#finding-and-using-gadgets)",
+    "* [Phar Deserialization](#phar-deserialization)",
+    "* [Real World Examples](#real-world-examples)",
+    "* [References](#references)",
+    "## General Concept",
+    "The following magic methods will help you for a PHP Object injection",
+    "* `__wakeup()` when an object is unserialized.",
+    "* `__destruct()` when an object is deleted.",
+    "* `__toString()` when an object is converted to a string."
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/PHP.md"
+  ]
+}

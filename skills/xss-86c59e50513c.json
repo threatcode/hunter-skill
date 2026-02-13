@@ -1,0 +1,27 @@
+{
+  "id": "xss-86c59e50513c",
+  "category": "XSS",
+  "title": "5   XSS in Angular",
+  "description": "# XSS in Angular and AngularJS\n\n## Summary\n\n* [Client Side Template Injection](#client-side-template-injection)\n    * [Stored/Reflected XSS](#storedreflected-xss)\n    * [Advanced Bypassing XSS](#advanced-bypassing-xss)\n    * [Blind XSS](#blind-xss)\n* [Automatic Sanitization](#automatic-sanitization)\n* [References](#references)\n\n## Client Side Template Injection\n\nThe following payloads are based on Client Side Template Injection.\n\n### Stored/Reflected XSS\n\n`ng-app` directive must be present in a ",
+  "payloads": [
+    "`ng-app` directive must be present in a root element to allow the client-side injection (cf. [AngularJS: API: ngApp](https://docs.angularjs.org/api/ng/directive/ngApp)).",
+    "AngularJS 1.6+ by [Mario Heiderich](https://twitter.com/cure53berlin)",
+    "AngularJS 1.6+ by [@brutelogic](https://twitter.com/brutelogic/status/1031534746084491265)",
+    "Example available at [https://brutelogic.com.br/xss.php](https://brutelogic.com.br/xss.php?a=<brute+ng-app>%7B%7B[].pop.constructor%26%2340%27alert%5Cu00281%5Cu0029%27%26%2341%26%2340%26%2341%7D%7D)",
+    "AngularJS 1.6.0 by [@LewisArdern](https://twitter.com/LewisArdern/status/1055887619618471938) & [@garethheyes](https://twitter.com/garethheyes/status/1055884215131213830)",
+    "AngularJS 1.5.9 - 1.5.11 by [Jan Horn](https://twitter.com/tehjh)",
+    "AngularJS (without `'` single and `\"` double quotes) by [@Viren](https://twitter.com/VirenPawar_)",
+    "import { Component, OnInit } from '@angular/core';",
+    "@Component({",
+    "<h4>An untrusted URL:</h4>",
+    "<p><a class=\"e2e-dangerous-url\" [href]=\"dangerousUrl\">Click me</a></p>",
+    "<h4>A trusted URL:</h4>",
+    "<p><a class=\"e2e-trusted-url\" [href]=\"trustedUrl\">Click me</a></p>",
+    "![XSS](https://angular.io/generated/images/guide/security/bypass-security-component.png)",
+    "* [Angular Security - May 16, 2023](https://angular.io/guide/security)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/XSS Injection/5 - XSS in Angular.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

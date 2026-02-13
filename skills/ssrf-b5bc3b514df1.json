@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-b5bc3b514df1",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# Reverse Proxy Misconfigurations\n\n> A reverse proxy is a server that sits between clients and backend servers, forwarding client requests to the appropriate server while hiding the backend infrastructure and often providing load balancing or caching. Misconfigurations in a reverse proxy, such as improper access controls, lack of input sanitization in proxy_pass directives, or trusting client-provided headers like X-Forwarded-For, can lead to vulnerabilities like unauthorized access, directory t",
+  "payloads": [
+    "* [HTTP Headers](#http-headers)",
+    "* [yandex/gixy](https://github.com/yandex/gixy) - Nginx configuration static analyzer.",
+    "* [MegaManSec/Gixy-Next](https://github.com/MegaManSec/Gixy-Next) - Actively maintained Python3 fork of gixy.",
+    "* [shiblisec/Kyubi](https://github.com/shiblisec/Kyubi) - A tool to discover Nginx alias traversal misconfiguration.",
+    "* [laluka/bypass-url-parser](https://github.com/laluka/bypass-url-parser) - Tool that tests MANY url bypasses to reach a 40X protected page.",
+    "bypass-url-parser -u \"http://127.0.0.1/juicy_403_endpoint/\" -s 8.8.8.8 -d",
+    "proxy_pass http://127.0.0.1:8080/;",
+    "respond \"You came from {http.request.header.Referer}\"",
+    "curl -H 'Referer: {{readFile \"etc/passwd\"}}' http://localhost/",
+    "* [Root Me - Nginx - Alias Misconfiguration](https://www.root-me.org/en/Challenges/Web-Server/Nginx-Alias-Misconfiguration)",
+    "* [Root Me - Nginx - Root Location Misconfiguration](https://www.root-me.org/en/Challenges/Web-Server/Nginx-Root-Location-Misconfiguration)",
+    "* [Root Me - Nginx - SSRF Misconfiguration](https://www.root-me.org/en/Challenges/Web-Server/Nginx-SSRF-Misconfiguration)",
+    "* [Detectify - Vulnerable Nginx](https://github.com/detectify/vulnerable-nginx)",
+    "* [What is X-Forwarded-For and when can you trust it? - Phil Sturgeonopens - January 31, 2024](https://httptoolkit.com/blog/what-is-x-forwarded-for/)",
+    "* [Common Nginx misconfigurations that leave your web server open to attack - Detectify - November 10, 2020](https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Reverse Proxy Misconfigurations/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

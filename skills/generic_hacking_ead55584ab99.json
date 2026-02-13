@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_ead55584ab99",
+  "category": "generic-hacking",
+  "title": "expose local to the internet",
+  "description": "# Expose local to the internet\n\n{{#include ../../banners/hacktricks-training.md}}\n\n**The goal of this page is to propose alternatives that allow AT LEAST to expose local raw TCP ports and local webs (HTTP) to the internet WITHOUT needing to install anything in the other server (only in local if needed).**\n\n## **Serveo**\n\nFrom [https://serveo.net/](https://serveo.net/), it allows several http and port forwarding features **for free**.\n\n```bash\n# Get a random port from serveo.net to expose local p",
+  "payloads": [
+    "# Expose local to the internet",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "**The goal of this page is to propose alternatives that allow AT LEAST to expose local raw TCP ports and local webs (HTTP) to the internet WITHOUT needing to install anything in the other server (only in local if needed).**",
+    "## **Serveo**",
+    "From [https://serveo.net/](https://serveo.net/), it allows several http and port forwarding features **for free**.",
+    "```bash",
+    "# Get a random port from serveo.net to expose local port 4444",
+    "ssh -R 0:localhost:4444 serveo.net",
+    "# Expose a web listening in localhost:300 in a random https URL",
+    "ssh -R 80:localhost:3000 serveo.net",
+    "## SocketXP",
+    "From [https://www.socketxp.com/download](https://www.socketxp.com/download), it allows to expose tcp and http:",
+    "```bash",
+    "# Expose tcp port 22",
+    "socketxp connect tcp://localhost:22"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/reverse-shells/expose-local-to-the-internet.md"
+  ]
+}

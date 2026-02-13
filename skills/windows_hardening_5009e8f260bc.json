@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_5009e8f260bc",
+  "category": "windows-hardening",
+  "title": "rdp sessions abuse",
+  "description": "# RDP Sessions Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## RDP Process Injection\n\nIf the **external group** has **RDP access** to any **computer** in the current domain, an **attacker** could **compromise that computer and wait for him**.\n\nOnce that user has accessed via RDP, the **attacker can pivot to that users session** and abuse its permissions in the external domain.\n\n```bash\n# Supposing the group \"External Users\" has RDP access in the current domain\n## lets find where the",
+  "payloads": [
+    "# RDP Sessions Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## RDP Process Injection",
+    "If the **external group** has **RDP access** to any **computer** in the current domain, an **attacker** could **compromise that computer and wait for him**.",
+    "Once that user has accessed via RDP, the **attacker can pivot to that users session** and abuse its permissions in the external domain.",
+    "```bash",
+    "# Supposing the group \"External Users\" has RDP access in the current domain",
+    "## lets find where they could access",
+    "## The easiest way would be with bloodhound, but you could also run:",
+    "Get-DomainGPOUserLocalGroupMapping -Identity \"External Users\" -LocalGroup \"Remote Desktop Users\" | select -expand ComputerName",
+    "Find-DomainLocalGroupMember -GroupName \"Remote Desktop Users\" | select -expand ComputerName",
+    "# Then, compromise the listed machines, and wait til someone from the external domain logs in:",
+    "net logons",
+    "Logged on users at \\\\localhost:",
+    "EXT\\super.admin"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/rdp-sessions-abuse.md"
+  ]
+}

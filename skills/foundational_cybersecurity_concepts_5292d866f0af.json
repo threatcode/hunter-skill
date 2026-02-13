@@ -1,0 +1,27 @@
+{
+  "id": "foundational_cybersecurity_concepts_5292d866f0af",
+  "category": "foundational-cybersecurity-concepts",
+  "title": "Undertanding Information Security Controls",
+  "description": "# Undertanding Information Security Controls\n\nInformation security controls are essential measures designed to protect information assets from various security threats. These controls ensure the confidentiality, integrity, and availability (CIA) of information, which are the core principles of information security.\n\n### **Types of Information Security Controls**\n\nInformation security controls can be broadly categorized into three main types: administrative, physical, and technical controls. Each",
+  "payloads": [
+    "# Undertanding Information Security Controls",
+    "Information security controls are essential measures designed to protect information assets from various security threats. These controls ensure the confidentiality, integrity, and availability (CIA) of information, which are the core principles of information security.",
+    "### **Types of Information Security Controls**",
+    "Information security controls can be broadly categorized into three main types: administrative, physical, and technical controls. Each type serves specific functions and addresses different aspects of security.",
+    "#### **1. Administrative Controls**",
+    "Administrative controls involve the policies, procedures, and guidelines established by an organization to manage and govern its information security. These controls are crucial for setting the tone and framework for security practices within the organization.",
+    "- **Examples**: Security policies, employee training programs, incident response plans, and access control policies.",
+    "- **Functions**: These controls help in managing security risks, ensuring compliance with regulations, and fostering a security-conscious culture within the organization",
+    "#### **2. Physical Controls**",
+    "Physical controls are measures taken to protect the physical infrastructure and hardware that store and process information. These controls are designed to prevent unauthorized physical access to facilities and equipment.",
+    "- **Examples**: Security guards, surveillance cameras, locks, biometric access controls, and secure server rooms.",
+    "- **Functions**: These controls aim to deter, detect, and prevent physical intrusions that could compromise information security",
+    "#### **3. Technical Controls**",
+    "Technical controls, also known as logical controls, involve the use of technology to protect information systems and data. These controls are implemented through hardware and software solutions.",
+    "- **Examples**: Firewalls, antivirus software, encryption, intrusion detection systems, and multi-factor authentication."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/foundational-cybersecurity-concepts/Undertanding Information Security Controls.md"
+  ]
+}

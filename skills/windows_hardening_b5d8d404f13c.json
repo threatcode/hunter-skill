@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_b5d8d404f13c",
+  "category": "windows-hardening",
+  "title": "printnightmare",
+  "description": "# PrintNightmare (Windows Print Spooler RCE/LPE)\n\n{{#include ../../banners/hacktricks-training.md}}\n\n> PrintNightmare is the collective name given to a family of vulnerabilities in the Windows **Print Spooler** service that allow **arbitrary code execution as SYSTEM** and, when the spooler is reachable over RPC, **remote code execution (RCE) on domain controllers and file servers**. The most-widely exploited CVEs are **CVE-2021-1675** (initially classed as LPE) and **CVE-2021-34527** (full RCE).",
+  "payloads": [
+    "# PrintNightmare (Windows Print Spooler RCE/LPE)",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "> PrintNightmare is the collective name given to a family of vulnerabilities in the Windows **Print Spooler** service that allow **arbitrary code execution as SYSTEM** and, when the spooler is reachable over RPC, **remote code execution (RCE) on domain controllers and file servers**. The most-widely exploited CVEs are **CVE-2021-1675** (initially classed as LPE) and **CVE-2021-34527** (full RCE). Subsequent issues such as **CVE-2021-34481 (\u201cPoint & Print\u201d)** and **CVE-2022-21999 (\u201cSpoolFool\u201d)** prove that the attack surface is still far from closed.",
+    "## 1. Vulnerable components & CVEs",
+    "| Year | CVE | Short name | Primitive | Notes |",
+    "|------|-----|------------|-----------|-------|",
+    "|2021|CVE-2021-1675|\u201cPrintNightmare #1\u201d|LPE|Patched in June 2021 CU but bypassed by CVE-2021-34527|",
+    "|2021|CVE-2021-34527|\u201cPrintNightmare\u201d|RCE/LPE|AddPrinterDriverEx allows authenticated users to load a driver DLL from a remote share|",
+    "|2021|CVE-2021-34481|\u201cPoint & Print\u201d|LPE|Unsigned driver installation by non-admin users|",
+    "|2022|CVE-2022-21999|\u201cSpoolFool\u201d|LPE|Arbitrary directory creation \u2192 DLL planting \u2013 works after 2021 patches|",
+    "All of them abuse one of the **MS-RPRN / MS-PAR RPC methods** (`RpcAddPrinterDriver`, `RpcAddPrinterDriverEx`, `RpcAsyncAddPrinterDriver`) or trust relationships inside **Point & Print**.",
+    "## 2. Exploitation techniques",
+    "### 2.1 Remote Domain Controller compromise (CVE-2021-34527)",
+    "An authenticated but **non-privileged** domain user can run arbitrary DLLs as **NT AUTHORITY\\SYSTEM** on a remote spooler (often the DC) by:",
+    "```powershell"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/printnightmare.md"
+  ]
+}

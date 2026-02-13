@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_ed43db3c791c",
+  "category": "generic-hacking",
+  "title": "search exploits",
+  "description": "# Search Exploits\n\n{{#include ../banners/hacktricks-training.md}}\n\n### Browser\n\nAlways search in \"google\" or others: **\\<service_name> \\[version] exploit**\n\nYou should also try the **shodan** **exploit search** from [https://exploits.shodan.io/](https://exploits.shodan.io).\n\n### Searchsploit\n\nUseful to search exploits for services in **exploitdb from the console.**\n\n```bash\n#Searchsploit tricks\nsearchsploit \"linux Kernel\" #Example\nsearchsploit apache mod_ssl #Other example\nsearchsploit -m 7618 #",
+  "payloads": [
+    "# Search Exploits",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "### Browser",
+    "Always search in \"google\" or others: **\\<service_name> \\[version] exploit**",
+    "You should also try the **shodan** **exploit search** from [https://exploits.shodan.io/](https://exploits.shodan.io).",
+    "### Searchsploit",
+    "Useful to search exploits for services in **exploitdb from the console.**",
+    "```bash",
+    "#Searchsploit tricks",
+    "searchsploit \"linux Kernel\" #Example",
+    "searchsploit apache mod_ssl #Other example",
+    "searchsploit -m 7618 #Paste the exploit in current directory",
+    "searchsploit -p 7618[.c] #Show complete path",
+    "searchsploit -x 7618[.c] #Open vi to inspect the exploit",
+    "searchsploit --nmap file.xml #Search vulns inside an nmap xml result"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/search-exploits.md"
+  ]
+}

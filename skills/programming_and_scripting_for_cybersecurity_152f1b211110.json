@@ -1,0 +1,27 @@
+{
+  "id": "programming_and_scripting_for_cybersecurity_152f1b211110",
+  "category": "programming-and-scripting-for-cybersecurity",
+  "title": "basic programming resources",
+  "description": "# Basic Programming Resources and Tutorials\n\n## Python\n- [Awesome Python - GitHub Repo](https://github.com/vinta/awesome-python)\n- [Python Tutorials in W3 Schools](https://www.w3schools.com/python/python_for_loops.asp)\n- [Full Stack Python](https://www.fullstackpython.com/)\n- [Python Cheatsheet](https://www.pythoncheatsheet.org/)\n- [Real Python](https://realpython.com)\n- [The Hitchhiker\u2019s Guide to Python](https://docs.python-guide.org/)\n- [Ultimate Python study guide](https://github.com/huangsam",
+  "payloads": [
+    "# Basic Programming Resources and Tutorials",
+    "## Python",
+    "- [Awesome Python - GitHub Repo](https://github.com/vinta/awesome-python)",
+    "- [Python Tutorials in W3 Schools](https://www.w3schools.com/python/python_for_loops.asp)",
+    "- [Full Stack Python](https://www.fullstackpython.com/)",
+    "- [Python Cheatsheet](https://www.pythoncheatsheet.org/)",
+    "- [Real Python](https://realpython.com)",
+    "- [The Hitchhiker\u2019s Guide to Python](https://docs.python-guide.org/)",
+    "- [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)",
+    "- [Python @LibHunt](https://python.libhunt.com/)",
+    "- [Python ZEEF](https://python.zeef.com/alan.richmond)",
+    "- [Pythonic News](https://news.python.sc/)",
+    "- [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)",
+    "## Bash and other Linux Shells",
+    "- [Awesome Shell](https://github.com/alebcay/awesome-shell)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/programming-and-scripting-for-cybersecurity/basic_programming_resources.md"
+  ]
+}

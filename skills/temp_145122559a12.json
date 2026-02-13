@@ -1,0 +1,27 @@
+{
+  "id": "temp_145122559a12",
+  "category": "temp",
+  "title": "subdomain finder in python",
+  "description": "# How to Create a Sub-Domain Finder in Python\n\nThe following is a sample Python script to find subdomains using DNS. This script is using the `dns.resolver` module from the `dnspython` library. If you don't have the library installed, you can install it using pip:\n\n```\npip3 install dnspython\n```\n\nThe following is the Python script that can be used to find subdomains for a given domain using a provided wordlist file:\n\n```\nimport dns.resolver\nimport argparse\n\ndef load_subdomains(file_path):\n    wi",
+  "payloads": [
+    "# How to Create a Sub-Domain Finder in Python",
+    "The following is a sample Python script to find subdomains using DNS. This script is using the `dns.resolver` module from the `dnspython` library. If you don't have the library installed, you can install it using pip:",
+    "pip3 install dnspython",
+    "The following is the Python script that can be used to find subdomains for a given domain using a provided wordlist file:",
+    "import dns.resolver",
+    "import argparse",
+    "def load_subdomains(file_path):",
+    "with open(file_path, 'r') as file:",
+    "subdomains = file.read().splitlines()",
+    "return subdomains",
+    "def find_subdomains(domain, subdomains):",
+    "found_subdomains = []",
+    "resolver = dns.resolver.Resolver()",
+    "for subdomain in subdomains:",
+    "target = f'{subdomain}.{domain}'"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/recon_scripts/dns_recon/subdomain_finder_in_python.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_b0681225afc7",
+  "category": "linux-hardening",
+  "title": "user namespace",
+  "description": "# User Namespace\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nA user namespace is a Linux kernel feature that **provides isolation of user and group ID mappings**, allowing each user namespace to have its **own set of user and group IDs**. This isolation enables processes running in different user namespaces to **have different privileges and ownership**, even if they share the same user and group IDs numerically.\n\nUser namespaces are particularly useful in con",
+  "payloads": [
+    "# User Namespace",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "A user namespace is a Linux kernel feature that **provides isolation of user and group ID mappings**, allowing each user namespace to have its **own set of user and group IDs**. This isolation enables processes running in different user namespaces to **have different privileges and ownership**, even if they share the same user and group IDs numerically.",
+    "User namespaces are particularly useful in containerization, where each container should have its own independent set of user and group IDs, allowing for better security and isolation between containers and the host system.",
+    "### How it works:",
+    "1. When a new user namespace is created, it **starts with an empty set of user and group ID mappings**. This means that any process running in the new user namespace will **initially have no privileges outside of the namespace**.",
+    "2. ID mappings can be established between the user and group IDs in the new namespace and those in the parent (or host) namespace. This **allows processes in the new namespace to have privileges and ownership corresponding to user and group IDs in the parent namespace**. However, the ID mappings can be restricted to specific ranges and subsets of IDs, allowing for fine-grained control over the privileges granted to processes in the new namespace.",
+    "3. Within a user namespace, **processes can have full root privileges (UID 0) for operations inside the namespace**, while still having limited privileges outside the namespace. This allows **containers to run with root-like capabilities within their own namespace without having full root privileges on the host system**.",
+    "4. Processes can move between namespaces using the `setns()` system call or create new namespaces using the `unshare()` or `clone()` system calls with the `CLONE_NEWUSER` flag. When a process moves to a new namespace or creates one, it will start using the user and group ID mappings associated with that namespace.",
+    "## Lab:",
+    "### Create different Namespaces",
+    "#### CLI",
+    "```bash",
+    "sudo unshare -U [--mount-proc] /bin/bash"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/namespaces/user-namespace.md"
+  ]
+}

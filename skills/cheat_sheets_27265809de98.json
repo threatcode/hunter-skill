@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_27265809de98",
+  "category": "cheat-sheets",
+  "title": "powershell",
+  "description": "# PowerShell for Cybersecurity Cheat Sheet\n\nPowerShell is a powerful scripting language and command-line shell built on .NET. It's essential for Windows system administration and security testing.\n\n## \ud83d\udccb Table of Contents\n- [Basic Commands](#basic-commands)\n- [Variables and Data Types](#variables-and-data-types)\n- [Control Flow](#control-flow)\n- [Functions](#functions)\n- [File Operations](#file-operations)\n- [Network Operations](#network-operations)\n- [System Information](#system-information)\n- [",
+  "payloads": [
+    "# PowerShell for Cybersecurity Cheat Sheet",
+    "PowerShell is a powerful scripting language and command-line shell built on .NET. It's essential for Windows system administration and security testing.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Commands](#basic-commands)",
+    "- [Variables and Data Types](#variables-and-data-types)",
+    "- [Control Flow](#control-flow)",
+    "- [Functions](#functions)",
+    "- [File Operations](#file-operations)",
+    "- [Network Operations](#network-operations)",
+    "- [System Information](#system-information)",
+    "- [Active Directory](#active-directory)",
+    "- [Security Commands](#security-commands)",
+    "- [Post-Exploitation](#post-exploitation)",
+    "## Basic Commands",
+    "### Getting Help"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/windows/powershell.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_9bf703fff17c",
+  "category": "cheat-sheets",
+  "title": "linux metacharacters",
+  "description": "# Linux metacharacters\n\n1. `;` : Separates commands.\n    ```\n    command1 ; command2 # Run command1, then run command2 regardless of whether command1 succeeded.\n    ```\n\n2. `&` : Background execution.\n    ```\n    command & # Runs \"command\" in the background.\n    ```\n\n3. `&&` : AND operator.\n    ```\n    command1 && command2 # Run command1, then run command2 only if command1 succeeded.\n    ```\n\n4. `||` : OR operator.\n    ```\n    command1 || command2 # Run command1, then run command2 only if comman",
+  "payloads": [
+    "# Linux metacharacters",
+    "1. `;` : Separates commands.",
+    "command1 ; command2 # Run command1, then run command2 regardless of whether command1 succeeded.",
+    "2. `&` : Background execution.",
+    "command & # Runs \"command\" in the background.",
+    "3. `&&` : AND operator.",
+    "command1 && command2 # Run command1, then run command2 only if command1 succeeded.",
+    "4. `||` : OR operator.",
+    "command1 || command2 # Run command1, then run command2 only if command1 failed.",
+    "5. `|` : Pipe operator.",
+    "command1 | command2 # Output of command1 is passed as input to command2.",
+    "6. `()` : Command group.",
+    "(command1; command2) # Group commands into a subshell.",
+    "7. `{}` : Command block.",
+    "{ command1; command2; } # Group commands in the current shell."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/linux/linux_metacharacters.md"
+  ]
+}

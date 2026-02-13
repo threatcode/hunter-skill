@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_e547a94e91d3",
+  "category": "windows-hardening",
+  "title": "service triggers",
+  "description": "# Windows Service Triggers: Enumeration and Abuse\n\n{{#include ../../banners/hacktricks-training.md}}\n\nWindows Service Triggers allow the Service Control Manager (SCM) to start/stop a service when a condition occurs (e.g., an IP address becomes available, a named pipe connection is attempted, an ETW event is published). Even when you lack SERVICE_START rights on a target service, you may still be able to start it by causing its trigger to fire.\n\nThis page focuses on attacker-friendly enumeration ",
+  "payloads": [
+    "# Windows Service Triggers: Enumeration and Abuse",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Windows Service Triggers allow the Service Control Manager (SCM) to start/stop a service when a condition occurs (e.g., an IP address becomes available, a named pipe connection is attempted, an ETW event is published). Even when you lack SERVICE_START rights on a target service, you may still be able to start it by causing its trigger to fire.",
+    "This page focuses on attacker-friendly enumeration and low-friction ways to activate common triggers.",
+    "> Tip: Starting a privileged built-in service (e.g., RemoteRegistry, WebClient/WebDAV, EFS) can expose new RPC/named-pipe listeners and unlock further abuse chains.",
+    "## Enumerating Service Triggers",
+    "- sc.exe (local)",
+    "- List a service's triggers: `sc.exe qtriggerinfo <ServiceName>`",
+    "- Registry (local)",
+    "- Triggers live under: `HKLM\\SYSTEM\\CurrentControlSet\\Services\\<ServiceName>\\TriggerInfo`",
+    "- Dump recursively: `reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\<ServiceName>\\TriggerInfo /s`",
+    "- Win32 API (local)",
+    "- Call QueryServiceConfig2 with SERVICE_CONFIG_TRIGGER_INFO (8) to retrieve SERVICE_TRIGGER_INFO.",
+    "- Docs: QueryServiceConfig2[W/A] and SERVICE_TRIGGER/SERVICE_TRIGGER_SPECIFIC_DATA",
+    "- RPC over MS\u2011SCMR (remote)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/service-triggers.md"
+  ]
+}

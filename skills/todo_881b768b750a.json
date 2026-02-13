@@ -1,0 +1,27 @@
+{
+  "id": "todo_881b768b750a",
+  "category": "todo",
+  "title": "side channel analysis",
+  "description": "# Side Channel Analysis Attacks \n\n{{#include ../../banners/hacktricks-training.md}}\n\nSide-channel attacks recover secrets by observing physical or micro-architectural \"leakage\" that is *correlated* with internal state but is *not* part of the logical interface of the device.  Examples range from measuring the instantaneous current drawn by a smart-card to abusing CPU power-management effects over a network.\n\n---\n\n## Main Leakage Channels\n\n| Channel | Typical Target | Instrumentation |\n|---------",
+  "payloads": [
+    "# Side Channel Analysis Attacks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Side-channel attacks recover secrets by observing physical or micro-architectural \"leakage\" that is *correlated* with internal state but is *not* part of the logical interface of the device.  Examples range from measuring the instantaneous current drawn by a smart-card to abusing CPU power-management effects over a network.",
+    "## Main Leakage Channels",
+    "| Channel | Typical Target | Instrumentation |",
+    "|---------|---------------|-----------------|",
+    "| Power consumption | Smart-cards, IoT MCUs, FPGAs | Oscilloscope + shunt resistor/HS probe (e.g. CW503)",
+    "| Electromagnetic field (EM) | CPUs, RFID, AES accelerators | H-field probe + LNA, ChipWhisperer/RTL-SDR",
+    "| Execution time / caches | Desktop & cloud CPUs | High-precision timers (rdtsc/rdtscp), remote time-of-flight",
+    "| Acoustic / mechanical | Keyboards, 3-D printers, relays | MEMS microphone, laser vibrometer",
+    "| Optical & thermal | LEDs, laser printers, DRAM | Photodiode / high-speed camera, IR camera",
+    "| Fault-induced | ASIC/MCU cryptos | Clock/voltage glitch, EMFI, laser injection",
+    "## Power Analysis",
+    "### Simple Power Analysis (SPA)",
+    "Observe a *single* trace and directly associate peaks/valleys with operations (e.g. DES S-boxes)."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/hardware-hacking/side_channel_analysis.md"
+  ]
+}

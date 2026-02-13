@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_bbca7371de4a",
+  "category": "cheat-sheets",
+  "title": "msfvenom",
+  "description": "# Msfvenom Payload Generator Cheat Sheet\n\nMsfvenom is a combination of Msfpayload and Msfencode, used to generate and encode payloads for the Metasploit Framework.\n\n## \ud83d\udccb Table of Contents\n- [Basic Usage](#basic-usage)\n- [Windows Payloads](#windows-payloads)\n- [Linux Payloads](#linux-payloads)\n- [MacOS Payloads](#macos-payloads)\n- [Web Payloads](#web-payloads)\n- [Scripting Payloads](#scripting-payloads)\n- [Mobile Payloads](#mobile-payloads)\n- [Encoders](#encoders)\n- [Formats](#formats)\n- [Advance",
+  "payloads": [
+    "# Msfvenom Payload Generator Cheat Sheet",
+    "Msfvenom is a combination of Msfpayload and Msfencode, used to generate and encode payloads for the Metasploit Framework.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Usage](#basic-usage)",
+    "- [Windows Payloads](#windows-payloads)",
+    "- [Linux Payloads](#linux-payloads)",
+    "- [MacOS Payloads](#macos-payloads)",
+    "- [Web Payloads](#web-payloads)",
+    "- [Scripting Payloads](#scripting-payloads)",
+    "- [Mobile Payloads](#mobile-payloads)",
+    "- [Encoders](#encoders)",
+    "- [Formats](#formats)",
+    "- [Advanced Techniques](#advanced-techniques)",
+    "## Basic Usage",
+    "```bash"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/exploitation/msfvenom.md"
+  ]
+}

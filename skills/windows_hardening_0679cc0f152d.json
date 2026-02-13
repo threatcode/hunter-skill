@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_0679cc0f152d",
+  "category": "windows-hardening",
+  "title": "ad dns records",
+  "description": "# AD DNS Records\n\n{{#include ../../banners/hacktricks-training.md}}\n\nBy default **any user** in Active Directory can **enumerate all DNS records** in the Domain or Forest DNS zones, similar to a zone transfer (users can list the child objects of a DNS zone in an AD environment).\n\nThe tool [**adidnsdump**](https://github.com/dirkjanm/adidnsdump) enables **enumeration** and **exporting** of **all DNS records** in the zone for recon purposes of internal networks.\n\n```bash\ngit clone https://github.c",
+  "payloads": [
+    "# AD DNS Records",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "By default **any user** in Active Directory can **enumerate all DNS records** in the Domain or Forest DNS zones, similar to a zone transfer (users can list the child objects of a DNS zone in an AD environment).",
+    "The tool [**adidnsdump**](https://github.com/dirkjanm/adidnsdump) enables **enumeration** and **exporting** of **all DNS records** in the zone for recon purposes of internal networks.",
+    "```bash",
+    "git clone https://github.com/dirkjanm/adidnsdump",
+    "cd adidnsdump",
+    "pip install .",
+    "# Enumerate the default zone and resolve the \"hidden\" records",
+    "adidnsdump -u domain_name\\\\username ldap://10.10.10.10 -r",
+    "# Quickly list every zone (DomainDnsZones, ForestDnsZones, legacy zones,\u2026)",
+    "adidnsdump -u domain_name\\\\username ldap://10.10.10.10 --print-zones",
+    "# Dump a specific zone (e.g. ForestDnsZones)",
+    "adidnsdump -u domain_name\\\\username ldap://10.10.10.10 --zone _msdcs.domain.local -r",
+    "cat records.csv"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/ad-dns-records.md"
+  ]
+}

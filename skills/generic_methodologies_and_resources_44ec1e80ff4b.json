@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_44ec1e80ff4b",
+  "category": "generic-methodologies-and-resources",
+  "title": "malware analysis",
+  "description": "# Malware Analysis\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Forensics CheatSheets\n\n[https://www.jaiminton.com/cheatsheet/DFIR/#](https://www.jaiminton.com/cheatsheet/DFIR/)\n\n## Online Services\n\n- [VirusTotal](https://www.virustotal.com/gui/home/upload)\n- [HybridAnalysis](https://www.hybrid-analysis.com)\n- [Koodous](https://koodous.com)\n- [Intezer](https://analyze.intezer.com)\n- [Any.Run](https://any.run/)\n\n## Offline Antivirus and Detection Tools\n\n### Yara\n\n#### Install\n\n```bash\nsu",
+  "payloads": [
+    "# Malware Analysis",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Forensics CheatSheets",
+    "[https://www.jaiminton.com/cheatsheet/DFIR/#](https://www.jaiminton.com/cheatsheet/DFIR/)",
+    "## Online Services",
+    "- [VirusTotal](https://www.virustotal.com/gui/home/upload)",
+    "- [HybridAnalysis](https://www.hybrid-analysis.com)",
+    "- [Koodous](https://koodous.com)",
+    "- [Intezer](https://analyze.intezer.com)",
+    "- [Any.Run](https://any.run/)",
+    "## Offline Antivirus and Detection Tools",
+    "### Yara",
+    "#### Install",
+    "```bash",
+    "sudo apt-get install -y yara"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/malware-analysis.md"
+  ]
+}

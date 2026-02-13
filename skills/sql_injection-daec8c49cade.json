@@ -1,0 +1,27 @@
+{
+  "id": "sql_injection-daec8c49cade",
+  "category": "SQL Injection",
+  "title": "SQLite Injection",
+  "description": "# SQLite Injection\n\n> SQLite Injection  is a type of security vulnerability that occurs when an attacker can insert or \"inject\" malicious SQL code into SQL queries executed by an SQLite database. This vulnerability arises when user inputs are integrated into SQL statements without proper sanitization or parameterization, allowing attackers to manipulate the query logic. Such injections can lead to unauthorized data access, data manipulation, and other severe security issues.\n\n## Summary\n\n* [SQLi",
+  "payloads": [
+    "# SQLite Injection",
+    "> SQLite Injection  is a type of security vulnerability that occurs when an attacker can insert or \"inject\" malicious SQL code into SQL queries executed by an SQLite database. This vulnerability arises when user inputs are integrated into SQL statements without proper sanitization or parameterization, allowing attackers to manipulate the query logic. Such injections can lead to unauthorized data access, data manipulation, and other severe security issues.",
+    "## Summary",
+    "* [SQLite Comments](#sqlite-comments)",
+    "* [SQLite Enumeration](#sqlite-enumeration)",
+    "* [SQLite String](#sqlite-string)",
+    "* [SQLite String Methodology](#sqlite-string-methodology)",
+    "* [SQLite Blind](#sqlite-blind)",
+    "* [SQLite Blind Methodology](#sqlite-blind-methodology)",
+    "* [SQLite Blind With Substring Equivalent](#sqlite-blind-with-substring-equivalent)",
+    "* [SQlite Error Based](#sqlite-error-based)",
+    "* [SQlite Time Based](#sqlite-time-based)",
+    "* [SQlite Remote Code Execution](#sqlite-remote-code-execution)",
+    "* [Attach Database](#attach-database)",
+    "* [Load_extension](#load_extension)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/SQLite Injection.md"
+  ]
+}

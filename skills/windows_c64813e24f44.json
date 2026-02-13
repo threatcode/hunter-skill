@@ -1,0 +1,27 @@
+{
+  "id": "windows_c64813e24f44",
+  "category": "windows",
+  "title": "rootkit detection guide",
+  "description": "# Windows Rootkit Detection and System Compromise Guide\n\nThis guide provides comprehensive commands, techniques, and strategies for identifying rootkits and system compromise on Windows systems. It covers both manual detection methods and automated tools for forensic analysis and incident response.\n\n## \ud83d\udccb Table of Contents\n- [Understanding Rootkits](#understanding-rootkits)\n- [Types of Rootkits](#types-of-rootkits)\n- [Detection Strategies](#detection-strategies)\n- [Windows Native Commands](#windo",
+  "payloads": [
+    "# Windows Rootkit Detection and System Compromise Guide",
+    "This guide provides comprehensive commands, techniques, and strategies for identifying rootkits and system compromise on Windows systems. It covers both manual detection methods and automated tools for forensic analysis and incident response.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Understanding Rootkits](#understanding-rootkits)",
+    "- [Types of Rootkits](#types-of-rootkits)",
+    "- [Detection Strategies](#detection-strategies)",
+    "- [Windows Native Commands](#windows-native-commands)",
+    "- [System Integrity Verification](#system-integrity-verification)",
+    "- [Memory Analysis](#memory-analysis)",
+    "- [Network Activity Monitoring](#network-activity-monitoring)",
+    "- [Registry Analysis](#registry-analysis)",
+    "- [File System Analysis](#file-system-analysis)",
+    "- [Process and Service Analysis](#process-and-service-analysis)",
+    "- [Behavioral Indicators](#behavioral-indicators)",
+    "- [Advanced Detection Tools](#advanced-detection-tools)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/windows/rootkit-detection-guide.md"
+  ]
+}

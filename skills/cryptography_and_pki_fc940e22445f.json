@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_fc940e22445f",
+  "category": "cryptography-and-pki",
+  "title": "crypto algorithms reference",
+  "description": "# Cryptographic Algorithms Quick Reference\n\n## Algorithm Status Guide\n\n### Legend\n- \u2705 **Recommended**: Use in new deployments\n- \u26a0\ufe0f **Transitional**: Plan to migrate away\n- \u274c **Deprecated**: Do not use for new systems\n- \ud83d\udd2e **Post-Quantum**: Quantum-resistant\n\n## Symmetric Encryption\n\n### Block Ciphers\n\n| Algorithm | Key Size | Status | Notes |\n|-----------|----------|--------|-------|\n| AES-256 | 256-bit | \u2705 | Industry standard, hardware accelerated |\n| AES-192 | 192-bit | \u2705 | Good balance of secu",
+  "payloads": [
+    "# Cryptographic Algorithms Quick Reference",
+    "## Algorithm Status Guide",
+    "### Legend",
+    "- \u2705 **Recommended**: Use in new deployments",
+    "- \u26a0\ufe0f **Transitional**: Plan to migrate away",
+    "- \u274c **Deprecated**: Do not use for new systems",
+    "- \ud83d\udd2e **Post-Quantum**: Quantum-resistant",
+    "## Symmetric Encryption",
+    "### Block Ciphers",
+    "| Algorithm | Key Size | Status | Notes |",
+    "|-----------|----------|--------|-------|",
+    "| AES-256 | 256-bit | \u2705 | Industry standard, hardware accelerated |",
+    "| AES-192 | 192-bit | \u2705 | Good balance of security and performance |",
+    "| AES-128 | 128-bit | \u26a0\ufe0f | Quantum vulnerable (64-bit effective security) |",
+    "| ChaCha20 | 256-bit | \u2705 | Excellent for software-only implementations |"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/quick-reference/crypto-algorithms-reference.md"
+  ]
+}

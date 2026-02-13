@@ -1,0 +1,27 @@
+{
+  "id": "generic_hacking_f18a5b598b50",
+  "category": "generic-hacking",
+  "title": "esim javacard exploitation",
+  "description": "# eSIM / Java Card VM Exploitation\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Overview\nEmbedded SIMs (eSIMs) are implemented as **Embedded UICC (eUICC)** smart-cards that run a **Java Card Virtual Machine (JC VM)** on top of a secure element.  \nBecause profiles and applets can be provisioned *over-the-air* (OTA) via Remote SIM Provisioning (RSP), any memory-safety flaw inside the JC VM instantly becomes a remote code-execution primitive **inside the most privileged component of the hand",
+  "payloads": [
+    "# eSIM / Java Card VM Exploitation",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Embedded SIMs (eSIMs) are implemented as **Embedded UICC (eUICC)** smart-cards that run a **Java Card Virtual Machine (JC VM)** on top of a secure element.",
+    "Because profiles and applets can be provisioned *over-the-air* (OTA) via Remote SIM Provisioning (RSP), any memory-safety flaw inside the JC VM instantly becomes a remote code-execution primitive **inside the most privileged component of the handset**.",
+    "This page describes a real-world full compromise of Kigen\u2019s eUICC (Infineon SLC37 ESA1M2, ARM SC300) caused by missing type-safety checks in the `getfield` and `putfield` bytecodes.  The same technique can be re-used against other vendors that omit on-card byte-code verification.",
+    "## Attack Surface",
+    "1. **Remote Application Management (RAM)**",
+    "eSIM profiles may embed arbitrary Java Card applets.  Provisioning is performed with standard APDUs that can be tunnelled through SMS-PP (Short Message Service Point-to-Point) or HTTPS.  If an attacker owns (or steals) the **RAM keys** for a profile, they can `INSTALL`/`LOAD` a malicious applet remotely.",
+    "2. **Java Card byte-code execution**",
+    "After installation, the applet executes inside the VM.  Missing run-time checks allow memory corruption.",
+    "### 2024\u20132025 ecosystem changes",
+    "* **GSMA TS.48 v7.0 (18 Jun 2025)** removed public RAM keysets from the Generic Test Profile and blocks `INSTALL` unless randomized keys are provided; cached v\u22646 profiles still expose static RAM keys and remain exploitable.",
+    "* **GSMA AN\u20112025\u201107 (09 Jul 2025)** recommends on-card bytecode verification; most eUICCs still skip full verification so VM memory bugs stay reachable after applet install.",
+    "* **Kigen OTA hardening (Jul 2025)** blocks applet loading when legacy TS.48 test profiles are active and adds runtime checks, but unpatched devices stay vulnerable."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-hacking/esim-javacard-exploitation.md"
+  ]
+}

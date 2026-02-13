@@ -1,0 +1,27 @@
+{
+  "id": "wireless_resources_de0115b0cc50",
+  "category": "wireless-resources",
+  "title": "tools",
+  "description": "# Wireless Resources Tools\n\nThis is a curated list of tools for this category.\n\n---\n\n- [AWS Pen-Testing Laboratory - Pentesting Lab With A Kali Linux Instance Accessible Via Ssh And Wireguard VPN And With Vulnerable Instances In A Private Subnet](http://feedproxy.google.com/~r/PentestTools/~3/67jcw6D5d0s/aws-pen-testing-laboratory-pentesting.html)\n- [Abaddon - Make red team operations faster, more repeatable, stealthier, while including value-added tools and bringing numerous reporting capabilit",
+  "payloads": [
+    "# Wireless Resources Tools",
+    "This is a curated list of tools for this category.",
+    "- [AWS Pen-Testing Laboratory - Pentesting Lab With A Kali Linux Instance Accessible Via Ssh And Wireguard VPN And With Vulnerable Instances In A Private Subnet](http://feedproxy.google.com/~r/PentestTools/~3/67jcw6D5d0s/aws-pen-testing-laboratory-pentesting.html)",
+    "- [Abaddon - Make red team operations faster, more repeatable, stealthier, while including value-added tools and bringing numerous reporting capabilities](http://www.kitploit.com/2021/11/abaddon-make-red-team-operations-faster.html)",
+    "- [Ad-Honeypot-Autodeploy - Deploy A Small, Intentionally Insecure, Vulnerable Windows Domain For RDP Honeypot Fully Automatically](http://www.kitploit.com/2021/11/ad-honeypot-autodeploy-deploy-small.html)",
+    "- [Aggrokatz - An Aggressor Plugin Extension For Cobalt Strike Which Enables Pypykatz To Interface With The Beacons Remotely](http://feedproxy.google.com/~r/PentestTools/~3/PgYLryHwupI/aggrokatz-aggressor-plugin-extension.html)",
+    "- [AirStrike - Automatically Grab And Crack WPA-2 Handshakes With Distributed Client-Server Architecture](http://www.kitploit.com/2021/12/airstrike-automatically-grab-and-crack.html)",
+    "- [Aircrack-ng 1.6 - Complete Suite Of Tools To Assess WiFi Network Security](http://feedproxy.google.com/~r/PentestTools/~3/A9m6uTb9wwY/aircrack-ng-16-complete-suite-of-tools.html)",
+    "- [Airgeddon v9.21 - A Multi-use Bash Script for Linux Systems to Audit Wireless Networ](http://feedproxy.google.com/~r/PentestTools/~3/lUMA75AQNOk/airgeddon-v921-multi-use-bash-script.html)",
+    "- [Aura-Botnet - A Super Portable Botnet Framework With A Django-based C2 Server](http://feedproxy.google.com/~r/PentestTools/~3/tnSSVf5KKxM/aura-botnet-super-portable-botnet.html)",
+    "- [Autodeauth - A Tool Built To Automatically Deauth Local Networks](http://www.kitploit.com/2022/09/autodeauth-tool-built-to-automatically.html)",
+    "- [Autovpn - Create On Demand Disposable OpenVPN Endpoints On AWS](http://feedproxy.google.com/~r/PentestTools/~3/lxGVU3oWwCE/autovpn-create-on-demand-disposable.html)",
+    "- [AzureC2Relay - An Azure Function That Validates And Relays Cobalt Strike Beacon Traffic By Verifying The Incoming Requests Based On A Cobalt Strike Malleable C2 Profile](http://feedproxy.google.com/~r/PentestTools/~3/gRQ_OdS7vQo/azurec2relay-azure-function-that.html)",
+    "- [Bluescan - A Powerful Bluetooth Scanner For Scanning BR/LE Devices, LMP, SDP, GATT And Vulnerabilities!](http://feedproxy.google.com/~r/PentestTools/~3/g1Yto8yeP_4/bluescan-powerful-bluetooth-scanner-for.html)",
+    "- [Bramble - A Hacking Open Source Suite](http://feedproxy.google.com/~r/PentestTools/~3/5xMqgrR4qRI/bramble-hacking-open-source-suite.html)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/wireless-resources/tools.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "todo_f183f4850ece",
+  "category": "todo",
+  "title": "fz nfc",
+  "description": "# FZ - NFC\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Intro <a href=\"#id-9wrzi\" id=\"id-9wrzi\"></a>\n\nFor info about RFID and NFC check the following page:\n\n\n{{#ref}}\n../pentesting-rfid.md\n{{#endref}}\n\n## Supported NFC cards <a href=\"#id-9wrzi\" id=\"id-9wrzi\"></a>\n\n> [!CAUTION]\n> Apart from NFC cards Flipper Zero supports **other type of High-frequency cards** such as several **Mifare** Classic and Ultralight and **NTAG**.\n\nNew types of NFC cards will be added to the list of supporte",
+  "payloads": [
+    "# FZ - NFC",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Intro <a href=\"#id-9wrzi\" id=\"id-9wrzi\"></a>",
+    "For info about RFID and NFC check the following page:",
+    "{{#ref}}",
+    "../pentesting-rfid.md",
+    "{{#endref}}",
+    "## Supported NFC cards <a href=\"#id-9wrzi\" id=\"id-9wrzi\"></a>",
+    "> [!CAUTION]",
+    "> Apart from NFC cards Flipper Zero supports **other type of High-frequency cards** such as several **Mifare** Classic and Ultralight and **NTAG**.",
+    "New types of NFC cards will be added to the list of supported cards. Flipper Zero supports the following **NFC cards type A** (ISO 14443A):",
+    "- **Bank cards (EMV)** \u2014 only read UID, SAK, and ATQA without saving.",
+    "- **Unknown cards** \u2014 read (UID, SAK, ATQA) and emulate an UID.",
+    "For **NFC cards type B, type F, and type V**, Flipper Zero is able to read an UID without saving it.",
+    "### NFC cards type A <a href=\"#uvusf\" id=\"uvusf\"></a>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/flipper-zero/fz-nfc.md"
+  ]
+}

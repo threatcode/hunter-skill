@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_7089ae84bd6f",
+  "category": "ai-research",
+  "title": "lab 06 tool calling",
+  "description": "# Lab 6: Tool Calling and Function Integration\n\n## Objective\nIn this lab, you will learn how to implement tool calling (function calling) with Ollama models. You'll create functions that models can invoke, handle tool responses, build agent loops, and create practical applications that extend model capabilities with external tools.\n\n## Prerequisites\n- Completed Labs 1-5\n- Python 3.8+ installed\n- Ollama Python library installed (`pip install ollama`)\n- Understanding of Python functions\n- A tool-c",
+  "payloads": [
+    "# Lab 6: Tool Calling and Function Integration",
+    "## Objective",
+    "In this lab, you will learn how to implement tool calling (function calling) with Ollama models. You'll create functions that models can invoke, handle tool responses, build agent loops, and create practical applications that extend model capabilities with external tools.",
+    "## Prerequisites",
+    "- Completed Labs 1-5",
+    "- Python 3.8+ installed",
+    "- Ollama Python library installed (`pip install ollama`)",
+    "- Understanding of Python functions",
+    "- A tool-capable model (e.g., `qwen3`, `llama3.2`)",
+    "## Estimated Time",
+    "90-120 minutes",
+    "## Part 1: Understanding Tool Calling",
+    "### What is Tool Calling?",
+    "Tool calling allows language models to invoke external functions and use their results to provide more accurate, up-to-date, or computed answers.",
+    "### Use Cases"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ollama-labs/lab-06-tool-calling.md"
+  ]
+}

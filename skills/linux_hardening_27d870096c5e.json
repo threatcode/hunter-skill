@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_27d870096c5e",
+  "category": "linux-hardening",
+  "title": "ld.so.conf example",
+  "description": "# ld.so privesc exploit example\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Prepare the environment\n\nIn the following section you can find the code of the files we are going to use to prepare the environment\n\n{{#tabs}}\n{{#tab name=\"sharedvuln.c\"}}\n\n```c\n#include <stdio.h>\n#include \"libcustom.h\"\n\nint main(){\n    printf(\"Welcome to my amazing application!\\n\");\n    vuln_func();\n    return 0;\n}\n```\n\n{{#endtab}}\n\n{{#tab name=\"libcustom.h\"}}\n\n```c\n#include <stdio.h>\n\nvoid vuln_func();\n```\n\n",
+  "payloads": [
+    "# ld.so privesc exploit example",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Prepare the environment",
+    "In the following section you can find the code of the files we are going to use to prepare the environment",
+    "{{#tabs}}",
+    "{{#tab name=\"sharedvuln.c\"}}",
+    "#include <stdio.h>",
+    "#include \"libcustom.h\"",
+    "int main(){",
+    "printf(\"Welcome to my amazing application!\\n\");",
+    "vuln_func();",
+    "return 0;",
+    "{{#endtab}}",
+    "{{#tab name=\"libcustom.h\"}}",
+    "#include <stdio.h>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/ld.so.conf-example.md"
+  ]
+}

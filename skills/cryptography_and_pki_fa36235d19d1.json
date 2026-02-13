@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_fa36235d19d1",
+  "category": "cryptography-and-pki",
+  "title": "gpg how to",
+  "description": "# Complete GPG Guide: Keys, Encryption, and Trust Management\n\nThis comprehensive guide covers GPG (GNU Privacy Guard) operations from basic key generation to advanced trust management, key server interactions, and secure backup procedures. GPG provides robust encryption, digital signatures, and key management capabilities essential for secure communications.\n\n## Table of Contents\n- [Key Generation](#generating-gpg-keys)\n- [File Encryption/Decryption](#encrypting-and-decrypting-files)\n- [Key Serv",
+  "payloads": [
+    "# Complete GPG Guide: Keys, Encryption, and Trust Management",
+    "This comprehensive guide covers GPG (GNU Privacy Guard) operations from basic key generation to advanced trust management, key server interactions, and secure backup procedures. GPG provides robust encryption, digital signatures, and key management capabilities essential for secure communications.",
+    "## Table of Contents",
+    "- [Key Generation](#generating-gpg-keys)",
+    "- [File Encryption/Decryption](#encrypting-and-decrypting-files)",
+    "- [Key Server Operations](#key-server-interaction)",
+    "- [Web of Trust](#digital-signatures-and-web-of-trust)",
+    "- [Backup and Recovery](#backup-and-recovery-procedures)",
+    "- [Advanced Operations](#advanced-operations)",
+    "- [Security Best Practices](#security-best-practices)",
+    "## Generating GPG Keys",
+    "### Installation",
+    "**Linux (Debian/Ubuntu):**",
+    "```bash",
+    "sudo apt update && sudo apt install gnupg"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/gpg_how_to.md"
+  ]
+}

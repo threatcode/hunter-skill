@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_9f1c5f4e6385",
+  "category": "ai-research",
+  "title": "basic openai api",
+  "description": "# Using the OpenAI API with Python \n\n### Step 1: Setting Up the Environment\n\n1. **Install Python**: Make sure you have Python 3.x installed. You can download it from the [official website](https://www.python.org/).\n2. **Set Up a Virtual Environment** (optional but recommended):\n   ```bash\n   python3 -m venv openai-lab-env\n   source openai-lab-env/bin/activate  # On Windows, use `openai-lab-env\\Scripts\\activate`\n   ```\n3. **Install Necessary Packages**:\n   ```bash\n   pip3 install openai requests\n",
+  "payloads": [
+    "# Using the OpenAI API with Python",
+    "### Step 1: Setting Up the Environment",
+    "1. **Install Python**: Make sure you have Python 3.x installed. You can download it from the [official website](https://www.python.org/).",
+    "2. **Set Up a Virtual Environment** (optional but recommended):",
+    "```bash",
+    "python3 -m venv openai-lab-env",
+    "source openai-lab-env/bin/activate  # On Windows, use `openai-lab-env\\Scripts\\activate`",
+    "3. **Install Necessary Packages**:",
+    "```bash",
+    "pip3 install openai requests",
+    "### Step 2: Configuring API Credentials",
+    "4. **Register on OpenAI**:",
+    "- Go to the [OpenAI website](https://www.openai.com/) and register to obtain API credentials.",
+    "5. **Configure API Credentials**:",
+    "- Store your API credentials securely, possibly using environment variables. In your terminal, you can set it up using the following command (replace `your_api_key_here` with your actual API key):"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/labs/basic_openai_api.md"
+  ]
+}

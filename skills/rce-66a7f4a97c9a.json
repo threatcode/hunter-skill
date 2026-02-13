@@ -1,0 +1,19 @@
+{
+  "id": "rce-66a7f4a97c9a",
+  "category": "RCE",
+  "title": "Python",
+  "description": "# Python Deserialization\n\n> Python deserialization is the process of reconstructing Python objects from serialized data, commonly done using formats like JSON, pickle, or YAML. The pickle module is a frequently used tool for this in Python, as it can serialize and deserialize complex Python objects, including custom classes.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Pickle](#pickle)\n    * [PyYAML](#pyyaml)\n* [References](#references)\n\n## Tools\n\n* [j0lt-github/python-des",
+  "payloads": [
+    "* [j0lt-github/python-deserialization-attack-payload-generator](https://github.com/j0lt-github/python-deserialization-attack-payload-generator) - Serialized payload for deserialization RCE attack on python driven applications where pickle,PyYAML, ruamel.yaml or jsonpickle module is used for deserialization of serialized data.",
+    "Since PyYaml version 6.0, the default loader for `load` has been switched to SafeLoader mitigating the risks against Remote Code Execution. [PR #420 - Fix](https://github.com/yaml/pyyaml/issues/420)",
+    "* [CVE-2019-20477 - 0Day YAML Deserialization Attack on PyYAML version <= 5.1.2 - Manmeet Singh (@_j0lt) - June 21, 2020](https://thej0lt.com/2020/06/21/cve-2019-20477-0day-yaml-deserialization-attack-on-pyyaml-version/)",
+    "* [Exploiting misuse of Python's \"pickle\" - Nelson Elhage - March 20, 2011](https://blog.nelhage.com/2011/03/exploiting-pickle/)",
+    "* [Python Yaml Deserialization - HackTricks - July 19, 2024](https://book.hacktricks.xyz/pentesting-web/deserialization/python-yaml-deserialization)",
+    "* [PyYAML Documentation - PyYAML - April 29, 2006](https://pyyaml.org/wiki/PyYAMLDocumentation)",
+    "* [YAML Deserialization Attack in Python - Manmeet Singh & Ashish Kukret - November 13, 2021](https://www.exploit-db.com/docs/english/47655-yaml-deserialization-attack-in-python.pdf)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/Python.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

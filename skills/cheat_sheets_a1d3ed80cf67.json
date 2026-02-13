@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_a1d3ed80cf67",
+  "category": "cheat-sheets",
+  "title": "wireshark filters",
+  "description": "# Wireshark Display Filters Cheat Sheet\n\nWireshark is the world's most popular network protocol analyzer. Display filters allow you to focus on specific traffic during analysis.\n\n## \ud83d\udccb Table of Contents\n- [Wireshark Display Filters Cheat Sheet](#wireshark-display-filters-cheat-sheet)\n  - [\ud83d\udccb Table of Contents](#-table-of-contents)\n  - [Basic Syntax](#basic-syntax)\n  - [Comparison Operators](#comparison-operators)\n  - [Logical Operators](#logical-operators)\n  - [Protocol Filters](#protocol-filters)",
+  "payloads": [
+    "# Wireshark Display Filters Cheat Sheet",
+    "Wireshark is the world's most popular network protocol analyzer. Display filters allow you to focus on specific traffic during analysis.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Wireshark Display Filters Cheat Sheet](#wireshark-display-filters-cheat-sheet)",
+    "- [\ud83d\udccb Table of Contents](#-table-of-contents)",
+    "- [Basic Syntax](#basic-syntax)",
+    "- [Comparison Operators](#comparison-operators)",
+    "- [Logical Operators](#logical-operators)",
+    "- [Protocol Filters](#protocol-filters)",
+    "- [IP Filters](#ip-filters)",
+    "- [TCP Filters](#tcp-filters)",
+    "- [UDP Filters](#udp-filters)",
+    "- [HTTP Filters](#http-filters)",
+    "- [DNS Filters](#dns-filters)",
+    "- [TLS/SSL Filters](#tlsssl-filters)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/networking/wireshark-filters.md"
+  ]
+}

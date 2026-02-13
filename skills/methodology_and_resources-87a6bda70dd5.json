@@ -1,0 +1,27 @@
+{
+  "id": "methodology_and_resources-87a6bda70dd5",
+  "category": "Methodology and Resources",
+  "title": "Linux   Privilege Escalation",
+  "description": "# Linux - Privilege Escalation\n\n:warning: Content of this page has been moved to [InternalAllTheThings/redteam/persistence/linux-persistence](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/)\n\n- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#tools)\n- [Checklist](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#checklists)\n- [Looting for pass",
+  "payloads": [
+    "# Linux - Privilege Escalation",
+    ":warning: Content of this page has been moved to [InternalAllTheThings/redteam/persistence/linux-persistence](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/)",
+    "- [Tools](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#tools)",
+    "- [Checklist](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#checklists)",
+    "- [Looting for passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#looting-for-passwords)",
+    "- [Files containing passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#files-containing-passwords)",
+    "- [Old passwords in /etc/security/opasswd](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#old-passwords-in-etcsecurityopasswd)",
+    "- [Last edited files](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#last-edited-files)",
+    "- [In memory passwords](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#in-memory-passwords)",
+    "- [Find sensitive files](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#find-sensitive-files)",
+    "- [SSH Key](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#ssh-key)",
+    "- [Sensitive files](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#sensitive-files)",
+    "- [SSH Key Predictable PRNG (Authorized_Keys) Process](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#ssh-key-predictable-prng-authorized_keys-process)",
+    "- [Scheduled tasks](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#scheduled-tasks)",
+    "- [Cron jobs](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/#cron-jobs)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Methodology and Resources/Linux - Privilege Escalation.md"
+  ]
+}

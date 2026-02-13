@@ -1,0 +1,27 @@
+{
+  "id": "api_key_leaks-654273e6b3d8",
+  "category": "API Key Leaks",
+  "title": "IIS Machine Keys",
+  "description": "# IIS Machine Keys\n\n> That machine key is used for encryption and decryption of forms authentication cookie data and view-state data, and for verification of out-of-process session state identification.\n\n## Summary\n\n* [Viewstate Format](#viewstate-format)\n* [Machine Key Format And Locations](#machine-key-format-and-locations)\n* [Identify Known Machine Key](#identify-known-machine-key)\n* [Decode ViewState](#decode-viewstate)\n* [Generate ViewState For RCE](#generate-viewstate-for-rce)\n    * [MAC I",
+  "payloads": [
+    "# IIS Machine Keys",
+    "> That machine key is used for encryption and decryption of forms authentication cookie data and view-state data, and for verification of out-of-process session state identification.",
+    "## Summary",
+    "* [Viewstate Format](#viewstate-format)",
+    "* [Machine Key Format And Locations](#machine-key-format-and-locations)",
+    "* [Identify Known Machine Key](#identify-known-machine-key)",
+    "* [Decode ViewState](#decode-viewstate)",
+    "* [Generate ViewState For RCE](#generate-viewstate-for-rce)",
+    "* [MAC Is Not Enabled](#mac-is-not-enabled)",
+    "* [MAC Is Enabled And Encryption Is Disabled](#mac-is-enabled-and-encryption-is-disabled)",
+    "* [MAC Is Enabled And Encryption Is Enabled](#mac-is-enabled-and-encryption-is-enabled)",
+    "* [Edit Cookies With The Machine Key](#edit-cookies-with-the-machine-key)",
+    "* [References](#references)",
+    "## Viewstate Format",
+    "ViewState in IIS is a technique used to retain the state of web controls between postbacks in ASP.NET applications. It stores data in a hidden field on the page, allowing the page to maintain user input and other state information."
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/API Key Leaks/IIS-Machine-Keys.md"
+  ]
+}

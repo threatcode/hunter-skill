@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_938764b590d8",
+  "category": "macos-hardening",
+  "title": "macos function hooking",
+  "description": "# macOS Function Hooking\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Function Interposing\n\nCreate a **dylib** with an **`__interpose` (`__DATA___interpose`)** section (or a section flagged with **`S_INTERPOSING`**) containing tuples of **function pointers** that refer to the **original** and the **replacement** functions.\n\nThen, **inject** the dylib with **`DYLD_INSERT_LIBRARIES`** (the interposing needs occur before the main app loads). Obviously the [**restrictions** applied to t",
+  "payloads": [
+    "# macOS Function Hooking",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Function Interposing",
+    "Create a **dylib** with an **`__interpose` (`__DATA___interpose`)** section (or a section flagged with **`S_INTERPOSING`**) containing tuples of **function pointers** that refer to the **original** and the **replacement** functions.",
+    "Then, **inject** the dylib with **`DYLD_INSERT_LIBRARIES`** (the interposing needs occur before the main app loads). Obviously the [**restrictions** applied to the use of **`DYLD_INSERT_LIBRARIES`** applies here also](macos-library-injection/index.html#check-restrictions).",
+    "### Interpose printf",
+    "{{#tabs}}",
+    "{{#tab name=\"interpose.c\"}}",
+    "```c:interpose.c\" overflow=\"wrap",
+    "// gcc -dynamiclib interpose.c -o interpose.dylib",
+    "#include <stdio.h>",
+    "#include <stdarg.h>",
+    "int my_printf(const char *format, ...) {",
+    "//va_list args;",
+    "//va_start(args, format);"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-function-hooking.md"
+  ]
+}

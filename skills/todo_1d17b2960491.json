@@ -1,0 +1,27 @@
+{
+  "id": "todo_1d17b2960491",
+  "category": "todo",
+  "title": "fz 125khz rfid",
+  "description": "# FZ - 125kHz RFID\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\n## Intro\n\nFor more info about how 125kHz tags work check:\n\n\n{{#ref}}\n../pentesting-rfid.md\n{{#endref}}\n\n## Actions\n\nFor more info about these types of tags [**read this intro**](../pentesting-rfid.md#low-frequency-rfid-tags-125khz).\n\n### Read\n\nTries to **read** the card info. Then it can **emulate** them.\n\n> [!WARNING]\n> Note that some intercoms try to protect themselves from key duplication by sending a write command pri",
+  "payloads": [
+    "# FZ - 125kHz RFID",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Intro",
+    "For more info about how 125kHz tags work check:",
+    "{{#ref}}",
+    "../pentesting-rfid.md",
+    "{{#endref}}",
+    "## Actions",
+    "For more info about these types of tags [**read this intro**](../pentesting-rfid.md#low-frequency-rfid-tags-125khz).",
+    "### Read",
+    "Tries to **read** the card info. Then it can **emulate** them.",
+    "> [!WARNING]",
+    "> Note that some intercoms try to protect themselves from key duplication by sending a write command prior to reading. If the write succeeds, that tag is considered fake. When Flipper emulates RFID there is no way for the reader to distinguish it from the original one, so no such problems occur.",
+    "### Add Manually",
+    "You can create **fake cards in Flipper Zero indicating the data** you manually and then emulate it."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/todo/radio-hacking/flipper-zero/fz-125khz-rfid.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_ca7cc2910d03",
+  "category": "macos-hardening",
+  "title": "macos macf mandatory access control framework",
+  "description": "# macOS MACF\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\n**MACF** stands for **Mandatory Access Control Framework**, which is a security system built into the operating system to help protect your computer. It works by setting **strict rules about who or what can access certain parts of the system**, such as files, applications, and system resources. By enforcing these rules automatically, MACF ensures that only authorized users and processes can perform specific",
+  "payloads": [
+    "# macOS MACF",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "**MACF** stands for **Mandatory Access Control Framework**, which is a security system built into the operating system to help protect your computer. It works by setting **strict rules about who or what can access certain parts of the system**, such as files, applications, and system resources. By enforcing these rules automatically, MACF ensures that only authorized users and processes can perform specific actions, reducing the risk of unauthorized access or malicious activities.",
+    "Note that MACF doesn't really make any decisions as it just **intercepts** actions, it leaves the decisions to the **policy modules** (kernel extensions) it calls like `AppleMobileFileIntegrity.kext`, `Quarantine.kext`, `Sandbox.kext`, `TMSafetyNet.kext` and `mcxalr.kext`.",
+    "- A policy may be enforcing (return 0 non-zero on some operation)",
+    "- A policy may be monitoring (return 0, so as not to object but piggyback on hook to do something)",
+    "- A MACF static policy is installed in boot and will NEVER be removed",
+    "- A MACF dynamic policy is installed by a KEXT (kextload) and may hypothetically be kextunloaded",
+    "- In iOS only static policies are allowed and in macOS static + dynamic.",
+    "- [https://newosxbook.com/xxr/index.php](https://newosxbook.com/xxr/index.php)",
+    "### Flow",
+    "1. Process performs a syscall/mach trap",
+    "2. The relevant function is called inside the kernel",
+    "3. Function calls MACF"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-security-protections/macos-macf-mandatory-access-control-framework.md"
+  ]
+}

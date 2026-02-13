@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_f7f1ded4ef05",
+  "category": "windows-hardening",
+  "title": "asreproast",
+  "description": "# ASREPRoast\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## ASREPRoast\n\nASREPRoast is a security attack that exploits users who lack the **Kerberos pre-authentication required attribute**. Essentially, this vulnerability allows attackers to request authentication for a user from the Domain Controller (DC) without needing the user's password. The DC then responds with a message encrypted with the user's password-derived key, which attackers can attempt to crack offline to discover the use",
+  "payloads": [
+    "# ASREPRoast",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## ASREPRoast",
+    "ASREPRoast is a security attack that exploits users who lack the **Kerberos pre-authentication required attribute**. Essentially, this vulnerability allows attackers to request authentication for a user from the Domain Controller (DC) without needing the user's password. The DC then responds with a message encrypted with the user's password-derived key, which attackers can attempt to crack offline to discover the user's password.",
+    "The main requirements for this attack are:",
+    "- **Lack of Kerberos pre-authentication**: Target users must not have this security feature enabled.",
+    "- **Connection to the Domain Controller (DC)**: Attackers need access to the DC to send requests and receive encrypted messages.",
+    "- **Optional domain account**: Having a domain account allows attackers to more efficiently identify vulnerable users through LDAP queries. Without such an account, attackers must guess usernames.",
+    "#### Enumerating vulnerable users (need domain credentials)",
+    "```bash:Using Windows",
+    "Get-DomainUser -PreauthNotRequired -verbose #List vuln users using PowerView",
+    "```bash:Using Linux",
+    "bloodyAD -u user -p 'totoTOTOtoto1234*' -d crash.lab --host 10.100.10.5 get search --filter '(&(userAccountControl:1.2.840.113556.1.4.803:=4194304)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))' --attr sAMAccountName",
+    "#### Request AS_REP message",
+    "```bash:Using Linux"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/asreproast.md"
+  ]
+}

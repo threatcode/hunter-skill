@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_76952dbf022c",
+  "category": "generic-methodologies-and-resources",
+  "title": "spoofing llmnr nbt ns mdns dns and wpad and relay attacks",
+  "description": "# Spoofing LLMNR, NBT-NS, mDNS/DNS and WPAD and Relay Attacks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Network Protocols\n\n### Local Host Resolution Protocols\n\n- **LLMNR, NBT-NS, and mDNS**:\n  - Microsoft and other operating systems use LLMNR and NBT-NS for local name resolution when DNS fails. Similarly, Apple and Linux systems use mDNS.\n  - These protocols are susceptible to interception and spoofing due to their unauthenticated, broadcast nature over UDP.\n  - [Responder](https://",
+  "payloads": [
+    "# Spoofing LLMNR, NBT-NS, mDNS/DNS and WPAD and Relay Attacks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Network Protocols",
+    "### Local Host Resolution Protocols",
+    "- **LLMNR, NBT-NS, and mDNS**:",
+    "- Microsoft and other operating systems use LLMNR and NBT-NS for local name resolution when DNS fails. Similarly, Apple and Linux systems use mDNS.",
+    "- These protocols are susceptible to interception and spoofing due to their unauthenticated, broadcast nature over UDP.",
+    "- [Responder](https://github.com/lgandx/Responder) and [Dementor](https://github.com/MatrixEditor/Dementor) can be used to impersonate services by sending forged responses to hosts querying these protocols.",
+    "- Further information on service impersonation using Responder can be found [here](spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks.md).",
+    "### Web Proxy Auto-Discovery Protocol (WPAD)",
+    "- WPAD allows browsers to discover proxy settings automatically.",
+    "- Discovery is facilitated via DHCP, DNS, or fallback to LLMNR and NBT-NS if DNS fails.",
+    "- Responder can automate WPAD attacks, directing clients to malicious WPAD servers.",
+    "### Responder/Dementor for Protocol Poisoning",
+    "- **Responder** is a tool used for poisoning LLMNR, NBT-NS, and mDNS queries, selectively responding based on query types, primarily targeting SMB services."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks.md"
+  ]
+}

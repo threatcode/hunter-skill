@@ -1,0 +1,27 @@
+{
+  "id": "insecure_deserialization-f22cd160746f",
+  "category": "Insecure Deserialization",
+  "title": "DotNET",
+  "description": "# .NET Deserialization\n\n> .NET serialization is the process of converting an object\u2019s state into a format that can be easily stored or transmitted, such as XML, JSON, or binary. This serialized data can then be saved to a file, sent over a network, or stored in a database. Later, it can be deserialized to reconstruct the original object with its data intact. Serialization is widely used in .NET for tasks like caching, data transfer between applications, and session state management.\n\n## Summary\n",
+  "payloads": [
+    "# .NET Deserialization",
+    "> .NET serialization is the process of converting an object\u2019s state into a format that can be easily stored or transmitted, such as XML, JSON, or binary. This serialized data can then be saved to a file, sent over a network, or stored in a database. Later, it can be deserialized to reconstruct the original object with its data intact. Serialization is widely used in .NET for tasks like caching, data transfer between applications, and session state management.",
+    "## Summary",
+    "* [Detection](#detection)",
+    "* [Tools](#tools)",
+    "* [Formatters](#formatters)",
+    "* [XmlSerializer](#xmlserializer)",
+    "* [DataContractSerializer](#datacontractserializer)",
+    "* [NetDataContractSerializer](#netdatacontractserializer)",
+    "* [LosFormatter](#losformatter)",
+    "* [JSON.NET](#jsonnet)",
+    "* [BinaryFormatter](#binaryformatter)",
+    "* [POP Gadgets](#pop-gadgets)",
+    "* [References](#references)",
+    "## Detection"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/DotNET.md"
+  ]
+}

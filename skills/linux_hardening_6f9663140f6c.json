@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_6f9663140f6c",
+  "category": "linux-hardening",
+  "title": "linux environment variables",
+  "description": "# Linux Environment Variables\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Global variables\n\nThe global variables **will be** inherited by **child processes**.\n\nYou can create a global variable for your current session doing:\n\n```bash\nexport MYGLOBAL=\"hello world\"\necho $MYGLOBAL #Prints: hello world\n```\n\nThis variable will be accessible by your current sessions and its child processes.\n\nYou can **remove** a variable doing:\n\n```bash\nunset MYGLOBAL\n```\n\n## Local variables\n\nThe **local varia",
+  "payloads": [
+    "# Linux Environment Variables",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Global variables",
+    "The global variables **will be** inherited by **child processes**.",
+    "You can create a global variable for your current session doing:",
+    "```bash",
+    "export MYGLOBAL=\"hello world\"",
+    "echo $MYGLOBAL #Prints: hello world",
+    "This variable will be accessible by your current sessions and its child processes.",
+    "You can **remove** a variable doing:",
+    "```bash",
+    "unset MYGLOBAL",
+    "## Local variables",
+    "The **local variables** can only be **accessed** by the **current shell/script**.",
+    "```bash"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/linux-environment-variables.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_6300709f3edb",
+  "category": "macos-hardening",
+  "title": "macos xpc connection get audit token attack",
+  "description": "# macOS xpc_connection_get_audit_token Attack\n\n{{#include ../../../../../../banners/hacktricks-training.md}}\n\n**For further information check the original post:** [**https://sector7.computest.nl/post/2023-10-xpc-audit-token-spoofing/**](https://sector7.computest.nl/post/2023-10-xpc-audit-token-spoofing/). This is a summary:\n\n## Mach Messages Basic Info\n\nIf you don't know what Mach Messages are start checking this page:\n\n\n{{#ref}}\n../../\n{{#endref}}\n\nFor the moment remember that ([definition from",
+  "payloads": [
+    "# macOS xpc_connection_get_audit_token Attack",
+    "{{#include ../../../../../../banners/hacktricks-training.md}}",
+    "**For further information check the original post:** [**https://sector7.computest.nl/post/2023-10-xpc-audit-token-spoofing/**](https://sector7.computest.nl/post/2023-10-xpc-audit-token-spoofing/). This is a summary:",
+    "## Mach Messages Basic Info",
+    "If you don't know what Mach Messages are start checking this page:",
+    "{{#ref}}",
+    "../../",
+    "{{#endref}}",
+    "For the moment remember that ([definition from here](https://sector7.computest.nl/post/2023-10-xpc-audit-token-spoofing)):\\",
+    "Mach messages are sent over a _mach port_, which is a **single receiver, multiple sender communication** channel built into the mach kernel. **Multiple processes can send messages** to a mach port, but at any point **only a single process can read from it**. Just like file descriptors and sockets, mach ports are allocated and managed by the kernel and processes only see an integer, which they can use to indicate to the kernel which of their mach ports they want to use.",
+    "## XPC Connection",
+    "If you don't know how a XPC connection is established check:",
+    "{{#ref}}",
+    "{{#endref}}",
+    "## Vuln Summary"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-ipc-inter-process-communication/macos-xpc/macos-xpc-connecting-process-check/macos-xpc_connection_get_audit_token-attack.md"
+  ]
+}

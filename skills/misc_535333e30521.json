@@ -1,0 +1,27 @@
+{
+  "id": "misc_535333e30521",
+  "category": "Misc",
+  "title": "additional tools",
+  "description": "# Additional Cybersecurity Tools\n\nThis document contains additional cybersecurity and penetration testing tools that don't fit into specific categories or span multiple categories. These tools have been collected from various sources and represent a comprehensive collection of security testing utilities.\n\nFor category-specific tools, please check the `tools.md` file in each respective directory:\n- [AI Research Tools](ai-research/tools.md)\n- [Car Hacking Tools](car-hacking/tools.md)\n- [Cloud Reso",
+  "payloads": [
+    "# Additional Cybersecurity Tools",
+    "This document contains additional cybersecurity and penetration testing tools that don't fit into specific categories or span multiple categories. These tools have been collected from various sources and represent a comprehensive collection of security testing utilities.",
+    "For category-specific tools, please check the `tools.md` file in each respective directory:",
+    "- [AI Research Tools](ai-research/tools.md)",
+    "- [Car Hacking Tools](car-hacking/tools.md)",
+    "- [Cloud Resources Tools](cloud-resources/tools.md)",
+    "- [Password Cracking Tools](cracking-passwords/tools.md)",
+    "- [Cryptography and PKI Tools](cryptography-and-pki/tools.md)",
+    "- [DFIR Tools](dfir/tools.md)",
+    "- [Exploit Development Tools](exploit-development/tools.md)",
+    "- [Game Hacking Tools](game-hacking/tools.md)",
+    "- [Honeypots and Honeynets Tools](honeypots-honeynets/tools.md)",
+    "- [IoT Hacking Tools](iot-hacking/tools.md)",
+    "- [Linux Hardening Tools](linux-hardening/tools.md)",
+    "- [Mobile Security Tools](mobile-security/tools.md)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/additional_tools.md"
+  ]
+}

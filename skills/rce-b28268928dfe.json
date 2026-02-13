@@ -1,0 +1,26 @@
+{
+  "id": "rce-b28268928dfe",
+  "category": "RCE",
+  "title": "JavaScript",
+  "description": "# Server Side Template Injection - JavaScript\n\n> Server-Side Template Injection (SSTI)  occurs when an attacker can inject malicious code into a server-side template, causing the server to execute arbitrary commands. In the context of JavaScript, SSTI vulnerabilities can arise when using server-side templating engines like Handlebars, EJS, or Pug, where user input is integrated into templates without adequate sanitization.\n\n## Summary\n\n- [Templating Libraries](#templating-libraries)\n- [Universal",
+  "payloads": [
+    "| EJS           | `<% %>`          |",
+    "| UnderscoreJS  | `<% %>`          |",
+    "[Official website](https://handlebarsjs.com/)",
+    "This payload only work in handlebars versions, fixed in [GHSA-q42p-pg8m-cqh6](https://github.com/advisories/GHSA-q42p-pg8m-cqh6):",
+    "- `>= 4.1.0`, `< 4.1.2`",
+    "- `>= 4.0.0`, `< 4.0.14`",
+    "- `< 3.0.7`",
+    "[Official website](https://lodash.com/docs/4.17.15)",
+    "<%= _.VERSION %>",
+    "<%= _.VERSION %>",
+    "[Official website](https://pugjs.org/api/getting-started.html)",
+    "- [Exploiting Less.js to Achieve RCE - Jeremy Buis - July 1, 2021](https://web.archive.org/web/20210706135910/https://www.softwaresecured.com/exploiting-less-js/)",
+    "- [Handlebars template injection and RCE in a Shopify app - Mahmoud Gamal - April 4, 2019](https://mahmoudsec.blogspot.com/2019/04/handlebars-template-injection-and-rce.html)",
+    "- [Successful Errors: New Code Injection and SSTI Techniques - Vladislav Korchagin - January 03, 2026](https://github.com/vladko312/Research_Successful_Errors/blob/main/README.md)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/Server Side Template Injection/JavaScript.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

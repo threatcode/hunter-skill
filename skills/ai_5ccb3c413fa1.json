@@ -1,0 +1,27 @@
+{
+  "id": "ai_5ccb3c413fa1",
+  "category": "AI",
+  "title": "AI Unsupervised Learning Algorithms",
+  "description": "# Unsupervised Learning Algorithms\n\n{{#include ../banners/hacktricks-training.md}}\n\n## Unsupervised Learning\n\nUnsupervised learning is a type of machine learning where the model is trained on data without labeled responses. The goal is to find patterns, structures, or relationships within the data. Unlike supervised learning, where the model learns from labeled examples, unsupervised learning algorithms work with unlabeled data.\nUnsupervised learning is often used for tasks such as clustering, d",
+  "payloads": [
+    "# Unsupervised Learning Algorithms",
+    "{{#include ../banners/hacktricks-training.md}}",
+    "## Unsupervised Learning",
+    "Unsupervised learning is a type of machine learning where the model is trained on data without labeled responses. The goal is to find patterns, structures, or relationships within the data. Unlike supervised learning, where the model learns from labeled examples, unsupervised learning algorithms work with unlabeled data.",
+    "Unsupervised learning is often used for tasks such as clustering, dimensionality reduction, and anomaly detection. It can help discover hidden patterns in data, group similar items together, or reduce the complexity of the data while preserving its essential features.",
+    "### K-Means Clustering",
+    "K-Means is a centroid-based clustering algorithm that partitions data into K clusters by assigning each point to the nearest cluster mean. The algorithm works as follows:",
+    "1. **Initialization**: Choose K initial cluster centers (centroids), often randomly or via smarter methods like k-means++",
+    "2. **Assignment**: Assign each data point to the nearest centroid based on a distance metric (e.g., Euclidean distance).",
+    "3. **Update**: Recalculate the centroids by taking the mean of all data points assigned to each cluster.",
+    "4. **Repeat**: Steps 2\u20133 are repeated until cluster assignments stabilize (centroids no longer move significantly).",
+    "> [!TIP]",
+    "> *Use cases in cybersecurity:* K-Means is used for intrusion detection by clustering network events. For example, researchers applied K-Means to the KDD Cup 99 intrusion dataset and found it effectively partitioned traffic into normal vs. attack clusters. In practice, security analysts might cluster log entries or user behavior data to find groups of similar activity; any points that don\u2019t belong to a well-formed cluster might indicate anomalies (e.g. a new malware variant forming its own small cluster). K-Means can also help malware family classification by grouping binaries based on behavior profiles or feature vectors.",
+    "#### Selection of K",
+    "The number of clusters (K) is a hyperparameter that needs to be defined before running the algorithm. Techniques like the Elbow Method or Silhouette Score can help determine an appropriate value for K by evaluating the clustering performance:"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-Unsupervised-Learning-Algorithms.md"
+  ]
+}

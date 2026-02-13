@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_428a3d096ef4",
+  "category": "cryptography-and-pki",
+  "title": "cert openssl",
+  "description": "# Certificate Management with OpenSSL\n\nOpenSSL is a robust, full-featured cryptographic library and toolkit that provides essential cryptographic functions for secure communications. This guide covers traditional certificate operations and modern post-quantum cryptography approaches.\n\n## Overview\n\nOpenSSL supports:\n- **Cryptographic Functions**: Encryption, decryption, digital signatures, hash functions, key management\n- **Protocols**: SSL/TLS, DTLS, SSH, and emerging post-quantum protocols\n- **",
+  "payloads": [
+    "# Certificate Management with OpenSSL",
+    "OpenSSL is a robust, full-featured cryptographic library and toolkit that provides essential cryptographic functions for secure communications. This guide covers traditional certificate operations and modern post-quantum cryptography approaches.",
+    "## Overview",
+    "OpenSSL supports:",
+    "- **Cryptographic Functions**: Encryption, decryption, digital signatures, hash functions, key management",
+    "- **Protocols**: SSL/TLS, DTLS, SSH, and emerging post-quantum protocols",
+    "- **Certificate Management**: Generation, validation, conversion, and troubleshooting",
+    "- **Post-Quantum Readiness**: Hybrid implementations and migration strategies",
+    "\u26a0\ufe0f **Security Notice**: RSA and ECC certificates are deprecated due to quantum vulnerability. Consider hybrid approaches combining classical and post-quantum algorithms for future-proofing.",
+    "## Traditional Certificate Generation",
+    "### RSA Certificates (Legacy - Quantum Vulnerable)",
+    "\u26a0\ufe0f **Deprecated**: RSA is quantum-vulnerable. Use only for legacy compatibility.",
+    "```bash",
+    "# Generate RSA private key (minimum 3072 bits)",
+    "openssl genpkey -algorithm RSA -pkcs8 -out rsa_private.key -aes256 -pass pass:your_password"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/cert_openssl.md"
+  ]
+}

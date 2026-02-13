@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_860d5f7bbd9e",
+  "category": "cryptography-and-pki",
+  "title": "disk encryption",
+  "description": "# Comprehensive Disk and Data Encryption Guide\n\nThis guide covers modern disk encryption solutions, from full-disk encryption to file-level protection, including post-quantum considerations, mobile device security, and enterprise key management strategies.\n\n## Table of Contents\n- [Full Disk Encryption](#full-disk-encryption)\n- [File-Level Encryption](#file-level-encryption)\n- [Mobile Device Encryption](#mobile-device-encryption)\n- [Post-Quantum Encryption](#post-quantum-encryption-options)\n- [En",
+  "payloads": [
+    "# Comprehensive Disk and Data Encryption Guide",
+    "This guide covers modern disk encryption solutions, from full-disk encryption to file-level protection, including post-quantum considerations, mobile device security, and enterprise key management strategies.",
+    "## Table of Contents",
+    "- [Full Disk Encryption](#full-disk-encryption)",
+    "- [File-Level Encryption](#file-level-encryption)",
+    "- [Mobile Device Encryption](#mobile-device-encryption)",
+    "- [Post-Quantum Encryption](#post-quantum-encryption-options)",
+    "- [Enterprise Key Management](#enterprise-key-management)",
+    "- [Cloud Storage Encryption](#cloud-storage-encryption)",
+    "- [Implementation Guides](#implementation-guides)",
+    "- [Security Best Practices](#security-best-practices)",
+    "## Full Disk Encryption",
+    "### VeraCrypt (Recommended)",
+    "**Cross-platform, quantum-resistant ready**",
+    "```bash"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/disk_encryption.md"
+  ]
+}

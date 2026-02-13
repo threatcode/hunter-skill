@@ -1,0 +1,27 @@
+{
+  "id": "rce-a877fda6b6a3",
+  "category": "RCE",
+  "title": "README",
+  "description": "# ORM Leak\n\n> An ORM leak vulnerability occurs when sensitive information, such as database structure or user data, is unintentionally exposed due to improper handling of ORM queries. This can happen if the application returns raw error messages, debug information, or allows attackers to manipulate queries in ways that reveal underlying data.\n\n## Summary\n\n* [Django (Python)](#django-python)\n    * [Query filter](#query-filter)\n    * [Relational Filtering](#relational-filtering)\n        * [One-to-",
+  "payloads": [
+    "The ORM provides operators for matching parts of a value. These operators can utilize the SQL\u202fLIKE condition in generated queries, perform regex matching based on user-controlled patterns, or apply comparison operators such as\u202f< and\u202f>.",
+    "Let's use this great example from [PLORMBING YOUR DJANGO ORM, by Alex Brown](https://www.elttam.com/blog/plormbing-your-django-orm/)",
+    "![UML-example-app-simplified-highlight](https://www.elttam.com/assets/images/blog/2024-06-24-plormbing-your-django-orm/UML-example-app-simplified-highlight1.png)",
+    "* [elttam/plormber](https://github.com/elttam/plormber) - tool for exploiting ORM Leak time-based vulnerabilities",
+    "https://some.vuln.app/articles/time-based;",
+    "* [`filter[createdBy][resetToken][startsWith]=06`](http://127.0.0.1:9900/articles?filter[createdBy][resetToken][startsWith]=)",
+    "Only in Ransack < `4.0.0`.",
+    "![ransack_bruteforce_overview](https://assets-global.website-files.com/5f6498c074436c349716e747/63ceda8f7b5b98d68365bdee_ransack_bruteforce_overview-p-1600.png)",
+    "* [CVE-2023-47117: Label Studio ORM Leak](https://github.com/HumanSignal/label-studio/security/advisories/GHSA-6hjj-gq77-j4qw)",
+    "* [CVE-2023-31133: Ghost CMS ORM Leak](https://github.com/TryGhost/Ghost/security/advisories/GHSA-r97q-ghch-82j9)",
+    "* [CVE-2023-30843: Payload CMS ORM Leak](https://github.com/payloadcms/payload/security/advisories/GHSA-35jj-vqcf-f2jf)",
+    "* [ORM Injection - HackTricks - July 30, 2024](https://book.hacktricks.xyz/pentesting-web/orm-injection)",
+    "* [ORM Leak Exploitation Against SQLite - Louis Nyffenegger - July 30, 2024](https://pentesterlab.com/blog/orm-leak-with-sqlite3)",
+    "* [ORM Leaking More Than You Joined For - Alex Brown - December 18, 2025](https://www.elttam.com/blog/leaking-more-than-you-joined-for/)",
+    "* [plORMbing your Django ORM - Alex Brown - June 24, 2024](https://www.elttam.com/blog/plormbing-your-django-orm/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/ORM Leak/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

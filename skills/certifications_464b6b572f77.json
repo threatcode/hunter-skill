@@ -1,0 +1,27 @@
+{
+  "id": "certifications_464b6b572f77",
+  "category": "certifications",
+  "title": "tools to evade ids fw",
+  "description": "# Tools to Evade IDS, IPS, and Firewalls\n\nThere are various techniques and tools that can be used to evade these security measures. Below is a summary of some of the most common methods and tools for evading IDS, IPS, and firewalls.\n\n#### Techniques for Evasion\n\n1. **TTL Manipulation**:\n   - Sending packets with a Time-To-Live (TTL) value that allows them to reach the IDS/IPS but not the final destination can trick the system into ignoring subsequent packets with the same sequence but malicious ",
+  "payloads": [
+    "# Tools to Evade IDS, IPS, and Firewalls",
+    "There are various techniques and tools that can be used to evade these security measures. Below is a summary of some of the most common methods and tools for evading IDS, IPS, and firewalls.",
+    "#### Techniques for Evasion",
+    "1. **TTL Manipulation**:",
+    "- Sending packets with a Time-To-Live (TTL) value that allows them to reach the IDS/IPS but not the final destination can trick the system into ignoring subsequent packets with the same sequence but malicious content.",
+    "- **Nmap Option**: `--ttl <value>` [1].",
+    "2. **Avoiding Signatures**:",
+    "- Adding garbage data to packets to avoid matching IDS/IPS signatures.",
+    "- **Nmap Option**: `--data-length 25` [1].",
+    "3. **Fragmented Packets**:",
+    "- Fragmenting packets so that if the IDS/IPS cannot reassemble them, they will pass through undetected.",
+    "- **Nmap Option**: `-f` [1][4].",
+    "4. **Invalid Checksum**:",
+    "- Sending packets with invalid checksums, which are often ignored by sensors for performance reasons but rejected by the final host.",
+    "- Example: A packet with the RST flag and an invalid checksum [1]."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/certifications/additional_materials_for_certs/tools_to_evade_ids_fw.md"
+  ]
+}

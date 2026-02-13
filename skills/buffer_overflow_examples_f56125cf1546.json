@@ -1,0 +1,27 @@
+{
+  "id": "buffer_overflow_examples_f56125cf1546",
+  "category": "buffer-overflow-examples",
+  "title": "external platforms",
+  "description": "# External Learning Platforms and Practice Environments\n\n## Overview\n\nHands-on practice is essential for mastering buffer overflow exploitation. This guide lists reputable platforms, challenges, and resources where you can safely practice your skills in controlled, legal environments.\n\n## Dedicated Learning Platforms\n\n### Exploit Education\n\n**URL:** https://exploit.education\n\n**Description:** Comprehensive learning platform with multiple virtual machines for different skill levels.\n\n**Virtual Ma",
+  "payloads": [
+    "# External Learning Platforms and Practice Environments",
+    "## Overview",
+    "Hands-on practice is essential for mastering buffer overflow exploitation. This guide lists reputable platforms, challenges, and resources where you can safely practice your skills in controlled, legal environments.",
+    "## Dedicated Learning Platforms",
+    "### Exploit Education",
+    "**URL:** https://exploit.education",
+    "**Description:** Comprehensive learning platform with multiple virtual machines for different skill levels.",
+    "**Virtual Machines:**",
+    "#### 1. Phoenix",
+    "- **Focus**: Modern binary exploitation",
+    "- **Architecture**: x86-64",
+    "- **Topics**:",
+    "- Stack buffer overflows",
+    "- Format strings",
+    "- Heap exploitation"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/buffer-overflow-examples/resources/external-platforms.md"
+  ]
+}

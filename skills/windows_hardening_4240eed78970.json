@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_4240eed78970",
+  "category": "windows-hardening",
+  "title": "semanagevolume perform volume maintenance tasks",
+  "description": "# SeManageVolumePrivilege: Raw volume access for arbitrary file read\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nWindows user right: Perform volume maintenance tasks (constant: SeManageVolumePrivilege).\n\nHolders can perform low-level volume operations such as defragmentation, creating/removing volumes, and maintenance IO. Critically for attackers, this right allows opening raw volume device handles (e.g., \\\\.\\C:) and issuing direct disk I/O that bypasses NTFS file ACLs. With",
+  "payloads": [
+    "# SeManageVolumePrivilege: Raw volume access for arbitrary file read",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Windows user right: Perform volume maintenance tasks (constant: SeManageVolumePrivilege).",
+    "Holders can perform low-level volume operations such as defragmentation, creating/removing volumes, and maintenance IO. Critically for attackers, this right allows opening raw volume device handles (e.g., \\\\.\\C:) and issuing direct disk I/O that bypasses NTFS file ACLs. With raw access you can copy bytes of any file on the volume even if denied by DACL, by parsing the filesystem structures offline or leveraging tools that read at the block/cluster level.",
+    "Default: Administrators on servers and domain controllers.",
+    "## Abuse scenarios",
+    "- Arbitrary file read bypassing ACLs by reading the disk device (e.g., exfiltrate sensitive system-protected material such as machine private keys under %ProgramData%\\Microsoft\\Crypto\\RSA\\MachineKeys and %ProgramData%\\Microsoft\\Crypto\\Keys, registry hives, DPAPI masterkeys, SAM, ntds.dit via VSS, etc.).",
+    "- Bypass locked/privileged paths (C:\\Windows\\System32\\\u2026) by copying bytes directly from the raw device.",
+    "- In AD CS environments, exfiltrate the CA\u2019s key material (machine key store) to mint \u201cGolden Certificates\u201d and impersonate any domain principal via PKINIT. See link below.",
+    "Note: You still need a parser for NTFS structures unless you rely on helper tools. Many off-the-shelf tools abstract the raw access.",
+    "## Practical techniques",
+    "- Open a raw volume handle and read clusters:",
+    "<details>",
+    "<summary>Click to expand</summary>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/semanagevolume-perform-volume-maintenance-tasks.md"
+  ]
+}

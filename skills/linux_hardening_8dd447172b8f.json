@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_8dd447172b8f",
+  "category": "linux-hardening",
+  "title": "lxd privilege escalation",
+  "description": "# lxd/lxc Group - Privilege escalation\n\n{{#include ../../../banners/hacktricks-training.md}}\n\nIf you belong to _**lxd**_ **or** _**lxc**_ **group**, you can become root\n\n## Exploiting without internet\n\n### Method 1\n\nYou can download an alpine image to use with lxd from a trusted repository.\nCanonical publishes daily builds in their site: [https://images.lxd.canonical.com/images/alpine/3.18/amd64/default/](https://images.lxd.canonical.com/images/alpine/3.18/amd64/default/)\nJust grab both **lxd.ta",
+  "payloads": [
+    "# lxd/lxc Group - Privilege escalation",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "If you belong to _**lxd**_ **or** _**lxc**_ **group**, you can become root",
+    "## Exploiting without internet",
+    "### Method 1",
+    "You can download an alpine image to use with lxd from a trusted repository.",
+    "Canonical publishes daily builds in their site: [https://images.lxd.canonical.com/images/alpine/3.18/amd64/default/](https://images.lxd.canonical.com/images/alpine/3.18/amd64/default/)",
+    "Just grab both **lxd.tar.xz** and **rootfs.squashfs** from the newest build. (Directory name is the date).",
+    "Alternativelly you can install in your machine this distro builder: [https://github.com/lxc/distrobuilder](https://github.com/lxc/distrobuilder) (follow the instructions of the github):",
+    "```bash",
+    "# Install requirements",
+    "sudo apt update",
+    "sudo apt install -y golang-go gcc debootstrap rsync gpg squashfs-tools git make build-essential libwin-hivex-perl wimtools genisoimage",
+    "# Clone repo",
+    "mkdir -p $HOME/go/src/github.com/lxc/"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation.md"
+  ]
+}

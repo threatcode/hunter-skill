@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_613934ebef31",
+  "category": "generic-methodologies-and-resources",
+  "title": "eigrp attacks",
+  "description": "# EIGRP Attacks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n**This is a summary of the attacks exposed in** [**https://medium.com/@in9uz/cisco-nightmare-pentesting-cisco-networks-like-a-devil-f4032eb437b9**](https://medium.com/@in9uz/cisco-nightmare-pentesting-cisco-networks-like-a-devil-f4032eb437b9). Check it for further information.\n\n## **Fake EIGRP Neighbors Attack**\n\n- **Objective**: To overload router CPUs by flooding them with EIGRP hello packets, potentially leading to a Denial o",
+  "payloads": [
+    "# EIGRP Attacks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "**This is a summary of the attacks exposed in** [**https://medium.com/@in9uz/cisco-nightmare-pentesting-cisco-networks-like-a-devil-f4032eb437b9**](https://medium.com/@in9uz/cisco-nightmare-pentesting-cisco-networks-like-a-devil-f4032eb437b9). Check it for further information.",
+    "## **Fake EIGRP Neighbors Attack**",
+    "- **Objective**: To overload router CPUs by flooding them with EIGRP hello packets, potentially leading to a Denial of Service (DoS) attack.",
+    "- **Tool**: **helloflooding.py** script.",
+    "- **Execution**:",
+    "```bash",
+    "~$ sudo python3 helloflooding.py --interface eth0 --as 1 --subnet 10.10.100.0/24",
+    "- **Parameters**:",
+    "- `--interface`: Specifies the network interface, e.g., `eth0`.",
+    "- `--as`: Defines the EIGRP autonomous system number, e.g., `1`.",
+    "- `--subnet`: Sets the subnet location, e.g., `10.10.100.0/24`.",
+    "## **EIGRP Blackhole Attack**",
+    "- **Objective**: To disrupt network traffic flow by injecting a false route, leading to a blackhole where the traffic is directed to a non-existent destination."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/pentesting-network/eigrp-attacks.md"
+  ]
+}

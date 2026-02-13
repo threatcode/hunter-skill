@@ -1,0 +1,27 @@
+{
+  "id": "_learning_and_socials-72468f293221",
+  "category": "_LEARNING_AND_SOCIALS",
+  "title": "YOUTUBE",
+  "description": "# Youtube\n\n> Discover the best YouTube channels, must-watch conference talks, and handpicked videos on information security.\n\n## Channels\n\n- [0xdf](https://www.youtube.com/@0xdf)\n- [Assetnote - Surfacing Security Podcast](https://www.youtube.com/@assetnote2016)\n- [Bug Bounty Reports Explained](https://www.youtube.com/@BugBountyReportsExplained)\n- [Codingo](https://www.youtube.com/@codingo)\n- [Critical Thinking - Bug Bounty Podcast](https://www.youtube.com/@criticalthinkingpodcast)\n- [Embrace The",
+  "payloads": [
+    "# Youtube",
+    "> Discover the best YouTube channels, must-watch conference talks, and handpicked videos on information security.",
+    "## Channels",
+    "- [0xdf](https://www.youtube.com/@0xdf)",
+    "- [Assetnote - Surfacing Security Podcast](https://www.youtube.com/@assetnote2016)",
+    "- [Bug Bounty Reports Explained](https://www.youtube.com/@BugBountyReportsExplained)",
+    "- [Codingo](https://www.youtube.com/@codingo)",
+    "- [Critical Thinking - Bug Bounty Podcast](https://www.youtube.com/@criticalthinkingpodcast)",
+    "- [Embrace The Red - wunderwuzzi](https://www.youtube.com/@embracethered)",
+    "- [GynvaelEN - Podcasts about CTFs, computer security, programming and similar things.](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)",
+    "- [Hackerone](https://www.youtube.com/channel/UCsgzmECky2Q9lQMWzDwMhYw)",
+    "- [Hackersploit](https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q)",
+    "- [Hacksplained - A Beginner Friendly Guide to Hacking](https://www.youtube.com/c/hacksplained)",
+    "- [Hak5](https://www.youtube.com/channel/UC3s0BtrBJpwNDaflRSoiieQ)",
+    "- [IppSec Channel - Hack The Box Writeups](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/_LEARNING_AND_SOCIALS/YOUTUBE.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_e69ebf5cc6ba",
+  "category": "macos-hardening",
+  "title": "macos keychain",
+  "description": "# macOS Keychain\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Main Keychains\n\n- The **User Keychain** (`~/Library/Keychains/login.keychain-db`), which is used to store **user-specific credentials** like application passwords, internet passwords, user-generated certificates, network passwords, and user-generated public/private keys.\n- The **System Keychain** (`/Library/Keychains/System.keychain`), which stores **system-wide credentials** such as WiFi passwords, system root certificates,",
+  "payloads": [
+    "# macOS Keychain",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Main Keychains",
+    "- The **User Keychain** (`~/Library/Keychains/login.keychain-db`), which is used to store **user-specific credentials** like application passwords, internet passwords, user-generated certificates, network passwords, and user-generated public/private keys.",
+    "- The **System Keychain** (`/Library/Keychains/System.keychain`), which stores **system-wide credentials** such as WiFi passwords, system root certificates, system private keys, and system application passwords.",
+    "- It's possible to find other components like certificates in `/System/Library/Keychains/*`",
+    "- In **iOS** there is only one **Keychain** located in `/private/var/Keychains/`. This folder also contains databases for the `TrustStore`, certificates authorities (`caissuercache`) and OSCP entries (`ocspache`).",
+    "- Apps will be restricted in the keychain only to their private area based on their application identifier.",
+    "### Password Keychain Access",
+    "These files, while they do not have inherent protection and can be **downloaded**, are encrypted and require the **user's plaintext password to be decrypted**. A tool like [**Chainbreaker**](https://github.com/n0fate/chainbreaker) could be used for decryption.",
+    "## Keychain Entries Protections",
+    "### ACLs",
+    "Each entry in the keychain is governed by **Access Control Lists (ACLs)** which dictate who can perform various actions on the keychain entry, including:",
+    "- **ACLAuhtorizationExportClear**: Allows the holder to get the clear text of the secret.",
+    "- **ACLAuhtorizationExportWrapped**: Allows the holder to get the clear text encrypted with another provided password."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-red-teaming/macos-keychain.md"
+  ]
+}

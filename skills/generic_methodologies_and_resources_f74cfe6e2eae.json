@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_f74cfe6e2eae",
+  "category": "generic-methodologies-and-resources",
+  "title": "docker forensics",
+  "description": "# Docker Forensics\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n## Container modification\n\nThere are suspicions that some docker container was compromised:\n\n```bash\ndocker ps\nCONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES\ncc03e43a052a        lamp-wordpress      \"./run.sh\"          2 minutes ago       Up 2 minutes        80/tcp              wordpress\n```\n\nYou can easily **find the modifications done to this con",
+  "payloads": [
+    "# Docker Forensics",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Container modification",
+    "There are suspicions that some docker container was compromised:",
+    "```bash",
+    "docker ps",
+    "CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES",
+    "cc03e43a052a        lamp-wordpress      \"./run.sh\"          2 minutes ago       Up 2 minutes        80/tcp              wordpress",
+    "You can easily **find the modifications done to this container with regards to the image** with:",
+    "```bash",
+    "docker diff wordpress",
+    "C /var",
+    "C /var/lib",
+    "C /var/lib/mysql",
+    "A /var/lib/mysql/ib_logfile0"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/docker-forensics.md"
+  ]
+}

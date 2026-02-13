@@ -1,0 +1,27 @@
+{
+  "id": "ai_research_7cf5ea1f040f",
+  "category": "ai-research",
+  "title": "monitoring",
+  "description": "# AI Monitoring and Observability Tools\n\nThis file summarizes tools and frameworks for monitoring **models**, **data**, and **LLM/GenAI applications**, and connects them to modern guidance such as the OWASP GenAI Security Project and CoSAI.\n\n## 1. Model Monitoring Tools\n\n- [MLflow](https://mlflow.org/)\n- [TensorFlow Extended (TFX)](https://www.tensorflow.org/tfx)\n- [Seldon](https://www.seldon.io/)\n\n## 2. Data Quality Tools\n\n- [Great Expectations](https://greatexpectations.io/)\n- [Deequ](https://",
+  "payloads": [
+    "# AI Monitoring and Observability Tools",
+    "This file summarizes tools and frameworks for monitoring **models**, **data**, and **LLM/GenAI applications**, and connects them to modern guidance such as the OWASP GenAI Security Project and CoSAI.",
+    "## 1. Model Monitoring Tools",
+    "- [MLflow](https://mlflow.org/)",
+    "- [TensorFlow Extended (TFX)](https://www.tensorflow.org/tfx)",
+    "- [Seldon](https://www.seldon.io/)",
+    "## 2. Data Quality Tools",
+    "- [Great Expectations](https://greatexpectations.io/)",
+    "- [Deequ](https://github.com/awslabs/deequ)",
+    "## 3. Explainability and Interpretability Tools",
+    "- [SHAP (SHapley Additive exPlanations)](https://shap.readthedocs.io/en/latest/)",
+    "- [LIME (Local Interpretable Model-agnostic Explanations)](https://github.com/marcotcr/lime)",
+    "## 4. Ethical and Bias Monitoring Tools",
+    "- [IBM's AI Fairness 360](https://www.ibm.com/opensource/open/projects/ai-fairness-360/)",
+    "- [Google's What-If Tool](https://pair-code.github.io/what-if-tool/)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/ai-research/ai-research/monitoring.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_a2ce299a3659",
+  "category": "cheat-sheets",
+  "title": "netcat",
+  "description": "# Netcat (nc) Cheat Sheet\n\nNetcat is often referred to as the \"Swiss Army knife\" of networking tools. It can read and write data across network connections using TCP or UDP protocols.\n\n## \ud83d\udccb Table of Contents\n- [Basic Syntax](#basic-syntax)\n- [Connection Modes](#connection-modes)\n- [Port Scanning](#port-scanning)\n- [File Transfers](#file-transfers)\n- [Banner Grabbing](#banner-grabbing)\n- [Reverse Shells](#reverse-shells)\n- [Bind Shells](#bind-shells)\n- [Port Forwarding](#port-forwarding)\n- [Proxy",
+  "payloads": [
+    "# Netcat (nc) Cheat Sheet",
+    "Netcat is often referred to as the \"Swiss Army knife\" of networking tools. It can read and write data across network connections using TCP or UDP protocols.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Basic Syntax](#basic-syntax)",
+    "- [Connection Modes](#connection-modes)",
+    "- [Port Scanning](#port-scanning)",
+    "- [File Transfers](#file-transfers)",
+    "- [Banner Grabbing](#banner-grabbing)",
+    "- [Reverse Shells](#reverse-shells)",
+    "- [Bind Shells](#bind-shells)",
+    "- [Port Forwarding](#port-forwarding)",
+    "- [Proxying](#proxying)",
+    "- [Chat Server](#chat-server)",
+    "- [Advanced Techniques](#advanced-techniques)",
+    "## Basic Syntax"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/networking/netcat.md"
+  ]
+}

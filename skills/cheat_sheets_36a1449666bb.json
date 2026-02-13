@@ -1,0 +1,27 @@
+{
+  "id": "cheat_sheets_36a1449666bb",
+  "category": "cheat-sheets",
+  "title": "volatility",
+  "description": "# Volatility Memory Forensics Cheat Sheet\n\nVolatility is an open-source memory forensics framework for incident response and malware analysis. It extracts digital artifacts from volatile memory (RAM) dumps.\n\n## \ud83d\udccb Table of Contents\n- [Installation](#installation)\n- [Basic Usage](#basic-usage)\n- [Image Identification](#image-identification)\n- [Process Analysis](#process-analysis)\n- [Network Analysis](#network-analysis)\n- [Registry Analysis](#registry-analysis)\n- [Malware Detection](#malware-detect",
+  "payloads": [
+    "# Volatility Memory Forensics Cheat Sheet",
+    "Volatility is an open-source memory forensics framework for incident response and malware analysis. It extracts digital artifacts from volatile memory (RAM) dumps.",
+    "## \ud83d\udccb Table of Contents",
+    "- [Installation](#installation)",
+    "- [Basic Usage](#basic-usage)",
+    "- [Image Identification](#image-identification)",
+    "- [Process Analysis](#process-analysis)",
+    "- [Network Analysis](#network-analysis)",
+    "- [Registry Analysis](#registry-analysis)",
+    "- [Malware Detection](#malware-detection)",
+    "- [File Extraction](#file-extraction)",
+    "- [Timeline Analysis](#timeline-analysis)",
+    "- [Advanced Analysis](#advanced-analysis)",
+    "## Installation",
+    "```bash"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cheat-sheets/forensics/volatility.md"
+  ]
+}

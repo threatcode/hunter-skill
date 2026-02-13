@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_7f6734031001",
+  "category": "generic-methodologies-and-resources",
+  "title": "detecting phising",
+  "description": "# Detecting Phishing\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Introduction\n\nTo detect a phishing attempt it's important to **understand the phishing techniques that are being used nowadays**. On the parent page of this post, you can find this information, so if you aren't aware of which techniques are being used today I recommend you to go to the parent page and read at least that section.\n\nThis post is based on the idea that the **attackers will try to somehow mimic or use the vic",
+  "payloads": [
+    "# Detecting Phishing",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Introduction",
+    "To detect a phishing attempt it's important to **understand the phishing techniques that are being used nowadays**. On the parent page of this post, you can find this information, so if you aren't aware of which techniques are being used today I recommend you to go to the parent page and read at least that section.",
+    "This post is based on the idea that the **attackers will try to somehow mimic or use the victim's domain name**. If your domain is called `example.com` and you are phished using a completely different domain name for some reason like `youwonthelottery.com`, these techniques aren't going to uncover it.",
+    "## Domain name variations",
+    "It's kind of **easy** to **uncover** those **phishing** attempts that will use a **similar domain** name inside the email.\\",
+    "It's enough to **generate a list of the most probable phishing names** that an attacker may use and **check** if it's **registered** or just check if there is any **IP** using it.",
+    "### Finding suspicious domains",
+    "For this purpose, you can use any of the following tools. Note that these tools will also perform DNS requests automatically to check if the domain has any IP assigned to it:",
+    "- [**dnstwist**](https://github.com/elceef/dnstwist)",
+    "- [**urlcrazy**](https://github.com/urbanadventurer/urlcrazy)",
+    "Tip: If you generate a candidate list, also feed it into your DNS resolver logs to detect **NXDOMAIN lookups from inside your org** (users trying to reach a typo before the attacker actually registers it). Sinkhole or pre-block these domains if policy allows.",
+    "### Bitflipping",
+    "**You can find a short the explanation of this technique in the parent page. Or read the original research in** [**https://www.bleepingcomputer.com/news/security/hijacking-traffic-to-microsoft-s-windowscom-with-bitflipping/**](https://www.bleepingcomputer.com/news/security/hijacking-traffic-to-microsoft-s-windowscom-with-bitflipping/)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/phishing-methodology/detecting-phising.md"
+  ]
+}

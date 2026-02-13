@@ -1,0 +1,16 @@
+{
+  "id": "windows_hardening_dda8cc953f64",
+  "category": "windows-hardening",
+  "title": "winrm",
+  "description": "# WinRM\n\n{{#include ../../banners/hacktricks-training.md}}\n\nFor information about [**WinRM read this page**](../../network-services-pentesting/5985-5986-pentesting-winrm.md).\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n\n",
+  "payloads": [
+    "# WinRM",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "For information about [**WinRM read this page**](../../network-services-pentesting/5985-5986-pentesting-winrm.md).",
+    "{{#include ../../banners/hacktricks-training.md}}"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/winrm.md"
+  ]
+}

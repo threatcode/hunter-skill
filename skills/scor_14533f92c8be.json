@@ -1,0 +1,27 @@
+{
+  "id": "scor_14533f92c8be",
+  "category": "SCOR",
+  "title": "content security fundamentals",
+  "description": "## Cisco Content Security Fundamentals\n- Email Security\n- Web Security\n\n\n### 1. Email Security\n- **Spam Protection**: Filtering out unwanted and potentially harmful email messages.\n- **Virus and Malware Defense**: Scanning emails for malicious software.\n- **Phishing Protection**: Detecting and blocking attempts to acquire sensitive information through deceptive emails.\n- **Data Loss Prevention (DLP)**: Preventing sensitive information from leaving the organization via email.\n- **Email Encryption",
+  "payloads": [
+    "## Cisco Content Security Fundamentals",
+    "- Email Security",
+    "- Web Security",
+    "### 1. Email Security",
+    "- **Spam Protection**: Filtering out unwanted and potentially harmful email messages.",
+    "- **Virus and Malware Defense**: Scanning emails for malicious software.",
+    "- **Phishing Protection**: Detecting and blocking attempts to acquire sensitive information through deceptive emails.",
+    "- **Data Loss Prevention (DLP)**: Preventing sensitive information from leaving the organization via email.",
+    "- **Email Encryption**: Ensuring that email content is secure and unreadable during transit.",
+    "- **Advanced Threat Protection**: Identifying and responding to sophisticated cyber threats.",
+    "### 2. Web Security",
+    "- **URL Filtering**: Blocking access to harmful or inappropriate websites.",
+    "- **Malware Scanning**: Inspecting web content to identify and block malware.",
+    "- **Application Visibility and Control**: Monitoring and controlling the use of web applications to prevent security breaches.",
+    "- **HTTPS Inspection**: Decrypting and inspecting encrypted web traffic for threats."
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/SCOR/content_security_fundamentals.md"
+  ]
+}

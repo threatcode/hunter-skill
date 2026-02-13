@@ -1,0 +1,27 @@
+{
+  "id": "blockchain_0c584fe7e269",
+  "category": "blockchain",
+  "title": "defi amm virtual balance cache exploitation",
+  "description": "# DeFi AMM Accounting Bugs & Virtual Balance Cache Exploitation\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Overview\n\nYearn Finance's yETH pool (Nov 2025) exposed how gas-saving caches inside complex AMMs can be weaponized when they are not reconciled during boundary-state transitions. The weighted stableswap pool tracks up to 32 liquid staking derivatives (LSDs), converts them to ETH-equivalent **virtual balances** (`vb_i = balance_i \u00d7 rate_i / PRECISION`), and stores those values in",
+  "payloads": [
+    "# DeFi AMM Accounting Bugs & Virtual Balance Cache Exploitation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Overview",
+    "Yearn Finance's yETH pool (Nov 2025) exposed how gas-saving caches inside complex AMMs can be weaponized when they are not reconciled during boundary-state transitions. The weighted stableswap pool tracks up to 32 liquid staking derivatives (LSDs), converts them to ETH-equivalent **virtual balances** (`vb_i = balance_i \u00d7 rate_i / PRECISION`), and stores those values in a packed storage array `packed_vbs[]`. When **all LP tokens are burned**, `totalSupply` correctly drops to zero but the cached `packed_vbs[i]` slots retained huge historic values. The subsequent depositor was treated as the \"first\" liquidity provider even though the cache still held phantom liquidity, letting an attacker mint ~235 septillion yETH for only **16 wei** before draining \u2248USD 9M in LSD collateral.",
+    "Key ingredients:",
+    "- **Derived-state caching**: expensive oracle lookups are avoided by persisting virtual balances and incrementally updating them.",
+    "- **Missing reset when `supply == 0`**: `remove_liquidity()` proportional decrements left non-zero residues in `packed_vbs[]` after each withdrawal cycle.",
+    "- **Initialization branch trusts the cache**: `add_liquidity()` calls `_calc_vb_prod_sum()` and simply **reads** `packed_vbs[]` when `prev_supply == 0`, assuming the cache is also zeroed.",
+    "- **Flash-loan financed state poisoning**: deposit/withdraw loops amplified rounding residues with no capital lockup, enabling a catastrophic over-mint in the \"first deposit\" path.",
+    "## Cache design & missing boundary handling",
+    "The vulnerable flow is simplified below:",
+    "```solidity",
+    "function remove_liquidity(uint256 burnAmount) external {",
+    "uint256 supplyBefore = totalSupply();",
+    "_burn(msg.sender, burnAmount);"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/blockchain/blockchain-and-crypto-currencies/defi-amm-virtual-balance-cache-exploitation.md"
+  ]
+}

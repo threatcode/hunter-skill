@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_c6eebd79cc21",
+  "category": "generic-methodologies-and-resources",
+  "title": "github leaked secrets",
+  "description": "# Github Dorks & Leaks\n\n{{#include ../../banners/hacktricks-training.md}}\n\n\n### Tools to find secrets in git repos and file system\n\n- [https://github.com/dxa4481/truffleHog](https://github.com/dxa4481/truffleHog)\n- [https://github.com/gitleaks/gitleaks](https://github.com/gitleaks/gitleaks)\n- [https://github.com/praetorian-inc/noseyparker](https://github.com/praetorian-inc/noseyparker)\n- [https://github.com/GitGuardian/ggshield](https://github.com/GitGuardian/ggshield)\n- [https://github.com/Jaim",
+  "payloads": [
+    "# Github Dorks & Leaks",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "### Tools to find secrets in git repos and file system",
+    "- [https://github.com/dxa4481/truffleHog](https://github.com/dxa4481/truffleHog)",
+    "- [https://github.com/gitleaks/gitleaks](https://github.com/gitleaks/gitleaks)",
+    "- [https://github.com/praetorian-inc/noseyparker](https://github.com/praetorian-inc/noseyparker)",
+    "- [https://github.com/GitGuardian/ggshield](https://github.com/GitGuardian/ggshield)",
+    "- [https://github.com/JaimePolop/RExpository](https://github.com/JaimePolop/RExpository)",
+    "- [https://github.com/Yelp/detect-secrets](https://github.com/Yelp/detect-secrets)",
+    "- [https://github.com/hisxo/gitGraber](https://github.com/hisxo/gitGraber)",
+    "- https://github.com/eth0izzle/shhgit (unmaintained)",
+    "- [https://github.com/techgaun/github-dorks](https://github.com/techgaun/github-dorks)",
+    "- https://github.com/michenriksen/gitrob (archived)",
+    "- https://github.com/anshumanbh/git-all-secrets (archived)",
+    "- [https://github.com/awslabs/git-secrets](https://github.com/awslabs/git-secrets)"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/external-recon-methodology/github-leaked-secrets.md"
+  ]
+}

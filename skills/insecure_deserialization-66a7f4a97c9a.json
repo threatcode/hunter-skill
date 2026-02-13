@@ -1,0 +1,27 @@
+{
+  "id": "insecure_deserialization-66a7f4a97c9a",
+  "category": "Insecure Deserialization",
+  "title": "Python",
+  "description": "# Python Deserialization\n\n> Python deserialization is the process of reconstructing Python objects from serialized data, commonly done using formats like JSON, pickle, or YAML. The pickle module is a frequently used tool for this in Python, as it can serialize and deserialize complex Python objects, including custom classes.\n\n## Summary\n\n* [Tools](#tools)\n* [Methodology](#methodology)\n    * [Pickle](#pickle)\n    * [PyYAML](#pyyaml)\n* [References](#references)\n\n## Tools\n\n* [j0lt-github/python-des",
+  "payloads": [
+    "# Python Deserialization",
+    "> Python deserialization is the process of reconstructing Python objects from serialized data, commonly done using formats like JSON, pickle, or YAML. The pickle module is a frequently used tool for this in Python, as it can serialize and deserialize complex Python objects, including custom classes.",
+    "## Summary",
+    "* [Tools](#tools)",
+    "* [Methodology](#methodology)",
+    "* [Pickle](#pickle)",
+    "* [PyYAML](#pyyaml)",
+    "* [References](#references)",
+    "## Tools",
+    "* [j0lt-github/python-deserialization-attack-payload-generator](https://github.com/j0lt-github/python-deserialization-attack-payload-generator) - Serialized payload for deserialization RCE attack on python driven applications where pickle,PyYAML, ruamel.yaml or jsonpickle module is used for deserialization of serialized data.",
+    "## Methodology",
+    "In Python source code, look for these sinks:",
+    "* `cPickle.loads`",
+    "* `pickle.loads`",
+    "* `_pickle.loads`"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/Insecure Deserialization/Python.md"
+  ]
+}

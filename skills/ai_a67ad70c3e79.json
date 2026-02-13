@@ -1,0 +1,27 @@
+{
+  "id": "ai_a67ad70c3e79",
+  "category": "AI",
+  "title": "6. pre training and loading models",
+  "description": "# 6. Pre-training & Loading models\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Text Generation\n\nIn order to train a model we will need that model to be able to generate new tokens. Then we will compare the generated tokens with the expected ones in order to train the model into **learning the tokens it needs to generate**.\n\nAs in the previous examples we already predicted some tokens, it's possible to reuse that function for this purpose.\n\n> [!TIP]\n> The goal of this sixth phase is ve",
+  "payloads": [
+    "# 6. Pre-training & Loading models",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Text Generation",
+    "In order to train a model we will need that model to be able to generate new tokens. Then we will compare the generated tokens with the expected ones in order to train the model into **learning the tokens it needs to generate**.",
+    "As in the previous examples we already predicted some tokens, it's possible to reuse that function for this purpose.",
+    "> [!TIP]",
+    "> The goal of this sixth phase is very simple: **Train the model from scratch**. For this the previous LLM architecture will be used with some loops going over the data sets using the defined loss functions and optimizer to train all the parameters of the model.",
+    "## Text Evaluation",
+    "In order to perform a correct training it's needed to measure check the predictions obtained for the expected token. The goal of the training is to maximize the likelihood of the correct token, which involves increasing its probability relative to other tokens.",
+    "In order to maximize the probability of the correct token, the weights of the model must be modified to that probability is maximised. The updates of the weights is done via **backpropagation**. This requires a **loss function to maximize**. In this case, the function will be the **difference between the performed prediction and the desired one**.",
+    "However, instead of working with the raw predictions, it will work with a logarithm with base n. So if the current prediction of the expected token was 7.4541e-05, the natural logarithm (base\u202f*e*) of **7.4541e-05** is approximately **-9.5042**.\\",
+    "Then, for each entry with a context length of 5 tokens for example, the model will need to predict 5 tokens, being the first 4 tokens the last one of the input and the fifth the predicted one. Therefore, for each entry we will have 5 predictions in that case (even if the first 4 ones were in the input the model doesn't know this) with 5 expected token and therefore 5 probabilities to maximize.",
+    "Therefore, after performing the natural logarithm to each prediction, the **average** is calculated, the **minus symbol removed** (this is called _cross entropy loss_) and thats the **number to reduce as close to 0 as possible** because the natural logarithm of 1 is 0:",
+    "<figure><img src=\"../../images/image (10) (1).png\" alt=\"\" width=\"563\"><figcaption><p><a href=\"https://camo.githubusercontent.com/3c0ab9c55cefa10b667f1014b6c42df901fa330bb2bc9cea88885e784daec8ba/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830355f636f6d707265737365642f63726f73732d656e74726f70792e776562703f313233\">https://camo.githubusercontent.com/3c0ab9c55cefa10b667f1014b6c42df901fa330bb2bc9cea88885e784daec8ba/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636830355f636f6d707265737365642f63726f73732d656e74726f70792e776562703f313233</a></p></figcaption></figure>",
+    "Another way to measure how good the model is is called perplexity. **Perplexity** is a metric used to evaluate how well a probability model predicts a sample. In language modelling, it represents the **model's uncertainty** when predicting the next token in a sequence.\\"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/AI/AI-llm-architecture/6.-pre-training-and-loading-models.md"
+  ]
+}

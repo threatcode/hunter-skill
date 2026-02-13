@@ -1,0 +1,27 @@
+{
+  "id": "docker_and_k8s_security_43ab1f1c82d8",
+  "category": "docker-and-k8s-security",
+  "title": "network policy example",
+  "description": "# Example of a Network Policy in Kubernetes\nIn this example, we have created a network policy named `my-network-policy` that applies to pods with the label `app: my-app`.\n\n```yaml\napiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: my-network-policy\nspec:\n  podSelector:\n    matchLabels:\n      app: my-app\n  policyTypes:\n    - Ingress\n    - Egress\n  ingress:\n    - from:\n        - podSelector:\n            matchLabels:\n              role: backend\n        - ipBlock:\n            cid",
+  "payloads": [
+    "# Example of a Network Policy in Kubernetes",
+    "In this example, we have created a network policy named `my-network-policy` that applies to pods with the label `app: my-app`.",
+    "```yaml",
+    "apiVersion: networking.k8s.io/v1",
+    "kind: NetworkPolicy",
+    "metadata:",
+    "name: my-network-policy",
+    "podSelector:",
+    "matchLabels:",
+    "app: my-app",
+    "policyTypes:",
+    "- Ingress",
+    "- Egress",
+    "ingress:",
+    "- from:"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/docker-and-k8s-security/kubernetes/network-policy-example.md"
+  ]
+}

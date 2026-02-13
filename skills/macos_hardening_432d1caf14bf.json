@@ -1,0 +1,27 @@
+{
+  "id": "macos_hardening_432d1caf14bf",
+  "category": "macos-hardening",
+  "title": "macos mig mach interface generator",
+  "description": "# macOS MIG - Mach Interface Generator\n\n{{#include ../../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\nMIG was created to **simplify the process of Mach IPC** code creation. It basically **generates the needed code** for server and client to communicate with a given definition. Even if the generated code is ugly, a developer will just need to import it and his code will be much simpler than before.\n\nThe definition is specified in Interface Definition Language (IDL) using the `.de",
+  "payloads": [
+    "# macOS MIG - Mach Interface Generator",
+    "{{#include ../../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "MIG was created to **simplify the process of Mach IPC** code creation. It basically **generates the needed code** for server and client to communicate with a given definition. Even if the generated code is ugly, a developer will just need to import it and his code will be much simpler than before.",
+    "The definition is specified in Interface Definition Language (IDL) using the `.defs` extension.",
+    "These definitions have 5 sections:",
+    "- **Subsystem declaration**: The keyword subsystem is used to indicate the **name** and the **id**. It's also possible to mark it as **`KernelServer`** if the server should run in the kernel.",
+    "- **Inclusions and imports**: MIG uses the C-prepocessor, so it's able to use imports. Moreover, it's possible to use `uimport` and `simport` for user or server generated code.",
+    "- **Type declarations**: It's possible to define data types although usually it will import `mach_types.defs` and `std_types.defs`. For custom ones some syntax can be used:",
+    "- \\[i`n/out]tran`: Function that needs to be trasnlated from an incoming or to an outgoing message",
+    "- `c[user/server]type`: Mapping to another C type.",
+    "- `destructor`: Call this function when the type is released.",
+    "- **Operations**: These are the definitions of the RPC methods. There are 5 different types:",
+    "- `routine`: Expects reply",
+    "- `simpleroutine`: Doesn't expect reply"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/macos-hardening/macos-security-and-privilege-escalation/macos-proces-abuse/macos-ipc-inter-process-communication/macos-mig-mach-interface-generator.md"
+  ]
+}

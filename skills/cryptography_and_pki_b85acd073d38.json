@@ -1,0 +1,27 @@
+{
+  "id": "cryptography_and_pki_b85acd073d38",
+  "category": "cryptography-and-pki",
+  "title": "lab 01 gpg basics",
+  "description": "# Lab 1: GPG Basics - Key Generation and File Encryption\n\n## Objectives\n- Generate a GPG key pair\n- Encrypt and decrypt files\n- Export and import keys\n- Understand key management\n\n## Prerequisites\n- Linux, macOS, or Windows with GPG installed\n- Terminal/command line access\n- Basic understanding of public key cryptography\n\n## Estimated Time\n30-45 minutes\n\n## Lab Steps\n\n### Step 1: Install GPG (if not already installed)\n\n**Linux (Debian/Ubuntu):**\n```bash\nsudo apt update\nsudo apt install gnupg\n```",
+  "payloads": [
+    "# Lab 1: GPG Basics - Key Generation and File Encryption",
+    "## Objectives",
+    "- Generate a GPG key pair",
+    "- Encrypt and decrypt files",
+    "- Export and import keys",
+    "- Understand key management",
+    "## Prerequisites",
+    "- Linux, macOS, or Windows with GPG installed",
+    "- Terminal/command line access",
+    "- Basic understanding of public key cryptography",
+    "## Estimated Time",
+    "30-45 minutes",
+    "## Lab Steps",
+    "### Step 1: Install GPG (if not already installed)",
+    "**Linux (Debian/Ubuntu):**"
+  ],
+  "source": "h4cker",
+  "references": [
+    "/workspaces/hunter-skill/h4cker/cryptography-and-pki/labs/lab-01-gpg-basics.md"
+  ]
+}

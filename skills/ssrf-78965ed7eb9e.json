@@ -1,0 +1,14 @@
+{
+  "id": "ssrf-78965ed7eb9e",
+  "category": "SSRF",
+  "title": "Cassandra Injection",
+  "description": "# Cassandra Injection\n\n> Apache Cassandra is a free and open-source distributed wide column store NoSQL database management system.\n\n## Summary\n\n* [CQL Injection Limitations](#cql-injection-limitations)\n* [Cassandra Comment](#cassandra-comment)\n* [Cassandra Login Bypass](#cassandra-login-bypass)\n    * [Example #1](#example-1)\n    * [Example #2](#example-2)\n* [References](#references)\n\n## CQL Injection Limitations\n\n* Cassandra is a non-relational database, so CQL doesn't support `JOIN` or `UNION`",
+  "payloads": [
+    "* [Cassandra injection vulnerability triggered - DATADOG - January 30, 2023](https://docs.datadoghq.com/fr/security/default_rules/appsec-cass-injection-vulnerability-trigger/)",
+    "* [Investigating CQL injection in Apache Cassandra - Mehmet Leblebici - December 2, 2022](https://www.invicti.com/blog/web-security/investigating-cql-injection-apache-cassandra/)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/Cassandra Injection.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

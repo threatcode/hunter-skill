@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_db7e3ff6020e",
+  "category": "windows-hardening",
+  "title": "windows registry hive exploitation",
+  "description": "# Windows Registry Hive Exploitation Primitives\n\n{{#include ../../banners/hacktricks-training.md}}\n\n## Why hive corruption is special\n\nWindows registry hives are **memory-mapped `.regf` files** managed by a custom allocator (`HvAllocateCell`, `HvReallocateCell`, `HvFreeCell`). The allocator:\n\n- **Does not randomize allocations** \u2013 cell placement depends only on the order/size of prior registry API calls, so layouts are reproducible across hosts.\n- **Lacks integrity checks** \u2013 manually altered he",
+  "payloads": [
+    "# Windows Registry Hive Exploitation Primitives",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "## Why hive corruption is special",
+    "Windows registry hives are **memory-mapped `.regf` files** managed by a custom allocator (`HvAllocateCell`, `HvReallocateCell`, `HvFreeCell`). The allocator:",
+    "- **Does not randomize allocations** \u2013 cell placement depends only on the order/size of prior registry API calls, so layouts are reproducible across hosts.",
+    "- **Lacks integrity checks** \u2013 manually altered header/data fields are trusted by kernel consumers (`Cmp*` routines) and by the Registry process itself.",
+    "- **Shares address space with privileged hives** \u2013 in many cases attacker-controlled hives are mapped into the same user-mode address range as HKLM/HKU hives, enabling inter-hive overflows.",
+    "This makes hive-based memory corruption bugs (e.g., CVE-2023-23420 / CVE-2023-23423) uniquely reliable for LPE.",
+    "## Deterministic layout grooming with registry APIs",
+    "Because hive allocation is deterministic, you can groom cell placement purely via Win32 APIs. A typical workflow is:",
+    "1. **Reset the target key** (delete/recreate) so the hive bin contains only known cells.",
+    "2. **Allocate predictable runs of cells** by creating values with carefully selected sizes:",
+    "- Key/value metadata cells are multiples of 8 bytes.",
+    "- Writing `0x3FD8`-byte values forces a fresh `0x4000`-byte bin (`0x3FD8` data + `_HBIN` header/padding), ideal for interleaving bins later.",
+    "3. **Use resize-friendly types** (e.g., `REG_BINARY`) so you can free/extend individual cells just by calling `RegSetValueEx` with different lengths."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/windows-registry-hive-exploitation.md"
+  ]
+}

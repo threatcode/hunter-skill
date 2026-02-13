@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_b9299c2ccc1e",
+  "category": "generic-methodologies-and-resources",
+  "title": "office file analysis",
+  "description": "# Office file analysis\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n\nFor further information check [https://trailofbits.github.io/ctf/forensics/](https://trailofbits.github.io/ctf/forensics/). This is just a sumary:\n\nMicrosoft has created many office document formats, with two main types being **OLE formats** (like RTF, DOC, XLS, PPT) and **Office Open XML (OOXML) formats** (such as DOCX, XLSX, PPTX). These formats can include macros, making them targets for phishing and malware. OOXML",
+  "payloads": [
+    "# Office file analysis",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "For further information check [https://trailofbits.github.io/ctf/forensics/](https://trailofbits.github.io/ctf/forensics/). This is just a sumary:",
+    "Microsoft has created many office document formats, with two main types being **OLE formats** (like RTF, DOC, XLS, PPT) and **Office Open XML (OOXML) formats** (such as DOCX, XLSX, PPTX). These formats can include macros, making them targets for phishing and malware. OOXML files are structured as zip containers, allowing inspection through unzipping, revealing the file and folder hierarchy and XML file contents.",
+    "To explore OOXML file structures, the command to unzip a document and the output structure are given. Techniques for hiding data in these files have been documented, indicating ongoing innovation in data concealment within CTF challenges.",
+    "For analysis, **oletools** and **OfficeDissector** offer comprehensive toolsets for examining both OLE and OOXML documents. These tools help in identifying and analyzing embedded macros, which often serve as vectors for malware delivery, typically downloading and executing additional malicious payloads. Analysis of VBA macros can be conducted without Microsoft Office by utilizing Libre Office, which allows for debugging with breakpoints and watch variables.",
+    "Installation and usage of **oletools** are straightforward, with commands provided for installing via pip and extracting macros from documents. Automatic execution of macros is triggered by functions like `AutoOpen`, `AutoExec`, or `Document_Open`.",
+    "```bash",
+    "sudo pip3 install -U oletools",
+    "olevba -c /path/to/document #Extract macros",
+    "## OLE Compound File exploitation: Autodesk Revit RFA \u2013 ECC recomputation and controlled gzip",
+    "Revit RFA models are stored as an [OLE Compound File](https://learn.microsoft.com/en-us/windows/win32/stg/istorage-compound-file-implementation) (aka CFBF). The serialized model is under storage/stream:",
+    "- Storage: `Global`",
+    "- Stream: `Latest` \u2192 `Global\\Latest`",
+    "Key layout of `Global\\Latest` (observed on Revit 2025):"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/office-file-analysis.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "xss_injection-71101bae262f",
+  "category": "XSS Injection",
+  "title": "1   XSS Filter Bypass",
+  "description": "# XSS Filter Bypass\n\n## Summary\n\n- [Bypass Case Sensitive](#bypass-case-sensitive)\n- [Bypass Tag Blacklist](#bypass-tag-blacklist)\n- [Bypass Word Blacklist with Code Evaluation](#bypass-word-blacklist-with-code-evaluation)\n- [Bypass with Incomplete HTML Tag](#bypass-with-incomplete-html-tag)\n- [Bypass Quotes for String](#bypass-quotes-for-string)\n- [Bypass Quotes in Script Tag](#bypass-quotes-in-script-tag)\n- [Bypass Quotes in Mousedown Event](#bypass-quotes-in-mousedown-event)\n- [Bypass Dot Fil",
+  "payloads": [
+    "# XSS Filter Bypass",
+    "## Summary",
+    "- [Bypass Case Sensitive](#bypass-case-sensitive)",
+    "- [Bypass Tag Blacklist](#bypass-tag-blacklist)",
+    "- [Bypass Word Blacklist with Code Evaluation](#bypass-word-blacklist-with-code-evaluation)",
+    "- [Bypass with Incomplete HTML Tag](#bypass-with-incomplete-html-tag)",
+    "- [Bypass Quotes for String](#bypass-quotes-for-string)",
+    "- [Bypass Quotes in Script Tag](#bypass-quotes-in-script-tag)",
+    "- [Bypass Quotes in Mousedown Event](#bypass-quotes-in-mousedown-event)",
+    "- [Bypass Dot Filter](#bypass-dot-filter)",
+    "- [Bypass Parenthesis for String](#bypass-parenthesis-for-string)",
+    "- [Bypass Parenthesis and Semi Colon](#bypass-parenthesis-and-semi-colon)",
+    "- [Bypass onxxxx= Blacklist](#bypass-onxxxx-blacklist)",
+    "- [Bypass Space Filter](#bypass-space-filter)",
+    "- [Bypass Email Filter](#bypass-email-filter)"
+  ],
+  "source": "PayloadsAllTheThings",
+  "references": [
+    "PayloadsAllTheThings/XSS Injection/1 - XSS Filter Bypass.md"
+  ]
+}

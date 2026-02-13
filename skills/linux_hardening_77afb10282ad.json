@@ -1,0 +1,27 @@
+{
+  "id": "linux_hardening_77afb10282ad",
+  "category": "linux-hardening",
+  "title": "seccomp",
+  "description": "# Seccomp\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Basic Information\n\n**Seccomp**, standing for Secure Computing mode, is a security feature of the **Linux kernel designed to filter system calls**. It restricts processes to a limited set of system calls (`exit()`, `sigreturn()`, `read()`, and `write()` for already-open file descriptors). If a process tries to call anything else, it gets terminated by the kernel using SIGKILL or SIGSYS. This mechanism doesn't virtualize resources",
+  "payloads": [
+    "# Seccomp",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Basic Information",
+    "**Seccomp**, standing for Secure Computing mode, is a security feature of the **Linux kernel designed to filter system calls**. It restricts processes to a limited set of system calls (`exit()`, `sigreturn()`, `read()`, and `write()` for already-open file descriptors). If a process tries to call anything else, it gets terminated by the kernel using SIGKILL or SIGSYS. This mechanism doesn't virtualize resources but isolates the process from them.",
+    "There are two ways to activate seccomp: through the `prctl(2)` system call with `PR_SET_SECCOMP`, or for Linux kernels 3.17 and above, the `seccomp(2)` system call. The older method of enabling seccomp by writing to `/proc/self/seccomp` has been deprecated in favor of `prctl()`.",
+    "An enhancement, **seccomp-bpf**, adds the capability to filter system calls with a customizable policy, using Berkeley Packet Filter (BPF) rules. This extension is leveraged by software such as OpenSSH, vsftpd, and the Chrome/Chromium browsers on Chrome OS and Linux for flexible and efficient syscall filtering, offering an alternative to the now unsupported systrace for Linux.",
+    "### **Original/Strict Mode**",
+    "In this mode Seccomp **only allow the syscalls** `exit()`, `sigreturn()`, `read()` and `write()` to already-open file descriptors. If any other syscall is made, the process is killed using SIGKILL",
+    "```c:seccomp_strict.c",
+    "#include <fcntl.h>",
+    "#include <stdio.h>",
+    "#include <unistd.h>",
+    "#include <string.h>",
+    "#include <linux/seccomp.h>",
+    "#include <sys/prctl.h>"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/linux-hardening/privilege-escalation/docker-security/seccomp.md"
+  ]
+}

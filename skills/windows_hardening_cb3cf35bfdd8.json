@@ -1,0 +1,27 @@
+{
+  "id": "windows_hardening_cb3cf35bfdd8",
+  "category": "windows-hardening",
+  "title": "named pipe client impersonation",
+  "description": "# Named Pipe Client Impersonation\n\n{{#include ../../banners/hacktricks-training.md}}\n\nNamed Pipe client impersonation is a local privilege escalation primitive that lets a named-pipe server thread adopt the security context of a client that connects to it. In practice, an attacker who can run code with SeImpersonatePrivilege can coerce a privileged client (e.g., a SYSTEM service) to connect to an attacker-controlled pipe, call ImpersonateNamedPipeClient, duplicate the resulting token into a prim",
+  "payloads": [
+    "# Named Pipe Client Impersonation",
+    "{{#include ../../banners/hacktricks-training.md}}",
+    "Named Pipe client impersonation is a local privilege escalation primitive that lets a named-pipe server thread adopt the security context of a client that connects to it. In practice, an attacker who can run code with SeImpersonatePrivilege can coerce a privileged client (e.g., a SYSTEM service) to connect to an attacker-controlled pipe, call ImpersonateNamedPipeClient, duplicate the resulting token into a primary token, and spawn a process as the client (often NT AUTHORITY\\SYSTEM).",
+    "This page focuses on the core technique. For end-to-end exploit chains that coerce SYSTEM to your pipe, see the Potato family pages referenced below.",
+    "## TL;DR",
+    "- Create a named pipe: \\\\.\\pipe\\<random> and wait for a connection.",
+    "- Make a privileged component connect to it (spooler/DCOM/EFSRPC/etc.).",
+    "- Read at least one message from the pipe, then call ImpersonateNamedPipeClient.",
+    "- Open the impersonation token from the current thread, DuplicateTokenEx(TokenPrimary), and CreateProcessWithTokenW/CreateProcessAsUser to get a SYSTEM process.",
+    "## Requirements and key APIs",
+    "- Privileges typically needed by the calling process/thread:",
+    "- SeImpersonatePrivilege to successfully impersonate a connecting client and to use CreateProcessWithTokenW.",
+    "- Alternatively, after impersonating SYSTEM, you can use CreateProcessAsUser, which may require SeAssignPrimaryTokenPrivilege and SeIncreaseQuotaPrivilege (these are satisfied when you\u2019re impersonating SYSTEM).",
+    "- Core APIs used:",
+    "- CreateNamedPipe / ConnectNamedPipe"
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/windows-hardening/windows-local-privilege-escalation/named-pipe-client-impersonation.md"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "generic_methodologies_and_resources_3b4bc5fbdea6",
+  "category": "generic-methodologies-and-resources",
+  "title": "browser artifacts",
+  "description": "# Browser Artifacts\n\n{{#include ../../../banners/hacktricks-training.md}}\n\n## Browsers Artifacts <a href=\"#id-3def\" id=\"id-3def\"></a>\n\nBrowser artifacts include various types of data stored by web browsers, such as navigation history, bookmarks, and cache data. These artifacts are kept in specific folders within the operating system, differing in location and name across browsers, yet generally storing similar data types.\n\nHere's a summary of the most common browser artifacts:\n\n- **Navigation Hi",
+  "payloads": [
+    "# Browser Artifacts",
+    "{{#include ../../../banners/hacktricks-training.md}}",
+    "## Browsers Artifacts <a href=\"#id-3def\" id=\"id-3def\"></a>",
+    "Browser artifacts include various types of data stored by web browsers, such as navigation history, bookmarks, and cache data. These artifacts are kept in specific folders within the operating system, differing in location and name across browsers, yet generally storing similar data types.",
+    "Here's a summary of the most common browser artifacts:",
+    "- **Navigation History**: Tracks user visits to websites, useful for identifying visits to malicious sites.",
+    "- **Autocomplete Data**: Suggestions based on frequent searches, offering insights when combined with navigation history.",
+    "- **Bookmarks**: Sites saved by the user for quick access.",
+    "- **Extensions and Add-ons**: Browser extensions or add-ons installed by the user.",
+    "- **Cache**: Stores web content (e.g., images, JavaScript files) to improve website loading times, valuable for forensic analysis.",
+    "- **Logins**: Stored login credentials.",
+    "- **Favicons**: Icons associated with websites, appearing in tabs and bookmarks, useful for additional information on user visits.",
+    "- **Browser Sessions**: Data related to open browser sessions.",
+    "- **Downloads**: Records of files downloaded through the browser.",
+    "- **Form Data**: Information entered in web forms, saved for future autofill suggestions."
+  ],
+  "source": "HackTricks",
+  "references": [
+    "/workspaces/hunter-skill/hacktricks/src/generic-methodologies-and-resources/basic-forensic-methodology/specific-software-file-type-tricks/browser-artifacts.md"
+  ]
+}
